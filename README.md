@@ -1,4 +1,4 @@
-# Bhre-Knowledge-Distillation
+# BhreSkripsi
 
 ## Pure Teacher-Only Knowledge Distillation
 
