@@ -1,0 +1,10 @@
+{
+  "pid": 226171,
+  "pipeline_log": "/mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/locked_pipeline_resume.log",
+  "pipeline_state": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+  "protocol": "official Roboflow image-level split; three paired seeds; TEST excluded from training",
+  "queue_log": "/mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/queue_resume_after_seed1337.log",
+  "queue_state": "/mnt/nas-hpg9/rafli5131/bre/artifacts/student_training_queue.json",
+  "status": "complete",
+  "updated_at_utc": "2026-10-10T04:05:25.445667+00:00"
+}

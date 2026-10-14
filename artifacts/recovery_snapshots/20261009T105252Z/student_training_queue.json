@@ -1,0 +1,119 @@
+{
+  "created_at_utc": "2026-10-08T22:22:43.508972+00:00",
+  "fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "initial_run": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1",
+  "items": [
+    {
+      "finished_at_utc": "2026-10-09T01:37:24.578558+00:00",
+      "kind": "wait",
+      "label": "wait_supervised_seed42",
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "started_at_utc": "2026-10-08T22:22:43.526862+00:00",
+      "status": "succeeded"
+    },
+    {
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/link_run_dataset_provenance.py",
+        "--manifest",
+        "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json"
+      ],
+      "finished_at_utc": "2026-10-09T01:37:42.418343+00:00",
+      "kind": "provenance",
+      "label": "link_supervised_seed42_provenance",
+      "log": "runs/student_training_queue_logs/link_supervised_seed42.log",
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "run_dir": "runs/supervised/yolo11_tiny_supervised_seed42_retry1",
+      "started_at_utc": "2026-10-09T01:37:24.589761+00:00",
+      "status": "succeeded"
+    },
+    {
+      "attempts": [
+        {
+          "archived_at_utc": "2026-10-09T01:59:10.063856+00:00",
+          "error": null,
+          "log": "/mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/kd_seed42.attempt1-20261009T015910Z.log",
+          "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/.yolo11_tiny_pure_kd_v4_locked_seed42.manifest.failed-20261009T015910Z.json",
+          "status": "failed"
+        }
+      ],
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/train_kd.py",
+        "--seed",
+        "42",
+        "--run-name",
+        "yolo11_tiny_pure_kd_v4_locked_seed42"
+      ],
+      "finished_at_utc": "2026-10-09T07:22:16.224545+00:00",
+      "kind": "kd",
+      "label": "kd_seed42",
+      "log": "/mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/kd_seed42.log",
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42",
+      "started_at_utc": "2026-10-09T01:59:10.075470+00:00",
+      "status": "succeeded"
+    },
+    {
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/train_supervised_baseline.py",
+        "--seed",
+        "1337"
+      ],
+      "kind": "supervised",
+      "label": "supervised_seed1337",
+      "log": "/mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/supervised_seed1337.log",
+      "run_dir": "runs/supervised/yolo11_tiny_supervised_seed1337",
+      "started_at_utc": "2026-10-09T07:22:16.237356+00:00",
+      "status": "running"
+    },
+    {
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/train_kd.py",
+        "--seed",
+        "1337",
+        "--run-name",
+        "yolo11_tiny_pure_kd_v4_seed1337"
+      ],
+      "kind": "kd",
+      "label": "kd_seed1337",
+      "log": "runs/student_training_queue_logs/kd_seed1337.log",
+      "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_seed1337",
+      "status": "queued"
+    },
+    {
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/train_supervised_baseline.py",
+        "--seed",
+        "2025"
+      ],
+      "kind": "supervised",
+      "label": "supervised_seed2025",
+      "log": "runs/student_training_queue_logs/supervised_seed2025.log",
+      "run_dir": "runs/supervised/yolo11_tiny_supervised_seed2025",
+      "status": "queued"
+    },
+    {
+      "command": [
+        "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python",
+        "scripts/train_kd.py",
+        "--seed",
+        "2025",
+        "--run-name",
+        "yolo11_tiny_pure_kd_v4_seed2025"
+      ],
+      "kind": "kd",
+      "label": "kd_seed2025",
+      "log": "runs/student_training_queue_logs/kd_seed2025.log",
+      "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_seed2025",
+      "status": "queued"
+    }
+  ],
+  "protocol": "official Roboflow image-level split; three paired seeds; TEST excluded from training",
+  "resumed_at_utc": "2026-10-09T01:59:10.063897+00:00",
+  "status": "running",
+  "updated_at_utc": "2026-10-09T01:59:10.063905+00:00"
+}

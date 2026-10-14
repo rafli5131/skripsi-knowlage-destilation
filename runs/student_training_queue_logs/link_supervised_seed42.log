@@ -1,0 +1,6 @@
+Linked pre-run dataset fingerprint to completed run: /mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json
+Fingerprint SHA-256: bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6
+train: a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb
+val: 117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710
+test: aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1
+Linkage time UTC: 2026-10-09T01:37:42.344156+00:00

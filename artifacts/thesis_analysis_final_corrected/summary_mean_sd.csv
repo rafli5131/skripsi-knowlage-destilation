@@ -1,0 +1,148 @@
+method,metric,n,mean,sample_sd
+Teacher,val_mAP50,1,0.9738,
+Teacher,val_mAP50_95,1,0.77852,
+Teacher,test_mAP50,1,0.9642437762749102,
+Teacher,test_mAP50_95,1,0.7799795669680228,
+Teacher,test_precision,1,0.8915367177798955,
+Teacher,test_recall,1,0.9697050031172901,
+Teacher,test_F1,1,0.9289794076582366,
+Teacher,parameters,1,2590425.0,
+Teacher,checkpoint_size_MiB,1,5.227923393249512,
+Teacher,GFLOPs,1,6.5017344,
+Teacher,latency_median_ms,1,25.716032832860947,
+Teacher,latency_p95_ms,1,28.686059545725584,
+Teacher,throughput_images_s,1,39.601986438963166,
+Teacher,test_mAP50_95_delta_vs_teacher,1,0.0,
+Teacher,mAP50_95_retention_vs_teacher_percent,1,100.0,
+Teacher,parameter_reduction_vs_teacher_percent,1,0.0,
+Teacher,checkpoint_size_reduction_vs_teacher_percent,1,0.0,
+Teacher,latency_speedup_vs_teacher,1,1.0,
+Teacher,GFLOPs_reduction_vs_teacher_percent,1,0.0,
+Teacher,test_ball_precision,1,0.9647058823529412,
+Teacher,test_ball_mAP50,1,0.9847619047619048,
+Teacher,test_ball_mAP50_95,1,0.9130555576779246,
+Teacher,test_ball_recall,1,0.9879518072289156,
+Teacher,test_ball_F1,1,0.9761904761904762,
+Teacher,test_gawang_precision,1,0.7349042709867453,
+Teacher,test_gawang_mAP50,1,0.9233883468328461,
+Teacher,test_gawang_mAP50_95,1,0.5684240003286632,
+Teacher,test_gawang_recall,1,0.9379699248120301,
+Teacher,test_gawang_F1,1,0.8241123038810901,
+Teacher,test_robot_precision,1,0.975,
+Teacher,test_robot_mAP50,1,0.9845810772299799,
+Teacher,test_robot_mAP50_95,1,0.8584591428974806,
+Teacher,test_robot_recall,1,0.9831932773109243,
+Teacher,test_robot_F1,1,0.9790794979079498,
+Teacher,test_ball_precision_delta_vs_teacher,1,0.0,
+Teacher,test_ball_mAP50_delta_vs_teacher,1,0.0,
+Teacher,test_ball_mAP50_95_delta_vs_teacher,1,0.0,
+Teacher,test_ball_recall_delta_vs_teacher,1,0.0,
+Teacher,test_ball_F1_delta_vs_teacher,1,0.0,
+Teacher,test_gawang_precision_delta_vs_teacher,1,0.0,
+Teacher,test_gawang_mAP50_delta_vs_teacher,1,0.0,
+Teacher,test_gawang_mAP50_95_delta_vs_teacher,1,0.0,
+Teacher,test_gawang_recall_delta_vs_teacher,1,0.0,
+Teacher,test_gawang_F1_delta_vs_teacher,1,0.0,
+Teacher,test_robot_precision_delta_vs_teacher,1,0.0,
+Teacher,test_robot_mAP50_delta_vs_teacher,1,0.0,
+Teacher,test_robot_mAP50_95_delta_vs_teacher,1,0.0,
+Teacher,test_robot_recall_delta_vs_teacher,1,0.0,
+Teacher,test_robot_F1_delta_vs_teacher,1,0.0,
+Supervised student,val_mAP50,3,0.9703856161042904,0.0029473447572198087
+Supervised student,val_mAP50_95,3,0.7207321969649176,0.0038826650393780885
+Supervised student,test_mAP50,3,0.9600738610357157,0.003358658015529237
+Supervised student,test_mAP50_95,3,0.7225163389090828,0.00345401890410457
+Supervised student,test_precision,3,0.860915354395485,0.003195348646136165
+Supervised student,test_recall,3,0.9698669364173486,0.0034611069390089403
+Supervised student,test_F1,3,0.9121459693036702,0.0025653857710691893
+Supervised student,parameters,3,810649.0,0.0
+Supervised student,checkpoint_size_MiB,3,1.821022351582845,3.523866389096837e-05
+Supervised student,GFLOPs,3,2.4291328,0.0
+Supervised student,latency_median_ms,3,24.999327026307583,0.2285885543443605
+Supervised student,latency_p95_ms,3,27.77647462983926,2.2899612455047182
+Supervised student,throughput_images_s,3,40.88190743907537,0.33165614202364124
+Supervised student,test_mAP50_95_delta_vs_teacher,3,-0.05746322805894003,0.00345401890410457
+Supervised student,mAP50_95_retention_vs_teacher_percent,3,92.63272648509063,0.4428345370034762
+Supervised student,parameter_reduction_vs_teacher_percent,3,68.70594593551252,0.0
+Supervised student,checkpoint_size_reduction_vs_teacher_percent,3,65.16738646296507,0.0006740470592295796
+Supervised student,latency_speedup_vs_teacher,3,1.0287260518946006,0.009358474202911422
+Supervised student,GFLOPs_reduction_vs_teacher_percent,3,62.63869529951885,0.0
+Supervised student,test_ball_precision,3,0.9415306352426027,0.010677640927943053
+Supervised student,test_ball_mAP50,3,0.9759616247175238,0.004588394219159201
+Supervised student,test_ball_mAP50_95,3,0.8240775885953598,0.003986229240306395
+Supervised student,test_ball_recall,3,0.9678714859437751,0.0069560273396340674
+Supervised student,test_ball_F1,3,0.9544686537289566,0.003143342174284053
+Supervised student,test_gawang_precision,3,0.7530575332070103,0.008293549138927938
+Supervised student,test_gawang_mAP50,3,0.9266211577122968,0.008613165265241097
+Supervised student,test_gawang_mAP50_95,3,0.5485948733152901,0.00037479651592538574
+Supervised student,test_gawang_recall,3,0.9417293233082706,0.0037593984962405735
+Supervised student,test_gawang_F1,3,0.8368778236567025,0.005926287661828099
+Supervised student,test_robot_precision,3,0.8881578947368421,0.011395071102426827
+Supervised student,test_robot_mAP50,3,0.9776388006773262,0.004676150120076306
+Supervised student,test_robot_mAP50_95,3,0.7948765548165986,0.006242148616647177
+Supervised student,test_robot_recall,3,1.0,0.0
+Supervised student,test_robot_F1,3,0.9407407407407408,0.006415002990995819
+Supervised student,test_ball_precision_delta_vs_teacher,3,-0.023175247110338432,0.010677640927943053
+Supervised student,test_ball_mAP50_delta_vs_teacher,3,-0.008800280044381048,0.004588394219159201
+Supervised student,test_ball_mAP50_95_delta_vs_teacher,3,-0.08897796908256468,0.003986229240306395
+Supervised student,test_ball_recall_delta_vs_teacher,3,-0.020080321285140517,0.0069560273396340674
+Supervised student,test_ball_F1_delta_vs_teacher,3,-0.021721822461519547,0.003143342174284053
+Supervised student,test_gawang_precision_delta_vs_teacher,3,0.01815326222026507,0.008293549138927938
+Supervised student,test_gawang_mAP50_delta_vs_teacher,3,0.0032328108794507093,0.008613165265241097
+Supervised student,test_gawang_mAP50_95_delta_vs_teacher,3,-0.019829127013373176,0.00037479651592538574
+Supervised student,test_gawang_recall_delta_vs_teacher,3,0.003759398496240555,0.0037593984962405735
+Supervised student,test_gawang_F1_delta_vs_teacher,3,0.012765519775612355,0.005926287661828099
+Supervised student,test_robot_precision_delta_vs_teacher,3,-0.08684210526315787,0.011395071102426827
+Supervised student,test_robot_mAP50_delta_vs_teacher,3,-0.006942276552653633,0.004676150120076306
+Supervised student,test_robot_mAP50_95_delta_vs_teacher,3,-0.06358258808088202,0.006242148616647177
+Supervised student,test_robot_recall_delta_vs_teacher,3,0.01680672268907568,0.0
+Supervised student,test_robot_F1_delta_vs_teacher,3,-0.03833875716720906,0.006415002990995819
+Pure KD,val_mAP50,3,0.9585429860728267,0.006657366737542258
+Pure KD,val_mAP50_95,3,0.6790017056974096,0.003394086534301343
+Pure KD,test_mAP50,3,0.9446353865323036,0.0039679979699376545
+Pure KD,test_mAP50_95,3,0.6630360931896382,0.01075259289423329
+Pure KD,test_precision,3,0.7547268992166738,0.020876272596699164
+Pure KD,test_recall,3,0.9631102916753258,0.0017165164414264069
+Pure KD,test_F1,3,0.846183988690031,0.013565961955217077
+Pure KD,parameters,3,810649.0,0.0
+Pure KD,checkpoint_size_MiB,3,1.819069226582845,3.523866389096837e-05
+Pure KD,GFLOPs,3,2.4291328,0.0
+Pure KD,latency_median_ms,3,25.006520561873913,0.24625571659871595
+Pure KD,latency_p95_ms,3,27.291495477159817,1.997220373524284
+Pure KD,throughput_images_s,3,40.81126880736354,1.3281520248737115
+Pure KD,test_mAP50_95_delta_vs_teacher,3,-0.1169434737783847,0.01075259289423329
+Pure KD,mAP50_95_retention_vs_teacher_percent,3,85.00685418812016,1.3785736639270338
+Pure KD,parameter_reduction_vs_teacher_percent,3,68.70594593551252,0.0
+Pure KD,checkpoint_size_reduction_vs_teacher_percent,3,65.20474594306997,0.0006740470592295796
+Pure KD,latency_speedup_vs_teacher,3,1.028439287007221,0.01008314576574274
+Pure KD,GFLOPs_reduction_vs_teacher_percent,3,62.63869529951885,0.0
+Pure KD,test_ball_precision,3,0.744662921273048,0.04306939582538983
+Pure KD,test_ball_mAP50,3,0.9559982133498526,0.008378547400721375
+Pure KD,test_ball_mAP50_95,3,0.7302146163198965,0.01900310956930679
+Pure KD,test_ball_recall,3,0.963855421686747,0.0
+Pure KD,test_ball_F1,3,0.8397416937789609,0.027191722181401354
+Pure KD,test_gawang_precision,3,0.7371407839999811,0.005431882108383304
+Pure KD,test_gawang_mAP50,3,0.9138640112076368,0.0034122628293718612
+Pure KD,test_gawang_mAP50_95,3,0.5382394584063239,0.004075004246124495
+Pure KD,test_gawang_recall,3,0.931077694235589,0.0028712880294209492
+Pure KD,test_gawang_F1,3,0.8228217007738403,0.0023339419118324264
+Pure KD,test_robot_precision,3,0.7823769923769923,0.024109828755393605
+Pure KD,test_robot_mAP50,3,0.9640439350394217,0.006047827305428256
+Pure KD,test_robot_mAP50_95,3,0.7206542048426945,0.015134701239899583
+Pure KD,test_robot_recall,3,0.9943977591036415,0.004851682934366586
+Pure KD,test_robot_F1,3,0.87563033534881,0.016666597412666892
+Pure KD,test_ball_precision_delta_vs_teacher,3,-0.22004296107989318,0.04306939582538983
+Pure KD,test_ball_mAP50_delta_vs_teacher,3,-0.0287636914120523,0.008378547400721375
+Pure KD,test_ball_mAP50_95_delta_vs_teacher,3,-0.18284094135802811,0.01900310956930679
+Pure KD,test_ball_recall_delta_vs_teacher,3,-0.02409638554216864,0.0
+Pure KD,test_ball_F1_delta_vs_teacher,3,-0.13644878241151526,0.027191722181401354
+Pure KD,test_gawang_precision_delta_vs_teacher,3,0.00223651301323576,0.005431882108383304
+Pure KD,test_gawang_mAP50_delta_vs_teacher,3,-0.009524335625209268,0.0034122628293718612
+Pure KD,test_gawang_mAP50_95_delta_vs_teacher,3,-0.030184541922339363,0.004075004246124495
+Pure KD,test_gawang_recall_delta_vs_teacher,3,-0.0068922305764411345,0.0028712880294209492
+Pure KD,test_gawang_F1_delta_vs_teacher,3,-0.0012906031072498585,0.0023339419118324264
+Pure KD,test_robot_precision_delta_vs_teacher,3,-0.19262300762300763,0.024109828755393605
+Pure KD,test_robot_mAP50_delta_vs_teacher,3,-0.020537142190558206,0.006047827305428256
+Pure KD,test_robot_mAP50_95_delta_vs_teacher,3,-0.1378049380547861,0.015134701239899583
+Pure KD,test_robot_recall_delta_vs_teacher,3,0.011204481792717158,0.004851682934366586
+Pure KD,test_robot_F1_delta_vs_teacher,3,-0.10344916255913987,0.016666597412666892

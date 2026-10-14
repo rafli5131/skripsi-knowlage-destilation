@@ -1,0 +1,22 @@
+{
+  "analysis_output": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final",
+  "benchmark_output": "/mnt/nas-hpg9/rafli5131/bre/runs/benchmarks/pure_kd_final_inference.json",
+  "created_at_utc": "2026-10-08T22:37:54.333473+00:00",
+  "fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "resume_history": [
+    {
+      "previous_error": "PipelineError: Training queue ended with status failed: QueueError: Command exited 1; inspect log: /mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/kd_seed42.log",
+      "previous_status": "failed",
+      "resumed_at_utc": "2026-10-09T01:59:29.833290+00:00"
+    }
+  ],
+  "stages": {
+    "inference_benchmark": "queued",
+    "locked_test_evaluation": "queued",
+    "thesis_analysis": "queued"
+  },
+  "status": "waiting_for_training_queue",
+  "test_output": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked",
+  "training_queue": "/mnt/nas-hpg9/rafli5131/bre/artifacts/student_training_queue.json",
+  "updated_at_utc": "2026-10-09T01:59:29.844205+00:00"
+}

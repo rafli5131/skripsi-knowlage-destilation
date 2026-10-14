@@ -1,0 +1,82 @@
+{
+  "analysis_script": "/mnt/nas-hpg9/rafli5131/bre/scripts/build_thesis_analysis.py",
+  "analysis_script_sha256": "94b722e81acd0e3096a9e6e0a87b0a0358ec62d9b142bfb2692fa687b1ecd2fe",
+  "benchmark": "/mnt/nas-hpg9/rafli5131/bre/runs/benchmarks/pure_kd_final_inference.json",
+  "benchmark_settings": {
+    "batch": 1,
+    "confidence": 0.001,
+    "device": "0",
+    "device_name": "NVIDIA L40",
+    "imgsz": 640,
+    "input": "same validation frame decoded once to in-memory OpenCV BGR; disk read excluded",
+    "iou": 0.7,
+    "precision": "FP32",
+    "timed_iterations": 200,
+    "timing_scope": "YOLO.predict including preprocessing, inference, and NMS; checkpoint loading excluded",
+    "warmup_iterations": 30
+  },
+  "benchmark_sha256": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+  "benchmark_versions": {
+    "numpy": "1.26.4",
+    "opencv": "4.10.0",
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  },
+  "created_at_utc": "2026-10-10T04:05:25.380891+00:00",
+  "dataset_fingerprint": "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json",
+  "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "models": 7,
+  "outputs": {
+    "ANALISIS.md": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/ANALISIS.md",
+      "sha256": "84ba54ef81f8c256130585c1af5281345665368252ef1586ad2cfbf930e6d2a2"
+    },
+    "paired_seed_deltas.csv": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/paired_seed_deltas.csv",
+      "sha256": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57"
+    },
+    "paired_summary.csv": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/paired_summary.csv",
+      "sha256": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596"
+    },
+    "per_model.csv": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/per_model.csv",
+      "sha256": "843b4d8f57f2a2cd974a61f06c4ef79cd4194c0301187c7d3e93ce4c1498f94f"
+    },
+    "summary_mean_sd.csv": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/summary_mean_sd.csv",
+      "sha256": "63f68c8ade4e6ca7c867080381e115056a78505c6d4e5ea9ebeb1cdd5cd1a653"
+    }
+  },
+  "seeds": [
+    42,
+    1337,
+    2025
+  ],
+  "status": "complete",
+  "test_bootstrap_settings": {
+    "confidence_level": 0.95,
+    "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+    "operating_point": {
+      "candidate_confidence_floor_for_ap": 0.001,
+      "confidence_threshold": 0.25,
+      "precision_recall_averaging": "macro over the three classes",
+      "true_positive_iou_threshold": 0.5
+    },
+    "overall_metric_requires_all_classes": true,
+    "random_seed": 20261009,
+    "replicates": 1000,
+    "sampling_unit": "image"
+  },
+  "test_evaluator_versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "torch_cuda": "12.1",
+    "ultralytics": "8.4.130"
+  },
+  "test_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+  "test_manifest_sha256": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+  "test_split_fingerprint_sha256": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1"
+}

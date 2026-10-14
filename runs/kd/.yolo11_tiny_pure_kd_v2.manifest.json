@@ -1,0 +1,47 @@
+{
+  "dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/configs/data_train_val.yaml",
+  "distillation": {
+    "layers": "YOLO Detect neck inputs (P3/P4/P5)",
+    "type": "Ultralytics score-weighted feature L2 with channel projectors",
+    "weight": 1.0
+  },
+  "objective": "feature-only knowledge distillation in FP32; no supervised training loss and no QAT",
+  "output_dir": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v2",
+  "parameter_reduction_percent": 68.706,
+  "qat_used": false,
+  "started_at_utc": "2026-10-08T14:19:39.376480+00:00",
+  "status": "interrupted",
+  "finished_at_utc": "2026-10-08T14:22:00+00:00",
+  "student_architecture": "/mnt/nas-hpg9/rafli5131/bre/models/yolo11_tiny_kd.yaml",
+  "student_initialization": "random initialization from custom narrow YOLO11 YAML",
+  "student_parameters": 810649,
+  "teacher_checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "teacher_parameters": 2590425,
+  "teacher_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "test_split_used": false,
+  "train_labels_used_for_loss": false,
+  "training": {
+    "amp": false,
+    "batch": 16,
+    "close_mosaic": 10,
+    "device": "0",
+    "distillation_weight": 1.0,
+    "epochs": 100,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "seed": 42,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005,
+    "workers": 2
+  },
+  "validation_split": "VAL only; labels used only for metrics and diagnostics",
+  "error": "Stopped during the first VAL pass while reviewing the pure-KD objective. No checkpoint was saved.",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

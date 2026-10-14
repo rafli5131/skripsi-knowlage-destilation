@@ -1,0 +1,39 @@
+{
+  "dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/configs/data_train_val.yaml",
+  "error": "ValueError: Invalid CUDA 'device=0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.\n\ntorch.cuda.is_available(): False\ntorch.cuda.device_count(): 0\nos.environ['CUDA_VISIBLE_DEVICES']: None\nSee https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.\n",
+  "finished_at_utc": "2026-10-08T19:57:30.121351+00:00",
+  "objective": "student-only supervised detection baseline; separate from pure KD",
+  "output_dir": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42",
+  "qat_used": false,
+  "seed": 42,
+  "started_at_utc": "2026-10-08T19:57:23.204716+00:00",
+  "status": "failed",
+  "student_architecture": "/mnt/nas-hpg9/rafli5131/bre/models/yolo11_tiny_kd.yaml",
+  "student_architecture_sha256": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+  "student_initialization": "random initialization; pretrained=False",
+  "student_parameters": 810649,
+  "test_split_used": false,
+  "train_labels_used_for_loss": true,
+  "training": {
+    "amp": false,
+    "batch": 16,
+    "close_mosaic": 10,
+    "device": "0",
+    "epochs": 100,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "seed": 42,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005,
+    "workers": 2
+  },
+  "validation_split": "VAL only; labels used only for metrics and checkpoint selection",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

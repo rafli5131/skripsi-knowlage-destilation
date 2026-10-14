@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 1079, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 926, in main
+    models = parse_models(args.models, fingerprint_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 292, in parse_models
+    raise TestEvaluationError(f"Ultralytics args use a different student architecture: {checkpoint}")
+TestEvaluationError: Ultralytics args use a different student architecture: /mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt

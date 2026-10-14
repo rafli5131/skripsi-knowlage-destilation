@@ -1,0 +1,36 @@
+WARNING ⚠️ no model scale passed. Assuming scale='t'.
+[W1010 10:49:32.267787674 NNPACK.cpp:61] Could not initialize NNPACK! Reason: Unsupported hardware.
+Evaluating locked TEST model kd_seed42: /mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt
+test: Fast image access ✅ (ping: 0.0±0.0 ms, read: 189.5±64.2 MB/s, size: 30.3 KB)
+[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 55 images, 0 backgrounds, 0 corrupt: 9% ━─────────── 55/592 157.0it/s 0.1s<3.4s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 157 images, 0 backgrounds, 0 corrupt: 26% ━━━───────── 157/592 406.4it/s 0.2s<1.1s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 224 images, 0 backgrounds, 0 corrupt: 37% ━━━━╸─────── 224/592 483.9it/s 0.3s<0.8s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 316 images, 0 backgrounds, 0 corrupt: 53% ━━━━━━────── 316/592 600.9it/s 0.4s<0.5s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 423 images, 1 backgrounds, 0 corrupt: 71% ━━━━━━━━╸─── 423/592 736.2it/s 0.5s<0.2s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 521 images, 1 backgrounds, 0 corrupt: 88% ━━━━━━━━━━╸─ 521/592 800.8it/s 0.6s<0.1s[Ktest: Scanning /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels... 592 images, 1 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 592/592 867.7it/s 0.7s
+test: New cache created: /mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/.test_labels.cache
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 0% ──────────── 0/37  1.4s
+Traceback (most recent call last):
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 1154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 1127, in main
+    manifest["models"][label] = evaluate_one(
+                                ^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 908, in evaluate_one
+    returned = validator(trainer_context(model, device, data, validator_args))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/engine/validator.py", line 267, in __call__
+    for k, v in model.loss(batch, preds)[1].items():
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/tasks.py", line 414, in loss
+    return self.criterion(preds, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 478, in __call__
+    return self.loss(self.parse_output(preds), batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 485, in loss
+    loss, loss_detach = self.get_assigned_targets_and_loss(preds, batch)[1:]
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/utils/loss.py", line 457, in get_assigned_targets_and_loss
+    loss[0] *= self.hyp.box  # box gain
+               ^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'box'

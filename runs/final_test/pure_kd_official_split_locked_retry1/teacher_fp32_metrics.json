@@ -1,0 +1,228 @@
+{
+  "bootstrap_ci_95": {
+    "confidence_level": 0.95,
+    "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+    "operating_point": {
+      "candidate_confidence_floor_for_ap": 0.001,
+      "confidence_threshold": 0.25,
+      "precision_recall_averaging": "macro over the three classes",
+      "true_positive_iou_threshold": 0.5
+    },
+    "overall": {
+      "F1": {
+        "lower": 0.9139857641544632,
+        "upper": 0.9428288147153682,
+        "valid_replicates": 1000
+      },
+      "mAP50": {
+        "lower": 0.9529705974958533,
+        "upper": 0.9754543186543112,
+        "valid_replicates": 1000
+      },
+      "mAP50-95": {
+        "lower": 0.7622586189193906,
+        "upper": 0.7974102640522606,
+        "valid_replicates": 1000
+      },
+      "precision": {
+        "lower": 0.8717081307674155,
+        "upper": 0.9112106109111388,
+        "valid_replicates": 1000
+      },
+      "recall": {
+        "lower": 0.9557365753484021,
+        "upper": 0.9823233038407521,
+        "valid_replicates": 1000
+      }
+    },
+    "overall_metric_requires_all_classes": true,
+    "per_class": {
+      "ball": {
+        "F1": {
+          "lower": 0.9397590361445783,
+          "upper": 1.0,
+          "valid_replicates": 1000
+        },
+        "mAP50": {
+          "lower": 0.9642856765327695,
+          "upper": 0.995,
+          "valid_replicates": 1000
+        },
+        "mAP50-95": {
+          "lower": 0.8854520052430905,
+          "upper": 0.9387094149362285,
+          "valid_replicates": 1000
+        },
+        "precision": {
+          "lower": 0.9108752221375984,
+          "upper": 1.0,
+          "valid_replicates": 1000
+        },
+        "recall": {
+          "lower": 0.9620253164556962,
+          "upper": 1.0,
+          "valid_replicates": 1000
+        }
+      },
+      "gawang": {
+        "F1": {
+          "lower": 0.8028807702302952,
+          "upper": 0.8457759081362547,
+          "valid_replicates": 1000
+        },
+        "mAP50": {
+          "lower": 0.9012701091061833,
+          "upper": 0.9485690278805627,
+          "valid_replicates": 1000
+        },
+        "mAP50-95": {
+          "lower": 0.5437452332932143,
+          "upper": 0.596642499759101,
+          "valid_replicates": 1000
+        },
+        "precision": {
+          "lower": 0.7088549406477719,
+          "upper": 0.7627627627627628,
+          "valid_replicates": 1000
+        },
+        "recall": {
+          "lower": 0.9150754541302133,
+          "upper": 0.9597739536720189,
+          "valid_replicates": 1000
+        }
+      },
+      "robot": {
+        "F1": {
+          "lower": 0.9584866352201259,
+          "upper": 0.9961397357949082,
+          "valid_replicates": 1000
+        },
+        "mAP50": {
+          "lower": 0.968610294242804,
+          "upper": 0.995,
+          "valid_replicates": 1000
+        },
+        "mAP50-95": {
+          "lower": 0.8238698078130613,
+          "upper": 0.891321751003279,
+          "valid_replicates": 1000
+        },
+        "precision": {
+          "lower": 0.9487132352941177,
+          "upper": 1.0,
+          "valid_replicates": 1000
+        },
+        "recall": {
+          "lower": 0.9565217391304348,
+          "upper": 1.0,
+          "valid_replicates": 1000
+        }
+      }
+    },
+    "random_seed": 20261009,
+    "replicates": 1000,
+    "sample_size_per_replicate": 592,
+    "sampling_unit": "image"
+  },
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "checkpoint_size_bytes": 5481875,
+  "historical_test_evidence": {
+    "note": "Teacher TEST metrics were published before this student study; they were not used to select student checkpoints.",
+    "path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/final_test/manifest.json",
+    "sha256": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602"
+  },
+  "metric_operating_point": {
+    "candidate_confidence_floor_for_ap": 0.001,
+    "confidence_threshold": 0.25,
+    "precision_recall_averaging": "macro over the three classes",
+    "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+    "true_positive_iou_threshold": 0.5
+  },
+  "model": "teacher_fp32",
+  "parameters": 2582737,
+  "test_annotation_count": 734,
+  "test_image_count": 592,
+  "test_metrics": {
+    "overall": {
+      "F1": 0.9289794076582366,
+      "mAP50": 0.9642437762749102,
+      "mAP50-95": 0.7799795669680228,
+      "precision": 0.8915367177798955,
+      "recall": 0.9697050031172901
+    },
+    "per_class": {
+      "ball": {
+        "F1": 0.9761904761904762,
+        "ground_truth_count": 83,
+        "mAP50": 0.9847619047619048,
+        "mAP50-95": 0.9130555576779246,
+        "precision": 0.9647058823529412,
+        "predictions_above_confidence": 85,
+        "recall": 0.9879518072289156,
+        "true_positives_at_iou50": 82
+      },
+      "gawang": {
+        "F1": 0.8241123038810901,
+        "ground_truth_count": 532,
+        "mAP50": 0.9233883468328461,
+        "mAP50-95": 0.5684240003286632,
+        "precision": 0.7349042709867453,
+        "predictions_above_confidence": 679,
+        "recall": 0.9379699248120301,
+        "true_positives_at_iou50": 499
+      },
+      "robot": {
+        "F1": 0.9790794979079498,
+        "ground_truth_count": 119,
+        "mAP50": 0.9845810772299799,
+        "mAP50-95": 0.8584591428974806,
+        "precision": 0.975,
+        "predictions_above_confidence": 120,
+        "recall": 0.9831932773109243,
+        "true_positives_at_iou50": 117
+      }
+    }
+  },
+  "train_labels_used_for_loss": true,
+  "training_artifact_provenance": {
+    "dataset_yaml_sha256_recorded_at_run_time": null,
+    "dataset_yaml_sha256_verified_at_evaluation": null,
+    "distillation_implementation": null,
+    "legacy_seed42_baseline_missing_run_time_hashes": false,
+    "run_config_path": null,
+    "run_config_sha256": null,
+    "training_script_path": null,
+    "training_script_sha256": null,
+    "training_script_snapshot_recorded_at_run_time": null,
+    "training_script_source_path": null
+  },
+  "training_manifest": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/manifest.json",
+  "training_manifest_sha256": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+  "training_objective": "frozen FP32 YOLO11n teacher trained with labeled data",
+  "training_provenance": {
+    "dataset_project": "advance_vision_human",
+    "dataset_version": null,
+    "dataset_workspace": "humanoid-atom",
+    "source_checkpoint": "yolo11n.pt",
+    "training_args": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/fp32/fp32_baseline/args.yaml",
+    "training_args_sha256": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d"
+  },
+  "ultralytics_ap_diagnostic": {
+    "metrics/mAP50(B)": 0.9642437762749102,
+    "metrics/mAP50-95(B)": 0.7799795669680228
+  },
+  "validation_metrics": {
+    "fitness": 0.77852,
+    "metrics/mAP50(B)": 0.9738,
+    "metrics/mAP50-95(B)": 0.77852,
+    "metrics/precision(B)": 0.94746,
+    "metrics/recall(B)": 0.94695
+  },
+  "validation_selection_evidence": {
+    "best_epoch": 100,
+    "results_csv": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/fp32/fp32_baseline/results.csv",
+    "results_csv_sha256": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e",
+    "selection_metric": "mAP50-95(B)"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "analysis_correction": {
+    "corrected_analysis_manifest_sha256": "5e0dd4f6860fe72e4941767809111c06fc444c0f27d2152dfe3e8c2a21042e99",
+    "corrected_analysis_output": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected",
+    "corrected_at_utc": "2026-10-10T04:09:58.451857+00:00",
+    "final_test_manifest_sha256": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+    "previous_analysis_output": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final",
+    "prior_test_failure_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+    "reason": "The first analysis used validator parameter counts after Conv-BN fusion; corrected analysis uses pre-fusion checkpoint counts from the fixed-image benchmark and verifies student counts against training manifests."
+  },
+  "analysis_output": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected",
+  "benchmark_output": "/mnt/nas-hpg9/rafli5131/bre/runs/benchmarks/pure_kd_final_inference.json",
+  "checkpoints": {
+    "kd_seed1337": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/weights/best.pt",
+      "sha256": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5"
+    },
+    "kd_seed2025": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt",
+      "sha256": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389"
+    },
+    "kd_seed42": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    },
+    "supervised_seed1337": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041"
+    },
+    "supervised_seed2025": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt",
+      "sha256": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301"
+    },
+    "supervised_seed42": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e"
+    },
+    "teacher_fp32": {
+      "path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+      "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+    }
+  },
+  "created_at_utc": "2026-10-08T22:37:54.333473+00:00",
+  "fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "finished_at_utc": "2026-10-10T04:05:25.424557+00:00",
+  "initial_analysis_output": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final",
+  "initial_test_output": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked",
+  "interruptions": [
+    {
+      "at_utc": "2026-10-09T10:52:52.706918+00:00",
+      "reason": "The pipeline waiter is no longer running. No final TEST, benchmark, or analysis stage has started.",
+      "snapshot": "artifacts/recovery_snapshots/20261009T105252Z"
+    }
+  ],
+  "prior_failed_test_attempts": [
+    {
+      "error": "AttributeError: 'dict' object has no attribute 'box'",
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "manifest_sha256": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "models_with_metrics": [],
+      "note": "Prior attempt scanned TEST labels but failed before recording any model metrics.",
+      "status": "failed"
+    }
+  ],
+  "resume_history": [
+    {
+      "previous_error": "PipelineError: Training queue ended with status failed: QueueError: Command exited 1; inspect log: /mnt/nas-hpg9/rafli5131/bre/runs/student_training_queue_logs/kd_seed42.log",
+      "previous_status": "failed",
+      "resumed_at_utc": "2026-10-09T01:59:29.833290+00:00"
+    },
+    {
+      "previous_error": "The pipeline waiter is no longer running. No final TEST, benchmark, or analysis stage has started.",
+      "previous_status": "interrupted",
+      "resumed_at_utc": "2026-10-09T21:44:18.530440+00:00"
+    },
+    {
+      "previous_error": "PipelineError: Stage locked_test_evaluation exited 1; inspect /mnt/nas-hpg9/rafli5131/bre/runs/final_evaluation_logs/locked_test_evaluation.log",
+      "previous_status": "failed",
+      "requeued_stage": "locked_test_evaluation",
+      "resumed_at_utc": "2026-10-09T22:57:47.438221+00:00",
+      "retry_reason": "Locked TEST stage had failed with no TEST, benchmark, or analysis output present."
+    },
+    {
+      "previous_error": "PipelineError: Stage locked_test_evaluation exited 1; inspect /mnt/nas-hpg9/rafli5131/bre/runs/final_evaluation_logs/locked_test_evaluation.log",
+      "previous_status": "failed",
+      "requeued_stage": "locked_test_evaluation",
+      "resumed_at_utc": "2026-10-10T03:49:27.187531+00:00",
+      "retry_reason": "Locked TEST stage had failed with no TEST, benchmark, or analysis output present."
+    },
+    {
+      "previous_error": "PipelineError: Stage locked_test_evaluation exited 1; inspect /mnt/nas-hpg9/rafli5131/bre/runs/final_evaluation_logs/locked_test_evaluation.log",
+      "previous_status": "failed",
+      "prior_failed_test_attempt": {
+        "error": "AttributeError: 'dict' object has no attribute 'box'",
+        "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+        "manifest_sha256": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+        "models_with_metrics": [],
+        "note": "Prior attempt scanned TEST labels but failed before recording any model metrics.",
+        "status": "failed"
+      },
+      "requeued_stage": "locked_test_evaluation",
+      "resumed_at_utc": "2026-10-10T04:00:27.620051+00:00",
+      "retry_reason": "Locked TEST stage failed before producing model metrics; retry uses a new output directory."
+    }
+  ],
+  "stages": {
+    "inference_benchmark": "complete",
+    "locked_test_evaluation": "complete",
+    "thesis_analysis": "complete"
+  },
+  "status": "complete",
+  "superseded_analysis_outputs": [
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final"
+  ],
+  "test_output": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1",
+  "training_queue": "/mnt/nas-hpg9/rafli5131/bre/artifacts/student_training_queue.json",
+  "updated_at_utc": "2026-10-10T04:09:58.455167+00:00"
+}

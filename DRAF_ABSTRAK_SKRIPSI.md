@@ -1,0 +1,17 @@
+# Draf Abstrak Skripsi
+
+**Judul kerja:** *Kompresi Model YOLO untuk Deteksi Objek Advance Vision Menggunakan Pure Teacher-Only Knowledge Distillation*
+
+## Abstrak
+
+Penelitian ini mengevaluasi *pure teacher-only knowledge distillation* (KD) untuk melatih student YOLO kecil dari teacher YOLO11n pada dataset Advance Vision. Objective KD hanya menggunakan fitur dan keluaran teacher yang dibekukan, tanpa loss ground-truth, pseudo-label, atau *quantization-aware training* (QAT). Dataset Roboflow v1 mencakup 6.405 gambar tiga kelas (`ball`, `gawang`, `robot`), dengan 4.600/1.213/592 gambar pada split TRAIN/VAL/TEST. Student berarsitektur sama dan berinisialisasi acak dilatih dengan KD dan supervised sebagai kontrol terpisah, masing-masing pada tiga seed berpasangan. Checkpoint dipilih berdasarkan VAL sebelum evaluasi akhir TEST. KD meniru fitur P3/P4/P5, logit regresi box, dan keluaran lunak kelas teacher. Mean TEST mAP50–95 KD adalah 0,6630 ± 0,0108, lebih rendah daripada supervised (0,7225 ± 0,0035) dan teacher (0,7800); hipotesis bahwa KD mengungguli supervised tidak didukung. Dibanding teacher, student KD memiliki parameter 68,71% lebih sedikit, checkpoint 65,20% lebih kecil, dan FLOPs 62,64% lebih rendah. Kontrol supervised memiliki jumlah parameter dan FLOPs yang sama, sehingga penghematan tersebut berasal dari arsitektur student yang lebih kecil, bukan objective KD. Mean latensi median pada NVIDIA L40 adalah 25,01 ms untuk KD, 25,00 ms untuk supervised, dan 25,72 ms untuk teacher. Split level-gambar dan provenance training teacher yang tidak lengkap membatasi kesimpulan pada data serta protokol yang diuji; hasil tidak membuktikan generalisasi ke adegan baru atau kesiapan deployment robot.
+
+**Kata kunci:** knowledge distillation, deteksi objek, YOLO, kompresi model, teacher-only.
+
+## Abstract
+
+This study evaluates *pure teacher-only knowledge distillation* (KD) to train a compact YOLO student from YOLO11n on Advance Vision. The objective uses only features and outputs from the frozen teacher, without ground-truth or pseudo-label losses or quantization-aware training (QAT). The Roboflow v1 export contains 6,405 images in three classes, split 4,600/1,213/592 across TRAIN/VAL/TEST. Same-architecture, randomly initialized students were trained with KD and, separately, supervised learning as a control, using three paired seeds. Checkpoints were selected on VAL before locked TEST evaluation. KD distills P3/P4/P5 features, box-regression logits, and soft class outputs. KD achieved mean TEST mAP50–95 of 0.6630 ± 0.0108, below supervised (0.7225 ± 0.0035) and teacher (0.7800); the hypothesis that KD outperforms supervised learning was unsupported. Relative to the teacher, the KD student had 68.71% fewer parameters, a 65.20% smaller checkpoint, and 62.64% fewer GFLOPs. The supervised control has identical parameter and GFLOP counts, so these savings result from architecture size, not KD. Mean median latency on an NVIDIA L40 was 25.01 ms for KD, 25.00 ms for supervised, and 25.72 ms for teacher. Image-level splits and incomplete teacher training provenance restrict conclusions to the evaluated data and protocol; new-scene generalization and robot deployment remain unestablished.
+
+**Keywords:** knowledge distillation, object detection, YOLO, model compression, teacher-only.
+
+> Abstrak ini mengikuti hasil terkunci. Panjang abstrak, format judul, dan pilihan kata kunci masih perlu disesuaikan dengan pedoman prodi.

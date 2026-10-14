@@ -1,0 +1,58 @@
+{
+  "dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/configs/data_train_val.yaml",
+  "dataset_snapshot_status": "not captured at training time; the locked fingerprint was created after this run completed, so this checkpoint is exploratory and excluded from the final comparison",
+  "distillation": {
+    "box_weight": 1.0,
+    "class_temperature": 2.0,
+    "class_weight": 1.0,
+    "feature_weight": 1.0,
+    "layers": "YOLO Detect neck inputs (P3/P4/P5) and raw Detect outputs",
+    "type": "feature, box-output, and class-output distillation; no ground-truth loss"
+  },
+  "finished_at_utc": "2026-10-08T17:52:00.320710+00:00",
+  "metrics": {
+    "fitness": 0.6824567673866878,
+    "metrics/mAP50(B)": 0.961984227504373,
+    "metrics/mAP50-95(B)": 0.6824567673866878,
+    "metrics/precision(B)": 0.8740923810804017,
+    "metrics/recall(B)": 0.9120649637819865
+  },
+  "objective": "pure FP32 teacher-only distillation; no supervised training loss and no QAT",
+  "output_dir": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4",
+  "parameter_reduction_percent": 68.706,
+  "qat_used": false,
+  "started_at_utc": "2026-10-08T14:26:55.397902+00:00",
+  "status": "complete",
+  "student_architecture": "/mnt/nas-hpg9/rafli5131/bre/models/yolo11_tiny_kd.yaml",
+  "student_best_checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/weights/best.pt",
+  "student_best_sha256": "a8a742e27a75cd3f2e335bab4d872a5856ee2dbff7942fa984360fe925d6a0e0",
+  "student_initialization": "random initialization from custom narrow YOLO11 YAML",
+  "student_parameters": 810649,
+  "teacher_checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "teacher_parameters": 2590425,
+  "teacher_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "test_split_used": false,
+  "train_labels_used_for_loss": false,
+  "training": {
+    "amp": false,
+    "batch": 16,
+    "close_mosaic": 10,
+    "device": "0",
+    "epochs": 100,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "seed": 42,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005,
+    "workers": 2
+  },
+  "validation_split": "VAL only; labels used only for metrics and diagnostics",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

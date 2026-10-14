@@ -1,0 +1,153 @@
+{
+  "classes": {
+    "0": "ball",
+    "1": "gawang",
+    "2": "robot"
+  },
+  "data_yaml": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/dataset/data.yaml",
+  "data_yaml_sha256": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+  "dataset_fingerprint": "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json",
+  "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "error": "AttributeError: 'dict' object has no attribute 'box'",
+  "evaluator_script": "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py",
+  "evaluator_script_sha256": "6f3ad7c1264d020c67f065d115f77f2395a0c79404e5f6b15ffa86bd990e8282",
+  "finished_at_utc": "2026-10-10T03:49:47.439442+00:00",
+  "historical_teacher_test_use": {
+    "description": "The frozen teacher was previously evaluated on TEST after selection; this evidence is recorded and was not used to select student checkpoints.",
+    "evidence": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/final_test/manifest.json",
+    "evidence_sha256": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602"
+  },
+  "metric_operating_point": {
+    "candidate_confidence_floor_for_ap": 0.001,
+    "confidence_threshold": 0.25,
+    "precision_recall_averaging": "macro over the three classes",
+    "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+    "true_positive_iou_threshold": 0.5
+  },
+  "models": {},
+  "models_selected_by_val_or_previously_locked": [
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+      "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "historical_test_evidence": null,
+      "label": "kd_seed42",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "training_manifest_sha256": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "checkpoint_sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "historical_test_evidence": null,
+      "label": "supervised_seed42",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "training_manifest_sha256": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/weights/best.pt",
+      "checkpoint_sha256": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "historical_test_evidence": null,
+      "label": "kd_seed1337",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "training_manifest_sha256": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "historical_test_evidence": null,
+      "label": "supervised_seed1337",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "training_manifest_sha256": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt",
+      "checkpoint_sha256": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "historical_test_evidence": null,
+      "label": "kd_seed2025",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "training_manifest_sha256": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt",
+      "checkpoint_sha256": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "historical_test_evidence": null,
+      "label": "supervised_seed2025",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "training_manifest_sha256": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+      "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "historical_test_evidence": {
+        "path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/final_test/manifest.json",
+        "sha256": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602"
+      },
+      "label": "teacher_fp32",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/manifest.json",
+      "training_manifest_sha256": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f"
+    }
+  ],
+  "purpose": "final evaluation only; do not use TEST to alter models, losses, thresholds, or hyperparameters",
+  "resolved_splits": {
+    "test": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/test/images",
+    "train": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/train/images",
+    "val": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/valid/images"
+  },
+  "runtime": {
+    "compute_capability": "8.9",
+    "cuda_available": true,
+    "cuda_runtime_version": "12.1",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA L40",
+    "device_type": "cuda",
+    "logical_device_index": 0,
+    "platform": "Linux-6.1.0-43-amd64-x86_64-with-glibc2.36",
+    "requested_device": "0",
+    "total_memory_bytes": 47590277120,
+    "visible_cuda_device_count": 3
+  },
+  "settings": {
+    "amp": false,
+    "augmentation": false,
+    "batch": 16,
+    "bootstrap": {
+      "confidence_level": 0.95,
+      "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+      "operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "true_positive_iou_threshold": 0.5
+      },
+      "overall_metric_requires_all_classes": true,
+      "random_seed": 20261009,
+      "replicates": 1000,
+      "sampling_unit": "image"
+    },
+    "cache": false,
+    "conf": 0.001,
+    "confidence_threshold_policy": "candidate floor fixed at 0.001 for AP; point P/R/F1 fixed at 0.25 before TEST",
+    "device": "0",
+    "imgsz": 640,
+    "iou": 0.7,
+    "metric_operating_confidence_threshold": 0.25,
+    "metric_operating_iou_threshold": 0.5,
+    "plots": false,
+    "precision": "FP32",
+    "rect": true,
+    "split": "test",
+    "test_label_cache": "written only inside this output directory",
+    "workers": 2
+  },
+  "started_at_utc": "2026-10-10T03:49:41.742822+00:00",
+  "status": "failed",
+  "test_annotation_count": 734,
+  "test_image_count": 592,
+  "test_split_fingerprint_sha256": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+  "versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "torch_cuda": "12.1",
+    "ultralytics": "8.4.130"
+  }
+}

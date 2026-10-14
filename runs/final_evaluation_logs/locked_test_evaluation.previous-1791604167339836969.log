@@ -1,0 +1,9 @@
+WARNING ⚠️ no model scale passed. Assuming scale='t'.
+[W1010 05:57:51.396452675 NNPACK.cpp:61] Could not initialize NNPACK! Reason: Unsupported hardware.
+Traceback (most recent call last):
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 1154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py", line 1026, in main
+    raise TestEvaluationError("CUDA was requested but is unavailable in this process.")
+TestEvaluationError: CUDA was requested but is unavailable in this process.

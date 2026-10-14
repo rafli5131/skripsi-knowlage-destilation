@@ -1,0 +1,5 @@
+Resuming locked final pipeline. State: /mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json
+Waiting for paired training queue: /mnt/nas-hpg9/rafli5131/bre/artifacts/student_training_queue.json
+All six student runs passed provenance checks; beginning the single locked TEST evaluation.
+Starting stage locked_test_evaluation; log: /mnt/nas-hpg9/rafli5131/bre/runs/final_evaluation_logs/locked_test_evaluation.log
+PipelineError: Stage locked_test_evaluation exited 1; inspect /mnt/nas-hpg9/rafli5131/bre/runs/final_evaluation_logs/locked_test_evaluation.log

@@ -1,0 +1,34 @@
+{
+  "status": "complete",
+  "generated_at_utc": "2026-10-10T08:57:17.520974+00:00",
+  "script": "/mnt/nas-hpg9/rafli5131/bre/scripts/plot_thesis_tradeoff.py",
+  "script_sha256": "04f05d652be8a397eecf6109c2a265352f37e1dfaf360004db7e6dbb12b0760b",
+  "source_summary": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/summary_mean_sd.csv",
+  "source_summary_sha256": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+  "python_version": "3.11.2",
+  "matplotlib_version": "3.11.1",
+  "figure_specification": {
+    "metrics": [
+      "test_mAP50_95",
+      "checkpoint_size_MiB",
+      "latency_median_ms"
+    ],
+    "student_uncertainty": "sample SD across three paired seeds",
+    "teacher_uncertainty": "not estimated; one checkpoint",
+    "test_metric": "locked TEST mAP50-95",
+    "mAP50_95_axis_range": [
+      0.6,
+      0.82
+    ]
+  },
+  "outputs": {
+    "figure_4_1_model_tradeoff.png": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_4_1_model_tradeoff.png",
+      "sha256": "6cb53281d865139d0601ff413812fe6bd168798853432b306a60eb6a2241a02f"
+    },
+    "figure_4_1_model_tradeoff.pdf": {
+      "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_4_1_model_tradeoff.pdf",
+      "sha256": "2d7f7904412c33a3b667a8657ca89f45da1cfef379f18d37fd28fd9ec0816804"
+    }
+  }
+}

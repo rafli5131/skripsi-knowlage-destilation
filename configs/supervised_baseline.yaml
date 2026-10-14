@@ -1,0 +1,22 @@
+student_model: models/yolo11_tiny_kd.yaml
+data_yaml: configs/data_train_val.yaml
+
+run:
+  project: runs/supervised
+  name: yolo11_tiny_supervised_seed{seed}
+
+training:
+  epochs: 100
+  batch: 16
+  workers: 2
+  imgsz: 640
+  device: "0"
+  seed: 42
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  warmup_epochs: 3.0
+  weight_decay: 0.0005
+  close_mosaic: 10
+  amp: false
+  patience: 30

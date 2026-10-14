@@ -1,0 +1,73 @@
+{
+  "dataset_fingerprint": "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json",
+  "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "dataset_snapshot_provenance": {
+    "all_image_and_label_hashes_revalidated_at_link_time": true,
+    "current_source_mount": {
+      "filesystem": "nfs4",
+      "mountpoint": "/mnt/nas-hpg9",
+      "read_only_at_link_time": true,
+      "source": "10.34.0.52:/mnt/main-pool/nfs-labkc-lenovo"
+    },
+    "fingerprint_created_at_utc": "2026-10-08T19:56:58.917029+00:00",
+    "fingerprint_predates_run": true,
+    "linked_after_training": true,
+    "linked_at_utc": "2026-10-09T01:37:42.344156+00:00",
+    "note": "Fingerprint linkage was added after training because the original run manifest did not record it. The fingerprint predates the run; every image and label in train, val, and test was rehashed and matched at link time. If the original manifest lacks the training YAML hash, the saved Ultralytics args, current YAML class map, and train/val paths were checked; its byte identity at run start cannot be claimed retrospectively.",
+    "run_started_at_utc": "2026-10-08T19:59:18.366081+00:00",
+    "training_args_path": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/args.yaml",
+    "training_args_sha256_at_link_time": "5e1c01e559d161ddabd2a3f548f5a7f7d00e415119bb8253bfff337b437db377",
+    "training_yaml_hash_recorded_at_run_start": false,
+    "training_yaml_sha256_at_link_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd"
+  },
+  "dataset_split_fingerprints": {
+    "test": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+    "train": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+    "val": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710"
+  },
+  "dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/configs/data_train_val.yaml",
+  "finished_at_utc": "2026-10-09T01:37:21.576751+00:00",
+  "metrics": {
+    "fitness": 0.7189418000260801,
+    "metrics/mAP50(B)": 0.9732610302550367,
+    "metrics/mAP50-95(B)": 0.7189418000260801,
+    "metrics/precision(B)": 0.9351230349184035,
+    "metrics/recall(B)": 0.9427782335402984
+  },
+  "objective": "student-only supervised detection baseline; separate from pure KD",
+  "output_dir": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1",
+  "qat_used": false,
+  "seed": 42,
+  "started_at_utc": "2026-10-08T19:59:18.366081+00:00",
+  "status": "complete",
+  "student_architecture": "/mnt/nas-hpg9/rafli5131/bre/models/yolo11_tiny_kd.yaml",
+  "student_architecture_sha256": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+  "student_best_checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+  "student_best_sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+  "student_initialization": "random initialization; pretrained=False",
+  "student_parameters": 810649,
+  "test_split_used": false,
+  "train_labels_used_for_loss": true,
+  "training": {
+    "amp": false,
+    "batch": 16,
+    "close_mosaic": 10,
+    "device": "0",
+    "epochs": 100,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "seed": 42,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005,
+    "workers": 2
+  },
+  "validation_split": "VAL only; labels used only for metrics and checkpoint selection",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

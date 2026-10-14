@@ -1,0 +1,21 @@
+comparison,metric,n_pairs,mean_paired_delta,sample_sd
+Pure KD minus supervised student,test_mAP50,3,-0.015438474503411995,0.0044000549227917905
+Pure KD minus supervised student,test_mAP50_95,3,-0.05948024571944466,0.013798749953926106
+Pure KD minus supervised student,test_precision,3,-0.10618845517881126,0.02030095929065215
+Pure KD minus supervised student,test_recall,3,-0.006756644742022792,0.002514951229457758
+Pure KD minus supervised student,test_F1,3,-0.06596198061363916,0.011641786095616133
+Pure KD minus supervised student,test_ball_precision,3,-0.19686771396955474,0.05348893275578918
+Pure KD minus supervised student,test_ball_mAP50,3,-0.01996341136767125,0.005285802949755406
+Pure KD minus supervised student,test_ball_mAP50_95,3,-0.09386297227546343,0.021777798177058695
+Pure KD minus supervised student,test_ball_recall,3,-0.004016064257028125,0.0069560273396340674
+Pure KD minus supervised student,test_ball_F1,3,-0.11472695994999571,0.02942951517612233
+Pure KD minus supervised student,test_gawang_precision,3,-0.015916749207029308,0.010535008470039006
+Pure KD minus supervised student,test_gawang_mAP50,3,-0.012757146504659977,0.011982742833733623
+Pure KD minus supervised student,test_gawang_mAP50_95,3,-0.010355414908966187,0.004227541920081203
+Pure KD minus supervised student,test_gawang_recall,3,-0.01065162907268169,0.006042387694857711
+Pure KD minus supervised student,test_gawang_F1,3,-0.014056122882862213,0.0058896480412824175
+Pure KD minus supervised student,test_robot_precision,3,-0.10578090235984976,0.028209858421872226
+Pure KD minus supervised student,test_robot_mAP50,3,-0.013594865637904574,0.002185467529969918
+Pure KD minus supervised student,test_robot_mAP50_95,3,-0.07422234997390409,0.021372142779900717
+Pure KD minus supervised student,test_robot_recall,3,-0.0056022408963585235,0.004851682934366586
+Pure KD minus supervised student,test_robot_F1,3,-0.0651104053919308,0.01837769803855733
