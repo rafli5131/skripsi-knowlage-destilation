@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "run_id": "20261019T130054Z_ba61cd",
+  "started_at_utc": "2026-10-19T13:00:54.582549+00:00",
+  "mode": "dry_run_no_motion",
+  "topic": "/thesis/image_raw",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "head_ids": {
+    "head_pan": 19,
+    "head_tilt": 20
+  },
+  "duration_requested_s": 8.0,
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.45,
+  "ball_control_conf": 0.5,
+  "max_excursion_deg": 12,
+  "no_image_video_saved": true,
+  "stop_reason": "duration_elapsed",
+  "fatal_error": null,
+  "stopped_at_utc": "2026-10-19T13:01:02.660122+00:00",
+  "processed_frames": 118,
+  "ball_frames": 118,
+  "computed_commands": 20,
+  "hardware_writes": 0,
+  "actual_loop_duration_s": 8.01
+}

@@ -1,0 +1,75 @@
+{
+  "status": "completed",
+  "run_id": "20261019T130400Z_74c464",
+  "started_at_utc": "2026-10-19T13:04:00.306260+00:00",
+  "mode": "hardware_head_only",
+  "topic": "/thesis/image_raw",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "head_ids": {
+    "head_pan": 19,
+    "head_tilt": 20
+  },
+  "duration_requested_s": 6.0,
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.45,
+  "ball_control_conf": 0.5,
+  "max_excursion_deg": 5.0,
+  "no_image_video_saved": true,
+  "servo_preflight": {
+    "head_pan": {
+      "id": 19,
+      "model": 1020,
+      "operating_mode": 3,
+      "torque_enabled": 0,
+      "hardware_error": 0,
+      "goal_raw": 2399,
+      "present_raw": 2399,
+      "voltage_v": 12.0,
+      "temperature_c": 25
+    },
+    "head_tilt": {
+      "id": 20,
+      "model": 1020,
+      "operating_mode": 3,
+      "torque_enabled": 0,
+      "hardware_error": 0,
+      "goal_raw": 1722,
+      "present_raw": 1722,
+      "voltage_v": 11.9,
+      "temperature_c": 25
+    }
+  },
+  "servo_restore": {
+    "before_torque_off": {
+      "head_pan": {
+        "goal_raw": 2399,
+        "present_raw": 2398
+      },
+      "head_tilt": {
+        "goal_raw": 1722,
+        "present_raw": 1721
+      }
+    },
+    "after_torque_off": {
+      "head_pan": {
+        "goal_raw": 2398,
+        "present_raw": 2398,
+        "torque_enabled": 0
+      },
+      "head_tilt": {
+        "goal_raw": 1721,
+        "present_raw": 1721,
+        "torque_enabled": 0
+      }
+    }
+  },
+  "stop_reason": "duration_elapsed",
+  "fatal_error": null,
+  "stopped_at_utc": "2026-10-19T13:04:07.653488+00:00",
+  "processed_frames": 79,
+  "ball_frames": 79,
+  "computed_commands": 23,
+  "hardware_writes": 26,
+  "actual_loop_duration_s": 6.94
+}

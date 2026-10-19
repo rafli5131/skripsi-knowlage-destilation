@@ -1,0 +1,110 @@
+{
+  "run_id": "20261019T123737Z_023704",
+  "status": "completed",
+  "condition": "servo_idle",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "processed_frames": 1501,
+  "received_frames": 1806,
+  "overwritten_frames": 304,
+  "errors": 0,
+  "total_detections": 4454,
+  "observed_window_s": 59.61,
+  "processed_fps": 25.16,
+  "measurements": {
+    "preprocess_ms": {
+      "mean": 1.34,
+      "median": 1.32,
+      "p95": 1.85,
+      "max": 3.69
+    },
+    "inference_ms": {
+      "mean": 29.67,
+      "median": 29.57,
+      "p95": 34.91,
+      "max": 40.6
+    },
+    "postprocess_ms": {
+      "mean": 0.79,
+      "median": 0.82,
+      "p95": 0.95,
+      "max": 4.14
+    },
+    "processing_ms": {
+      "mean": 39.78,
+      "median": 39.38,
+      "p95": 45.95,
+      "max": 550.57
+    },
+    "camera_age_ms": {
+      "mean": 100.22,
+      "median": 99.7,
+      "p95": 117.7,
+      "max": 744.8
+    },
+    "process_cpu_percent": {
+      "mean": 1005.66,
+      "median": 1022.2,
+      "p95": 1043.2,
+      "max": 1056.1
+    },
+    "system_cpu_percent": {
+      "mean": 66.59,
+      "median": 67.7,
+      "p95": 68.8,
+      "max": 69.6
+    },
+    "process_ram_mib": {
+      "mean": 380.05,
+      "median": 381.7,
+      "p95": 386.1,
+      "max": 387.9
+    },
+    "system_ram_percent": {
+      "mean": 39.37,
+      "median": 39.4,
+      "p95": 39.8,
+      "max": 39.8
+    }
+  },
+  "classes": {
+    "ball": {
+      "detections": 1501,
+      "frames_with_detection": 1501,
+      "frames_without_detection": 0,
+      "track_ids": {
+        "1": 1501
+      },
+      "blank_track_ids": 0,
+      "longest_consecutive_detection_frames": 1501,
+      "longest_consecutive_missing_frames": 0,
+      "confidence_mean": 0.979,
+      "confidence_median": 0.979
+    },
+    "gawang": {
+      "detections": 1452,
+      "frames_with_detection": 1452,
+      "frames_without_detection": 49,
+      "track_ids": {
+        "3": 1452
+      },
+      "blank_track_ids": 0,
+      "longest_consecutive_detection_frames": 134,
+      "longest_consecutive_missing_frames": 3,
+      "confidence_mean": 0.29,
+      "confidence_median": 0.29
+    },
+    "robot": {
+      "detections": 1501,
+      "frames_with_detection": 1501,
+      "frames_without_detection": 0,
+      "track_ids": {
+        "2": 1501
+      },
+      "blank_track_ids": 0,
+      "longest_consecutive_detection_frames": 1501,
+      "longest_consecutive_missing_frames": 0,
+      "confidence_mean": 0.771,
+      "confidence_median": 0.772
+    }
+  }
+}

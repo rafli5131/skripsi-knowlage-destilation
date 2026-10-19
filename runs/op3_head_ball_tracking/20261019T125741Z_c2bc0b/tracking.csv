@@ -1,0 +1,1 @@
+frame_index,capture_stamp_ns,processed_at_utc,ball_confidence,ball_track_id,ball_center_x,ball_center_y,error_x_norm,error_y_norm,lock_frames,camera_age_ms,inference_ms,processing_ms,target_pan_deg,target_tilt_deg,present_pan_deg,present_tilt_deg,command_computed,hardware_write,reason

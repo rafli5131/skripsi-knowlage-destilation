@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "run_id": "20261019T130201Z_7ba2ef",
+  "started_at_utc": "2026-10-19T13:02:01.149133+00:00",
+  "mode": "hardware_head_only",
+  "topic": "/thesis/image_raw",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "head_ids": {
+    "head_pan": 19,
+    "head_tilt": 20
+  },
+  "duration_requested_s": 15.0,
+  "imgsz": 640,
+  "conf": 0.25,
+  "iou": 0.45,
+  "ball_control_conf": 0.5,
+  "max_excursion_deg": 8.0,
+  "no_image_video_saved": true,
+  "servo_preflight": {
+    "head_pan": {
+      "id": 19,
+      "model": 1020,
+      "operating_mode": 3,
+      "torque_enabled": 0,
+      "hardware_error": 0,
+      "goal_raw": 2036,
+      "present_raw": 2036,
+      "voltage_v": 12.0,
+      "temperature_c": 22
+    },
+    "head_tilt": {
+      "id": 20,
+      "model": 1020,
+      "operating_mode": 3,
+      "torque_enabled": 0,
+      "hardware_error": 0,
+      "goal_raw": 1892,
+      "present_raw": 1893,
+      "voltage_v": 11.9,
+      "temperature_c": 22
+    }
+  },
+  "stop_reason": "duration_elapsed",
+  "fatal_error": null,
+  "stopped_at_utc": "2026-10-19T13:02:20.992844+00:00",
+  "processed_frames": 49,
+  "ball_frames": 26,
+  "computed_commands": 10,
+  "hardware_writes": 34,
+  "actual_loop_duration_s": 16.18
+}
