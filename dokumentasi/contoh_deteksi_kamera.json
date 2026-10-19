@@ -1,0 +1,41 @@
+{
+  "captured_at_utc": "2026-10-19T08:25:17.126662+00:00",
+  "source_topic": "/thesis/image_raw",
+  "camera_frame_id": "camera",
+  "capture_stamp": {
+    "sec": 1792398316,
+    "nanosec": 514983000
+  },
+  "image_resolution": {
+    "width": 640,
+    "height": 480
+  },
+  "checkpoint": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "class_names": {
+    "0": "ball",
+    "1": "gawang",
+    "2": "robot"
+  },
+  "device": "cpu",
+  "precision": "FP32",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "detections": [
+    {
+      "class_id": 0,
+      "class_name": "ball",
+      "confidence": 0.8553565144538879,
+      "bbox_xyxy_px": [
+        195.77847290039062,
+        249.61611938476562,
+        246.09927368164062,
+        299.2404479980469
+      ]
+    }
+  ],
+  "annotated_image": "/home/humanoid/bre_skripsi/dokumentasi/figures/contoh_deteksi_kamera.png",
+  "elapsed_seconds_until_example": 0.7518072160000884,
+  "raw_frame_or_video_saved": false
+}

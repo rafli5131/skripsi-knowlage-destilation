@@ -14,10 +14,23 @@ after the six student checkpoints had been locked by VAL. Training uses FP32.
 The completed experiments below use Advance Vision data and establish the
 current pure-KD checkpoints. The planned next phase is to evaluate the selected
 student `.pt` on ROBOTIS OP3 using PyTorch/Ultralytics on CPU. OpenVINO and
-QAT/INT8 are not part of the current deployment plan. The checkpoint has not yet
-been tested on the OP3 camera. The proposal and planning drafts in this repo
+QAT/INT8 are not part of the current deployment plan. The checkpoint has been
+run on a C920 camera through ROS 2; the latest operator-labeled idle session
+processed 887 frames and emitted 887 detection instances. Motion state is not
+inferred by the detector. The proposal and planning drafts in this repo
 describe the completed Advance Vision study and need revision before serving as
 the final OP3 thesis proposal.
+
+The initial native PyTorch/Ultralytics ROS 2 camera node for the KD student is
+[`scripts/op3_pytorch_detector.py`](scripts/op3_pytorch_detector.py). It reads
+an operator-selected image topic and publishes detections without controlling
+the robot. Runtime setup, parameters, and logging are documented in
+[`OP3_PYTORCH_RUNTIME.md`](OP3_PYTORCH_RUNTIME.md). A CPU camera-inference
+session and its performance charts are documented in
+[`dokumentasi/README.md`](dokumentasi/README.md), including one annotated
+camera frame and its detection metadata.
+Per-run reports grouped by date and trial are indexed in
+[`dokumentasi/INDEKS.md`](dokumentasi/INDEKS.md).
 
 ## Final result status
 

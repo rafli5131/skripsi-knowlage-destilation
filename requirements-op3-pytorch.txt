@@ -1,0 +1,8 @@
+# CPU-only runtime for ROBOTIS OP3 (Python 3.12 / ROS 2 Jazzy)
+torch==2.4.1+cpu
+torchvision==0.19.1+cpu
+ultralytics==8.4.130
+numpy==1.26.4
+opencv-python==4.11.0.86
+psutil==7.2.2
+PyYAML==6.0.3
