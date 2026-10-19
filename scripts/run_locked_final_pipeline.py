@@ -14,20 +14,29 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+try:
+    from .project_config import load_run_config, resolve_repo_path
+except ImportError:
+    from project_config import load_run_config, resolve_repo_path
+
 
 ROOT = Path(__file__).resolve().parents[1]
-PYTHON = Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python")
-FINGERPRINT = ROOT / "artifacts/advance_vision_dataset_fingerprint.json"
+RUN_CONFIG = load_run_config()
+QUEUE_CONFIG = RUN_CONFIG["queue"]
+PIPELINE_CONFIG = RUN_CONFIG["pipeline"]
+SEED_RUNS = {int(seed): value for seed, value in QUEUE_CONFIG["seeds"].items()}
+PYTHON = resolve_repo_path(RUN_CONFIG["training_python"])
+FINGERPRINT = resolve_repo_path(RUN_CONFIG["fingerprint"])
 TRAINING_QUEUE = ROOT / "artifacts/student_training_queue.json"
 PIPELINE_STATE = ROOT / "artifacts/final_evaluation_pipeline.json"
-LOG_DIR = ROOT / "runs/final_evaluation_logs"
-FAILED_TEST_ATTEMPT = ROOT / "runs/final_test/pure_kd_official_split_locked"
-TEST_OUTPUT = ROOT / "runs/final_test/pure_kd_official_split_locked_retry1"
-BENCHMARK_OUTPUT = ROOT / "runs/benchmarks/pure_kd_final_inference.json"
-ANALYSIS_OUTPUT = ROOT / "artifacts/thesis_analysis_final_corrected"
+LOG_DIR = resolve_repo_path(PIPELINE_CONFIG["log_dir"])
+FAILED_TEST_ATTEMPT = resolve_repo_path(PIPELINE_CONFIG["failed_test_attempt"])
+TEST_OUTPUT = resolve_repo_path(PIPELINE_CONFIG["test_output"])
+BENCHMARK_OUTPUT = resolve_repo_path(PIPELINE_CONFIG["benchmark_output"])
+ANALYSIS_OUTPUT = resolve_repo_path(PIPELINE_CONFIG["analysis_output"])
 POLL_SECONDS = 20
 STALE_SECONDS = 30 * 60
-SEEDS = (42, 1337, 2025)
+SEEDS = tuple(sorted(SEED_RUNS))
 
 
 class PipelineError(RuntimeError):
@@ -54,14 +63,11 @@ def write_json(path: Path, value: dict[str, Any]) -> None:
 
 
 def expected_models() -> dict[str, Path]:
-    models = {"teacher_fp32": Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt")}
+    models = {"teacher_fp32": resolve_repo_path(RUN_CONFIG["teacher_checkpoint"])}
     for seed in SEEDS:
-        models[f"kd_seed{seed}"] = ROOT / "runs/kd" / (
-            "yolo11_tiny_pure_kd_v4_locked_seed42" if seed == 42 else f"yolo11_tiny_pure_kd_v4_seed{seed}"
-        ) / "weights/best.pt"
-        models[f"supervised_seed{seed}"] = ROOT / "runs/supervised" / (
-            "yolo11_tiny_supervised_seed42_retry1" if seed == 42 else f"yolo11_tiny_supervised_seed{seed}"
-        ) / "weights/best.pt"
+        model_runs = SEED_RUNS[seed]
+        models[f"kd_seed{seed}"] = ROOT / "runs/kd" / model_runs["kd"] / "weights/best.pt"
+        models[f"supervised_seed{seed}"] = ROOT / "runs/supervised" / model_runs["supervised"] / "weights/best.pt"
     return models
 
 
@@ -149,7 +155,7 @@ def wait_for_training(state: dict[str, Any]) -> None:
         waiting_item = next((item for item in queue.get("items", []) if item.get("status") == "waiting"), None)
         run_dir_value = (running_item or waiting_item or {}).get("run_dir")
         if waiting_item and waiting_item.get("label") == "wait_supervised_seed42":
-            run_dir_value = "runs/supervised/yolo11_tiny_supervised_seed42_retry1"
+            run_dir_value = str(Path("runs/supervised") / str(QUEUE_CONFIG["initial_supervised_run"]))
         if run_dir_value:
             results_path = ROOT / run_dir_value / "results.csv"
             if results_path.is_file():

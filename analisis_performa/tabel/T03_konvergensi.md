@@ -1,0 +1,14 @@
+# T03. konvergensi
+
+Status: Lengkap dari results.csv run yang sudah ada.
+
+| model | seed | run_sample [run] | VAL mAP50-95 @ epoch 10 [0-1] | VAL mAP50-95 @ epoch 25 [0-1] | VAL mAP50-95 @ epoch 50 [0-1] | VAL mAP50-95 @ epoch 75 [0-1] | VAL mAP50-95 @ epoch 100 [0-1] | best_epoch [epoch] | best_VAL_mAP50-95 [0-1] |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| kd_seed1337 | 1337 | 1 | 0.40008 | 0.58671 | 0.64257 | 0.6709 | 0.6749 | 96 | 0.67559 |
+| kd_seed2025 | 2025 | 1 | 0.38331 | 0.60194 | 0.66048 | 0.67273 | 0.67238 | 88 | 0.67837 |
+| kd_seed42 | 42 | 1 | 0.3523 | 0.59099 | 0.65921 | 0.67596 | 0.68085 | 90 | 0.68314 |
+| supervised_seed1337 | 1337 | 1 | 0.49147 | 0.61409 | 0.67495 | 0.70299 | 0.71676 | 99 | 0.71788 |
+| supervised_seed2025 | 2025 | 1 | 0.47722 | 0.61934 | 0.68395 | 0.71011 | 0.72355 | 99 | 0.72503 |
+| supervised_seed42 | 42 | 1 | 0.45324 | 0.59886 | 0.6796 | 0.70714 | 0.71905 | 100 | 0.71905 |
+
+Sumber: results.csv pada setiap run final

@@ -1,5 +1,9 @@
 # Hasil inferensi kamera OP3
 
+## Status terbaru kode deteksi dan tracking
+
+Pada 19 Oktober 2026, jalur node ROS diperbarui untuk menjalankan deteksi kelas `ball`, `gawang`, dan `robot`, lalu meneruskan ID BoT-SORT per objek ke pesan ROS dan CSV. Uji offline memakai satu citra VAL per kelas berhasil mendeteksi kelas yang sesuai dan mempertahankan ID pada frame statis berulang setelah track terkonfirmasi. Rincian dan hash input tersedia di [`../artifacts/op3_tracking_offline_smoke_20261019.json`](../artifacts/op3_tracking_offline_smoke_20261019.json). Ini belum merupakan uji kamera OP3. Ketiga log kamera di bawah dibuat sebelum tracking ditambahkan; log tersebut tidak memiliki ID lintas frame, dan kondisi berjalan belum diuji secara terkendali.
+
 Lihat [indeks percobaan berdasarkan tanggal](INDEKS.md) untuk laporan per run dan grafiknya.
 
 Dokumentasi ini merangkum satu sesi inferensi kamera yang benar-benar dijalankan. Grafik menunjukkan performa dan aliran frame. Satu frame beranotasi disertakan sebagai contoh visual; video dan frame mentah tidak disimpan.

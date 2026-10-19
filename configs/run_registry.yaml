@@ -1,0 +1,27 @@
+training_python: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python
+fingerprint: artifacts/advance_vision_dataset_fingerprint.json
+teacher_checkpoint: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt
+teacher_training_manifest: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/manifest.json
+teacher_training_args: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/fp32/fp32_baseline/args.yaml
+teacher_test_evidence: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/final_test/manifest.json
+evaluation_data_yaml: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/dataset/data.yaml
+queue:
+  initial_supervised_run: yolo11_tiny_supervised_seed42_retry1
+  log_dir: runs/student_training_queue_logs
+  seeds:
+    42:
+      kd: yolo11_tiny_pure_kd_v4_locked_seed42
+      supervised: yolo11_tiny_supervised_seed42_retry1
+    1337:
+      kd: yolo11_tiny_pure_kd_v4_seed1337
+      supervised: yolo11_tiny_supervised_seed1337
+    2025:
+      kd: yolo11_tiny_pure_kd_v4_seed2025
+      supervised: yolo11_tiny_supervised_seed2025
+pipeline:
+  evaluator_default_output: runs/final_test/pure_kd_official_split
+  failed_test_attempt: runs/final_test/pure_kd_official_split_locked
+  test_output: runs/final_test/pure_kd_official_split_locked_retry1
+  benchmark_output: runs/benchmarks/pure_kd_final_inference.json
+  analysis_output: artifacts/thesis_analysis_final_corrected
+  log_dir: runs/final_evaluation_logs

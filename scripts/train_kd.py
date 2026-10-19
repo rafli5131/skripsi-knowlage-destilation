@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import inspect
 import json
+import os
 import platform
 import sys
 import traceback
@@ -19,6 +20,13 @@ import ultralytics
 import yaml
 from ultralytics import YOLO
 from ultralytics.nn.distill_model import DistillationModel
+
+try:
+    from .experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from .training_runtime import verify_training_runtime
+except ImportError:
+    from experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from training_runtime import verify_training_runtime
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +46,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--seed", type=int, help="Override the configured seed; creates a separate run directory.")
     parser.add_argument("--run-name", help="Optional unique run directory name for a final rerun of a pilot seed.")
+    parser.add_argument("--data-root", type=Path, help="Verified dataset root; overrides KD_DATA_ROOT.")
+    parser.add_argument("--teacher-checkpoint", type=Path, help="Teacher checkpoint; overrides KD_TEACHER_CHECKPOINT.")
     return parser.parse_args()
 
 
@@ -243,28 +253,22 @@ def validate_config(
     config_path: Path,
     seed_override: int | None = None,
     run_name_override: str | None = None,
-) -> tuple[dict[str, Any], Path, Path, Path, Path]:
+    data_root_override: Path | None = None,
+    teacher_checkpoint_override: Path | None = None,
+) -> tuple[dict[str, Any], Path, Path, Path, Path, dict[str, Any], dict[str, Any], Path]:
     config_path = config_path.resolve()
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     if not isinstance(config, dict):
         raise KDRunError(f"Config must contain a YAML mapping: {config_path}")
 
-    teacher = resolve_path(config["teacher_checkpoint"], relative_to=ROOT)
+    teacher_value = teacher_checkpoint_override or os.environ.get("KD_TEACHER_CHECKPOINT") or config["teacher_checkpoint"]
+    teacher = resolve_path(teacher_value, relative_to=ROOT)
     student = resolve_path(config["student_model"], relative_to=ROOT)
-    data_yaml = resolve_path(config["data_yaml"], relative_to=ROOT)
-    data = yaml.safe_load(data_yaml.read_text(encoding="utf-8"))
-    if "test" in data:
-        raise KDRunError("KD training data config must not expose a TEST split.")
-    for split in ("train", "val"):
-        if split not in data or not Path(data[split]).is_dir():
-            raise KDRunError(f"Missing {split} image directory in {data_yaml}: {data.get(split)!r}")
+    source_data_yaml = resolve_path(config["data_yaml"], relative_to=ROOT)
     if not teacher.is_file():
         raise KDRunError(f"Teacher checkpoint not found: {teacher}")
     if not student.is_file():
         raise KDRunError(f"Student architecture YAML not found: {student}")
-    names = data.get("names")
-    if names != {0: "ball", 1: "gawang", 2: "robot"}:
-        raise KDRunError(f"Unexpected class map in data config: {names!r}")
 
     run = config["run"]
     output_root = resolve_path(run["project"], relative_to=ROOT)
@@ -279,7 +283,14 @@ def validate_config(
     run_dir = output_root / run_name
     if run_dir.exists():
         raise KDRunError(f"Refusing to overwrite an existing run directory: {run_dir}")
-    return config, teacher, student, data_yaml, run_dir
+    data_root = data_root_override or os.environ.get("KD_DATA_ROOT")
+    data_yaml, data, data_metadata = resolve_training_data(
+        source_data_yaml,
+        run_dir,
+        ROOT / "artifacts/advance_vision_dataset_fingerprint.json",
+        root_override=data_root,
+    )
+    return config, teacher, student, source_data_yaml, data_yaml, data, data_metadata, run_dir
 
 
 def main() -> int:
@@ -287,12 +298,21 @@ def main() -> int:
     manifest_path: Path | None = None
     manifest: dict[str, Any] = {}
     try:
-        config, teacher, student, data_yaml, run_dir = validate_config(args.config, args.seed, args.run_name)
+        runtime_compatibility = verify_training_runtime()
+        (
+            config, teacher, student, source_data_yaml, data_yaml, data_config,
+            data_metadata, run_dir,
+        ) = validate_config(
+            args.config, args.seed, args.run_name, args.data_root, args.teacher_checkpoint
+        )
         training = config["training"]
         distillation = config["distillation"]
         manifest_path = run_dir.parent / f".{run_dir.name}.manifest.json"
         if manifest_path.exists():
             raise KDRunError(f"A pending manifest already exists; inspect it before rerunning: {manifest_path}")
+        if data_yaml != source_data_yaml:
+            run_dir.mkdir(parents=False, exist_ok=False)
+            write_resolved_data_yaml(data_yaml, data_config)
         source_snapshot_dir = ROOT / "artifacts/training_source_snapshots" / run_dir.name
         implementation_source_value = inspect.getsourcefile(DistillationModel)
         if not implementation_source_value:
@@ -347,6 +367,14 @@ def main() -> int:
             },
             "teacher_checkpoint": str(teacher),
             "teacher_sha256": sha256_file(teacher),
+            "resolved_inputs": {
+                "teacher_checkpoint": str(teacher),
+                "teacher_checkpoint_sha256": sha256_file(teacher),
+                "source_dataset_yaml": str(source_data_yaml),
+                "source_dataset_yaml_sha256": sha256_file(source_data_yaml),
+                "resolved_dataset_yaml": str(data_yaml),
+                **data_metadata,
+            },
             "student_architecture": str(student),
             "student_architecture_sha256": sha256_file(student),
             "student_initialization": "random initialization from custom narrow YOLO11 YAML",
@@ -357,6 +385,7 @@ def main() -> int:
             ),
             "dataset_yaml": str(data_yaml),
             "dataset_yaml_sha256": sha256_file(data_yaml),
+            "training_runtime_compatibility": runtime_compatibility,
             **dataset_fingerprint_metadata(),
             "seed": int(training["seed"]),
             "train_labels_used_for_loss": False,
@@ -409,7 +438,7 @@ def main() -> int:
             save=True,
             project=str(run_dir.parent),
             name=run_dir.name,
-            exist_ok=False,
+            exist_ok=(data_yaml != source_data_yaml),
             compile=False,
         )
 

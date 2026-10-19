@@ -24,10 +24,19 @@ from ultralytics.data.dataset import YOLODataset
 from ultralytics.models.yolo.detect.val import DetectionValidator
 from ultralytics.utils.metrics import ap_per_class
 
+try:
+    from .model_registry import validate_checkpoint
+    from .project_config import load_run_config
+except ImportError:
+    from model_registry import validate_checkpoint
+    from project_config import load_run_config
+
 
 ROOT = Path(__file__).resolve().parents[1]
+RUN_CONFIG = load_run_config()
+MODEL_REGISTRY = ROOT / "configs/model_registry.yaml"
 EXPECTED_NAMES = {0: "ball", 1: "gawang", 2: "robot"}
-EXPECTED_SEEDS = (42, 1337, 2025)
+EXPECTED_SEEDS = tuple(sorted(int(seed) for seed in RUN_CONFIG["queue"]["seeds"]))
 EXPECTED_RUNTIME_VERSIONS = {
     "python": "3.11.2",
     "numpy": "1.26.4",
@@ -114,32 +123,29 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--teacher",
         metavar="LABEL=CHECKPOINT",
-        default=(
-            "teacher_fp32=/mnt/nas-hpg9/rafli5131/rafli/advance_vision/"
-            "artifacts/checkpoints/fp32/best.pt"
-        ),
+        default=f"teacher_fp32={RUN_CONFIG['teacher_checkpoint']}",
         help="Frozen FP32 teacher checkpoint; its training and prior TEST-only evaluation evidence are verified.",
     )
     parser.add_argument(
         "--teacher-training-manifest",
         type=Path,
-        default=Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/manifest.json"),
+        default=Path(RUN_CONFIG["teacher_training_manifest"]),
     )
     parser.add_argument(
         "--teacher-training-args",
         type=Path,
-        default=Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/fp32/fp32_baseline/args.yaml"),
+        default=Path(RUN_CONFIG["teacher_training_args"]),
     )
     parser.add_argument(
         "--teacher-test-evidence",
         type=Path,
-        default=Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/experiments/final_test/manifest.json"),
+        default=Path(RUN_CONFIG["teacher_test_evidence"]),
         help="Historical manifest proving the teacher was tested only after model selection.",
     )
     parser.add_argument(
         "--data",
         type=Path,
-        default=Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/dataset/data.yaml"),
+        default=Path(RUN_CONFIG["evaluation_data_yaml"]),
     )
     parser.add_argument(
         "--fingerprint",
@@ -151,7 +157,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--workers", type=int, default=2)
     parser.add_argument("--imgsz", type=int, default=640)
     parser.add_argument("--seeds", type=int, nargs="+", default=list(EXPECTED_SEEDS))
-    parser.add_argument("--output", type=Path, default=ROOT / "runs/final_test/pure_kd_official_split")
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=ROOT / RUN_CONFIG["pipeline"]["evaluator_default_output"],
+    )
+    parser.add_argument("--model-registry", type=Path, default=MODEL_REGISTRY)
     parser.add_argument(
         "--retry-of-manifest",
         type=Path,
@@ -289,7 +300,7 @@ def parse_models(
         legacy_seed42_baseline = (
             label == "supervised_seed42"
             and Path(run_manifest.get("output_dir", "")).expanduser().resolve()
-            == (ROOT / "runs/supervised/yolo11_tiny_supervised_seed42_retry1").resolve()
+            == (ROOT / "runs/supervised" / RUN_CONFIG["queue"]["seeds"][42]["supervised"]).resolve()
             and run_manifest.get("dataset_snapshot_provenance", {}).get("linked_after_training") is True
         )
         snapshot_provenance = run_manifest.get("dataset_snapshot_provenance", {})
@@ -987,6 +998,11 @@ def main() -> int:
         raise FileNotFoundError(f"TEST dataset YAML or locked fingerprint missing: {data_yaml}, {fingerprint_path}")
 
     models = parse_models(args.models, fingerprint_path)
+    for label, checkpoint, _, _, _ in models:
+        try:
+            validate_checkpoint(checkpoint, label=label, registry_path=args.model_registry.expanduser().resolve())
+        except (FileNotFoundError, ValueError) as error:
+            raise TestEvaluationError(f"Checkpoint registry check failed for {label}: {error}") from error
     student_seeds = tuple(sorted(set(args.seeds)))
     if student_seeds != EXPECTED_SEEDS:
         raise TestEvaluationError(f"The frozen protocol requires the seed set {EXPECTED_SEEDS}.")
@@ -997,6 +1013,10 @@ def main() -> int:
         args.teacher_training_args,
         args.teacher_test_evidence,
     )
+    try:
+        validate_checkpoint(teacher[1], label=teacher[0], registry_path=args.model_registry.expanduser().resolve())
+    except (FileNotFoundError, ValueError) as error:
+        raise TestEvaluationError(f"Teacher checkpoint registry check failed: {error}") from error
     teacher_checkpoint_hash = sha256_file(teacher[1])
     kd_teacher_hashes = {
         run_manifest.get("teacher_sha256")

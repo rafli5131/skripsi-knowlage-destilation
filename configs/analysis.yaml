@@ -1,0 +1,43 @@
+# Keputusan protokol skripsi. Nilai sementara wajib dikonfirmasi pada TH-D.
+decisions:
+  D1:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary: null
+    options:
+      - teacher YOLO11n dan student skala t yang sekarang
+      - teacher YOLO11s atau YOLO11m dan student YOLO11n
+  D2:
+    status: DIKUNCI OLEH PENGGUNA
+    value: pure_v4
+    scope: pure teacher-only KD; objective hybrid tidak termasuk
+    decided_at: 2026-10-19
+  D3:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary_epochs: 100
+    options: [100, 150, 200]
+  D4:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary: fixed confidence 0.25 and VAL-selected best-F1 confidence
+  D5:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary_grid:
+      confidence: [0.05, 0.90, 0.05]
+      iou_nms: [0.30, 0.45, 0.50, 0.60, 0.70]
+      imgsz: [320, 416, 512, 640]
+      torch_threads: [1, 2, 4, 6, 8, default]
+  D6:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary: choose one thread count from OP3 validation sweep
+  D7:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary: 3 sessions x 60 seconds per variant per condition
+  D8:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary_labeled_op3_frames: null
+  D9:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary_storage: existing Git layout
+    options: [Git LFS, GitHub release]
+  D10:
+    status: BELUM DIKUNCI # BELUM DIKUNCI
+    temporary_object_area_px2: small < 1024; medium 1024-9216; large > 9216

@@ -1,0 +1,4 @@
+run_id,condition,camera_topic_rate [Hz],processed_frame_rate [frame/s],processed_frames [frame],with_detector,camera_only_comparison
+20261019T080757Z,servo_idle,[BELUM DIUKUR oleh camera_stream_probe],3.408299019548339,724,KD seed 42,[BELUM DIUKUR]
+20261019T083428Z,unknown,[BELUM DIUKUR oleh camera_stream_probe],14.11011728820997,512,KD seed 42,[BELUM DIUKUR]
+20261019T084434Z,servo_idle,[BELUM DIUKUR oleh camera_stream_probe],15.898386699546062,887,KD seed 42,[BELUM DIUKUR]

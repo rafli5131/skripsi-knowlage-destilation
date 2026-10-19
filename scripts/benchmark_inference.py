@@ -20,6 +20,11 @@ import yaml
 from ultralytics import YOLO
 from ultralytics.utils.torch_utils import get_flops
 
+try:
+    from .model_registry import validate_checkpoint
+except ImportError:
+    from model_registry import validate_checkpoint
+
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_RUNTIME_VERSIONS = {
@@ -51,6 +56,12 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "runs/benchmarks/inference_speed.json",
         help="Output JSON path; existing files are preserved.",
+    )
+    parser.add_argument(
+        "--model-registry",
+        type=Path,
+        default=ROOT / "configs/model_registry.yaml",
+        help="Registry of checkpoint paths and SHA-256 values.",
     )
     return parser.parse_args()
 
@@ -246,6 +257,8 @@ def main() -> int:
     if frame is None:
         raise ValueError(f"OpenCV could not decode the validation image: {image}")
     models = parse_models(args.models)
+    for label, checkpoint in models:
+        validate_checkpoint(checkpoint, label=label, registry_path=args.model_registry.expanduser().resolve())
     output = args.output.expanduser().resolve()
     if output.exists():
         raise FileExistsError(f"Refusing to overwrite existing benchmark results: {output}")

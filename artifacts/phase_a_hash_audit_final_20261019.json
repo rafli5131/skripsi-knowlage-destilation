@@ -1,0 +1,1275 @@
+{
+  "records": [
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.analysis_correction.corrected_analysis_manifest_sha256",
+      "expected": "5e0dd4f6860fe72e4941767809111c06fc444c0f27d2152dfe3e8c2a21042e99",
+      "actual": "5e0dd4f6860fe72e4941767809111c06fc444c0f27d2152dfe3e8c2a21042e99",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.analysis_correction.final_test_manifest_sha256",
+      "expected": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "actual": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.kd_seed1337.sha256",
+      "expected": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "actual": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.kd_seed2025.sha256",
+      "expected": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "actual": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.kd_seed42.sha256",
+      "expected": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "actual": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.supervised_seed1337.sha256",
+      "expected": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "actual": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.supervised_seed2025.sha256",
+      "expected": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "actual": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.supervised_seed42.sha256",
+      "expected": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "actual": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.checkpoints.teacher_fp32.sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.prior_failed_test_attempts[0].manifest_sha256",
+      "expected": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "actual": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/final_evaluation_pipeline.json",
+      "field": "$.resume_history[4].prior_failed_test_attempt.manifest_sha256",
+      "expected": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "actual": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "actual": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/.yolo11_tiny_supervised_seed1337.manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+      "actual": "fafc68d5b0356dafc37714a900250ae46dbdbb9ef84f225e8c340774a36e0c38",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/recovery_snapshots/20261009T105252Z/final_evaluation_pipeline.json",
+      "field": "$.fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.analysis_script_sha256",
+      "expected": "94b722e81acd0e3096a9e6e0a87b0a0358ec62d9b142bfb2692fa687b1ecd2fe",
+      "actual": "45e87dd88fa8f501c42d1c4eb094b5059ad33fc9ff5ad8f45ebaf30d3b3edb49",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.benchmark_sha256",
+      "expected": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+      "actual": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.outputs.ANALISIS.md.sha256",
+      "expected": "84ba54ef81f8c256130585c1af5281345665368252ef1586ad2cfbf930e6d2a2",
+      "actual": "84ba54ef81f8c256130585c1af5281345665368252ef1586ad2cfbf930e6d2a2",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.outputs.paired_seed_deltas.csv.sha256",
+      "expected": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
+      "actual": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.outputs.paired_summary.csv.sha256",
+      "expected": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596",
+      "actual": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.outputs.per_model.csv.sha256",
+      "expected": "843b4d8f57f2a2cd974a61f06c4ef79cd4194c0301187c7d3e93ce4c1498f94f",
+      "actual": "843b4d8f57f2a2cd974a61f06c4ef79cd4194c0301187c7d3e93ce4c1498f94f",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.outputs.summary_mean_sd.csv.sha256",
+      "expected": "63f68c8ade4e6ca7c867080381e115056a78505c6d4e5ea9ebeb1cdd5cd1a653",
+      "actual": "63f68c8ade4e6ca7c867080381e115056a78505c6d4e5ea9ebeb1cdd5cd1a653",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.test_manifest_sha256",
+      "expected": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "actual": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final/analysis_manifest.json",
+      "field": "$.test_split_fingerprint_sha256",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.analysis_script_sha256",
+      "expected": "45e87dd88fa8f501c42d1c4eb094b5059ad33fc9ff5ad8f45ebaf30d3b3edb49",
+      "actual": "45e87dd88fa8f501c42d1c4eb094b5059ad33fc9ff5ad8f45ebaf30d3b3edb49",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.benchmark_sha256",
+      "expected": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+      "actual": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.outputs.ANALISIS.md.sha256",
+      "expected": "28a8524701e459eeeee4dc00fedb8dfe9664a60d6bdeec36c38351d62b6f1bde",
+      "actual": "28a8524701e459eeeee4dc00fedb8dfe9664a60d6bdeec36c38351d62b6f1bde",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.outputs.paired_seed_deltas.csv.sha256",
+      "expected": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
+      "actual": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.outputs.paired_summary.csv.sha256",
+      "expected": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596",
+      "actual": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.outputs.per_model.csv.sha256",
+      "expected": "a3a5013b0ab550885e4e55cd2cdd054d336bddd44c682a2a350033e212778154",
+      "actual": "a3a5013b0ab550885e4e55cd2cdd054d336bddd44c682a2a350033e212778154",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.outputs.summary_mean_sd.csv.sha256",
+      "expected": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+      "actual": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.test_manifest_sha256",
+      "expected": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "actual": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json",
+      "field": "$.test_split_fingerprint_sha256",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_manifest.json",
+      "field": "$.script_sha256",
+      "expected": "04f05d652be8a397eecf6109c2a265352f37e1dfaf360004db7e6dbb12b0760b",
+      "actual": "04f05d652be8a397eecf6109c2a265352f37e1dfaf360004db7e6dbb12b0760b",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_manifest.json",
+      "field": "$.source_summary_sha256",
+      "expected": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+      "actual": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_manifest.json",
+      "field": "$.outputs.figure_4_1_model_tradeoff.png.sha256",
+      "expected": "6cb53281d865139d0601ff413812fe6bd168798853432b306a60eb6a2241a02f",
+      "actual": "6cb53281d865139d0601ff413812fe6bd168798853432b306a60eb6a2241a02f",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/figures/figure_manifest.json",
+      "field": "$.outputs.figure_4_1_model_tradeoff.pdf.sha256",
+      "expected": "2d7f7904412c33a3b667a8657ca89f45da1cfef379f18d37fd28fd9ec0816804",
+      "actual": "2d7f7904412c33a3b667a8657ca89f45da1cfef379f18d37fd28fd9ec0816804",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.data_yaml_sha256",
+      "expected": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+      "actual": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.evaluator_script_sha256",
+      "expected": "6f3ad7c1264d020c67f065d115f77f2395a0c79404e5f6b15ffa86bd990e8282",
+      "actual": "789760c5556ae4b9626397db85d8b7a73008eabb851831d5f0a6514b9d7ee0cb",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.historical_teacher_test_use.evidence_sha256",
+      "expected": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "actual": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[0].checkpoint_sha256",
+      "expected": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "actual": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[0].training_manifest_sha256",
+      "expected": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "actual": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[1].checkpoint_sha256",
+      "expected": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "actual": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[1].training_manifest_sha256",
+      "expected": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "actual": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[2].checkpoint_sha256",
+      "expected": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "actual": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[2].training_manifest_sha256",
+      "expected": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "actual": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[3].checkpoint_sha256",
+      "expected": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "actual": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[3].training_manifest_sha256",
+      "expected": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "actual": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[4].checkpoint_sha256",
+      "expected": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "actual": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[4].training_manifest_sha256",
+      "expected": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "actual": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[5].checkpoint_sha256",
+      "expected": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "actual": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[5].training_manifest_sha256",
+      "expected": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "actual": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].checkpoint_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].historical_test_evidence.sha256",
+      "expected": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "actual": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].training_manifest_sha256",
+      "expected": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "actual": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked/manifest.json",
+      "field": "$.test_split_fingerprint_sha256",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.data_yaml_sha256",
+      "expected": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+      "actual": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.evaluator_script_sha256",
+      "expected": "6719973e1db8211b03b2b25e6fc6fd40bdf8face02af64566313d50c0fa79e60",
+      "actual": "789760c5556ae4b9626397db85d8b7a73008eabb851831d5f0a6514b9d7ee0cb",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.historical_teacher_test_use.evidence_sha256",
+      "expected": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "actual": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed1337.checkpoint_sha256",
+      "expected": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "actual": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed1337.training_artifact_provenance.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed1337.training_artifact_provenance.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed1337.training_artifact_provenance.training_script_sha256",
+      "expected": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "actual": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed1337.training_manifest_sha256",
+      "expected": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "actual": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed2025.checkpoint_sha256",
+      "expected": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "actual": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed2025.training_artifact_provenance.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed2025.training_artifact_provenance.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed2025.training_artifact_provenance.training_script_sha256",
+      "expected": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "actual": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed2025.training_manifest_sha256",
+      "expected": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "actual": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed42.checkpoint_sha256",
+      "expected": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "actual": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed42.training_artifact_provenance.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed42.training_artifact_provenance.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed42.training_artifact_provenance.training_script_sha256",
+      "expected": "86357c8283e861cbffead0bfbd6b16984238e601e287816db83b5e52b9fe6603",
+      "actual": "86357c8283e861cbffead0bfbd6b16984238e601e287816db83b5e52b9fe6603",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.kd_seed42.training_manifest_sha256",
+      "expected": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "actual": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed1337.checkpoint_sha256",
+      "expected": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "actual": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed1337.training_artifact_provenance.run_config_sha256",
+      "expected": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "actual": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed1337.training_artifact_provenance.training_script_sha256",
+      "expected": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+      "actual": "fafc68d5b0356dafc37714a900250ae46dbdbb9ef84f225e8c340774a36e0c38",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed1337.training_manifest_sha256",
+      "expected": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "actual": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed2025.checkpoint_sha256",
+      "expected": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "actual": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed2025.training_artifact_provenance.run_config_sha256",
+      "expected": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "actual": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed2025.training_artifact_provenance.training_script_sha256",
+      "expected": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+      "actual": "fafc68d5b0356dafc37714a900250ae46dbdbb9ef84f225e8c340774a36e0c38",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed2025.training_manifest_sha256",
+      "expected": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "actual": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed42.checkpoint_sha256",
+      "expected": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "actual": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.supervised_seed42.training_manifest_sha256",
+      "expected": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "actual": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.teacher_fp32.checkpoint_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.teacher_fp32.historical_test_evidence.sha256",
+      "expected": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "actual": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.teacher_fp32.training_manifest_sha256",
+      "expected": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "actual": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.teacher_fp32.training_provenance.training_args_sha256",
+      "expected": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d",
+      "actual": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models.teacher_fp32.validation_selection_evidence.results_csv_sha256",
+      "expected": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e",
+      "actual": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[0].checkpoint_sha256",
+      "expected": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "actual": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[0].training_manifest_sha256",
+      "expected": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "actual": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[1].checkpoint_sha256",
+      "expected": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "actual": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[1].training_manifest_sha256",
+      "expected": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "actual": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[2].checkpoint_sha256",
+      "expected": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "actual": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[2].training_manifest_sha256",
+      "expected": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "actual": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[3].checkpoint_sha256",
+      "expected": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "actual": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[3].training_manifest_sha256",
+      "expected": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "actual": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[4].checkpoint_sha256",
+      "expected": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "actual": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[4].training_manifest_sha256",
+      "expected": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "actual": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[5].checkpoint_sha256",
+      "expected": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "actual": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[5].training_manifest_sha256",
+      "expected": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "actual": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].checkpoint_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].historical_test_evidence.sha256",
+      "expected": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "actual": "545ec73595a41c53f0d0a5a28fde4404feec5268aeece5ec7f4378448638b602",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.models_selected_by_val_or_previously_locked[6].training_manifest_sha256",
+      "expected": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "actual": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.retry_context.prior_attempt_manifest_sha256",
+      "expected": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "actual": "50f7cb46f5b52853e213fef86e6d396541fe4ea70b2561ea5948b3dae5954313",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+      "field": "$.test_split_fingerprint_sha256",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/.yolo11_tiny_pure_kd.manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/.yolo11_tiny_pure_kd_v2.manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/.yolo11_tiny_pure_kd_v3.manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "a8a742e27a75cd3f2e335bab4d872a5856ee2dbff7942fa984360fe925d6a0e0",
+      "actual": "a8a742e27a75cd3f2e335bab4d872a5856ee2dbff7942fa984360fe925d6a0e0",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "actual": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "86357c8283e861cbffead0bfbd6b16984238e601e287816db83b5e52b9fe6603",
+      "actual": "86357c8283e861cbffead0bfbd6b16984238e601e287816db83b5e52b9fe6603",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "actual": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "actual": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.distillation_implementation.sha256",
+      "expected": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "actual": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "actual": "8296b558a1a6f01d90ab4af4b674c2cf3517f9316f8de1456df9e5098d6b66ff",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "actual": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.teacher_sha256",
+      "expected": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "actual": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "actual": "f58c95ed0fe56715c76a55dff57dc6feabdedb0cf9954185c7f822bcb3192ec8",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/.yolo11_tiny_supervised_seed42.manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.resume_history[0].checkpoint_sha256",
+      "expected": "6a3f12a19fb7dd69bbdc4e9c3d3de28f45679bebbd07ab9c74995b217ab94dc1",
+      "actual": "b997a6ee97a923fb1d6871c20a0d263399f5f0345c831f77adb1cd4d45c1d106",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.resume_history[0].resume_script_sha256",
+      "expected": "583e36ce4295816461f9f6df5ad043fd5b9e8ceed2a0bebff97a3854a3ce3f70",
+      "actual": "583e36ce4295816461f9f6df5ad043fd5b9e8ceed2a0bebff97a3854a3ce3f70",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "actual": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "actual": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+      "actual": "fafc68d5b0356dafc37714a900250ae46dbdbb9ef84f225e8c340774a36e0c38",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.dataset_yaml_sha256",
+      "expected": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "actual": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.run_config_sha256",
+      "expected": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "actual": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "actual": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "field": "$.training_script_sha256",
+      "expected": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+      "actual": "fafc68d5b0356dafc37714a900250ae46dbdbb9ef84f225e8c340774a36e0c38",
+      "status": "MISMATCH"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.dataset_split_fingerprints.test",
+      "expected": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "actual": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.dataset_split_fingerprints.train",
+      "expected": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "actual": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.dataset_split_fingerprints.val",
+      "expected": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "actual": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.dataset_fingerprint_sha256",
+      "expected": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "actual": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.student_architecture_sha256",
+      "expected": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "actual": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+      "status": "PASS"
+    },
+    {
+      "manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "field": "$.student_best_sha256",
+      "expected": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "actual": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "PASS": 172,
+    "MISMATCH": 9
+  }
+}

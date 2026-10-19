@@ -14,15 +14,24 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+try:
+    from .project_config import load_run_config, resolve_repo_path
+except ImportError:
+    from project_config import load_run_config, resolve_repo_path
+
 
 ROOT = Path(__file__).resolve().parents[1]
-PYTHON = Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python")
-INITIAL_RUN = ROOT / "runs/supervised/yolo11_tiny_supervised_seed42_retry1"
+RUN_CONFIG = load_run_config()
+QUEUE_CONFIG = RUN_CONFIG["queue"]
+SEED_RUNS = {int(seed): value for seed, value in QUEUE_CONFIG["seeds"].items()}
+PYTHON = resolve_repo_path(RUN_CONFIG["training_python"])
+INITIAL_RUN_NAME = str(QUEUE_CONFIG["initial_supervised_run"])
+INITIAL_RUN = ROOT / "runs/supervised" / INITIAL_RUN_NAME
 INITIAL_FINAL_MANIFEST = INITIAL_RUN / "manifest.json"
-INITIAL_PENDING_MANIFEST = INITIAL_RUN.parent / ".yolo11_tiny_supervised_seed42_retry1.manifest.json"
-FINGERPRINT = ROOT / "artifacts/advance_vision_dataset_fingerprint.json"
+INITIAL_PENDING_MANIFEST = INITIAL_RUN.parent / f".{INITIAL_RUN_NAME}.manifest.json"
+FINGERPRINT = resolve_repo_path(RUN_CONFIG["fingerprint"])
 QUEUE_STATE = ROOT / "artifacts/student_training_queue.json"
-QUEUE_LOGS = ROOT / "runs/student_training_queue_logs"
+QUEUE_LOGS = resolve_repo_path(QUEUE_CONFIG["log_dir"])
 POLL_SECONDS = 20
 STALE_SECONDS = 30 * 60
 
@@ -257,56 +266,43 @@ def load_or_create_state(*, resume: bool) -> tuple[dict[str, Any], bool]:
 
 def build_items() -> list[dict[str, Any]]:
     python = str(PYTHON)
-    return [
+    items = [
         {
             "label": "link_supervised_seed42_provenance",
             "kind": "provenance",
             "status": "queued",
-            "run_dir": "runs/supervised/yolo11_tiny_supervised_seed42_retry1",
+            "run_dir": str(Path("runs/supervised") / INITIAL_RUN_NAME),
             "command": [python, "scripts/link_run_dataset_provenance.py", "--manifest", str(INITIAL_FINAL_MANIFEST)],
-            "log": "runs/student_training_queue_logs/link_supervised_seed42.log",
-        },
-        {
-            "label": "kd_seed42",
-            "kind": "kd",
-            "status": "queued",
-            "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42",
-            "command": [python, "scripts/train_kd.py", "--seed", "42", "--run-name", "yolo11_tiny_pure_kd_v4_locked_seed42"],
-            "log": "runs/student_training_queue_logs/kd_seed42.log",
-        },
-        {
-            "label": "supervised_seed1337",
-            "kind": "supervised",
-            "status": "queued",
-            "run_dir": "runs/supervised/yolo11_tiny_supervised_seed1337",
-            "command": [python, "scripts/train_supervised_baseline.py", "--seed", "1337"],
-            "log": "runs/student_training_queue_logs/supervised_seed1337.log",
-        },
-        {
-            "label": "kd_seed1337",
-            "kind": "kd",
-            "status": "queued",
-            "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_seed1337",
-            "command": [python, "scripts/train_kd.py", "--seed", "1337", "--run-name", "yolo11_tiny_pure_kd_v4_seed1337"],
-            "log": "runs/student_training_queue_logs/kd_seed1337.log",
-        },
-        {
-            "label": "supervised_seed2025",
-            "kind": "supervised",
-            "status": "queued",
-            "run_dir": "runs/supervised/yolo11_tiny_supervised_seed2025",
-            "command": [python, "scripts/train_supervised_baseline.py", "--seed", "2025"],
-            "log": "runs/student_training_queue_logs/supervised_seed2025.log",
-        },
-        {
-            "label": "kd_seed2025",
-            "kind": "kd",
-            "status": "queued",
-            "run_dir": "runs/kd/yolo11_tiny_pure_kd_v4_seed2025",
-            "command": [python, "scripts/train_kd.py", "--seed", "2025", "--run-name", "yolo11_tiny_pure_kd_v4_seed2025"],
-            "log": "runs/student_training_queue_logs/kd_seed2025.log",
+            "log": str(QUEUE_LOGS / "link_supervised_seed42.log"),
         },
     ]
+    for seed in sorted(SEED_RUNS):
+        if seed == 42:
+            kd_name = SEED_RUNS[seed]["kd"]
+            items.append({
+                "label": "kd_seed42", "kind": "kd", "status": "queued",
+                "run_dir": str(Path("runs/kd") / kd_name),
+                "command": [python, "scripts/train_kd.py", "--seed", str(seed), "--run-name", kd_name],
+                "log": str(QUEUE_LOGS / "kd_seed42.log"),
+            })
+            continue
+        supervised_name = SEED_RUNS[seed]["supervised"]
+        kd_name = SEED_RUNS[seed]["kd"]
+        items.extend([
+            {
+                "label": f"supervised_seed{seed}", "kind": "supervised", "status": "queued",
+                "run_dir": str(Path("runs/supervised") / supervised_name),
+                "command": [python, "scripts/train_supervised_baseline.py", "--seed", str(seed), "--run-name", supervised_name],
+                "log": str(QUEUE_LOGS / f"supervised_seed{seed}.log"),
+            },
+            {
+                "label": f"kd_seed{seed}", "kind": "kd", "status": "queued",
+                "run_dir": str(Path("runs/kd") / kd_name),
+                "command": [python, "scripts/train_kd.py", "--seed", str(seed), "--run-name", kd_name],
+                "log": str(QUEUE_LOGS / f"kd_seed{seed}.log"),
+            },
+        ])
+    return items
 
 
 def main() -> int:

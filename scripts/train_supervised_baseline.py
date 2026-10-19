@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import platform
 import sys
 import traceback
@@ -16,6 +17,13 @@ import torch
 import ultralytics
 import yaml
 from ultralytics import YOLO
+
+try:
+    from .experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from .training_runtime import verify_training_runtime
+except ImportError:
+    from experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from training_runtime import verify_training_runtime
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -36,6 +44,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--seed", type=int, help="Override the configured seed; each seed gets a separate run.")
     parser.add_argument("--run-name", help="Optional unique run directory name, useful when preserving failed attempts.")
+    parser.add_argument("--data-root", type=Path, help="Verified dataset root; overrides KD_DATA_ROOT.")
     return parser.parse_args()
 
 
@@ -127,25 +136,18 @@ def model_parameter_count(model_path: Path) -> int:
 
 
 def load_run_config(
-    config_path: Path, seed_override: int | None, run_name_override: str | None
-) -> tuple[dict[str, Any], Path, Path, Path, int]:
+    config_path: Path, seed_override: int | None, run_name_override: str | None,
+    data_root_override: Path | None = None,
+) -> tuple[dict[str, Any], Path, Path, Path, dict[str, Any], dict[str, Any], Path, int]:
     config_path = config_path.resolve()
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     if not isinstance(config, dict):
         raise BaselineRunError(f"Config must contain a YAML mapping: {config_path}")
 
     student = resolve_path(config["student_model"], relative_to=ROOT)
-    data_yaml = resolve_path(config["data_yaml"], relative_to=ROOT)
-    if not student.is_file() or not data_yaml.is_file():
-        raise BaselineRunError(f"Student model or data YAML is missing: {student}, {data_yaml}")
-    data = yaml.safe_load(data_yaml.read_text(encoding="utf-8")) or {}
-    if "test" in data:
-        raise BaselineRunError("Training YAML must not expose the TEST split.")
-    for split in ("train", "val"):
-        if split not in data or not Path(data[split]).is_dir():
-            raise BaselineRunError(f"Missing {split} images in {data_yaml}: {data.get(split)!r}")
-    if data.get("names") != EXPECTED_NAMES:
-        raise BaselineRunError(f"Unexpected class mapping in {data_yaml}: {data.get('names')!r}")
+    source_data_yaml = resolve_path(config["data_yaml"], relative_to=ROOT)
+    if not student.is_file() or not source_data_yaml.is_file():
+        raise BaselineRunError(f"Student model or data YAML is missing: {student}, {source_data_yaml}")
 
     training = config["training"]
     seed = int(training["seed"] if seed_override is None else seed_override)
@@ -156,7 +158,14 @@ def load_run_config(
     run_dir = project / run_name
     if run_dir.exists():
         raise BaselineRunError(f"Refusing to overwrite an existing run directory: {run_dir}")
-    return config, student, data_yaml, run_dir, seed
+    data_root = data_root_override or os.environ.get("KD_DATA_ROOT")
+    data_yaml, data, data_metadata = resolve_training_data(
+        source_data_yaml,
+        run_dir,
+        ROOT / "artifacts/advance_vision_dataset_fingerprint.json",
+        root_override=data_root,
+    )
+    return config, student, source_data_yaml, data_yaml, data, data_metadata, run_dir, seed
 
 
 def main() -> int:
@@ -164,11 +173,18 @@ def main() -> int:
     manifest_path: Path | None = None
     manifest: dict[str, Any] = {}
     try:
-        config, student, data_yaml, run_dir, seed = load_run_config(args.config, args.seed, args.run_name)
+        runtime_compatibility = verify_training_runtime()
+        (
+            config, student, source_data_yaml, data_yaml, data_config,
+            data_metadata, run_dir, seed,
+        ) = load_run_config(args.config, args.seed, args.run_name, args.data_root)
         training = config["training"]
         manifest_path = run_dir.parent / f".{run_dir.name}.manifest.json"
         if manifest_path.exists():
             raise BaselineRunError(f"A pending manifest already exists; inspect it before rerunning: {manifest_path}")
+        if data_yaml != source_data_yaml:
+            run_dir.mkdir(parents=False, exist_ok=False)
+            write_resolved_data_yaml(data_yaml, data_config)
 
         parameters = model_parameter_count(student)
         manifest = {
@@ -185,6 +201,13 @@ def main() -> int:
             "student_parameters": parameters,
             "dataset_yaml": str(data_yaml),
             "dataset_yaml_sha256": sha256_file(data_yaml),
+            "resolved_inputs": {
+                "source_dataset_yaml": str(source_data_yaml),
+                "source_dataset_yaml_sha256": sha256_file(source_data_yaml),
+                "resolved_dataset_yaml": str(data_yaml),
+                **data_metadata,
+            },
+            "training_runtime_compatibility": runtime_compatibility,
             **dataset_fingerprint_metadata(),
             "train_labels_used_for_loss": True,
             "validation_split": "VAL only; labels used only for metrics and checkpoint selection",
@@ -226,7 +249,7 @@ def main() -> int:
             save=True,
             project=str(run_dir.parent),
             name=run_dir.name,
-            exist_ok=False,
+            exist_ok=(data_yaml != source_data_yaml),
             compile=False,
         )
 

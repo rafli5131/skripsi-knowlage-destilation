@@ -1,0 +1,17 @@
+# T15. lingkungan uji op3
+
+Status: Sebagian; spesifikasi perangkat berasal dari catatan historis dan input operator.
+
+| field | value | status | source |
+| --- | --- | --- | --- |
+| CPU | 12th Gen Intel Core i5-1240P | catatan terminal OP3 | informasi terminal operator |
+| architecture | x86_64 | catatan terminal OP3 | informasi terminal operator |
+| OS | Ubuntu 24.04.5 LTS | catatan terminal OP3 | informasi terminal operator |
+| Python | 3.12.3 | catatan terminal OP3 | informasi terminal operator |
+| ROS 2 | Jazzy | catatan terminal OP3 | informasi terminal operator |
+| PyTorch / Ultralytics / OpenCV | 2.4.1+cpu / 8.4.130 / 4.11.0 | terekam di sesi kamera lama | runs/op3_pytorch/*.json |
+| camera/topic | Logitech C920 / /thesis/image_raw | konfigurasi sesi lama | runs/op3_pytorch/*.json dan dokumentasi/README.md |
+| capture | 640x480 YUYV; 30 FPS diminta | terekam di dokumentasi sesi | dokumentasi sesi lama |
+| RAM, kernel, governor, mode daya, QoS | [BELUM DIUKUR] | tidak tercatat lengkap | [BELUM DIUKUR] |
+
+Sumber: JSON tiga sesi lama dan output terminal OP3 yang disampaikan operator

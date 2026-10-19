@@ -1,0 +1,11 @@
+seed,comparison,metric,KD minus supervised [0-1],retention versus teacher [%]
+42,KD - supervised,mAP50-95,-0.045842898258115605,[BELUM DIUKUR per seed]
+1337,KD - supervised,mAP50-95,-0.07343492435167787,[BELUM DIUKUR per seed]
+2025,KD - supervised,mAP50-95,-0.0591629145485405,[BELUM DIUKUR per seed]
+mean ± SD,Pure KD minus supervised student,test_mAP50_95,-0.05948024571944466 ± 0.013798749953926106,[BELUM DIUKUR]
+mean ± SD,Pure KD minus supervised student,test_precision,-0.10618845517881126 ± 0.02030095929065215,[BELUM DIUKUR]
+mean ± SD,Pure KD minus supervised student,test_recall,-0.006756644742022792 ± 0.002514951229457758,[BELUM DIUKUR]
+mean ± SD,Pure KD minus supervised student,test_F1,-0.06596198061363916 ± 0.011641786095616133,[BELUM DIUKUR]
+1337,KD - teacher,mAP50-95,-0.12692116198371817,83.7276298817554
+2025,KD - teacher,mAP50-95,-0.11835404820453588,84.82600657545328
+42,KD - teacher,mAP50-95,-0.10555521114690003,86.46692610715179

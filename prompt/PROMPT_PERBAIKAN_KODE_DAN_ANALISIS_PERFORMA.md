@@ -29,7 +29,8 @@ Fakta berikut diverifikasi pada *commit* `77d9afb`. Periksa ulang sebelum dipaka
 - **Hasil TEST terkunci** (3 *seed*: 42, 1337, 2025): mAP50-95 *pure KD* 0,6630 ± 0,0108, *supervised* 0,7225 ± 0,0035, *teacher* 0,7800. Selisih berpasangan KD − *supervised*: *precision* −0,106, *recall* −0,007. Sumber: `artifacts/thesis_analysis_final_corrected/`.
 - **Konvergensi**: *epoch* terbaik KD 88 sampai 96, *supervised* 99 sampai 100 dari 100; `patience` 30 tidak pernah terpicu.
 - ***Benchmark* L40** (`scripts/benchmark_inference.py`): median 24,8 sampai 25,7 ms untuk semua model karena didominasi *overhead* `predict()` *batch* 1 di GPU. Angka ini tidak boleh dipakai untuk klaim efisiensi.
-- **OP3** (`scripts/op3_pytorch_detector.py`, 3 sesi pada 19 Oktober 2026, hanya *student* KD *seed* 42): inferensi p50 sekitar 24 ms, *end-to-end* 26 sampai 28 ms, FPS efektif 14 sampai 16, jeda *timestamp* kamera p95 232 sampai 264 ms dengan maksimum 1,4 sampai 2,0 detik, CPU proses 738 sampai 762%, RSS sekitar 355 MiB. `mean_fps` dan `fps_running` dihitung sejak node menyala sehingga bias. *Teacher*, *supervised*, dan kondisi `walking` belum diukur.
+- **OP3** (`scripts/op3_pytorch_detector.py`, 3 sesi pada 19 Oktober 2026, hanya *student* KD *seed* 42): FPS efektif yang dihitung ulang dari timestamp capture adalah 3,41; 14,11; dan 15,90 untuk tiga sesi. Run pertama memiliki kondisi yang tidak terverifikasi. Pada dua sesi terakhir, inferensi p50 sekitar 24 ms, *end-to-end* 26 sampai 28 ms, jeda *timestamp* kamera p95 sekitar 232 sampai 264 ms dengan maksimum 1,4 sampai 2,0 detik, CPU proses sekitar 738 sampai 762%, RSS sekitar 355 MiB. `mean_fps` dan `fps_running` pada log lama dihitung sejak node menyala. *Teacher*, *supervised*, dan kondisi `walking` belum diukur.
+- **Tracking dan kelas per frame**: tiga log kamera tersebut direkam sebelum BoT-SORT dan CSV per deteksi ditambahkan, sehingga tidak membuktikan ID lintas frame atau deteksi per kelas. Uji offline citra VAL dapat memeriksa alur kode, tetapi bukan pengganti uji kamera OP3.
 - **Lingkungan**: pelatihan memakai venv eksternal proyek `skripsi-yolo11-qat-openvino` (Python 3.11.2, PyTorch 2.4.1+cu121, Ultralytics 8.4.130, NVIDIA L40). OP3 memakai Python 3.12.3, PyTorch 2.4.1+cpu, Ultralytics 8.4.130, ROS 2 Jazzy, kamera C920 640×480 YUYV 30 FPS pada `/thesis/image_raw`.
 - **Kerapian**: `configs/*.yaml` memakai path absolut NAS lab; `core.autocrlf=true` di salinan Windows mengubah SHA-256 berkas teks sehingga tidak cocok dengan *manifest*; tujuh log pelatihan (sekitar 24,8 MB) dan 15 berkas `.pt` tersimpan langsung di Git; `README.md` dan `dokumentasi/README.md` belum sinkron dengan status OP3 terbaru.
 
@@ -50,7 +51,7 @@ Simpan nilai sementara di `configs/analysis.yaml` dengan komentar `# BELUM DIKUN
 | Kode | Keputusan | Nilai sementara | Pilihan |
 | --- | --- | --- | --- |
 | D1 | Pasangan *teacher* dan *student* | Belum ada. Jangan melatih model baru sebelum dikunci. | (a) *teacher* YOLO11n dan *student* skala `t` seperti sekarang; (b) *teacher* YOLO11s atau YOLO11m dengan *student* YOLO11n |
-| D2 | Objektif KD untuk pelatihan utama | `pure_v4` sebagai pembanding | `pure_v4`, `pure_weighted`, `pure_dfl_kl`, `hybrid` |
+| D2 | Objektif KD untuk pelatihan utama | `pure_v4` (keputusan Bhre: pure KD) | Pertahankan `pure_v4`; kandidat baru hanya boleh berupa objektif pure KD dan harus disetujui di TH-D. Objektif hybrid tidak termasuk lingkup. |
 | D3 | Anggaran *epoch* | 100 | 100, 150, atau 200, sama untuk semua varian |
 | D4 | Kebijakan ambang *confidence* untuk P, R, F1 | Laporkan keduanya: tetap 0,25 dan ambang F1 terbaik per model yang dipilih di VAL lalu dibekukan | Salah satu atau keduanya |
 | D5 | Grid sapuan parameter | Bagian 6.3 | Disesuaikan Bhre |
@@ -86,7 +87,7 @@ Fase C boleh dikerjakan sejajar dengan Fase B. Pengukuran final Fase F memakai *
 6. Buat `configs/model_registry.yaml` untuk setiap varian (*teacher*, *supervised* per *seed*, KD per *seed*): path, SHA-256, parameter sebelum dan sesudah fusi, GFLOPs, dan *manifest* sumber. Skrip evaluasi, *benchmark*, dan node OP3 memvalidasi *checkpoint* melalui registri ini.
 7. Pindahkan nama run yang ditulis mati di `run_student_training_queue.py`, `run_locked_final_pipeline.py`, dan `evaluate_locked_test.py` ke konfigurasi, dengan nilai bawaan yang sama persis dengan sekarang.
 8. Sinkronkan `README.md` dan `dokumentasi/README.md` dengan status uji OP3 terbaru.
-9. Buat tabel awal Bagian 6 dari data yang sudah ada (lihat 6.4).
+9. Buat tabel awal Bagian 6 dari data yang sudah ada (lihat 6.4), dan tandai eksplisit bahwa hasil Advance Vision bukan akurasi kamera OP3.
 - **TH-A**: laporkan hasil verifikasi hash, berkas yang berubah, dan tabel awal.
 
 #### 5.2 Fase B: objektif KD

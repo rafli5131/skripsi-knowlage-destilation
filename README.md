@@ -21,7 +21,7 @@ inferred by the detector. The proposal and planning drafts in this repo
 describe the completed Advance Vision study and need revision before serving as
 the final OP3 thesis proposal.
 
-The initial native PyTorch/Ultralytics ROS 2 camera node for the KD student is
+The native PyTorch/Ultralytics ROS 2 camera node for the KD student is
 [`scripts/op3_pytorch_detector.py`](scripts/op3_pytorch_detector.py). It reads
 an operator-selected image topic and publishes detections without controlling
 the robot. Runtime setup, parameters, and logging are documented in
@@ -29,6 +29,17 @@ the robot. Runtime setup, parameters, and logging are documented in
 session and its performance charts are documented in
 [`dokumentasi/README.md`](dokumentasi/README.md), including one annotated
 camera frame and its detection metadata.
+The node now supports persistent BoT-SORT IDs and per-detection CSV logging.
+The three October camera logs were recorded before this tracking change and
+contain no track IDs. Tracking and per-class detection still require a new
+live OP3 session; the existing frame counts are not accuracy evidence.
+An offline smoke run on one VAL image for each class detected `ball`,
+`gawang`, and `robot`; repeated frames kept a BoT-SORT ID after confirmation.
+This checks the model/tracker software path only. It does not verify camera
+capture or tracking while the OP3 is moving. The runtime pins `lap==0.5.12`
+and exits at startup if that tracker dependency is missing.
+Recorded offline smoke details are in
+[`artifacts/op3_tracking_offline_smoke_20261019.json`](artifacts/op3_tracking_offline_smoke_20261019.json).
 Per-run reports grouped by date and trial are indexed in
 [`dokumentasi/INDEKS.md`](dokumentasi/INDEKS.md).
 
@@ -72,7 +83,9 @@ changes must be selected on VAL and evaluated on a new locked test protocol.
 `models/weights/kd_student_best.pt` is the selected seed-42 pure-KD checkpoint,
 copied from `runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt`.
 Seed 42 had the highest VAL mAP50–95 among the three final KD seeds. This
-checkpoint has not yet been validated on the ROBOTIS OP3 camera or runtime.
+checkpoint has run through a C920 ROS image topic on the OP3 host, but
+camera-specific accuracy and tracking stability have not been validated. The
+existing sessions are inference/runtime observations without labeled frames.
 
 ## Run
 

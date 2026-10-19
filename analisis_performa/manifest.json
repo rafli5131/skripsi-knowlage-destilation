@@ -1,0 +1,174 @@
+{
+  "created_at_utc": "2026-10-19T10:07:01.483717+00:00",
+  "generator": "scripts/build_performance_tables.py",
+  "generator_sha256": "40a630ae347aec95c1a4ccb39c736df7cfc056be20cc2eb0c6e7cc98185c1d56",
+  "sources": {
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/ANALISIS.md": "28a8524701e459eeeee4dc00fedb8dfe9664a60d6bdeec36c38351d62b6f1bde",
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json": "5e0dd4f6860fe72e4941767809111c06fc444c0f27d2152dfe3e8c2a21042e99",
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/paired_seed_deltas.csv": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/paired_summary.csv": "ba9fb20cb5f950ae5da5733fbf7d24201ac393917990db890b6edb7d0b987596",
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/per_model.csv": "a3a5013b0ab550885e4e55cd2cdd054d336bddd44c682a2a350033e212778154",
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/summary_mean_sd.csv": "5602f7d4450dfab42403907e8b5fbff713798d5acfd3b9a8bb892e18438b44b2",
+    "/mnt/nas-hpg9/rafli5131/bre/configs/model_registry.yaml": "1945fc3ec767b3e84db011cbc6cdb52fdb6976765da6c72754d67742fb5c239f",
+    "/mnt/nas-hpg9/rafli5131/bre/models/weights/kd_student_best.pt": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/benchmarks/pure_kd_final_inference.json": "bba443c8217cb49b4695b82429f36587ef4939325e3f56bf2a494b2aeae47e71",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json": "b6d050680e2de8e1e968ea374e89930faa08e1c28528268309dd6f07296e056e",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json": "c6c5a157004fd3f38147d9fc28d54c4b2217d5262f07766c7df6dfaef9036f40",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json": "50e9eace3190cf20d079998229dece458a8c52a6da3caf7269eb8170d8bde9cf",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json": "1102000f3752cf1284c9da0190421543fb6e331fec14e4c0223b64ed46c06807",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json": "30d36b89d3b2f4b10b694940fb54c989c353db0c014eb8014d248a9c995d77f1",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json": "9b2992d400b3fbc682e3e8c52fb077c9e19f61738afe7bf7376a8d98a0503781",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json": "5a7bcf3d146662d17b09264389afdaa2521a0ed30e175e285fff27ae5bace1e9",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/args.yaml": "6f254f7b5f6c267095c827bcdd0c0f765d5701af7ba9bcf842235af7497bed05",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/manifest.json": "d387509d00817769d576c50110be582e8a0778356b7486f574099079de7d8f14",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4/results.csv": "3cbc250b6957f38bf7f65fc2f41a317b0510659ca927777d20f9cca1aee71f7f",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/args.yaml": "4c7519ff153bf12810579f1d1aff52d7c85a5ec36dd757e71c8ad85697ebb1a6",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json": "89c34ccd1c5a0b96d55ff2c46f3355bb9ab7a04e74d803fee1d7364cfddb442d",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/results.csv": "cd221ba5b9a06d292e0c7768fe0f704b6a0448ff63c533e953a9088ad602d6ba",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/args.yaml": "d2e4717975420b7b9472af4dcb9bc27f8abe4943fad17e0e33872f8a3875636d",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json": "03aa31b9ae934ace5c840652f72a36f0756a23a7f53e4c975f2140dcaf741a47",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/results.csv": "bdf60d9893992bd2b7682950e3a8c4176b0fdc17659deb41a49842fa4910fb0e",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/weights/best.pt": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/args.yaml": "6f03932a0422e9df95b126cbdb7f2fa154e7c91e1b142a3b2a5b7b854ad24147",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/results.csv": "1b2997051ba1d3f7c40ba6880f0653d5667ecc21e96286f0336219b20151dc43",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T080757Z.csv": "30ea7e85c0ae4a1143e246434cf8308942af97413fb8e334c3288bfb6acdaf41",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T080757Z.json": "f2c124dca8aceb35b4e4025565dd449ef9c1252a6774ae706ce591a1cda16b99",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T083428Z.csv": "3e87a5c696f40e88e6f4bc40a75ba502a867ff46f1a0fb6868202f14e6134af4",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T083428Z.json": "d40e1891a41d664c4edff4b9d82eb9a0247963629bd53bfc7cf0ca84d0dce485",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T084434Z.csv": "8c1c1a8f1f07f16ceb81e3e03bc82b50a40da830bb5ca5fa1a31d8da63fdd254",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T084434Z.json": "fabf6093bfd70f84d968a7b0334b4ec03b2a414a9d82d1d6c0f1d136256333cb",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/args.yaml": "005996f3ebc9f5d98a5ff01a36297a33abd47069c0e2f4cb9b3f9d5c4b9d53b3",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/results.csv": "538cff72caa54f961d38e1f4cf04989b4939ecee4c07cea88b8aa3f818eb3d85",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/args.yaml": "77c0d0998801daeeff937f2260aa390593237ddecc820235c7a99bc356d9aff5",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/results.csv": "2d8b446bee3fd5265959d0ac3ac4ce9369fbcdaafd6f2fde9733ab18e645fa37",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/args.yaml": "5e1c01e559d161ddabd2a3f548f5a7f7d00e415119bb8253bfff337b437db377",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+    "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+  },
+  "tables": {
+    "1": {
+      "analisis_performa/tabel/T01_spesifikasi_model.csv": "2957f18c639d78c026d4af77946cb0e72eaad9dbcf9e6d172aa52333aa2d8d5b",
+      "analisis_performa/tabel/T01_spesifikasi_model.md": "66192ddd1ac70b8177f5005c52bb1d463392584a765b8c72b914826bcf12838b"
+    },
+    "2": {
+      "analisis_performa/tabel/T02_resep_pelatihan.csv": "154bfbe452a91c0ecd21ccb8799ba3d7e97814ffcc285ac42a6fbbc88dacc6f8",
+      "analisis_performa/tabel/T02_resep_pelatihan.md": "7d78f0796d250915f9b9152267697faba614ff648e4d05e62d7db1f24c8f34f5"
+    },
+    "3": {
+      "analisis_performa/tabel/T03_konvergensi.csv": "8a788b664fe9f8e359dfeb1bda6619e466e601790731158a9d91be61c305e701",
+      "analisis_performa/tabel/T03_konvergensi.md": "1b602cd477a638711838ce9a279b4e44ef24f92a99ae3b66a8d2f12ffc514127"
+    },
+    "4": {
+      "analisis_performa/tabel/T04_ablasi_kd_val.csv": "4136422b64c82cbff109782e155f25098b8aabf10a6dd987c3e7d17114d8254d",
+      "analisis_performa/tabel/T04_ablasi_kd_val.md": "7796db8654b1790dfde3bf24bc5c5478812e0b90c69655707fb30755a3b021e4"
+    },
+    "5": {
+      "analisis_performa/tabel/T05_akurasi_test_keseluruhan.csv": "9fa79b505d325938bbc36afbae79adae563fdc9f4f2bc20faba84226e600a338",
+      "analisis_performa/tabel/T05_akurasi_test_keseluruhan.md": "b2cfd126363eb464fdd774b6806356fc238f0fe001bc7d1ce2a0346fb81d0efd"
+    },
+    "6": {
+      "analisis_performa/tabel/T06_akurasi_per_kelas.csv": "d4e96de14654372fa23ac68b584286092f82bb5bbb39445b081ddd14aeb1abe7",
+      "analisis_performa/tabel/T06_akurasi_per_kelas.md": "ccde7bd7c0766d9c2d5e95e4dc6a3991fb7cadfeeb0100e6507c51a41019f3e8"
+    },
+    "7": {
+      "analisis_performa/tabel/T07_selisih_berpasangan.csv": "5affdf577188d82251b13706303cf0a7911316ce05b09a007121e205d107a659",
+      "analisis_performa/tabel/T07_selisih_berpasangan.md": "45c19974c96ee3bf2821ad411af822a4fa7daed2397efe70943fa90a35cc1ad3"
+    },
+    "8": {
+      "analisis_performa/tabel/T08_akurasi_ukuran_objek.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T08_akurasi_ukuran_objek.md": "394e3fa457c5847665530b54c522a5ecbca5117b7026da4c6ebbeb9b1a3b10a6"
+    },
+    "9": {
+      "analisis_performa/tabel/T09_analisis_kesalahan.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T09_analisis_kesalahan.md": "0ed4bd546ca43010383b09a5643b6697af990f357a9749f6e02e97325b94b81b"
+    },
+    "10": {
+      "analisis_performa/tabel/T10_matriks_kebingungan.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T10_matriks_kebingungan.md": "d8593296ba53dcc1fc1310804b7f7325b39f40b48ed0252cd2b1e28666a91346"
+    },
+    "11": {
+      "analisis_performa/tabel/T11_sapuan_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T11_sapuan_confidence.md": "f5f10350ff0642dc4e3dc9f05b2e81ec1d7e81d191eccc0b496e5c06b8086636"
+    },
+    "12": {
+      "analisis_performa/tabel/T12_sapuan_iou_nms.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T12_sapuan_iou_nms.md": "113b1f0c54c32c41412a17d8973724bfba3b0e6ae6355f9dac3e5d2c569d71e9"
+    },
+    "13": {
+      "analisis_performa/tabel/T13_sapuan_imgsz.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T13_sapuan_imgsz.md": "6f658714d222cdd5da4661e875b452cd97d3550436cac9bd24495769ef83ca9e"
+    },
+    "14": {
+      "analisis_performa/tabel/T14_kalibrasi_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T14_kalibrasi_confidence.md": "9d3d911f9b7201de99aeb5217c956639fc5d1ee68cd14def8734e2d1d87a1f6d"
+    },
+    "16": {
+      "analisis_performa/tabel/T16_latensi_frame_tetap.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T16_latensi_frame_tetap.md": "67ee89465ae87acf367549b7e7149607bd468fdc696a59f87a35030dce155c99"
+    },
+    "17": {
+      "analisis_performa/tabel/T17_sapuan_thread.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T17_sapuan_thread.md": "a177dd2144c34fc731b472594e7dcc32a57131026e2d3a14fbdee9a020268f58"
+    },
+    "19": {
+      "analisis_performa/tabel/T19_servo_idle_vs_walking.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T19_servo_idle_vs_walking.md": "461a25f5ee3ca9e79fcb729d96fe641436c2e38b9b88919fc49f740cb3d63d57"
+    },
+    "20": {
+      "analisis_performa/tabel/T20_sumber_daya_startup.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T20_sumber_daya_startup.md": "c90a5557f75a203badc1fdb530fe172fc3997ff27a239b739ba007bc90ce9d43"
+    },
+    "21": {
+      "analisis_performa/tabel/T21_stabilitas_termal.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T21_stabilitas_termal.md": "99ddad6021a2d6265fda302ef509a52772637239c0e6854c8803e1f9b94979ec"
+    },
+    "23": {
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.md": "96c8bcc91f8e1115cbf87162e55d3dbbd21298092c5dab464d6de2c421f69091"
+    },
+    "24": {
+      "analisis_performa/tabel/T24_pengaruh_preview.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T24_pengaruh_preview.md": "4c9c1693bbc68bf3b260588549ebd5d11037f5270126d5c41cfa1795dfd58544"
+    },
+    "26": {
+      "analisis_performa/tabel/T26_tradeoff_utama.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T26_tradeoff_utama.md": "fe6479f25d472e7946f211e0451c97433ecd70778c33cefe2db268ab5112a056"
+    },
+    "27": {
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "4e114559ca6927ec868de4832ef122f31ac1468c45c7839adf7c72c009614e44"
+    },
+    "15": {
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "546ab8625cba7ae03caa5de67c7146506da314ae1727fc665c79549eb5089633",
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.md": "886bd1e30a9162f9d80cf5f19449a0c4c2921d6e685422b1897562bc3eea089d"
+    },
+    "18": {
+      "analisis_performa/tabel/T18_sesi_live_historis.csv": "52c08f8e54afcfe1113fe469f69f3d8551aac02a27f40f0ea977973d5ceaa074",
+      "analisis_performa/tabel/T18_sesi_live_historis.md": "31db2652bdae0012f14e148a62eb14de049412b0e040bb9e9316bb36d64e0962"
+    },
+    "22": {
+      "analisis_performa/tabel/T22_aliran_kamera.csv": "0b6cd8245df6100ac5a41aa7a13d9fd03963859ebbb8677cf364845ad8139478",
+      "analisis_performa/tabel/T22_aliran_kamera.md": "c7231857a51cbe77a52614217ec961eb2aa8927db157bd24bbd1f75a7a24d75e"
+    },
+    "25": {
+      "analisis_performa/tabel/T25_observasi_deteksi_live.csv": "be4ca6d7cebfbb8d70ada5ce312a8162dcb3db3c52d6ae166c6faa68ff82cff8",
+      "analisis_performa/tabel/T25_observasi_deteksi_live.md": "7997b6c418a2fe924078fb6c0a85621a970a8ec71f080bb72bf27f4b0862fd57"
+    },
+    "analisis_performa/INDEKS.md": "ec76b1d5b5456ec34d3601288f56e8c993359d5e541a4b9c5377389e4a31c807",
+    "analisis_performa/DEFINISI.md": "6e324af96ab697fe0407fbb27952c835e526e64dc1e1091eacb2d83e79f08b08"
+  },
+  "notes": [
+    "Historical webcam runs predate tracking IDs.",
+    "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy."
+  ]
+}

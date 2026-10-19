@@ -1,0 +1,56 @@
+{
+  "purpose": "Offline smoke check of YOLO class detection and persistent tracker IDs. This is not camera accuracy or OP3 runtime evidence.",
+  "created_at_local_date": "2026-10-19",
+  "checkpoint": "models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "runtime": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121 (CPU execution; CUDA unavailable)",
+    "ultralytics": "8.4.130",
+    "lap": "0.5.12",
+    "tracker": "botsort.yaml",
+    "device": "cpu",
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45
+  },
+  "procedure": "For each listed VAL image, call YOLO.track(source=frame, persist=True) four times on the same decoded frame. The tracker keeps one model instance across calls.",
+  "results": [
+    {
+      "expected_class": "ball",
+      "image": "data/raw/advance_vision_human/valid/images/KakaoTalk_20250203_160503119_mp4-0023_jpg.rf.fe0d2a1d2e8340ddf6490d0642e21b70.jpg",
+      "image_sha256": "0318c98745f4e934acf649c074c8cd98602786bdfd2e3b59231c00259cfa418a",
+      "ground_truth_class_present": true,
+      "predicted_class_per_frame": ["ball", "ball", "ball", "ball"],
+      "confidence_per_frame": [0.986, 0.986, 0.986, 0.986],
+      "track_id_per_frame": [1, 1, 1, 1],
+      "result": "class detected; ID stable across repeated static frames"
+    },
+    {
+      "expected_class": "gawang",
+      "image": "data/raw/advance_vision_human/valid/images/3dsense_2020_10_14__21_58_51_color_png_jpg.rf.3c78770d1d46d6b07735e4a544da6963.jpg",
+      "image_sha256": "c5fc958dd90640e781f07a4d91d5fba4e8b5be49fa057a349ecffaee8a3adac3",
+      "ground_truth_class_present": true,
+      "predicted_class_per_frame": ["gawang", "gawang", "gawang", "gawang"],
+      "confidence_per_frame": [0.822, 0.822, 0.822, 0.822],
+      "track_id_per_frame": [null, 2, 2, 2],
+      "result": "class detected; ID assigned after tracker confirmation and stable thereafter"
+    },
+    {
+      "expected_class": "robot",
+      "image": "data/raw/advance_vision_human/valid/images/KakaoTalk_20250203_160502315_mp4-0013_jpg.rf.6469c1b00e8c371f8198f9fbb6ba64e4.jpg",
+      "image_sha256": "80770aeef89b174302e18dccf71cbeafc7b5e8864d9e633565b00d687ba136cf",
+      "ground_truth_class_present": true,
+      "predicted_class_per_frame": ["robot", "robot", "robot", "robot"],
+      "confidence_per_frame": [0.914, 0.914, 0.914, 0.914],
+      "track_id_per_frame": [null, 3, 3, 3],
+      "result": "class detected; ID assigned after tracker confirmation and stable thereafter"
+    }
+  ],
+  "limitations": [
+    "The inputs are static validation images repeated in software, not frames from the physical OP3 camera.",
+    "This is a smoke check, not a representative tracking benchmark and not an accuracy estimate.",
+    "No servo_idle or walking test was performed.",
+    "The lap package was installed only under /tmp/kd_lap_only for this check; the OP3 runtime must install the pinned requirement in its dedicated virtual environment."
+  ]
+}

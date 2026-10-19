@@ -1,0 +1,62 @@
+models:
+  teacher_fp32:
+    checkpoint: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt
+    sha256: e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c
+    parameters_before_fusion: 2590425
+    parameters_after_fusion: 2582737
+    gflops_640: 6.5017344
+    checkpoint_size_bytes: 5481875
+    manifest: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/manifest.json
+  kd_seed42:
+    checkpoint: runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt
+    sha256: 2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1907475
+    manifest: runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json
+  kd_seed1337:
+    checkpoint: runs/kd/yolo11_tiny_pure_kd_v4_seed1337/weights/best.pt
+    sha256: bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1907411
+    manifest: runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json
+  kd_seed2025:
+    checkpoint: runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt
+    sha256: 79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1907411
+    manifest: runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json
+  supervised_seed42:
+    checkpoint: runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt
+    sha256: c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1909459
+    manifest: runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json
+  supervised_seed1337:
+    checkpoint: runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt
+    sha256: d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1909523
+    manifest: runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json
+  supervised_seed2025:
+    checkpoint: runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt
+    sha256: 0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1909459
+    manifest: runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json
+aliases:
+  op3_default:
+    model: kd_seed42
+    checkpoint: models/weights/kd_student_best.pt
+    sha256: 2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3
