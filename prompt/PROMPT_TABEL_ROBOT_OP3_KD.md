@@ -10,7 +10,7 @@ Bertindak sebagai asisten analisis runtime computer vision dan ROS 2. Kerjakan h
 
 ### Nomenklatur dan pemisahan kerja
 
-Training dilakukan di komputer lab/server dengan **Knowledge Development (KD)** sesuai istilah penulis, bukan QAT. Pada robot hanya dilakukan inferensi realtime dan pencatatan runtime. Gunakan checkpoint student KD `.pt` dan runtime PyTorch/Ultralytics yang benar-benar tercatat. Jangan mengasumsikan OpenVINO, QAT, INT8, atau model lain. Jangan memasukkan metrik TEST offline sebagai akurasi kamera OP3.
+Training dilakukan di komputer lab/server dengan **Knowledge Distillation (KD)** sesuai keputusan penulis. Pada robot hanya dilakukan inferensi realtime dan pencatatan runtime. Gunakan checkpoint student KD `.pt` dan runtime PyTorch/Ultralytics yang benar-benar tercatat. Jangan mengasumsikan OpenVINO, QAT, INT8, atau model lain. Jangan memasukkan metrik TEST offline sebagai akurasi kamera OP3.
 
 ### Ikuti format tabel yang sudah ada
 

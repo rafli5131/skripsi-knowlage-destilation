@@ -1,9 +1,12 @@
 # T10. matriks kebingungan
 
-Status: Belum diukur.
+Status: Belum diukur; matriks kebingungan empat kelas termasuk latar belum tersimpan untuk konfigurasi terkunci.
 
-| status |
-| --- |
-| [BELUM DIUKUR] |
+| model | split | actual_class | predicted_class | count | confidence_threshold | match_iou_threshold | source |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
-Sumber: Belum tersedia pada artefak yang diaudit
+[BELUM DIUKUR]
+
+Sumber: [Inventaris sumber lab/server](../lab_server/README.md).
+
+Kolom di atas adalah skema yang akan dipakai saat artefak yang sesuai tersedia.

@@ -1,2 +1,1 @@
-status
-[BELUM DIUKUR]
+model,split,confidence_threshold,match_iou_threshold,false_positives_per_image,fp_background_count,fp_wrong_class_count,fp_localization_count,fp_duplicate_count,fn_small_count,fn_medium_count,fn_large_count,source

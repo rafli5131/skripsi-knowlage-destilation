@@ -1,2 +1,1 @@
-status
-[BELUM DIUKUR]
+model,method,split,class,size_category,ground_truth_objects_count,recall_iou50_conf025,AP50_95,source

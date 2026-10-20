@@ -1,0 +1,36 @@
+model,method,seed,metric,value,ci95_lower,ci95_upper,valid_replicates,sampling_unit,source
+kd_seed42,Pure KD,42,test_precision,0.7450869845313332,0.7073833467873947,0.7894407628754644,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json
+kd_seed42,Pure KD,42,test_recall,0.9613411629712125,0.9451780563813721,0.9762492956611695,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json
+kd_seed42,Pure KD,42,test_F1,0.8395112202906242,0.8147800030983896,0.8676736758936052,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json
+kd_seed42,Pure KD,42,test_mAP50,0.948078274751973,0.9317543397040264,0.9641617987132814,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json
+kd_seed42,Pure KD,42,test_mAP50_95,0.6744243558211228,0.6553449054711943,0.7004866209751799,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json
+kd_seed1337,Pure KD,1337,test_precision,0.7404125211599578,0.7034135261428703,0.7876935102386612,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json
+kd_seed1337,Pure KD,1337,test_recall,0.9632208622193329,0.9466908061748868,0.978267441447843,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json
+kd_seed1337,Pure KD,1337,test_F1,0.8372467855907291,0.8118579432865451,0.8682413868307894,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json
+kd_seed1337,Pure KD,1337,test_mAP50,0.9402957563290876,0.9238807612359349,0.95690535301679,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json
+kd_seed1337,Pure KD,1337,test_mAP50_95,0.6530584049843047,0.634267058645395,0.6834282117717241,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json
+kd_seed2025,Pure KD,2025,test_precision,0.7786811919587304,0.7388824589396585,0.8238284630006559,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json
+kd_seed2025,Pure KD,2025,test_recall,0.964768849835432,0.9497601137527798,0.9781757985961896,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json
+kd_seed2025,Pure KD,2025,test_F1,0.8617939601887398,0.8357351391146202,0.889924137462933,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json
+kd_seed2025,Pure KD,2025,test_mAP50,0.9455321285158503,0.9284804798293816,0.9617277407519452,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json
+kd_seed2025,Pure KD,2025,test_mAP50_95,0.661625518763487,0.6361813831845156,0.6916014110098544,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json
+supervised_seed42,Supervised student,42,test_precision,0.857269629000684,0.8395044883305673,0.8795021797332183,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json
+supervised_seed42,Supervised student,42,test_recall,0.9685282483316726,0.9533582053699868,0.9818385922330097,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json
+supervised_seed42,Supervised student,42,test_F1,0.9095090562128358,0.8973519038739193,0.9239839157053855,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json
+supervised_seed42,Supervised student,42,test_mAP50,0.9584610391037435,0.9468621945241745,0.9713732705603721,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json
+supervised_seed42,Supervised student,42,test_mAP50_95,0.7202672540792384,0.704396923962809,0.7429281937077041,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed42_metrics.json
+supervised_seed1337,Supervised student,1337,test_precision,0.8632299159129385,0.8434278074485049,0.8871982012191052,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json
+supervised_seed1337,Supervised student,1337,test_recall,0.9672751154995923,0.9521252020138357,0.9808099523375352,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json
+supervised_seed1337,Supervised student,1337,test_F1,0.9122955712097313,0.8981409596275881,0.9273221895734814,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json
+supervised_seed1337,Supervised student,1337,test_mAP50,0.9578258182490496,0.9436025038518432,0.9721872092800738,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json
+supervised_seed1337,Supervised student,1337,test_mAP50_95,0.7264933293359825,0.7081310345432117,0.7492558817655183,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed1337_metrics.json
+supervised_seed2025,Supervised student,2025,test_precision,0.8622465182728326,0.8370464369376749,0.8872782750345082,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json
+supervised_seed2025,Supervised student,2025,test_recall,0.9737974454207808,0.960331166693226,0.9851419647542021,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json
+supervised_seed2025,Supervised student,2025,test_F1,0.9146332804884434,0.899314592420829,0.9295824016496012,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json
+supervised_seed2025,Supervised student,2025,test_mAP50,0.9639347257543539,0.9493565283488687,0.9755962271213772,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json
+supervised_seed2025,Supervised student,2025,test_mAP50_95,0.7207884333120275,0.7026051661547347,0.7433115140829936,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/supervised_seed2025_metrics.json
+teacher_fp32,Teacher,teacher,test_precision,0.8915367177798955,0.8717081307674155,0.9112106109111388,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json
+teacher_fp32,Teacher,teacher,test_recall,0.9697050031172901,0.9557365753484021,0.9823233038407521,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json
+teacher_fp32,Teacher,teacher,test_F1,0.9289794076582366,0.9139857641544632,0.9428288147153682,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json
+teacher_fp32,Teacher,teacher,test_mAP50,0.9642437762749102,0.9529705974958533,0.9754543186543112,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json
+teacher_fp32,Teacher,teacher,test_mAP50_95,0.7799795669680228,0.7622586189193906,0.7974102640522606,1000,TEST image,runs/final_test/pure_kd_official_split_locked_retry1/teacher_fp32_metrics.json

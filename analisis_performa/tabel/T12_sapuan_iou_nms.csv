@@ -1,2 +1,1 @@
-status
-[BELUM DIUKUR]
+model,split,nms_iou_threshold,mAP50,mAP50_95,precision,recall,duplicate_count,postprocess_ms,source

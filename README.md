@@ -59,6 +59,12 @@ for the current Indonesian results/discussion draft and
 for the hash-registered tables. The corrected tables use checkpoint parameter
 counts before Conv-BN fusion. The earlier analysis directory is retained as an
 audit trail and should not be used for final parameter counts.
+For thesis tables, start at the
+[`analisis_performa` index](analisis_performa/INDEKS.md). The
+[`lab/server T01–T14 index`](analisis_performa/lab_server/README.md) records
+the current table status, source files, and remaining measurements; the
+[`prompt inventory`](prompt/inventaris_tabel_dan_prompt.md) links the lab and
+robot workflows.
 
 ## Teacher, student, and data
 

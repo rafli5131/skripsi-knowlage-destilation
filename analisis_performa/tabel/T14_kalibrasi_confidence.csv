@@ -1,2 +1,1 @@
-status
-[BELUM DIUKUR]
+model,split,confidence_bin_lower,confidence_bin_upper,mean_confidence,empirical_precision,detection_count,ECE_10bin,source

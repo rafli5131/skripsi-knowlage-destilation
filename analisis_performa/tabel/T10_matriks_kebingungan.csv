@@ -1,2 +1,1 @@
-status
-[BELUM DIUKUR]
+model,split,actual_class,predicted_class,count,confidence_threshold,match_iou_threshold,source

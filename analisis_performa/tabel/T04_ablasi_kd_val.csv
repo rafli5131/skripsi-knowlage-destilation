@@ -1,2 +1,1 @@
-mode,weight,temperature,VAL metrics
-[BELUM DIUKUR],[BELUM DIUKUR],[BELUM DIUKUR],[BELUM DIUKUR]
+mode,feature_weight,box_weight,class_weight,temperature,val_mAP50,val_mAP50_95,val_precision,val_recall,source_run

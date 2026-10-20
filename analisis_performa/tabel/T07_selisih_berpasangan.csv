@@ -1,11 +1,21 @@
-seed,comparison,metric,KD minus supervised [0-1],retention versus teacher [%]
-42,KD - supervised,mAP50-95,-0.045842898258115605,[BELUM DIUKUR per seed]
-1337,KD - supervised,mAP50-95,-0.07343492435167787,[BELUM DIUKUR per seed]
-2025,KD - supervised,mAP50-95,-0.0591629145485405,[BELUM DIUKUR per seed]
-mean ± SD,Pure KD minus supervised student,test_mAP50_95,-0.05948024571944466 ± 0.013798749953926106,[BELUM DIUKUR]
-mean ± SD,Pure KD minus supervised student,test_precision,-0.10618845517881126 ± 0.02030095929065215,[BELUM DIUKUR]
-mean ± SD,Pure KD minus supervised student,test_recall,-0.006756644742022792 ± 0.002514951229457758,[BELUM DIUKUR]
-mean ± SD,Pure KD minus supervised student,test_F1,-0.06596198061363916 ± 0.011641786095616133,[BELUM DIUKUR]
-1337,KD - teacher,mAP50-95,-0.12692116198371817,83.7276298817554
-2025,KD - teacher,mAP50-95,-0.11835404820453588,84.82600657545328
-42,KD - teacher,mAP50-95,-0.10555521114690003,86.46692610715179
+seed,comparison,metric,delta_kd_minus_supervised [0-1],sample_SD [0-1],mAP50_95_retention_vs_teacher [%]
+42,Pure KD - Supervised student,test_precision,-0.11218264446935089,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+42,Pure KD - Supervised student,test_recall,-0.007187085360460088,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+42,Pure KD - Supervised student,test_F1,-0.06999783592221165,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+42,Pure KD - Supervised student,test_mAP50,-0.010382764351770435,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+42,Pure KD - Supervised student,test_mAP50_95,-0.045842898258115605,[TIDAK BERLAKU: satu pasangan],86.46692610715179
+1337,Pure KD - Supervised student,test_precision,-0.1228173947529807,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+1337,Pure KD - Supervised student,test_recall,-0.004054253280259434,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+1337,Pure KD - Supervised student,test_F1,-0.07504878561900219,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+1337,Pure KD - Supervised student,test_mAP50,-0.01753006191996198,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+1337,Pure KD - Supervised student,test_mAP50_95,-0.07343492435167787,[TIDAK BERLAKU: satu pasangan],83.7276298817554
+2025,Pure KD - Supervised student,test_precision,-0.08356532631410218,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+2025,Pure KD - Supervised student,test_recall,-0.009028595585348853,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+2025,Pure KD - Supervised student,test_F1,-0.05283932029970362,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+2025,Pure KD - Supervised student,test_mAP50,-0.01840259723850357,[TIDAK BERLAKU: satu pasangan],[TIDAK BERLAKU]
+2025,Pure KD - Supervised student,test_mAP50_95,-0.0591629145485405,[TIDAK BERLAKU: satu pasangan],84.82600657545328
+mean_3_seed,Pure KD - Supervised student,test_precision,-0.10618845517881126,0.02030095929065215,[TIDAK BERLAKU]
+mean_3_seed,Pure KD - Supervised student,test_recall,-0.006756644742022792,0.002514951229457758,[TIDAK BERLAKU]
+mean_3_seed,Pure KD - Supervised student,test_F1,-0.06596198061363916,0.011641786095616133,[TIDAK BERLAKU]
+mean_3_seed,Pure KD - Supervised student,test_mAP50,-0.015438474503411995,0.0044000549227917905,[TIDAK BERLAKU]
+mean_3_seed,Pure KD - Supervised student,test_mAP50_95,-0.05948024571944466,0.013798749953926106,85.00685418812016

@@ -1,28 +1,28 @@
-# Prompt Tabel Lab/Server — Knowledge Development (KD)
+# Prompt Tabel Lab/Server — Knowledge Distillation (KD)
 
 ## Tujuan
 
-Gunakan prompt ini di komputer lab/server untuk menyusun atau memperbarui tabel penelitian yang berasal dari dataset, training, evaluasi offline, dan benchmark server. Tabel mengikuti template yang sudah ada di `~/bre_skripsi/analisis_performa/tabel/`.
+Gunakan prompt ini di komputer lab/server untuk menyusun atau memperbarui tabel penelitian yang berasal dari dataset, training, evaluasi offline, dan benchmark server. Tabel mengikuti template yang sudah ada di `analisis_performa/tabel/` pada akar repository.
 
 ## Prompt
 
-Bertindak sebagai asisten analisis eksperimen dan penulisan skripsi computer vision. Kerjakan dari repository `~/bre_skripsi` dan artefak yang sudah tersimpan. Fokus hanya pada pekerjaan lab/server. Jangan menjalankan training baru, membuka ulang TEST, atau melakukan pengujian fisik robot.
+Bertindak sebagai asisten analisis eksperimen dan penulisan skripsi computer vision. Kerjakan dari akar repository ini dan artefak yang sudah tersimpan. Fokus hanya pada pekerjaan lab/server. Jangan menjalankan training baru, membuka ulang TEST, atau melakukan pengujian fisik robot.
 
 ### Nomenklatur penelitian
 
-Metode training penelitian ini adalah **Knowledge Development (KD)** sesuai istilah yang diminta penulis, bukan QAT (Quantization-Aware Training). Gunakan nama Knowledge Development (KD) di tabel dan narasi training. Repository mendokumentasikan objective teacher-only KD; jaga detail objective dan sumber yang benar. Jangan menyebut model KD sebagai QAT, PTQ, atau INT8. Bila ada artefak lama dari proyek lain yang menyebut QAT/OpenVINO, jangan menggabungkannya dengan hasil Knowledge Development ini.
+Metode training penelitian ini adalah **Knowledge Distillation (KD)** sesuai keputusan penulis. Gunakan nama Knowledge Distillation (KD) di tabel dan narasi training. Repository mendokumentasikan objective teacher-only KD; jaga detail objective dan sumber yang benar. Jangan menyebut model KD sebagai QAT, PTQ, atau INT8. Bila ada artefak lama dari proyek lain yang menyebut QAT/OpenVINO, jangan menggabungkannya dengan hasil KD ini.
 
 ### Ikuti format tabel yang sudah ada
 
-1. Baca `analisis_performa/tabel/T01_*.md` sampai `T14_*.md`, `analisis_performa/DEFINISI.md`, `PROMPT_PERBAIKAN_KODE_DAN_ANALISIS_PERFORMA.md` bagian 6, dan draf hasil skripsi sebelum menyusun output.
-2. Pertahankan nomor, nama file T01–T14, judul `# Tnn. ...`, baris `Status: ...`, urutan, gaya Markdown, nama kolom `snake_case`, satuan dalam header, koma desimal pada Markdown, dan catatan sumber di bawah tabel. Jika template hanya berisi kolom `status`, pakai definisi kolom rinci Tnn pada bagian 6.4 prompt perbaikan sebagai schema yang dimaksud.
+1. Baca `analisis_performa/tabel/T01_*.md` sampai `T14_*.md`, `analisis_performa/DEFINISI.md`, `prompt/PROMPT_PERBAIKAN_KODE_DAN_ANALISIS_PERFORMA.md` bagian 6, dan draf hasil skripsi sebelum menyusun output.
+2. Pertahankan nomor, nama file T01–T14, judul `# Tnn. ...`, baris `Status: ...`, urutan, gaya Markdown, serta kolom yang sudah dipakai pada tabel berisi data. Untuk skema baru, gunakan nama kolom `snake_case` dan satuan dalam header. Pakai koma desimal pada Markdown dan catatan sumber di bawah tabel. Jika template hanya berisi kolom `status`, pakai definisi kolom rinci Tnn pada bagian 6.4 prompt perbaikan sebagai skema yang dimaksud.
 3. Perbarui tabel yang sudah ada di `analisis_performa/tabel/`; jangan membuat sistem penomoran atau gaya tabel baru. Bila pasangan CSV tersedia, gunakan titik desimal di CSV seperti aturan repository.
 4. Status tabel harus sesuai bukti: `Lengkap`, `Sebagian`, atau `Belum diukur`. Sel yang tidak punya data ditulis `[BELUM DIUKUR]`; jangan membuat angka agar tabel terlihat penuh.
 
 ### Tabel yang dikerjakan di komputer lab/server
 
 - **T01 spesifikasi model:** `model`, `method`, `seed`, parameter sebelum/sesudah fusion, GFLOPs @640, ukuran checkpoint MiB, SHA-256, registry manifest.
-- **T02 resep pelatihan:** `model`, `seed`, `objective`, epochs configured/completed, batch, optimizer, lr0, lrf, weight decay, warmup, AMP, augmentation, bobot KD feature/box/class, temperatur KD, durasi training, source run. Cantumkan Knowledge Development (KD), objective teacher-only, dan supervised sebagai kontrol terpisah bila sumber mendukung.
+- **T02 resep pelatihan:** `model`, `seed`, `objective`, epochs configured/completed, batch, optimizer, lr0, lrf, weight decay, warmup, AMP, augmentation, bobot KD feature/box/class, temperatur KD, durasi training, source run. Cantumkan Knowledge Distillation (KD), objective teacher-only, dan supervised sebagai kontrol terpisah bila sumber mendukung.
 - **T03 konvergensi:** model, seed, sampel run, VAL mAP50-95 pada epoch 10/25/50/75/100, best epoch, best VAL mAP50-95.
 - **T04 ablasi KD VAL:** mode, bobot, temperatur, metrik VAL. Isi hanya jika pilot kandidat benar-benar ada; jangan membuat hasil ablasi dari TEST.
 - **T05 akurasi TEST keseluruhan:** method, metric, jumlah model, mean, sample SD, CI95 bootstrap lintas-seed dan per-model bila tersedia.
@@ -45,7 +45,7 @@ Prioritaskan `runs/kd/`, `runs/supervised/`, `runs/final_test/`, `runs/benchmark
 - Pisahkan TRAIN, VAL, dan TEST. VAL digunakan untuk memilih checkpoint/parameter. TEST hanya untuk evaluasi final terkunci; jangan melakukan sweep atau pemilihan berdasarkan TEST.
 - Sajikan hasil semua seed dan mean ± sample SD sesuai definisi repository. Bootstrap CI tidak menggantikan variasi antar-seed.
 - Jangan menyebut benchmark NVIDIA L40 sebagai hasil ROBOTIS OP3. Tabel ini berisi hasil lab/server saja.
-- Jangan mengklaim Knowledge Development mengungguli supervised: laporkan angka dan selisih sesuai sumber.
+- Jangan mengklaim KD mengungguli supervised: laporkan angka dan selisih sesuai sumber.
 - Jangan mengubah raw artefacts, checkpoint, manifest historis, atau protokol. Buat hanya perubahan tabel yang diminta dan catat sumber/hash jika format analisis memang menyediakannya.
 - Jika schema/angka bertentangan dengan sumber, berhenti pada baris tersebut, jelaskan konflik, dan jangan menebak.
 
