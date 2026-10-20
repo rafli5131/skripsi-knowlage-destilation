@@ -14,6 +14,11 @@ decisions:
     decided_at: 2026-10-19
     approved_pilot: pure_weighted
     approved_pilot_at: 2026-10-20
+    pilot_result: not_selected
+    pilot_result_at: 2026-10-20
+    pilot_val_mAP50_95: 0.590676
+    baseline_seed42_val_mAP50_95: 0.682585
+    pilot_result_source: analisis_performa/tabel/T04_ablasi_kd_val.csv
   D3:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_epochs: 100

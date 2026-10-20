@@ -1,5 +1,7 @@
 # Audit repo dan langkah lab/server — 20 Oktober 2026
 
+**Snapshot historis pada commit `49f6c3b`.** Status tabel dan saran pilot di bawah sudah dilanjutkan. Lihat [indeks lab/server terkini](../analisis_performa/lab_server/README.md) dan [hasil pilot `pure_weighted`](PILOT_PURE_WEIGHTED_2026-10-20.md).
+
 ## Cakupan audit
 
 Audit baca saja atas `main` pada commit `49f6c3b` (`Update OP3 runtime tables from saved trials`). Status kerja bersih saat audit. Dokumen ini membedakan hasil dataset Advance Vision, benchmark server, dan observasi kamera OP3. Tidak ada training, evaluasi baru, atau uji fisik robot yang dijalankan untuk menyusun audit ini.

@@ -14,10 +14,17 @@ Checkpoint dipilih dari VAL selama training. Setelah training selesai, baseline 
 
 ## Artefak
 
-- Log training: `runs/kd/pure_weighted_pilot_seed42.log`.
-- Run dan calon checkpoint: `runs/kd/yolo11_tiny_pure_weighted_pilot_seed42/weights/best.pt`.
+- Run selesai 100 epoch; checkpoint terbaik berasal dari epoch 89: [`best.pt`](../runs/kd/yolo11_tiny_pure_weighted_pilot_seed42/weights/best.pt).
+- Manifest training: [`manifest.json`](../runs/kd/yolo11_tiny_pure_weighted_pilot_seed42/manifest.json).
 - Manifest training memuat hash checkpoint, konfigurasi, skrip, modul loss, dan fingerprint dataset.
-- Hasil evaluasi VAL: `runs/val_ablation/pure_weighted_20261020/`.
+- Hasil evaluasi VAL: [`pure_weighted_seed42_val.json`](../runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json) dan tiga JSON baseline di folder yang sama.
 - Tabel ablasi: [`T04_ablasi_kd_val.md`](../analisis_performa/tabel/T04_ablasi_kd_val.md).
+- Rincian kelas: [`T04_ablasi_kd_val_per_kelas.md`](../analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.md).
+
+## Hasil dan keputusan
+
+Empat checkpoint dievaluasi ulang pada 1.213 gambar VAL resmi dengan FP32 pada CPU server, imgsz 640, NMS IoU 0,7, dan confidence floor 0,001 untuk AP. Dibanding baseline `pure_v4` seed 42, `pure_weighted` seed 42 memperoleh mAP50–95 **0,5907 vs 0,6826** (selisih **−0,0919**). Pada confidence tetap >0,25 dan IoU pencocokan 0,50, precision makro **0,0473 vs 0,7899**, recall makro **0,9906 vs 0,9623**, dan F1 **0,0903 vs 0,8676**. Recall `gawang` naik **0,9752 vs 0,9494**, tetapi precision `gawang` turun **0,1203 vs 0,7509**. AP50–95 ketiga kelas juga turun: `ball` 0,7044 vs 0,7334, `gawang` 0,4914 vs 0,5798, dan `robot` 0,5762 vs 0,7346.
+
+Menurut kriteria utama yang ditetapkan sebelum hasil dilihat, `pure_weighted` **tidak dipilih** untuk pengulangan tiga seed atau deploy OP3; `pure_v4` tetap model utama. T04 mencatat pilot ini sebagai ablasi negatif. Interpretasi dibatasi pada satu seed kandidat dan split VAL Advance Vision; hasil TEST historis tidak dipakai untuk memilih objective.
 
 Angka VAL Advance Vision dalam pilot ini bukan akurasi kamera ROBOTIS OP3. Checkpoint pilot tidak otomatis mengganti file model deploy OP3.

@@ -8,7 +8,7 @@ Inventaris terdahulu mengacu pada proyek YOLO11 QAT/OpenVINO yang berbeda; rujuk
 
 | Kelompok | Isi | Indeks hasil | Status saat ini |
 | --- | --- | --- | --- |
-| Lab/server T01–T14 | Spesifikasi model, training, VAL, TEST terkunci, dan benchmark server | [Indeks lab/server](../analisis_performa/lab_server/README.md) | T01–T03, T05–T14 lengkap dalam scope sumbernya; T04 sebagian karena pilot objective KD baru belum dilatih. T12/T13 memakai tiga model perwakilan. |
+| Lab/server T01–T14 | Spesifikasi model, training, VAL, TEST terkunci, dan benchmark server | [Indeks lab/server](../analisis_performa/lab_server/README.md) | T01–T14 lengkap dalam scope sumbernya; T04 memuat pilot `pure_weighted` satu seed dan tiga baseline. T12/T13 memakai tiga model perwakilan. |
 | ROBOTIS OP3 T15–T27 | Runtime kamera, latensi, FPS, CPU/RAM, tracking, dan akurasi frame bila berlabel | [Indeks umum](../analisis_performa/INDEKS.md) | T15, T18, T20, T22, T23, T25, T26 sebagian dari log tersimpan; T16, T17, T19, T21, T24, T27 belum diukur |
 
 Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisis_performa/tabel/`](../analisis_performa/tabel/). Rincian interval bootstrap tiap checkpoint melengkapi T05 di [folder lab/server](../analisis_performa/lab_server/interval_bootstrap_per_model.md).

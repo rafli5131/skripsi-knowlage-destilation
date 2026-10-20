@@ -68,16 +68,18 @@ def checkpoint_and_manifest(label: str) -> tuple[Path, Path, dict]:
     return checkpoint, manifest_path.resolve(), json.loads(manifest_path.read_text(encoding="utf-8"))
 
 
-def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: dict, threads: int) -> Path:
+def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: dict,
+             threads: int, device: torch.device) -> Path:
     cp, manifest_path, run_manifest = checkpoint_and_manifest(label)
     torch.set_num_threads(threads)
     model = YOLO(str(cp), task="detect").model
     if {int(k): str(v) for k, v in model.names.items()} != NAMES:
         raise RuntimeError(f"Class mapping differs from expected: {label}")
-    model.to(torch.device("cuda:0")).float().eval()
+    model.to(device).float().eval()
     cfg = get_cfg(DEFAULT_CFG, {
         "task": "detect", "mode": "val", "split": "val", "data": str(DATA_YAML),
-        "imgsz": 640, "batch": 16, "workers": 0, "device": "0", "cache": False,
+        "imgsz": 640, "batch": 16, "workers": 0,
+        "device": "cpu" if device.type == "cpu" else "0", "cache": False,
         "fraction": 1.0, "rect": True, "augment": False, "amp": False,
         "plots": False, "save_json": False, "save_txt": False, "conf": 0.001,
         "iou": 0.7, "verbose": False, "compile": False,
@@ -90,7 +92,7 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         fraction=1.0, external_cache_path=OUT / ".val_labels.cache",
     )
     loader = build_dataloader(dataset, batch=cfg.batch, workers=0, shuffle=False,
-                              rank=-1, drop_last=False, device=torch.device("cuda:0"))
+                              rank=-1, drop_last=False, device=device)
     validator = DetectionValidator(loader, save_dir=OUT / label, args=copy.copy(cfg))
     pred_count = np.zeros(3, dtype=int)
     tp_count = np.zeros(3, dtype=int)
@@ -151,7 +153,8 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         "images": len(seen), "ultralytics": ultralytics.__version__,
         "settings": {"imgsz": 640, "batch": 16, "rect": True, "augment": False,
                      "confidence_floor_for_AP": 0.001, "nms_iou": 0.7,
-                     "fixed_confidence": 0.25, "match_iou": 0.5, "device": "cuda:0"},
+                     "fixed_confidence": 0.25, "match_iou": 0.5, "device": str(device),
+                     "threads": threads},
         "validator_metrics": validator.metrics.results_dict,
         "fixed_confidence_metrics": {"precision_macro": precision, "recall_macro": recall, "F1_macro": f1},
         "per_class": by_class,
@@ -166,9 +169,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT), default=[*BASELINES, PILOT])
     parser.add_argument("--threads", type=int, default=8)
+    parser.add_argument("--device", choices=("cpu", "cuda:0"), default="cpu")
     args = parser.parse_args()
     if args.threads < 1:
         raise ValueError("threads must be positive")
+    device = torch.device(args.device)
+    if device.type == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA device was requested but is unavailable")
     images, expected, fingerprint = source_paths()
     verify_val_bytes(fingerprint)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -177,7 +184,7 @@ def main() -> None:
         if path.exists():
             raise FileExistsError(f"Refusing to overwrite existing VAL result: {path}")
         print(f"Evaluating {label} on locked VAL", flush=True)
-        print(evaluate(label, images, expected, fingerprint, args.threads), flush=True)
+        print(evaluate(label, images, expected, fingerprint, args.threads, device), flush=True)
 
 
 if __name__ == "__main__":

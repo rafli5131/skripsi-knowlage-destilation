@@ -72,8 +72,10 @@ summarizes current evidence and the next lab/server steps.
 The [seven-checkpoint VAL diagnosis](analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md)
 records error categories, confidence sweeps, and the current KD improvement recommendation.
 [The 20 October model and server-table status](docs/STATUS_MODEL_DAN_TABEL_SERVER_2026-10-20.md)
-explains the checkpoint count, whether a new KD objective requires training,
-and the remaining T04 ablation work.
+records the pre-pilot checkpoint count and open table work. The completed
+[`pure_weighted` pilot](docs/PILOT_PURE_WEIGHTED_2026-10-20.md) and
+[`T04` ablation](analisis_performa/tabel/T04_ablasi_kd_val.md) contain the newer
+VAL result and decision.
 
 ## Teacher, student, and data
 

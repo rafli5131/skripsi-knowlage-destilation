@@ -7,7 +7,7 @@ Pembaruan: 2026-10-20. [Indeks lab/server](lab_server/README.md) memuat sumber d
 | T01 | Lengkap dari artefak historis; bukan validasi kamera OP3. | [CSV](tabel/T01_spesifikasi_model.csv) · [Markdown](tabel/T01_spesifikasi_model.md) |
 | T02 | Lengkap; durasi enam run ditelusuri ke results.csv atau manifest resume. | [CSV](tabel/T02_resep_pelatihan.csv) · [Markdown](tabel/T02_resep_pelatihan.md) |
 | T03 | Lengkap dari results.csv run yang sudah ada. | [CSV](tabel/T03_konvergensi.csv) · [Markdown](tabel/T03_konvergensi.md) |
-| T04 | Sebagian; tiga kondisi dasar pure_v4 ada, pilot kandidat KD baru belum dilatih. | [CSV](tabel/T04_ablasi_kd_val.csv) · [Markdown](tabel/T04_ablasi_kd_val.md) |
+| T04 | Lengkap untuk ablasi pilot VAL: `pure_v4` tiga seed dan `pure_weighted` seed 42; hasil kandidat menurun. | [CSV](tabel/T04_ablasi_kd_val.csv) · [Markdown](tabel/T04_ablasi_kd_val.md) · [Per kelas](tabel/T04_ablasi_kd_val_per_kelas.md) |
 | T05 | Lengkap untuk ringkasan tiga seed, bootstrap antar-seed, dan [interval per checkpoint](lab_server/interval_bootstrap_per_model.md); bootstrap antar-seed eksploratif karena n=3. | [CSV](tabel/T05_akurasi_test_keseluruhan.csv) · [Markdown](tabel/T05_akurasi_test_keseluruhan.md) |
 | T06 | Lengkap dari hasil TEST terkunci yang sudah ada. | [CSV](tabel/T06_akurasi_per_kelas.csv) · [Markdown](tabel/T06_akurasi_per_kelas.md) |
 | T07 | Lengkap untuk lima metrik keseluruhan pada tiga pasangan seed dan retensi mAP50–95 terhadap teacher. | [CSV](tabel/T07_selisih_berpasangan.csv) · [Markdown](tabel/T07_selisih_berpasangan.md) |

@@ -4,7 +4,8 @@
   "notes": [
     "analisis_performa/manifest.json originated from the 2026-10-19 generator snapshot and was later updated for OP3 sources and table hashes.",
     "This curated manifest supersedes the generator manifest table hashes for T01-T14; the generator manifest records updated OP3 sources and outputs for T15-T27.",
-    "The historical build_performance_tables.py may overwrite these curated files if rerun."
+    "The historical build_performance_tables.py may overwrite these curated files if rerun.",
+    "T04 was replaced with a four-checkpoint VAL-only ablation; pure_weighted has one pilot seed and is not the main three-seed model."
   ],
   "outputs_sha256": {
     "analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md": "8ae94636363e3efd6927169bc1c69697e4f137d1bbaab612a1e65bca1f250b6c",
@@ -16,8 +17,10 @@
     "analisis_performa/tabel/T02_resep_pelatihan.md": "db3e66a72ae0a2d355f6bd4548168bbcfeceec50667d3f6b378cd1ae049ec69c",
     "analisis_performa/tabel/T03_konvergensi.csv": "8a788b664fe9f8e359dfeb1bda6619e466e601790731158a9d91be61c305e701",
     "analisis_performa/tabel/T03_konvergensi.md": "bf47dc0e6a65c9d1fdcadc48c90b553847810b31650656da077162d95a9b0184",
-    "analisis_performa/tabel/T04_ablasi_kd_val.csv": "697136fac15687ab6417da433f1192aae1501461957289bd252c51e456e184bc",
-    "analisis_performa/tabel/T04_ablasi_kd_val.md": "1ac0288492984182ec09ddb9928240bbb83f3d229283bdd57b6e7b25717f9e51",
+    "analisis_performa/tabel/T04_ablasi_kd_val.csv": "7838bb1d49d5c3b4cf78adbbb31773487bd13fbe041948ad312da1d03aa24225",
+    "analisis_performa/tabel/T04_ablasi_kd_val.md": "be2219b0c16e135314c50f71abf7cf9393f2b77770939cb4b3f3959a3f1ea2b8",
+    "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.csv": "6b0e2dbe9beb4d0a8488b630ec1f2463dd54bfd68a177e6bc2b8fb3c28df3813",
+    "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.md": "6445dd43ce42aa1146830dced5580cb09d393172fdbda659ffbeef374d333e13",
     "analisis_performa/tabel/T05_akurasi_test_keseluruhan.csv": "37821efaf5706eca4660e2372652a7db87704c656d467128c8008d1ae1170157",
     "analisis_performa/tabel/T05_akurasi_test_keseluruhan.md": "31a42668b64573210eddbf9271a37c2ccc22a4b1e69cb9e1b4597cfa6fb50ae3",
     "analisis_performa/tabel/T06_akurasi_per_kelas.csv": "281c2cdb1d6d70334bc6a0185191aa0daef1dcc373b36c66a83c1daddf760b63",
@@ -41,7 +44,8 @@
     "runs/val_diagnostics/official_split_20261020/summary.json": "b0513bebfd7cad81f5b89b0feb7c76f58eb8874e5e1cbbd88691ca002a6e61b3"
   },
   "prepared_on": "2026-10-20",
-  "scope": "Curated lab/server T01-T14 from locked historical artifacts, seven-checkpoint VAL diagnosis, and representative VAL NMS/input-size sweeps on CPU server; no new training, TEST rerun, or robot operation",
+  "pure_weighted_pilot_added_on": "2026-10-20",
+  "scope": "Curated lab/server T01-T14 from historical locked artifacts and VAL diagnosis, representative server sweeps, plus a new 100-epoch pure_weighted seed-42 training pilot and four-checkpoint VAL-only T04 ablation; no new TEST evaluation or robot operation",
   "sources_sha256": {
     "AUDIT_DATASET_SKRIPSI.md": "759f122a186631ce2f2bdb00997a40d278db33885334573e73e0a33b90414ecc",
     "PROTOKOL_EKSPERIMEN_SKRIPSI.md": "9bd4f5ec43851dcfe370db81552461222eab6feb8f775af9aa82cbd051cd4dd5",
@@ -69,6 +73,8 @@
     "runs/kd/yolo11_tiny_pure_kd_v4_seed2025/args.yaml": "6f03932a0422e9df95b126cbdb7f2fa154e7c91e1b142a3b2a5b7b854ad24147",
     "runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
     "runs/kd/yolo11_tiny_pure_kd_v4_seed2025/results.csv": "1b2997051ba1d3f7c40ba6880f0653d5667ecc21e96286f0336219b20151dc43",
+    "runs/kd/yolo11_tiny_pure_weighted_pilot_seed42/manifest.json": "09f9a0a8d2282f59cc5972eb5e4d1e3cb0f46e1060d8f9688b679863e17873f1",
+    "runs/kd/yolo11_tiny_pure_weighted_pilot_seed42/results.csv": "ea80248445acee8a83cd25bec99a6aad44634cf121b3d4867e784ec782647050",
     "runs/supervised/yolo11_tiny_supervised_seed1337/args.yaml": "005996f3ebc9f5d98a5ff01a36297a33abd47069c0e2f4cb9b3f9d5c4b9d53b3",
     "runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
     "runs/supervised/yolo11_tiny_supervised_seed1337/results.csv": "538cff72caa54f961d38e1f4cf04989b4939ecee4c07cea88b8aa3f818eb3d85",
@@ -78,6 +84,10 @@
     "runs/supervised/yolo11_tiny_supervised_seed42_retry1/args.yaml": "5e1c01e559d161ddabd2a3f548f5a7f7d00e415119bb8253bfff337b437db377",
     "runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
     "runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
+    "runs/val_ablation/pure_weighted_20261020/kd_seed1337_val.json": "6134736b40275f859d017698d6ba5a721f2acac38fb05bba1523f3502beef148",
+    "runs/val_ablation/pure_weighted_20261020/kd_seed2025_val.json": "b56f33de8f5cdc64213a610385b8b22b53e703c5f1f8b826739860a80cff3a64",
+    "runs/val_ablation/pure_weighted_20261020/kd_seed42_val.json": "7e4eec28a1fe2af598c1f91677f3b4958a5f2bbfa55270cb3db9bc0111269c22",
+    "runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json": "4ab1d3c3d28724befbef8ff0a41340b31734fe26d6baf374ba6f63e187bb77e8",
     "runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json": "cf3678d1b254f36e35fb78b6184cadea5d848d41136a98ebed87004cec0847bc",
     "runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json": "8fba98a8be3467c282351b689b230225b06b2d9bae0517188e0cc4739dbae4dc",
     "runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json": "17f6aa8edd4c16c6d744dd9665cdc74f31288245a1d80d3b60e858ff0a2a7880",
@@ -113,7 +123,10 @@
     "runs/val_sweeps/official_split_20261020/nms_teacher_fp32_0.60.json": "51653de501118bde96b31c69219765154a56d1708b25bfaba93a43f7ed1b90b1",
     "runs/val_sweeps/official_split_20261020/nms_teacher_fp32_0.70.json": "5b82bc63f2d6f766f52b035cabbc777cc2a7171b8806cf297d0aa2410618cbfc",
     "scripts/analyze_val_detections.py": "fae1ca2d4869da3c87b3116241c856dee0b745fb7f4be580dd53389e7e8b3509",
+    "scripts/build_kd_ablation_table.py": "f36c8fcfdb787b16fe671f0f3152fbba9513ed56f33f19020d658defa0ca9e82",
     "scripts/complete_existing_lab_tables.py": "37f8438e5f63f09e318e2c32e2c9bfca8a4f820c7480ca16d319dcabae26f07a",
+    "scripts/evaluate_val_ablation.py": "50c26f793d4f4ea27f31c5dd66f39a7f121c15fbc687043f184b15872b063f02",
+    "scripts/kd_losses.py": "4723b135e0d0a50e023cb67842207d2166558f104ef8bada69d19a7f79655229",
     "scripts/sweep_val_lab.py": "b10e523659b20381561a66f241e781de41bfe3e5dc075cbdb4c2f2a77ccd9e1d"
   },
   "val_diagnosis_added_on": "2026-10-20"

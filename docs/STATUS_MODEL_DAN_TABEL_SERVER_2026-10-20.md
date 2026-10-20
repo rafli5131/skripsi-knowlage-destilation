@@ -1,5 +1,7 @@
 # Status model dan tabel lab/server — 20 Oktober 2026
 
+**Arsip sebelum pilot.** Setelah dokumen ini ditulis, `pure_weighted` seed 42 selesai dilatih dan T04 lengkap untuk satu pilot. Lihat [hasil pilot](PILOT_PURE_WEIGHTED_2026-10-20.md) dan [indeks lab/server terkini](../analisis_performa/lab_server/README.md). Angka jumlah model dan status T04 di bawah menggambarkan saat sebelum pilot.
+
 ## Berapa model yang sudah ada?
 
 Unit perbandingan eksperimen final adalah **tujuh checkpoint `best.pt`** yang tercatat dalam [`configs/model_registry.yaml`](../configs/model_registry.yaml): satu teacher YOLO11n FP32 dari proyek Advance Vision, tiga student KD murni (`seed` 42, 1337, 2025), dan tiga student supervised dengan arsitektur yang sama. Teacher adalah checkpoint sumber yang digunakan kembali; di repo ini ada **enam run training final student**, bukan tujuh run training final.

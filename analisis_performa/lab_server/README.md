@@ -11,7 +11,7 @@ Nomor dan nama berkas T01–T14 tetap berada di [`analisis_performa/tabel/`](../
 | T01 | Spesifikasi teacher dan enam student | Lengkap | [Markdown](../tabel/T01_spesifikasi_model.md) · [CSV](../tabel/T01_spesifikasi_model.csv) |
 | T02 | Resep dan durasi enam run pelatihan | Lengkap | [Markdown](../tabel/T02_resep_pelatihan.md) · [CSV](../tabel/T02_resep_pelatihan.csv) |
 | T03 | Konvergensi VAL pada epoch terpilih | Lengkap | [Markdown](../tabel/T03_konvergensi.md) · [CSV](../tabel/T03_konvergensi.csv) |
-| T04 | Ablasi objective KD pada VAL | Sebagian: kondisi dasar tiga seed; kandidat belum dilatih | [Markdown](../tabel/T04_ablasi_kd_val.md) · [CSV](../tabel/T04_ablasi_kd_val.csv) |
+| T04 | Ablasi objective KD pada VAL | Lengkap untuk pilot: `pure_v4` tiga seed dan `pure_weighted` satu seed | [Markdown](../tabel/T04_ablasi_kd_val.md) · [CSV](../tabel/T04_ablasi_kd_val.csv) · [Per kelas](../tabel/T04_ablasi_kd_val_per_kelas.md) |
 | T05 | Metrik TEST keseluruhan | Lengkap untuk ringkasan dan bootstrap seed yang tersedia | [Markdown](../tabel/T05_akurasi_test_keseluruhan.md) · [CSV](../tabel/T05_akurasi_test_keseluruhan.csv) |
 | T06 | Metrik TEST per kelas | Lengkap | [Markdown](../tabel/T06_akurasi_per_kelas.md) · [CSV](../tabel/T06_akurasi_per_kelas.csv) |
 | T07 | Selisih KD–supervised berpasangan | Lengkap | [Markdown](../tabel/T07_selisih_berpasangan.md) · [CSV](../tabel/T07_selisih_berpasangan.csv) |
@@ -36,7 +36,8 @@ Pelengkap T05: [interval bootstrap per model](interval_bootstrap_per_model.md) (
 | Evaluasi TEST terkunci | [`manifest.json`](../../runs/final_test/pure_kd_official_split_locked_retry1/manifest.json) dan tujuh berkas `*_metrics.json` pada folder yang sama | T05–T06 dan interval per checkpoint |
 | Benchmark server | [`pure_kd_final_inference.json`](../../runs/benchmarks/pure_kd_final_inference.json) | T01 dan titik dasar T13, FP32 batch 1 pada NVIDIA L40 |
 | Diagnosis VAL tujuh checkpoint | [`DIAGNOSIS_VAL_2026-10-20.md`](DIAGNOSIS_VAL_2026-10-20.md), [`summary.json`](../../runs/val_diagnostics/official_split_20261020/summary.json), tujuh prediksi JSON per gambar | T09–T11 dan T14; FP32 CPU pada VAL, tanpa training atau membuka TEST |
-| Pelengkapan tabel dari prediksi dan run lama | [`complete_existing_lab_tables.py`](../../scripts/complete_existing_lab_tables.py), prediksi VAL dan manifest run KD | T04 kondisi dasar, T05 bootstrap antar-seed, T08 ukuran objek, dan AP per kelas titik dasar T13 |
+| Pelengkapan tabel dari prediksi dan run lama | [`complete_existing_lab_tables.py`](../../scripts/complete_existing_lab_tables.py), prediksi VAL dan manifest run KD | T04 kondisi dasar sebelum pilot, T05 bootstrap antar-seed, T08 ukuran objek, dan AP per kelas titik dasar T13 |
+| Pilot `pure_weighted` dan evaluasi ulang VAL | [`PILOT_PURE_WEIGHTED_2026-10-20.md`](../../docs/PILOT_PURE_WEIGHTED_2026-10-20.md), [`evaluate_val_ablation.py`](../../scripts/evaluate_val_ablation.py), [`build_kd_ablation_table.py`](../../scripts/build_kd_ablation_table.py) | T04 final: tiga baseline dan satu kandidat seed 42, termasuk rincian per kelas |
 | Sapuan VAL dan benchmark CPU server | [`sweep_val_lab.py`](../../scripts/sweep_val_lab.py), [`runs/val_sweeps/official_split_20261020/`](../../runs/val_sweeps/official_split_20261020/) | T12 IoU NMS dan T13 ukuran 320/416/512/640 pada tiga model perwakilan |
 | Definisi dan batas eksperimen | [`DEFINISI.md`](../DEFINISI.md), [`PROTOKOL_EKSPERIMEN_SKRIPSI.md`](../../PROTOKOL_EKSPERIMEN_SKRIPSI.md), [`AUDIT_DATASET_SKRIPSI.md`](../../AUDIT_DATASET_SKRIPSI.md) | Split, operating point, ukuran objek, dan batas klaim |
 
@@ -51,24 +52,27 @@ Mean TEST mAP50–95 pure KD adalah **0,6630 ± 0,0108** dari tiga seed; supervi
 
 [Diagnosis VAL 20 Oktober](DIAGNOSIS_VAL_2026-10-20.md) menjelaskan T09–T11/T14, termasuk FP duplikasi yang lebih sering pada KD dan trade-off threshold gawang sebelum keputusan objective baru.
 
+Pilot `pure_weighted` selesai 100 epoch pada seed 42. Pada VAL, mAP50–95 turun dari **0,6826** (`pure_v4` seed 42) menjadi **0,5907**; F1 pada confidence 0,25 turun dari **0,8676** menjadi **0,0903** karena precision sangat rendah. Recall `gawang` meningkat, tetapi AP50–95 `gawang` turun. Sesuai kriteria pilot, `pure_v4` tetap model utama. Rincian ada pada [T04](../tabel/T04_ablasi_kd_val.md) dan [catatan pilot](../../docs/PILOT_PURE_WEIGHTED_2026-10-20.md).
+
 ## Data yang masih dibutuhkan
 
-- T04 baru mempunyai kondisi dasar `pure_v4`. Ablasi membutuhkan minimal satu kandidat KD murni yang benar-benar dilatih dan dinilai pada VAL; keputusan objective dan anggaran epoch belum dikunci.
+- T04 sudah memuat pilot `pure_weighted` seed 42. Perbandingan kandidat lintas tiga seed belum tersedia, dan pilot yang menurun tidak dipilih untuk pengulangan. Keputusan anggaran epoch eksperimen utama D3 tetap belum dikunci.
 - T12/T13 menyapu satu checkpoint per varian agar biaya diagnosis terukur. Sapuan seluruh seed memerlukan inferensi dan benchmark tambahan; hasil perwakilan tidak menunjukkan variasi antar-seed pada setiap titik grid.
 - T15–T27 adalah pengukuran OP3 terpisah. Akurasi kamera OP3 tidak dapat dihitung dari tabel lab/server ini tanpa frame kamera berlabel.
 
 ## Menghasilkan ulang tabel baru
 
-Jalankan dengan lingkungan Python yang mempunyai versi Ultralytics dan PyTorch eksperimen. `complete_existing_lab_tables.py` hanya membaca prediksi VAL terkunci, ringkasan TEST lama, dan manifest run. `sweep_val_lab.py` memverifikasi hash dataset/checkpoint, membuat JSON hasil per kombinasi, lalu menggabungkannya ke T12/T13. Run yang sudah mempunyai JSON dilewati agar sapuan bisa dilanjutkan.
+Jalankan dengan lingkungan Python yang mempunyai versi Ultralytics dan PyTorch eksperimen. `complete_existing_lab_tables.py` membaca prediksi VAL terkunci, ringkasan TEST lama, dan manifest run; **menjalankan ulang skrip ini akan menimpa T04 pilot**, sehingga setelahnya jalankan `build_kd_ablation_table.py`. `sweep_val_lab.py` memverifikasi hash dataset/checkpoint, membuat JSON hasil per kombinasi, lalu menggabungkannya ke T12/T13. Run yang sudah mempunyai JSON dilewati agar sapuan bisa dilanjutkan.
 
 ```bash
 python scripts/complete_existing_lab_tables.py
 python scripts/sweep_val_lab.py --phase nms
 python scripts/sweep_val_lab.py --phase imgsz
 python scripts/sweep_val_lab.py --phase rebenchmark
+python scripts/build_kd_ablation_table.py
 ```
 
-Jalankan `rebenchmark` setelah inferensi lain selesai agar angka latensi frame tetap tidak dipengaruhi beban sapuan. Perintah itu mengulang benchmark CPU, memperbarui JSON sumber, dan menulis T12/T13 serta hash keluarannya. Tabel dan skrip ini tidak membuat checkpoint model baru.
+Jalankan `rebenchmark` setelah inferensi lain selesai agar angka latensi frame tetap tidak dipengaruhi beban sapuan. Perintah itu mengulang benchmark CPU, memperbarui JSON sumber, dan menulis T12/T13 serta hash keluarannya. `build_kd_ablation_table.py` memakai empat JSON VAL yang sudah ada untuk membuat T04; pelatihan pilot yang menghasilkan checkpoint baru telah selesai secara terpisah.
 
 ## Jejak perubahan tabel
 
