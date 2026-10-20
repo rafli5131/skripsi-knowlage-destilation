@@ -19,6 +19,8 @@ Run valid: [`20261019T123737Z_023704`](../../../runs/op3_idle_trial/20261019T123
 
 ![Grafik FPS, pemrosesan, umur frame, dan CPU](grafik_performa.png)
 
+Contoh [tangkapan layar tampilan live](<../../figures/Esc keluar_screenshot_19.10.2026.png>) memperlihatkan border, label kelas, ID tracking, confidence, dan grafik berjalan. Gambar ini diambil terpisah dari run CSV valid di atas; jangan gunakan angka pada screenshot sebagai statistik run tersebut atau sebagai bukti objek bergerak.
+
 | Kelas | Frame terdeteksi | Jumlah deteksi | ID teramati | Frame tanpa deteksi | Confidence rata-rata |
 | --- | ---: | ---: | --- | ---: | ---: |
 | `ball` | 1.501/1.501 | 1.501 | `1` pada 1.501 deteksi | 0 | 0,979 |
