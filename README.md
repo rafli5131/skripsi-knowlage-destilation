@@ -54,7 +54,7 @@ would beat the supervised student on TEST mAP50–95 was not supported: the mean
 are 0.6630 ± 0.0108 for pure KD and 0.7225 ± 0.0035 for supervised, across
 three seeds. Pure KD reduced checkpoint parameters by 68.71%, checkpoint size
 by 65.20%, and GFLOPs by 62.64% versus the teacher. Mean median latency was
-25.01 ms for KD versus 25.72 ms for the teacher on this host.
+25.01 ms for KD versus 25.72 ms for the teacher on the historical NVIDIA L40 benchmark.
 
 Use [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md)
 for the current Indonesian results/discussion draft and
@@ -71,6 +71,9 @@ robot workflows. The [20 October repository audit](docs/AUDIT_REPO_DAN_LANGKAH_L
 summarizes current evidence and the next lab/server steps.
 The [seven-checkpoint VAL diagnosis](analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md)
 records error categories, confidence sweeps, and the current KD improvement recommendation.
+[The 20 October model and server-table status](docs/STATUS_MODEL_DAN_TABEL_SERVER_2026-10-20.md)
+explains the checkpoint count, whether a new KD objective requires training,
+and the remaining T04 ablation work.
 
 ## Teacher, student, and data
 

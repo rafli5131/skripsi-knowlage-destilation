@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "created_at_utc": "2026-10-20T12:15:17.725218+00:00",
+  "duplicate_count_conf025": 0,
+  "gflops": 2.3610368,
+  "metrics": {
+    "fitness": 0.6624173399767442,
+    "metrics/mAP50(B)": 0.9650827009317796,
+    "metrics/mAP50-95(B)": 0.6624173399767442,
+    "metrics/precision(B)": 0.9060126336962145,
+    "metrics/recall(B)": 0.9503925570736271
+  },
+  "model": "kd_seed42",
+  "n_images": 1213,
+  "per_class_map50_95": {
+    "ball": 0.7273849369650278,
+    "gawang": 0.5373840550141404,
+    "robot": 0.722483027951064
+  },
+  "settings": {
+    "batch": 16,
+    "conf_floor": 0.001,
+    "device": "cpu",
+    "imgsz": 640,
+    "nms_iou": 0.3,
+    "rect": true,
+    "threads": 8
+  },
+  "speed_ms_per_image": {
+    "inference": 20.633193692660782,
+    "loss": 0.00012469587744707325,
+    "postprocess": 0.26129107071610397,
+    "preprocess": 1.70096512714989
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

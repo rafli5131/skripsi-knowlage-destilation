@@ -1,0 +1,54 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "created_at_utc": "2026-10-20T08:18:30.908955+00:00",
+  "duplicate_count_conf025": 155,
+  "fixed_frame_benchmark": {
+    "fixed_val_image": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/valid/images/3dsense_2020_10_14__21_58_51_color_png_jpg.rf.3c78770d1d46d6b07735e4a544da6963.jpg",
+    "fixed_val_image_sha256": "c5fc958dd90640e781f07a4d91d5fba4e8b5be49fa057a349ecffaee8a3adac3",
+    "fps_from_mean": 22.831785396595766,
+    "iterations": 100,
+    "latency_mean_ms": 43.798589669167995,
+    "latency_median_ms": 41.08857177197933,
+    "measured_after_accuracy_sweeps": true,
+    "timing_scope": "YOLO.predict preprocess + inference + NMS, excludes checkpoint loading and camera",
+    "warmup": 30
+  },
+  "gflops": 2.731991808,
+  "gflops_method": "Ultralytics get_flops before validator Conv-BN fusion, batch 1",
+  "metrics": {
+    "fitness": 0.7764290212795351,
+    "metrics/mAP50(B)": 0.9784470885380553,
+    "metrics/mAP50-95(B)": 0.7764290212795351,
+    "metrics/precision(B)": 0.9552876566130601,
+    "metrics/recall(B)": 0.9499189787983827
+  },
+  "model": "teacher_fp32",
+  "n_images": 1213,
+  "per_class_map50_95": {
+    "ball": 0.8802718416168924,
+    "gawang": 0.6130651783144206,
+    "robot": 0.8359500439072922
+  },
+  "settings": {
+    "batch": 16,
+    "conf_floor": 0.001,
+    "device": "cpu",
+    "imgsz": 416,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "speed_ms_per_image": {
+    "inference": 17.155910468209605,
+    "loss": 7.64544429802639e-05,
+    "postprocess": 0.44201389538632474,
+    "preprocess": 0.41539526505354313
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

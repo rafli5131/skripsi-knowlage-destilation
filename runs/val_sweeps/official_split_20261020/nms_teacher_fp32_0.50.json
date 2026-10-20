@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "created_at_utc": "2026-10-20T08:14:28.367879+00:00",
+  "duplicate_count_conf025": 13,
+  "gflops": 6.374144,
+  "metrics": {
+    "fitness": 0.7695067573623688,
+    "metrics/mAP50(B)": 0.9748408963243728,
+    "metrics/mAP50-95(B)": 0.7695067573623688,
+    "metrics/precision(B)": 0.9471718059102793,
+    "metrics/recall(B)": 0.9611764082121276
+  },
+  "model": "teacher_fp32",
+  "n_images": 1213,
+  "per_class_map50_95": {
+    "ball": 0.8957575343660171,
+    "gawang": 0.5804035433936561,
+    "robot": 0.8323591943274335
+  },
+  "settings": {
+    "batch": 16,
+    "conf_floor": 0.001,
+    "device": "cpu",
+    "imgsz": 640,
+    "nms_iou": 0.5,
+    "rect": true,
+    "threads": 8
+  },
+  "speed_ms_per_image": {
+    "inference": 51.089268420367624,
+    "loss": 9.159668850092876e-05,
+    "postprocess": 0.36258556360266764,
+    "preprocess": 1.3477203450783755
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

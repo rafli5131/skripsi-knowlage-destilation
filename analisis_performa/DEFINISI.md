@@ -11,7 +11,7 @@
 - **mAP/akurasi Advance Vision**: valid untuk evaluasi gambar pada dataset Advance Vision. Angka tidak mengukur akurasi kamera OP3.
 - **Sesi kamera**: jumlah deteksi dan runtime tidak sama dengan precision/recall karena tidak ada anotasi ground truth pada frame kamera.
 - **Tracking**: ID BoT-SORT menghubungkan deteksi lintas frame dan hanya berlaku selama satu proses node. ID tidak menunjukkan kebenaran kelas. Konsistensi ID pada objek relatif diam tercatat di sesi servo_idle 20261019T123737Z_023704; kestabilan ID pada objek bergerak belum diuji khusus.
-- **Ukuran objek**: kecil < 32^2 piksel; sedang 32^2 sampai 96^2; besar > 96^2 pada citra 640. Tabel per ukuran belum dihasilkan.
+- **Ukuran objek**: kecil < 32^2 piksel; sedang 32^2 sampai 96^2; besar > 96^2 pada citra referensi 640. T08 menghitung luas kotak VAL setelah menormalkan sisi tensor validator ke 640 piksel; kelompok tanpa GT ditandai tidak berlaku.
 
 - **Perbedaan scope waktu pada log baru**: `processing_ms` pada `op3_idle_trial` dihitung sejak worker mengambil frame hingga hasil siap dicatat, bukan callback-ke-publish. `processing_ms` pada uji kepala juga mencakup komunikasi servo pada frame berperintah. Jangan menggantinya dengan end-to-end legacy.
 

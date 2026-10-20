@@ -1,1 +1,64 @@
 model,method,split,class,size_category,ground_truth_objects_count,recall_iou50_conf025,AP50_95,source
+teacher_fp32,Teacher,val,ball,small,59,0.9661016949152542,0.7570766525568806,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,ball,medium,40,1.0,0.8814143130818035,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,ball,large,83,1.0,0.9408095423837259,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,gawang,medium,89,0.550561797752809,0.12480416077786563,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,gawang,large,959,0.8519290928050052,0.569785867519301,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,robot,small,28,0.8571428571428571,0.5107182656909964,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,robot,medium,136,0.9632352941176471,0.7800975327255861,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+teacher_fp32,Teacher,val,robot,large,131,0.9847328244274809,0.8775080942709735,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+kd_seed42,Pure KD,val,ball,small,59,0.8983050847457628,0.45764055321987857,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,ball,medium,40,0.975,0.6930648950775846,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,ball,large,83,1.0,0.8038666255805691,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,gawang,medium,89,0.5955056179775281,0.09334383185358568,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,gawang,large,959,0.8206465067778936,0.5339688133715292,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,robot,small,28,0.75,0.24702690436932273,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,robot,medium,136,0.9264705882352942,0.6513923176890201,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed42,Pure KD,val,robot,large,131,0.9923664122137404,0.7934288034697023,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed1337,Pure KD,val,ball,small,59,0.8983050847457628,0.43213808837089845,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,ball,medium,40,0.975,0.6497909459912123,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,ball,large,83,1.0,0.7989408940292541,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,gawang,medium,89,0.5056179775280899,0.08652082210182836,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,gawang,large,959,0.8091762252346194,0.5315261974660014,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,robot,small,28,0.75,0.24968617344124952,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,robot,medium,136,0.9191176470588235,0.6312105678907984,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed1337,Pure KD,val,robot,large,131,0.9847328244274809,0.7776697961865264,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed2025,Pure KD,val,ball,small,59,0.864406779661017,0.46808332325993274,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,ball,medium,40,0.975,0.7093811642436945,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,ball,large,83,1.0,0.7761180653872791,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,gawang,medium,89,0.5617977528089888,0.08803524061985547,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,gawang,large,959,0.7977059436913452,0.5266650635736645,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,robot,small,28,0.7857142857142857,0.2876893882233467,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,robot,medium,136,0.9191176470588235,0.6354678502860537,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+kd_seed2025,Pure KD,val,robot,large,131,0.9770992366412213,0.7785537932216895,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+supervised_seed42,Supervised student,val,ball,small,59,0.9322033898305084,0.6199193477639204,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,ball,medium,40,0.925,0.7332009704559221,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,ball,large,83,1.0,0.8657001969480367,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,gawang,medium,89,0.5617977528089888,0.08365434602379618,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,gawang,large,959,0.8383733055265902,0.5509575663847271,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,robot,small,28,0.8214285714285714,0.356740338167557,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,robot,medium,136,0.9705882352941176,0.680557759113258,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed42,Supervised student,val,robot,large,131,0.9770992366412213,0.8519662470720561,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed1337,Supervised student,val,ball,small,59,0.864406779661017,0.5509902504667232,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,ball,medium,40,0.925,0.7284713415263021,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,ball,large,83,0.9879518072289156,0.873599859322649,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,gawang,medium,89,0.5056179775280899,0.08317267895953329,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,gawang,large,959,0.8300312825860271,0.5484824940371049,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,robot,small,28,0.8214285714285714,0.3890975794625043,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,robot,medium,136,0.9632352941176471,0.6886819742771066,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed1337,Supervised student,val,robot,large,131,0.9847328244274809,0.8442902841765699,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed2025,Supervised student,val,ball,small,59,0.9661016949152542,0.6669439861981357,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,ball,medium,40,0.925,0.7371549006064496,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,ball,large,83,1.0,0.8837672846585999,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,gawang,small,0,,,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,gawang,medium,89,0.5280898876404494,0.09343676805272721,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,gawang,large,959,0.8415015641293013,0.5430989603687643,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,robot,small,28,0.7857142857142857,0.3874661759199629,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,robot,medium,136,0.9632352941176471,0.7008117862182842,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+supervised_seed2025,Supervised student,val,robot,large,131,0.9847328244274809,0.8280062051331673,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json

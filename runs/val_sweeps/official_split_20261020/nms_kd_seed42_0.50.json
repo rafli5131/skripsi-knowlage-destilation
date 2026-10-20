@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "created_at_utc": "2026-10-20T12:16:23.927610+00:00",
+  "duplicate_count_conf025": 13,
+  "gflops": 2.3610368,
+  "metrics": {
+    "fitness": 0.6688094014024775,
+    "metrics/mAP50(B)": 0.969854303853024,
+    "metrics/mAP50-95(B)": 0.6688094014024775,
+    "metrics/precision(B)": 0.8984397848058933,
+    "metrics/recall(B)": 0.946899791962223
+  },
+  "model": "kd_seed42",
+  "n_images": 1213,
+  "per_class_map50_95": {
+    "ball": 0.7270691434861833,
+    "gawang": 0.5550495659708197,
+    "robot": 0.7243094947504298
+  },
+  "settings": {
+    "batch": 16,
+    "conf_floor": 0.001,
+    "device": "cpu",
+    "imgsz": 640,
+    "nms_iou": 0.5,
+    "rect": true,
+    "threads": 8
+  },
+  "speed_ms_per_image": {
+    "inference": 19.369447453335994,
+    "loss": 9.4945764404039e-05,
+    "postprocess": 0.32886213669822123,
+    "preprocess": 1.4015074162102887
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

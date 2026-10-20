@@ -1,1 +1,4 @@
-mode,feature_weight,box_weight,class_weight,temperature,val_mAP50,val_mAP50_95,val_precision,val_recall,source_run
+model,seed,mode,feature_weight,box_weight,class_weight,temperature,best_epoch,val_mAP50,val_mAP50_95,val_precision,val_recall,source_run
+kd_seed42,42,pure_v4 baseline,1.0,1.0,1.0,2.0,90,0.961984227504373,0.6824567673866878,0.8740923810804017,0.9120649637819865,runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/manifest.json
+kd_seed1337,1337,pure_v4 baseline,1.0,1.0,1.0,2.0,96,0.9508693052250298,0.6756720715649681,0.8615280875199521,0.9118618752582398,runs/kd/yolo11_tiny_pure_kd_v4_seed1337/manifest.json
+kd_seed2025,2025,pure_v4 baseline,1.0,1.0,1.0,2.0,88,0.9627754254890774,0.6788762781405729,0.8915839584808585,0.9269413350698121,runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json

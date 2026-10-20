@@ -1,25 +1,21 @@
-# T05. akurasi test keseluruhan
+# T05 akurasi test keseluruhan
 
-Status: Sebagian; ringkasan antar-seed dan interval per model tersedia, interval rerata lintas-seed belum tersedia.
+Status: Lengkap untuk estimasi yang tersedia. Mean ± SD memakai tiga seed; IK 95% rerata antar-seed dihitung dengan bootstrap persentil 10.000 resampling seed (seed acak 20261020). Dengan hanya tiga seed, interval ini bersifat eksploratif dan tidak meresampling gambar TEST. Interval bootstrap per checkpoint yang meresampling gambar TEST tersedia terpisah di [lab_server/interval_bootstrap_per_model.md](../lab_server/interval_bootstrap_per_model.md). Teacher hanya satu checkpoint sehingga interval antar-seed tidak berlaku. P/R/F1 menggunakan confidence >0,25 dan IoU 0,50; AP memakai confidence floor 0,001 dan NMS 0,7.
 
 | method | metric | n_models [model] | mean | sample_SD | CI95 bootstrap of across-seed mean | CI95 bootstrap per model |
 | --- | --- | --- | --- | --- | --- | --- |
-| Pure KD | test_precision | 3 | 0,7547 | 0,0209 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Pure KD | test_recall | 3 | 0,9631 | 0,0017 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Pure KD | test_F1 | 3 | 0,8462 | 0,0136 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Pure KD | test_mAP50 | 3 | 0,9446 | 0,0040 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Pure KD | test_mAP50_95 | 3 | 0,6630 | 0,0108 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Supervised student | test_precision | 3 | 0,8609 | 0,0032 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Supervised student | test_recall | 3 | 0,9699 | 0,0035 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Supervised student | test_F1 | 3 | 0,9121 | 0,0026 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Supervised student | test_mAP50 | 3 | 0,9601 | 0,0034 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Supervised student | test_mAP50_95 | 3 | 0,7225 | 0,0035 | [BELUM DIUKUR] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Teacher | test_precision | 1 | 0,8915 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Teacher | test_recall | 1 | 0,9697 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Teacher | test_F1 | 1 | 0,9290 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Teacher | test_mAP50 | 1 | 0,9642 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
-| Teacher | test_mAP50_95 | 1 | 0,7800 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
-
-Sumber: [summary_mean_sd.csv](../../artifacts/thesis_analysis_final_corrected/summary_mean_sd.csv), [per_model.csv](../../artifacts/thesis_analysis_final_corrected/per_model.csv), dan [rincian interval per model](../lab_server/interval_bootstrap_per_model.md).
-
-P/R/F1 memakai confidence >0,25 dan IoU pencocokan 0,50; AP memakai confidence floor 0,001 dan NMS IoU 0,7. Bootstrap per model meresampling gambar TEST, sedangkan SD sampel menggambarkan variasi tiga seed.
+| Pure KD | test_precision | 3 | 0.7547268992166738 | 0.020876272596699164 | [0.740413, 0.778681] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Pure KD | test_recall | 3 | 0.9631102916753258 | 0.0017165164414264069 | [0.961341, 0.964769] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Pure KD | test_F1 | 3 | 0.846183988690031 | 0.013565961955217077 | [0.837247, 0.861794] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Pure KD | test_mAP50 | 3 | 0.9446353865323036 | 0.0039679979699376545 | [0.940296, 0.948078] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Pure KD | test_mAP50_95 | 3 | 0.6630360931896382 | 0.01075259289423329 | [0.653058, 0.674424] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Supervised student | test_precision | 3 | 0.860915354395485 | 0.003195348646136165 | [0.857270, 0.863230] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Supervised student | test_recall | 3 | 0.9698669364173486 | 0.0034611069390089403 | [0.967275, 0.973797] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Supervised student | test_F1 | 3 | 0.9121459693036702 | 0.0025653857710691893 | [0.909509, 0.914633] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Supervised student | test_mAP50 | 3 | 0.9600738610357157 | 0.003358658015529237 | [0.957826, 0.963935] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Supervised student | test_mAP50_95 | 3 | 0.7225163389090828 | 0.00345401890410457 | [0.720267, 0.726493] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Teacher | test_precision | 1 | 0.8915367177798955 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Teacher | test_recall | 1 | 0.9697050031172901 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Teacher | test_F1 | 1 | 0.9289794076582366 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Teacher | test_mAP50 | 1 | 0.9642437762749102 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |
+| Teacher | test_mAP50_95 | 1 | 0.7799795669680228 | [TIDAK BERLAKU: n=1] | [TIDAK BERLAKU: n=1] | tersedia; lihat interval_bootstrap_per_model.csv |

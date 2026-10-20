@@ -1,0 +1,54 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "created_at_utc": "2026-10-20T12:19:53.768515+00:00",
+  "duplicate_count_conf025": 269,
+  "fixed_frame_benchmark": {
+    "fixed_val_image": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/valid/images/3dsense_2020_10_14__21_58_51_color_png_jpg.rf.3c78770d1d46d6b07735e4a544da6963.jpg",
+    "fixed_val_image_sha256": "c5fc958dd90640e781f07a4d91d5fba4e8b5be49fa057a349ecffaee8a3adac3",
+    "fps_from_mean": 33.47819975383878,
+    "iterations": 100,
+    "latency_mean_ms": 29.870184399187565,
+    "latency_median_ms": 29.345366172492504,
+    "measured_after_accuracy_sweeps": true,
+    "timing_scope": "YOLO.predict preprocess + inference + NMS, excludes checkpoint loading and camera",
+    "warmup": 30
+  },
+  "gflops": 1.547567104,
+  "gflops_method": "Ultralytics get_flops before validator Conv-BN fusion, batch 1",
+  "metrics": {
+    "fitness": 0.667124960749845,
+    "metrics/mAP50(B)": 0.9501848106096938,
+    "metrics/mAP50-95(B)": 0.667124960749845,
+    "metrics/precision(B)": 0.8315590864000026,
+    "metrics/recall(B)": 0.9312839422620766
+  },
+  "model": "kd_seed42",
+  "n_images": 1213,
+  "per_class_map50_95": {
+    "ball": 0.7135230345623219,
+    "gawang": 0.5749367372976472,
+    "robot": 0.712915110389566
+  },
+  "settings": {
+    "batch": 16,
+    "conf_floor": 0.001,
+    "device": "cpu",
+    "imgsz": 512,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "speed_ms_per_image": {
+    "inference": 11.736162685576492,
+    "loss": 0.00010152721296925243,
+    "postprocess": 0.37695739267782447,
+    "preprocess": 0.8094362800930123
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}
