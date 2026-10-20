@@ -1,6 +1,6 @@
 # Prompt Uji Langsung Kamera dan Tracking ROBOTIS OP3
 
-> Prompt untuk langkah operasional berikutnya setelah perubahan node deteksi dan tracker siap dijalankan di komputer OP3. Uji ini memeriksa alur kamera, deteksi visual, ID tracking, dan pencatatan log. Uji ini bukan pengukuran akurasi berlabel.
+> Prompt untuk memeriksa alur kamera, deteksi visual, ID tracking, dan pencatatan log pada komputer OP3. Uji ini bukan pengukuran akurasi berlabel. Untuk pengambilan gambar mentah dan pra-label, gunakan [prompt pengumpulan frame OP3](PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md) dalam sesi terpisah.
 
 ---
 
@@ -103,6 +103,6 @@ Laporkan secara ringkas:
 3. Untuk masing-masing `ball`, `gawang`, dan `robot`: apakah muncul di gambar kamera, apakah kelas/kotaknya benar menurut pemeriksaan operator, apakah ID tracking muncul, dan apakah ID mengikuti objek pada urutan frame.
 4. Path log JSON/CSV, ringkasan metrik yang bisa dihitung, error, dan bukti yang belum tersedia.
 5. Kesimpulan terpisah untuk sesi `servo_idle` dan `walking`; sesi yang dilewati tetap `[BELUM DIUKUR]`.
-6. Langkah setelah uji operasional: lanjut ke Fase B pada `PROMPT_PERBAIKAN_KODE_DAN_ANALISIS_PERFORMA.md`, yaitu diagnosis objective KD pada split VAL dan usulan mode loss pure KD untuk dibahas pada TH-B. Jangan mulai training baru sebelum titik keputusan berikutnya disetujui.
+6. Langkah setelah uji operasional: kumpulkan frame kamera mentah dan tinjau pra-label sesuai `PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md`. Hasil lab/server dan pilot `pure_weighted` sudah terdokumentasi; jangan mulai training baru hanya berdasarkan observasi live tanpa protokol evaluasi berlabel.
 
 Mulai dari Tahap 1. Berhenti pada titik berhenti jika ada prasyarat yang gagal dan laporkan bukti terminalnya.

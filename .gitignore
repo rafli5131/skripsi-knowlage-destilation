@@ -4,3 +4,4 @@ __pycache__/
 .venv-op3-pytorch/
 /runs/*.log
 /runs/kd/*.log
+/data/op3_camera_eval/sessions/

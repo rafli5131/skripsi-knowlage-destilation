@@ -103,6 +103,8 @@ Seed 42 had the highest VAL mAP50–95 among the three final KD seeds. This
 checkpoint has run through a C920 ROS image topic on the OP3 host, but
 camera-specific accuracy and tracking stability have not been validated. The
 existing sessions are inference/runtime observations without labeled frames.
+For the next camera session, use the [OP3 frame and labeling prompt](prompt/PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md).
+The [OP3 camera dataset folder](data/op3_camera_eval/README.md) documents raw frames, automatic draft labels, and human-reviewed labels.
 
 ## Run
 
