@@ -12,9 +12,12 @@ decisions:
     value: pure_v4
     scope: pure teacher-only KD; objective hybrid tidak termasuk
     decided_at: 2026-10-19
+    approved_pilot: pure_weighted
+    approved_pilot_at: 2026-10-20
   D3:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_epochs: 100
+    pure_weighted_pilot_epochs: 100 # matches the existing pure_v4 seed-42 budget
     options: [100, 150, 200]
   D4:
     status: BELUM DIKUNCI # BELUM DIKUNCI

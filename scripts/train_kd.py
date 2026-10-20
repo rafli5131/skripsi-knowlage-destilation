@@ -23,9 +23,11 @@ from ultralytics.nn.distill_model import DistillationModel
 
 try:
     from .experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from .kd_losses import pure_weighted_head_losses
     from .training_runtime import verify_training_runtime
 except ImportError:
     from experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from kd_losses import pure_weighted_head_losses
     from training_runtime import verify_training_runtime
 
 
@@ -152,6 +154,11 @@ def install_teacher_only_kd_loss(distillation: dict[str, Any]) -> None:
     box_weight = float(distillation["box_weight"])
     class_weight = float(distillation["class_weight"])
     temperature = float(distillation["temperature"])
+    mode = str(distillation.get("mode", "pure_v4"))
+    if mode not in {"pure_v4", "pure_weighted"}:
+        raise KDRunError(f"Unsupported teacher-only KD mode: {mode!r}")
+    if temperature <= 0 or min(feature_weight, box_weight, class_weight) < 0:
+        raise KDRunError("KD temperature must be positive and loss weights nonnegative")
 
     def head_branches(head: Any) -> list[dict[str, torch.Tensor]]:
         if isinstance(head, dict) and "one2many" in head:
@@ -226,12 +233,19 @@ def install_teacher_only_kd_loss(distillation: dict[str, Any]) -> None:
                     f"boxes={tuple(teacher_boxes.shape)}/{tuple(student_boxes.shape)}, "
                     f"scores={tuple(teacher_logits.shape)}/{tuple(student_logits.shape)}"
                 )
-            box_losses.append(F.smooth_l1_loss(student_boxes, teacher_boxes))
-            soft_targets = torch.sigmoid(teacher_logits / temperature)
-            class_losses.append(
-                F.binary_cross_entropy_with_logits(student_logits / temperature, soft_targets)
-                * (temperature**2)
-            )
+            if mode == "pure_weighted":
+                weighted_box, weighted_class = pure_weighted_head_losses(
+                    teacher_boxes, student_boxes, teacher_logits, student_logits, temperature
+                )
+                box_losses.append(weighted_box)
+                class_losses.append(weighted_class)
+            else:
+                box_losses.append(F.smooth_l1_loss(student_boxes, teacher_boxes))
+                soft_targets = torch.sigmoid(teacher_logits / temperature)
+                class_losses.append(
+                    F.binary_cross_entropy_with_logits(student_logits / temperature, soft_targets)
+                    * (temperature**2)
+                )
 
         box_loss = torch.stack(box_losses).mean()
         class_loss = torch.stack(class_losses).mean()
@@ -323,12 +337,18 @@ def main() -> int:
         script_source = Path(__file__).resolve()
         training_script_snapshot = source_snapshot_dir / "train_kd.py"
         implementation_snapshot = source_snapshot_dir / "distill_model.py"
+        head_loss_source = Path(inspect.getsourcefile(pure_weighted_head_losses) or "").resolve()
+        head_loss_snapshot = source_snapshot_dir / "kd_losses.py"
+        if not head_loss_source.is_file():
+            raise KDRunError(f"KD head-loss source is missing: {head_loss_source}")
         if source_snapshot_dir.exists():
             if (
                 not training_script_snapshot.is_file()
                 or not implementation_snapshot.is_file()
+                or not head_loss_snapshot.is_file()
                 or sha256_file(training_script_snapshot) != sha256_file(script_source)
                 or sha256_file(implementation_snapshot) != sha256_file(implementation_source)
+                or sha256_file(head_loss_snapshot) != sha256_file(head_loss_source)
             ):
                 raise KDRunError(
                     f"Existing training source snapshot differs from this attempt; use a new run name: {source_snapshot_dir}"
@@ -337,10 +357,13 @@ def main() -> int:
             source_snapshot_dir.mkdir(parents=True, exist_ok=False)
             training_script_snapshot.write_bytes(script_source.read_bytes())
             implementation_snapshot.write_bytes(implementation_source.read_bytes())
+            head_loss_snapshot.write_bytes(head_loss_source.read_bytes())
         if sha256_file(training_script_snapshot) != sha256_file(script_source):
             raise KDRunError("Training script source snapshot does not match the running script.")
         if sha256_file(implementation_snapshot) != sha256_file(implementation_source):
             raise KDRunError("DistillationModel source snapshot does not match the imported implementation file.")
+        if sha256_file(head_loss_snapshot) != sha256_file(head_loss_source):
+            raise KDRunError("KD head-loss source snapshot does not match the running module.")
         teacher_parameters = model_parameter_count(teacher)
         student_parameters = model_parameter_count(student)
         if student_parameters >= teacher_parameters:
@@ -351,7 +374,7 @@ def main() -> int:
         manifest = {
             "started_at_utc": datetime.now(timezone.utc).isoformat(),
             "status": "started",
-            "objective": "pure FP32 teacher-only distillation; no supervised training loss and no QAT",
+            "objective": f"{distillation.get('mode', 'pure_v4')} pure FP32 teacher-only distillation; no supervised training loss and no QAT",
             "run_config_path": str(args.config.expanduser().resolve()),
             "run_config_sha256": sha256_file(args.config.expanduser().resolve()),
             "training_script_path": str(training_script_snapshot),
@@ -363,6 +386,12 @@ def main() -> int:
                 "path": str(implementation_snapshot),
                 "source_path": str(implementation_source),
                 "sha256": sha256_file(implementation_snapshot),
+                "snapshot_recorded_at_run_time": True,
+            },
+            "head_loss_implementation": {
+                "path": str(head_loss_snapshot),
+                "source_path": str(head_loss_source),
+                "sha256": sha256_file(head_loss_snapshot),
                 "snapshot_recorded_at_run_time": True,
             },
             "teacher_checkpoint": str(teacher),
@@ -394,6 +423,11 @@ def main() -> int:
             "qat_used": False,
             "distillation": {
                 "type": "feature, box-output, and class-output distillation; no ground-truth loss",
+                "mode": str(distillation.get("mode", "pure_v4")),
+                "head_location_weight": (
+                    "max_c sigmoid(teacher_class_logit_c); normalize by sum of location weights"
+                    if distillation.get("mode", "pure_v4") == "pure_weighted" else "uniform mean"
+                ),
                 "layers": "YOLO Detect neck inputs (P3/P4/P5) and raw Detect outputs",
                 "feature_weight": float(distillation["feature_weight"]),
                 "box_weight": float(distillation["box_weight"]),
