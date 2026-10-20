@@ -57,6 +57,6 @@ Kolom untuk tabel yang belum diukur sudah disiapkan; CSV-nya berisi header tanpa
 
 ## Jejak perubahan tabel
 
-[`manifest.json`](manifest.json) mencatat SHA-256 sumber dan keluaran T01–T14 yang dikurasi pada 20 Oktober 2026. [`analisis_performa/manifest.json`](../manifest.json) tetap disimpan sebagai snapshot generator tanggal 19 Oktober 2026. Menjalankan ulang [`scripts/build_performance_tables.py`](../../scripts/build_performance_tables.py) akan menulis ulang tabel dan dapat mengganti kurasi ini; periksa perbedaan terhadap manifest kurasi sebelum menerima hasil regenerasi.
+[`manifest.json`](manifest.json) mencatat SHA-256 sumber dan keluaran T01–T14 yang dikurasi pada 20 Oktober 2026. [`analisis_performa/manifest.json`](../manifest.json) berawal dari snapshot generator tanggal 19 Oktober 2026 dan telah diperbarui untuk sumber serta keluaran tabel OP3 T15–T27. Untuk hash tabel lab/server T01–T14, gunakan manifest kurasi di folder ini. Menjalankan ulang [`scripts/build_performance_tables.py`](../../scripts/build_performance_tables.py) akan menulis ulang tabel dan dapat mengganti kurasi ini; periksa perbedaan terhadap manifest kurasi sebelum menerima hasil regenerasi.
 
-Tabel robot T15–T27 berada di [indeks umum](../INDEKS.md) dan memiliki [prompt tersendiri](../../prompt/PROMPT_TABEL_ROBOT_OP3_KD.md). Log OP3 yang baru masuk repository belum diintegrasikan ke kelompok tabel robot dalam pekerjaan ini.
+Tabel robot T15–T27 berada di [indeks umum](../INDEKS.md) dan memiliki [prompt tersendiri](../../prompt/PROMPT_TABEL_ROBOT_OP3_KD.md). Log OP3 tersimpan telah diintegrasikan ke T15, T18, T20, T22, T23, T25, dan T26 pada pembaruan terpisah.

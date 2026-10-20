@@ -72,8 +72,8 @@
     "analisis_performa/lab_server/interval_bootstrap_per_model.md": "4cedeac6f1889323d3860b582c3de66337d0f75c48486b74e28df2aad998229c"
   },
   "notes": [
-    "analisis_performa/manifest.json is the 2026-10-19 generated baseline and is preserved unchanged.",
-    "This curated manifest supersedes baseline table hashes for T01-T14 only.",
+    "analisis_performa/manifest.json originated from the 2026-10-19 generator snapshot and was later updated for OP3 sources and table hashes.",
+    "This curated manifest supersedes the generator manifest table hashes for T01-T14; the generator manifest records updated OP3 sources and outputs for T15-T27.",
     "The historical build_performance_tables.py may overwrite these curated files if rerun."
   ]
 }

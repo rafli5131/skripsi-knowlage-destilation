@@ -2,12 +2,14 @@
 
 Pembaruan: 20 Oktober 2026. Metode penelitian adalah **Knowledge Distillation (KD)** murni dengan objective teacher-only. Model student supervised menjadi kontrol. Prompt adalah instruksi kerja; angka dan klaim penelitian harus tetap ditelusuri ke artefak dan tabel hasil.
 
+Inventaris terdahulu mengacu pada proyek YOLO11 QAT/OpenVINO yang berbeda; rujukan aktif adalah tabel T01–T27 di repository ini.
+
 ## Temukan hasil tabel
 
 | Kelompok | Isi | Indeks hasil | Status saat ini |
 | --- | --- | --- | --- |
 | Lab/server T01–T14 | Spesifikasi model, training, VAL, TEST terkunci, dan benchmark server | [Indeks lab/server](../analisis_performa/lab_server/README.md) | T01–T03, T06–T07 lengkap; T05 dan T13 sebagian; T04, T08–T12, T14 belum diukur |
-| ROBOTIS OP3 T15–T27 | Runtime kamera, latensi, FPS, CPU/RAM, tracking, dan akurasi frame bila berlabel | [Indeks umum](../analisis_performa/INDEKS.md) | Tabel robot belum ditinjau ulang terhadap log OP3 terbaru dalam pekerjaan lab/server ini |
+| ROBOTIS OP3 T15–T27 | Runtime kamera, latensi, FPS, CPU/RAM, tracking, dan akurasi frame bila berlabel | [Indeks umum](../analisis_performa/INDEKS.md) | T15, T18, T20, T22, T23, T25, T26 sebagian dari log tersimpan; T16, T17, T19, T21, T24, T27 belum diukur |
 
 Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisis_performa/tabel/`](../analisis_performa/tabel/). Rincian interval bootstrap tiap checkpoint melengkapi T05 di [folder lab/server](../analisis_performa/lab_server/interval_bootstrap_per_model.md).
 

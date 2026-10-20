@@ -53,7 +53,24 @@
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
-    "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+    "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+    "analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md": "25484c4835a109ac34966e74fe4330c135347a428ea0c7adb74abbcbef31bb44",
+    "artifacts/thesis_analysis_final_corrected/per_model.csv": "a3a5013b0ab550885e4e55cd2cdd054d336bddd44c682a2a350033e212778154",
+    "dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md": "a0d8dad83564f0dfc49d8258919d34c037f4304ea815b714be901167356b1cf9",
+    "memory/2026-10-19.md": "4e5509e11a9111c6328eed3579b996c688e34666cb83be3cf4eb9f1a4c9ac2ff",
+    "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json": "3ee7493433ed23ac848c7e0a52628acfd7bdaf86d2f586d1e96cd1cb31e1342d",
+    "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/tracking.csv": "3670fb63119d978752ce75895c51bc0c8445017a8d544441bfe031f8df6c7611",
+    "runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json": "c13cc344e7b476c529e05b16539b8a2c831f411e3b3d4592e691910a3cbf0725",
+    "runs/op3_head_ball_tracking/20261019T130400Z_74c464/tracking.csv": "4039308c81a5733a411878c224fee3beeeb7d7956b24b7ae63fe5ab496881a59",
+    "runs/op3_idle_trial/20261019T123737Z_023704/detections.csv": "a09b39c274ffc0e6d06b1d7c6001449d218b02d30a53636919ded7b68a3bcd51",
+    "runs/op3_idle_trial/20261019T123737Z_023704/frames.csv": "da49ee7c5181e4ed71c1a8811b847d4b519efbfe327a20d84bf1942bf7548943",
+    "runs/op3_idle_trial/20261019T123737Z_023704/summary.json": "886b31045665d24b609cdd052b90ffe5f2cb5247bee13474760a1ffa0ae1bbe1",
+    "runs/op3_pytorch/20261019T080757Z.csv": "30ea7e85c0ae4a1143e246434cf8308942af97413fb8e334c3288bfb6acdaf41",
+    "runs/op3_pytorch/20261019T080757Z.json": "f2c124dca8aceb35b4e4025565dd449ef9c1252a6774ae706ce591a1cda16b99",
+    "runs/op3_pytorch/20261019T083428Z.csv": "3e87a5c696f40e88e6f4bc40a75ba502a867ff46f1a0fb6868202f14e6134af4",
+    "runs/op3_pytorch/20261019T083428Z.json": "d40e1891a41d664c4edff4b9d82eb9a0247963629bd53bfc7cf0ca84d0dce485",
+    "runs/op3_pytorch/20261019T084434Z.csv": "8c1c1a8f1f07f16ceb81e3e03bc82b50a40da830bb5ca5fa1a31d8da63fdd254",
+    "runs/op3_pytorch/20261019T084434Z.json": "fabf6093bfd70f84d968a7b0334b4ec03b2a414a9d82d1d6c0f1d136256333cb"
   },
   "tables": {
     "1": {
@@ -125,50 +142,84 @@
       "analisis_performa/tabel/T19_servo_idle_vs_walking.md": "461a25f5ee3ca9e79fcb729d96fe641436c2e38b9b88919fc49f740cb3d63d57"
     },
     "20": {
-      "analisis_performa/tabel/T20_sumber_daya_startup.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T20_sumber_daya_startup.md": "c90a5557f75a203badc1fdb530fe172fc3997ff27a239b739ba007bc90ce9d43"
+      "analisis_performa/tabel/T20_sumber_daya_startup.csv": "f19ce6fd92a9506875384a285dc4de35820a9ea6cc34dfd4f2d26f89fa5c6100",
+      "analisis_performa/tabel/T20_sumber_daya_startup.md": "a78f307482915824050109acab6abd8958e3f4f2dc5b2947c1e4fae2569bcb4c"
     },
     "21": {
       "analisis_performa/tabel/T21_stabilitas_termal.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
       "analisis_performa/tabel/T21_stabilitas_termal.md": "99ddad6021a2d6265fda302ef509a52772637239c0e6854c8803e1f9b94979ec"
     },
     "23": {
-      "analisis_performa/tabel/T23_kepatuhan_tenggat.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T23_kepatuhan_tenggat.md": "96c8bcc91f8e1115cbf87162e55d3dbbd21298092c5dab464d6de2c421f69091"
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.csv": "9dc91ed6552858f918aa98fa09807c9bceba69848e58d16f8a297abb4810995e",
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.md": "7c48b68a05150a43468366615bc005f3b0816f2ce4e6ab1bceb78b0d0ba5f0b4"
     },
     "24": {
       "analisis_performa/tabel/T24_pengaruh_preview.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
       "analisis_performa/tabel/T24_pengaruh_preview.md": "4c9c1693bbc68bf3b260588549ebd5d11037f5270126d5c41cfa1795dfd58544"
     },
     "26": {
-      "analisis_performa/tabel/T26_tradeoff_utama.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T26_tradeoff_utama.md": "fe6479f25d472e7946f211e0451c97433ecd70778c33cefe2db268ab5112a056"
+      "analisis_performa/tabel/T26_tradeoff_utama.csv": "f178898be1c9561790730c33cc53d479bf9be5b4eb05a584dd1d4e751892ebfd",
+      "analisis_performa/tabel/T26_tradeoff_utama.md": "a25e4ad6033c09f19e15ae15575cfdd309a60d43405473d5625635bbf6b7d136"
     },
     "27": {
       "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
       "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "4e114559ca6927ec868de4832ef122f31ac1468c45c7839adf7c72c009614e44"
     },
     "15": {
-      "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "546ab8625cba7ae03caa5de67c7146506da314ae1727fc665c79549eb5089633",
-      "analisis_performa/tabel/T15_lingkungan_uji_op3.md": "886bd1e30a9162f9d80cf5f19449a0c4c2921d6e685422b1897562bc3eea089d"
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "87377ebd87122c6de10337a876b138e3839ffff293d6a0cbb51455a6b6232731",
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.md": "7f1e17ef15db30973c9594e01392f1b1677c8953b0d76962dac4257d1982f7c4"
     },
     "18": {
-      "analisis_performa/tabel/T18_sesi_live_historis.csv": "52c08f8e54afcfe1113fe469f69f3d8551aac02a27f40f0ea977973d5ceaa074",
-      "analisis_performa/tabel/T18_sesi_live_historis.md": "31db2652bdae0012f14e148a62eb14de049412b0e040bb9e9316bb36d64e0962"
+      "analisis_performa/tabel/T18_sesi_live_historis.csv": "b82986f8af022fabaa2751df1c7876d60af9230b574caddd32fb521ad23ab3ea",
+      "analisis_performa/tabel/T18_sesi_live_historis.md": "5a9c922b3a20671ac6845259354f9b1110d85d2c29360e35f66d730fe670a638"
     },
     "22": {
-      "analisis_performa/tabel/T22_aliran_kamera.csv": "0b6cd8245df6100ac5a41aa7a13d9fd03963859ebbb8677cf364845ad8139478",
-      "analisis_performa/tabel/T22_aliran_kamera.md": "c7231857a51cbe77a52614217ec961eb2aa8927db157bd24bbd1f75a7a24d75e"
+      "analisis_performa/tabel/T22_aliran_kamera.csv": "8eeec02338fef48f682983f7d94351e7711428f2caec8da3a6427d0209d15482",
+      "analisis_performa/tabel/T22_aliran_kamera.md": "d6e15ba68ff8fefc369b51f1141f5b49f954cc9848e427ea5f4bc65c919f30e3"
     },
     "25": {
-      "analisis_performa/tabel/T25_observasi_deteksi_live.csv": "be4ca6d7cebfbb8d70ada5ce312a8162dcb3db3c52d6ae166c6faa68ff82cff8",
-      "analisis_performa/tabel/T25_observasi_deteksi_live.md": "7997b6c418a2fe924078fb6c0a85621a970a8ec71f080bb72bf27f4b0862fd57"
+      "analisis_performa/tabel/T25_observasi_deteksi_live.csv": "0a9a7d3a22fdc85febfbbafe0a4dd33b4388b9f1e2af003a0d70b03fee27a5bd",
+      "analisis_performa/tabel/T25_observasi_deteksi_live.md": "a9717f233e322195e737f9ba5641663910ce3f30e3d1efbc652396da46cd6d00"
     },
-    "analisis_performa/INDEKS.md": "ec76b1d5b5456ec34d3601288f56e8c993359d5e541a4b9c5377389e4a31c807",
-    "analisis_performa/DEFINISI.md": "6e324af96ab697fe0407fbb27952c835e526e64dc1e1091eacb2d83e79f08b08"
+    "analisis_performa/INDEKS.md": "e12326365a7a3a47411ca2fb0e45de00def133dffc2c86c1da581f1db46e3c16",
+    "analisis_performa/DEFINISI.md": "bb6c77a8255b1588f18310c916b0268c1db19f803a97b8a7d45990588e066793"
   },
   "notes": [
     "Historical webcam runs predate tracking IDs.",
-    "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy."
-  ]
+    "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy.",
+    "OP3 table updates computed offline from saved logs; baseline generator field describes original T01-T27 creation only."
+  ],
+  "op3_offline_update": {
+    "updated_at_utc": "2026-10-20T07:18:03.387383+00:00",
+    "scope": "T15-T27 from stored OP3 logs; T01-T14 untouched",
+    "method": "one-off read-only CSV/JSON analysis; no robot access",
+    "updated_tables": [
+      15,
+      18,
+      20,
+      22,
+      23,
+      25,
+      26
+    ],
+    "source_paths": [
+      "analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md",
+      "artifacts/thesis_analysis_final_corrected/per_model.csv",
+      "dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md",
+      "memory/2026-10-19.md",
+      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json",
+      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/tracking.csv",
+      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json",
+      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/tracking.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/detections.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/frames.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/summary.json",
+      "runs/op3_pytorch/20261019T080757Z.csv",
+      "runs/op3_pytorch/20261019T080757Z.json",
+      "runs/op3_pytorch/20261019T083428Z.csv",
+      "runs/op3_pytorch/20261019T083428Z.json",
+      "runs/op3_pytorch/20261019T084434Z.csv",
+      "runs/op3_pytorch/20261019T084434Z.json"
+    ]
+  }
 }

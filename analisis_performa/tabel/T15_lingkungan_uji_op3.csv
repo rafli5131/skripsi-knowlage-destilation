@@ -1,10 +1,23 @@
 field,value,status,source
-CPU,12th Gen Intel Core i5-1240P,catatan terminal OP3,informasi terminal operator
-architecture,x86_64,catatan terminal OP3,informasi terminal operator
-OS,Ubuntu 24.04.5 LTS,catatan terminal OP3,informasi terminal operator
-Python,3.12.3,catatan terminal OP3,informasi terminal operator
-ROS 2,Jazzy,catatan terminal OP3,informasi terminal operator
-PyTorch / Ultralytics / OpenCV,2.4.1+cpu / 8.4.130 / 4.11.0,terekam di sesi kamera lama,runs/op3_pytorch/*.json
-camera/topic,Logitech C920 / /thesis/image_raw,konfigurasi sesi lama,runs/op3_pytorch/*.json dan dokumentasi/README.md
-capture,640x480 YUYV; 30 FPS diminta,terekam di dokumentasi sesi,dokumentasi sesi lama
-"RAM, kernel, governor, mode daya, QoS",[BELUM DIUKUR],tidak tercatat lengkap,[BELUM DIUKUR]
+cpu_model,12th Gen Intel Core i5-1240P,catatan operator,memory/2026-10-19.md
+physical_cores,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+logical_cpu_threads,[BELUM DIUKUR],tidak direkam; CPU tidak dinormalisasi,[BELUM DIUKUR]
+system_ram_capacity,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+architecture,x86_64,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+os,Ubuntu 24.04.5 LTS,catatan operator,memory/2026-10-19.md
+kernel,7.0.0-34-generic,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+python,3.12.3,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+pytorch,2.4.1+cpu,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+ultralytics,8.4.130,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+opencv,4.11.0,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+ros_2,Jazzy,catatan operator,memory/2026-10-19.md
+governor,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+power_mode,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+camera,Logitech C920,catatan sesi,dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md
+resolution_px,640x480,tercatat,runs/op3_pytorch/20261019T080757Z.csv
+capture_pixel_format,YUYV; ROS encoding rgb8,catatan sesi,analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md
+requested_camera_fps,30,catatan konfigurasi; bukan laju terukur,dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md
+camera_topic,/thesis/image_raw,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+camera_qos_legacy,best_effort; KEEP_LAST depth 1,tercatat,runs/op3_pytorch/20261019T080757Z.json
+camera_qos_idle_trial,reliable_depth_5_latest_frame_only,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
+inference_device_precision,CPU FP32,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
