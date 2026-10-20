@@ -12,12 +12,12 @@ Pembaruan: 2026-10-20. [Indeks lab/server](lab_server/README.md) memuat sumber d
 | T06 | Lengkap dari hasil TEST terkunci yang sudah ada. | [CSV](tabel/T06_akurasi_per_kelas.csv) · [Markdown](tabel/T06_akurasi_per_kelas.md) |
 | T07 | Lengkap untuk lima metrik keseluruhan pada tiga pasangan seed dan retensi mAP50–95 terhadap teacher. | [CSV](tabel/T07_selisih_berpasangan.csv) · [Markdown](tabel/T07_selisih_berpasangan.md) |
 | T08 | Belum diukur. | [CSV](tabel/T08_akurasi_ukuran_objek.csv) · [Markdown](tabel/T08_akurasi_ukuran_objek.md) |
-| T09 | Belum diukur. | [CSV](tabel/T09_analisis_kesalahan.csv) · [Markdown](tabel/T09_analisis_kesalahan.md) |
-| T10 | Belum diukur. | [CSV](tabel/T10_matriks_kebingungan.csv) · [Markdown](tabel/T10_matriks_kebingungan.md) |
-| T11 | Belum diukur. | [CSV](tabel/T11_sapuan_confidence.csv) · [Markdown](tabel/T11_sapuan_confidence.md) |
+| T09 | Lengkap dari diagnosis tujuh checkpoint pada VAL; kategori FP saling eksklusif. | [CSV](tabel/T09_analisis_kesalahan.csv) · [Markdown](tabel/T09_analisis_kesalahan.md) |
+| T10 | Lengkap dari prediksi VAL dan pencocokan satu-ke-satu. | [CSV](tabel/T10_matriks_kebingungan.csv) · [Markdown](tabel/T10_matriks_kebingungan.md) |
+| T11 | Lengkap dari sapuan confidence pada VAL; hasil TEST historis tidak dipilih ulang. | [CSV](tabel/T11_sapuan_confidence.csv) · [Markdown](tabel/T11_sapuan_confidence.md) |
 | T12 | Belum diukur. | [CSV](tabel/T12_sapuan_iou_nms.csv) · [Markdown](tabel/T12_sapuan_iou_nms.md) |
 | T13 | Sebagian; data dasar ukuran 640 tersedia, sapuan ukuran input belum diukur. | [CSV](tabel/T13_sapuan_imgsz.csv) · [Markdown](tabel/T13_sapuan_imgsz.md) |
-| T14 | Belum diukur. | [CSV](tabel/T14_kalibrasi_confidence.csv) · [Markdown](tabel/T14_kalibrasi_confidence.md) |
+| T14 | Lengkap dari prediksi VAL yang lolos confidence 0,25 dan bin ECE. | [CSV](tabel/T14_kalibrasi_confidence.csv) · [Markdown](tabel/T14_kalibrasi_confidence.md) |
 | T15 | Sebagian; inti/logical CPU, kapasitas RAM, governor, dan mode daya belum direkam. | [CSV](tabel/T15_lingkungan_uji_op3.csv) · [Markdown](tabel/T15_lingkungan_uji_op3.md) |
 | T16 | Belum diukur pada CPU OP3 dengan frame tetap. | [CSV](tabel/T16_latensi_frame_tetap.csv) · [Markdown](tabel/T16_latensi_frame_tetap.md) |
 | T17 | Belum diukur. | [CSV](tabel/T17_sapuan_thread.csv) · [Markdown](tabel/T17_sapuan_thread.md) |

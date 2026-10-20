@@ -90,7 +90,7 @@ QoS kamera menggunakan best-effort, `KEEP_LAST` dengan kedalaman 1, dan callback
 
 Jalankan pengukuran `servo_idle` dan `walking` sebagai dua sesi terpisah dengan checkpoint, input, ukuran, dan threshold identik. Hasil ini belum mengukur akurasi kamera: evaluasi akurasi memerlukan frame berlabel serta pembandingan ground truth. Jangan menulis angka performa OP3 sebelum sesi fisik benar benar dijalankan dan lognya diperiksa.
 
-Pada uji offline, satu citra VAL untuk masing-masing kelas terdeteksi pada confidence 0,25 dan ID BoT-SORT tetap pada frame berulang setelah konfirmasi track. Ini hanya memverifikasi alur model dan tracker dengan citra statis. Kamera fisik OP3, kondisi `servo_idle`, dan kondisi `walking` belum diuji ulang sejak perubahan kode.
+Pada uji offline, satu citra VAL untuk masing-masing kelas terdeteksi pada confidence 0,25 dan ID BoT-SORT tetap pada frame berulang setelah konfirmasi track. Ini hanya memverifikasi alur model dan tracker dengan citra statis. Sesudah uji offline itu, paket terpisah `ros2_packages/op3_idle_trial/` menjalankan satu sesi kamera `servo_idle` dengan subscriber `reliable`: ketiga kelas tercatat dan ID tetap pada objek yang relatif diam. Angka serta batas pengamatannya ada di `dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md`. Sesi tersebut tidak memakai node lama di dokumen ini, yang masih berlangganan kamera dengan QoS `best_effort`; hasil kedua jalur tidak boleh disamakan. Kondisi `walking` belum diukur.
 
 Lihat overlay pada `/vision/debug_image` dan data bertanda ID pada `/vision/detections`. Tracking memakai frame berurutan dari satu stream. ID tidak permanen antar-run dan dapat berganti setelah oklusi; kualitas deteksi dan kestabilan ID tetap harus diperiksa pada kamera OP3 dalam kondisi idle dan walking.
 
@@ -101,4 +101,4 @@ ros2 topic hz /vision/detections
 ros2 topic echo /vision/detections --field detections
 ```
 
-Pastikan setiap `class_id` yang terlihat sesuai objek pada gambar, dan `id` berbentuk `ball:...`, `gawang:...`, atau `robot:...` saat objek terlacak. Overlay menampilkan kotak dan kelas; CSV `<run_id>_detections.csv` merekam ID serta bbox. Tiga kelas harus diuji satu per satu bila tidak tampak bersamaan pada kamera. Sesi yang sudah ada berasal dari sebelum perubahan tracking dan tidak dapat membuktikan ID lintas frame.
+Pastikan setiap `class_id` yang terlihat sesuai objek pada gambar, dan `id` berbentuk `ball:...`, `gawang:...`, atau `robot:...` saat objek terlacak. Overlay menampilkan kotak dan kelas; CSV `<run_id>_detections.csv` merekam ID serta bbox. Tiga kelas harus diuji satu per satu bila tidak tampak bersamaan pada kamera. Tiga log kamera awal berasal dari sebelum perubahan tracking dan tidak dapat membuktikan ID lintas frame. Sesi `op3_idle_trial` yang lebih baru membuktikan hanya konsistensi ID pada objek relatif diam dalam satu run; kualitas tracking objek bergerak masih perlu diuji.

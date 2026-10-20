@@ -1,0 +1,184 @@
+{
+  "models": {
+    "kd_seed1337": {
+      "ECE_10bin_at_conf_0_25": 0.10170634401867451,
+      "best_F1_on_VAL_grid": 0.8860263493306331,
+      "best_F1_threshold_on_VAL_grid": 0.45,
+      "error_counts": {
+        "correct_count": 1446,
+        "fn_large_count": 44,
+        "fn_medium_count": 27,
+        "fn_small_count": 8,
+        "fp_background_count": 122,
+        "fp_duplicate_count": 231,
+        "fp_localization_count": 89,
+        "prediction_count": 1888
+      },
+      "false_positives_at_conf_0_25": 442,
+      "false_positives_per_image_at_conf_0_25": 0.36438582028029676,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.8576197876186684,
+        "detections_per_image": 1.5564715581203628,
+        "precision": 0.7771750582106559,
+        "recall": 0.9566408706659709
+      }
+    },
+    "kd_seed2025": {
+      "ECE_10bin_at_conf_0_25": 0.11028118328356645,
+      "best_F1_on_VAL_grid": 0.909789236445852,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1456,
+        "fn_large_count": 41,
+        "fn_medium_count": 21,
+        "fn_small_count": 7,
+        "fp_background_count": 132,
+        "fp_duplicate_count": 197,
+        "fp_localization_count": 63,
+        "prediction_count": 1848
+      },
+      "false_positives_at_conf_0_25": 392,
+      "false_positives_per_image_at_conf_0_25": 0.3231657048639736,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.8831866996293013,
+        "detections_per_image": 1.523495465787304,
+        "precision": 0.8160449096439435,
+        "recall": 0.9623674832951582
+      }
+    },
+    "kd_seed42": {
+      "ECE_10bin_at_conf_0_25": 0.10323853084334618,
+      "best_F1_on_VAL_grid": 0.8962222222814155,
+      "best_F1_threshold_on_VAL_grid": 0.5,
+      "error_counts": {
+        "correct_count": 1456,
+        "fn_large_count": 39,
+        "fn_medium_count": 23,
+        "fn_small_count": 7,
+        "fp_background_count": 126,
+        "fp_duplicate_count": 240,
+        "fp_localization_count": 68,
+        "prediction_count": 1890
+      },
+      "false_positives_at_conf_0_25": 434,
+      "false_positives_per_image_at_conf_0_25": 0.3577906018136851,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.8675877593033592,
+        "detections_per_image": 1.5581203627370157,
+        "precision": 0.7898775197025536,
+        "recall": 0.9622571642787712
+      }
+    },
+    "supervised_seed1337": {
+      "ECE_10bin_at_conf_0_25": 0.17882128682211587,
+      "best_F1_on_VAL_grid": 0.9262239242129098,
+      "best_F1_threshold_on_VAL_grid": 0.45,
+      "error_counts": {
+        "correct_count": 1461,
+        "fn_large_count": 41,
+        "fn_medium_count": 18,
+        "fn_small_count": 5,
+        "fp_background_count": 106,
+        "fp_duplicate_count": 131,
+        "fp_localization_count": 81,
+        "prediction_count": 1779
+      },
+      "false_positives_at_conf_0_25": 318,
+      "false_positives_per_image_at_conf_0_25": 0.26215993404781535,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9185554658885418,
+        "detections_per_image": 1.4666117065127782,
+        "precision": 0.8764752919049349,
+        "recall": 0.9648800104454135
+      }
+    },
+    "supervised_seed2025": {
+      "ECE_10bin_at_conf_0_25": 0.17456479459231686,
+      "best_F1_on_VAL_grid": 0.940691037175591,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1462,
+        "fn_large_count": 37,
+        "fn_medium_count": 23,
+        "fn_small_count": 3,
+        "fp_background_count": 106,
+        "fp_duplicate_count": 133,
+        "fp_localization_count": 81,
+        "prediction_count": 1782
+      },
+      "false_positives_at_conf_0_25": 320,
+      "false_positives_per_image_at_conf_0_25": 0.26380873866446825,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9218244718432806,
+        "detections_per_image": 1.4690849134377577,
+        "precision": 0.8777572882553079,
+        "recall": 0.9705502609694614
+      }
+    },
+    "supervised_seed42": {
+      "ECE_10bin_at_conf_0_25": 0.17719493744203987,
+      "best_F1_on_VAL_grid": 0.9400042888620748,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1464,
+        "fn_large_count": 33,
+        "fn_medium_count": 23,
+        "fn_small_count": 5,
+        "fp_background_count": 107,
+        "fp_duplicate_count": 134,
+        "fp_localization_count": 69,
+        "prediction_count": 1774
+      },
+      "false_positives_at_conf_0_25": 310,
+      "false_positives_per_image_at_conf_0_25": 0.25556471558120364,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9234655863184226,
+        "detections_per_image": 1.462489694971146,
+        "precision": 0.8828995396213503,
+        "recall": 0.9679388839047268
+      }
+    },
+    "teacher_fp32": {
+      "ECE_10bin_at_conf_0_25": 0.14919430152784546,
+      "best_F1_on_VAL_grid": 0.9476361317507421,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1467,
+        "fn_large_count": 34,
+        "fn_medium_count": 21,
+        "fn_small_count": 3,
+        "fp_background_count": 75,
+        "fp_duplicate_count": 163,
+        "fp_localization_count": 79,
+        "prediction_count": 1784
+      },
+      "false_positives_at_conf_0_25": 317,
+      "false_positives_per_image_at_conf_0_25": 0.26133553173948887,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9335690027929915,
+        "detections_per_image": 1.4707337180544104,
+        "precision": 0.8961532045998665,
+        "recall": 0.9742452667442963
+      }
+    }
+  },
+  "scope": "VAL diagnosis only; no TRAIN or TEST inference",
+  "script_sha256": "fae1ca2d4869da3c87b3116241c856dee0b745fb7f4be580dd53389e7e8b3509",
+  "sources_sha256": {
+    "runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json": "cf3678d1b254f36e35fb78b6184cadea5d848d41136a98ebed87004cec0847bc",
+    "runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json": "8fba98a8be3467c282351b689b230225b06b2d9bae0517188e0cc4739dbae4dc",
+    "runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json": "17f6aa8edd4c16c6d744dd9665cdc74f31288245a1d80d3b60e858ff0a2a7880",
+    "runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json": "ac9a5ea69c5f431fb8c402e3152ddddb62fc82b94ed7317fc6f475a4f6241453",
+    "runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json": "0ad9cc6ab106d188d79fc4ae802fc08c7f88b59aed6a92a271f21efcc3949187",
+    "runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json": "3d959cdc49072713b1d9b16392164349e2ef351a93126697c25811036391df2c",
+    "runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json": "1283e82197811059cfbdf0b05911681bd15d9e325387f43438e7d3580f1a30ec"
+  },
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710"
+}

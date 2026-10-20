@@ -12,14 +12,15 @@ after the six student checkpoints had been locked by VAL. Training uses FP32.
 ## Current OP3 direction
 
 The completed experiments below use Advance Vision data and establish the
-current pure-KD checkpoints. The planned next phase is to evaluate the selected
-student `.pt` on ROBOTIS OP3 using PyTorch/Ultralytics on CPU. OpenVINO and
-QAT/INT8 are not part of the current deployment plan. The checkpoint has been
-run on a C920 camera through ROS 2; the latest operator-labeled idle session
-processed 887 frames and emitted 887 detection instances. Motion state is not
-inferred by the detector. The proposal and planning drafts in this repo
-describe the completed Advance Vision study and need revision before serving as
-the final OP3 thesis proposal.
+current pure-KD checkpoints. The selected student `.pt` has been run on
+ROBOTIS OP3 using PyTorch/Ultralytics on CPU. OpenVINO and QAT/INT8 are not
+part of the current deployment plan. In the operator-verified servo-idle
+session with a C920 camera and a reliable ROS 2 subscriber, the trial package
+processed 1,501 frames and logged 4,454 detections across the three classes.
+This is one runtime observation, not camera accuracy or evidence of walking
+performance. Motion state is not inferred by the detector. The proposal and
+planning drafts in this repo describe the completed Advance Vision study and
+need revision before serving as the final OP3 thesis proposal.
 
 The native PyTorch/Ultralytics ROS 2 camera node for the KD student is
 [`scripts/op3_pytorch_detector.py`](scripts/op3_pytorch_detector.py). It reads
@@ -29,10 +30,12 @@ the robot. Runtime setup, parameters, and logging are documented in
 session and its performance charts are documented in
 [`dokumentasi/README.md`](dokumentasi/README.md), including one annotated
 camera frame and its detection metadata.
-The node now supports persistent BoT-SORT IDs and per-detection CSV logging.
-The three October camera logs were recorded before this tracking change and
-contain no track IDs. Tracking and per-class detection still require a new
-live OP3 session; the existing frame counts are not accuracy evidence.
+The node supports BoT-SORT IDs within a run and per-detection CSV logging.
+Three earlier camera logs predate this tracking change and contain no track IDs.
+A later trial through `ros2_packages/op3_idle_trial/` recorded all three classes
+and stable IDs for relatively stationary objects in one servo-idle session.
+Tracking moving objects and walking performance remain unmeasured, and the
+existing frame counts are not camera accuracy evidence.
 An offline smoke run on one VAL image for each class detected `ball`,
 `gawang`, and `robot`; repeated frames kept a BoT-SORT ID after confirmation.
 This checks the model/tracker software path only. It does not verify camera
@@ -64,7 +67,10 @@ For thesis tables, start at the
 [`lab/server T01–T14 index`](analisis_performa/lab_server/README.md) records
 the current table status, source files, and remaining measurements; the
 [`prompt inventory`](prompt/inventaris_tabel_dan_prompt.md) links the lab and
-robot workflows.
+robot workflows. The [20 October repository audit](docs/AUDIT_REPO_DAN_LANGKAH_LAB_SERVER_2026-10-20.md)
+summarizes current evidence and the next lab/server steps.
+The [seven-checkpoint VAL diagnosis](analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md)
+records error categories, confidence sweeps, and the current KD improvement recommendation.
 
 ## Teacher, student, and data
 

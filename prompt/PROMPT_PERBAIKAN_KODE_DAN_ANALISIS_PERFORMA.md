@@ -2,6 +2,8 @@
 
 > Salin seluruh isi bagian **Prompt** ke agen koding (misalnya Codex atau Claude Code) yang membuka *repository* ini. Versi 19 Oktober 2026, disusun dari analisis teknis *repo* pada *commit* `77d9afb`. Prompt ini melengkapi `prompt/PROMPT_IMPLEMENTASI_ROBOT_OP3.md`. Bila keduanya bertentangan, ikuti prompt ini dan laporkan pertentangannya.
 
+> **Pembaruan 20 Oktober 2026:** status historis di bawah harus dibaca bersama [`configs/analysis.yaml`](../configs/analysis.yaml) dan [`docs/DECISIONS.md`](../docs/DECISIONS.md). D1 sudah dikunci pada teacher YOLO11n → student skala `t`; D2 mengunci `pure_v4` teacher-only. Instruksi varian `hybrid` di Fase B tidak berlaku untuk lingkup penelitian ini. Diagnosis VAL T09–T11/T14 sudah selesai di [`analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md`](../analisis_performa/lab_server/DIAGNOSIS_VAL_2026-10-20.md).
+
 ---
 
 ## Prompt

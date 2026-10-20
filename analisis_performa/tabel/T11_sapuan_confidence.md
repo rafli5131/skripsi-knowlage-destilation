@@ -1,12 +1,134 @@
-# T11. sapuan confidence
+# T11 sapuan confidence
 
-Status: Belum diukur; tidak ada artefak sapuan confidence VAL; ambang 0,25 pada TEST tetap dan tidak dipilih ulang.
+Status: Lengkap dari diagnosis tujuh checkpoint pada VAL Roboflow resmi.
 
 | model | split | confidence_threshold | precision | recall | F1 | detections_per_image | best_F1_on_VAL | source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| teacher_fp32 | val | 0,0500 | 0,7831 | 0,9888 | 0,8740 | 1,9744 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,1000 | 0,8198 | 0,9866 | 0,8955 | 1,8046 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,1500 | 0,8508 | 0,9863 | 0,9135 | 1,6843 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,2000 | 0,8730 | 0,9808 | 0,9238 | 1,5705 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,2500 | 0,8962 | 0,9742 | 0,9336 | 1,4707 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,3000 | 0,9181 | 0,9687 | 0,9427 | 1,3891 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,3500 | 0,9324 | 0,9607 | 0,9463 | 1,3265 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,4000 | 0,9459 | 0,9494 | 0,9476 | 1,2580 | True | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,4500 | 0,9593 | 0,9342 | 0,9466 | 1,1888 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,5000 | 0,9656 | 0,9149 | 0,9395 | 1,1278 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,5500 | 0,9700 | 0,8985 | 0,9329 | 1,0750 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,6000 | 0,9750 | 0,8721 | 0,9207 | 0,9959 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,6500 | 0,9792 | 0,8402 | 0,9044 | 0,9118 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,7000 | 0,9855 | 0,8116 | 0,8902 | 0,8376 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,7500 | 0,9883 | 0,7617 | 0,8603 | 0,7453 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,8000 | 0,9929 | 0,7010 | 0,8218 | 0,6232 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,8500 | 0,9944 | 0,5976 | 0,7466 | 0,4567 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | 0,9000 | 0,9972 | 0,3698 | 0,5396 | 0,2185 | False | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| kd_seed42 | val | 0,0500 | 0,6364 | 0,9796 | 0,7716 | 2,0701 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,1000 | 0,6910 | 0,9753 | 0,8089 | 1,8574 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,1500 | 0,7315 | 0,9695 | 0,8339 | 1,7370 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,2000 | 0,7587 | 0,9679 | 0,8507 | 1,6496 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,2500 | 0,7899 | 0,9623 | 0,8676 | 1,5581 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,3000 | 0,8095 | 0,9548 | 0,8762 | 1,4889 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,3500 | 0,8325 | 0,9473 | 0,8862 | 1,4048 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,4000 | 0,8506 | 0,9335 | 0,8901 | 1,3248 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,4500 | 0,8694 | 0,9202 | 0,8940 | 1,2547 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,5000 | 0,8908 | 0,9017 | 0,8962 | 1,1805 | True | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,5500 | 0,9062 | 0,8812 | 0,8935 | 1,1039 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,6000 | 0,9205 | 0,8635 | 0,8911 | 1,0462 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,6500 | 0,9396 | 0,8378 | 0,8858 | 0,9703 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,7000 | 0,9509 | 0,7984 | 0,8680 | 0,8788 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,7500 | 0,9642 | 0,7512 | 0,8445 | 0,7650 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,8000 | 0,9785 | 0,6837 | 0,8050 | 0,6191 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,8500 | 0,9883 | 0,5935 | 0,7416 | 0,4542 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | 0,9000 | 0,9911 | 0,4440 | 0,6132 | 0,2630 | False | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed1337 | val | 0,0500 | 0,6315 | 0,9765 | 0,7670 | 2,0890 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,1000 | 0,6825 | 0,9718 | 0,8018 | 1,8788 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,1500 | 0,7139 | 0,9663 | 0,8211 | 1,7634 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,2000 | 0,7454 | 0,9608 | 0,8395 | 1,6538 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,2500 | 0,7772 | 0,9566 | 0,8576 | 1,5565 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,3000 | 0,8012 | 0,9478 | 0,8684 | 1,4608 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,3500 | 0,8238 | 0,9387 | 0,8775 | 1,3924 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,4000 | 0,8380 | 0,9267 | 0,8801 | 1,3265 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,4500 | 0,8627 | 0,9107 | 0,8860 | 1,2506 | True | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,5000 | 0,8781 | 0,8857 | 0,8819 | 1,1575 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,5500 | 0,9000 | 0,8577 | 0,8783 | 1,0709 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,6000 | 0,9118 | 0,8324 | 0,8703 | 1,0000 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,6500 | 0,9313 | 0,8065 | 0,8644 | 0,9192 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,7000 | 0,9470 | 0,7607 | 0,8436 | 0,8071 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,7500 | 0,9527 | 0,7151 | 0,8170 | 0,7106 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,8000 | 0,9617 | 0,6687 | 0,7889 | 0,6059 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,8500 | 0,9739 | 0,5980 | 0,7410 | 0,4749 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | 0,9000 | 0,9793 | 0,4861 | 0,6497 | 0,3182 | False | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed2025 | val | 0,0500 | 0,6459 | 0,9793 | 0,7784 | 2,1245 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,1000 | 0,7052 | 0,9737 | 0,8180 | 1,8813 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,1500 | 0,7390 | 0,9712 | 0,8394 | 1,7403 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,2000 | 0,7824 | 0,9669 | 0,8649 | 1,6183 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,2500 | 0,8160 | 0,9624 | 0,8832 | 1,5235 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,3000 | 0,8404 | 0,9554 | 0,8942 | 1,4493 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,3500 | 0,8622 | 0,9440 | 0,9012 | 1,3751 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,4000 | 0,8853 | 0,9357 | 0,9098 | 1,3026 | True | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,4500 | 0,8969 | 0,9219 | 0,9092 | 1,2399 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,5000 | 0,9119 | 0,9027 | 0,9072 | 1,1641 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,5500 | 0,9230 | 0,8893 | 0,9058 | 1,1096 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,6000 | 0,9340 | 0,8670 | 0,8993 | 1,0387 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,6500 | 0,9588 | 0,8421 | 0,8966 | 0,9621 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,7000 | 0,9668 | 0,8078 | 0,8802 | 0,8730 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,7500 | 0,9752 | 0,7570 | 0,8523 | 0,7576 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,8000 | 0,9813 | 0,7071 | 0,8219 | 0,6579 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,8500 | 0,9930 | 0,6251 | 0,7673 | 0,5054 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | 0,9000 | 0,9923 | 0,5141 | 0,6773 | 0,3265 | False | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| supervised_seed42 | val | 0,0500 | 0,7300 | 0,9846 | 0,8384 | 2,0148 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,1000 | 0,7992 | 0,9786 | 0,8799 | 1,7741 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,1500 | 0,8302 | 0,9777 | 0,8979 | 1,6472 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,2000 | 0,8606 | 0,9719 | 0,9129 | 1,5466 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,2500 | 0,8829 | 0,9679 | 0,9235 | 1,4625 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,3000 | 0,9014 | 0,9643 | 0,9318 | 1,3974 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,3500 | 0,9200 | 0,9585 | 0,9389 | 1,3347 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,4000 | 0,9312 | 0,9490 | 0,9400 | 1,2786 | True | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,4500 | 0,9464 | 0,9308 | 0,9386 | 1,2061 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,5000 | 0,9605 | 0,9024 | 0,9306 | 1,1286 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,5500 | 0,9743 | 0,8699 | 0,9191 | 1,0470 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,6000 | 0,9826 | 0,8404 | 0,9059 | 0,9728 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,6500 | 0,9915 | 0,8050 | 0,8886 | 0,8805 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,7000 | 0,9947 | 0,7494 | 0,8548 | 0,7609 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,7500 | 0,9965 | 0,6689 | 0,8005 | 0,6167 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,8000 | 0,9962 | 0,5748 | 0,7290 | 0,4724 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,8500 | 0,9943 | 0,3590 | 0,5275 | 0,2424 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | 0,9000 | 0,9956 | 0,1681 | 0,2877 | 0,0874 | False | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed1337 | val | 0,0500 | 0,7325 | 0,9807 | 0,8386 | 2,0247 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,1000 | 0,7981 | 0,9760 | 0,8781 | 1,7873 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,1500 | 0,8306 | 0,9743 | 0,8967 | 1,6554 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,2000 | 0,8548 | 0,9720 | 0,9096 | 1,5556 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,2500 | 0,8765 | 0,9649 | 0,9186 | 1,4666 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,3000 | 0,8963 | 0,9570 | 0,9256 | 1,3899 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,3500 | 0,9106 | 0,9418 | 0,9259 | 1,3124 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,4000 | 0,9250 | 0,9259 | 0,9254 | 1,2358 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,4500 | 0,9442 | 0,9089 | 0,9262 | 1,1641 | True | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,5000 | 0,9583 | 0,8901 | 0,9229 | 1,0965 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,5500 | 0,9692 | 0,8697 | 0,9167 | 1,0280 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,6000 | 0,9784 | 0,8339 | 0,9004 | 0,9406 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,6500 | 0,9836 | 0,8036 | 0,8845 | 0,8673 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,7000 | 0,9915 | 0,7505 | 0,8543 | 0,7667 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,7500 | 0,9912 | 0,6596 | 0,7921 | 0,6167 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,8000 | 0,9932 | 0,5291 | 0,6904 | 0,4287 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,8500 | 0,9910 | 0,3528 | 0,5204 | 0,2317 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | 0,9000 | 0,6667 | 0,1609 | 0,2592 | 0,0841 | False | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed2025 | val | 0,0500 | 0,7269 | 0,9853 | 0,8366 | 2,0684 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,1000 | 0,7898 | 0,9801 | 0,8747 | 1,8112 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,1500 | 0,8280 | 0,9776 | 0,8966 | 1,6603 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,2000 | 0,8524 | 0,9763 | 0,9101 | 1,5655 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,2500 | 0,8778 | 0,9706 | 0,9218 | 1,4691 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,3000 | 0,9032 | 0,9661 | 0,9336 | 1,3916 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,3500 | 0,9195 | 0,9573 | 0,9380 | 1,3273 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,4000 | 0,9347 | 0,9468 | 0,9407 | 1,2613 | True | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,4500 | 0,9460 | 0,9270 | 0,9364 | 1,1880 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,5000 | 0,9579 | 0,9075 | 0,9320 | 1,1187 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,5500 | 0,9664 | 0,8830 | 0,9229 | 1,0478 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,6000 | 0,9799 | 0,8570 | 0,9143 | 0,9703 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,6500 | 0,9867 | 0,8147 | 0,8925 | 0,8829 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,7000 | 0,9918 | 0,7754 | 0,8703 | 0,7873 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,7500 | 0,9954 | 0,7006 | 0,8223 | 0,6389 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,8000 | 0,9964 | 0,6005 | 0,7494 | 0,4633 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,8500 | 0,9973 | 0,4103 | 0,5814 | 0,2638 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | 0,9000 | 0,9963 | 0,2045 | 0,3394 | 0,1063 | False | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 
-[BELUM DIUKUR]
-
-Sumber: [Inventaris sumber lab/server](../lab_server/README.md).
-
-Kolom di atas adalah skema yang akan dipakai saat artefak yang sesuai tersedia.
+Sumber setiap baris: JSON prediksi VAL pada kolom `source`. TP IoU 0,50 mengikuti `DetectionValidator` Ultralytics 8.4.130 pada confidence floor 0,001 dan NMS 0,7. Precision dan recall dirata-ratakan makro atas tiga kelas; F1 dihitung dari rerata itu, selaras evaluator TEST. Ambang terbaik hanya dipilih dari grid VAL 0,05–0,90 dan tidak mengubah hasil TEST historis.

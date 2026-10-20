@@ -1,8 +1,9 @@
 # Keputusan protokol skripsi. Nilai sementara wajib dikonfirmasi pada TH-D.
 decisions:
   D1:
-    status: BELUM DIKUNCI # BELUM DIKUNCI
-    temporary: null
+    status: DIKUNCI OLEH PENGGUNA
+    value: teacher YOLO11n dan student skala t yang sekarang
+    decided_at: 2026-10-20
     options:
       - teacher YOLO11n dan student skala t yang sekarang
       - teacher YOLO11s atau YOLO11m dan student YOLO11n

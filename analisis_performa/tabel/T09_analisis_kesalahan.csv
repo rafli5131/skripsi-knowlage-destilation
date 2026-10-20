@@ -1,1 +1,8 @@
 model,split,confidence_threshold,match_iou_threshold,false_positives_per_image,fp_background_count,fp_wrong_class_count,fp_localization_count,fp_duplicate_count,fn_small_count,fn_medium_count,fn_large_count,source
+teacher_fp32,val,0.25,0.5,0.26133553173948887,75,0,79,163,3,21,34,runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json
+kd_seed42,val,0.25,0.5,0.3577906018136851,126,0,68,240,7,23,39,runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json
+kd_seed1337,val,0.25,0.5,0.36438582028029676,122,0,89,231,8,27,44,runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json
+kd_seed2025,val,0.25,0.5,0.3231657048639736,132,0,63,197,7,21,41,runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json
+supervised_seed42,val,0.25,0.5,0.25556471558120364,107,0,69,134,5,23,33,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
+supervised_seed1337,val,0.25,0.5,0.26215993404781535,106,0,81,131,5,18,41,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
+supervised_seed2025,val,0.25,0.5,0.26380873866446825,106,0,81,133,3,23,37,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json

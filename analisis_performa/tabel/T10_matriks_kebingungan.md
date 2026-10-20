@@ -1,12 +1,120 @@
-# T10. matriks kebingungan
+# T10 matriks kebingungan
 
-Status: Belum diukur; matriks kebingungan empat kelas termasuk latar belum tersimpan untuk konfigurasi terkunci.
+Status: Lengkap dari diagnosis tujuh checkpoint pada VAL Roboflow resmi.
 
 | model | split | actual_class | predicted_class | count | confidence_threshold | match_iou_threshold | source |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| teacher_fp32 | val | ball | ball | 182 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | ball | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | gawang | gawang | 999 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | gawang | background | 49 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | robot | robot | 286 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | robot | background | 9 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | background | ball | 8 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | background | gawang | 297 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | background | robot | 12 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| teacher_fp32 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/teacher_fp32_predictions.json |
+| kd_seed42 | val | ball | ball | 178 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | ball | background | 4 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | gawang | gawang | 995 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | gawang | background | 53 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | robot | robot | 283 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | robot | background | 12 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | background | ball | 52 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | background | gawang | 330 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | background | robot | 52 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed42 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json |
+| kd_seed1337 | val | ball | ball | 178 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | ball | background | 4 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | gawang | gawang | 988 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | gawang | background | 60 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | robot | robot | 280 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | robot | background | 15 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | background | ball | 55 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | background | gawang | 323 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | background | robot | 64 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed1337 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json |
+| kd_seed2025 | val | ball | ball | 177 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | ball | background | 5 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | gawang | gawang | 994 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | gawang | background | 54 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | robot | robot | 285 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | robot | background | 10 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | background | ball | 30 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | background | gawang | 302 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | background | robot | 60 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| kd_seed2025 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json |
+| supervised_seed42 | val | ball | ball | 179 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | ball | background | 3 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | gawang | gawang | 1000 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | gawang | background | 48 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | robot | robot | 285 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | robot | background | 10 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | background | ball | 5 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | background | gawang | 269 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | background | robot | 36 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed42 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
+| supervised_seed1337 | val | ball | ball | 176 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | ball | background | 6 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | gawang | gawang | 997 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | gawang | background | 51 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | robot | robot | 288 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | robot | background | 7 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | background | ball | 10 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | background | gawang | 276 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | background | robot | 32 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed1337 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
+| supervised_seed2025 | val | ball | ball | 179 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | ball | background | 3 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | gawang | gawang | 994 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | gawang | background | 54 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | robot | robot | 289 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | robot | background | 6 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | background | ball | 9 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | background | gawang | 279 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | background | robot | 32 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| supervised_seed2025 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 
-[BELUM DIUKUR]
-
-Sumber: [Inventaris sumber lab/server](../lab_server/README.md).
-
-Kolom di atas adalah skema yang akan dipakai saat artefak yang sesuai tersedia.
+Sumber setiap baris: JSON prediksi VAL pada kolom `source`. Matriks empat label mencakup background: pasangan kelas sama lebih dulu, lalu pasangan salah kelas pada IoU ≥0,50; prediksi/GT yang belum berpasangan dipetakan ke background. Ini matriks diagnostik satu-ke-satu, bukan mAP.
