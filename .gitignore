@@ -4,6 +4,7 @@ __pycache__/
 .venv-op3-pytorch/
 /runs/*.log
 /runs/kd/*.log
+/runs/kd_smoke/**/weights/
 /data/op3_camera_eval/sessions/
 # Raw OP3 evaluation frames and labels stay local; publish curated evidence under dokumentasi/.
 /runs/op3_camera_eval/**/dataset/images/
