@@ -162,8 +162,8 @@
       "analisis_performa/tabel/T26_tradeoff_utama.md": "a25e4ad6033c09f19e15ae15575cfdd309a60d43405473d5625635bbf6b7d136"
     },
     "27": {
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "469494b669d9ebf2ab78bae4c81253705bad09cf739e5de6ca0504ff4c32f347",
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "ad05e6c2941c7caca42d66ea8dfac20495037f1a4c2ca18e15516d4cecd6d29f"
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423"
     },
     "15": {
       "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "87377ebd87122c6de10337a876b138e3839ffff293d6a0cbb51455a6b6232731",
@@ -234,5 +234,29 @@
       "dokumentasi/2026-10-21/percobaan-13-evaluasi-deteksi-multi-sesi/README.md": "db6c1e8a9a2a2fafd61d60c46ddbef76f2363afabecc9413fe20e5c9e3c3ff0f"
     },
     "note": "Raw OP3 JPEG and reviewed labels are absent from this checkout; their original hashes are recorded in input_manifest.json."
+  },
+  "phase1_lab_server_2026_10_21": {
+    "status": "partial; OP3 raw images and reviewed labels unavailable on server",
+    "f1_primary_proposal": "harmonic mean of macro precision and macro recall; D11 not locked",
+    "source_sha256": {
+      "configs/data_train_val.yaml": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/summary.csv": "ba58fa3dd777c05e9017d77a21b390a5d24f4677d078af1267572a92b3181cd1",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/results.json": "5fd3e916130c0dc64a2bcc1931412c5372196b0d43e9d815a1b176cb20398a71",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/input_manifest.json": "7731a2ee6f515967ff08400055c15e61dca359fa998c1b7e0a9961cacdef0e2e"
+    },
+    "output_sha256": {
+      "analisis_performa/DEFINISI.md": "8f101f3eed6d0547daa4abfc6d8c7ae5f7c1e1b508f35c326bbc8c7250d336a6",
+      "analisis_performa/INDEKS.md": "e87508d389c45a171017c63660cbd0893e0ae38a0f682ef2240591c9c173638d",
+      "analisis_performa/tabel/T04_ablasi_kd_val.md": "1e88d37e00dd0669269908285eb415c94026377cce50fb492cba77d54ae49cb0",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.csv": "6a941fd244000c24d5ac594fd4c844906e24ebccbb7df10fb922976eadf39aa8",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md": "6a86cfe6f31154f3e88bdc8e26de568ef4e01a159441ccc7caed9627941d1c90",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21_30_crop.jpg": "b51e08d63ab1aef03c0b682e4a038fc99a50d454dfb9fd40ff3780809f3818ef",
+      "analisis_performa/lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md": "5e1fa7994a5ec1bec79dd4bbddf8e65633ee61794b888650a62e505700edb0c8",
+      "scripts/audit_gawang_box_geometry.py": "cc90582ea4b8aa79c95c53f58f06a3e18236be08b7d2547eb53c885c0705faee",
+      "configs/analysis.yaml": "d7bc6bef623318117219a54f8467bbf9331b6ef7a05ee12f9b3f4ceee8b813de",
+      "docs/DECISIONS.md": "fbc47954d5f9cd518cc05c1cf4dec35ffa189b4d1edc07165ca1f41675c46c78"
+    }
   }
 }

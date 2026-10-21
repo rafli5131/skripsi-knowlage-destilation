@@ -22,3 +22,9 @@ Recall `gawang` berubah +0.0258, tetapi precision makro berubah -0.7426 pada con
 Perbandingan satu seed ini bersifat eksploratif. Angka ini adalah akurasi VAL
 Advance Vision, bukan akurasi kamera OP3. Model utama tiga seed dan hasil
 TEST historis tidak diubah oleh pilot ini.
+
+Catatan mekanisme: `pure_weighted` membobot loss kotak dan kelas pada setiap lokasi
+dengan skor maksimum teacher. Pada lokasi latar dengan skor teacher mendekati nol,
+kontribusi BCE kelas untuk menekan skor student juga mengecil. Penurunan precision
+VAL konsisten dengan rancangan loss tersebut, bukan bukti salah implementasi;
+pilot ini tidak menguji varian yang hanya membobot loss kotak.

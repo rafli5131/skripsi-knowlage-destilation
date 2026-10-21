@@ -50,3 +50,8 @@ decisions:
   D10:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_object_area_px2: small < 1024; medium 1024-9216; large > 9216
+  D11:
+    status: BELUM DIKUNCI
+    proposed_primary_F1: harmonic_mean_of_macro_precision_and_macro_recall
+    proposed_secondary_F1: arithmetic_mean_of_per_class_F1
+    scope: T04 T05 T27; usulan penyeragaman metrik tanpa pemilihan model baru

@@ -1,6 +1,6 @@
 # Indeks tabel analisis performa
 
-Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
+Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. F1 utama T27 dihitung dari precision dan recall makro agar sejalan dengan T04/T05; rerata F1 per kelas disimpan sebagai kolom sekunder (usulan D11 belum dikunci). Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
 
 | Tabel | Status | Berkas |
 | --- | --- | --- |
@@ -30,4 +30,4 @@ Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumb
 | T24 | Belum diukur. | [CSV](tabel/T24_pengaruh_preview.csv) · [Markdown](tabel/T24_pengaruh_preview.md) |
 | T25 | Sebagian; kelas/ID tersedia pada sesi idle baru, log lama hanya total dan uji kepala hanya bola terpilih. | [CSV](tabel/T25_observasi_deteksi_live.csv) · [Markdown](tabel/T25_observasi_deteksi_live.md) |
 | T26 | Sebagian; akurasi TEST offline ada, runtime OP3 hanya KD seed 42 idle; walking dan benchmark frame tetap belum ada. | [CSV](tabel/T26_tradeoff_utama.csv) · [Markdown](tabel/T26_tradeoff_utama.md) |
-| T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif) dan 50 frame gawang parsial terpisah; set final D8 belum dikunci. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) |
+| T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif). Set 50 frame gawang parsial hanya catatan dan tidak digunakan membandingkan model karena definisi kotak berbeda serta draf label berasal dari KD. Set final D8 belum dikunci; risiko bias anotasi juga berlaku pada set utama. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) · [Audit label](lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md) · [Asal frame negatif](lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md) |
