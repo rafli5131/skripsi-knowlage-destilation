@@ -1,0 +1,4 @@
+path: /home/humanoid/bre_skripsi/runs/op3_multi_session_eval/20261021_primary260_partial50_v1/primary/dataset
+train: images/val
+val: images/val
+names: [ball, gawang, robot]

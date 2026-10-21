@@ -1,0 +1,199 @@
+{
+  "status": "completed_runtime_log_analysis",
+  "created_at_utc": "2026-10-21T12:34:17.811478+00:00",
+  "run_id": "20261021_tracking_live_01",
+  "condition": "unknown",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "settings": {
+    "input_topic": "/thesis/image_raw",
+    "output_topic": "/vision/detections",
+    "device": "cpu",
+    "precision": "FP32",
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "tracking_enabled": true,
+    "tracker_config": "botsort.yaml",
+    "preview_enabled": true
+  },
+  "input_files": {
+    "metadata": {
+      "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261021_tracking_live_01.json",
+      "sha256": "66db48f952e514b8e16ed34dda3b07f420e565588df5544e3d5667804ed90119"
+    },
+    "frames": {
+      "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261021_tracking_live_01.csv",
+      "sha256": "9791075452dfcd94859836702056ce1796653de64765315f0ef779191dd48317"
+    },
+    "detections": {
+      "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261021_tracking_live_01_detections.csv",
+      "sha256": "defed3401592f2684046757d78de97aadf64361d58ef54cf148b7efb7392e79f"
+    }
+  },
+  "processed_frames": 1769,
+  "frame_errors": 0,
+  "detection_rows": 5104,
+  "runtime": {
+    "wall_duration_s": 146.277302,
+    "processed_fps": 12.093468882820932,
+    "frame_receive_span_s": 145.332917,
+    "inter_processed_frame_interval_ms": {
+      "median": 61.10349999999887,
+      "p95": 163.2765999999947,
+      "min": 29.719999999997526,
+      "max": 1853.8889999999951
+    },
+    "camera_stamp_to_callback_start_ms": {
+      "median": 40.107011795043945,
+      "p95": 70.25671005249023,
+      "min": 31.236886978149414,
+      "max": 165.4989719390869
+    },
+    "preprocess_ms": {
+      "median": 1.5992599992387113,
+      "p95": 11.891659799948682,
+      "min": 0.7336690005104174,
+      "max": 26.63142599976709
+    },
+    "inference_ms": {
+      "median": 28.202966000208107,
+      "p95": 136.36686919981003,
+      "min": 17.95174400012911,
+      "max": 161.6169010003432
+    },
+    "postprocess_ms": {
+      "median": 0.8077830007096054,
+      "p95": 0.9594713994374613,
+      "min": 0.38309699993988033,
+      "max": 5.941592000453966
+    },
+    "callback_ms": {
+      "median": 45.4205030000594,
+      "p95": 161.5368484002829,
+      "min": 28.90270900024916,
+      "max": 499.0138510001998
+    },
+    "process_cpu_percent": {
+      "median": 1349.8,
+      "p95": 1448.1,
+      "min": 64.7,
+      "max": 1511.5
+    },
+    "process_rss_mib": {
+      "median": 352.8671875,
+      "p95": 358.053125,
+      "min": 346.10546875,
+      "max": 361.3515625
+    }
+  },
+  "tracking": {
+    "ball": {
+      "detections": 1566,
+      "frames_with_detection": 1566,
+      "frame_coverage": 0.8852459016393442,
+      "max_detections_in_one_frame": 1,
+      "single_target_assumption": true,
+      "detections_with_track_id": 1566,
+      "id_coverage": 1.0,
+      "id_counts": {
+        "1": 1183,
+        "4": 3,
+        "5": 380
+      },
+      "id_transitions": [
+        {
+          "after_frame": 1183,
+          "before_frame": 1386,
+          "missing_frames": 202,
+          "from_id": "1",
+          "to_id": "4"
+        },
+        {
+          "after_frame": 1388,
+          "before_frame": 1390,
+          "missing_frames": 1,
+          "from_id": "4",
+          "to_id": "5"
+        }
+      ],
+      "immediate_id_changes": 0,
+      "reidentifications_after_gap": 2,
+      "detection_gaps": [
+        {
+          "after_frame": 1183,
+          "before_frame": 1386,
+          "missing_frames": 202,
+          "previous_id": "1",
+          "next_id": "4"
+        },
+        {
+          "after_frame": 1388,
+          "before_frame": 1390,
+          "missing_frames": 1,
+          "previous_id": "4",
+          "next_id": "5"
+        }
+      ],
+      "longest_contiguous_frames_same_id": 1183,
+      "center_x_span_px": 246.89011192321777,
+      "center_y_span_px": 141.1936492919922,
+      "confidence": {
+        "median": 0.9308143258094788,
+        "p95": 0.9611849635839462,
+        "min": 0.5530356168746948,
+        "max": 0.9723232388496399
+      }
+    },
+    "gawang": {
+      "detections": 1769,
+      "frames_with_detection": 1769,
+      "frame_coverage": 1.0,
+      "max_detections_in_one_frame": 1,
+      "single_target_assumption": true,
+      "detections_with_track_id": 1769,
+      "id_coverage": 1.0,
+      "id_counts": {
+        "3": 1769
+      },
+      "id_transitions": [],
+      "immediate_id_changes": 0,
+      "reidentifications_after_gap": 0,
+      "detection_gaps": [],
+      "longest_contiguous_frames_same_id": 1769,
+      "center_x_span_px": 3.1276321411132812,
+      "center_y_span_px": 11.983592987060547,
+      "confidence": {
+        "median": 0.4112878441810608,
+        "p95": 0.44896833300590516,
+        "min": 0.31725314259529114,
+        "max": 0.494981974363327
+      }
+    },
+    "robot": {
+      "detections": 1769,
+      "frames_with_detection": 1769,
+      "frame_coverage": 1.0,
+      "max_detections_in_one_frame": 1,
+      "single_target_assumption": true,
+      "detections_with_track_id": 1769,
+      "id_coverage": 1.0,
+      "id_counts": {
+        "2": 1769
+      },
+      "id_transitions": [],
+      "immediate_id_changes": 0,
+      "reidentifications_after_gap": 0,
+      "detection_gaps": [],
+      "longest_contiguous_frames_same_id": 1769,
+      "center_x_span_px": 0.834014892578125,
+      "center_y_span_px": 7.48016357421875,
+      "confidence": {
+        "median": 0.7904614806175232,
+        "p95": 0.8231330871582031,
+        "min": 0.6246424317359924,
+        "max": 0.8517500162124634
+      }
+    }
+  },
+  "interpretation_limit": "Track ID continuity is observed from detections only; no frame-by-frame human identity ground truth or MOTA/IDF1."
+}

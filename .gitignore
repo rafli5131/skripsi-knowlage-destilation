@@ -5,3 +5,10 @@ __pycache__/
 /runs/*.log
 /runs/kd/*.log
 /data/op3_camera_eval/sessions/
+# Raw OP3 evaluation frames and labels stay local; publish curated evidence under dokumentasi/.
+/runs/op3_camera_eval/**/dataset/images/
+/runs/op3_camera_eval/**/dataset/labels/
+/runs/op3_multi_session_eval/**/dataset/images/
+/runs/op3_multi_session_eval/**/dataset/labels/
+# Generated ROS 2 build logs.
+/log/

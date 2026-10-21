@@ -1,0 +1,5 @@
+{
+  "status": "failed_before_metrics",
+  "reason": "Ultralytics 8.4.130 rejected the temporary dataset YAML because it lacked the required train key. No validation metrics were produced.",
+  "retry_with_metrics": "../20261021_idle_01_exploratory_retry1/metrics.json"
+}

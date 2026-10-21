@@ -1,0 +1,3 @@
+path: /home/humanoid/bre_skripsi/runs/op3_camera_eval/20261021_idle_01_exploratory/dataset
+val: images/val
+names: [ball, gawang, robot]

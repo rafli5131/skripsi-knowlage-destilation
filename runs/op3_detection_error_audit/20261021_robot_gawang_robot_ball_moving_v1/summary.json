@@ -1,0 +1,80 @@
+{
+  "status": "offline_error_audit_no_relabeling",
+  "created_at_utc": "2026-10-21T12:17:53.028102+00:00",
+  "source_run": "/home/humanoid/bre_skripsi/runs/op3_multi_session_eval/20261021_primary260_partial50_v1",
+  "focus": {
+    "20261021_robot_gawang_01": "gawang",
+    "20261021_robot_ball_moving_01": "robot"
+  },
+  "ground_truth_status": {
+    "kd": {
+      "20261021_robot_gawang_01": {
+        "robot": {
+          "no_matching_prediction": 13,
+          "same_class_wrong_box": 24,
+          "matched": 3
+        },
+        "gawang": {
+          "no_matching_prediction": 40
+        }
+      },
+      "20261021_robot_ball_moving_01": {
+        "ball": {
+          "matched": 39,
+          "no_matching_prediction": 1
+        },
+        "robot": {
+          "same_class_wrong_box": 28,
+          "no_matching_prediction": 12
+        }
+      }
+    },
+    "supervised": {
+      "20261021_robot_gawang_01": {
+        "robot": {
+          "matched": 21,
+          "same_class_wrong_box": 17,
+          "no_matching_prediction": 2
+        },
+        "gawang": {
+          "no_matching_prediction": 40
+        }
+      },
+      "20261021_robot_ball_moving_01": {
+        "ball": {
+          "matched": 39,
+          "same_class_wrong_box": 1
+        },
+        "robot": {
+          "same_class_wrong_box": 40
+        }
+      }
+    }
+  },
+  "prediction_status": {
+    "supervised": {
+      "20261021_robot_gawang_01": {
+        "mislocalized": 33,
+        "matched": 21,
+        "background_or_unrelated": 16,
+        "duplicate": 2
+      },
+      "20261021_robot_ball_moving_01": {
+        "matched": 39,
+        "mislocalized": 41,
+        "background_or_unrelated": 5
+      }
+    },
+    "kd": {
+      "20261021_robot_gawang_01": {
+        "mislocalized": 26,
+        "matched": 3
+      },
+      "20261021_robot_ball_moving_01": {
+        "matched": 39,
+        "mislocalized": 39
+      }
+    }
+  },
+  "geometry_recheck_candidates": 33
+}

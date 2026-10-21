@@ -1,0 +1,1472 @@
+{
+  "status": "exploratory_op3_multi_session_evaluation",
+  "composition": {
+    "primary": 200,
+    "negative": 60,
+    "partial": 50
+  },
+  "models": {
+    "kd": {
+      "primary": {
+        "ap": {
+          "mAP50": 0.6300740780565465,
+          "mAP50-95": 0.4218432414736794,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.9232459229394753
+            },
+            "gawang": {
+              "mAP50": 0.328461643015254,
+              "mAP50-95": 0.1159897442296354
+            },
+            "robot": {
+              "mAP50": 0.5667605911543853,
+              "mAP50-95": 0.22629405725192756
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 160,
+              "predictions": 169,
+              "true_positives": 159,
+              "false_positives": 10,
+              "false_negatives": 1,
+              "precision": 0.9408284023668639,
+              "recall": 0.99375,
+              "F1": 0.966565349544073
+            },
+            "gawang": {
+              "ground_truth": 80,
+              "predictions": 12,
+              "true_positives": 12,
+              "false_positives": 0,
+              "false_negatives": 68,
+              "precision": 1.0,
+              "recall": 0.15,
+              "F1": 0.2608695652173913
+            },
+            "robot": {
+              "ground_truth": 160,
+              "predictions": 160,
+              "true_positives": 44,
+              "false_positives": 116,
+              "false_negatives": 116,
+              "precision": 0.275,
+              "recall": 0.275,
+              "F1": 0.275
+            }
+          },
+          "macro": {
+            "precision": 0.7386094674556213,
+            "recall": 0.4729166666666667,
+            "F1": 0.5008116382538215
+          },
+          "micro": {
+            "precision": 0.6304985337243402,
+            "recall": 0.5375,
+            "F1": 0.5802968960863697
+          },
+          "ground_truth": 400,
+          "predictions": 341,
+          "true_positives": 215,
+          "false_positives": 126,
+          "false_negatives": 185
+        }
+      },
+      "negative": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 0,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "gawang": {
+            "ground_truth": 0,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "robot": {
+            "ground_truth": 0,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": null,
+            "recall": null,
+            "F1": null
+          }
+        },
+        "macro": {
+          "precision": null,
+          "recall": null,
+          "F1": null
+        },
+        "micro": {
+          "precision": null,
+          "recall": null,
+          "F1": null
+        },
+        "ground_truth": 0,
+        "predictions": 0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 0,
+        "frames_with_false_positive": 0
+      },
+      "partial": {
+        "ap": {
+          "mAP50": 0.7037777777777778,
+          "mAP50-95": 0.4846971112167117,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.9228479561415679
+            },
+            "gawang": {
+              "mAP50": 0.7846666666666667,
+              "mAP50-95": 0.36115748007266996
+            },
+            "robot": {
+              "mAP50": 0.33166666666666667,
+              "mAP50-95": 0.17008589743589744
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 50,
+              "predictions": 50,
+              "true_positives": 50,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 50,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 1.0,
+              "recall": 0.8,
+              "F1": 0.888888888888889
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 16,
+              "true_positives": 0,
+              "false_positives": 16,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6,
+            "F1": 0.6296296296296297
+          },
+          "micro": {
+            "precision": 0.8490566037735849,
+            "recall": 0.8181818181818182,
+            "F1": 0.8333333333333334
+          },
+          "ground_truth": 110,
+          "predictions": 106,
+          "true_positives": 90,
+          "false_positives": 16,
+          "false_negatives": 20
+        }
+      },
+      "by_session": {
+        "20261021_robot_ball_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 38,
+              "true_positives": 21,
+              "false_positives": 17,
+              "false_negatives": 19,
+              "precision": 0.5526315789473685,
+              "recall": 0.525,
+              "F1": 0.5384615384615385
+            }
+          },
+          "macro": {
+            "precision": 0.7763157894736843,
+            "recall": 0.7625,
+            "F1": 0.7692307692307693
+          },
+          "micro": {
+            "precision": 0.782051282051282,
+            "recall": 0.7625,
+            "F1": 0.7721518987341772
+          },
+          "ground_truth": 80,
+          "predictions": 78,
+          "true_positives": 61,
+          "false_positives": 17,
+          "false_negatives": 19
+        },
+        "20261021_robot_gawang_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 29,
+              "true_positives": 3,
+              "false_positives": 26,
+              "false_negatives": 37,
+              "precision": 0.10344827586206896,
+              "recall": 0.075,
+              "F1": 0.08695652173913043
+            }
+          },
+          "macro": {
+            "precision": 0.05172413793103448,
+            "recall": 0.0375,
+            "F1": 0.043478260869565216
+          },
+          "micro": {
+            "precision": 0.10344827586206896,
+            "recall": 0.0375,
+            "F1": 0.05504587155963303
+          },
+          "ground_truth": 80,
+          "predictions": 29,
+          "true_positives": 3,
+          "false_positives": 26,
+          "false_negatives": 77
+        },
+        "20261021_robot_ball_moving_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 39,
+              "true_positives": 39,
+              "false_positives": 0,
+              "false_negatives": 1,
+              "precision": 1.0,
+              "recall": 0.975,
+              "F1": 0.9873417721518987
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 39,
+              "true_positives": 0,
+              "false_positives": 39,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.4875,
+            "F1": 0.49367088607594933
+          },
+          "micro": {
+            "precision": 0.5,
+            "recall": 0.4875,
+            "F1": 0.49367088607594933
+          },
+          "ground_truth": 80,
+          "predictions": 78,
+          "true_positives": 39,
+          "false_positives": 39,
+          "false_negatives": 41
+        },
+        "20261021_ball_moving_candidate_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 2,
+              "true_positives": 0,
+              "false_positives": 2,
+              "false_negatives": 0,
+              "precision": 0.0,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "micro": {
+            "precision": 0.9523809523809523,
+            "recall": 1.0,
+            "F1": 0.975609756097561
+          },
+          "ground_truth": 40,
+          "predictions": 42,
+          "true_positives": 40,
+          "false_positives": 2,
+          "false_negatives": 0
+        },
+        "20261021_all_three_position_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 2,
+              "true_positives": 2,
+              "false_positives": 0,
+              "false_negatives": 8,
+              "precision": 1.0,
+              "recall": 0.2,
+              "F1": 0.33333333333333337
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.39999999999999997,
+            "F1": 0.4444444444444445
+          },
+          "micro": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "F1": 0.5714285714285715
+          },
+          "ground_truth": 30,
+          "predictions": 12,
+          "true_positives": 12,
+          "false_positives": 0,
+          "false_negatives": 18
+        },
+        "20261021_all_three_position_02": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 20,
+              "true_positives": 10,
+              "false_positives": 10,
+              "false_negatives": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "F1": 0.6666666666666666
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "F1": 0.5555555555555555
+          },
+          "micro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "F1": 0.6666666666666666
+          },
+          "ground_truth": 30,
+          "predictions": 30,
+          "true_positives": 20,
+          "false_positives": 10,
+          "false_negatives": 10
+        },
+        "20261021_all_three_position_03": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 22,
+              "true_positives": 10,
+              "false_positives": 12,
+              "false_negatives": 0,
+              "precision": 0.45454545454545453,
+              "recall": 1.0,
+              "F1": 0.625
+            }
+          },
+          "macro": {
+            "precision": 0.48484848484848486,
+            "recall": 0.6666666666666666,
+            "F1": 0.5416666666666666
+          },
+          "micro": {
+            "precision": 0.625,
+            "recall": 0.6666666666666666,
+            "F1": 0.6451612903225806
+          },
+          "ground_truth": 30,
+          "predictions": 32,
+          "true_positives": 20,
+          "false_positives": 12,
+          "false_negatives": 10
+        },
+        "20261021_all_three_position_04": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 20,
+              "true_positives": 10,
+              "false_positives": 10,
+              "false_negatives": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "F1": 0.6666666666666666
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 0,
+              "false_positives": 10,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "F1": 0.5555555555555555
+          },
+          "micro": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "F1": 0.5714285714285715
+          },
+          "ground_truth": 30,
+          "predictions": 40,
+          "true_positives": 20,
+          "false_positives": 20,
+          "false_negatives": 10
+        },
+        "20261021_negative_candidate_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "micro": {
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "ground_truth": 0,
+          "predictions": 0,
+          "true_positives": 0,
+          "false_positives": 0,
+          "false_negatives": 0
+        },
+        "20261021_gawang_ball_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "micro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "ground_truth": 80,
+          "predictions": 80,
+          "true_positives": 80,
+          "false_positives": 0,
+          "false_negatives": 0
+        },
+        "20261021_all_three_position_05": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 16,
+              "true_positives": 0,
+              "false_positives": 16,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "F1": 0.3333333333333333
+          },
+          "micro": {
+            "precision": 0.38461538461538464,
+            "recall": 0.3333333333333333,
+            "F1": 0.3571428571428571
+          },
+          "ground_truth": 30,
+          "predictions": 26,
+          "true_positives": 10,
+          "false_positives": 16,
+          "false_negatives": 20
+        }
+      }
+    },
+    "supervised": {
+      "primary": {
+        "ap": {
+          "mAP50": 0.6715538041680523,
+          "mAP50-95": 0.4194631451276025,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.8149969756303861
+            },
+            "gawang": {
+              "mAP50": 0.7321252946714434,
+              "mAP50-95": 0.3061639152744795
+            },
+            "robot": {
+              "mAP50": 0.2875361178327136,
+              "mAP50-95": 0.1372285444779421
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 160,
+              "predictions": 164,
+              "true_positives": 159,
+              "false_positives": 5,
+              "false_negatives": 1,
+              "precision": 0.9695121951219512,
+              "recall": 0.99375,
+              "F1": 0.9814814814814815
+            },
+            "gawang": {
+              "ground_truth": 80,
+              "predictions": 20,
+              "true_positives": 20,
+              "false_positives": 0,
+              "false_negatives": 60,
+              "precision": 1.0,
+              "recall": 0.25,
+              "F1": 0.4
+            },
+            "robot": {
+              "ground_truth": 160,
+              "predictions": 247,
+              "true_positives": 68,
+              "false_positives": 179,
+              "false_negatives": 92,
+              "precision": 0.27530364372469635,
+              "recall": 0.425,
+              "F1": 0.33415233415233414
+            }
+          },
+          "macro": {
+            "precision": 0.7482719462822159,
+            "recall": 0.55625,
+            "F1": 0.5718779385446052
+          },
+          "micro": {
+            "precision": 0.5730858468677494,
+            "recall": 0.6175,
+            "F1": 0.5944645006016848
+          },
+          "ground_truth": 400,
+          "predictions": 431,
+          "true_positives": 247,
+          "false_positives": 184,
+          "false_negatives": 153
+        }
+      },
+      "negative": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 0,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "gawang": {
+            "ground_truth": 0,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "robot": {
+            "ground_truth": 0,
+            "predictions": 12,
+            "true_positives": 0,
+            "false_positives": 12,
+            "false_negatives": 0,
+            "precision": 0.0,
+            "recall": null,
+            "F1": null
+          }
+        },
+        "macro": {
+          "precision": null,
+          "recall": null,
+          "F1": null
+        },
+        "micro": {
+          "precision": 0.0,
+          "recall": null,
+          "F1": null
+        },
+        "ground_truth": 0,
+        "predictions": 12,
+        "true_positives": 0,
+        "false_positives": 12,
+        "false_negatives": 0,
+        "frames_with_false_positive": 12
+      },
+      "partial": {
+        "ap": {
+          "mAP50": 0.5023986429887753,
+          "mAP50-95": 0.3336521676664509,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.7792412268047756
+            },
+            "gawang": {
+              "mAP50": 0.014695928966326018,
+              "mAP50-95": 0.006667187878110982
+            },
+            "robot": {
+              "mAP50": 0.4975,
+              "mAP50-95": 0.2150480883164662
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 50,
+              "predictions": 50,
+              "true_positives": 50,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 50,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 50,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 34,
+              "true_positives": 0,
+              "false_positives": 34,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "F1": 0.3333333333333333
+          },
+          "micro": {
+            "precision": 0.5952380952380952,
+            "recall": 0.45454545454545453,
+            "F1": 0.5154639175257733
+          },
+          "ground_truth": 110,
+          "predictions": 84,
+          "true_positives": 50,
+          "false_positives": 34,
+          "false_negatives": 60
+        }
+      },
+      "by_session": {
+        "20261021_robot_ball_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 52,
+              "true_positives": 19,
+              "false_positives": 33,
+              "false_negatives": 21,
+              "precision": 0.36538461538461536,
+              "recall": 0.475,
+              "F1": 0.4130434782608696
+            }
+          },
+          "macro": {
+            "precision": 0.6826923076923077,
+            "recall": 0.7375,
+            "F1": 0.7065217391304348
+          },
+          "micro": {
+            "precision": 0.6413043478260869,
+            "recall": 0.7375,
+            "F1": 0.686046511627907
+          },
+          "ground_truth": 80,
+          "predictions": 92,
+          "true_positives": 59,
+          "false_positives": 33,
+          "false_negatives": 21
+        },
+        "20261021_robot_gawang_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 72,
+              "true_positives": 21,
+              "false_positives": 51,
+              "false_negatives": 19,
+              "precision": 0.2916666666666667,
+              "recall": 0.525,
+              "F1": 0.37500000000000006
+            }
+          },
+          "macro": {
+            "precision": 0.14583333333333334,
+            "recall": 0.2625,
+            "F1": 0.18750000000000003
+          },
+          "micro": {
+            "precision": 0.2916666666666667,
+            "recall": 0.2625,
+            "F1": 0.27631578947368424
+          },
+          "ground_truth": 80,
+          "predictions": 72,
+          "true_positives": 21,
+          "false_positives": 51,
+          "false_negatives": 59
+        },
+        "20261021_robot_ball_moving_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 44,
+              "true_positives": 39,
+              "false_positives": 5,
+              "false_negatives": 1,
+              "precision": 0.8863636363636364,
+              "recall": 0.975,
+              "F1": 0.9285714285714285
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 41,
+              "true_positives": 0,
+              "false_positives": 41,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.4431818181818182,
+            "recall": 0.4875,
+            "F1": 0.46428571428571425
+          },
+          "micro": {
+            "precision": 0.4588235294117647,
+            "recall": 0.4875,
+            "F1": 0.4727272727272727
+          },
+          "ground_truth": 80,
+          "predictions": 85,
+          "true_positives": 39,
+          "false_positives": 46,
+          "false_negatives": 41
+        },
+        "20261021_ball_moving_candidate_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 3,
+              "true_positives": 0,
+              "false_positives": 3,
+              "false_negatives": 0,
+              "precision": 0.0,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "micro": {
+            "precision": 0.9302325581395349,
+            "recall": 1.0,
+            "F1": 0.963855421686747
+          },
+          "ground_truth": 40,
+          "predictions": 43,
+          "true_positives": 40,
+          "false_positives": 3,
+          "false_negatives": 0
+        },
+        "20261021_all_three_position_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 17,
+              "true_positives": 8,
+              "false_positives": 9,
+              "false_negatives": 2,
+              "precision": 0.47058823529411764,
+              "recall": 0.8,
+              "F1": 0.5925925925925927
+            }
+          },
+          "macro": {
+            "precision": 0.823529411764706,
+            "recall": 0.9333333333333332,
+            "F1": 0.8641975308641975
+          },
+          "micro": {
+            "precision": 0.7567567567567568,
+            "recall": 0.9333333333333333,
+            "F1": 0.835820895522388
+          },
+          "ground_truth": 30,
+          "predictions": 37,
+          "true_positives": 28,
+          "false_positives": 9,
+          "false_negatives": 2
+        },
+        "20261021_all_three_position_02": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 20,
+              "true_positives": 10,
+              "false_positives": 10,
+              "false_negatives": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "F1": 0.6666666666666666
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "F1": 0.5555555555555555
+          },
+          "micro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "F1": 0.6666666666666666
+          },
+          "ground_truth": 30,
+          "predictions": 30,
+          "true_positives": 20,
+          "false_positives": 10,
+          "false_negatives": 10
+        },
+        "20261021_all_three_position_03": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 20,
+              "true_positives": 10,
+              "false_positives": 10,
+              "false_negatives": 0,
+              "precision": 0.5,
+              "recall": 1.0,
+              "F1": 0.6666666666666666
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "F1": 0.5555555555555555
+          },
+          "micro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "F1": 0.6666666666666666
+          },
+          "ground_truth": 30,
+          "predictions": 30,
+          "true_positives": 20,
+          "false_positives": 10,
+          "false_negatives": 10
+        },
+        "20261021_all_three_position_04": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 0,
+              "false_positives": 10,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "F1": 0.6666666666666666
+          },
+          "micro": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "F1": 0.6666666666666666
+          },
+          "ground_truth": 30,
+          "predictions": 30,
+          "true_positives": 20,
+          "false_positives": 10,
+          "false_negatives": 10
+        },
+        "20261021_negative_candidate_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "gawang": {
+              "ground_truth": 0,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": null,
+              "recall": null,
+              "F1": null
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 12,
+              "true_positives": 0,
+              "false_positives": 12,
+              "false_negatives": 0,
+              "precision": 0.0,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": null,
+            "recall": null,
+            "F1": null
+          },
+          "micro": {
+            "precision": 0.0,
+            "recall": null,
+            "F1": null
+          },
+          "ground_truth": 0,
+          "predictions": 12,
+          "true_positives": 0,
+          "false_positives": 12,
+          "false_negatives": 0
+        },
+        "20261021_gawang_ball_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 0,
+              "predictions": 24,
+              "true_positives": 0,
+              "false_positives": 24,
+              "false_negatives": 0,
+              "precision": 0.0,
+              "recall": null,
+              "F1": null
+            }
+          },
+          "macro": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "F1": 0.5
+          },
+          "micro": {
+            "precision": 0.625,
+            "recall": 0.5,
+            "F1": 0.5555555555555556
+          },
+          "ground_truth": 80,
+          "predictions": 64,
+          "true_positives": 40,
+          "false_positives": 24,
+          "false_negatives": 40
+        },
+        "20261021_all_three_position_05": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 10,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 10,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 10,
+              "predictions": 10,
+              "true_positives": 0,
+              "false_positives": 10,
+              "false_negatives": 10,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            }
+          },
+          "macro": {
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "F1": 0.3333333333333333
+          },
+          "micro": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "F1": 0.4
+          },
+          "ground_truth": 30,
+          "predictions": 20,
+          "true_positives": 10,
+          "false_positives": 10,
+          "false_negatives": 20
+        }
+      }
+    }
+  }
+}

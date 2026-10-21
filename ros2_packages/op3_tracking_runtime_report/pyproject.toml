@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "op3-tracking-runtime-report"
+version = "0.1.0"
+description = "Summarize recorded OP3 live detection and tracking logs"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26", "matplotlib>=3.8"]
+
+[tool.setuptools]
+packages = ["op3_tracking_runtime_report"]

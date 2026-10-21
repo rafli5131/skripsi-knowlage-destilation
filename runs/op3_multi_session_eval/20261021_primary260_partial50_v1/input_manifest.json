@@ -1,0 +1,2578 @@
+{
+  "sessions": {
+    "20261021_robot_ball_01": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01",
+      "image_count": 40,
+      "review_log_sha256": "387d246195661f6bd30ec0dfcd16ccaabf04bbda2ff4355a0f4c6eb890ff577b"
+    },
+    "20261021_robot_gawang_01": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01",
+      "image_count": 40,
+      "review_log_sha256": "b6b3f02fd548567c754e1bfa8434d91b36a6119357379b2788181aa587bc935b"
+    },
+    "20261021_robot_ball_moving_01": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01",
+      "image_count": 40,
+      "review_log_sha256": "7e619d710d0d76cf91b4fff87d6f1d37a955b136bcd3730c0f11a5d38a60670a"
+    },
+    "20261021_ball_moving_candidate_01": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01",
+      "image_count": 40,
+      "review_log_sha256": "8a2ac3d4a07b10fcdb0031c8d8baa29715bec0e558f00cb62bbce4d9fd8bf0d5"
+    },
+    "20261021_all_three_position_01": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01",
+      "image_count": 10,
+      "review_log_sha256": "40bcc89dc8675e5d57d231a9e11978cae9ca0c69fc1796129a6b6ab6a66e321c"
+    },
+    "20261021_all_three_position_02": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02",
+      "image_count": 10,
+      "review_log_sha256": "58d100cd54a9656f861af814826822015033d59ceec27b28f910a27d22ec7447"
+    },
+    "20261021_all_three_position_03": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03",
+      "image_count": 10,
+      "review_log_sha256": "89327b0d082911335ed23e7c5f5848186229248ee73d023a8cce762adf97adce"
+    },
+    "20261021_all_three_position_04": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04",
+      "image_count": 10,
+      "review_log_sha256": "3b1c3d1cd6820cd07a55e8e91573b10326040155ba1c9b200d769edba0fdcc99"
+    },
+    "20261021_negative_candidate_01": {
+      "role": "negative",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01",
+      "image_count": 60,
+      "review_log_sha256": "f9594209f66d027f3b47ea6721710104fc6683aa54280ae61763a4fb66e40443"
+    },
+    "20261021_gawang_ball_01": {
+      "role": "partial",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01",
+      "image_count": 40,
+      "review_log_sha256": "8d5978343696db43e7b2a20142acad06d27f524141548c74af1614145159d1e8"
+    },
+    "20261021_all_three_position_05": {
+      "role": "partial",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05",
+      "image_count": 10,
+      "review_log_sha256": "3c2cfa770ae3bb68ea793ef5f198658326627d6b3ca31dbe28221f38a982a29f"
+    }
+  },
+  "frames": {
+    "20261021_robot_ball_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000001.jpg",
+      "image_sha256": "7d0a783bdada2b1fe8e8a43bc0440bd5cb96ef38c398e4b4f37ba8c8b1a9f7b1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "c1401d7178df64c651061a4ab9df8de032d82d8de5e63842b51755d111ebcc34",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000002.jpg",
+      "image_sha256": "3ba8840ea6ef0c3e713f6e5b31dec9d9ef6857ae5186af2c2e1a44241e25ddc1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "51afb272ed58d6390d979826ef1bfa4b7945e8bc53f983c9ff058363c7dbb65e",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000003.jpg",
+      "image_sha256": "90bf50903cfc52d5a1032ff4d3bd4fface306959c00b9ffd62c58df9b408a8c6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "db2c5c8e4dc0062fb0e2b9d36f27ddf9ce5abd2e358e48f0c2721580375c394c",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000004.jpg",
+      "image_sha256": "5e1ded664adb6d5adef851e70cc6a458872051c1d4cdedc28e7f2c0bd34ce1f0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "b272678e675acda5e2bcb1e19bf9272023d9994c040e21b7e9f81a6775a6094b",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000005.jpg",
+      "image_sha256": "9a72d56e5626b0bcd04310f217133a725e67bf14334875d51724d5ce42bfff8c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "0014a027d719a06efeca4d6a376fc51117356471c29ed7d297a888b6a352e1d1",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000006.jpg",
+      "image_sha256": "5cc6bc7d511f600819468f2817f3c9c6b5e986e508b5b651c17aff81d109ce75",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "429347412eb07c7516c1fd1783ea3b0328ba77b889899d98c273e900ba714297",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000007.jpg",
+      "image_sha256": "8e0579671f63299aaeee1a11fbea84e3339c926f032033a7c1e1197a787482bd",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "689610b71aba6717d55c07d1182200d60cc09f175287ff8fea958adbcc03648b",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000008.jpg",
+      "image_sha256": "06b801f00f1d9e102558dd0a0c613cdd395dd753c1f3ce096c53f7a38898fc62",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "cc760854a9ea4f8f0c711f14b73cd3b3f31802fc3cb9fd83d7f5d87b2f8cdb5f",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000009.jpg",
+      "image_sha256": "428cd6abc13663e89c35caf8a6789e8b2697941a36ec2f2d3c21f7c6303c1830",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "84c1bb7c8e037b32792c58a8dab52785e39c7b8749cfc9fc75bfdefe6d8977be",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000010.jpg",
+      "image_sha256": "7b51840d0b2520e5fe719bf079404df764f597bd5a092648f3c272536482ec80",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "534add8d791600bbd3549cf328fb70817d4b61237a593667735c066a90e08b15",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000011.jpg",
+      "image_sha256": "eabdc2f1063acbd37af5cfdbeca806273e2e8c727e312a845d631a2f51a6d90e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "b1d20710aeb226f3f86946fd5f1c75f5e43dcb819ad7b16c258cf593cdcb9b03",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000012.jpg",
+      "image_sha256": "6c967d577784374b416a5fc5e79112234b5cd4479dfacd267e3caed5a59bee47",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "937ed74f8c0f2bb76b01b6f337a3bc8e0039ca51b0d55eda1c2131c702eb0918",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000013.jpg",
+      "image_sha256": "f7f7b843394b13dad6e32926451cd72dab067e3ce681c9c5eea1a49887140f29",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "44e06ca4386b081486041fa08f0b058a5385002d3d9f136da8accb78e93007c5",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000014.jpg",
+      "image_sha256": "9b685c7dc895a1229fc32e11e2947086d7e5779a2e177b4697ee7ff96aa67eab",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "292acd2224b7eed9ee05906e6864ad57a1b8493bc1f34f64bce5f18474cce301",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000015.jpg",
+      "image_sha256": "b9965510ebf2233fb26d8559d22081671be815c95bf223cd3271ab3aa809ec12",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "8599fd35e95eef823c3cd0bae77ea23daa9b8f4fd395b22ac4eebe6a233889da",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000016.jpg",
+      "image_sha256": "99be9ea7ea018c9c684c171e37b4d5329946d090548414ecd573b969936a9805",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "ffd8f07b0f25d972dfd8cdfef43301f3b4fc584369a3b2144a64ac26f6a4df11",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000017.jpg",
+      "image_sha256": "c2cdbbc88b207581f004bf5290e08c1320869a595a9ad9b5a0450e1617266d50",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "40bf114b31421dfe2d77c889e43bd3f9574c1e9f4c04071e533c2c9a175c4577",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000018.jpg",
+      "image_sha256": "5c6617821a32498f5182184f4e18d8f3cf53e1b4fd4d7ffd567a8fc8ebe17821",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "31c0bf5f52d85e987216c5d81f7ef33e4067d51efc92d61f1afaff50bd89bd98",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000019.jpg",
+      "image_sha256": "f0f9853d259fc8a4376862b633d54e05499fb4bff6897eb14d79f872ac0e2c2f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "05073194cacc5d28078464f3e5f73da903ba4741252c7957560212d8d4d1dc3c",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000020.jpg",
+      "image_sha256": "ed40ae9d6bbddffda2029dd8900d4914cc885f66f40f6f19ae56c0dc3e71fb7c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "998c44334fae6c293da14f7b823d3dd5fb333882b006429dccac99ba23c04f0a",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000021.jpg",
+      "image_sha256": "d9c443a4b00c77d980849b553e425505e351c01b6ea36ed77c8490350e80892e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "e8312602a231caa9fd8ef4abc09b968b6b3579afd44488517e8cf193108ad9da",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000022.jpg",
+      "image_sha256": "f02adcf699afc04bac5bc49845b9006b491647264ea04e176f390cbb4b428b10",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "ed34cf843172a26c683da71978d6a46f6dfa481e0f3f68c60aa34a6e70a5df03",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000023.jpg",
+      "image_sha256": "9e3e9e6b737596476a72f96108d709b95db71e505ba58a798a86f1269dc737c9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "399635285d546504a2d373eb8f5f20d722e4d99c137dac80b4dd91a61feef3b5",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000024.jpg",
+      "image_sha256": "3f00d6477c6c1836672921ecb6d5a4dd85976d9780e6e1da1ac5c866253e725e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "258cef8563187d0fa46fc7956e10c18e6879543aac86450f2259b33d5b7a3775",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000025.jpg",
+      "image_sha256": "f2559a8d6083003fd0068aa4d4dbf91303f12dbbeb2f0699b92f6ebc788259ba",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "037d88a891a1fce52b4a66b4062bb6532600056ca664efdbb1b4aa75544fc098",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000026.jpg",
+      "image_sha256": "ccdba8c4cd2e96049a6a4d3bc6b3dad43ecd2e9c021c70dd0e4ecb7970e9d345",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "98a0fa20da3b2d1de0aedcb2bb3dcfc7057a7d185836f4a042f25173889645ac",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000027.jpg",
+      "image_sha256": "53aeb72f6f63e93f6d3a779ee49f9964db493aa1168e24bb3acdb2b4bea0b2dd",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "d0c80a8e6a9c503c85e97aa40e1caccae3800c13a655f8631a2b57d0e0c2cc84",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000028.jpg",
+      "image_sha256": "902262492a2f0c4161d8a76db1ddbdba8104d33b1e106274e2559c8247e03267",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "ea13d9ec9ae62c337776c7e77b3a820c1f26ed9f1d8a8ea0e94a8e18428fd71a",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000029.jpg",
+      "image_sha256": "8e835f803cd07938a45d84c71b9f44b5355418db9b7e2267d89f2967a7afa99d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "cad00c44b46460befd55466256989293f3a1c33642ce3f15429d0cd56d1439ae",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000030.jpg",
+      "image_sha256": "21a887523da5bea6a169f1d25f2e04ef45b28df1cac622ada4f4c1fff3610b72",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "799fa1a49838d0eaa42a9cea138b0cce753e87665eab6fe0a7427d76c0bc86cf",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000031.jpg",
+      "image_sha256": "7e5de264f1fd951bf1c91fc04449d42b471554477a11412d633b3cf97b6e1c8d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "aa2caa8228aed859724478d9b141a999bd0205b33095dd3930958f9c02b37e45",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000032.jpg",
+      "image_sha256": "7d35ce63f699ae76f0ed4f74255fe34c8f693db1bc6e9e4940aed56b420e3910",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "b28b85f354c56b6fb1c7fe6dc235e31f903c755be6211d104dccb998045e149a",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000033.jpg",
+      "image_sha256": "f7f978ebb1ffe214b54eabacb6fcf50bcb6a064068fc95845c855e8a1438d544",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "5057d37c1e0e4169adb1434a271c093b232efc2b2d2f831ef1b73ffa63a36927",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000034.jpg",
+      "image_sha256": "b1af65759c68e6e0ae45e87a5e551119830d51bcf8a2e330d4d2bf8ead28df32",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "39813d52e5a5277a72f3213ba598ca4cbf92919aa63dbddc6efd08400603705b",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000035.jpg",
+      "image_sha256": "184eaf4672aa5404d71daaca3654c32399eddd04632860e79165077b186fc8d6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "4d9dd2b9d90d9a297b8c7ccf251c85682b48b7a1fda4bb5714c8e5fbc09c420a",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000036.jpg",
+      "image_sha256": "bd1e00f9c9830aff4e8e551da98629e8db48cea238573146ff96a7adf78f1f8a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "8e621436c45829326c21780dcdd4b1fe523304141073fed67db177ca8e3bdc03",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000037.jpg",
+      "image_sha256": "734d18f27b652d4c3f25682ddcab28b2be7fe68a2268a0a4f74498ea02d36d14",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "138ae13617f02ad2f407b7f5d7413c1856b7c85462b8c9d6c941a9d15e90d4ef",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000038.jpg",
+      "image_sha256": "8a17afc3dbeac99953ecc2949c68e3c9be9d7e1672119921d1604e4d57b104eb",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "d97fbfb6f5608997658fcd7131e5551c30c0e78c18ae81911a1e11f3f0a569a0",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000039.jpg",
+      "image_sha256": "f616792986f7fd8346ee399f0702e19545d33c9d090a97fc7059ba14ca200d6f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "329039512454b77dad29afeca1725d8ad488d9033efef985bb12cadd552c8e93",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_ball_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/images/frame_000040.jpg",
+      "image_sha256": "95289c9da92f2ee3ee14154aea75a4037b321d4799fbb25281f85f6a05767516",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "b5d9b6eea83de9a6b8270c6ab65a2c8fd86863aa379465bec6bcd916eb8c7be6",
+      "role": "primary",
+      "session": "20261021_robot_ball_01"
+    },
+    "20261021_robot_gawang_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000001.jpg",
+      "image_sha256": "e0ed0cb90ae6c3a98a94c1890a7fd1a0b88c212f2afd30a2e56f7416e3e4db56",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "cd762679c3242f2522e11533e2244037cfb64187b906c95a22ab77c5e31a087c",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000002.jpg",
+      "image_sha256": "3c3e6d089bae85c2626ad01bb126424bccce2f3c806864c1cdc1475d26549f33",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "6db6eabfeffd1deef2e5d9f9f848e67b95002d07faee5ef2e86c08b9ace80000",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000003.jpg",
+      "image_sha256": "f605a1766f8bdf84cb39eb8ab3c7b5cc6a6524da4b85b06a80ab10437b713004",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "20cda5b2f391851142b7239c2a84b83be4f36d67fe73b9dd4dfa5b4cd4a91486",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000004.jpg",
+      "image_sha256": "33b7495600deda7c71740ef5ad0c44b0f9e5ca35e867ea1dc797063664ef2c8e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "583f221926cc7fb3f4ee1b20b2bdcbfd5e9daa6489c4b8a3bb5c7765920f25cd",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000005.jpg",
+      "image_sha256": "743b6f1fb881d66a33f81955d3fe79b3388034480ba2bfdaa45f9756c5560787",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "6019de7fb567c38fa385d6a626bae6506a2046e3863ac54eaf5bb8a66b0ebacc",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000006.jpg",
+      "image_sha256": "d523be6a53fe79791e6d8f09c7aa08ddb266695a42dece56ac0cde11b57abaaa",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "d9e16be4562d2d6c2218f649e9323d9576c6de9249c8866006af6019ac637d4e",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000007.jpg",
+      "image_sha256": "36d8cb572e4d19846651ae08003839b583e4b0ff5a729b2978d5bdc16d09415e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "e99e1acf20c86e99aad7add1fbf1b4e97dde39c50f1c84ace3d83bc8562f3806",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000008.jpg",
+      "image_sha256": "eb5a59349e95ac886d0e81ccc22fe7c5eb3310850174608a866cbfb73e687586",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "7c46394af15449ef0143ea2cb41eff93cedcd08ffb2d67e25fa40eb025491114",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000009.jpg",
+      "image_sha256": "8439c0b05ccf1b5e73236e610270cba7966b47f6719a525d1ff53f08dfd520c5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "14912420b48b4619067a6b5aee7da560b25c35af24d39632c9b84022cfd19c90",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000010.jpg",
+      "image_sha256": "4f75a1737ea61a2439185876cd2f12ef468997760612261496c9140597d695b6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "c3c9edad8787c9101b3bd67efeb035f47ff815332395d53cf51d19cccbdabddb",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000011.jpg",
+      "image_sha256": "0ca6a2bb21a21fd4672a68ef679628704b48140f8e79658759d7765f452a9a86",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "80f2cac1d2c289101fef0163f10d05dd5384616dd292c14e7839a66c18a81139",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000012.jpg",
+      "image_sha256": "84a0bd7dc07182427e80cb844ad298cb1101da0079fae1382d7b421c8872864f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "aad86a3580317010b50aa18a068dc19e24d2a18292d03c12d81b9769271c2870",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000013.jpg",
+      "image_sha256": "b1cc68693d0162a7a2f7de53f0906a2cb2630aa2a491dc0862535381e4eea177",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "22dd992362d59430f580c174a630a65d4219097c888e542bd8aec71cfab8e3af",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000014.jpg",
+      "image_sha256": "747019b5095d16ffe9bbacf3c4f899e7062956f4f822a1a1ebed453ee6e098a9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "5738f406d353acfb921be10eea5e971f3f0eaa9931997f5a221acb7eaaf5228c",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000015.jpg",
+      "image_sha256": "524eceb52b6dc86305b08164206a375b8b228acb2ae6f48e9fc160a8685202f5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "722b6d995d4bdaea72f9c918f6386e65dc748a782ca53c2ca3dbcce0bfff233d",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000016.jpg",
+      "image_sha256": "580a4ef4f009feae1412af42547127e8edfd02b884e00afaf50f1c8c5830145d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "a2851aa6994d714531e36cbd37d61e301803cf3b597bbe6ccc94afa692b429e0",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000017.jpg",
+      "image_sha256": "61f0cb473d01a4737564440748a01fee260916fc02171bcda38a86d7af37afb5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "309fcd06cacbd550ce803ea2dc7a73354de54c4cd69dd57b893d27e48f03e37c",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000018.jpg",
+      "image_sha256": "588cdbba109026b6cafc02cd3967a65918388b7a66a33d7415f12140c7221e40",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "1633ed8f0513da6ce95db9cce73466ac72ae0bf7eea181cd8e3b404b96949fa9",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000019.jpg",
+      "image_sha256": "6f18315aff4a40b3d4d020271c7b62eaf9c38368473f998eb3092efb533120ee",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "57e2f47379cf3a2bfb20db76db48eacb96b3e53e14af29e8247f53f3f3dacc59",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000020.jpg",
+      "image_sha256": "0b8be58e773261bd8bebc5e3f8425139b559bdfb474771e5b82d236426601708",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "67fc5be4851b7affd8279d3f4063c9f4d8b895384d9d4dcb6c1e84b2c6b467a1",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000021.jpg",
+      "image_sha256": "7d0fca1eaae873b6e625df37fd50e07c77781fd081598eb7808afd074eec4cb7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "5fe7bf1edf1a7b041fe7d53ec56a8ff6019421a887232aa98993cf6a28a2e15b",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000022.jpg",
+      "image_sha256": "c8f8c8371c6b46b8661ee52f590fb829e402cce61169302776c7f6b6299dbcf5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "6bfac81d07ac4ed640f2ec7d94f63885ce1690c72280b9d8a72e86a3439533f1",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000023.jpg",
+      "image_sha256": "5ee02c271fdf9881e783be3ee721376104cdc3d85ca46f5eb7856f03c933ebbb",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "bdd55fa1561bc028a3d6186221de0324f95fec1a85ab173a15a87ddcc9c497a5",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000024.jpg",
+      "image_sha256": "c1642d1cab7717ca1bb0a193e02ef80e438eab619fd5f7b87b50e7938623d5c2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "74cdb698cee88326726ada4a251854664b84534166d42a91acb6236ae9006313",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000025.jpg",
+      "image_sha256": "66c19fe8f3f01e8946471038f7a645f3803dad6284e8650ba72e06513c3d7a3f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "a484ce99ab1eb00e418b6d614d5f71f911912f4e371a26033a2e11251f2c3e41",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000026.jpg",
+      "image_sha256": "dff6571e48c606deea7bb4f23492a25bce30f364e2570044142f68405f3e4565",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "0eb46b86e8ea16afce5074af47c1f47b85e4f170e0f27f516e6a372d8a93b29a",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000027.jpg",
+      "image_sha256": "b78a3b9682d16ef2f2a7c04ee0939db4c3dbb371cd5f3da068a8333908f9f667",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "e77746d710a5157fc562d7ec86b5c95eb707cb151d744b796226b3cc411ad42f",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000028.jpg",
+      "image_sha256": "fa00f44c13f01e9baf112643de448bd5a5e4bfc3868fc10353c6dd6a24eb116d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "171ccddf42b7c2245840f297424737fa6fb1f4e38090c26c9f3cbc619c2d5353",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000029.jpg",
+      "image_sha256": "4bdcf725b65c5eb2c55989fae941bb316263d71cbfebd27f816cb883742a2ad0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "6bf50080071a0a98bcb2876d8d3f980a8346c99951689887fb7ac4e1a31506df",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000030.jpg",
+      "image_sha256": "7950d14e27e8efa2bf9d503b1759f65765ba7d04159f9aaba4f4a5344f5a527a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "4ebf15bf47aeeeec0ac42b03fdde12933263a7b140a8c25e66931b6ee193bdad",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000031.jpg",
+      "image_sha256": "5fabaa6e44536731c507d60ea5a72f14dfb97126e1409bf6d2937e52444cb9dc",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "23c3445875842540c2dc6655dd68a177b7c38a6b049a74086ff9e56248f8b246",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000032.jpg",
+      "image_sha256": "f894950930e80279f02b54728775f99e028e2a49af497c0a6f6b11b2e0786644",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "838726a03d546f3391f21f607e9b9798a5a9c24a06d1ee43821b978bb837d586",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000033.jpg",
+      "image_sha256": "b1d1ae5a42e1e27d599b01ec3b4962dc8ffceb98b9b0b96ec2a49caef757b63c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "e29e3961555a36dcb5a72402671d01ff8e34a4cffd6f2396a8f1b2f4cfc82fbb",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000034.jpg",
+      "image_sha256": "28274b8369392d923ec04ff7e49a963ee5caed58a124a515ee1363d14fe35480",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "ecd800cef3f6678dd4f5ed2d46899fd7f643753962e2db065b0b2113ab03feab",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000035.jpg",
+      "image_sha256": "5bfdd56cce73cb187f2d78e5a74a39301c7fadd9df9aecf21d32907b9ef86d85",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "b47c6ed9a38df80c0e779d6032bb49ea316683398c380a809b687cafd6bb91b7",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000036.jpg",
+      "image_sha256": "f573b10db5eaae220fbea5781af26b2b4e0d65e99243bbbe3c4782a46b3a14c3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "ef86bcd1428a62f1d78e60a068cdde91b05f7a956847d288eeea7050311ea3f1",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000037.jpg",
+      "image_sha256": "581c3172ff927ab3ded1e09c3927b5f71f8f65df69946f2fe7d8fdb362e0a3e3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "04b51afeac9154998f367c99d4d014e8ac6bd7c784744bd5a7192cf4f6e05b17",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000038.jpg",
+      "image_sha256": "407670088dbdd781b7ce8036951f157ee19da9555bf8eef20b2a080b303b1db7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "ee9123d7dc7e0906d36a007adfe628ed905e9334889d685ae9cc610ed901947f",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000039.jpg",
+      "image_sha256": "ca54c644f3871f260869bdee9eed927fc84b17425148cf86316d7fa94092ccec",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "d9896cca562ee3b32b05db969c9b6439cd2f627c0a8a0cdfb52b0faff2b1d7d5",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_gawang_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/images/frame_000040.jpg",
+      "image_sha256": "9c3c0fe6ab541c8300415ccc74cb67da1d6789df4c5353deca347d889d91cdc0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "3b1e08f5bd2592053b9f036c302d6aafe7dce16302221eabd46e8aeaed72e7e9",
+      "role": "primary",
+      "session": "20261021_robot_gawang_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000001.jpg",
+      "image_sha256": "fe5fefe6b5cddc92a0c92ce771efd1feee957c52767a2acaf84921fa80340218",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "a173887538de73896310258ece2f536ea8aa41b6dfa4548578a8567787b7f191",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000002.jpg",
+      "image_sha256": "17d1019868566c7d0bac78657ec065257693d42e5ceb899953843296c1785c4d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "856b1f5e952e7a479130253f8671a00e422a82ebb5e57280584ed51bd63c28af",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000003.jpg",
+      "image_sha256": "3d8d21da13998bf8ea99cc702c0694a8dc0d37cab156f8f99226dc55a632908b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "55d910788fc901a29f2bac1b5c6d8f0fa9a8f0ecb6698948358659fa3cfa9aa9",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000004.jpg",
+      "image_sha256": "9f0688cad3e696479e4a7e7f5baba98880ada032ba051d2f17b5c135b8138143",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "25ca1200162b0dfcd6e641a15d477a0b36e179a996fdab2f980518e68d15e95d",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000005.jpg",
+      "image_sha256": "42e703e83a3794dd50d894fef51c16eb8db11859a09b5fe5a380a68794bc8d5e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "7ad611fa0a205bc44e932fc49b892b11f5d4999afabc9f1614e8410463625323",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000006.jpg",
+      "image_sha256": "3db9444c04c9c5ebbe1e54eeb14cfb153ca2462d02d88d4e96dc115e7bddf2b6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "75c1f52f92e2b6cdfacee84d54890d1653f1fd844c4d54a1e0d6956f4fe51731",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000007.jpg",
+      "image_sha256": "e74aa565ade06f7a5a6f011f13d184c08c035ea504ffe27b995962ab05f291bd",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "0671288c3b174f9dede59ecb8e93edf694cf9f99fba549982b4b90921bb6a27a",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000008.jpg",
+      "image_sha256": "317b35047ca79b2d97f587357ec185a451342b5a3c2276caa05f92b4f0dd8f4e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "65a9fa4cddb64271d2c565b9c131a9e0d57ffee9716e1394b390d0f9c8b8f9a7",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000009.jpg",
+      "image_sha256": "bc2e874b137e736111a4e0eb2ff4b0f0bed0e9ca5bb1ff0befa5bd9021ca1837",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "13dea86890985ed9d691dbba69512560f23eed3299b0dc78e39168fe7f2ef5bc",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000010.jpg",
+      "image_sha256": "0c74bd92c07a3db9b8d16240238ebff6e1729a430ba1afbd77a82bff0cdf9142",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "d5d0d4267be65309c1e2dd91daf1eda9763f05fd8c32145eb33e75b5a4b3a13d",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000011.jpg",
+      "image_sha256": "8e7b9ec92e86db495e6fee55dff9e7010b1eb0158a3ac60444bd171a696614cc",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "7f865762da34b1011a4a795fe2572e58b7425600cdf5355f3a6a433a0e28b9bf",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000012.jpg",
+      "image_sha256": "9a2c4ea1d9011c38469aba056b647380f83ff8cdd8b0240865b5e0928b0425de",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "2807dd709dd5b9c73c6df546cadfcf86eaf6090f9b6e39c99dcdc19a7ef3a89d",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000013.jpg",
+      "image_sha256": "b5849b2efd9394c90c6a747c3524f0b8a9b246e66889a88373fd4a26c49b1bd1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "6baf2b89222edb3433b4cb5b9dbb3efe0d4976d0c8a8911bbeaa9034102d9635",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000014.jpg",
+      "image_sha256": "46dc223500d038988c0a4a0579aeff56b4e4c9b5207857fcf6f6ac5e9154af06",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "90bc963aa7b07e04e188aea9104b3f1b98c726b1b854c79bd25b2b48cf363f66",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000015.jpg",
+      "image_sha256": "a29ff832df57095e9c16d367d0d9ec1cb752bc75134aea6f89fca79b449a0f68",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "a615eb35761265e472a98e3de89be99561cf23fd652a57000fe71d3d561b96f4",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000016.jpg",
+      "image_sha256": "83e269947ebc9f343d236ece175a4287a6d5cdbe5ddf34b781a06ee02daf5d0f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "0c784c4aeb78e98967bc1ebb4f1d678d78ae8fe6250f004175ed2c85506dced3",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000017.jpg",
+      "image_sha256": "2879a1508f1a3ccfea25bfb045e9c77a9ab2477738c0fb89a462ae171afb61e6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "9b91e4f933ec31c93013af9269b651ba432c4bc92f048d9df96a16e319576527",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000018.jpg",
+      "image_sha256": "0e8f472a956feb3064abbfc82936b92da57601c3939e038ab65bf1bd81525b29",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "614c96c057a331a4b56781965007f9287cc1db96d15850fc8df650c6f9f1a8f8",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000019.jpg",
+      "image_sha256": "b7661f19c939a9d57f3b33044b195d490d42cbf5175a9383e060078854648f2d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "d2819908dfe159169ee6ab640fc6e0d71246c144e9066374415a277237b08684",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000020.jpg",
+      "image_sha256": "ccd9a49ccdddd2463783d8dc973f9f5dd78c67300cb56ed510b404fab6a42735",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "0c55248fc5c93f828b1891a68bb6d1397001c4a08e47df697d1239fd02eb3a20",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000021.jpg",
+      "image_sha256": "4eb897f990f2e13cbe1382a59e621ae209dc85e086494a062d5929a341e2297b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "59ea84bc053561f02420841b5db8a34eeceed0c8d86e50cf516d016d5b34d750",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000022.jpg",
+      "image_sha256": "59d80ebde9561644e0f4a83fa8c5ddabc8b2776cfb98ec87fde6028bb6dd073e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "ac9fee751e4c988fab048b8192caedd3e3f362b7becfefce69cc7d1f0449b313",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000023.jpg",
+      "image_sha256": "240fdca95d113d3facec0a1a4f9ff53a5392c6710ae21f2f9cb235ea8c48225f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "1cf398c391b4bf7622e8ba23c5e3f7ee3970f3a45d14684b8da69379590827b4",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000024.jpg",
+      "image_sha256": "70b73061baa3f846f40301e3b4d4d7a556a2042badf04d5528bd87b57ebad3f8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "535c131cb86c7f794fb93460c12efb359762b05d4ffc3a416b20684b930f2948",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000025.jpg",
+      "image_sha256": "f5e5d4f30a11f84a93de0089e707786196d151aee00137d065b75a46ea4e8c05",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "0f05b43e32e2e0fab70e78101cf585f94db394e60bf34dea1f52402f167b6a73",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000026.jpg",
+      "image_sha256": "dda80fd1832ad625ccd574efd5cc87756a3945881c64d6106289628f2baee9b0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "176e3f697c4f3a7b7733aa6093e8f470c2bdcdcf3e408cc34959802ae45adb93",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000027.jpg",
+      "image_sha256": "c90335d48e6605d02d3136ba3851a94fb6be126d986fcae4dec01386e33b85a1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "30e1e10508e83ab30f24c5e0e6528bdc96deb5f96fa306144d630f72a98f31e8",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000028.jpg",
+      "image_sha256": "1eabb25e7e67c505fb8ee0dafeaf3631c0d36b3f1b1fa2e46d9d69fa5982247f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "16743ff829a1dc741f4efff44c5e3ce2c2cd5d7b91c97ba36bbdeb8dd2514aeb",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000029.jpg",
+      "image_sha256": "868679795f85b57324275e547b926f7c071215486b412b8dd01ccbc678b25a1e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "84d9e10e8de69781320cf47a4eeb77c2b97277d8197fe47509c5efa03ffc18ee",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000030.jpg",
+      "image_sha256": "2abd1893b1682138b67ccb265ebb1190f393b8d40cf10f9d0606b30db14ed719",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "17e5c39e3952c0c261c3dc818072e0c1b83e18e20edde29b03a56888bed63512",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000031.jpg",
+      "image_sha256": "161753b3ecde066073a83aa70c2da446abe3e17e1696f80643e8581fd4163c04",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "dcf8f2c1d26fac13414868149e17bc85c4cea6bf730e5956f40c8291dd838941",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000032.jpg",
+      "image_sha256": "437f795c0629e3e807d78d101324c0e5460cc8186c1a9cc003cf87cfeb9b9561",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "1e2ae85f65ce4dbc82d0de063356fa024edb905a1cd9d01a72d958f4d2938bad",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000033.jpg",
+      "image_sha256": "04e3d2af04cd9c0e5a66039ad9d2819ff5edc8e04ace5f57fdf30f751f9b6df3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "431cd28b84bc85da42da105bf671ae0b0325a83d39911d88e0adbe06306326db",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000034.jpg",
+      "image_sha256": "c7f59455e2b61a4f13335f02b534167dcd4938c3398857bb7207791b07d8f025",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "89c2984084ed591820cea8db33a2200f80c67e50e94875cc7dd27fdb65f8945f",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000035.jpg",
+      "image_sha256": "a7ce31e9a98b86f18ccefd543e1ce5cf94e4a4438af1688bbe5bf2f54dcfb9f8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "b12394e5bbba81e7fe73ccbc6a71cf0be4a54968981da4e65f4a3351d44a1539",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000036.jpg",
+      "image_sha256": "6fb3931c15dc841ecadd3433e6d64249cfc05b4028c0a3080a551bac842d8422",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "4b249bd521029552672d94428aec4585297c5e8e9fee325ca0933d005c710e12",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000037.jpg",
+      "image_sha256": "b26cd46709958c78682c5e8442b06d04531cf919fa8ef89c866e4137508dcd4d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "0bcf280f6c6edda07cf06cacea9da01959898fe2606db724031bae5813eb32f9",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000038.jpg",
+      "image_sha256": "76ee2a599462ec63bb1a61dfecc2d07d79b2bd8a76198743617b631e54a19c63",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "ff77e7c0a9f5a4e8d0d375e614dd532132477ebd62b76f79988247baed7b15a8",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000039.jpg",
+      "image_sha256": "f1301b7a7cebdabd77bbe0b381cb7f875ac82998873f8753f7f7f7435bb77921",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "d1a985846b5fa9bff38895fa42443cb536b86f7fff613dfc4b789ba6b6a23350",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_robot_ball_moving_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/images/frame_000040.jpg",
+      "image_sha256": "2d6b425186101e8a288e2bcd07462ed37ae5f7770e488e6b01ae995c50f320a3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "e292fe0a3552d060899f79fade13646dc17f61a2b76e2b7cdbfad35956bcb8c1",
+      "role": "primary",
+      "session": "20261021_robot_ball_moving_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000001.jpg",
+      "image_sha256": "d73d678c4c1770f0a039405e365d65fda6004b723e082b2273ac936af84b2078",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "12aa2a4e1195b1b7fbd53dac06e0818538b8e27bdfaf16873ead55a73bf95fc2",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000002.jpg",
+      "image_sha256": "6cc7c6dd2af86e06db076c7f4e4512917e38df90a16cc2fc2d98f9c77a6afc86",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "12aa2a4e1195b1b7fbd53dac06e0818538b8e27bdfaf16873ead55a73bf95fc2",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000003.jpg",
+      "image_sha256": "397e3d4c1406f07ffd2f22eda8b4f12e2cdfadc3be8d0270303e070262871bb5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "12aa2a4e1195b1b7fbd53dac06e0818538b8e27bdfaf16873ead55a73bf95fc2",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000004.jpg",
+      "image_sha256": "fa76bb90c150609d7e25fb1308dd15ddff5177e08f3efbf3d6b0c1889c4a22c6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "164430f70772c16b525f6b626dc51caeaa5b9d4e3c0dec7adcdd871fba61a0dc",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000005.jpg",
+      "image_sha256": "7da600e4a72e2b1ea904f0e295bd367716514215d3a713db438271486dca11c5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "6b9ed90419cf8ec736c086a4da441e46364057f32798faf390bc2cdc525615da",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000006.jpg",
+      "image_sha256": "0e9ca42af88600abc703f7f063b5064ea3755711c983a4072375dfd6a574a468",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "6b9ed90419cf8ec736c086a4da441e46364057f32798faf390bc2cdc525615da",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000007.jpg",
+      "image_sha256": "7420ed97aafd159ac2786f2b19ddc79d4810ac241554aedaa73382b42428f050",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "6b9ed90419cf8ec736c086a4da441e46364057f32798faf390bc2cdc525615da",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000008.jpg",
+      "image_sha256": "64711c1d771b7334a5dad40441d5ddba0dfd30ecde5d662ec3ee828a24db1204",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "47af87f786a00c01c002f6bf82a4e86549ac064e05af82687ac96f0286f92541",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000009.jpg",
+      "image_sha256": "d955f090cdf82ab59d8d76752fe5078962afba57a6180d543586350f0041ec77",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "9e37dafc162c89b696461072701430b7f68f69df78de918c38bcf9c3a2a3b286",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000010.jpg",
+      "image_sha256": "ee718ec597f642747b0e0b4066d14e616b8f92520541aabcd37068116eabe1f2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "0c67611bbd9973935f08356d007c83e48fe5fd1ae9d916e8085cb5f539d3b6f1",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000011.jpg",
+      "image_sha256": "43436e44464fdc298071902223cac75b816e431a84ef4b11ae4a3eca5a0f91d7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "c3f72fad72305f151c18e637054d370e084401bbac09ad97bdc08a7645c11c4e",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000012.jpg",
+      "image_sha256": "b3798d3e0521339aa890df11bf67bc44b6e970acbc2f773ec97a83843b622e1b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "c3f72fad72305f151c18e637054d370e084401bbac09ad97bdc08a7645c11c4e",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000013.jpg",
+      "image_sha256": "2140f44f199cd5d587e3a756acf18d23139aa36dd9e7459594fa9bd68b576965",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "c3f72fad72305f151c18e637054d370e084401bbac09ad97bdc08a7645c11c4e",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000014.jpg",
+      "image_sha256": "54dc4fb4b4b845822fa9283a3f99aa2170dab47b23a6b58bfcf4776bb86be8f0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "15d073b7a4ee19d79ad466be8d2c60b163f5e5ebb8ab814c3af8008de019f329",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000015.jpg",
+      "image_sha256": "4fd3335be60179928a67418eb214da67010f73f16dea7f3a4cb4a4704114f00d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "7f28bd77d4e339508fd11d83a87cfb9b368ec1d51fb0bb97cac63da09f513679",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000016.jpg",
+      "image_sha256": "b33407436f47963ef4342487dab204a8da52a99981d2fea03c70e2c19e5a41f7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "6b1828407757964b1dbf9f846bde8a3f94af161b94d84ab3de8868f4b51f6c2e",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000017.jpg",
+      "image_sha256": "02bc5a61b238dbb0e094f1be3076f4e9d0a81f42e7a805604c254adc1daf04bf",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "bf21d33258b935879fd3798a4b1c560f954be6afdc5f41a2dd088c14d4287f73",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000018.jpg",
+      "image_sha256": "f2db4d7a56b3dc08194da581993905c3663a2ba3b98a5ed47799aea42e9628c8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "b308459df00c9be31ea8463432334f6fe07f878abcb32b330779a80ab9c55d7a",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000019.jpg",
+      "image_sha256": "9fda9fd8dab754f6c9c1ff162389ad6f637a759f4bec215b88b9634274e30dc4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "0486a6c559ea7589694a9715872ee1980dab88a6a3392fe9ab54fabd2ee16739",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000020.jpg",
+      "image_sha256": "3c46da55d622f71a2715b67cb4eb53bb62d720827c8019673459a9240671901e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "b8a9a1e300af7b7b7e2e081d86b6f4ae0aabb58c50cd58a5cb1c53a1e64bd866",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000021.jpg",
+      "image_sha256": "ae0ee389485703ac2c8ca06dc39268e926f5f0fe92791b0f7adb885695278d70",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "704c24773731eeba002bd3d0f0f58be9052bdde78b0905b9e38740242f3978d4",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000022.jpg",
+      "image_sha256": "fb665cd5ffe68951f65a4157e1f9a739b4b2f401ea6274b33ddc1648bc34ff41",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "09e58f6e47bf3df7656d54923bb6498bc6adcacf84bb4b88910414c68cdf6e9e",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000023.jpg",
+      "image_sha256": "20e78c4427cf12ff6fcc2f7b7cabcb95e27af2fc78aba12b2fe92c24d10b6b20",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "704c24773731eeba002bd3d0f0f58be9052bdde78b0905b9e38740242f3978d4",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000024.jpg",
+      "image_sha256": "4134a8e2d4d7a9cfa54d64cf8e6fd5c79ef108216fdb2ebcee2a5a0ad062d89a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "a39df018a26cd4c40bfa02ad54f5730b2f867d2045d84541e182519a6e3bc3a6",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000025.jpg",
+      "image_sha256": "4fcce969ac060c5f36af790341e5f2e1ff6b6b86a655ad49cb4d0e9d0f4c0456",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "704c24773731eeba002bd3d0f0f58be9052bdde78b0905b9e38740242f3978d4",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000026.jpg",
+      "image_sha256": "0871114bb44b64aca30259b8a34222fe1743cb0fc76c61c38ced0ee715b6fd21",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "704c24773731eeba002bd3d0f0f58be9052bdde78b0905b9e38740242f3978d4",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000027.jpg",
+      "image_sha256": "d4047ef0911378d35c9a1345a99eeb50744c4dc0a94bc996c44269d9b48ee8c4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "06adefb3cb3839c644132eba7b63d20ef9482faadfd778d95006507e24a636ac",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000028.jpg",
+      "image_sha256": "55c67554dc89f4bf52a5d38c5f1e469251603d6925e15263730b470dbf818b4d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "6e3d3384b45ffa5ca559fe0be7d4582169119059f4ed2787021c23022b2fbb91",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000029.jpg",
+      "image_sha256": "dff15c0af18132c4c12489d1d109fb755e85f7b58fcc425a07acfae26a03aefd",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "6e3d3384b45ffa5ca559fe0be7d4582169119059f4ed2787021c23022b2fbb91",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000030.jpg",
+      "image_sha256": "ac1d684751a9e35b0e7dbd87692375bd099625a03fa67efd1e6d1f9d00664b56",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "438a3be47f07a2c18db3efe457bcb6366ac1849d0ef0bb6418a0ca65d3bc59cd",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000031.jpg",
+      "image_sha256": "16819642da86cefca1e1c5fcc39198f74e7eb08d7099243ad936246c46765747",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "438a3be47f07a2c18db3efe457bcb6366ac1849d0ef0bb6418a0ca65d3bc59cd",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000032.jpg",
+      "image_sha256": "d44e50b22b6edc77746776b06e649491718ab11bff2babe7dbf29cceaaf574e2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "958f63659cc0af207695cd94d56f299b4b7a66d58d2e65a961a48206efec8f70",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000033.jpg",
+      "image_sha256": "1ea9f3222c7ec67cb980303120e934bbe87dfd2cba27ab10ba68f02c5c15baa0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "566a42899cfecbbc5c286767d087393a0463dce8030033e82c4fe28316374086",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000034.jpg",
+      "image_sha256": "6bc244677114ac5d5e633dcaa0e2aa1030f902bca0f396d1ab9fb1c37960b18c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "9cd1cc1efd0c2440961e765f26a37ef5193cdb7344b56f24aac9145d7d9e63e1",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000035.jpg",
+      "image_sha256": "8e98776d221ce4c93920fe4afaa38ace4afcddf6bea3bc4a0ee128721508825c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "266d2bba052a612485cc03e79b61e4a8b8bc2db97542b2e8187af7924d161732",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000036.jpg",
+      "image_sha256": "3edf90c9678591b9ef1b4ecf495321bbf9e22d27e5d05c2d7832fbc3a1cd390b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "9e191b8474ecca583fd7871d4bebb9d5ce6ab809530ac61b38f21658d5e45d5c",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000037.jpg",
+      "image_sha256": "95c960bfce5818a2b780708d3f576ba6307d767f82fac7ac6d7254b03698a898",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "0fc33d7b82d9e0324d769cc46d9dc886a1978e02ee1d34fe54ae1d07f62443f5",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000038.jpg",
+      "image_sha256": "ec3c895410d2e5484da61651755d7ef695d07dc08cb47d80494a72762d7e7ff3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "8f20d5956d29fdd302fff8210050be6611c8648c0f5b762f1d10c181c9ce828a",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000039.jpg",
+      "image_sha256": "e7011d2b03b67d86ef118ea186c2f8d112f1839d04a5ccbb957bab2dba0fce8c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "95c32f070020949917c366f828fd8687cd33be1982af3954a7aeeb6a19cfe700",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_ball_moving_candidate_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/images/frame_000040.jpg",
+      "image_sha256": "0389542240fe32770493ed424b05ed60cee2163a8d26e29275ba8e0a6da28375",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "8794e663aed0b095374fe53603fa4264accb0a624a576f5593b3bb709049b0f3",
+      "role": "primary",
+      "session": "20261021_ball_moving_candidate_01"
+    },
+    "20261021_all_three_position_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000001.jpg",
+      "image_sha256": "5204ce86b6e868e90c4319fce760644612846dd8be595e745c63d71d482cc708",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "4d3c448d5e8f7df076940109f1410d633c08884e8215b95e1f27f44349db3e8f",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000002.jpg",
+      "image_sha256": "5978f8a0744daab2a770a341c33aa9b3122bf89db2e0cbd08ffa18ffc1dab56f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "5f5877f8bed55630a7a6da37a3a8ddf221e2d67104cec7640f7a0829513c1aae",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000003.jpg",
+      "image_sha256": "18b21e6dd68fafcfa5d02fbeeabcdace89f72460bde4f1046ceccda39de1fe74",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "15b9ca296c435d6f159eaaf7999a152d33c928c6e9397d9cade9b9edb545dfff",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000004.jpg",
+      "image_sha256": "68dc124b5ce42eb240f35dee44428a38f1e732a7241e831ac93e4b3fa8e3bf86",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "96a57ad4a99e73e41894d50266cd66cf626fd0c1f3e919bb1443bcb53d250d3e",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000005.jpg",
+      "image_sha256": "c47c05f9a9b3f1c91b57a5104f7aa3a8d25253a114562f28294782ba55bcb164",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "865f35fe8ceb228b7ce711452bf9c2636ce10cd554884e380cf739be465dbe22",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000006.jpg",
+      "image_sha256": "4a6c05576132b48a375929c4305d4a7cf6831bf9eb3434fa3aa2890e02154dba",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "d629bdebb0a0583fcf5e1667176fd14dad06ace49b2fc11fd4ba398363d4de6a",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000007.jpg",
+      "image_sha256": "271a201accd3bcea379533dc96dc064f02a2e3e4842c7f14475162652d8ec2ab",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "339fc3020725fe41706d177f02c6cc80a4990eabfd216d4771f4f34ca7296298",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000008.jpg",
+      "image_sha256": "fca57ea4df6b006c884ca8453fa765a21a56fd7b2836ac160ca8afbbe3ba98a4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "b16329a6237d07ed867ccd6aa951edd98683f1a912ab2c8bec647c7933a37c9e",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000009.jpg",
+      "image_sha256": "641181451bb0d62507ea41f5b1ac55610a900567dda95189a09cd9b997e57bd2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "a463bd894555f5aea29fc864464603382b0bf38643ab663ab882d9445f86ac63",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/images/frame_000010.jpg",
+      "image_sha256": "70f222ee7dcb42acc6ed065964d77d74adba83cf2bdb85ea95f5646f2ece7caf",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "0c69351034e0bb22c61489d393e9b0676f2b1be989924b695b505f820d26f6b9",
+      "role": "primary",
+      "session": "20261021_all_three_position_01"
+    },
+    "20261021_all_three_position_02__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000001.jpg",
+      "image_sha256": "b36500efa8d272ac6bb5d9da6cd54e69d9bf3098e087dfe1a2975ce270fe8d59",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000001.txt",
+      "label_sha256": "74810e6c48b08b3c77960d010a37c37bfb3118d115caea7e3ca26fddec74260d",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000002.jpg",
+      "image_sha256": "c35d53947d4cbd82ef10477f5734e0c0fb3f0d09d9b7ab93d45fcab2aaa163ed",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000002.txt",
+      "label_sha256": "82445bd88e1329731f3f7b0d4aa3b61434ca780bf812629dd8d236516830a5bd",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000003.jpg",
+      "image_sha256": "dc12d8fb20c123f066e0084ab628f6f3e2f8aa4687d0fb887007c52ad90f9eb2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000003.txt",
+      "label_sha256": "f68d430fc1e4d123ed431218f5a28a4e8a32f244cb8787ab02e5211fb68cd478",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000004.jpg",
+      "image_sha256": "6afded43554ec117a9228a65ea0393808bb8ed4a0ce1e58008cd5141783809c4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000004.txt",
+      "label_sha256": "d6d05ec769ded9defb9cf872069a2189181acbb41e1075da6ed49f0423e0ffd4",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000005.jpg",
+      "image_sha256": "827d406c6007b51ce43f32b73b70b03b1665314a0af8017d9c719394838d4d2f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000005.txt",
+      "label_sha256": "4ae630c1b5c6e556b4d0617454cd06f032318f71f42d6eaa484e08520da34408",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000006.jpg",
+      "image_sha256": "f683b1f44ad154dfc137e90615de17e0051553094fe6d8253897d6e78b8836cd",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000006.txt",
+      "label_sha256": "7210a5039f8ef22cca277e83b3137b36f02ae6236cb42e79e8bc3b1037b51901",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000007.jpg",
+      "image_sha256": "a84c4c410e7082309b7d983d0a85aa2b4457aa0be0f5a1a2c000b0f1fbee5390",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000007.txt",
+      "label_sha256": "9a95d912db9264f047e15beea38a6f12128ef1f178ef787e6cb261ad16b78e79",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000008.jpg",
+      "image_sha256": "ca7faa69fa559f990078b588a823b2adb8d212e57590a585acefebf1ec084a7e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000008.txt",
+      "label_sha256": "942897e4fd800fa17330e1978d234b5498b0bfe53eed37c7e99123e0794a4e68",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000009.jpg",
+      "image_sha256": "4975745a6d64290de6f861e53c3a149bbba3e6c87138562c96c5a2c0d4a17a99",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000009.txt",
+      "label_sha256": "2aedaa8202ece4dd2bb2bb719fdf892cb8a4ddb11130bf14fea0a0e7cf8d9a4a",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_02__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/images/frame_000010.jpg",
+      "image_sha256": "69ff319837cf751ac7a3fe5026b427b2d7f3a7a0027832ca97c9b1beb68bd9e3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/labels_reviewed/frame_000010.txt",
+      "label_sha256": "4c3ecb49127d5c18e40335d7590746e2847db47d20211b7277948b077184eed8",
+      "role": "primary",
+      "session": "20261021_all_three_position_02"
+    },
+    "20261021_all_three_position_03__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000001.jpg",
+      "image_sha256": "dab0db6c9d4883d7ec76cca0b80634158ede7c65c815dda5c2709b1428c535a0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000001.txt",
+      "label_sha256": "414bd998bfdf7848f490e4d6a2f6f91e3141f053944edc8aae085fe30a0a5c37",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000002.jpg",
+      "image_sha256": "0f628923dc038374a705a3c5473d120470eb94ca78a45a08a7922a97c0ca4611",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000002.txt",
+      "label_sha256": "7ca354cf02e1d86f12a6e78b16cbcf797cfef8643e801ac9326dd6cbb66d4563",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000003.jpg",
+      "image_sha256": "b78617055ee3f3da9f3c6fea600ed7505a5ecd1172f1c3f777159037859e1c66",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000003.txt",
+      "label_sha256": "ba6e4ce4d6a9cf671cb4b210b8cc91043c481601f6b93609e2f889ce7b9411b0",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000004.jpg",
+      "image_sha256": "5be4f92a2eb84b6cd30a456d7f03698b36f1411b955aebfeb7dce93583f61463",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000004.txt",
+      "label_sha256": "545a7ae8a3684f04b695371392dc3043f3cfe98752bd0ab5d4e4f2fc6d9896d9",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000005.jpg",
+      "image_sha256": "bb998e64754434e4671beed3d9d63fec85a7aedfba377d324601afe1c9915339",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000005.txt",
+      "label_sha256": "ba07fe5466f7315a67d7230d282f3c8e3434047af154f51434e86e49c6092226",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000006.jpg",
+      "image_sha256": "ea12a23166a72e229bea9560001b32e3b052723fcf97d0deb32f883d82d4381f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000006.txt",
+      "label_sha256": "0e60149ea0acf540c89c976e3783e4348a8123df65b6ae399f5be70f5f8e40cb",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000007.jpg",
+      "image_sha256": "511577e3d27b9dc10b76cc136e49656545adb895c7fc408227494791f2412240",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000007.txt",
+      "label_sha256": "40ee0ae30b4f2005859a72ff9a8bdc1f2100b239e5b4b821c1206f4726c0766a",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000008.jpg",
+      "image_sha256": "c3d72bf76544041f0b6f7749541428777767c1767eb2ad302a7d90b7b55a015d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000008.txt",
+      "label_sha256": "30fdc6948cb9025ecdfb8841fffedcec316b588410842b02b9b41a70f7370971",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000009.jpg",
+      "image_sha256": "a6bfa5b155b757ed3af01aadac93958056b49d588c8762f663eab6cc676c05c8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000009.txt",
+      "label_sha256": "5fa4469270b23ee8824be203724f037ece7ce5c37ce40a2002a01551f528bc98",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_03__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/images/frame_000010.jpg",
+      "image_sha256": "f079b20d3dfc083ee0980707ddc6423b59cff947586b00d2c7e81c18178343c6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/labels_reviewed/frame_000010.txt",
+      "label_sha256": "89d67624e643511d8b62de3f5522ca36954b59082699707530a38aab896f921f",
+      "role": "primary",
+      "session": "20261021_all_three_position_03"
+    },
+    "20261021_all_three_position_04__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000001.jpg",
+      "image_sha256": "a661888fbeb2512d17328f3b770b082316b64ceef56535b9d77a6c77372e6110",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000001.txt",
+      "label_sha256": "52579d35c0db8c1b47ddec919c72eabd300acd938b824d55e516b5ee14e16db2",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000002.jpg",
+      "image_sha256": "7b387cf3ec7789c5e28e3b3d35e70666aadb698295b0eab5510ff629169dcef2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000002.txt",
+      "label_sha256": "8bce40f2e9febceb33886835de2979fb8571cd1a333a5adc0577538bea435477",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000003.jpg",
+      "image_sha256": "2b56254740437b74c7678cec41e0a9f237f55c8480308e3b957b6f44abae5196",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000003.txt",
+      "label_sha256": "80a2eadb684b95bfde7eeb201ac387723f9c1b5708ddb86c892dc7ff4fbb3abd",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000004.jpg",
+      "image_sha256": "95d357b8a3998635e2bb2b6594a0038589b1380d2c1e00d73a419b554765d9c4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000004.txt",
+      "label_sha256": "950878389fd4d798da5ecc0937d813a6c95d13d4491dd9320f8fffa1f81de6d0",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000005.jpg",
+      "image_sha256": "163adb92c42c6e41e751cc4fb414217174ddebe318e89f32302b11b5c88a7b29",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000005.txt",
+      "label_sha256": "473451155f34cb396c5041d64332b1b1e474f935547bcc7d03f8b9a0a10d049a",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000006.jpg",
+      "image_sha256": "ea6fa97e959d2dc3807b5cdd3a5dfc1cdf60c5497159ee6af68aeb647b224aef",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000006.txt",
+      "label_sha256": "a0c5cf208bff9c21e60413fa5b752c1e79c9dbbac8b4b3cbac8a8dafd6484ee1",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000007.jpg",
+      "image_sha256": "f31a7086862b86f4c3e5d3162c420b02e968d10c579d7a0b19040beb57fb23c8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000007.txt",
+      "label_sha256": "83374a6e8121a9f7d73a4a07a244b88e8d433f9cb0a09e0696bba32a344cbcd3",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000008.jpg",
+      "image_sha256": "8af92e90f137161699a6fabed4cabf09c9c374fc97bdd94f86d827653178c55e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000008.txt",
+      "label_sha256": "735a46f5a9b5aed1e19a16d4e4a9abcf0fcef275e5aeffc1cec09f43380c8107",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000009.jpg",
+      "image_sha256": "c2fff79f91bf9c17baf71cfd73bcea3829f48202e6838c49a22ed5ea22246299",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000009.txt",
+      "label_sha256": "a4b612c30b030487d1cbee625f305fe21d3b0ac7b8133cd3dbcb70784991775f",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_all_three_position_04__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/images/frame_000010.jpg",
+      "image_sha256": "a3ce0b8cbbd5a8081e730c33b093ff8c6d28b42e9f3aaffb6bce181e5c53b8fa",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/labels_reviewed/frame_000010.txt",
+      "label_sha256": "0f3744f86b482d0f9840575e15871f1379236af6785d9e7b99d2799fbabb1929",
+      "role": "primary",
+      "session": "20261021_all_three_position_04"
+    },
+    "20261021_negative_candidate_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000001.jpg",
+      "image_sha256": "95619875c8ecad2b6cc1ad5ffecacd47e94c156cfc7e7077743830832c612164",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000002.jpg",
+      "image_sha256": "193603050253b767ee14339d43acede42c5fdbba67a67242d9534df7b3392a86",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000003.jpg",
+      "image_sha256": "d68c0a0c9df47ba5645b015c65cf47cd261d618e4e861d14579eb81faa740a3d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000004.jpg",
+      "image_sha256": "991c9d1889c3d4da593052602506e459d93ccf4e6f3b3f4441edaf3886d167b6",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000005.jpg",
+      "image_sha256": "c9899868bb5702ea997faec6f90fe4cba87e2e207362186b52a1c6abfd902506",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000006.jpg",
+      "image_sha256": "540ad1b0d1a7058edc974d196eabc7f0d246978f31fbdaa9ab167985119e0642",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000007.jpg",
+      "image_sha256": "ec8e1bb8e6868ac2a416af5018fe1563971aff3ae395ba6ef6b976dd30c1e174",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000008.jpg",
+      "image_sha256": "36f1446f4fb37718dd66622c8c4147eff4b26013392419133be9fb5293af4e21",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000009.jpg",
+      "image_sha256": "24c5ccc58d1960a55e9f841ff8488c68c9fb524c1ccdaba123bc380bbe82d4d1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000010.jpg",
+      "image_sha256": "5d321a904433493602462ed4706a7a226a2cece2151daf6821eeab6b0d434333",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000011.jpg",
+      "image_sha256": "a33180f2f2dcd39e034bba8046235b3b8aae72b84b1204593227de730eb6fb20",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000012.jpg",
+      "image_sha256": "f001dd0715618ee3d869749fe1d8ad885bad73e61bf67d9a6d4df13dbf289386",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000013.jpg",
+      "image_sha256": "ca9249bb34144dac9522a5e68df924dcf3e776a47234332d53590cb34f929a92",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000014.jpg",
+      "image_sha256": "8836fa68fcef65772606fda66e3ef401a10c9f2a49ee7de4c4a8295ab91c100d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000015.jpg",
+      "image_sha256": "5341f7c13f4a0b4c05d47ef557a5e676fb51f7bf7ba098bea3cfcb44f739e880",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000016.jpg",
+      "image_sha256": "e30801488f8e569daca2ca54f7575a5d29e5c70efe501a7c853d8f5fdac43305",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000017.jpg",
+      "image_sha256": "e7660113179c3c6d894268bab9a5cd54a4954a5e2fe4757e4239ccaee3d4a2a9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000018.jpg",
+      "image_sha256": "713cf738a39e9f10bf4f25c4f6fc862520861befd2357f1633dddd695bd9f12a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000019.jpg",
+      "image_sha256": "98a77c72d33aa2ae0ef72d6cc46c69efabaa99f6b6891fc12693dde0efa09353",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000020.jpg",
+      "image_sha256": "4e06d98de782bb8f0cff825298ebc671a9efdaeac514cd36b587b14a38187664",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000021.jpg",
+      "image_sha256": "4892ee26c8065fc41452f82149aac808b827c1b70c2b23b4444d3b9b3226e7cf",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000022.jpg",
+      "image_sha256": "54d39ac0d747a3a898d006a4d61cf1d9ba4aea85d0feca9772f9a75dcc33d712",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000023.jpg",
+      "image_sha256": "fb434ea52e1a0388d4626db627628d29ffbbf48306a23daa677b07e5d62c92d5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000024.jpg",
+      "image_sha256": "dfb3b3475b9c11a22aa685637c21aa61fc54072a0af3fd25a0d9051d006bfbd1",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000025.jpg",
+      "image_sha256": "9293a04167e3041a4414df1da5894b53a8ca43e855a49b942450eff867dfb352",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000026.jpg",
+      "image_sha256": "b943efddbb5e1397b678377611e0f541ea115a782c0d6f947e102502ac4c1f57",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000027.jpg",
+      "image_sha256": "5bd9437f8dcbb7778fe50a09f8894b6ebfd21d86e15b33b2a71e91bb4ba554e5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000028.jpg",
+      "image_sha256": "4808650341d64271dafaafa8599d9481a84839bf3da688f9dc9259c385c6cc10",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000029.jpg",
+      "image_sha256": "8e1290168cbfff42dafbb446251c2e8926b22244197c6dee7c5d33830e181869",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000030.jpg",
+      "image_sha256": "691cbe231dfe0edeb5fc075075a7d6ec5ff4a06b294acad35f1d71af6b4052b8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000031.jpg",
+      "image_sha256": "2eefd9aa32cff239c10a0fecbf54a6a53b0830d86ca66337b318e82ef92afcb5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000032.jpg",
+      "image_sha256": "2d99e6cd467af9c495b60a82ab1e775f8af6cd83c5263c55c714023148896c7d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000033.jpg",
+      "image_sha256": "0da81d2a561d996bb40de3ef8d1d31211052c10d92715181f5ac777a1ee9b396",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000034.jpg",
+      "image_sha256": "5a0f5dca3dfeaf83a17ed2ad3eac0fb5a2c7bdde6a909278781b1be1c17b6c8a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000035.jpg",
+      "image_sha256": "3aec9e02ea4eb5944fbe80a92d8c498a5f64e7e816c5b8ccb135860c6d3aa583",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000036.jpg",
+      "image_sha256": "790d4d9fe22c53f5d4011b32e65913cbce28946744f0cc64ef4a7d474e587671",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000037.jpg",
+      "image_sha256": "084f44b9d7578b62369284069d78b9c5dbff828030ece3a0a9514ac7a87690ab",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000038.jpg",
+      "image_sha256": "cedc5ff35fde512d84a27604fb9f84ac46b79f5d41453e762e80121906f91e21",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000039.jpg",
+      "image_sha256": "2cf49ddadc4b3ff4e693e764b826158bc78f28c6c57a845299ab45dcdb9949c9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000040.jpg",
+      "image_sha256": "1d01083c83d438f877e4160620b3af9963af7d8c982de56cc3cac7989a53316a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000041": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000041.jpg",
+      "image_sha256": "9eeaec8c191654044c167175e145f910880372fa0ebd956b8417b3ed69463c9e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000041.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000042": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000042.jpg",
+      "image_sha256": "940b26558cbf2950032e3c59e574b16b0fa7e9f2163e55a917eeda2731b81937",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000042.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000043": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000043.jpg",
+      "image_sha256": "8012a66c055fe2feda402f05e34b950b76705e172f682701adc23ca4dda90840",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000043.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000044": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000044.jpg",
+      "image_sha256": "6ab28dd9896e1841304e34f0868ec48b9a01ec4b3d5cc3661943d29e89d55267",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000044.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000045": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000045.jpg",
+      "image_sha256": "1a5fb9b63a0c3c18c74b05b08b9e063c491964af4552665e30a2d07417c1c766",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000045.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000046": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000046.jpg",
+      "image_sha256": "28b37b9de827ff62917a9656eda6baea402f00e45b46f017271833cfba2e4457",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000046.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000047": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000047.jpg",
+      "image_sha256": "f7fb046497eb77149b75362d1c75f3415d32437bf824ab2d6d13c09d9c65b512",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000047.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000048": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000048.jpg",
+      "image_sha256": "1d47c3c953a9b664cefd80c3401a25868a101c330f03d77e62487b5c8f294808",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000048.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000049": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000049.jpg",
+      "image_sha256": "30df4ebff246c3a32124326e4a64ea570d1b5de1759b1b0d28ec80f0fbd958de",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000049.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000050": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000050.jpg",
+      "image_sha256": "581da4f4c254ef5d3989778cb1381dab5457f7b266fc54e92c49cb231b066b8f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000050.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000051": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000051.jpg",
+      "image_sha256": "50fa37bd58930e7f70f4552d848d205fa52c083cedf6a1595fb75a79167f7a06",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000051.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000052": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000052.jpg",
+      "image_sha256": "02236bb504148a29e2878eca56e7c45d6304849c4d655a8daf59a0ed27f1c7b5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000052.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000053": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000053.jpg",
+      "image_sha256": "508a708deba38eb616f52bbe4979c4d02307ba0839c4c018ed071f0e261a1757",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000053.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000054": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000054.jpg",
+      "image_sha256": "9660da7bdfd11db97bf6916848f66eee71f6d2d8abd2682d71cdb6c26b6ea7d4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000054.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000055": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000055.jpg",
+      "image_sha256": "a504127e54ce7c83176c3156da5e6a65ba3112e9a483b7361f8847255defcb4a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000055.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000056": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000056.jpg",
+      "image_sha256": "a715471cd4c9ababea91d5a73238f399bed057fea53dd3a48b5b9404470088a2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000056.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000057": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000057.jpg",
+      "image_sha256": "31683d043d9816ed73fd0e80008d84ea1043762288b00faa9467ef8b48bbc73f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000057.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000058": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000058.jpg",
+      "image_sha256": "fc1980a05e2fab165d368056d63d9bd8a3ac5dbcc29dabf18f9b08627b7ecab5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000058.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000059": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000059.jpg",
+      "image_sha256": "8ca12891514602f13306eb6d11dbbd89e7b1781a99fc2839cca8e993faabb10a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000059.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_negative_candidate_01__frame_000060": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/images/frame_000060.jpg",
+      "image_sha256": "2451693178ff7dbe68bde9890f6dea21abe2cca89546b6961338783ea31f3404",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/labels_reviewed/frame_000060.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "negative",
+      "session": "20261021_negative_candidate_01"
+    },
+    "20261021_gawang_ball_01__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000001.jpg",
+      "image_sha256": "1c3124a7396a6bb544384006e41c025c080a67f49358a8038274fcb49df54139",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000001.txt",
+      "label_sha256": "5764af971eab1aff2c089a92d5370ce504e16a5612130974f0b7559c1b551914",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000002.jpg",
+      "image_sha256": "c991613255154f4280cac7c3869d301feb7b9d901177cd2d9eda2694e4321444",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000002.txt",
+      "label_sha256": "aab0dc0aa7759f38af38b6b5d990b7a7bed541fdf0e0b1cd92b7e8de9f0ac795",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000003.jpg",
+      "image_sha256": "960ea5f14027029ebf2d7b0a8a9b201417aa34f3ba2c44366b68bc7b2216df22",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000003.txt",
+      "label_sha256": "a598078cc16edd30de5908ff6dfdddb88977f4b00d7a17f6ceeb35df6ea84270",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000004.jpg",
+      "image_sha256": "250220a33ec60a13cf829d7b6e6e455dfeb1c07093710d7a22678583decddfe0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000004.txt",
+      "label_sha256": "9a87c588627968e8da4a19e997359e64cd32738b73f747030d660a451f623491",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000005.jpg",
+      "image_sha256": "c5b3c6465c2c07492320919bc57d0d4b731763988ef362fcf794bbe9c9722445",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000005.txt",
+      "label_sha256": "3b2900422d80b6a904f0b7214bad738764a1267ba27b8bfcf022fd62c1952123",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000006.jpg",
+      "image_sha256": "46d1c144df57d928b51129ce7b50796784c45591d3d1e116768ffc15584cba7c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000006.txt",
+      "label_sha256": "e9acfa16ef5a3bdf858f8e472f7dae32a40340526de34ad6d1a47eb07dc6db18",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000007.jpg",
+      "image_sha256": "cf63d41bd9f568bc84dc658f972356ae6a0be4696aed23258ec376b7fada061c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000007.txt",
+      "label_sha256": "a8fc3f639b2057af08b6595681b66a3d4283c29f81be2d26a8e14b85e43bbdfb",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000008.jpg",
+      "image_sha256": "7499c4cdb42e1b159402671bfbac96d95d2e49eef3452876c20e53ff73a7504a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000008.txt",
+      "label_sha256": "d2f4e26197e193c3884e5126f45b12b9f3d9b78edf262692cfb5150020807124",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000009.jpg",
+      "image_sha256": "71a5414aef4fd02043a9daf95b7c34daacc40f30a0352c12ece8f3f09c17a0da",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000009.txt",
+      "label_sha256": "86b3a120d29dac807ddf001c320e4faf83da5621bdb1e9e4af95a2ea3de81b70",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000010.jpg",
+      "image_sha256": "ee6b70436d9520532aad3de01e7670c79d4ea55de57652d14e75a0c87eddc8f8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000010.txt",
+      "label_sha256": "acb5740919f83c8ef8cb12911890d2a80099e4c878645e82c30453648bab77b4",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000011.jpg",
+      "image_sha256": "3c0e3f6e4f37cdb5682e84628eb3d3befed0044dd7dc14d428156819da949100",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000011.txt",
+      "label_sha256": "f72869cef833c41f7369a45a70383f177743868d07d22a9a1e34ccd526964c69",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000012.jpg",
+      "image_sha256": "c1d624ff7082c183e92cbceeb14b08aabf97216d149636061b5b695e2c959663",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000012.txt",
+      "label_sha256": "1bbd5fd1112c0b0c3a999b473bc5891ea651365dad1189fec3cfeb45d7d84f48",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000013.jpg",
+      "image_sha256": "f9ed0424277f55994c03e0d8b55c013c89a49f3320edc79bfee8f97de73779ab",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000013.txt",
+      "label_sha256": "f6d507a96b345358907f30266609ef7710826768b9ad8f102b7ee249c30a7166",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000014.jpg",
+      "image_sha256": "ce53463f7700a60f36e889b4d04c5557d0642e60d3c861aee224e7f4639a400f",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000014.txt",
+      "label_sha256": "f6f7915097ae88ff396df794c350fad2630185b2ffd148535fd44e39b8d0cf2e",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000015.jpg",
+      "image_sha256": "98c0a90e899af84d9d5be8d55cecc756931697be628dc2e57703d921d9da4d16",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000015.txt",
+      "label_sha256": "f456fd8b4c0100912f3561e9739e463ef0814712a2440faa6de7b29fb0033581",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000016.jpg",
+      "image_sha256": "998707a746ae3c759c5b2d15ff27d920be72634db275d2f8c39da026b26f5320",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000016.txt",
+      "label_sha256": "31760f31788d5a5bfe68919d12f6f3ea739fec3554afacda149ee29a87f3574c",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000017.jpg",
+      "image_sha256": "1d09de7fa75c8237271eebd696498c8bcd37bef59982562ee70159cbd9e0ffc7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000017.txt",
+      "label_sha256": "b4482e6f25b97835c03eae1bbcebdc277e64308f73d20c8aaae18012d6a89e02",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000018.jpg",
+      "image_sha256": "fa832d3f1594844a571ba8838e7e8e780412326796aae98925857c80003cf68d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000018.txt",
+      "label_sha256": "02fa14421301d3cfb1b8cce00f90091e0de0e52ab7f2a5db071a2ac3d4b67f7a",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000019.jpg",
+      "image_sha256": "e0e48eed2627b607f85a3d50ec97c2473eb67b79d432be3807d3bc3621cb3023",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000019.txt",
+      "label_sha256": "f270efc1d90902368271c0bb76a4d74bdec02f55b5aa8e254fc5ae210d883565",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000020.jpg",
+      "image_sha256": "a0c871f3e64cfb75a0dddbf52cf6a8968208ef869985615ae9db968ef6fabafc",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000020.txt",
+      "label_sha256": "f270efc1d90902368271c0bb76a4d74bdec02f55b5aa8e254fc5ae210d883565",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000021.jpg",
+      "image_sha256": "9e1bb5b261cffeac49ff69697c74ce6503f913346cbc695a5adf27cd6cc11869",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000021.txt",
+      "label_sha256": "3490a98e3543c69575d3015114bd8cec667dbedf81db11c4383308c902041647",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000022.jpg",
+      "image_sha256": "d3291f771a8ed51bae59846a0db9b24df671787b3e6bdb8fe5d78f596935a618",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000022.txt",
+      "label_sha256": "c754aceb1ef27a39e5a6f9ee5aea478b09b7ad03e1dcf34ba49a153d0161b3a6",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000023.jpg",
+      "image_sha256": "f275c103ead9ddefb0be05a70fef8570cee8d50a9799feaef2d8353d8436348e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000023.txt",
+      "label_sha256": "0f330d39b10d7fd298bbcbadbcb6dc98f5910879d8ea67bc3220087433ce2ead",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000024.jpg",
+      "image_sha256": "b7da2ef46454c7f186871006a65d2347e5ade811b85fce016a9b40aff67b0be9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000024.txt",
+      "label_sha256": "0f330d39b10d7fd298bbcbadbcb6dc98f5910879d8ea67bc3220087433ce2ead",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000025.jpg",
+      "image_sha256": "8cbb7b46eb3d71ae16375e2070431b0a5a8ae9b2ebd46fc3d816ae8dfb70555b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000025.txt",
+      "label_sha256": "38833f6175ebe05d0577e4c45238e32cae8eb2000fc4073b1f09f90b8ad318e9",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000026.jpg",
+      "image_sha256": "912c942a75b0858bb3965c7ae9368cedb2e48391e90f795f00db1a4ab6537881",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000026.txt",
+      "label_sha256": "f270efc1d90902368271c0bb76a4d74bdec02f55b5aa8e254fc5ae210d883565",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000027.jpg",
+      "image_sha256": "9c99b39d6654b61f8106929b0f27dcb6a0d3ab9dcba40cfc68ebc460cec99fcb",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000027.txt",
+      "label_sha256": "f20bdad19ac2b6b0845fa7b7ca270758c92458efb46ee757a75cd5a976604806",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000028.jpg",
+      "image_sha256": "283e83ea0aa03d839602a9b1a987ac17258cf9b798375e623d8e85d3865e4c88",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000028.txt",
+      "label_sha256": "f270efc1d90902368271c0bb76a4d74bdec02f55b5aa8e254fc5ae210d883565",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000029.jpg",
+      "image_sha256": "6dd7e019fedc3561cfa137e9a77158da0da14aad6ed68f088e28500703beb730",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000029.txt",
+      "label_sha256": "235de661a857358c3f2ac182fb1c287736eada80da527b5e730389249f38a0be",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000030.jpg",
+      "image_sha256": "6daa96059f70b226318788448ed70524e4d9cadd746ea38372e5be2de5fa50c3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000030.txt",
+      "label_sha256": "ea792f22008de58a94d0030812a513db10f35e4f9d7e648339e816a4652310e4",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000031.jpg",
+      "image_sha256": "3afc32184c43803576f53db76cec39f279cd39cda9faa802dc7df87df9dbc52a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000031.txt",
+      "label_sha256": "a7dc28584df1978e05256ec0d6b352440cb522729d87ea09e91cf0d8d973b713",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000032.jpg",
+      "image_sha256": "a8c42c619247f6e023e73393838a687a1a3a09d43ef8a1f4586864dde3ecefe5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000032.txt",
+      "label_sha256": "f1d01a4c1e5f9e34ad41ea98dec6a655dde91409b04a3defa1c0243bb513ac33",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000033.jpg",
+      "image_sha256": "f658ac228aff9a7bf07e2cbddd70fd22fcd21f1499c050d65fe249082c5d85e8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000033.txt",
+      "label_sha256": "a048932f798124d9765cba6034f95993b245b2d9ba78371bd02ba40b6bb9ebd9",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000034.jpg",
+      "image_sha256": "0142c7972095dd43c45aa2ee4d833fc62625dd306cfb9f43d64856471e85488c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000034.txt",
+      "label_sha256": "e252b54bc7344bc9842fefcec7c57fcee421fc405b6e8c73b32427be5b829130",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000035.jpg",
+      "image_sha256": "e112bc8ff176ef3572ec6901317987912bde9f1b1f376aeb9d1561c2f905afe5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000035.txt",
+      "label_sha256": "adefb9e752c7e6dc055eb0b770fd0be561962b0d3fdc92e62426a8eb356c9d5b",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000036.jpg",
+      "image_sha256": "4adb17b41e6ee7d30d2fe710a1161ad3fd960aefea4b6ec526def4570f1a6cc9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000036.txt",
+      "label_sha256": "ab2f4d827839a4da6261f99bb2502d20cefe8ffca7ebdf01b7d6f9aaf88d084e",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000037.jpg",
+      "image_sha256": "dd9446f2a2e511a2569f1fbddac6eae90f64a9aaec787e660b4da691ac362d56",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000037.txt",
+      "label_sha256": "29bda386d59f5dafb6fbcfa5f4c99f99787c697399fd2c00dbb68aa19c66263e",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000038.jpg",
+      "image_sha256": "87cf96e01cc48e8993f321345dbbbbe4c8a8f123c28b6d62718a002608a52bb8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000038.txt",
+      "label_sha256": "f19de3275f19c05315b56ae2bfdad8af5c022febec45b8ad257fe29dc1253665",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000039.jpg",
+      "image_sha256": "6ce9536ca8d213d7b68331b2ed01f2e39c9d5135d54a726356642c689e021227",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000039.txt",
+      "label_sha256": "893570788f2f12896fb97fe7038a6602f813f4e44f729c2fffa5e3c7d8a85ea2",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_gawang_ball_01__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/images/frame_000040.jpg",
+      "image_sha256": "3165f4acd3768fb9b5f2b9b7f27f1c03562f9fb7dea8234681fc0f59e5303dc4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/labels_reviewed/frame_000040.txt",
+      "label_sha256": "7ea16a3017b2cd115b645a5ec1775c17decaaae420a93e916aae7b2ce93fba33",
+      "role": "partial",
+      "session": "20261021_gawang_ball_01"
+    },
+    "20261021_all_three_position_05__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000001.jpg",
+      "image_sha256": "0ce852fe3a4cd23b5b0dac95dbfed918b312f02157a7ce38cbd9e391a5feb7f9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000001.txt",
+      "label_sha256": "def238724e352bd0fd7b14f165a6f014b2251211ede926cf6942ca251ec75a8f",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000002.jpg",
+      "image_sha256": "9b1e2a6e288f955fb1cd34e059ac610145c1630265d00c10c1902e8d124d1e97",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000002.txt",
+      "label_sha256": "a8c4bf9e25a7c8e3fa02f30048294a586a903c96ef105c2c2f53a2a94f364c94",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000003.jpg",
+      "image_sha256": "0fa8c4c3953c35a1d1395931205d9b8900364d1f084524b65867451c86215773",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000003.txt",
+      "label_sha256": "c44fd7ce8404d58eb4d20e3ebe6bcfa1a9da4bcc1b8358d8093d4237ccd990e5",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000004.jpg",
+      "image_sha256": "18753605154797153f39c126bda62faf8af20f8f69cfb360588c7bb41b9e48f4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000004.txt",
+      "label_sha256": "f9edf609017566a4171ba7feea3a0f207b2f21878a978c205aa4c4c20f3f96af",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000005.jpg",
+      "image_sha256": "a9b200fa58a6aa737e274f6ef813ae1a74a7888c3264b338f3efcead7076eb7a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000005.txt",
+      "label_sha256": "ab68426971b89a5d590ad63fa3e2f06045d63d1fd4153d3311a0d08820e5c924",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000006.jpg",
+      "image_sha256": "60aa0d514e738ecae5be4c59b6a83f19d85900c69e2372c73f5dab64ba9488df",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000006.txt",
+      "label_sha256": "46d172c7fd58df038d72327c347c973a481cc278422cd5d7d3d5244eb51b9bb1",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000007.jpg",
+      "image_sha256": "11d49d517173ada72641edc3f78c83b1cf7fdbc75ab963e50a6c646fcd812331",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000007.txt",
+      "label_sha256": "613923bb32f14d0fee82cccd171fb0f04e13663913c33ce28783e22caf6c3d58",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000008.jpg",
+      "image_sha256": "81a040f0c0ba521722012e52744187047a03da6289287e4361edd71eb07ea3f2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000008.txt",
+      "label_sha256": "e4edf1ea34ec6a1d7c2831aaa5c5396d61b8c88f37588cf8f7888c53455e9948",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000009.jpg",
+      "image_sha256": "e9a43ae9d7db068dc063e9cd720708b5e21a39e39551d3fd26ac7818f8f53b8e",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000009.txt",
+      "label_sha256": "63d081b57768e7fe0222f5636473a3f34ffe92462ab4454a3c82e874797c0b5c",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    },
+    "20261021_all_three_position_05__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/images/frame_000010.jpg",
+      "image_sha256": "3c601d8457dfbc42b0f3cb7caef45145f2291a925d896f9a67ddfea644bbde7c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/labels_reviewed/frame_000010.txt",
+      "label_sha256": "5a2e19a3e20a4721a7572eea3f7ddcd65ab733d8914e3176200d9cd786de4cc9",
+      "role": "partial",
+      "session": "20261021_all_three_position_05"
+    }
+  },
+  "created_at_utc": "2026-10-21T12:05:52.956253+00:00",
+  "status": "exploratory_op3_multi_session_evaluation",
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130"
+  },
+  "settings": {
+    "imgsz": 640,
+    "device": "cpu",
+    "precision": "FP32",
+    "map_conf_floor": 0.001,
+    "operating_conf_strictly_above": 0.25,
+    "nms_iou": 0.7,
+    "match_iou": 0.5
+  },
+  "checkpoints": {
+    "kd": {
+      "path": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    },
+    "supervised": {
+      "path": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e"
+    }
+  }
+}

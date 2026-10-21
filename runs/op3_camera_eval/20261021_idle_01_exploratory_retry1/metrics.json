@@ -1,0 +1,88 @@
+{
+  "status": "exploratory_single_servo_idle_session",
+  "image_count": 120,
+  "models": {
+    "kd": {
+      "overall": {
+        "precision": 1.0,
+        "recall": 0.9499999999999998,
+        "F1": 0.9743589743589743,
+        "mAP50": 0.9152906724775386,
+        "mAP50-95": 0.7523502219176454
+      },
+      "per_class": {
+        "ball": {
+          "mAP50": 0.995,
+          "mAP50-95": 0.8563579793049094,
+          "ground_truth": 120,
+          "predictions": 120,
+          "true_positives": 120,
+          "precision": 1.0,
+          "recall": 1.0,
+          "F1": 1.0
+        },
+        "gawang": {
+          "mAP50": 0.9499772256728781,
+          "mAP50-95": 0.7228341603324833,
+          "ground_truth": 120,
+          "predictions": 108,
+          "true_positives": 108,
+          "precision": 1.0,
+          "recall": 0.9,
+          "F1": 0.9473684210526316
+        },
+        "robot": {
+          "mAP50": 0.8008947917597373,
+          "mAP50-95": 0.677858526115544,
+          "ground_truth": 120,
+          "predictions": 114,
+          "true_positives": 114,
+          "precision": 1.0,
+          "recall": 0.95,
+          "F1": 0.9743589743589743
+        }
+      }
+    },
+    "supervised": {
+      "overall": {
+        "precision": 0.9890209158501841,
+        "recall": 0.688888888888889,
+        "F1": 0.8121122099454633,
+        "mAP50": 0.9376988150669568,
+        "mAP50-95": 0.6127828249085393
+      },
+      "per_class": {
+        "ball": {
+          "mAP50": 0.995,
+          "mAP50-95": 0.808228023742163,
+          "ground_truth": 120,
+          "predictions": 123,
+          "true_positives": 120,
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "F1": 0.9876543209876543
+        },
+        "gawang": {
+          "mAP50": 0.9686666666666669,
+          "mAP50-95": 0.4676039296909221,
+          "ground_truth": 120,
+          "predictions": 117,
+          "true_positives": 116,
+          "precision": 0.9914529914529915,
+          "recall": 0.9666666666666667,
+          "F1": 0.9789029535864978
+        },
+        "robot": {
+          "mAP50": 0.8494297785342035,
+          "mAP50-95": 0.5625165212925329,
+          "ground_truth": 120,
+          "predictions": 12,
+          "true_positives": 12,
+          "precision": 1.0,
+          "recall": 0.1,
+          "F1": 0.18181818181818182
+        }
+      }
+    }
+  }
+}
