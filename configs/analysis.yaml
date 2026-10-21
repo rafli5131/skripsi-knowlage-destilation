@@ -19,10 +19,14 @@ decisions:
     pilot_val_mAP50_95: 0.590676
     baseline_seed42_val_mAP50_95: 0.682585
     pilot_result_source: analisis_performa/tabel/T04_ablasi_kd_val.csv
+    hybrid_approved: true
+    hybrid_approved_at: 2026-10-21
+    hybrid_modes: [hybrid_feature, hybrid_full]
   D3:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_epochs: 100
     pure_weighted_pilot_epochs: 100 # matches the existing pure_v4 seed-42 budget
+    hybrid_proposed_epochs: 100 # usulan agar sebanding dengan run lama
     options: [100, 150, 200]
   D4:
     status: BELUM DIKUNCI # BELUM DIKUNCI

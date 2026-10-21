@@ -1,4 +1,4 @@
-"""Evaluate the pure_v4 and pure_weighted best checkpoints on locked VAL only.
+"""Evaluate selected student checkpoints on locked VAL only.
 
 This script does not use TEST or train models. It records both Ultralytics AP
 metrics and a fixed-confidence operating point for each of the three classes.
@@ -34,6 +34,7 @@ except ImportError:
 OUT = ROOT / "runs/val_ablation/pure_weighted_20261020"
 BASELINES = ("kd_seed42", "kd_seed1337", "kd_seed2025")
 PILOT = "pure_weighted_seed42"
+SUPERVISED = "supervised_seed42"
 
 
 def sha256(path: Path) -> str:
@@ -69,7 +70,7 @@ def checkpoint_and_manifest(label: str) -> tuple[Path, Path, dict]:
 
 
 def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: dict,
-             threads: int, device: torch.device) -> Path:
+             threads: int, device: torch.device, output_dir: Path) -> Path:
     cp, manifest_path, run_manifest = checkpoint_and_manifest(label)
     torch.set_num_threads(threads)
     model = YOLO(str(cp), task="detect").model
@@ -89,11 +90,11 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         hyp=copy.copy(cfg), rect=True, cache=False, single_cls=False,
         stride=max(int(model.stride.max()), 32), pad=0.5, prefix="val: ",
         task="detect", classes=None, data=yaml.safe_load(DATA_YAML.read_text(encoding="utf-8")),
-        fraction=1.0, external_cache_path=OUT / ".val_labels.cache",
+        fraction=1.0, external_cache_path=output_dir / ".val_labels.cache",
     )
     loader = build_dataloader(dataset, batch=cfg.batch, workers=0, shuffle=False,
                               rank=-1, drop_last=False, device=device)
-    validator = DetectionValidator(loader, save_dir=OUT / label, args=copy.copy(cfg))
+    validator = DetectionValidator(loader, save_dir=output_dir / label, args=copy.copy(cfg))
     pred_count = np.zeros(3, dtype=int)
     tp_count = np.zeros(3, dtype=int)
     gt_count = np.zeros(3, dtype=int)
@@ -148,7 +149,9 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
     payload = {
         "model": label, "checkpoint": str(cp), "checkpoint_sha256": sha256(cp),
         "training_manifest": str(manifest_path), "training_manifest_sha256": sha256(manifest_path),
-        "training_mode": run_manifest.get("distillation", {}).get("mode", "pure_v4"),
+        "training_mode": run_manifest.get("distillation", {}).get(
+            "mode", "supervised" if label == SUPERVISED else "pure_v4"
+        ),
         "val_split_fingerprint_sha256": fingerprint["split_fingerprint_sha256"],
         "images": len(seen), "ultralytics": ultralytics.__version__,
         "settings": {"imgsz": 640, "batch": 16, "rect": True, "augment": False,
@@ -160,14 +163,15 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         "per_class": by_class,
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
     }
-    path = OUT / f"{label}_val.json"
+    path = output_dir / f"{label}_val.json"
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return path
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT), default=[*BASELINES, PILOT])
+    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT, SUPERVISED), default=[*BASELINES, PILOT])
+    parser.add_argument("--output-dir", type=Path, default=OUT)
     parser.add_argument("--threads", type=int, default=8)
     parser.add_argument("--device", choices=("cpu", "cuda:0"), default="cpu")
     args = parser.parse_args()
@@ -178,13 +182,13 @@ def main() -> None:
         raise RuntimeError("CUDA device was requested but is unavailable")
     images, expected, fingerprint = source_paths()
     verify_val_bytes(fingerprint)
-    OUT.mkdir(parents=True, exist_ok=True)
+    args.output_dir.mkdir(parents=True, exist_ok=True)
     for label in args.models:
-        path = OUT / f"{label}_val.json"
+        path = args.output_dir / f"{label}_val.json"
         if path.exists():
             raise FileExistsError(f"Refusing to overwrite existing VAL result: {path}")
         print(f"Evaluating {label} on locked VAL", flush=True)
-        print(evaluate(label, images, expected, fingerprint, args.threads, device), flush=True)
+        print(evaluate(label, images, expected, fingerprint, args.threads, device, args.output_dir), flush=True)
 
 
 if __name__ == "__main__":

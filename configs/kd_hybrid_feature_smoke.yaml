@@ -1,0 +1,30 @@
+# Uji kode 1 epoch; tidak untuk tabel hasil atau pemilihan model.
+teacher_checkpoint: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt
+student_model: models/yolo11_tiny_kd.yaml
+data_yaml: configs/data_train_val.yaml
+run:
+  project: runs/kd_smoke
+  name: yolo11_tiny_hybrid_feature_smoke_20261021
+distillation:
+  mode: hybrid_feature
+  dis: 6.0
+  feature_weight: 6.0
+  box_weight: 0.0
+  class_weight: 0.0
+  temperature: 2.0
+training:
+  epochs: 1
+  batch: 16
+  workers: 2
+  imgsz: 640
+  device: "0"
+  seed: 42
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  warmup_epochs: 3.0
+  weight_decay: 0.0005
+  close_mosaic: 10
+  amp: false
+  patience: 30
+  pretrained: false
