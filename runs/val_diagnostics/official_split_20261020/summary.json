@@ -1,5 +1,53 @@
 {
   "models": {
+    "hybrid_feature_seed42": {
+      "ECE_10bin_at_conf_0_25": 0.15958131290144392,
+      "best_F1_on_VAL_grid": 0.9242593846019319,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1458,
+        "fn_large_count": 41,
+        "fn_medium_count": 20,
+        "fn_small_count": 6,
+        "fp_background_count": 123,
+        "fp_duplicate_count": 147,
+        "fp_localization_count": 72,
+        "prediction_count": 1800
+      },
+      "false_positives_at_conf_0_25": 342,
+      "false_positives_per_image_at_conf_0_25": 0.28194558944765047,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9142093229233546,
+        "detections_per_image": 1.4839241549876339,
+        "precision": 0.8657974853775028,
+        "recall": 0.9683557999769671
+      }
+    },
+    "hybrid_full_seed42": {
+      "ECE_10bin_at_conf_0_25": 0.16232476860464043,
+      "best_F1_on_VAL_grid": 0.939171399127792,
+      "best_F1_threshold_on_VAL_grid": 0.4,
+      "error_counts": {
+        "correct_count": 1476,
+        "fn_large_count": 29,
+        "fn_medium_count": 16,
+        "fn_small_count": 4,
+        "fp_background_count": 106,
+        "fp_duplicate_count": 166,
+        "fp_localization_count": 81,
+        "prediction_count": 1829
+      },
+      "false_positives_at_conf_0_25": 353,
+      "false_positives_per_image_at_conf_0_25": 0.29101401483924155,
+      "images": 1213,
+      "metrics_at_conf_0_25": {
+        "F1": 0.9220323253426412,
+        "detections_per_image": 1.5078318219291014,
+        "precision": 0.8720997021050362,
+        "recall": 0.9780300585255949
+      }
+    },
     "kd_seed1337": {
       "ECE_10bin_at_conf_0_25": 0.10170634401867451,
       "best_F1_on_VAL_grid": 0.8860263493306331,
@@ -170,8 +218,10 @@
     }
   },
   "scope": "VAL diagnosis only; no TRAIN or TEST inference",
-  "script_sha256": "fae1ca2d4869da3c87b3116241c856dee0b745fb7f4be580dd53389e7e8b3509",
+  "script_sha256": "8f54359f0b5901232e2e3c4c82bcb24fe9b093bec35dfa0338b94b01b6985706",
   "sources_sha256": {
+    "runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json": "9a9cc4e03d80013ff6771f449fa1cbd96e391168e1012e585934d4d9aa9cde63",
+    "runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json": "1f82a475c33193cd9ded585499a472f3c0d9e7cb152a2b4f5f014ab5084d5bb8",
     "runs/val_diagnostics/official_split_20261020/kd_seed1337_predictions.json": "cf3678d1b254f36e35fb78b6184cadea5d848d41136a98ebed87004cec0847bc",
     "runs/val_diagnostics/official_split_20261020/kd_seed2025_predictions.json": "8fba98a8be3467c282351b689b230225b06b2d9bae0517188e0cc4739dbae4dc",
     "runs/val_diagnostics/official_split_20261020/kd_seed42_predictions.json": "17f6aa8edd4c16c6d744dd9665cdc74f31288245a1d80d3b60e858ff0a2a7880",

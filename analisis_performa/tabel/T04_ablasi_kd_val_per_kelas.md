@@ -18,3 +18,9 @@ dan NMS IoU 0,7. Seluruh angka berasal dari 1.213 gambar VAL resmi.
 | pure_weighted_seed42 | 42 | pure_weighted | ball | 182 | 0,8382 | 0,7044 | 0,0021 | 1,0000 | 0,0042 | runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json |
 | pure_weighted_seed42 | 42 | pure_weighted | gawang | 1048 | 0,7942 | 0,4914 | 0,1203 | 0,9752 | 0,2143 | runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json |
 | pure_weighted_seed42 | 42 | pure_weighted | robot | 295 | 0,6940 | 0,5762 | 0,0195 | 0,9966 | 0,0383 | runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json |
+| hybrid_feature_seed42 | 42 | hybrid_feature | ball | 182 | 0,9816 | 0,8458 | 0,9278 | 0,9890 | 0,9574 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
+| hybrid_feature_seed42 | 42 | hybrid_feature | gawang | 1048 | 0,9425 | 0,5900 | 0,7702 | 0,9466 | 0,8493 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
+| hybrid_feature_seed42 | 42 | hybrid_feature | robot | 295 | 0,9833 | 0,7949 | 0,8994 | 0,9695 | 0,9331 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | ball | 182 | 0,9887 | 0,8531 | 0,9476 | 0,9945 | 0,9705 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | gawang | 1048 | 0,9491 | 0,5950 | 0,7627 | 0,9599 | 0,8500 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | robot | 295 | 0,9797 | 0,7982 | 0,9060 | 0,9797 | 0,9414 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |

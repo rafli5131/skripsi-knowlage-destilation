@@ -42,10 +42,15 @@ REGISTRY = ROOT / "configs/model_registry.yaml"
 OUT = ROOT / "runs/val_diagnostics/official_split_20261020"
 TABLES = ROOT / "analisis_performa/tabel"
 NAMES = {0: "ball", 1: "gawang", 2: "robot"}
+HYBRID_RUNS = {
+    "hybrid_feature_seed42": "yolo11_tiny_hybrid_feature_seed42",
+    "hybrid_full_seed42": "yolo11_tiny_hybrid_full_seed42",
+}
 MODELS = (
     "teacher_fp32",
     "kd_seed42", "kd_seed1337", "kd_seed2025",
     "supervised_seed42", "supervised_seed1337", "supervised_seed2025",
+    *HYBRID_RUNS,
 )
 THRESHOLDS = [round(i * 0.05, 2) for i in range(1, 19)]
 OPERATING_CONFIDENCE = 0.25
@@ -97,11 +102,20 @@ def verify_val_bytes(fingerprint: dict[str, Any]) -> None:
 
 
 def capture_one(label: str, output: Path, images: Path, expected: set[str], fingerprint: dict[str, Any], threads: int) -> None:
-    checkpoint = Path(registry_models()[label]["checkpoint"])
-    if not checkpoint.is_absolute():
-        checkpoint = ROOT / checkpoint
-    checkpoint = checkpoint.resolve()
-    validate_checkpoint(checkpoint, label=label)
+    if label in HYBRID_RUNS:
+        manifest_path = ROOT / "runs/kd_hybrid" / HYBRID_RUNS[label] / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if manifest.get("status") != "complete":
+            raise RuntimeError(f"Hybrid pilot is not complete: {label}")
+        checkpoint = Path(manifest["student_best_checkpoint"]).resolve()
+        if sha256(checkpoint) != manifest.get("student_best_sha256"):
+            raise RuntimeError(f"Hybrid checkpoint hash differs from its training manifest: {label}")
+    else:
+        checkpoint = Path(registry_models()[label]["checkpoint"])
+        if not checkpoint.is_absolute():
+            checkpoint = ROOT / checkpoint
+        checkpoint = checkpoint.resolve()
+        validate_checkpoint(checkpoint, label=label)
     torch.set_num_threads(threads)
     model = YOLO(str(checkpoint), task="detect").model
     if {int(k): str(v) for k, v in model.names.items()} != NAMES:
@@ -404,7 +418,8 @@ def aggregate(output: Path, expected: set[str], fingerprint: dict[str, Any]) -> 
         manifest["outputs_sha256"][path.relative_to(ROOT).as_posix()] = sha256(path)
         manifest["outputs_sha256"][path.with_suffix(".md").relative_to(ROOT).as_posix()] = sha256(path.with_suffix(".md"))
     manifest["val_diagnosis_added_on"] = "2026-10-20"
-    manifest["scope"] = "Curated lab/server tables T01-T14 from existing artifacts plus seven-checkpoint VAL diagnosis; no new training, TEST rerun, or robot operation"
+    manifest["hybrid_val_diagnosis_added_on"] = "2026-10-22"
+    manifest["scope"] = "Curated lab/server tables T01-T14 plus nine-checkpoint VAL diagnosis including two KD hybrid pilots trained separately; no TEST rerun or robot operation"
     manifest_path.write_text(json.dumps(manifest, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
     print(f"Wrote T09/T10/T11/T14 and {summary_path}", flush=True)
 
@@ -413,6 +428,7 @@ def main() -> int:
     args = arguments()
     if args.threads < 1:
         raise ValueError("--threads must be positive")
+    args.output = args.output.expanduser().resolve()
     images, expected, fingerprint = source_paths()
     args.output.mkdir(parents=True, exist_ok=True)
     if not args.aggregate_only:

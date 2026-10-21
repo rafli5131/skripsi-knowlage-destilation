@@ -30,10 +30,14 @@ Metrik pendamping pada ambang confidence 0,25 dan IoU pencocokan 0,50: precision
 
 | Tahap | `hybrid_feature` | `hybrid_full` | Supervised seed 42 |
 | --- | --- | --- | --- |
-| mAP50–95 VAL pilot | [BELUM DIUKUR] | [BELUM DIUKUR] | 0,718930 |
-| Precision / recall / F1 @0,25 | [BELUM DIUKUR] | [BELUM DIUKUR] | 0,882900 / 0,967939 / 0,923466 |
-| FP per gambar dan duplikasi | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] |
+| mAP50–95 VAL pilot | 0,743554 | 0,748770 | 0,718930 |
+| Precision / recall / F1 @0,25 | 0,865797 / 0,968356 / 0,914209 | 0,872100 / 0,978030 / 0,922032 | 0,882900 / 0,967939 / 0,923466 |
+| FP per gambar / jumlah duplikasi | 0,281946 / 147 | 0,291014 / 166 | 0,255565 / 134 |
 
-Nilai supervised di atas dihitung ulang dari [`supervised_seed42_val.json`](../runs/val_ablation/hybrid_20261021_baseline/supervised_seed42_val.json) pada 1.213 gambar VAL, dengan pengaturan yang sama seperti T04. Angka ini dicatat sebelum kedua pilot hibrida dimulai. FP per gambar dan duplikasi masih `[BELUM DIUKUR]`.
+Semua nilai dihitung pada 1.213 gambar VAL resmi dengan pengaturan yang sama. Nilai supervised berasal dari [`supervised_seed42_val.json`](../runs/val_ablation/hybrid_20261021_baseline/supervised_seed42_val.json); FP dan duplikasi dihitung ulang dari prediksi VAL dengan confidence 0,25 dan pencocokan IoU 0,50. Hasil per kelas dan sumber lengkap ada di [T04](../analisis_performa/tabel/T04_ablasi_kd_val.md) serta [T09](../analisis_performa/tabel/T09_analisis_kesalahan.md).
 
-Setelah pilot, aturan pemilihan di atas tidak diubah berdasarkan hasil yang terlihat. Keputusan pemakaian pada OP3 memerlukan bukti kamera dan runtime OP3 tersendiri.
+Kedua pilot selesai pada 100 epoch; epoch checkpoint terbaik masing-masing adalah 100. Selisih mAP50–95 antara `hybrid_full` dan `hybrid_feature` adalah 0,005216. Sesuai aturan yang ditetapkan sebelum eksperimen, `hybrid_full` dipilih untuk evaluasi tiga *seed*; nilainya juga lebih tinggi daripada supervised seed 42 sebesar 0,029839. Pada confidence 0,25, `hybrid_full` menghasilkan FP per gambar dan duplikasi sedikit lebih banyak daripada `hybrid_feature` dan supervised, sehingga metrik pendamping tetap dilaporkan bersama mAP.
+
+Hasil ini masih satu *seed* dan hanya mengukur split level-gambar Advance Vision. TEST tidak digunakan untuk memilih varian. Keputusan pemakaian pada OP3 memerlukan bukti kamera dan runtime OP3 tersendiri.
+
+Checkpoint terbaik: [`hybrid_feature`](../runs/kd_hybrid/yolo11_tiny_hybrid_feature_seed42/weights/best.pt) dan [`hybrid_full`](../runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt). Percobaan pertama `hybrid_feature` gagal sebelum epoch pertama karena direktori proyek belum dibuat; manifest gagal dipertahankan di `runs/kd_hybrid/failures/`, kemudian retry menyelesaikan 100 epoch.

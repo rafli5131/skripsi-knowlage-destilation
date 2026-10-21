@@ -1,0 +1,5 @@
+{
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_feature_seed42'",
+  "finished_at_utc": "2026-10-21T17:00:01.537254+00:00",
+  "status": "failed"
+}

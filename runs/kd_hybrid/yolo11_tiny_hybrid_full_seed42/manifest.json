@@ -1,0 +1,124 @@
+{
+  "dataset_fingerprint": "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json",
+  "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "dataset_split_fingerprints": {
+    "test": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+    "train": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+    "val": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710"
+  },
+  "dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/resolved_data.yaml",
+  "dataset_yaml_sha256": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+  "distillation": {
+    "box_weight": 1.0,
+    "class_temperature": 2.0,
+    "class_weight": 1.0,
+    "dis": 1.0,
+    "feature_weight": 1.0,
+    "head_location_weight": "uniform mean",
+    "layers": "YOLO Detect neck inputs (P3/P4/P5) and raw Detect outputs",
+    "mode": "hybrid_full",
+    "type": "labeled detection plus feature, box-output, and class-output distillation"
+  },
+  "distillation_implementation": {
+    "module": "ultralytics.nn.distill_model",
+    "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/distill_model.py",
+    "sha256": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+    "snapshot_recorded_at_run_time": true,
+    "source_path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/distill_model.py"
+  },
+  "finished_at_utc": "2026-10-21T18:21:59.950609+00:00",
+  "head_loss_implementation": {
+    "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/kd_losses.py",
+    "sha256": "4723b135e0d0a50e023cb67842207d2166558f104ef8bada69d19a7f79655229",
+    "snapshot_recorded_at_run_time": true,
+    "source_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/kd_losses.py"
+  },
+  "metrics": {
+    "fitness": 0.7488320118050079,
+    "metrics/mAP50(B)": 0.9724973304155654,
+    "metrics/mAP50-95(B)": 0.7488320118050079,
+    "metrics/precision(B)": 0.9253725575252353,
+    "metrics/recall(B)": 0.9510379063296647
+  },
+  "objective": "KD hibrida: loss deteksi berlabel ditambah distilasi fitur, kotak, dan kelas pure_v4",
+  "output_dir": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42",
+  "parameter_reduction_percent": 68.706,
+  "qat_used": false,
+  "resolved_inputs": {
+    "dataset_root_override": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human",
+    "dataset_root_sha256": "2393af1183714e395507dd864cdf5643a864698c94fa041a187bd109c81428c8",
+    "dataset_split_fingerprints": {
+      "train": "a460ec3f6b16bacde012374846e8bd88b51bfdd38bc591433d16517251b198bb",
+      "val": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710"
+    },
+    "dataset_split_fingerprints_verified": true,
+    "resolved_dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/resolved_data.yaml",
+    "source_dataset_yaml": "/mnt/nas-hpg9/rafli5131/bre/configs/data_train_val.yaml",
+    "source_dataset_yaml_sha256": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+    "teacher_checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+    "teacher_checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+  },
+  "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_full.yaml",
+  "run_config_sha256": "f6d3d1407dca6bc53c56f26dd7d5a773177387b96279eb9629d6df56e24c1a79",
+  "runtime": {
+    "compute_capability": "8.9",
+    "cuda_available": true,
+    "cuda_runtime_version": "12.1",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA L40",
+    "device_type": "cuda",
+    "logical_device_index": 0,
+    "platform": "Linux-6.1.0-43-amd64-x86_64-with-glibc2.36",
+    "requested_device": "0",
+    "total_memory_bytes": 47590277120,
+    "visible_cuda_device_count": 3
+  },
+  "seed": 42,
+  "started_at_utc": "2026-10-21T17:00:28.648319+00:00",
+  "status": "complete",
+  "student_architecture": "/mnt/nas-hpg9/rafli5131/bre/models/yolo11_tiny_kd.yaml",
+  "student_architecture_sha256": "981c68e80f6f804511c53aec702a892f35794ffd9d8761d503daa59780d4c439",
+  "student_best_checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+  "student_best_sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+  "student_initialization": "random initialization from custom narrow YOLO11 YAML",
+  "student_parameters": 810649,
+  "teacher_checkpoint": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+  "teacher_parameters": 2590425,
+  "teacher_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "test_split_used": false,
+  "train_labels_used_for_loss": true,
+  "training": {
+    "amp": false,
+    "batch": 16,
+    "close_mosaic": 10,
+    "device": "0",
+    "epochs": 100,
+    "imgsz": 640,
+    "lr0": 0.001,
+    "lrf": 0.01,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "pretrained": false,
+    "seed": 42,
+    "warmup_epochs": 3.0,
+    "weight_decay": 0.0005,
+    "workers": 2
+  },
+  "training_runtime_compatibility": {
+    "compatibility_config": "/mnt/nas-hpg9/rafli5131/bre/configs/runtime_compatibility.yaml",
+    "compatibility_config_sha256": "10fbd6211978c63b69d0e6646d2262cbcddbf10e31c727cd6eebd903b76ca5b1",
+    "distill_model_path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/distill_model.py",
+    "distill_model_sha256": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+    "ultralytics_version": "8.4.130"
+  },
+  "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/train_kd.py",
+  "training_script_sha256": "5deec9a2abca030e58e4adee8b7226fb933dc1dadd9eaaf499d77aeaea8d91da",
+  "training_script_snapshot_recorded_at_run_time": true,
+  "training_script_source_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_kd.py",
+  "validation_split": "VAL only; labels used for metrics and model selection",
+  "versions": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

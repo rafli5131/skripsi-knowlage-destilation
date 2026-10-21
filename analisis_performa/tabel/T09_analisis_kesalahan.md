@@ -11,5 +11,7 @@ Status: Lengkap dari diagnosis tujuh checkpoint pada VAL Roboflow resmi.
 | supervised_seed42 | val | 0,2500 | 0,5000 | 0,2556 | 107 | 0 | 69 | 134 | 5 | 23 | 33 | runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json |
 | supervised_seed1337 | val | 0,2500 | 0,5000 | 0,2622 | 106 | 0 | 81 | 131 | 5 | 18 | 41 | runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json |
 | supervised_seed2025 | val | 0,2500 | 0,5000 | 0,2638 | 106 | 0 | 81 | 133 | 3 | 23 | 37 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| hybrid_feature_seed42 | val | 0,2500 | 0,5000 | 0,2819 | 123 | 0 | 72 | 147 | 6 | 20 | 41 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,2500 | 0,5000 | 0,2910 | 106 | 0 | 81 | 166 | 4 | 16 | 29 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
 
 Sumber setiap baris: JSON prediksi VAL pada kolom `source`. Matching kelas sama dilakukan satu-ke-satu pada IoU ≥0,50, urut confidence. Prediksi sisa yang cocok dengan kelas lain diberi kategori wrong class; sisanya duplicate bila IoU kelas sama ≥0,50, localization bila 0,10–<0,50, dan background selain itu. FN dihitung pada GT tanpa pasangan benar menurut luas kotak pada piksel input. Kategori FP saling eksklusif.

@@ -74,5 +74,25 @@ Status: Lengkap dari diagnosis tujuh checkpoint pada VAL Roboflow resmi.
 | supervised_seed2025 | val | 0,7000 | 0,8000 | 0,7530 | 0,9873 | 393 | 0,1746 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 | supervised_seed2025 | val | 0,8000 | 0,9000 | 0,8446 | 0,9977 | 433 | 0,1746 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 | supervised_seed2025 | val | 0,9000 | 1,0000 | 0,9332 | 0,9922 | 129 | 0,1746 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| hybrid_feature_seed42 | val | 0,0000 | 0,1000 | [TIDAK ADA DETEKSI] | [TIDAK ADA DETEKSI] | 0 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,1000 | 0,2000 | [TIDAK ADA DETEKSI] | [TIDAK ADA DETEKSI] | 0 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,2000 | 0,3000 | 0,2763 | 0,2258 | 124 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,3000 | 0,4000 | 0,3472 | 0,4640 | 222 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,4000 | 0,5000 | 0,4510 | 0,6135 | 163 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,5000 | 0,6000 | 0,5474 | 0,8141 | 156 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,6000 | 0,7000 | 0,6524 | 0,8848 | 191 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,7000 | 0,8000 | 0,7583 | 0,9743 | 311 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,8000 | 0,9000 | 0,8496 | 0,9910 | 446 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | 0,9000 | 1,0000 | 0,9287 | 0,9947 | 187 | 0,1596 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,0000 | 0,1000 | [TIDAK ADA DETEKSI] | [TIDAK ADA DETEKSI] | 0 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,1000 | 0,2000 | [TIDAK ADA DETEKSI] | [TIDAK ADA DETEKSI] | 0 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,2000 | 0,3000 | 0,2752 | 0,1792 | 106 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,3000 | 0,4000 | 0,3535 | 0,3218 | 174 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,4000 | 0,5000 | 0,4494 | 0,6425 | 179 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,5000 | 0,6000 | 0,5506 | 0,7440 | 207 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,6000 | 0,7000 | 0,6523 | 0,8947 | 228 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,7000 | 0,8000 | 0,7531 | 0,9867 | 300 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,8000 | 0,9000 | 0,8435 | 0,9956 | 457 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | 0,9000 | 1,0000 | 0,9283 | 0,9944 | 178 | 0,1623 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
 
 Sumber setiap baris: JSON prediksi VAL pada kolom `source`. Bin [bawah, atas), bin terakhir inklusif; hanya prediksi confidence >0,25. Kebenaran deteksi memakai TP IoU 0,50 dari validator. ECE = jumlah proporsi bin × |rerata confidence − precision empiris|. ECE pada tabel diulang per baris model dan tidak menilai kalibrasi probabilitas kelas secara penuh.

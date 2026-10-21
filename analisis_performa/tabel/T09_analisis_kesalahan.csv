@@ -6,3 +6,5 @@ kd_seed2025,val,0.25,0.5,0.3231657048639736,132,0,63,197,7,21,41,runs/val_diagno
 supervised_seed42,val,0.25,0.5,0.25556471558120364,107,0,69,134,5,23,33,runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json
 supervised_seed1337,val,0.25,0.5,0.26215993404781535,106,0,81,131,5,18,41,runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json
 supervised_seed2025,val,0.25,0.5,0.26380873866446825,106,0,81,133,3,23,37,runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json
+hybrid_feature_seed42,val,0.25,0.5,0.28194558944765047,123,0,72,147,6,20,41,runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json
+hybrid_full_seed42,val,0.25,0.5,0.29101401483924155,106,0,81,166,4,16,29,runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json

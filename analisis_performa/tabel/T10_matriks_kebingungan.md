@@ -116,5 +116,37 @@ Status: Lengkap dari diagnosis tujuh checkpoint pada VAL Roboflow resmi.
 | supervised_seed2025 | val | background | gawang | 279 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 | supervised_seed2025 | val | background | robot | 32 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
 | supervised_seed2025 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json |
+| hybrid_feature_seed42 | val | ball | ball | 180 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | ball | background | 2 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | gawang | gawang | 992 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | gawang | background | 56 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | robot | robot | 286 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | robot | background | 9 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | background | ball | 14 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | background | gawang | 296 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | background | robot | 32 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_feature_seed42 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_feature_seed42_predictions.json |
+| hybrid_full_seed42 | val | ball | ball | 181 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | ball | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | ball | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | ball | background | 1 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | gawang | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | gawang | gawang | 1006 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | gawang | robot | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | gawang | background | 42 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | robot | ball | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | robot | gawang | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | robot | robot | 289 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | robot | background | 6 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | background | ball | 10 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | background | gawang | 313 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | background | robot | 30 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
+| hybrid_full_seed42 | val | background | background | 0 | 0,2500 | 0,5000 | runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json |
 
 Sumber setiap baris: JSON prediksi VAL pada kolom `source`. Matriks empat label mencakup background: pasangan kelas sama lebih dulu, lalu pasangan salah kelas pada IoU ≥0,50; prediksi/GT yang belum berpasangan dipetakan ke background. Ini matriks diagnostik satu-ke-satu, bukan mAP.

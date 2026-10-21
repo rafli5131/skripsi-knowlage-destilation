@@ -35,6 +35,11 @@ OUT = ROOT / "runs/val_ablation/pure_weighted_20261020"
 BASELINES = ("kd_seed42", "kd_seed1337", "kd_seed2025")
 PILOT = "pure_weighted_seed42"
 SUPERVISED = "supervised_seed42"
+HYBRID = ("hybrid_feature_seed42", "hybrid_full_seed42")
+HYBRID_RUNS = {
+    "hybrid_feature_seed42": "yolo11_tiny_hybrid_feature_seed42",
+    "hybrid_full_seed42": "yolo11_tiny_hybrid_full_seed42",
+}
 
 
 def sha256(path: Path) -> str:
@@ -51,6 +56,11 @@ def checkpoint_and_manifest(label: str) -> tuple[Path, Path, dict]:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         checkpoint = Path(manifest["student_best_checkpoint"])
         expected = manifest["student_best_sha256"]
+    elif label in HYBRID_RUNS:
+        manifest_path = ROOT / "runs/kd_hybrid" / HYBRID_RUNS[label] / "manifest.json"
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        checkpoint = Path(manifest["student_best_checkpoint"])
+        expected = manifest["student_best_sha256"]
     else:
         registry = yaml.safe_load((ROOT / "configs/model_registry.yaml").read_text(encoding="utf-8"))["models"]
         record = registry[label]
@@ -62,7 +72,7 @@ def checkpoint_and_manifest(label: str) -> tuple[Path, Path, dict]:
     if not checkpoint.is_absolute():
         checkpoint = ROOT / checkpoint
     checkpoint = checkpoint.resolve()
-    if label == PILOT and manifest["status"] != "complete":
+    if label in (PILOT, *HYBRID) and manifest["status"] != "complete":
         raise RuntimeError("Pilot training manifest is not complete")
     if sha256(checkpoint) != expected:
         raise RuntimeError(f"Checkpoint hash mismatch: {label}")
@@ -170,7 +180,7 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT, SUPERVISED), default=[*BASELINES, PILOT])
+    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT, SUPERVISED, *HYBRID), default=[*BASELINES, PILOT])
     parser.add_argument("--output-dir", type=Path, default=OUT)
     parser.add_argument("--threads", type=int, default=8)
     parser.add_argument("--device", choices=("cpu", "cuda:0"), default="cpu")
