@@ -2,6 +2,8 @@
 
 > Salin seluruh isi bagian **Prompt** ke agen koding yang membuka *repository* ini di server lab (`/mnt/nas-hpg9/rafli5131/bre`). Versi 21 Oktober 2026, disusun dari analisis repo pada *commit* `fafe2aa`. Prompt ini mencakup pekerjaan kelompok A: semua pekerjaan yang tidak memerlukan robot, kamera, maupun komputer OP3. Bila bertentangan dengan `prompt/PROMPT_PERBAIKAN_KODE_DAN_ANALISIS_PERFORMA.md` atau `prompt/PROMPT_TABEL_LAB_SERVER_KD.md`, ikuti prompt ini dan laporkan pertentangannya.
 
+> **Pembaruan 21 Oktober 2026:** pembimbing menyetujui KD hibrida. **Fase 2 dan Fase 3 (pilot `pure_box_weighted`) tidak dijalankan**, kecuali Bhre memintanya secara tertulis. Sebagai gantinya, jalankan `prompt/PROMPT_KD_HIBRIDA_LAB_SERVER.md`. Fase 0, 1, 4, 5, dan 6 di prompt ini tetap berlaku.
+
 ---
 
 ## Prompt
@@ -56,6 +58,8 @@ Fase 6  Naskah: proposal Bab I-III dan Bab IV sementara        -> TH-akhir
 ```
 
 Selama pelatihan Fase 3 berjalan di `tmux`, Fase 4, 5, dan 6 boleh dikerjakan sejajar.
+
+Fase 2 dan Fase 3 diganti oleh `prompt/PROMPT_KD_HIBRIDA_LAB_SERVER.md` (lihat pembaruan di awal berkas). Pelatihan KD hibrida dari prompt itu juga boleh berjalan sejajar dengan Fase 4, 5, dan 6.
 
 ### 4. Fase 0: persiapan
 
