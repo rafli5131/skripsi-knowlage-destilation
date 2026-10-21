@@ -1,6 +1,6 @@
 # Prompt pengumpulan frame dan label kamera ROBOTIS OP3
 
-> Untuk sesi kamera berikutnya. Salin bagian **Prompt siap pakai** ke agen yang bekerja di komputer OP3. Hasil label otomatis adalah draf untuk anotator, bukan angka akurasi skripsi.
+> Untuk sesi kamera berikutnya. Salin bagian **Prompt siap pakai** ke agen yang bekerja di komputer OP3. Hasil label otomatis adalah draf untuk anotator, bukan angka akurasi skripsi. Jika ingin melihat deteksi saat frame direkam, gunakan [prompt gabungan monitoring dan capture](PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md).
 
 ## Prompt siap pakai
 
@@ -11,7 +11,7 @@ Bertindak sebagai engineer ROS 2 dan anotasi deteksi objek. Gunakan repository `
 1. Periksa commit repository, `git status`, nama topic kamera yang benar, hash checkpoint, dan environment ROS/Python. Jangan mengubah checkpoint atau parameter model untuk memperoleh hasil yang tampak lebih baik. Jangan memasang paket ke Python sistem.
 2. Jangan mengirim perintah servo, gait, atau motor. Operator robot yang mengatur kondisi fisik. Tulis `servo_idle` atau `walking` hanya jika operator mengonfirmasi kondisi selama sesi; jika tidak, tulis `unknown`.
 3. Jangan melakukan `git commit`, `git push`, atau mengunggah gambar/label/log dari robot. Jangan menimpa sesi lama. Gunakan `session_id` unik per kondisi dan pengulangan.
-4. Pisahkan uji runtime/tracking dari pengambilan dataset. Pencatatan frame dapat menambah beban CPU, sehingga log latensi/FPS saat capture berlangsung **bukan** hasil benchmark runtime. Uji tracking mengikuti [`PROMPT_UJI_LIVE_KAMERA_TRACKING_OP3.md`](PROMPT_UJI_LIVE_KAMERA_TRACKING_OP3.md) pada sesi tersendiri.
+4. Untuk **benchmark** runtime/tracking, pisahkan sesi dari pengambilan dataset. Monitoring dan capture boleh bersamaan menurut [prompt gabungan](PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md), tetapi log latensi/FPS saat capture berlangsung **bukan** hasil benchmark runtime.
 5. Label dari model adalah `labels_auto` saja. Seluruh gambar, termasuk yang tidak diberi kotak oleh model, wajib ditinjau manusia sebelum disalin atau diperbaiki menjadi `labels_reviewed` dan digunakan sebagai ground truth.
 
 ### Tahap 1 — cek prasyarat
@@ -31,7 +31,7 @@ Bandingkan hash dengan alias `op3_default` di `configs/model_registry.yaml`. Jik
 
 ### Tahap 2 — cek deteksi dan tracking langsung
 
-Jalankan prompt live tracking yang ditautkan di atas. Tampilkan bola, gawang, dan robot dalam bidang pandang; periksa ketepatan kelas/kotak secara visual serta kemunculan dan kontinuitas ID. Catat temuan sebagai pemeriksaan operasional, **bukan** mAP. Hentikan node deteksi sebelum merekam dataset agar pengambilan frame dan pengukuran runtime tidak bercampur.
+Untuk uji performa runtime tersendiri, jalankan [`PROMPT_UJI_LIVE_KAMERA_TRACKING_OP3.md`](PROMPT_UJI_LIVE_KAMERA_TRACKING_OP3.md). Tampilkan bola, gawang, dan robot dalam bidang pandang; periksa ketepatan kelas/kotak serta kontinuitas ID. Catat temuan sebagai pemeriksaan operasional, **bukan** mAP. Bila tujuan sesi adalah monitoring sambil merekam, ikuti prompt gabungan dan beri label lognya sebagai observasi, bukan benchmark.
 
 ### Tahap 3 — ambil frame kamera mentah
 
@@ -68,4 +68,4 @@ Jika menggunakan teacher di lab/server, salin **satu folder sesi lengkap** denga
 
 Tinjau setiap frame secara manual di alat anotasi pilihan: perbaiki kelas, posisi kotak, objek yang terlewat, serta prediksi palsu. Simpan label final di `data/op3_camera_eval/sessions/<session_id>/labels_reviewed/` tanpa mengubah `labels_auto/` atau `images/`. Pastikan setiap gambar memiliki label final bernama sama (`frame_000001.jpg` → `frame_000001.txt`), termasuk file kosong untuk gambar tanpa tiga objek target. Catat siapa yang meninjau dan kapan. Bila peninjauan belum selesai, tandai `[BELUM GROUND TRUTH]` dan jangan hitung mAP, precision, recall, atau F1.
 
-Laporkan: commit dan hash checkpoint; nama topic; kondisi fisik yang diverifikasi operator; jumlah frame per sesi; jumlah frame yang menampilkan masing-masing kelas setelah pemeriksaan manusia; path `images/`, `labels_auto/`, dan `labels_reviewed/`; status peninjauan; kegagalan kamera/dependency; serta temuan tracking dari sesi runtime terpisah. Nilai evaluasi OP3 baru dapat dihitung setelah label final dan protokol evaluasi dikunci. Jangan mengarang hasil atau menganggap prediksi model sebagai ground truth.
+Laporkan: commit dan hash checkpoint; nama topic; kondisi fisik yang diverifikasi operator; jumlah frame per sesi; jumlah frame yang menampilkan masing-masing kelas setelah pemeriksaan manusia; path `images/`, `labels_auto/`, dan `labels_reviewed/`; status peninjauan; kegagalan kamera/dependency; serta temuan tracking dari sesi monitoring yang terkait atau sesi runtime terpisah. Nilai evaluasi OP3 baru dapat dihitung setelah label final dan protokol evaluasi dikunci. Jangan mengarang hasil atau menganggap prediksi model sebagai ground truth.

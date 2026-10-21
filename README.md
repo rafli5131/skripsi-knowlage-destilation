@@ -105,6 +105,7 @@ camera-specific accuracy and tracking stability have not been validated. The
 existing sessions are inference/runtime observations without labeled frames.
 For the next camera session, use the [OP3 frame and labeling prompt](prompt/PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md).
 The [OP3 camera dataset folder](data/op3_camera_eval/README.md) documents raw frames, automatic draft labels, and human-reviewed labels.
+To monitor detections while capturing frames, follow the [combined OP3 camera prompt](prompt/PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md).
 
 ## Run
 

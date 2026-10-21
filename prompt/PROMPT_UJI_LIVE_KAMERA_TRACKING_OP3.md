@@ -1,6 +1,6 @@
 # Prompt Uji Langsung Kamera dan Tracking ROBOTIS OP3
 
-> Prompt untuk memeriksa alur kamera, deteksi visual, ID tracking, dan pencatatan log pada komputer OP3. Uji ini bukan pengukuran akurasi berlabel. Untuk pengambilan gambar mentah dan pra-label, gunakan [prompt pengumpulan frame OP3](PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md) dalam sesi terpisah.
+> Prompt untuk memeriksa alur kamera, deteksi visual, ID tracking, dan pencatatan log pada komputer OP3. Uji ini bukan pengukuran akurasi berlabel. Untuk **monitoring sambil merekam frame mentah**, gunakan [prompt gabungan](PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md); untuk pengukuran performa, pertahankan sesi ini terpisah dari capture.
 
 ---
 
@@ -25,7 +25,7 @@ Model runtime adalah checkpoint student KD `.pt`, PyTorch CPU FP32, dengan track
 - Kerjakan uji runtime pada OP3. Jangan mengubah kode, checkpoint, registry, atau konfigurasi eksperimen selama sesi pengukuran. Bila ditemukan masalah kode, hentikan uji terkait dan laporkan reproduksi serta lognya untuk diperbaiki terpisah.
 - Jangan melatih model, memilih checkpoint lain, mengubah threshold, mengubah konfigurasi tracker, atau memasang OpenVINO, ONNX, QAT, maupun INT8.
 - Jangan mengirim perintah servo/gait, menyalakan atau menghentikan motor, atau mengubah konfigurasi perangkat. Operator yang bertanggung jawab atas robot mengatur dan memverifikasi kondisi fisiknya secara terpisah.
-- Jangan menyimpan gambar/video. Node hanya perlu membuat log CSV/JSON yang memang dirancang untuk menyimpan metadata dan hasil deteksi.
+- Node detektor tidak menyimpan gambar/video; ia membuat log CSV/JSON. Dalam prompt gabungan, proses capture lain boleh menyimpan frame mentah secara bersamaan, tetapi log itu hanya observasi dan bukan benchmark performa.
 - Jangan menghapus atau menimpa log lama. Pakai `run_id` baru untuk setiap sesi.
 - Jangan melakukan `git commit`, `git push`, atau mengunggah log. Jika kode yang diperlukan belum tersedia di OP3, berhenti dan laporkan prasyarat tersebut.
 
@@ -68,7 +68,7 @@ ros2 topic hz /vision/detections
 ros2 topic echo /vision/detections --field detections
 ```
 
-Gunakan penampil ROS yang sudah tersedia untuk melihat `/vision/debug_image`. Jangan memasang penampil baru tanpa kebutuhan yang jelas. Jika preview tidak dapat ditampilkan, catat bahwa verifikasi visual belum lengkap.
+Gunakan `python scripts/view_op3_debug_image.py --topic /vision/debug_image` dari desktop robot atau terminal SSH X11 dengan `$DISPLAY` tersedia. Penampil ini hanya membaca gambar beranotasi dan tidak menjalankan model kedua. Jika preview tidak dapat ditampilkan, catat bahwa verifikasi visual belum lengkap.
 
 4. Hadirkan bola, gawang, dan robot ke bidang pandang kamera satu per satu atau bersamaan. Jangan menggerakkan robot. Untuk memeriksa tracking, biarkan tiap objek tampil selama rangkaian frame dan gerakkan objek/orang di lingkungan secara aman agar dapat dilihat apakah kotak dan ID mengikuti objek.
 5. Periksa overlay dan pesan/CSV untuk setiap kelas. ID dapat kosong pada beberapa frame awal saat tracker mengonfirmasi objek. Setelah muncul, catat apakah ID tetap terkait dengan objek yang sama sepanjang rangkaian frame. ID hanya berlaku selama satu sesi node dan dapat berubah setelah oklusi.
