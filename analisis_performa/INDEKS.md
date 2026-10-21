@@ -1,6 +1,6 @@
 # Indeks tabel analisis performa
 
-Pembaruan: 2026-10-20. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14; T15–T27 diperbarui dari artefak OP3 tersimpan. Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
+Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
 
 | Tabel | Status | Berkas |
 | --- | --- | --- |
@@ -30,4 +30,4 @@ Pembaruan: 2026-10-20. [Indeks lab/server](lab_server/README.md) memuat sumber d
 | T24 | Belum diukur. | [CSV](tabel/T24_pengaruh_preview.csv) · [Markdown](tabel/T24_pengaruh_preview.md) |
 | T25 | Sebagian; kelas/ID tersedia pada sesi idle baru, log lama hanya total dan uji kepala hanya bola terpilih. | [CSV](tabel/T25_observasi_deteksi_live.csv) · [Markdown](tabel/T25_observasi_deteksi_live.md) |
 | T26 | Sebagian; akurasi TEST offline ada, runtime OP3 hanya KD seed 42 idle; walking dan benchmark frame tetap belum ada. | [CSV](tabel/T26_tradeoff_utama.csv) · [Markdown](tabel/T26_tradeoff_utama.md) |
-| T27 | Belum diukur; belum ada set frame kamera OP3 berlabel. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) |
+| T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif) dan 50 frame gawang parsial terpisah; set final D8 belum dikunci. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) |

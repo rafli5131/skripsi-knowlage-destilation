@@ -9,8 +9,8 @@
 - **Kepatuhan tenggat** = proporsi frame dengan latensi <= 33,3 ms dan <= 66,7 ms. T23 kini memuat proporsi deskriptif dari sesi live tersimpan; benchmark frame tetap belum tersedia.
 - **P, R, F1**: dihitung pada IoU 0,5 dan confidence 0,25 untuk evaluasi historis; mAP50-95 dirata-ratakan pada IoU 0,50 sampai 0,95.
 - **mAP/akurasi Advance Vision**: valid untuk evaluasi gambar pada dataset Advance Vision. Angka tidak mengukur akurasi kamera OP3.
-- **Sesi kamera**: jumlah deteksi dan runtime tidak sama dengan precision/recall karena tidak ada anotasi ground truth pada frame kamera.
-- **Tracking**: ID BoT-SORT menghubungkan deteksi lintas frame dan hanya berlaku selama satu proses node. ID tidak menunjukkan kebenaran kelas. Konsistensi ID pada objek relatif diam tercatat di sesi servo_idle 20261019T123737Z_023704; kestabilan ID pada objek bergerak belum diuji khusus.
+- **Sesi kamera live tanpa anotasi per frame**: jumlah deteksi dan runtime tidak sama dengan precision/recall. Evaluasi offline T27 memakai frame kamera yang telah diberi label manusia dan mempunyai protokol pencocokan tersendiri.
+- **Tracking**: ID BoT-SORT menghubungkan deteksi lintas frame dan hanya berlaku selama satu proses node. ID tidak menunjukkan kebenaran kelas. Sesi `servo_idle` 20261019T123737Z_023704 dan sesi live 20261021_tracking_live_01 mencatat kontinuitas ID; akurasi tracking terhadap *ground truth* identitas temporal belum diukur.
 - **Ukuran objek**: kecil < 32^2 piksel; sedang 32^2 sampai 96^2; besar > 96^2 pada citra referensi 640. T08 menghitung luas kotak VAL setelah menormalkan sisi tensor validator ke 640 piksel; kelompok tanpa GT ditandai tidak berlaku.
 
 - **Perbedaan scope waktu pada log baru**: `processing_ms` pada `op3_idle_trial` dihitung sejak worker mengambil frame hingga hasil siap dicatat, bukan callback-ke-publish. `processing_ms` pada uji kepala juga mencakup komunikasi servo pada frame berperintah. Jangan menggantinya dengan end-to-end legacy.

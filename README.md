@@ -100,10 +100,13 @@ changes must be selected on VAL and evaluated on a new locked test protocol.
 `models/weights/kd_student_best.pt` is the selected seed-42 pure-KD checkpoint,
 copied from `runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt`.
 Seed 42 had the highest VAL mAP50–95 among the three final KD seeds. This
-checkpoint has run through a C920 ROS image topic on the OP3 host, but
-camera-specific accuracy and tracking stability have not been validated. The
-existing sessions are inference/runtime observations without labeled frames.
-For the next camera session, use the [OP3 frame and labeling prompt](prompt/PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md).
+checkpoint has run through a C920 ROS image topic on the OP3 host. An
+[exploratory OP3 camera evaluation](analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md)
+now reports detection metrics on 260 human-reviewed frames, with 50 partial-goal
+frames kept separate. The frames come from one day and environment, so the
+final camera evaluation is still open. Live logs show observed track IDs but
+do not measure tracking accuracy against temporal ground truth. For another
+camera session, use the [OP3 frame and labeling prompt](prompt/PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md).
 The [OP3 camera dataset folder](data/op3_camera_eval/README.md) documents raw frames, automatic draft labels, and human-reviewed labels.
 To monitor detections while capturing frames, follow the [combined OP3 camera prompt](prompt/PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md).
 
