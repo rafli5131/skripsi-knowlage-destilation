@@ -1,0 +1,1393 @@
+{
+  "classes": {
+    "0": "ball",
+    "1": "gawang",
+    "2": "robot"
+  },
+  "data_yaml": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/dataset/data.yaml",
+  "data_yaml_sha256": "abab15a8c9b19047bf020cab20aa5cf4dc36477948318ec222a05e2ade10614c",
+  "dataset_fingerprint": "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json",
+  "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+  "evaluator_script": "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_hybrid_locked_test.py",
+  "evaluator_script_sha256": "efb3e8abdd95bcc424967192e0a8b84b3b604416207b44bc0e58da1a417081b6",
+  "experiment": "KD Hybrid full three-seed TEST extension",
+  "finished_at_utc": "2026-10-22T01:12:59.800494+00:00",
+  "historical_test_exposure": "Official TEST was previously evaluated for teacher and pure KD; this is a follow-up comparison on the same split.",
+  "historical_test_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/final_test/pure_kd_official_split_locked_retry1/manifest.json",
+  "historical_test_manifest_sha256": "c4bda66f880a8f7866d15111d259c6d3fdb996a2b7417b0cd09c4a3dd0e21b6c",
+  "locked_models": [
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+      "checkpoint_sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+      "label": "hybrid_full_seed42",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/manifest.json",
+      "training_manifest_sha256": "b2290c43a6e2af74877bcf702021d3cbb3955a846091a2571bc68d9b8596198b"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "label": "hybrid_full_seed1337",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/manifest.json",
+      "training_manifest_sha256": "e398b6011fe28cf2937955df38ac645d5c6ac086931fc4683a930f974ada6313"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt",
+      "checkpoint_sha256": "68c4f20db711867e7bb508126638f09cbd482245887d835275d188ebd6e8afca",
+      "label": "hybrid_full_seed2025",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/manifest.json",
+      "training_manifest_sha256": "4ca74f76cf2b7a0d1231955ab52847afc1ead7a07092ba11edf0cf2d90069c41"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "checkpoint_sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "label": "supervised_seed42",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "training_manifest_sha256": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "label": "supervised_seed1337",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "training_manifest_sha256": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871"
+    },
+    {
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt",
+      "checkpoint_sha256": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "label": "supervised_seed2025",
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "training_manifest_sha256": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c"
+    }
+  ],
+  "model_registry_sha256": "402bad1414ad671106d815e74c337d74778c4b77fedc648c758fc581021b865e",
+  "models": {
+    "hybrid_full_seed1337": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.890925571190121,
+            "upper": 0.9212457675799979,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9428052480241745,
+            "upper": 0.9714994102251291,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.7286675306447165,
+            "upper": 0.7680493828663759,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8282126148383384,
+            "upper": 0.873358965362571,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.9550428061098792,
+            "upper": 0.9809345987954523,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9219753858990405,
+              "upper": 0.9883754343758353,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.935,
+              "upper": 0.995,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.8363128414111439,
+              "upper": 0.9031813262338855,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8913043478260869,
+              "upper": 0.9866666666666667,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9390243902439024,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.7940929111149253,
+              "upper": 0.8354256025970969,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.8985340254262953,
+              "upper": 0.9448294547295722,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5303912520638738,
+              "upper": 0.583135009079699,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.6974376578282828,
+              "upper": 0.75,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9077205562798784,
+              "upper": 0.9538016899920781,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.916987812911726,
+              "upper": 0.9645431789737171,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9579685161089017,
+              "upper": 0.9945304003823279,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7815798859235311,
+              "upper": 0.8540723842748502,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8467012914093206,
+              "upper": 0.9315146326276462,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "checkpoint_size_bytes": 1910803,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "hybrid_full_seed1337",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9065450968287248,
+          "mAP50": 0.9577269927634363,
+          "mAP50-95": 0.7467948953914789,
+          "precision": 0.8513359192832309,
+          "recall": 0.9694114805085001
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9585798816568047,
+            "ground_truth_count": 83,
+            "mAP50": 0.9748780487804878,
+            "mAP50-95": 0.8698129000001608,
+            "precision": 0.9418604651162791,
+            "predictions_above_confidence": 86,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8151191454396056,
+            "ground_truth_count": 532,
+            "mAP50": 0.9208082637154633,
+            "mAP50-95": 0.5547049378465299,
+            "precision": 0.724087591240876,
+            "predictions_above_confidence": 685,
+            "recall": 0.9323308270676691,
+            "true_positives_at_iou50": 496
+          },
+          "robot": {
+            "F1": 0.9407114624505929,
+            "ground_truth_count": 119,
+            "mAP50": 0.9774946657943576,
+            "mAP50-95": 0.8158668483277459,
+            "precision": 0.8880597014925373,
+            "predictions_above_confidence": 134,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": {
+          "module": "ultralytics.nn.distill_model",
+          "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed1337/distill_model.py",
+          "sha256": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+          "snapshot_recorded_at_run_time": true,
+          "source_path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/distill_model.py"
+        },
+        "legacy_seed42_baseline_missing_run_time_hashes": false,
+        "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_full.yaml",
+        "run_config_sha256": "f6d3d1407dca6bc53c56f26dd7d5a773177387b96279eb9629d6df56e24c1a79",
+        "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed1337/train_kd.py",
+        "training_script_sha256": "5deec9a2abca030e58e4adee8b7226fb933dc1dadd9eaaf499d77aeaea8d91da",
+        "training_script_snapshot_recorded_at_run_time": true,
+        "training_script_source_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_kd.py"
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/manifest.json",
+      "training_manifest_sha256": "e398b6011fe28cf2937955df38ac645d5c6ac086931fc4683a930f974ada6313",
+      "training_objective": "KD hibrida: loss deteksi berlabel ditambah distilasi fitur, kotak, dan kelas pure_v4",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.9577269927634363,
+        "metrics/mAP50-95(B)": 0.7467948953914789
+      },
+      "validation_metrics": {
+        "fitness": 0.752292706442812,
+        "metrics/mAP50(B)": 0.9733985386746005,
+        "metrics/mAP50-95(B)": 0.752292706442812,
+        "metrics/precision(B)": 0.9238965597281741,
+        "metrics/recall(B)": 0.9546569409705751
+      },
+      "validation_selection_evidence": null
+    },
+    "hybrid_full_seed2025": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.8940784636924451,
+            "upper": 0.9247185401722318,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9442952976797285,
+            "upper": 0.9711142556107037,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.7329127429362267,
+            "upper": 0.7701993456039242,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8283257624214333,
+            "upper": 0.8812957711581596,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.9566580892316976,
+            "upper": 0.982390772970433,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9101123595505618,
+              "upper": 0.9875038580246914,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.953244455172738,
+              "upper": 0.9943337662337663,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.850768690666999,
+              "upper": 0.9088569764301363,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8571060382916053,
+              "upper": 0.9891304347826086,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9390243902439024,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.7980902357363205,
+              "upper": 0.8418412006134647,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.8988178693634882,
+              "upper": 0.9441979320005519,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5326615116599875,
+              "upper": 0.5845045497476186,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.7044908554536088,
+              "upper": 0.758019857753468,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9130434782608695,
+              "upper": 0.9574074074074074,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.9256198347107438,
+              "upper": 0.970219050184038,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9500530596260796,
+              "upper": 0.995,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7768017114505592,
+              "upper": 0.8474577953249844,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8615384615384616,
+              "upper": 0.9421606150928058,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt",
+      "checkpoint_sha256": "68c4f20db711867e7bb508126638f09cbd482245887d835275d188ebd6e8afca",
+      "checkpoint_size_bytes": 1910803,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "hybrid_full_seed2025",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9089472803069051,
+          "mAP50": 0.957932860272015,
+          "mAP50-95": 0.7491804851467718,
+          "precision": 0.85460905577114,
+          "recall": 0.9706646133405803
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9529411764705883,
+            "ground_truth_count": 83,
+            "mAP50": 0.9785883281127182,
+            "mAP50-95": 0.8813598187250747,
+            "precision": 0.9310344827586207,
+            "predictions_above_confidence": 87,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8211046990931574,
+            "ground_truth_count": 532,
+            "mAP50": 0.9218502635463734,
+            "mAP50-95": 0.5559491171900971,
+            "precision": 0.7312775330396476,
+            "predictions_above_confidence": 681,
+            "recall": 0.9360902255639098,
+            "true_positives_at_iou50": 498
+          },
+          "robot": {
+            "F1": 0.9482071713147411,
+            "ground_truth_count": 119,
+            "mAP50": 0.9733599891569529,
+            "mAP50-95": 0.8102325195251435,
+            "precision": 0.9015151515151515,
+            "predictions_above_confidence": 132,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": {
+          "module": "ultralytics.nn.distill_model",
+          "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed2025/distill_model.py",
+          "sha256": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+          "snapshot_recorded_at_run_time": true,
+          "source_path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/distill_model.py"
+        },
+        "legacy_seed42_baseline_missing_run_time_hashes": false,
+        "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_full.yaml",
+        "run_config_sha256": "f6d3d1407dca6bc53c56f26dd7d5a773177387b96279eb9629d6df56e24c1a79",
+        "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed2025/train_kd.py",
+        "training_script_sha256": "5deec9a2abca030e58e4adee8b7226fb933dc1dadd9eaaf499d77aeaea8d91da",
+        "training_script_snapshot_recorded_at_run_time": true,
+        "training_script_source_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_kd.py"
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/manifest.json",
+      "training_manifest_sha256": "4ca74f76cf2b7a0d1231955ab52847afc1ead7a07092ba11edf0cf2d90069c41",
+      "training_objective": "KD hibrida: loss deteksi berlabel ditambah distilasi fitur, kotak, dan kelas pure_v4",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.957932860272015,
+        "metrics/mAP50-95(B)": 0.7491804851467718
+      },
+      "validation_metrics": {
+        "fitness": 0.7506521418792703,
+        "metrics/mAP50(B)": 0.9740756758607764,
+        "metrics/mAP50-95(B)": 0.7506521418792703,
+        "metrics/precision(B)": 0.9289211464575748,
+        "metrics/recall(B)": 0.9391655010704172
+      },
+      "validation_selection_evidence": null
+    },
+    "hybrid_full_seed42": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.8906404979678373,
+            "upper": 0.9205012453505308,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9464861602941191,
+            "upper": 0.971787539610613,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.7280921803126016,
+            "upper": 0.7661863637025319,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8265663223261195,
+            "upper": 0.8743289023225853,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.9552383915160668,
+            "upper": 0.980751862054942,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9204431818181817,
+              "upper": 0.9879518072289156,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9529780419016922,
+              "upper": 0.995,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.8426649806634805,
+              "upper": 0.908017590998752,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8764044943820225,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9390243902439024,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.79388773164319,
+              "upper": 0.8375209380234505,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9019121424881671,
+              "upper": 0.9445264843459154,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5361552392809984,
+              "upper": 0.5880319087853073,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.6978649042401432,
+              "upper": 0.7533234859675036,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9097421200906318,
+              "upper": 0.954547602680873,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.916355308813324,
+              "upper": 0.9600088105726873,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9547313822017859,
+              "upper": 0.994649274047187,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7669443421753505,
+              "upper": 0.8393850050253852,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8456234048586823,
+              "upper": 0.9230932203389831,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+      "checkpoint_sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+      "checkpoint_size_bytes": 1910803,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "hybrid_full_seed42",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9057019347763836,
+          "mAP50": 0.9592353216207877,
+          "mAP50-95": 0.7447128278982137,
+          "precision": 0.8498499509645049,
+          "recall": 0.9694114805085001
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9585798816568047,
+            "ground_truth_count": 83,
+            "mAP50": 0.9793400417311705,
+            "mAP50-95": 0.8748961880449032,
+            "precision": 0.9418604651162791,
+            "predictions_above_confidence": 86,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8164609053497942,
+            "ground_truth_count": 532,
+            "mAP50": 0.9228371597569904,
+            "mAP50-95": 0.5599028017709929,
+            "precision": 0.726207906295754,
+            "predictions_above_confidence": 683,
+            "recall": 0.9323308270676691,
+            "true_positives_at_iou50": 496
+          },
+          "robot": {
+            "F1": 0.937007874015748,
+            "ground_truth_count": 119,
+            "mAP50": 0.975528763374202,
+            "mAP50-95": 0.7993394938787446,
+            "precision": 0.8814814814814815,
+            "predictions_above_confidence": 135,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": {
+          "module": "ultralytics.nn.distill_model",
+          "path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/distill_model.py",
+          "sha256": "fe77f5d519c948614a0060e525a9c5537ae7f826a7fe5baee7274a15e9eaa75c",
+          "snapshot_recorded_at_run_time": true,
+          "source_path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/lib/python3.11/site-packages/ultralytics/nn/distill_model.py"
+        },
+        "legacy_seed42_baseline_missing_run_time_hashes": false,
+        "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_full.yaml",
+        "run_config_sha256": "f6d3d1407dca6bc53c56f26dd7d5a773177387b96279eb9629d6df56e24c1a79",
+        "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/train_kd.py",
+        "training_script_sha256": "5deec9a2abca030e58e4adee8b7226fb933dc1dadd9eaaf499d77aeaea8d91da",
+        "training_script_snapshot_recorded_at_run_time": true,
+        "training_script_source_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_kd.py"
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/manifest.json",
+      "training_manifest_sha256": "b2290c43a6e2af74877bcf702021d3cbb3955a846091a2571bc68d9b8596198b",
+      "training_objective": "KD hibrida: loss deteksi berlabel ditambah distilasi fitur, kotak, dan kelas pure_v4",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.9592353216207877,
+        "metrics/mAP50-95(B)": 0.7447128278982137
+      },
+      "validation_metrics": {
+        "fitness": 0.7488320118050079,
+        "metrics/mAP50(B)": 0.9724973304155654,
+        "metrics/mAP50-95(B)": 0.7488320118050079,
+        "metrics/precision(B)": 0.9253725575252353,
+        "metrics/recall(B)": 0.9510379063296647
+      },
+      "validation_selection_evidence": null
+    },
+    "supervised_seed1337": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.8981409596275881,
+            "upper": 0.9273221895734814,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9436025038518432,
+            "upper": 0.9721872092800738,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.7081310345432117,
+            "upper": 0.7492558817655183,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8434278074485049,
+            "upper": 0.8871982012191052,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.9521252020138357,
+            "upper": 0.9808099523375352,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9219577529465789,
+              "upper": 0.9822587816807469,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.935,
+              "upper": 0.995,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7870358871311685,
+              "upper": 0.8690348838297656,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8899722222222223,
+              "upper": 0.9878085512782838,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9204431818181817,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.8137383161698775,
+              "upper": 0.8578954553806265,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9070561430938606,
+              "upper": 0.9481304042383553,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5268879225494266,
+              "upper": 0.5774244753132203,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.7254299553031321,
+              "upper": 0.782676592831409,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9161868336886994,
+              "upper": 0.9585764823908337,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.9241853427219977,
+              "upper": 0.9658582604693972,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9526075772196524,
+              "upper": 0.9943689931350115,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7685868129352711,
+              "upper": 0.840518240601617,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8590562852554865,
+              "upper": 0.9339708717807464,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "checkpoint_size_bytes": 1909523,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "supervised_seed1337",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9122955712097313,
+          "mAP50": 0.9578258182490496,
+          "mAP50-95": 0.7264933293359825,
+          "precision": 0.8632299159129385,
+          "recall": 0.9672751154995923
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9523809523809523,
+            "ground_truth_count": 83,
+            "mAP50": 0.9735862206292314,
+            "mAP50-95": 0.8286569610567168,
+            "precision": 0.9411764705882353,
+            "predictions_above_confidence": 85,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8358458961474038,
+            "ground_truth_count": 532,
+            "mAP50": 0.9254673936282116,
+            "mAP50-95": 0.5488070136551567,
+            "precision": 0.7537764350453172,
+            "predictions_above_confidence": 662,
+            "recall": 0.9379699248120301,
+            "true_positives_at_iou50": 499
+          },
+          "robot": {
+            "F1": 0.9444444444444444,
+            "ground_truth_count": 119,
+            "mAP50": 0.9744238404897055,
+            "mAP50-95": 0.8020160132960743,
+            "precision": 0.8947368421052632,
+            "predictions_above_confidence": 133,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": null,
+        "legacy_seed42_baseline_missing_run_time_hashes": false,
+        "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/supervised_baseline.yaml",
+        "run_config_sha256": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+        "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_supervised_baseline.py",
+        "training_script_sha256": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+        "training_script_snapshot_recorded_at_run_time": null,
+        "training_script_source_path": null
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed1337/manifest.json",
+      "training_manifest_sha256": "cba7c89857e731acfaeff66a779c794533c79678bece8c549d6ba33fe2c42871",
+      "training_objective": "student-only supervised detection baseline; separate from pure KD",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.9578258182490496,
+        "metrics/mAP50-95(B)": 0.7264933293359825
+      },
+      "validation_metrics": {
+        "fitness": 0.7180677680789718,
+        "metrics/mAP50(B)": 0.9673712555431516,
+        "metrics/mAP50-95(B)": 0.7180677680789718,
+        "metrics/precision(B)": 0.9100533945181818,
+        "metrics/recall(B)": 0.9443294743169001
+      },
+      "validation_selection_evidence": null
+    },
+    "supervised_seed2025": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.899314592420829,
+            "upper": 0.9295824016496012,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9493565283488687,
+            "upper": 0.9755962271213772,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.7026051661547347,
+            "upper": 0.7433115140829936,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8370464369376749,
+            "upper": 0.8872782750345082,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.960331166693226,
+            "upper": 0.9851419647542021,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9210421888053468,
+              "upper": 0.9813721754372594,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.935,
+              "upper": 0.994746914556962,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7800640954105174,
+              "upper": 0.8616224620288176,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8780487804878049,
+              "upper": 0.9764705882352941,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9390243902439024,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.8214526575089381,
+              "upper": 0.8657531553565733,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9166643052418226,
+              "upper": 0.9543839563184798,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5270117928954028,
+              "upper": 0.5771008495971298,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.7324601915780308,
+              "upper": 0.7902850282370366,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9246297516648169,
+              "upper": 0.9660377358490566,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.9204152249134947,
+              "upper": 0.9661064559131595,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9668714060351409,
+              "upper": 0.9946229011597715,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7591031121113733,
+              "upper": 0.8301817412907468,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8525641025641025,
+              "upper": 0.9344351389878831,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt",
+      "checkpoint_sha256": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301",
+      "checkpoint_size_bytes": 1909459,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "supervised_seed2025",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9146332804884434,
+          "mAP50": 0.9639347257543539,
+          "mAP50-95": 0.7207884333120275,
+          "precision": 0.8622465182728326,
+          "recall": 0.9737974454207808
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9529411764705883,
+            "ground_truth_count": 83,
+            "mAP50": 0.9730479302832243,
+            "mAP50-95": 0.8213853673334134,
+            "precision": 0.9310344827586207,
+            "predictions_above_confidence": 87,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8432523051131601,
+            "ground_truth_count": 532,
+            "mAP50": 0.9357530521573147,
+            "mAP50-95": 0.5488154830888806,
+            "precision": 0.7609682299546142,
+            "predictions_above_confidence": 661,
+            "recall": 0.9454887218045113,
+            "true_positives_at_iou50": 503
+          },
+          "robot": {
+            "F1": 0.9444444444444444,
+            "ground_truth_count": 119,
+            "mAP50": 0.9830031948225224,
+            "mAP50-95": 0.7921644495137887,
+            "precision": 0.8947368421052632,
+            "predictions_above_confidence": 133,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": null,
+        "legacy_seed42_baseline_missing_run_time_hashes": false,
+        "run_config_path": "/mnt/nas-hpg9/rafli5131/bre/configs/supervised_baseline.yaml",
+        "run_config_sha256": "00576b53acc6d2391a2465e7884e168d3a6d802b91f9098b9cfac12e980e47ae",
+        "training_script_path": "/mnt/nas-hpg9/rafli5131/bre/scripts/train_supervised_baseline.py",
+        "training_script_sha256": "a6dc2bf8ec10c426e01c75123129b1507e94e2e83c50fbca0e8ce48e22b173c1",
+        "training_script_snapshot_recorded_at_run_time": null,
+        "training_script_source_path": null
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed2025/manifest.json",
+      "training_manifest_sha256": "977796e51ee323cc9a3200f87cf369c8673b5bd71ee060b92222160b51c45b3c",
+      "training_objective": "student-only supervised detection baseline; separate from pure KD",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.9639347257543539,
+        "metrics/mAP50-95(B)": 0.7207884333120275
+      },
+      "validation_metrics": {
+        "fitness": 0.7251870227897009,
+        "metrics/mAP50(B)": 0.970524562514683,
+        "metrics/mAP50-95(B)": 0.7251870227897009,
+        "metrics/precision(B)": 0.9317165436978293,
+        "metrics/recall(B)": 0.9471222625220556
+      },
+      "validation_selection_evidence": null
+    },
+    "supervised_seed42": {
+      "bootstrap_ci_95": {
+        "confidence_level": 0.95,
+        "method": "nonparametric percentile bootstrap over TEST images, sampled with replacement",
+        "operating_point": {
+          "candidate_confidence_floor_for_ap": 0.001,
+          "confidence_threshold": 0.25,
+          "precision_recall_averaging": "macro over the three classes",
+          "true_positive_iou_threshold": 0.5
+        },
+        "overall": {
+          "F1": {
+            "lower": 0.8973519038739193,
+            "upper": 0.9239839157053855,
+            "valid_replicates": 1000
+          },
+          "mAP50": {
+            "lower": 0.9468621945241745,
+            "upper": 0.9713732705603721,
+            "valid_replicates": 1000
+          },
+          "mAP50-95": {
+            "lower": 0.704396923962809,
+            "upper": 0.7429281937077041,
+            "valid_replicates": 1000
+          },
+          "precision": {
+            "lower": 0.8395044883305673,
+            "upper": 0.8795021797332183,
+            "valid_replicates": 1000
+          },
+          "recall": {
+            "lower": 0.9533582053699868,
+            "upper": 0.9818385922330097,
+            "valid_replicates": 1000
+          }
+        },
+        "overall_metric_requires_all_classes": true,
+        "per_class": {
+          "ball": {
+            "F1": {
+              "lower": 0.9285597572362277,
+              "upper": 0.9855072463768115,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9567929152772903,
+              "upper": 0.995,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7836771117997198,
+              "upper": 0.8640188025259735,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.9069689922480619,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9204431818181817,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          },
+          "gawang": {
+            "F1": {
+              "lower": 0.8104454083103871,
+              "upper": 0.8523817938706295,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.8962192788058905,
+              "upper": 0.9446717908553393,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.5256250126297516,
+              "upper": 0.5761726557515523,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.7172978691672415,
+              "upper": 0.7715627672169967,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 0.9226315295642977,
+              "upper": 0.9612582153690596,
+              "valid_replicates": 1000
+            }
+          },
+          "robot": {
+            "F1": {
+              "lower": 0.9151267395026892,
+              "upper": 0.9556689813440956,
+              "valid_replicates": 1000
+            },
+            "mAP50": {
+              "lower": 0.9553280389568312,
+              "upper": 0.9939468944810148,
+              "valid_replicates": 1000
+            },
+            "mAP50-95": {
+              "lower": 0.7613458772048212,
+              "upper": 0.830077451587612,
+              "valid_replicates": 1000
+            },
+            "precision": {
+              "lower": 0.8435333169412343,
+              "upper": 0.9151015965166909,
+              "valid_replicates": 1000
+            },
+            "recall": {
+              "lower": 1.0,
+              "upper": 1.0,
+              "valid_replicates": 1000
+            }
+          }
+        },
+        "random_seed": 20261009,
+        "replicates": 1000,
+        "sample_size_per_replicate": 592,
+        "sampling_unit": "image"
+      },
+      "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "checkpoint_sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "checkpoint_size_bytes": 1909459,
+      "metric_operating_point": {
+        "candidate_confidence_floor_for_ap": 0.001,
+        "confidence_threshold": 0.25,
+        "precision_recall_averaging": "macro over the three classes",
+        "selection": "fixed a priori from the Ultralytics default prediction confidence; not estimated on TEST",
+        "true_positive_iou_threshold": 0.5
+      },
+      "model": "supervised_seed42",
+      "parameters": 806613,
+      "test_annotation_count": 734,
+      "test_image_count": 592,
+      "test_metrics": {
+        "overall": {
+          "F1": 0.9095090562128358,
+          "mAP50": 0.9584610391037435,
+          "mAP50-95": 0.7202672540792384,
+          "precision": 0.857269629000684,
+          "recall": 0.9685282483316726
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9580838323353292,
+            "ground_truth_count": 83,
+            "mAP50": 0.9812507232401156,
+            "mAP50-95": 0.8221904373959494,
+            "precision": 0.9523809523809523,
+            "predictions_above_confidence": 84,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8315352697095436,
+            "ground_truth_count": 532,
+            "mAP50": 0.918643027351364,
+            "mAP50-95": 0.5481621232018329,
+            "precision": 0.7444279346210996,
+            "predictions_above_confidence": 673,
+            "recall": 0.9417293233082706,
+            "true_positives_at_iou50": 501
+          },
+          "robot": {
+            "F1": 0.9333333333333333,
+            "ground_truth_count": 119,
+            "mAP50": 0.9754893667197508,
+            "mAP50-95": 0.7904492016399327,
+            "precision": 0.875,
+            "predictions_above_confidence": 136,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "train_labels_used_for_loss": true,
+      "training_artifact_provenance": {
+        "dataset_yaml_sha256_recorded_at_run_time": null,
+        "dataset_yaml_sha256_verified_at_evaluation": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+        "distillation_implementation": null,
+        "legacy_seed42_baseline_missing_run_time_hashes": true,
+        "run_config_path": null,
+        "run_config_sha256": null,
+        "training_script_path": null,
+        "training_script_sha256": null,
+        "training_script_snapshot_recorded_at_run_time": null,
+        "training_script_source_path": null
+      },
+      "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json",
+      "training_manifest_sha256": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
+      "training_objective": "student-only supervised detection baseline; separate from pure KD",
+      "training_provenance": null,
+      "ultralytics_ap_diagnostic": {
+        "metrics/mAP50(B)": 0.9584610391037435,
+        "metrics/mAP50-95(B)": 0.7202672540792384
+      },
+      "validation_metrics": {
+        "fitness": 0.7189418000260801,
+        "metrics/mAP50(B)": 0.9732610302550367,
+        "metrics/mAP50-95(B)": 0.7189418000260801,
+        "metrics/precision(B)": 0.9351230349184035,
+        "metrics/recall(B)": 0.9427782335402984
+      },
+      "validation_selection_evidence": null
+    }
+  },
+  "protocol": "/mnt/nas-hpg9/rafli5131/bre/docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md",
+  "protocol_sha256": "a8aa72db5aea6123a279d1ea65a7f19b6ca474286d9b5ef336250c1e4df737e6",
+  "runtime": {
+    "compute_capability": "8.9",
+    "cuda_available": true,
+    "cuda_runtime_version": "12.1",
+    "cudnn_version": 90100,
+    "device_name": "NVIDIA L40",
+    "device_type": "cuda",
+    "logical_device_index": 0,
+    "platform": "Linux-6.1.0-43-amd64-x86_64-with-glibc2.36",
+    "requested_device": "0",
+    "total_memory_bytes": 47590277120,
+    "visible_cuda_device_count": 3
+  },
+  "settings": {
+    "augmentation": false,
+    "batch": 16,
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20261009,
+    "conf_for_ap": 0.001,
+    "device": "0",
+    "imgsz": 640,
+    "matching_iou": 0.5,
+    "nms_iou": 0.7,
+    "operating_confidence": 0.25,
+    "precision": "FP32",
+    "rect": true,
+    "split": "test",
+    "workers": 2
+  },
+  "shared_metric_implementation": "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_locked_test.py",
+  "shared_metric_implementation_sha256": "789760c5556ae4b9626397db85d8b7a73008eabb851831d5f0a6514b9d7ee0cb",
+  "started_at_utc": "2026-10-22T01:12:07.016619+00:00",
+  "status": "complete",
+  "test_annotation_count": 734,
+  "test_image_count": 592,
+  "test_split_fingerprint_sha256": "aa9685a022c7484ef94cbfe68b6d000585d29de752071967709de66bed1762f1",
+  "versions": {
+    "numpy": "1.26.4",
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130"
+  }
+}

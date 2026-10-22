@@ -1,6 +1,6 @@
 # Indeks tabel analisis performa
 
-Pembaruan T29: 2026-10-22. T28–T29 merangkum evaluasi VAL KD Hybrid full tiga seed berpasangan dengan supervised; TEST tidak digunakan. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. F1 utama T27 dihitung dari precision dan recall makro agar sejalan dengan T04/T05; rerata F1 per kelas disimpan sebagai kolom sekunder (usulan D11 belum dikunci). Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
+Pembaruan T33: 2026-10-22. T28–T29 merangkum VAL KD Hybrid full, T30–T31 memuat evaluasi TEST lanjutannya, T32 memuat benchmark server, dan T33 memuat pelatihan tiga seed. [Indeks lab/server](lab_server/README.md) menjelaskan sumber dan protokol. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. F1 utama T27 dihitung dari precision dan recall makro; rerata F1 per kelas disimpan sebagai kolom sekunder (usulan D11 belum dikunci). Hasil TEST Advance Vision adalah evaluasi level gambar, bukan akurasi kamera OP3.
 
 | Tabel | Status | Berkas |
 | --- | --- | --- |
@@ -33,3 +33,7 @@ Pembaruan T29: 2026-10-22. T28–T29 merangkum evaluasi VAL KD Hybrid full tiga 
 | T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif). Set 50 frame gawang parsial hanya catatan dan tidak digunakan membandingkan model karena definisi kotak berbeda serta draf label berasal dari KD. Set final D8 belum dikunci; risiko bias anotasi juga berlaku pada set utama. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) · [Audit label](lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md) · [Asal frame negatif](lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md) |
 | T28 | Evaluasi VAL berpasangan KD Hybrid full vs supervised pada tiga seed, rerata ± SD dan delta. | [CSV](tabel/T28_selisih_kd_hybrid_val.csv) · [Markdown](tabel/T28_selisih_kd_hybrid_val.md) |
 | T29 | Evaluasi VAL per kelas berpasangan KD Hybrid full vs supervised pada tiga seed. | [CSV](tabel/T29_kd_hybrid_val_per_kelas.csv) · [Markdown](tabel/T29_kd_hybrid_val_per_kelas.md) |
+| T30 | Evaluasi TEST lanjutan berpasangan KD Hybrid full vs supervised pada tiga seed; split pernah dipakai eksperimen lama. | [CSV](tabel/T30_kd_hybrid_test_berpasangan.csv) · [Markdown](tabel/T30_kd_hybrid_test_berpasangan.md) |
+| T31 | Evaluasi TEST lanjutan per kelas berpasangan. | [CSV](tabel/T31_kd_hybrid_test_per_kelas.csv) · [Markdown](tabel/T31_kd_hybrid_test_per_kelas.md) |
+| T32 | Benchmark enam checkpoint pada frame VAL tetap dan NVIDIA L40; bukan FPS OP3. | [CSV](tabel/T32_kd_hybrid_benchmark_server.csv) · [Markdown](tabel/T32_kd_hybrid_benchmark_server.md) |
+| T33 | Resep, durasi, dan konvergensi training KD Hybrid full tiga seed. | [CSV](tabel/T33_pelatihan_kd_hybrid_full.csv) · [Markdown](tabel/T33_pelatihan_kd_hybrid_full.md) |

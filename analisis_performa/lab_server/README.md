@@ -1,6 +1,6 @@
-# Tabel lab/server T01–T14
+# Tabel lab/server T01–T14 dan T28–T33
 
-Pembaruan: 22 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Analisis ini memuat eksperimen utama **KD murni teacher-only** dan eksperimen lanjutan **KD Hybrid full** yang dibandingkan dengan student supervised. Hasil TEST terkunci yang sudah ada berasal dari eksperimen KD murni; evaluasi KD Hybrid pada pembaruan ini baru sampai VAL. Semua hasil berlaku pada level gambar dan bukan ukuran akurasi kamera ROBOTIS OP3.
+Pembaruan: 22 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Analisis ini memuat eksperimen utama **KD murni teacher-only** serta eksperimen lanjutan **KD Hybrid full** yang dibandingkan dengan student supervised pada VAL dan TEST resmi. Split TEST sudah pernah dipakai dalam eksperimen teacher dan KD murni; hasil Hybrid adalah perbandingan lanjutan pada split yang sama. Semua hasil akurasi ini berlaku pada level gambar dan bukan ukuran akurasi kamera ROBOTIS OP3.
 
 ## Lokasi berkas
 
@@ -23,6 +23,17 @@ Nomor dan nama berkas T01–T14 tetap berada di [`analisis_performa/tabel/`](../
 | T13 | Sapuan ukuran input dan titik dasar L40 | Lengkap untuk tiga model perwakilan pada CPU server | [Markdown](../tabel/T13_sapuan_imgsz.md) · [CSV](../tabel/T13_sapuan_imgsz.csv) |
 | T14 | Kalibrasi confidence | Lengkap | [Markdown](../tabel/T14_kalibrasi_confidence.md) · [CSV](../tabel/T14_kalibrasi_confidence.csv) |
 
+### Tabel eksperimen KD Hybrid
+
+| Tabel | Isi | Status | Buka |
+| --- | --- | --- | --- |
+| T28 | Selisih Hybrid–supervised pada VAL | Lengkap, tiga seed berpasangan | [Markdown](../tabel/T28_selisih_kd_hybrid_val.md) · [CSV](../tabel/T28_selisih_kd_hybrid_val.csv) |
+| T29 | Hasil VAL per kelas | Lengkap, tiga seed berpasangan | [Markdown](../tabel/T29_kd_hybrid_val_per_kelas.md) · [CSV](../tabel/T29_kd_hybrid_val_per_kelas.csv) |
+| T30 | Selisih Hybrid–supervised pada TEST | Lengkap, tiga seed, interval bootstrap per checkpoint di CSV | [Markdown](../tabel/T30_kd_hybrid_test_berpasangan.md) · [CSV](../tabel/T30_kd_hybrid_test_berpasangan.csv) |
+| T31 | Hasil TEST per kelas | Lengkap, tiga seed berpasangan | [Markdown](../tabel/T31_kd_hybrid_test_per_kelas.md) · [CSV](../tabel/T31_kd_hybrid_test_per_kelas.csv) |
+| T32 | Benchmark enam checkpoint pada L40 | Lengkap untuk satu frame VAL tetap, batch 1 | [Markdown](../tabel/T32_kd_hybrid_benchmark_server.md) · [CSV](../tabel/T32_kd_hybrid_benchmark_server.csv) |
+| T33 | Resep, durasi, dan konvergensi training Hybrid full | Lengkap untuk tiga seed | [Markdown](../tabel/T33_pelatihan_kd_hybrid_full.md) · [CSV](../tabel/T33_pelatihan_kd_hybrid_full.csv) |
+
 Pelengkap T05: [interval bootstrap per model](interval_bootstrap_per_model.md) ([CSV](interval_bootstrap_per_model.csv)). Berkas itu memuat lima metrik untuk masing-masing tujuh checkpoint sehingga interval per checkpoint dapat ditelusuri tanpa mencampurnya dengan simpangan baku antar-seed.
 
 ## Sumber utama dan cara baca
@@ -35,6 +46,9 @@ Pelengkap T05: [interval bootstrap per model](interval_bootstrap_per_model.md) (
 | Resep dan riwayat training | Manifest, `args.yaml`, dan `results.csv` pada [run yang terdaftar](../../configs/model_registry.yaml) | T02–T03; durasi dari `results.csv`, kecuali supervised seed 1337 dari jumlah dua segmen resume |
 | Evaluasi TEST terkunci | [`manifest.json`](../../runs/final_test/pure_kd_official_split_locked_retry1/manifest.json) dan tujuh berkas `*_metrics.json` pada folder yang sama | T05–T06 dan interval per checkpoint |
 | Benchmark server | [`pure_kd_final_inference.json`](../../runs/benchmarks/pure_kd_final_inference.json) | T01 dan titik dasar T13, FP32 batch 1 pada NVIDIA L40 |
+| Evaluasi TEST KD Hybrid | [`manifest.json`](../../runs/final_test/hybrid_full_official_split_20261022/manifest.json) dan enam `*_metrics.json` pada folder yang sama | T30–T31; checkpoint dan protokol dicatat sebelum TEST Hybrid |
+| Benchmark KD Hybrid | [`hybrid_full_paired_20261022.json`](../../runs/benchmarks/hybrid_full_paired_20261022.json) | T32; enam checkpoint pada frame VAL tetap dan NVIDIA L40 |
+| Run training KD Hybrid full | Manifest dan `results.csv` pada tiga direktori `runs/kd_hybrid/yolo11_tiny_hybrid_full_seed*/` | T33; durasi dan deret mAP VAL per epoch |
 | Diagnosis VAL tujuh checkpoint | [`DIAGNOSIS_VAL_2026-10-20.md`](DIAGNOSIS_VAL_2026-10-20.md), [`summary.json`](../../runs/val_diagnostics/official_split_20261020/summary.json), tujuh prediksi JSON per gambar | T09–T11 dan T14; FP32 CPU pada VAL, tanpa training atau membuka TEST |
 | Pelengkapan tabel dari prediksi dan run lama | [`complete_existing_lab_tables.py`](../../scripts/complete_existing_lab_tables.py), prediksi VAL dan manifest run KD | T04 kondisi dasar sebelum pilot, T05 bootstrap antar-seed, T08 ukuran objek, dan AP per kelas titik dasar T13 |
 | Pilot `pure_weighted` dan evaluasi ulang VAL | [`PILOT_PURE_WEIGHTED_2026-10-20.md`](../../docs/PILOT_PURE_WEIGHTED_2026-10-20.md), [`evaluate_val_ablation.py`](../../scripts/evaluate_val_ablation.py), [`build_kd_ablation_table.py`](../../scripts/build_kd_ablation_table.py) | T04 final: tiga baseline dan satu kandidat seed 42, termasuk rincian per kelas |
@@ -58,17 +72,25 @@ Pilot `pure_weighted` selesai 100 epoch pada seed 42. Pada VAL, mAP50–95 turun
 
 KD Hybrid full dan kontrol supervised dievaluasi ulang pada VAL dengan prosedur yang sama. Rerata mAP50–95 Hybrid full **0,7505 ± 0,0018**, supervised **0,7208 ± 0,0041**, dan delta berpasangan **+0,0297 ± 0,0047** pada tiga seed. Selisih mAP50–95 positif pada setiap pasangan. F1 makro pada confidence 0,25 hampir sama dan sedikit lebih rendah untuk Hybrid full; precision turun sementara recall naik. Lihat [laporan evaluasi](HASIL_KD_HYBRID_MULTI_SEED_VAL_2026-10-22.md), [T28](../tabel/T28_selisih_kd_hybrid_val.md), dan [T29](../tabel/T29_kd_hybrid_val_per_kelas.md).
 
-Hasil ini hanya mendukung pertimbangan kandidat berdasarkan VAL. TEST KD Hybrid belum dijalankan dan checkpoint OP3 belum diganti.
+Hasil VAL mendasari pilihan Hybrid full sebagai kandidat evaluasi lanjutan. Checkpoint OP3 belum diganti.
+
+## KD Hybrid full: hasil TEST dan benchmark server
+
+Pada TEST resmi 592 gambar, rerata mAP50–95 Hybrid full **0,7469 ± 0,0022**, supervised **0,7225 ± 0,0035**, dan delta berpasangan **+0,0244 ± 0,0040** pada tiga seed. F1 makro pada confidence 0,25 adalah **0,9071 ± 0,0017** vs **0,9121 ± 0,0026** (delta **−0,0051 ± 0,0011**). Kelas gawang paling perlu ditinjau pada OP3: F1@0,25 per kelas turun sekitar **0,0193** walau AP50–95 naik. Hasil supervised yang diulang identik dengan evaluasi historis. Detail per kelas, interval bootstrap per checkpoint, benchmark L40, dan pelatihan Hybrid ada di [laporan TEST Hybrid](HASIL_KD_HYBRID_TEST_2026-10-22.md), T30–T33. Angka benchmark bukan FPS kamera OP3.
+
+Payload `best.pt` Hybrid seed 1337 dan 2025 tetap berada di lab/server. Hash, manifest, kurva training, dan snapshot kodenya tersedia pada artefak penelitian; bobot dua seed tersebut belum dipublikasikan di repo GitHub publik.
 
 ## Data yang masih dibutuhkan
 
-- T04 kini memuat hasil VAL KD Hybrid full tiga seed. T28–T29 memuat perbandingan berpasangan dengan supervised; evaluasi TEST Hybrid masih diperlukan untuk melengkapi klaim generalisasi level gambar.
+- T04/T28–T29 memuat VAL; T30–T31 memuat TEST lanjutan; T32 memuat benchmark L40; T33 memuat pelatihan Hybrid tiga seed. Split TEST sudah pernah dipakai sebelumnya, sehingga klaim dibatasi pada evaluasi gambar dataset resmi.
 - T12/T13 menyapu satu checkpoint per varian agar biaya diagnosis terukur. Sapuan seluruh seed memerlukan inferensi dan benchmark tambahan; hasil perwakilan tidak menunjukkan variasi antar-seed pada setiap titik grid.
 - T15–T27 adalah pengukuran OP3 terpisah. Akurasi kamera OP3 tidak dapat dihitung dari tabel lab/server ini tanpa frame kamera berlabel.
 
 ## Menghasilkan ulang tabel baru
 
 Jalankan dengan lingkungan Python yang mempunyai versi Ultralytics dan PyTorch eksperimen. `complete_existing_lab_tables.py` membaca prediksi VAL terkunci, ringkasan TEST lama, dan manifest run; **menjalankan ulang skrip ini akan menimpa T04 pilot**, sehingga setelahnya jalankan `build_kd_ablation_table.py`. `sweep_val_lab.py` memverifikasi hash dataset/checkpoint, membuat JSON hasil per kombinasi, lalu menggabungkannya ke T12/T13. Run yang sudah mempunyai JSON dilewati agar sapuan bisa dilanjutkan.
+
+T30–T33 dan laporan TEST Hybrid dapat dibangun ulang dari manifest evaluasi, benchmark, dan training yang sudah ada dengan `python3 scripts/build_kd_hybrid_test_tables.py`. Skrip memeriksa checksum checkpoint, protokol, evaluator, dan kecocokan metrik supervised dengan hasil historis sebelum menulis tabel.
 
 ```bash
 python scripts/complete_existing_lab_tables.py
