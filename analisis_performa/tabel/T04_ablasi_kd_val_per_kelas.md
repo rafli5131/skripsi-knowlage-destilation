@@ -1,6 +1,6 @@
 # T04. ablasi KD pada VAL per kelas
 
-Rincian tiga kelas untuk empat checkpoint pada T04. Precision, recall, dan F1
+Rincian tiga kelas untuk delapan checkpoint pada T04, termasuk hybrid_full tiga seed. Precision, recall, dan F1
 memakai confidence >0,25 dan IoU 0,50; AP memakai confidence floor 0,001
 dan NMS IoU 0,7. Seluruh angka berasal dari 1.213 gambar VAL resmi.
 
@@ -21,6 +21,12 @@ dan NMS IoU 0,7. Seluruh angka berasal dari 1.213 gambar VAL resmi.
 | hybrid_feature_seed42 | 42 | hybrid_feature | ball | 182 | 0,9816 | 0,8458 | 0,9278 | 0,9890 | 0,9574 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
 | hybrid_feature_seed42 | 42 | hybrid_feature | gawang | 1048 | 0,9425 | 0,5900 | 0,7702 | 0,9466 | 0,8493 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
 | hybrid_feature_seed42 | 42 | hybrid_feature | robot | 295 | 0,9833 | 0,7949 | 0,8994 | 0,9695 | 0,9331 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
-| hybrid_full_seed42 | 42 | hybrid_full | ball | 182 | 0,9887 | 0,8531 | 0,9476 | 0,9945 | 0,9705 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
-| hybrid_full_seed42 | 42 | hybrid_full | gawang | 1048 | 0,9491 | 0,5950 | 0,7627 | 0,9599 | 0,8500 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
-| hybrid_full_seed42 | 42 | hybrid_full | robot | 295 | 0,9797 | 0,7982 | 0,9060 | 0,9797 | 0,9414 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | ball | 182 | 0,9887 | 0,8531 | 0,9476 | 0,9945 | 0,9705 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | gawang | 1048 | 0,9491 | 0,5950 | 0,7627 | 0,9599 | 0,8500 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | robot | 295 | 0,9797 | 0,7982 | 0,9060 | 0,9797 | 0,9414 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed42_val.json |
+| hybrid_full_seed1337 | 1337 | hybrid_full | ball | 182 | 0,9908 | 0,8593 | 0,9427 | 0,9945 | 0,9679 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed1337_val.json |
+| hybrid_full_seed1337 | 1337 | hybrid_full | gawang | 1048 | 0,9511 | 0,5989 | 0,7691 | 0,9532 | 0,8513 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed1337_val.json |
+| hybrid_full_seed1337 | 1337 | hybrid_full | robot | 295 | 0,9783 | 0,7986 | 0,8941 | 0,9729 | 0,9318 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed1337_val.json |
+| hybrid_full_seed2025 | 2025 | hybrid_full | ball | 182 | 0,9900 | 0,8554 | 0,9372 | 0,9835 | 0,9598 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed2025_val.json |
+| hybrid_full_seed2025 | 2025 | hybrid_full | gawang | 1048 | 0,9487 | 0,5924 | 0,7893 | 0,9437 | 0,8596 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed2025_val.json |
+| hybrid_full_seed2025 | 2025 | hybrid_full | robot | 295 | 0,9835 | 0,8038 | 0,9167 | 0,9695 | 0,9423 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed2025_val.json |

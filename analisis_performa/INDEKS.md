@@ -1,13 +1,13 @@
 # Indeks tabel analisis performa
 
-Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. F1 utama T27 dihitung dari precision dan recall makro agar sejalan dengan T04/T05; rerata F1 per kelas disimpan sebagai kolom sekunder (usulan D11 belum dikunci). Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
+Pembaruan T29: 2026-10-22. T28–T29 merangkum evaluasi VAL KD Hybrid full tiga seed berpasangan dengan supervised; TEST tidak digunakan. [Indeks lab/server](lab_server/README.md) memuat sumber dan status T01–T14. T15–T26 masih merujuk pembaruan log OP3 sampai 20 Oktober; T27 kini memuat evaluasi kamera OP3 eksploratif dari artefak 21 Oktober. F1 utama T27 dihitung dari precision dan recall makro agar sejalan dengan T04/T05; rerata F1 per kelas disimpan sebagai kolom sekunder (usulan D11 belum dikunci). Hasil TEST adalah evaluasi dataset Advance Vision, bukan akurasi kamera OP3.
 
 | Tabel | Status | Berkas |
 | --- | --- | --- |
 | T01 | Lengkap dari artefak historis; bukan validasi kamera OP3. | [CSV](tabel/T01_spesifikasi_model.csv) · [Markdown](tabel/T01_spesifikasi_model.md) |
 | T02 | Lengkap; durasi enam run ditelusuri ke results.csv atau manifest resume. | [CSV](tabel/T02_resep_pelatihan.csv) · [Markdown](tabel/T02_resep_pelatihan.md) |
 | T03 | Lengkap dari results.csv run yang sudah ada. | [CSV](tabel/T03_konvergensi.csv) · [Markdown](tabel/T03_konvergensi.md) |
-| T04 | Lengkap untuk ablasi pilot VAL: `pure_v4` tiga seed dan `pure_weighted` seed 42; hasil kandidat menurun. | [CSV](tabel/T04_ablasi_kd_val.csv) · [Markdown](tabel/T04_ablasi_kd_val.md) · [Per kelas](tabel/T04_ablasi_kd_val_per_kelas.md) |
+| T04 | Lengkap untuk KD pure tiga seed, pilot pure_weighted seed 42, hybrid_feature seed 42, dan hybrid_full tiga seed; hasil Hybrid full dibandingkan dengan supervised pada T28–T29. | [CSV](tabel/T04_ablasi_kd_val.csv) · [Markdown](tabel/T04_ablasi_kd_val.md) · [Per kelas](tabel/T04_ablasi_kd_val_per_kelas.md) |
 | T05 | Lengkap untuk ringkasan tiga seed, bootstrap antar-seed, dan [interval per checkpoint](lab_server/interval_bootstrap_per_model.md); bootstrap antar-seed eksploratif karena n=3. | [CSV](tabel/T05_akurasi_test_keseluruhan.csv) · [Markdown](tabel/T05_akurasi_test_keseluruhan.md) |
 | T06 | Lengkap dari hasil TEST terkunci yang sudah ada. | [CSV](tabel/T06_akurasi_per_kelas.csv) · [Markdown](tabel/T06_akurasi_per_kelas.md) |
 | T07 | Lengkap untuk lima metrik keseluruhan pada tiga pasangan seed dan retensi mAP50–95 terhadap teacher. | [CSV](tabel/T07_selisih_berpasangan.csv) · [Markdown](tabel/T07_selisih_berpasangan.md) |
@@ -31,3 +31,5 @@ Pembaruan T27: 2026-10-21. [Indeks lab/server](lab_server/README.md) memuat sumb
 | T25 | Sebagian; kelas/ID tersedia pada sesi idle baru, log lama hanya total dan uji kepala hanya bola terpilih. | [CSV](tabel/T25_observasi_deteksi_live.csv) · [Markdown](tabel/T25_observasi_deteksi_live.md) |
 | T26 | Sebagian; akurasi TEST offline ada, runtime OP3 hanya KD seed 42 idle; walking dan benchmark frame tetap belum ada. | [CSV](tabel/T26_tradeoff_utama.csv) · [Markdown](tabel/T26_tradeoff_utama.md) |
 | T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif). Set 50 frame gawang parsial hanya catatan dan tidak digunakan membandingkan model karena definisi kotak berbeda serta draf label berasal dari KD. Set final D8 belum dikunci; risiko bias anotasi juga berlaku pada set utama. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) · [Audit label](lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md) · [Asal frame negatif](lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md) |
+| T28 | Evaluasi VAL berpasangan KD Hybrid full vs supervised pada tiga seed, rerata ± SD dan delta. | [CSV](tabel/T28_selisih_kd_hybrid_val.csv) · [Markdown](tabel/T28_selisih_kd_hybrid_val.md) |
+| T29 | Evaluasi VAL per kelas berpasangan KD Hybrid full vs supervised pada tiga seed. | [CSV](tabel/T29_kd_hybrid_val_per_kelas.csv) · [Markdown](tabel/T29_kd_hybrid_val_per_kelas.md) |

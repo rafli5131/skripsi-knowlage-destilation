@@ -1,6 +1,6 @@
 # T04. ablasi KD pada VAL
 
-Status: Hasil VAL mencakup KD pure, pure_weighted, dan dua pilot KD Hybrid seed 42.
+Status: Mencakup KD pure tiga seed, pilot pure_weighted seed 42, hybrid_feature seed 42, dan hybrid_full tiga seed.
 
 Seluruh checkpoint terbaik dievaluasi ulang pada 1.213 gambar VAL resmi dengan FP32, imgsz 640,
 confidence floor 0,001, dan NMS IoU 0,7. AP memakai validator Ultralytics; P/R/F1 memakai
@@ -17,13 +17,13 @@ Pemilihan kandidat hanya memakai VAL; TEST tidak dipakai dalam tabel ini.
 | kd_seed2025 | 2025 | pure_v4 | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 88 | 0,9628 | 0,6786 | 0,8160 | 0,9624 | 0,8832 | 0,9485 | runs/val_ablation/pure_weighted_20261020/kd_seed2025_val.json |
 | pure_weighted_seed42 | 42 | pure_weighted | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 89 | 0,7755 | 0,5907 | 0,0473 | 0,9906 | 0,0903 | 0,9752 | runs/val_ablation/pure_weighted_20261020/pure_weighted_seed42_val.json |
 | hybrid_feature_seed42 | 42 | hybrid_feature | 6,0000 | 0,0000 | 0,0000 | 2,0000 | 100 | 0,9691 | 0,7436 | 0,8658 | 0,9684 | 0,9142 | 0,9466 | runs/val_ablation/hybrid_20261022/hybrid_feature_seed42_val.json |
-| hybrid_full_seed42 | 42 | hybrid_full | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 100 | 0,9725 | 0,7488 | 0,8721 | 0,9780 | 0,9220 | 0,9599 | runs/val_ablation/hybrid_20261022/hybrid_full_seed42_val.json |
+| hybrid_full_seed42 | 42 | hybrid_full | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 100 | 0,9725 | 0,7488 | 0,8721 | 0,9780 | 0,9220 | 0,9599 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed42_val.json |
+| hybrid_full_seed1337 | 1337 | hybrid_full | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 98 | 0,9734 | 0,7523 | 0,8686 | 0,9735 | 0,9181 | 0,9532 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed1337_val.json |
+| hybrid_full_seed2025 | 2025 | hybrid_full | 1,0000 | 1,0000 | 1,0000 | 2,0000 | 93 | 0,9741 | 0,7505 | 0,8810 | 0,9656 | 0,9214 | 0,9437 | runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed2025_val.json |
 
-Perubahan pilot terhadap `pure_v4` seed 42: mAP50–95 -0.0919, F1 pada confidence 0,25 -0.7773 (skala 0–1).
-Recall `gawang` berubah +0.0258, tetapi precision makro berubah -0.7426 pada confidence yang sama. Menurut kriteria mAP50–95 VAL yang ditetapkan sebelum pilot, `pure_v4` tetap model utama.
-Perbandingan satu seed ini bersifat eksploratif. Angka ini adalah akurasi VAL
-Advance Vision, bukan akurasi kamera OP3. Model utama tiga seed dan hasil
-TEST historis tidak diubah oleh pilot ini.
+Perubahan pilot `pure_weighted` terhadap `pure_v4` seed 42: mAP50–95 turun 0,0919 dan F1 pada confidence 0,25 turun 0,7773. Pilot `pure_weighted` tidak diteruskan ke seed tambahan.
+
+KD Hybrid full dibandingkan dengan student supervised pada tiga seed berpasangan. Rerata Δ mAP50–95 VAL adalah **+0,0297 ± 0,0047**, dengan Δ positif pada seed 42, 1337, dan 2025. Pada confidence 0,25, rerata Δ precision -0,0051 ± 0,0074, Δ recall +0,0046 ± 0,0083, dan Δ F1 -0,0008 ± 0,0006. Hasil mendukung Hybrid full sebagai kandidat untuk evaluasi TEST terkunci berdasarkan mAP50–95, dengan trade-off P/R/F1 tetap dilaporkan. Ini hasil VAL Advance Vision level gambar, bukan evaluasi kamera OP3; model deployment OP3 belum diganti.
 
 Catatan mekanisme: `pure_weighted` membobot loss kotak dan kelas pada setiap lokasi
 dengan skor maksimum teacher. Pada lokasi latar dengan skor teacher mendekati nol,

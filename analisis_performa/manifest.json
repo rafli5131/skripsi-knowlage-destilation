@@ -2,7 +2,109 @@
   "created_at_utc": "2026-10-19T10:07:01.483717+00:00",
   "generator": "scripts/build_performance_tables.py",
   "generator_sha256": "40a630ae347aec95c1a4ccb39c736df7cfc056be20cc2eb0c6e7cc98185c1d56",
+  "kd_hybrid_multiseed_val_2026_10_22": {
+    "outputs": [
+      "analisis_performa/tabel/T04_ablasi_kd_val.csv",
+      "analisis_performa/tabel/T04_ablasi_kd_val.md",
+      "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.csv",
+      "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.md",
+      "analisis_performa/tabel/T28_selisih_kd_hybrid_val.csv",
+      "analisis_performa/tabel/T28_selisih_kd_hybrid_val.md",
+      "analisis_performa/tabel/T29_kd_hybrid_val_per_kelas.csv",
+      "analisis_performa/tabel/T29_kd_hybrid_val_per_kelas.md",
+      "analisis_performa/lab_server/HASIL_KD_HYBRID_MULTI_SEED_VAL_2026-10-22.md",
+      "analisis_performa/INDEKS.md",
+      "analisis_performa/lab_server/README.md",
+      "runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed42_val.json",
+      "runs/val_ablation/hybrid_20261022_multiseed/supervised_seed42_val.json",
+      "runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed1337_val.json",
+      "runs/val_ablation/hybrid_20261022_multiseed/supervised_seed1337_val.json",
+      "runs/val_ablation/hybrid_20261022_multiseed/hybrid_full_seed2025_val.json",
+      "runs/val_ablation/hybrid_20261022_multiseed/supervised_seed2025_val.json"
+    ],
+    "paired_mAP50_95_delta_mean": 0.029732158969171512,
+    "paired_mAP50_95_delta_sample_sd": 0.004661168014514544,
+    "protocol": "official VAL only; three paired seeds; CPU FP32; TEST not opened",
+    "report": "analisis_performa/lab_server/HASIL_KD_HYBRID_MULTI_SEED_VAL_2026-10-22.md",
+    "status": "complete"
+  },
+  "notes": [
+    "Historical webcam runs predate tracking IDs.",
+    "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy.",
+    "OP3 table updates computed offline from saved logs; baseline generator field describes original T01-T27 creation only."
+  ],
+  "op3_camera_accuracy_update": {
+    "method": "curated copy of saved evaluation summary; no inference or robot access",
+    "note": "Raw OP3 JPEG and reviewed labels are absent from this checkout; their original hashes are recorded in input_manifest.json.",
+    "scope": "T27 exploratory OP3 camera detection; T01-T26 unchanged",
+    "source_sha256": {
+      "dokumentasi/2026-10-21/percobaan-13-evaluasi-deteksi-multi-sesi/README.md": "db6c1e8a9a2a2fafd61d60c46ddbef76f2363afabecc9413fe20e5c9e3c3ff0f",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/input_manifest.json": "7731a2ee6f515967ff08400055c15e61dca359fa998c1b7e0a9961cacdef0e2e",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/results.json": "5fd3e916130c0dc64a2bcc1931412c5372196b0d43e9d815a1b176cb20398a71",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/summary.csv": "ba58fa3dd777c05e9017d77a21b390a5d24f4677d078af1267572a92b3181cd1"
+    },
+    "status": "partial_exploratory; final D8 dataset not locked",
+    "updated_at_utc": "2026-10-21T15:48:35.145570+00:00"
+  },
+  "op3_offline_update": {
+    "method": "one-off read-only CSV/JSON analysis; no robot access",
+    "scope": "T15-T27 from stored OP3 logs; T01-T14 untouched",
+    "source_paths": [
+      "analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md",
+      "artifacts/thesis_analysis_final_corrected/per_model.csv",
+      "dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md",
+      "memory/2026-10-19.md",
+      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json",
+      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/tracking.csv",
+      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json",
+      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/tracking.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/detections.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/frames.csv",
+      "runs/op3_idle_trial/20261019T123737Z_023704/summary.json",
+      "runs/op3_pytorch/20261019T080757Z.csv",
+      "runs/op3_pytorch/20261019T080757Z.json",
+      "runs/op3_pytorch/20261019T083428Z.csv",
+      "runs/op3_pytorch/20261019T083428Z.json",
+      "runs/op3_pytorch/20261019T084434Z.csv",
+      "runs/op3_pytorch/20261019T084434Z.json"
+    ],
+    "updated_at_utc": "2026-10-20T07:18:03.387383+00:00",
+    "updated_tables": [
+      15,
+      18,
+      20,
+      22,
+      23,
+      25,
+      26
+    ]
+  },
+  "phase1_lab_server_2026_10_21": {
+    "f1_primary_proposal": "harmonic mean of macro precision and macro recall; D11 not locked",
+    "output_sha256": {
+      "analisis_performa/DEFINISI.md": "8f101f3eed6d0547daa4abfc6d8c7ae5f7c1e1b508f35c326bbc8c7250d336a6",
+      "analisis_performa/INDEKS.md": "e87508d389c45a171017c63660cbd0893e0ae38a0f682ef2240591c9c173638d",
+      "analisis_performa/lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md": "5e1fa7994a5ec1bec79dd4bbddf8e65633ee61794b888650a62e505700edb0c8",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.csv": "6a941fd244000c24d5ac594fd4c844906e24ebccbb7df10fb922976eadf39aa8",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md": "6a86cfe6f31154f3e88bdc8e26de568ef4e01a159441ccc7caed9627941d1c90",
+      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21_30_crop.jpg": "b51e08d63ab1aef03c0b682e4a038fc99a50d454dfb9fd40ff3780809f3818ef",
+      "analisis_performa/tabel/T04_ablasi_kd_val.md": "1e88d37e00dd0669269908285eb415c94026377cce50fb492cba77d54ae49cb0",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423",
+      "configs/analysis.yaml": "d7bc6bef623318117219a54f8467bbf9331b6ef7a05ee12f9b3f4ceee8b813de",
+      "docs/DECISIONS.md": "fbc47954d5f9cd518cc05c1cf4dec35ffa189b4d1edc07165ca1f41675c46c78",
+      "scripts/audit_gawang_box_geometry.py": "cc90582ea4b8aa79c95c53f58f06a3e18236be08b7d2547eb53c885c0705faee"
+    },
+    "source_sha256": {
+      "configs/data_train_val.yaml": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/input_manifest.json": "7731a2ee6f515967ff08400055c15e61dca359fa998c1b7e0a9961cacdef0e2e",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/results.json": "5fd3e916130c0dc64a2bcc1931412c5372196b0d43e9d815a1b176cb20398a71",
+      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/summary.csv": "ba58fa3dd777c05e9017d77a21b390a5d24f4677d078af1267572a92b3181cd1"
+    },
+    "status": "partial; OP3 raw images and reviewed labels unavailable on server"
+  },
   "sources": {
+    "/mnt/nas-hpg9/rafli5131/bre/artifacts/advance_vision_dataset_fingerprint.json": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
     "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/ANALISIS.md": "28a8524701e459eeeee4dc00fedb8dfe9664a60d6bdeec36c38351d62b6f1bde",
     "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/analysis_manifest.json": "5e0dd4f6860fe72e4941767809111c06fc444c0f27d2152dfe3e8c2a21042e99",
     "/mnt/nas-hpg9/rafli5131/bre/artifacts/thesis_analysis_final_corrected/paired_seed_deltas.csv": "322bc9025518563d304fbb25ec99a9f66248f92cf216f6a7c8b001401cec8c57",
@@ -35,6 +137,16 @@
     "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json": "81863da7c22eadaba0127549a5df2e2b02d848739347945349675d092f689682",
     "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/results.csv": "1b2997051ba1d3f7c40ba6880f0653d5667ecc21e96286f0336219b20151dc43",
     "/mnt/nas-hpg9/rafli5131/bre/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/manifest.json": "e398b6011fe28cf2937955df38ac645d5c6ac086931fc4683a930f974ada6313",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/results.csv": "392319ad53aba67b8a10abac8fdb6b2a4ba736f9f858e9c1ba34f232049b1ecc",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/manifest.json": "4ca74f76cf2b7a0d1231955ab52847afc1ead7a07092ba11edf0cf2d90069c41",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/results.csv": "a2d90baf565214edcb1e62a45cb44f69040b2467ae4d05510ac0aadb72e766bd",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt": "68c4f20db711867e7bb508126638f09cbd482245887d835275d188ebd6e8afca",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/manifest.json": "b2290c43a6e2af74877bcf702021d3cbb3955a846091a2571bc68d9b8596198b",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/results.csv": "db72b17a7de0a10f16248259790ac76a874e6d617b45b33bdc01c82e3933d5ff",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+    "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_logs/evaluate_hybrid_multiseed_val.log": "ddfb76a59689aaaad9b1ed01c8aa7662af698d4b3f5554e8fe8a1885a83a2595",
     "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T080757Z.csv": "30ea7e85c0ae4a1143e246434cf8308942af97413fb8e334c3288bfb6acdaf41",
     "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T080757Z.json": "f2c124dca8aceb35b4e4025565dd449ef9c1252a6774ae706ce591a1cda16b99",
     "/mnt/nas-hpg9/rafli5131/bre/runs/op3_pytorch/20261019T083428Z.csv": "3e87a5c696f40e88e6f4bc40a75ba502a867ff46f1a0fb6868202f14e6134af4",
@@ -53,6 +165,8 @@
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/manifest.json": "95f44b9216d5108628cac1f83bab1c13b6a40ca5045f6c29e23e8f48a27c9e7b",
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
     "/mnt/nas-hpg9/rafli5131/bre/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+    "/mnt/nas-hpg9/rafli5131/bre/scripts/build_kd_hybrid_multiseed_val_tables.py": "f17c664e77a0ecf86613a2a97ecf6f83e6cfa1c9048e2d4c79790b902489efc5",
+    "/mnt/nas-hpg9/rafli5131/bre/scripts/evaluate_val_ablation.py": "683f4fb585a895a9ffab9410d68e32ba62166a28e729012997669d0c347fe1c6",
     "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
     "analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md": "25484c4835a109ac34966e74fe4330c135347a428ea0c7adb74abbcbef31bb44",
     "artifacts/thesis_analysis_final_corrected/per_model.csv": "a3a5013b0ab550885e4e55cd2cdd054d336bddd44c682a2a350033e212778154",
@@ -77,17 +191,99 @@
       "analisis_performa/tabel/T01_spesifikasi_model.csv": "2957f18c639d78c026d4af77946cb0e72eaad9dbcf9e6d172aa52333aa2d8d5b",
       "analisis_performa/tabel/T01_spesifikasi_model.md": "66192ddd1ac70b8177f5005c52bb1d463392584a765b8c72b914826bcf12838b"
     },
+    "10": {
+      "analisis_performa/tabel/T10_matriks_kebingungan.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T10_matriks_kebingungan.md": "d8593296ba53dcc1fc1310804b7f7325b39f40b48ed0252cd2b1e28666a91346"
+    },
+    "11": {
+      "analisis_performa/tabel/T11_sapuan_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T11_sapuan_confidence.md": "f5f10350ff0642dc4e3dc9f05b2e81ec1d7e81d191eccc0b496e5c06b8086636"
+    },
+    "12": {
+      "analisis_performa/tabel/T12_sapuan_iou_nms.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T12_sapuan_iou_nms.md": "113b1f0c54c32c41412a17d8973724bfba3b0e6ae6355f9dac3e5d2c569d71e9"
+    },
+    "13": {
+      "analisis_performa/tabel/T13_sapuan_imgsz.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T13_sapuan_imgsz.md": "6f658714d222cdd5da4661e875b452cd97d3550436cac9bd24495769ef83ca9e"
+    },
+    "14": {
+      "analisis_performa/tabel/T14_kalibrasi_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T14_kalibrasi_confidence.md": "9d3d911f9b7201de99aeb5217c956639fc5d1ee68cd14def8734e2d1d87a1f6d"
+    },
+    "15": {
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "87377ebd87122c6de10337a876b138e3839ffff293d6a0cbb51455a6b6232731",
+      "analisis_performa/tabel/T15_lingkungan_uji_op3.md": "7f1e17ef15db30973c9594e01392f1b1677c8953b0d76962dac4257d1982f7c4"
+    },
+    "16": {
+      "analisis_performa/tabel/T16_latensi_frame_tetap.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T16_latensi_frame_tetap.md": "67ee89465ae87acf367549b7e7149607bd468fdc696a59f87a35030dce155c99"
+    },
+    "17": {
+      "analisis_performa/tabel/T17_sapuan_thread.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T17_sapuan_thread.md": "a177dd2144c34fc731b472594e7dcc32a57131026e2d3a14fbdee9a020268f58"
+    },
+    "18": {
+      "analisis_performa/tabel/T18_sesi_live_historis.csv": "b82986f8af022fabaa2751df1c7876d60af9230b574caddd32fb521ad23ab3ea",
+      "analisis_performa/tabel/T18_sesi_live_historis.md": "5a9c922b3a20671ac6845259354f9b1110d85d2c29360e35f66d730fe670a638"
+    },
+    "19": {
+      "analisis_performa/tabel/T19_servo_idle_vs_walking.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T19_servo_idle_vs_walking.md": "461a25f5ee3ca9e79fcb729d96fe641436c2e38b9b88919fc49f740cb3d63d57"
+    },
     "2": {
       "analisis_performa/tabel/T02_resep_pelatihan.csv": "154bfbe452a91c0ecd21ccb8799ba3d7e97814ffcc285ac42a6fbbc88dacc6f8",
       "analisis_performa/tabel/T02_resep_pelatihan.md": "7d78f0796d250915f9b9152267697faba614ff648e4d05e62d7db1f24c8f34f5"
+    },
+    "20": {
+      "analisis_performa/tabel/T20_sumber_daya_startup.csv": "f19ce6fd92a9506875384a285dc4de35820a9ea6cc34dfd4f2d26f89fa5c6100",
+      "analisis_performa/tabel/T20_sumber_daya_startup.md": "a78f307482915824050109acab6abd8958e3f4f2dc5b2947c1e4fae2569bcb4c"
+    },
+    "21": {
+      "analisis_performa/tabel/T21_stabilitas_termal.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T21_stabilitas_termal.md": "99ddad6021a2d6265fda302ef509a52772637239c0e6854c8803e1f9b94979ec"
+    },
+    "22": {
+      "analisis_performa/tabel/T22_aliran_kamera.csv": "8eeec02338fef48f682983f7d94351e7711428f2caec8da3a6427d0209d15482",
+      "analisis_performa/tabel/T22_aliran_kamera.md": "d6e15ba68ff8fefc369b51f1141f5b49f954cc9848e427ea5f4bc65c919f30e3"
+    },
+    "23": {
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.csv": "9dc91ed6552858f918aa98fa09807c9bceba69848e58d16f8a297abb4810995e",
+      "analisis_performa/tabel/T23_kepatuhan_tenggat.md": "7c48b68a05150a43468366615bc005f3b0816f2ce4e6ab1bceb78b0d0ba5f0b4"
+    },
+    "24": {
+      "analisis_performa/tabel/T24_pengaruh_preview.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
+      "analisis_performa/tabel/T24_pengaruh_preview.md": "4c9c1693bbc68bf3b260588549ebd5d11037f5270126d5c41cfa1795dfd58544"
+    },
+    "25": {
+      "analisis_performa/tabel/T25_observasi_deteksi_live.csv": "0a9a7d3a22fdc85febfbbafe0a4dd33b4388b9f1e2af003a0d70b03fee27a5bd",
+      "analisis_performa/tabel/T25_observasi_deteksi_live.md": "a9717f233e322195e737f9ba5641663910ce3f30e3d1efbc652396da46cd6d00"
+    },
+    "26": {
+      "analisis_performa/tabel/T26_tradeoff_utama.csv": "f178898be1c9561790730c33cc53d479bf9be5b4eb05a584dd1d4e751892ebfd",
+      "analisis_performa/tabel/T26_tradeoff_utama.md": "a25e4ad6033c09f19e15ae15575cfdd309a60d43405473d5625635bbf6b7d136"
+    },
+    "27": {
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
+      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423"
+    },
+    "28": {
+      "analisis_performa/tabel/T28_selisih_kd_hybrid_val.csv": "ed2504c0e01f281ffcb8c92f85adc300b15273149c49a880811ea5f5d739c936",
+      "analisis_performa/tabel/T28_selisih_kd_hybrid_val.md": "b59dc0508339be64f032617a0eaab6290aff483a34f2f322879d3b0c4471c947"
+    },
+    "29": {
+      "analisis_performa/tabel/T29_kd_hybrid_val_per_kelas.csv": "c2b7214d2f9142947c1c618f78924ff9e018ba3bc604bca8b11caf3638cfa7e6",
+      "analisis_performa/tabel/T29_kd_hybrid_val_per_kelas.md": "c1f25d561d193f9f1b47f789c4c22fcec91a41b11640d1327f7259945e9fdaa2"
     },
     "3": {
       "analisis_performa/tabel/T03_konvergensi.csv": "8a788b664fe9f8e359dfeb1bda6619e466e601790731158a9d91be61c305e701",
       "analisis_performa/tabel/T03_konvergensi.md": "1b602cd477a638711838ce9a279b4e44ef24f92a99ae3b66a8d2f12ffc514127"
     },
     "4": {
-      "analisis_performa/tabel/T04_ablasi_kd_val.csv": "4136422b64c82cbff109782e155f25098b8aabf10a6dd987c3e7d17114d8254d",
-      "analisis_performa/tabel/T04_ablasi_kd_val.md": "7796db8654b1790dfde3bf24bc5c5478812e0b90c69655707fb30755a3b021e4"
+      "analisis_performa/tabel/T04_ablasi_kd_val.csv": "8bd3b2a37212adcd4fca36abe58432878d7a35b3263095843141b372491f3d44",
+      "analisis_performa/tabel/T04_ablasi_kd_val.md": "bb40a693280664706f1ff27c9bc84286afde0359f9b389d98ba871d62b5325c7",
+      "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.csv": "c2141da3c8b1c61c24ca0ef50e26b45eada46e89619b8fdf21a9cafbd5123439",
+      "analisis_performa/tabel/T04_ablasi_kd_val_per_kelas.md": "c52a5be203b00036f62adbacc2e3e309d1e254fceca66cfe54f4113cc21bc9b0"
     },
     "5": {
       "analisis_performa/tabel/T05_akurasi_test_keseluruhan.csv": "9fa79b505d325938bbc36afbae79adae563fdc9f4f2bc20faba84226e600a338",
@@ -109,154 +305,7 @@
       "analisis_performa/tabel/T09_analisis_kesalahan.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
       "analisis_performa/tabel/T09_analisis_kesalahan.md": "0ed4bd546ca43010383b09a5643b6697af990f357a9749f6e02e97325b94b81b"
     },
-    "10": {
-      "analisis_performa/tabel/T10_matriks_kebingungan.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T10_matriks_kebingungan.md": "d8593296ba53dcc1fc1310804b7f7325b39f40b48ed0252cd2b1e28666a91346"
-    },
-    "11": {
-      "analisis_performa/tabel/T11_sapuan_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T11_sapuan_confidence.md": "f5f10350ff0642dc4e3dc9f05b2e81ec1d7e81d191eccc0b496e5c06b8086636"
-    },
-    "12": {
-      "analisis_performa/tabel/T12_sapuan_iou_nms.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T12_sapuan_iou_nms.md": "113b1f0c54c32c41412a17d8973724bfba3b0e6ae6355f9dac3e5d2c569d71e9"
-    },
-    "13": {
-      "analisis_performa/tabel/T13_sapuan_imgsz.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T13_sapuan_imgsz.md": "6f658714d222cdd5da4661e875b452cd97d3550436cac9bd24495769ef83ca9e"
-    },
-    "14": {
-      "analisis_performa/tabel/T14_kalibrasi_confidence.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T14_kalibrasi_confidence.md": "9d3d911f9b7201de99aeb5217c956639fc5d1ee68cd14def8734e2d1d87a1f6d"
-    },
-    "16": {
-      "analisis_performa/tabel/T16_latensi_frame_tetap.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T16_latensi_frame_tetap.md": "67ee89465ae87acf367549b7e7149607bd468fdc696a59f87a35030dce155c99"
-    },
-    "17": {
-      "analisis_performa/tabel/T17_sapuan_thread.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T17_sapuan_thread.md": "a177dd2144c34fc731b472594e7dcc32a57131026e2d3a14fbdee9a020268f58"
-    },
-    "19": {
-      "analisis_performa/tabel/T19_servo_idle_vs_walking.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T19_servo_idle_vs_walking.md": "461a25f5ee3ca9e79fcb729d96fe641436c2e38b9b88919fc49f740cb3d63d57"
-    },
-    "20": {
-      "analisis_performa/tabel/T20_sumber_daya_startup.csv": "f19ce6fd92a9506875384a285dc4de35820a9ea6cc34dfd4f2d26f89fa5c6100",
-      "analisis_performa/tabel/T20_sumber_daya_startup.md": "a78f307482915824050109acab6abd8958e3f4f2dc5b2947c1e4fae2569bcb4c"
-    },
-    "21": {
-      "analisis_performa/tabel/T21_stabilitas_termal.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T21_stabilitas_termal.md": "99ddad6021a2d6265fda302ef509a52772637239c0e6854c8803e1f9b94979ec"
-    },
-    "23": {
-      "analisis_performa/tabel/T23_kepatuhan_tenggat.csv": "9dc91ed6552858f918aa98fa09807c9bceba69848e58d16f8a297abb4810995e",
-      "analisis_performa/tabel/T23_kepatuhan_tenggat.md": "7c48b68a05150a43468366615bc005f3b0816f2ce4e6ab1bceb78b0d0ba5f0b4"
-    },
-    "24": {
-      "analisis_performa/tabel/T24_pengaruh_preview.csv": "828d35b92e6ec9913193b47fbfc2bb4e338fc6e881494ce89c21d899f283318e",
-      "analisis_performa/tabel/T24_pengaruh_preview.md": "4c9c1693bbc68bf3b260588549ebd5d11037f5270126d5c41cfa1795dfd58544"
-    },
-    "26": {
-      "analisis_performa/tabel/T26_tradeoff_utama.csv": "f178898be1c9561790730c33cc53d479bf9be5b4eb05a584dd1d4e751892ebfd",
-      "analisis_performa/tabel/T26_tradeoff_utama.md": "a25e4ad6033c09f19e15ae15575cfdd309a60d43405473d5625635bbf6b7d136"
-    },
-    "27": {
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423"
-    },
-    "15": {
-      "analisis_performa/tabel/T15_lingkungan_uji_op3.csv": "87377ebd87122c6de10337a876b138e3839ffff293d6a0cbb51455a6b6232731",
-      "analisis_performa/tabel/T15_lingkungan_uji_op3.md": "7f1e17ef15db30973c9594e01392f1b1677c8953b0d76962dac4257d1982f7c4"
-    },
-    "18": {
-      "analisis_performa/tabel/T18_sesi_live_historis.csv": "b82986f8af022fabaa2751df1c7876d60af9230b574caddd32fb521ad23ab3ea",
-      "analisis_performa/tabel/T18_sesi_live_historis.md": "5a9c922b3a20671ac6845259354f9b1110d85d2c29360e35f66d730fe670a638"
-    },
-    "22": {
-      "analisis_performa/tabel/T22_aliran_kamera.csv": "8eeec02338fef48f682983f7d94351e7711428f2caec8da3a6427d0209d15482",
-      "analisis_performa/tabel/T22_aliran_kamera.md": "d6e15ba68ff8fefc369b51f1141f5b49f954cc9848e427ea5f4bc65c919f30e3"
-    },
-    "25": {
-      "analisis_performa/tabel/T25_observasi_deteksi_live.csv": "0a9a7d3a22fdc85febfbbafe0a4dd33b4388b9f1e2af003a0d70b03fee27a5bd",
-      "analisis_performa/tabel/T25_observasi_deteksi_live.md": "a9717f233e322195e737f9ba5641663910ce3f30e3d1efbc652396da46cd6d00"
-    },
-    "analisis_performa/INDEKS.md": "4542feb1fabd873c230bd4b3af3e24c7471a1435dbb4734545bbf874ce2af1c4",
-    "analisis_performa/DEFINISI.md": "ebad6c76c74bb29b7869588c32901083bde1d0dadfb0179e63a13f6abad7a781"
-  },
-  "notes": [
-    "Historical webcam runs predate tracking IDs.",
-    "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy.",
-    "OP3 table updates computed offline from saved logs; baseline generator field describes original T01-T27 creation only."
-  ],
-  "op3_offline_update": {
-    "updated_at_utc": "2026-10-20T07:18:03.387383+00:00",
-    "scope": "T15-T27 from stored OP3 logs; T01-T14 untouched",
-    "method": "one-off read-only CSV/JSON analysis; no robot access",
-    "updated_tables": [
-      15,
-      18,
-      20,
-      22,
-      23,
-      25,
-      26
-    ],
-    "source_paths": [
-      "analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md",
-      "artifacts/thesis_analysis_final_corrected/per_model.csv",
-      "dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md",
-      "memory/2026-10-19.md",
-      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json",
-      "runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/tracking.csv",
-      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json",
-      "runs/op3_head_ball_tracking/20261019T130400Z_74c464/tracking.csv",
-      "runs/op3_idle_trial/20261019T123737Z_023704/detections.csv",
-      "runs/op3_idle_trial/20261019T123737Z_023704/frames.csv",
-      "runs/op3_idle_trial/20261019T123737Z_023704/summary.json",
-      "runs/op3_pytorch/20261019T080757Z.csv",
-      "runs/op3_pytorch/20261019T080757Z.json",
-      "runs/op3_pytorch/20261019T083428Z.csv",
-      "runs/op3_pytorch/20261019T083428Z.json",
-      "runs/op3_pytorch/20261019T084434Z.csv",
-      "runs/op3_pytorch/20261019T084434Z.json"
-    ]
-  },
-  "op3_camera_accuracy_update": {
-    "updated_at_utc": "2026-10-21T15:48:35.145570+00:00",
-    "scope": "T27 exploratory OP3 camera detection; T01-T26 unchanged",
-    "method": "curated copy of saved evaluation summary; no inference or robot access",
-    "status": "partial_exploratory; final D8 dataset not locked",
-    "source_sha256": {
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/summary.csv": "ba58fa3dd777c05e9017d77a21b390a5d24f4677d078af1267572a92b3181cd1",
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/results.json": "5fd3e916130c0dc64a2bcc1931412c5372196b0d43e9d815a1b176cb20398a71",
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/input_manifest.json": "7731a2ee6f515967ff08400055c15e61dca359fa998c1b7e0a9961cacdef0e2e",
-      "dokumentasi/2026-10-21/percobaan-13-evaluasi-deteksi-multi-sesi/README.md": "db6c1e8a9a2a2fafd61d60c46ddbef76f2363afabecc9413fe20e5c9e3c3ff0f"
-    },
-    "note": "Raw OP3 JPEG and reviewed labels are absent from this checkout; their original hashes are recorded in input_manifest.json."
-  },
-  "phase1_lab_server_2026_10_21": {
-    "status": "partial; OP3 raw images and reviewed labels unavailable on server",
-    "f1_primary_proposal": "harmonic mean of macro precision and macro recall; D11 not locked",
-    "source_sha256": {
-      "configs/data_train_val.yaml": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/summary.csv": "ba58fa3dd777c05e9017d77a21b390a5d24f4677d078af1267572a92b3181cd1",
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/results.json": "5fd3e916130c0dc64a2bcc1931412c5372196b0d43e9d815a1b176cb20398a71",
-      "runs/op3_multi_session_eval/20261021_primary260_partial50_v1/input_manifest.json": "7731a2ee6f515967ff08400055c15e61dca359fa998c1b7e0a9961cacdef0e2e"
-    },
-    "output_sha256": {
-      "analisis_performa/DEFINISI.md": "8f101f3eed6d0547daa4abfc6d8c7ae5f7c1e1b508f35c326bbc8c7250d336a6",
-      "analisis_performa/INDEKS.md": "e87508d389c45a171017c63660cbd0893e0ae38a0f682ef2240591c9c173638d",
-      "analisis_performa/tabel/T04_ablasi_kd_val.md": "1e88d37e00dd0669269908285eb415c94026377cce50fb492cba77d54ae49cb0",
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.csv": "741131678c8f17ce1839bc1073dd0787c8f120ddbf19c71f53fd8d3321336657",
-      "analisis_performa/tabel/T27_akurasi_frame_kamera_op3.md": "3aeef4324b0f251eadb7b5e59a7ebdcae2df48776fcf35213d12e14ed6c67423",
-      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.csv": "6a941fd244000c24d5ac594fd4c844906e24ebccbb7df10fb922976eadf39aa8",
-      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md": "6a86cfe6f31154f3e88bdc8e26de568ef4e01a159441ccc7caed9627941d1c90",
-      "analisis_performa/lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21_30_crop.jpg": "b51e08d63ab1aef03c0b682e4a038fc99a50d454dfb9fd40ff3780809f3818ef",
-      "analisis_performa/lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md": "5e1fa7994a5ec1bec79dd4bbddf8e65633ee61794b888650a62e505700edb0c8",
-      "scripts/audit_gawang_box_geometry.py": "cc90582ea4b8aa79c95c53f58f06a3e18236be08b7d2547eb53c885c0705faee",
-      "configs/analysis.yaml": "d7bc6bef623318117219a54f8467bbf9331b6ef7a05ee12f9b3f4ceee8b813de",
-      "docs/DECISIONS.md": "fbc47954d5f9cd518cc05c1cf4dec35ffa189b4d1edc07165ca1f41675c46c78"
-    }
+    "analisis_performa/DEFINISI.md": "ebad6c76c74bb29b7869588c32901083bde1d0dadfb0179e63a13f6abad7a781",
+    "analisis_performa/INDEKS.md": "4542feb1fabd873c230bd4b3af3e24c7471a1435dbb4734545bbf874ce2af1c4"
   }
 }

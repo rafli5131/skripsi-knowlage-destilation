@@ -34,11 +34,18 @@ except ImportError:
 OUT = ROOT / "runs/val_ablation/pure_weighted_20261020"
 BASELINES = ("kd_seed42", "kd_seed1337", "kd_seed2025")
 PILOT = "pure_weighted_seed42"
-SUPERVISED = "supervised_seed42"
-HYBRID = ("hybrid_feature_seed42", "hybrid_full_seed42")
+SUPERVISED_SEEDS = ("supervised_seed42", "supervised_seed1337", "supervised_seed2025")
+HYBRID = (
+    "hybrid_feature_seed42",
+    "hybrid_full_seed42",
+    "hybrid_full_seed1337",
+    "hybrid_full_seed2025",
+)
 HYBRID_RUNS = {
     "hybrid_feature_seed42": "yolo11_tiny_hybrid_feature_seed42",
     "hybrid_full_seed42": "yolo11_tiny_hybrid_full_seed42",
+    "hybrid_full_seed1337": "yolo11_tiny_hybrid_full_seed1337",
+    "hybrid_full_seed2025": "yolo11_tiny_hybrid_full_seed2025",
 }
 
 
@@ -160,7 +167,7 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         "model": label, "checkpoint": str(cp), "checkpoint_sha256": sha256(cp),
         "training_manifest": str(manifest_path), "training_manifest_sha256": sha256(manifest_path),
         "training_mode": run_manifest.get("distillation", {}).get(
-            "mode", "supervised" if label == SUPERVISED else "pure_v4"
+            "mode", "supervised" if label in SUPERVISED_SEEDS else "pure_v4"
         ),
         "val_split_fingerprint_sha256": fingerprint["split_fingerprint_sha256"],
         "images": len(seen), "ultralytics": ultralytics.__version__,
@@ -180,7 +187,7 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT, SUPERVISED, *HYBRID), default=[*BASELINES, PILOT])
+    parser.add_argument("--models", nargs="+", choices=(*BASELINES, PILOT, *SUPERVISED_SEEDS, *HYBRID), default=[*BASELINES, PILOT])
     parser.add_argument("--output-dir", type=Path, default=OUT)
     parser.add_argument("--threads", type=int, default=8)
     parser.add_argument("--device", choices=("cpu", "cuda:0"), default="cpu")

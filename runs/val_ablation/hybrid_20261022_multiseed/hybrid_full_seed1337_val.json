@@ -1,0 +1,68 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "created_at_utc": "2026-10-22T00:32:49.411406+00:00",
+  "fixed_confidence_metrics": {
+    "F1_macro": 0.9180905279830387,
+    "precision_macro": 0.8686141493336595,
+    "recall_macro": 0.9735437084156194
+  },
+  "images": 1213,
+  "model": "hybrid_full_seed1337",
+  "per_class": {
+    "ball": {
+      "AP50": 0.9907904207353238,
+      "AP50_95": 0.8593353989927633,
+      "F1_conf025": 0.9679144385026738,
+      "ground_truth_count": 182,
+      "precision_conf025": 0.9427083333333334,
+      "recall_conf025": 0.9945054945054945,
+      "validator_precision": 0.9627596373604486,
+      "validator_recall": 0.9943310918712164
+    },
+    "gawang": {
+      "AP50": 0.9510776672880717,
+      "AP50_95": 0.5988571581980356,
+      "F1_conf025": 0.8512995313165743,
+      "ground_truth_count": 1048,
+      "precision_conf025": 0.76905311778291,
+      "recall_conf025": 0.9532442748091603,
+      "validator_precision": 0.8796862640277961,
+      "validator_recall": 0.9036259541984732
+    },
+    "robot": {
+      "AP50": 0.978337376995206,
+      "AP50_95": 0.7986228077585635,
+      "F1_conf025": 0.9318181818181818,
+      "ground_truth_count": 295,
+      "precision_conf025": 0.8940809968847352,
+      "recall_conf025": 0.9728813559322034,
+      "validator_precision": 0.9287919596422345,
+      "validator_recall": 0.9661016949152542
+    }
+  },
+  "settings": {
+    "augment": false,
+    "batch": 16,
+    "confidence_floor_for_AP": 0.001,
+    "device": "cpu",
+    "fixed_confidence": 0.25,
+    "imgsz": 640,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/manifest.json",
+  "training_manifest_sha256": "e398b6011fe28cf2937955df38ac645d5c6ac086931fc4683a930f974ada6313",
+  "training_mode": "hybrid_full",
+  "ultralytics": "8.4.130",
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "validator_metrics": {
+    "fitness": 0.752271788316454,
+    "metrics/mAP50(B)": 0.9734018216728672,
+    "metrics/mAP50-95(B)": 0.752271788316454,
+    "metrics/precision(B)": 0.9237459536768263,
+    "metrics/recall(B)": 0.9546862469949814
+  }
+}

@@ -1,6 +1,6 @@
 # Tabel lab/server T01–T14
 
-Pembaruan: 20 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Metode penelitian adalah **Knowledge Distillation (KD) murni dengan objective teacher-only**; student supervised adalah kontrol. Angka TEST berasal dari evaluasi terkunci pada split resmi Roboflow Advance Vision v1. Hasilnya berlaku pada level gambar dan belum menjadi ukuran akurasi kamera ROBOTIS OP3.
+Pembaruan: 22 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Analisis ini memuat eksperimen utama **KD murni teacher-only** dan eksperimen lanjutan **KD Hybrid full** yang dibandingkan dengan student supervised. Hasil TEST terkunci yang sudah ada berasal dari eksperimen KD murni; evaluasi KD Hybrid pada pembaruan ini baru sampai VAL. Semua hasil berlaku pada level gambar dan bukan ukuran akurasi kamera ROBOTIS OP3.
 
 ## Lokasi berkas
 
@@ -11,7 +11,7 @@ Nomor dan nama berkas T01–T14 tetap berada di [`analisis_performa/tabel/`](../
 | T01 | Spesifikasi teacher dan enam student | Lengkap | [Markdown](../tabel/T01_spesifikasi_model.md) · [CSV](../tabel/T01_spesifikasi_model.csv) |
 | T02 | Resep dan durasi enam run pelatihan | Lengkap | [Markdown](../tabel/T02_resep_pelatihan.md) · [CSV](../tabel/T02_resep_pelatihan.csv) |
 | T03 | Konvergensi VAL pada epoch terpilih | Lengkap | [Markdown](../tabel/T03_konvergensi.md) · [CSV](../tabel/T03_konvergensi.csv) |
-| T04 | Ablasi objective KD pada VAL | Lengkap untuk pilot: `pure_v4` tiga seed dan `pure_weighted` satu seed | [Markdown](../tabel/T04_ablasi_kd_val.md) · [CSV](../tabel/T04_ablasi_kd_val.csv) · [Per kelas](../tabel/T04_ablasi_kd_val_per_kelas.md) |
+| T04 | Ablasi objective KD pada VAL | Lengkap untuk KD pure tiga seed, pilot pure_weighted seed 42, hybrid_feature seed 42, dan hybrid_full tiga seed | [Markdown](../tabel/T04_ablasi_kd_val.md) · [CSV](../tabel/T04_ablasi_kd_val.csv) · [Per kelas](../tabel/T04_ablasi_kd_val_per_kelas.md) |
 | T05 | Metrik TEST keseluruhan | Lengkap untuk ringkasan dan bootstrap seed yang tersedia | [Markdown](../tabel/T05_akurasi_test_keseluruhan.md) · [CSV](../tabel/T05_akurasi_test_keseluruhan.csv) |
 | T06 | Metrik TEST per kelas | Lengkap | [Markdown](../tabel/T06_akurasi_per_kelas.md) · [CSV](../tabel/T06_akurasi_per_kelas.csv) |
 | T07 | Selisih KD–supervised berpasangan | Lengkap | [Markdown](../tabel/T07_selisih_berpasangan.md) · [CSV](../tabel/T07_selisih_berpasangan.csv) |
@@ -54,9 +54,15 @@ Mean TEST mAP50–95 pure KD adalah **0,6630 ± 0,0108** dari tiga seed; supervi
 
 Pilot `pure_weighted` selesai 100 epoch pada seed 42. Pada VAL, mAP50–95 turun dari **0,6826** (`pure_v4` seed 42) menjadi **0,5907**; F1 pada confidence 0,25 turun dari **0,8676** menjadi **0,0903** karena precision sangat rendah. Recall `gawang` meningkat, tetapi AP50–95 `gawang` turun. Sesuai kriteria pilot, `pure_v4` tetap model utama. Rincian ada pada [T04](../tabel/T04_ablasi_kd_val.md) dan [catatan pilot](../../docs/PILOT_PURE_WEIGHTED_2026-10-20.md).
 
+## KD Hybrid full: hasil VAL tiga seed
+
+KD Hybrid full dan kontrol supervised dievaluasi ulang pada VAL dengan prosedur yang sama. Rerata mAP50–95 Hybrid full **0,7505 ± 0,0018**, supervised **0,7208 ± 0,0041**, dan delta berpasangan **+0,0297 ± 0,0047** pada tiga seed. Selisih mAP50–95 positif pada setiap pasangan. F1 makro pada confidence 0,25 hampir sama dan sedikit lebih rendah untuk Hybrid full; precision turun sementara recall naik. Lihat [laporan evaluasi](HASIL_KD_HYBRID_MULTI_SEED_VAL_2026-10-22.md), [T28](../tabel/T28_selisih_kd_hybrid_val.md), dan [T29](../tabel/T29_kd_hybrid_val_per_kelas.md).
+
+Hasil ini hanya mendukung pertimbangan kandidat berdasarkan VAL. TEST KD Hybrid belum dijalankan dan checkpoint OP3 belum diganti.
+
 ## Data yang masih dibutuhkan
 
-- T04 sudah memuat pilot `pure_weighted` seed 42. Perbandingan kandidat lintas tiga seed belum tersedia, dan pilot yang menurun tidak dipilih untuk pengulangan. Keputusan anggaran epoch eksperimen utama D3 tetap belum dikunci.
+- T04 kini memuat hasil VAL KD Hybrid full tiga seed. T28–T29 memuat perbandingan berpasangan dengan supervised; evaluasi TEST Hybrid masih diperlukan untuk melengkapi klaim generalisasi level gambar.
 - T12/T13 menyapu satu checkpoint per varian agar biaya diagnosis terukur. Sapuan seluruh seed memerlukan inferensi dan benchmark tambahan; hasil perwakilan tidak menunjukkan variasi antar-seed pada setiap titik grid.
 - T15–T27 adalah pengukuran OP3 terpisah. Akurasi kamera OP3 tidak dapat dihitung dari tabel lab/server ini tanpa frame kamera berlabel.
 
