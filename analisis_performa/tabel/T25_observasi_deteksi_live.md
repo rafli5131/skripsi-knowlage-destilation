@@ -1,18 +1,23 @@
-# T25. observasi deteksi live
+# T25. observasi keluaran deteksi live OP3
 
-Status: Sebagian; kelas/ID tersedia pada sesi idle baru, log lama hanya total dan uji kepala hanya bola terpilih.
+Tabel ini merangkum keluaran per kelas untuk lima benchmark terbaru. `detections_per_frame` adalah jumlah kotak dibagi jumlah frame ukur; p10/median/p90 dihitung dari confidence kotak yang keluar; `count_change_fraction` adalah proporsi pasangan frame ukur berurutan dengan jumlah kotak kelas berubah.
 
-| run_id | condition | class | n_frames [frame] | detections [count] | detections_per_frame [count/frame] | confidence_p10 | confidence_median | confidence_p90 | count_change_fraction | track_IDs | source |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 20261019T080757Z | unknown | all | 724 | 412 | 0,569 | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | runs/op3_pytorch/20261019T080757Z.csv |
-| 20261019T083428Z | unknown | all | 512 | 0 | 0 | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | runs/op3_pytorch/20261019T083428Z.csv |
-| 20261019T084434Z | unknown | all | 887 | 887 | 1 | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | [BELUM DIUKUR] | runs/op3_pytorch/20261019T084434Z.csv |
-| 20261019T123737Z_023704 | servo_idle | ball | 1501 | 1501 | 1 | 0,976 | 0,979 | 0,981 | 0 | 1 | runs/op3_idle_trial/20261019T123737Z_023704/detections.csv |
-| 20261019T123737Z_023704 | servo_idle | gawang | 1501 | 1452 | 0,967 | 0,266 | 0,29 | 0,315 | 0,0613 | 3 | runs/op3_idle_trial/20261019T123737Z_023704/detections.csv |
-| 20261019T123737Z_023704 | servo_idle | robot | 1501 | 1501 | 1 | 0,756 | 0,772 | 0,785 | 0 | 2 | runs/op3_idle_trial/20261019T123737Z_023704/detections.csv |
-| 20261019T130201Z_7ba2ef | unknown | ball_selected_only | 49 | 26 | 0,531 | 0,567 | 0,844 | 0,975 | 0,1667 | 1,5,11,17 | runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/tracking.csv |
-| 20261019T130400Z_74c464 | unknown | ball_selected_only | 79 | 79 | 1 | 0,914 | 0,974 | 0,976 | 0 | 1 | runs/op3_head_ball_tracking/20261019T130400Z_74c464/tracking.csv |
+| Run | Kondisi | Kelas | Frame | Kotak | Kotak/frame | Confidence p10/median/p90 | Perubahan hitungan | ID tracker yang terlihat |
+|---|---|---|---:|---:|---:|---|---:|---|
+| 20261022_kd_pure_matched_idle_preview_01 | servo_idle | ball | 780 | 780 | 1.0000 | 0.8473/0.8539/0.8604 | 0.0000 | 1 |
+| 20261022_kd_pure_matched_idle_preview_01 | servo_idle | gawang | 780 | 780 | 1.0000 | 0.4057/0.4341/0.4614 | 0.0000 | 3 |
+| 20261022_kd_pure_matched_idle_preview_01 | servo_idle | robot | 780 | 771 | 0.9885 | 0.3438/0.4413/0.5354 | 0.0205 | 2 |
+| 20261022_kd_pure_matched_walking_preview_01 | walking | ball | 743 | 743 | 1.0000 | 0.8752/0.8995/0.9116 | 0.0000 | 1 |
+| 20261022_kd_pure_matched_walking_preview_01 | walking | gawang | 743 | 743 | 1.0000 | 0.3771/0.4425/0.4878 | 0.0000 | 3 |
+| 20261022_kd_pure_matched_walking_preview_01 | walking | robot | 743 | 606 | 0.8156 | 0.3286/0.5116/0.6443 | 0.2372 | 2 |
+| 20261022_kd_hybrid_idle_final_01 | servo_idle | ball | 744 | 744 | 1.0000 | 0.7940/0.7990/0.8040 | 0.0000 | 1 |
+| 20261022_kd_hybrid_idle_final_01 | servo_idle | gawang | 744 | 0 | 0.0000 | [TIDAK ADA KOTAK]/[TIDAK ADA KOTAK]/[TIDAK ADA KOTAK] | 0.0000 | none |
+| 20261022_kd_hybrid_idle_final_01 | servo_idle | robot | 744 | 743 | 0.9987 | 0.3629/0.4323/0.4966 | 0.0027 | 2 |
+| 20261022_kd_hybrid_walking_final_01 | walking | ball | 734 | 734 | 1.0000 | 0.7656/0.7884/0.8260 | 0.0000 | 1 |
+| 20261022_kd_hybrid_walking_final_01 | walking | gawang | 734 | 504 | 0.6866 | 0.2727/0.3617/0.4690 | 0.3915 | 4 |
+| 20261022_kd_hybrid_walking_final_01 | walking | robot | 734 | 646 | 0.8801 | 0.2983/0.4122/0.5518 | 0.1637 | 2 |
+| 20261022_kd_hybrid_servo_idle_after_opencr_recovery_01 | servo_idle | ball | 708 | 708 | 1.0000 | 0.8363/0.8422/0.8582 | 0.0000 | 1 |
+| 20261022_kd_hybrid_servo_idle_after_opencr_recovery_01 | servo_idle | gawang | 708 | 708 | 1.0000 | 0.3679/0.4094/0.4509 | 0.0000 | 3 |
+| 20261022_kd_hybrid_servo_idle_after_opencr_recovery_01 | servo_idle | robot | 708 | 708 | 1.0000 | 0.4408/0.5331/0.5765 | 0.0000 | 2 |
 
-Sumber: runs/op3_pytorch/*.csv; runs/op3_idle_trial/20261019T123737Z_023704/frames.csv; runs/op3_idle_trial/20261019T123737Z_023704/detections.csv; runs/op3_head_ball_tracking/*/tracking.csv
-
-Count_change_fraction adalah fraksi pasangan frame berurutan dengan jumlah deteksi kelas yang berubah; pada uji kepala hanya ada indikator bola terpilih. ID konsisten pada objek yang relatif diam tidak membuktikan tracking objek bergerak. Confidence bukan precision/akurasi kamera OP3.
+Semua baris lama dan baru, termasuk sumber, ada di [CSV](T25_observasi_deteksi_live.csv). Run terbaru pasca-pemulihan OpenCR menunjukkan ketiga kelas muncul pada semua frame ukur, selaras dengan laporan [Percobaan 21](../../dokumentasi/2026-10-22/percobaan-21-kd-hybrid-servo-idle-opencr-pulih/README_ID.md). Ini adalah frekuensi keluaran model; confidence, jumlah kotak, dan ID tracker tidak membuktikan akurasi.

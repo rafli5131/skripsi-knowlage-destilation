@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "op3-reviewed-error-audit"
+version = "0.1.0"
+description = "Targeted visual error analysis for reviewed OP3 detections"
+requires-python = ">=3.10"
+dependencies = ["op3-camera-eval>=0.1.0", "pillow>=10"]
+
+[tool.setuptools]
+packages = ["op3_reviewed_error_audit"]

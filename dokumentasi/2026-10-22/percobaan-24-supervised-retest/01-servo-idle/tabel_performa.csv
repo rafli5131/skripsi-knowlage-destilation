@@ -1,0 +1,7 @@
+Metrik,Median,P95,Rata-rata,Satuan
+Pra-pemrosesan,1.49,11.63,3.46,ms
+Inferensi,28.39,130.67,37.3,ms
+Pascapemrosesan,0.83,0.93,0.82,ms
+End-to-end,49.03,157.24,58.47,ms
+CPU proses,1232.25,1393.39,1252.09,% satu CPU logis
+RAM RSS,354.69,358.68,352.15,MiB

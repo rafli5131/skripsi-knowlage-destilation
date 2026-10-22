@@ -1,0 +1,51 @@
+{
+  "saved_at_utc": "2026-10-22T18:08:49.067425+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792692528,
+    "nanosec": 961042000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.8512269854545593,
+      "center_x_px": 111.63468551635742,
+      "center_y_px": 250.2705535888672,
+      "width_px": 161.16004180908203,
+      "height_px": 147.93893432617188
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.898122251033783,
+      "center_x_px": 472.438720703125,
+      "center_y_px": 404.0599670410156,
+      "width_px": 72.32745361328125,
+      "height_px": 72.45965576171875
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.41290923953056335,
+      "center_x_px": 312.91529083251953,
+      "center_y_px": 193.46698379516602,
+      "width_px": 185.50706481933594,
+      "height_px": 193.86736297607422
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.5672386288642883,
+      "center_x_px": 580.9706115722656,
+      "center_y_px": 406.8752746582031,
+      "width_px": 113.86053466796875,
+      "height_px": 128.75079345703125
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/live_overlay_tracking.png"
+}

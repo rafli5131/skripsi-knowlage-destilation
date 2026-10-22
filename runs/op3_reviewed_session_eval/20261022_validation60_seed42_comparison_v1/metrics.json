@@ -1,0 +1,381 @@
+{
+  "status": "exploratory_reviewed_op3_camera_evaluation",
+  "frame_count": 60,
+  "sessions": [
+    "20261022_independent_validation_02"
+  ],
+  "metrics": {
+    "kd_runtime": {
+      "checkpoint": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+      "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "combined": {
+        "ap": {
+          "mAP50": 0.9380080587722809,
+          "mAP50-95": 0.47896729177683756,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.7041754385964912
+            },
+            "gawang": {
+              "mAP50": 0.8240241763168428,
+              "mAP50-95": 0.3591227864793526
+            },
+            "robot": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.3736036502546689
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 123,
+              "true_positives": 72,
+              "false_positives": 51,
+              "false_negatives": 0,
+              "precision": 0.5853658536585366,
+              "recall": 1.0,
+              "F1": 0.7384615384615384
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            }
+          },
+          "macro": {
+            "precision": 0.8617886178861789,
+            "recall": 1.0,
+            "F1": 0.9128205128205128
+          },
+          "micro": {
+            "precision": 0.7901234567901234,
+            "recall": 1.0,
+            "F1": 0.8827586206896552
+          },
+          "ground_truth": 192,
+          "predictions": 243,
+          "true_positives": 192,
+          "false_positives": 51,
+          "false_negatives": 0
+        }
+      },
+      "by_session": {
+        "20261022_independent_validation_02": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 123,
+              "true_positives": 72,
+              "false_positives": 51,
+              "false_negatives": 0,
+              "precision": 0.5853658536585366,
+              "recall": 1.0,
+              "F1": 0.7384615384615384
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            }
+          },
+          "macro": {
+            "precision": 0.8617886178861789,
+            "recall": 1.0,
+            "F1": 0.9128205128205128
+          },
+          "micro": {
+            "precision": 0.7901234567901234,
+            "recall": 1.0,
+            "F1": 0.8827586206896552
+          },
+          "ground_truth": 192,
+          "predictions": 243,
+          "true_positives": 192,
+          "false_positives": 51,
+          "false_negatives": 0
+        }
+      }
+    },
+    "hybrid_seed42": {
+      "checkpoint": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+      "checkpoint_sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+      "combined": {
+        "ap": {
+          "mAP50": 0.8640427394581671,
+          "mAP50-95": 0.5666429103086266,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.7694844322344322
+            },
+            "gawang": {
+              "mAP50": 0.6021282183745011,
+              "mAP50-95": 0.2521342086524786
+            },
+            "robot": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.6783100900389688
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 2,
+              "true_positives": 1,
+              "false_positives": 1,
+              "false_negatives": 71,
+              "precision": 0.5,
+              "recall": 0.013888888888888888,
+              "F1": 0.02702702702702703
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            }
+          },
+          "macro": {
+            "precision": 0.8333333333333334,
+            "recall": 0.6712962962962963,
+            "F1": 0.6756756756756758
+          },
+          "micro": {
+            "precision": 0.9918032786885246,
+            "recall": 0.6302083333333334,
+            "F1": 0.7707006369426752
+          },
+          "ground_truth": 192,
+          "predictions": 122,
+          "true_positives": 121,
+          "false_positives": 1,
+          "false_negatives": 71
+        }
+      },
+      "by_session": {
+        "20261022_independent_validation_02": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 2,
+              "true_positives": 1,
+              "false_positives": 1,
+              "false_negatives": 71,
+              "precision": 0.5,
+              "recall": 0.013888888888888888,
+              "F1": 0.02702702702702703
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            }
+          },
+          "macro": {
+            "precision": 0.8333333333333334,
+            "recall": 0.6712962962962963,
+            "F1": 0.6756756756756758
+          },
+          "micro": {
+            "precision": 0.9918032786885246,
+            "recall": 0.6302083333333334,
+            "F1": 0.7707006369426752
+          },
+          "ground_truth": 192,
+          "predictions": 122,
+          "true_positives": 121,
+          "false_positives": 1,
+          "false_negatives": 71
+        }
+      }
+    },
+    "supervised_seed42": {
+      "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "checkpoint_sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e",
+      "combined": {
+        "ap": {
+          "mAP50": 0.9414349179658573,
+          "mAP50-95": 0.5808560547211531,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.697517476873409
+            },
+            "gawang": {
+              "mAP50": 0.8343047538975721,
+              "mAP50-95": 0.34336709009628413
+            },
+            "robot": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.7016835971937667
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 72,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 62,
+              "true_positives": 2,
+              "false_positives": 60,
+              "false_negatives": 58,
+              "precision": 0.03225806451612903,
+              "recall": 0.03333333333333333,
+              "F1": 0.03278688524590164
+            }
+          },
+          "macro": {
+            "precision": 0.3440860215053763,
+            "recall": 0.3444444444444445,
+            "F1": 0.3442622950819672
+          },
+          "micro": {
+            "precision": 0.5081967213114754,
+            "recall": 0.3229166666666667,
+            "F1": 0.3949044585987262
+          },
+          "ground_truth": 192,
+          "predictions": 122,
+          "true_positives": 62,
+          "false_positives": 60,
+          "false_negatives": 130
+        }
+      },
+      "by_session": {
+        "20261022_independent_validation_02": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 60,
+              "predictions": 60,
+              "true_positives": 60,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 72,
+              "predictions": 0,
+              "true_positives": 0,
+              "false_positives": 0,
+              "false_negatives": 72,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 60,
+              "predictions": 62,
+              "true_positives": 2,
+              "false_positives": 60,
+              "false_negatives": 58,
+              "precision": 0.03225806451612903,
+              "recall": 0.03333333333333333,
+              "F1": 0.03278688524590164
+            }
+          },
+          "macro": {
+            "precision": 0.3440860215053763,
+            "recall": 0.3444444444444445,
+            "F1": 0.3442622950819672
+          },
+          "micro": {
+            "precision": 0.5081967213114754,
+            "recall": 0.3229166666666667,
+            "F1": 0.3949044585987262
+          },
+          "ground_truth": 192,
+          "predictions": 122,
+          "true_positives": 62,
+          "false_positives": 60,
+          "false_negatives": 130
+        }
+      }
+    }
+  }
+}

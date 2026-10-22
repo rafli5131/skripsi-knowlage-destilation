@@ -1,0 +1,4 @@
+Kelas,Frame terdeteksi,Persentase frame,Kotak,Median confidence,ID track
+ball,675/675,100.00%,675,0.9199,1
+gawang,675/675,100.00%,675,0.6286,2
+robot,644/675,95.41%,644,0.7472,3

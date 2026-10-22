@@ -1,0 +1,356 @@
+{
+  "status": "exploratory_reviewed_op3_camera_evaluation",
+  "frame_count": 160,
+  "sessions": [
+    "20261022_hybrid1337_three_objects_01",
+    "20261022_hybrid1337_three_objects_extra_01"
+  ],
+  "metrics": {
+    "hybrid": {
+      "checkpoint": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "combined": {
+        "ap": {
+          "mAP50": 0.7492997286162884,
+          "mAP50-95": 0.4687054938796171,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.9602886359385033
+            },
+            "gawang": {
+              "mAP50": 0.45212844971806726,
+              "mAP50-95": 0.36252552921579523
+            },
+            "robot": {
+              "mAP50": 0.8007707361307979,
+              "mAP50-95": 0.08330231648455257
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 160,
+              "predictions": 160,
+              "true_positives": 160,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 160,
+              "predictions": 110,
+              "true_positives": 110,
+              "false_positives": 0,
+              "false_negatives": 50,
+              "precision": 1.0,
+              "recall": 0.6875,
+              "F1": 0.8148148148148148
+            },
+            "robot": {
+              "ground_truth": 160,
+              "predictions": 179,
+              "true_positives": 160,
+              "false_positives": 19,
+              "false_negatives": 0,
+              "precision": 0.8938547486033519,
+              "recall": 1.0,
+              "F1": 0.943952802359882
+            }
+          },
+          "macro": {
+            "precision": 0.9646182495344506,
+            "recall": 0.8958333333333334,
+            "F1": 0.919589205724899
+          },
+          "micro": {
+            "precision": 0.9576837416481069,
+            "recall": 0.8958333333333334,
+            "F1": 0.9257265877287406
+          },
+          "ground_truth": 480,
+          "predictions": 449,
+          "true_positives": 430,
+          "false_positives": 19,
+          "false_negatives": 50
+        }
+      },
+      "by_session": {
+        "20261022_hybrid1337_three_objects_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 120,
+              "predictions": 120,
+              "true_positives": 120,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 120,
+              "predictions": 71,
+              "true_positives": 71,
+              "false_positives": 0,
+              "false_negatives": 49,
+              "precision": 1.0,
+              "recall": 0.5916666666666667,
+              "F1": 0.743455497382199
+            },
+            "robot": {
+              "ground_truth": 120,
+              "predictions": 134,
+              "true_positives": 120,
+              "false_positives": 14,
+              "false_negatives": 0,
+              "precision": 0.8955223880597015,
+              "recall": 1.0,
+              "F1": 0.9448818897637796
+            }
+          },
+          "macro": {
+            "precision": 0.9651741293532338,
+            "recall": 0.8638888888888889,
+            "F1": 0.8961124623819928
+          },
+          "micro": {
+            "precision": 0.9569230769230769,
+            "recall": 0.8638888888888889,
+            "F1": 0.908029197080292
+          },
+          "ground_truth": 360,
+          "predictions": 325,
+          "true_positives": 311,
+          "false_positives": 14,
+          "false_negatives": 49
+        },
+        "20261022_hybrid1337_three_objects_extra_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 39,
+              "true_positives": 39,
+              "false_positives": 0,
+              "false_negatives": 1,
+              "precision": 1.0,
+              "recall": 0.975,
+              "F1": 0.9873417721518987
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 45,
+              "true_positives": 40,
+              "false_positives": 5,
+              "false_negatives": 0,
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "F1": 0.9411764705882353
+            }
+          },
+          "macro": {
+            "precision": 0.9629629629629629,
+            "recall": 0.9916666666666667,
+            "F1": 0.9761727475800447
+          },
+          "micro": {
+            "precision": 0.9596774193548387,
+            "recall": 0.9916666666666667,
+            "F1": 0.9754098360655739
+          },
+          "ground_truth": 120,
+          "predictions": 124,
+          "true_positives": 119,
+          "false_positives": 5,
+          "false_negatives": 1
+        }
+      }
+    },
+    "supervised": {
+      "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "combined": {
+        "ap": {
+          "mAP50": 0.8264699792960664,
+          "mAP50-95": 0.45325979262287935,
+          "per_class": {
+            "ball": {
+              "mAP50": 0.995,
+              "mAP50-95": 0.7944188316622749
+            },
+            "gawang": {
+              "mAP50": 0.4944099378881986,
+              "mAP50-95": 0.43351544821758525
+            },
+            "robot": {
+              "mAP50": 0.9900000000000003,
+              "mAP50-95": 0.1318450979887778
+            }
+          }
+        },
+        "operating": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 160,
+              "predictions": 159,
+              "true_positives": 159,
+              "false_positives": 0,
+              "false_negatives": 1,
+              "precision": 1.0,
+              "recall": 0.99375,
+              "F1": 0.9968652037617556
+            },
+            "gawang": {
+              "ground_truth": 160,
+              "predictions": 160,
+              "true_positives": 0,
+              "false_positives": 160,
+              "false_negatives": 160,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 160,
+              "predictions": 159,
+              "true_positives": 83,
+              "false_positives": 76,
+              "false_negatives": 77,
+              "precision": 0.5220125786163522,
+              "recall": 0.51875,
+              "F1": 0.5203761755485894
+            }
+          },
+          "macro": {
+            "precision": 0.5073375262054508,
+            "recall": 0.5041666666666668,
+            "F1": 0.5057471264367817
+          },
+          "micro": {
+            "precision": 0.5062761506276151,
+            "recall": 0.5041666666666667,
+            "F1": 0.5052192066805845
+          },
+          "ground_truth": 480,
+          "predictions": 478,
+          "true_positives": 242,
+          "false_positives": 236,
+          "false_negatives": 238
+        }
+      },
+      "by_session": {
+        "20261022_hybrid1337_three_objects_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 120,
+              "predictions": 119,
+              "true_positives": 119,
+              "false_positives": 0,
+              "false_negatives": 1,
+              "precision": 1.0,
+              "recall": 0.9916666666666667,
+              "F1": 0.99581589958159
+            },
+            "gawang": {
+              "ground_truth": 120,
+              "predictions": 120,
+              "true_positives": 0,
+              "false_positives": 120,
+              "false_negatives": 120,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 120,
+              "predictions": 123,
+              "true_positives": 59,
+              "false_positives": 64,
+              "false_negatives": 61,
+              "precision": 0.4796747967479675,
+              "recall": 0.49166666666666664,
+              "F1": 0.48559670781893
+            }
+          },
+          "macro": {
+            "precision": 0.4932249322493225,
+            "recall": 0.49444444444444446,
+            "F1": 0.49380420246684004
+          },
+          "micro": {
+            "precision": 0.49171270718232046,
+            "recall": 0.49444444444444446,
+            "F1": 0.4930747922437673
+          },
+          "ground_truth": 360,
+          "predictions": 362,
+          "true_positives": 178,
+          "false_positives": 184,
+          "false_negatives": 182
+        },
+        "20261022_hybrid1337_three_objects_extra_01": {
+          "per_class": {
+            "ball": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 40,
+              "false_positives": 0,
+              "false_negatives": 0,
+              "precision": 1.0,
+              "recall": 1.0,
+              "F1": 1.0
+            },
+            "gawang": {
+              "ground_truth": 40,
+              "predictions": 40,
+              "true_positives": 0,
+              "false_positives": 40,
+              "false_negatives": 40,
+              "precision": 0.0,
+              "recall": 0.0,
+              "F1": 0.0
+            },
+            "robot": {
+              "ground_truth": 40,
+              "predictions": 36,
+              "true_positives": 24,
+              "false_positives": 12,
+              "false_negatives": 16,
+              "precision": 0.6666666666666666,
+              "recall": 0.6,
+              "F1": 0.631578947368421
+            }
+          },
+          "macro": {
+            "precision": 0.5555555555555555,
+            "recall": 0.5333333333333333,
+            "F1": 0.543859649122807
+          },
+          "micro": {
+            "precision": 0.5517241379310345,
+            "recall": 0.5333333333333333,
+            "F1": 0.5423728813559322
+          },
+          "ground_truth": 120,
+          "predictions": 116,
+          "true_positives": 64,
+          "false_positives": 52,
+          "false_negatives": 56
+        }
+      }
+    }
+  }
+}

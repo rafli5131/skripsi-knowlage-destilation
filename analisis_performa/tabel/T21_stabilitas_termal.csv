@@ -1,2 +1,5 @@
-status
-[BELUM DIUKUR]
+timestamp_utc,run_id,sensor,temperature_c,measurement_context,thermal_stability_run,source
+2026-10-19T13:02:01.149133+00:00,20261019T130201Z_7ba2ef,Dynamixel ID 19 (head_pan),22,single servo preflight snapshot before short head-tracking session; torque was off,no; no repeated time series or NUC CPU temperature,runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json
+2026-10-19T13:02:01.149133+00:00,20261019T130201Z_7ba2ef,Dynamixel ID 20 (head_tilt),22,single servo preflight snapshot before short head-tracking session; torque was off,no; no repeated time series or NUC CPU temperature,runs/op3_head_ball_tracking/20261019T130201Z_7ba2ef/summary.json
+2026-10-19T13:04:00.306260+00:00,20261019T130400Z_74c464,Dynamixel ID 19 (head_pan),25,single servo preflight snapshot before short head-tracking session; torque was off,no; no repeated time series or NUC CPU temperature,runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json
+2026-10-19T13:04:00.306260+00:00,20261019T130400Z_74c464,Dynamixel ID 20 (head_tilt),25,single servo preflight snapshot before short head-tracking session; torque was off,no; no repeated time series or NUC CPU temperature,runs/op3_head_ball_tracking/20261019T130400Z_74c464/summary.json

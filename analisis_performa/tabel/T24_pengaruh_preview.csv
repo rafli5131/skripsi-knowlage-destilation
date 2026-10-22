@@ -1,2 +1,3 @@
-status
-[BELUM DIUKUR]
+run_id,model,condition,preview_enabled,intra_threads,inter_threads,frames_measured,effective_fps,callback_median_ms,callback_p95_ms,cpu_median_raw_percent,rss_median_mib,source,comparison_status
+20261022_kd_pure_servo_idle_01,kd_seed42,servo_idle,False,12,12,880,14.6488,44.296,156.726,1267.55,357.18,runs/op3_pytorch/20261022_kd_pure_servo_idle_01.json; corresponding CSV,"Observed only; thread counts differ (12/12 vs 4/2), not an isolated preview effect"
+20261022_kd_pure_matched_idle_preview_01,kd_seed42,servo_idle,True,4,2,780,13.0113,49.745,157.849,1237.25,359.57,runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.json; corresponding CSV,"Observed only; thread counts differ (12/12 vs 4/2), not an isolated preview effect"

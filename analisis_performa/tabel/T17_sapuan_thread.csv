@@ -1,2 +1,7 @@
-status
-[BELUM DIUKUR]
+run_id,model,condition,preview,torch_intra_threads,torch_inter_threads,measured_frames,effective_fps,callback_median_ms,callback_p95_ms,cpu_median_percent_one_logical_core,rss_median_mib,source,interpretation
+20261022_kd_pure_servo_idle_01,kd_seed42,servo_idle,False,12,12,880,14.6488,44.296,156.726,1267.55,357.18,runs/op3_pytorch/20261022_kd_pure_servo_idle_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep
+20261022_kd_pure_matched_idle_preview_01,kd_seed42,servo_idle,True,4,2,780,13.0113,49.745,157.849,1237.25,359.57,runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep
+20261022_kd_pure_matched_walking_preview_01,kd_seed42,walking,True,4,2,743,12.3652,55.084,161.789,1238.20,352.43,runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep
+20261022_kd_hybrid_idle_final_01,hybrid_full_seed1337,servo_idle,True,4,2,744,12.3903,49.601,158.148,1233.15,361.40,runs/op3_pytorch/20261022_kd_hybrid_idle_final_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep
+20261022_kd_hybrid_walking_final_01,hybrid_full_seed1337,walking,True,4,2,734,12.1964,56.388,163.167,1257.35,362.43,runs/op3_pytorch/20261022_kd_hybrid_walking_final_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep
+20261022_kd_hybrid_servo_idle_after_opencr_recovery_01,hybrid_full_seed1337,servo_idle,True,4,2,708,11.7951,53.219,159.874,1233.90,357.26,runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.json; corresponding CSV,Observational configuration only; not a controlled thread sweep

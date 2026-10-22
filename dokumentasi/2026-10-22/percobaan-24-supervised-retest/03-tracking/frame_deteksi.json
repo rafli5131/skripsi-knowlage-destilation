@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T16:34:40.095526+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792686879,
+    "nanosec": 532239000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.8517283797264099,
+      "center_x_px": 109.92648315429688,
+      "center_y_px": 270.3645935058594,
+      "width_px": 62.886810302734375,
+      "height_px": 55.0208740234375
+    },
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.6184505820274353,
+      "center_x_px": 451.8678894042969,
+      "center_y_px": 311.4249267578125,
+      "width_px": 173.55303955078125,
+      "height_px": 219.3038330078125
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.3527975380420685,
+      "center_x_px": 302.57708740234375,
+      "center_y_px": 147.82510375976562,
+      "width_px": 98.5296630859375,
+      "height_px": 273.9521484375
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-22/percobaan-24-supervised-retest/03-tracking/frame_deteksi.png"
+}

@@ -1,2 +1,12 @@
-status
-[BELUM DIUKUR]
+model,kondisi,run_id,frame_ukur,fps_efektif,callback_median_ms,callback_p95_ms,cpu_median_persen_dari_16_cpu_logis,rss_median_mib,keluaran_gawang_frame,error_frame,catatan
+KD murni,Idle (servo idle; label operator),20261022_kd_pure_matched_idle_preview_01,780,13.0113,49.745,157.849,77.328,359.566,780/780 (100%),0,Percobaan 18; satu run sekitar 60 detik; preview aktif
+KD murni,Walking (perintah gait; label operator),20261022_kd_pure_matched_walking_preview_01,743,12.3652,55.084,161.789,77.388,352.426,743/743 (100%),0,Percobaan 18; satu run sekitar 60 detik; gerak tidak diverifikasi telemetry independen
+KD Hybrid,Idle (label operator; run sebelum pemulihan OpenCR),20261022_kd_hybrid_idle_final_01,744,12.3903,49.601,158.148,77.072,361.398,0/744 (0%),0,Percobaan 19; cek run lanjutan percobaan 21 karena keluaran gawang 0
+KD Hybrid,Walking (perintah gait; label operator),20261022_kd_hybrid_walking_final_01,734,12.1964,56.388,163.167,78.584,362.426,504/734 (68.66%),0,Percobaan 19; satu run sekitar 60 detik; scene dan target tidak diverifikasi independen
+KD Hybrid,Servo idle terverifikasi setelah OpenCR pulih,20261022_kd_hybrid_servo_idle_after_opencr_recovery_01,708,11.7951,53.219,159.874,77.119,357.256,708/708 (100%),0,Percobaan 21; velocity joint nol saat pemeriksaan sebelum/sesudah; tanpa perintah gait
+Supervised seed 1337,Idle (manager aktif; kepala ditahan),20261022_supervised_retest_head_held_idle_01,724,12.0553,52.128,163.948,78.344,362.986,724/724 (100%),0,Percobaan 25; preview aktif; gait off; head pose dipertahankan
+Supervised seed 1337,Walking (gait terverifikasi telemetry),20261022_supervised_retest_head_held_walking_01,742,12.3147,55.595,165.137,79.856,357.613,585/742 (78.84%),0,Percobaan 25; preview aktif; gerak kaki terverifikasi telemetry; head pose dipertahankan
+KD murni seed 42,Idle (manager tidak aktif),20261023_kd_pure_idle_retest_01,839,13.9422,46.874,159.136,79.013,357.379,839/839 (100%),0,Percobaan 26; preview aktif; torque ID 1-20 aktif; tanpa perintah gait
+KD murni seed 42,Walking (gait terverifikasi telemetry),20261023_kd_pure_walking_retest_02,675,11.8385,59.052,167.242,79.925,358.473,675/675 (100%),0,Percobaan 26; jendela 57 detik; manager aktif; gerak kaki terverifikasi telemetry
+KD Hybrid full seed 1337,Idle (manager aktif; kepala ditahan),20261023_kd_hybrid_idle_retest_01,726,12.0888,54.544,164.699,80.241,363.121,726/726 (100%),0,Percobaan 27; preview aktif; tanpa perintah gait; head pose dipertahankan
+KD Hybrid full seed 1337,Walking (gait terverifikasi telemetry),20261023_kd_hybrid_walking_retest_01,671,11.7550,60.034,168.259,80.525,363.723,671/671 (100%),0,Percobaan 27; jendela 57 detik; preview aktif; gerak kaki terverifikasi telemetry; head pose dipertahankan

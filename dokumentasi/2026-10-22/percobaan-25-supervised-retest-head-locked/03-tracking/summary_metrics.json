@@ -1,0 +1,127 @@
+{
+  "run_id": "20261022_supervised_retest_head_held_tracking_moving_ball_01",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "status": "stopped",
+  "started_at_utc": "2026-10-22T16:53:57.073512+00:00",
+  "stopped_at_utc": "2026-10-22T16:55:00.084113+00:00",
+  "started_at_wib": "2026-10-22T23:53:57.073512+07:00",
+  "stopped_at_wib": "2026-10-22T23:55:00.084113+07:00",
+  "measurement_duration_s": 60.035182594001526,
+  "processed_frames_including_warmup": 809,
+  "measured_frames_after_warmup": 779,
+  "warmup_frames": 30,
+  "effective_fps_after_warmup": 12.972656574629058,
+  "frame_errors": 0,
+  "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "registered_model": "supervised_seed1337",
+  "runtime": {
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130",
+    "opencv": "4.11.0",
+    "device": "cpu",
+    "threads": 4,
+    "interop_threads": 2
+  },
+  "camera": {
+    "topic": "/thesis/image_raw",
+    "width": 640,
+    "height": 480,
+    "preview_enabled": true
+  },
+  "parameters": {
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "tracker": "botsort.yaml"
+  },
+  "runtime_metrics": {
+    "Pra-pemrosesan": {
+      "median": 3.674185005365871,
+      "p95": 12.021692099369828,
+      "unit": "ms/frame",
+      "source_column": "preprocess_ms"
+    },
+    "Inferensi": {
+      "median": 31.644548005715478,
+      "p95": 134.94861570216014,
+      "unit": "ms/frame",
+      "source_column": "inference_ms"
+    },
+    "Pascapemrosesan": {
+      "median": 0.7985470001585782,
+      "p95": 1.2959961975866452,
+      "unit": "ms/frame",
+      "source_column": "postprocess_ms"
+    },
+    "Callback end-to-end": {
+      "median": 52.51654599851463,
+      "p95": 163.47104670421686,
+      "unit": "ms/frame",
+      "source_column": "end_to_end_ms"
+    },
+    "CPU proses": {
+      "median": 1283.0,
+      "p95": 1395.51,
+      "unit": "% satu CPU logis",
+      "source_column": "process_cpu_percent"
+    },
+    "CPU host (16 CPU logis)": {
+      "median": 80.1875,
+      "p95": 87.219375,
+      "unit": "% kapasitas host",
+      "source_column": "process_cpu_percent"
+    },
+    "RAM RSS": {
+      "median": 361.06640625,
+      "p95": 365.92578125,
+      "unit": "MiB",
+      "source_column": "process_rss_bytes"
+    }
+  },
+  "classes": {
+    "ball": {
+      "detection_rows": 779,
+      "frames_with_detection": 779,
+      "coverage_percent": 100.0,
+      "median_confidence": 0.8142048120498657,
+      "track_ids": [
+        "1"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 19.613414764404297,
+      "center_y_span_px": 5.0532379150390625
+    },
+    "gawang": {
+      "detection_rows": 675,
+      "frames_with_detection": 675,
+      "coverage_percent": 86.64955070603338,
+      "median_confidence": 0.3610461354255676,
+      "track_ids": [
+        "3"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 17.871047973632812,
+      "center_y_span_px": 3.5378222465515137
+    },
+    "robot": {
+      "detection_rows": 780,
+      "frames_with_detection": 777,
+      "coverage_percent": 99.74326059050064,
+      "median_confidence": 0.418247789144516,
+      "track_ids": [
+        "2",
+        "5"
+      ],
+      "id_changes_between_detected_frames": 2,
+      "center_x_span_px": 34.89924621582031,
+      "center_y_span_px": 103.60136413574219
+    }
+  },
+  "ground_truth_available": false,
+  "accuracy_metrics_measured": false,
+  "raw_csv": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_01.csv",
+  "detection_csv": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_01_detections.csv",
+  "metadata_json": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_01.json"
+}

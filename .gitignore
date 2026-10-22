@@ -15,5 +15,9 @@ __pycache__/
 /runs/op3_camera_eval/**/dataset/labels/
 /runs/op3_multi_session_eval/**/dataset/images/
 /runs/op3_multi_session_eval/**/dataset/labels/
+/runs/op3_reviewed_session_eval/**/dataset_build/dataset/images/
+/runs/op3_reviewed_session_eval/**/dataset_build/dataset/labels/
+/runs/op3_pytorch/20261023_kd_hybrid_live_preview_post_tests_02.csv
+/runs/op3_pytorch/20261023_kd_hybrid_live_preview_post_tests_02_detections.csv
 # Generated ROS 2 build logs.
 /log/

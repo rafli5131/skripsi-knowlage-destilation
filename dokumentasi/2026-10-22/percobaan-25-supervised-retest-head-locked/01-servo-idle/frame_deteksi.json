@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T16:49:39.459864+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792687779,
+    "nanosec": 248121000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.8489740490913391,
+      "center_x_px": 110.10639190673828,
+      "center_y_px": 270.25728607177734,
+      "width_px": 62.86814880371094,
+      "height_px": 54.77980041503906
+    },
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.6184445023536682,
+      "center_x_px": 451.9862518310547,
+      "center_y_px": 310.36888122558594,
+      "width_px": 172.07608032226562,
+      "height_px": 220.53048706054688
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.38910484313964844,
+      "center_x_px": 303.0201644897461,
+      "center_y_px": 147.4730715751648,
+      "width_px": 99.04084777832031,
+      "height_px": 275.98604679107666
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-22/percobaan-25-supervised-retest-head-locked/01-servo-idle/frame_deteksi.png"
+}

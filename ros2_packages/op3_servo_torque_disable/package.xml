@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_servo_torque_disable</name>
+  <version>0.1.0</version>
+  <description>Safely disable OP3 servo torque before controller initialization.</description>
+  <maintainer email="BhreW@users.noreply.github.com">BhreW</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>dynamixel_sdk</exec_depend>
+  <exec_depend>op3_servo_torque_control</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

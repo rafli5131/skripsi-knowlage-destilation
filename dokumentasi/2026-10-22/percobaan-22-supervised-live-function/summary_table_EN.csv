@@ -1,0 +1,11 @@
+Metric,Result,Notes
+Model/checkpoint,Supervised seed 1337,YOLO11-tiny; hash in manifest
+Robot condition,unknown,Operator confirmed object placement; servo/motion state not verified
+Frames,738 total; 708 measured,30 warm-up; duration 60.228 s
+Effective FPS,11.75,"After warm-up; preview enabled, not a clean benchmark"
+End-to-end latency,45.21 ms median; p95 158.93 ms,Per-frame log
+Detector process CPU,1262.3% median; p95 1432.8%,Per-process psutil; multithreaded values may exceed 100%
+Process RSS,355.8 MiB median; peak 361.4 MiB,Detector process
+Frame errors,0,Runtime error field
+Prediction rows,2165,"Model predictions, not ground truth"
+Tracking,ball ID 1; switches 0; gawang ID 2; switches 0; robot ID 3; switches 0,IDs local to this run

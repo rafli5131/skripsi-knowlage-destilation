@@ -1,0 +1,78 @@
+{
+  "run_id": "20261023_kd_hybrid_walking_retest_01",
+  "condition": "walking",
+  "status": "stopped",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "first_frame_utc": "2026-10-22T18:06:41.329708+00:00",
+  "last_frame_utc": "2026-10-22T18:07:38.263101+00:00",
+  "frames": 671,
+  "capture_span_s": 56.996784,
+  "effective_fps": 11.755049197161721,
+  "frame_errors": 0,
+  "warmup_frames_excluded": 30,
+  "preview_enabled": true,
+  "logical_cpu_count": 16,
+  "performance": {
+    "preprocess_ms": {
+      "p50": 5.561880003369879,
+      "p95": 13.240860502264695
+    },
+    "inference_ms": {
+      "p50": 33.440371000324376,
+      "p95": 135.7880909999949
+    },
+    "postprocess_ms": {
+      "p50": 0.8609110009274445,
+      "p95": 1.0748159984359518
+    },
+    "end_to_end_ms": {
+      "p50": 60.03436299943132,
+      "p95": 168.25948400219204
+    },
+    "cpu_host_percent": {
+      "p50": 80.525,
+      "p95": 84.84375
+    },
+    "rss_mib": {
+      "p50": 363.72265625,
+      "p95": 367.8125
+    }
+  },
+  "class_outputs": {
+    "ball": {
+      "frames_with_output": 671,
+      "total_frames": 671,
+      "coverage_percent": 100.0,
+      "boxes": 671,
+      "median_confidence": 0.8377748131752014,
+      "track_id_counts": {
+        "2": 671
+      }
+    },
+    "gawang": {
+      "frames_with_output": 671,
+      "total_frames": 671,
+      "coverage_percent": 100.0,
+      "boxes": 671,
+      "median_confidence": 0.40320858359336853,
+      "track_id_counts": {
+        "3": 671
+      }
+    },
+    "robot": {
+      "frames_with_output": 671,
+      "total_frames": 671,
+      "coverage_percent": 100.0,
+      "boxes": 671,
+      "median_confidence": 0.8542836904525757,
+      "track_id_counts": {
+        "1": 671
+      }
+    }
+  },
+  "gait_window_start_utc": "2026-10-22T18:06:41.291139+00:00",
+  "gait_window_end_utc": "2026-10-22T18:07:38.296840+00:00",
+  "gait_window_duration_s": 57.005701,
+  "gait_start_ack_utc": "2026-10-22T18:06:39,291139447+00:00",
+  "gait_stop_sent_utc": "2026-10-22T18:07:39,296840382+00:00"
+}

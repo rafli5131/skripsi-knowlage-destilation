@@ -1,0 +1,91 @@
+{
+  "run_id": "20261022_supervised_retest_servo_idle_01",
+  "condition": "servo_idle",
+  "checkpoint": "supervised_seed1337",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "started_at_utc": "2026-10-22T16:23:50.999147+00:00",
+  "stopped_at_utc": "2026-10-22T16:24:53.418455+00:00",
+  "duration_measured_s": 60.00936711400209,
+  "warmup_frames": 30,
+  "measured_frames": 842,
+  "effective_fps_after_warmup": 14.054852999523723,
+  "frame_errors": 0,
+  "preview_enabled": true,
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracker": "botsort.yaml",
+  "torch_intra_threads": 4,
+  "torch_interop_threads": 2,
+  "logical_cpu_count": 16,
+  "latency_ms": {
+    "preprocess_ms": {
+      "median": 1.4920409994374495,
+      "p95": 11.627787499492113,
+      "mean": 3.4599621876687943
+    },
+    "inference_ms": {
+      "median": 28.394487997502438,
+      "p95": 130.6652695993762,
+      "mean": 37.29853481713376
+    },
+    "postprocess_ms": {
+      "median": 0.8271789993159473,
+      "p95": 0.9261011511625838,
+      "mean": 0.8248034548393236
+    },
+    "end_to_end_ms": {
+      "median": 49.027898499844014,
+      "p95": 157.24333240214028,
+      "mean": 58.47115987051702
+    }
+  },
+  "process_cpu_percent_one_logical_cpu": {
+    "median": 1232.25,
+    "p95": 1393.395,
+    "mean": 1252.0944180522565
+  },
+  "process_cpu_percent_normalized_host": {
+    "median": 77.015625,
+    "p95": 87.0871875,
+    "mean": 78.25590112826603
+  },
+  "process_rss_mib": {
+    "median": 354.685546875,
+    "p95": 358.68359375,
+    "mean": 352.152153540677
+  },
+  "detections_by_class": {
+    "ball": {
+      "frames_with_detection": 842,
+      "measured_frames": 842,
+      "coverage_percent": 100.0,
+      "box_count": 842,
+      "confidence_median": 0.8466200232505798,
+      "track_ids_observed": [
+        "1"
+      ]
+    },
+    "gawang": {
+      "frames_with_detection": 842,
+      "measured_frames": 842,
+      "coverage_percent": 100.0,
+      "box_count": 842,
+      "confidence_median": 0.3700515478849411,
+      "track_ids_observed": [
+        "3"
+      ]
+    },
+    "robot": {
+      "frames_with_detection": 842,
+      "measured_frames": 842,
+      "coverage_percent": 100.0,
+      "box_count": 842,
+      "confidence_median": 0.6434798240661621,
+      "track_ids_observed": [
+        "2"
+      ]
+    }
+  },
+  "interpretation": "Detection coverage and confidence are model outputs, not accuracy; no ground truth was collected."
+}

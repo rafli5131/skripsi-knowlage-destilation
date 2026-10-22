@@ -1,0 +1,135 @@
+{
+  "run_id": "20261023_kd_pure_idle_retest_01",
+  "status": "completed",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "started_local_wib": "2026-10-23T00:21:42.790148+07:00",
+  "stopped_local_wib": "2026-10-23T00:22:45.413750+07:00",
+  "measurement_duration_s_after_warmup": 60.26569191800081,
+  "warmup_frames": 30,
+  "processed_frames_total": 869,
+  "measured_frames": 839,
+  "frame_errors": 0,
+  "effective_fps_after_warmup": 13.942248213146163,
+  "latency_ms": {
+    "end_to_end_ms": {
+      "mean": 61.330549427858585,
+      "median_p50": 46.87439100234769,
+      "p95": 159.13604500019565,
+      "max": 171.91936399467522,
+      "min": 32.011868999688886
+    },
+    "preprocess_ms": {
+      "mean": 4.010944525691535,
+      "median_p50": 1.4368400006787851,
+      "p95": 11.760939497617073,
+      "max": 17.755044995283242,
+      "min": 0.7887479951023124
+    },
+    "inference_ms": {
+      "mean": 39.90539747925256,
+      "median_p50": 27.2831030015368,
+      "p95": 133.518505498796,
+      "max": 141.04313700227067,
+      "min": 18.913498999609146
+    },
+    "postprocess_ms": {
+      "mean": 0.8171357080153483,
+      "median_p50": 0.801410002168268,
+      "p95": 0.9346659979200922,
+      "max": 3.270510002039373,
+      "min": 0.414624999393709
+    }
+  },
+  "cpu_process_percent_one_logical_cpu": {
+    "mean": 1265.4439809296782,
+    "median_p50": 1264.2,
+    "p95": 1392.32,
+    "max": 1446.7,
+    "min": 475.1
+  },
+  "cpu_percent_total_logical_capacity": {
+    "logical_cpu_count": 16,
+    "mean": 79.09024880810489,
+    "median_p50": 79.0125,
+    "p95": 87.02,
+    "max": 90.41875,
+    "min": 29.69375
+  },
+  "process_rss_mib": {
+    "mean": 356.6553747020262,
+    "median_p50": 357.37890625,
+    "p95": 360.04296875,
+    "max": 361.5078125,
+    "min": 351.16015625
+  },
+  "host_cpu": "12th Gen Intel(R) Core(TM) i5-1240P",
+  "host_ram_total_mib": 7510.171875,
+  "model": "KD murni / kd_seed42",
+  "checkpoint": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "device": "cpu",
+  "precision": "FP32",
+  "torch": "2.4.1+cpu",
+  "ultralytics": "8.4.130",
+  "torch_num_threads": 4,
+  "torch_interop_threads": 2,
+  "camera_topic": "/thesis/image_raw",
+  "camera_resolution": "640x480",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "botsort.yaml",
+  "preview_enabled": true,
+  "servo_torque_state": "IDs 1–20 active in pre-test readback; no gait/position command issued during run",
+  "manager_state": "op3_manager unavailable because EEPROM indirect-address initialization failed with torque on; no manager workload in detector benchmark",
+  "detection_outputs": [
+    {
+      "class_name": "ball",
+      "frames_with_detection": 839,
+      "measured_frames": 839,
+      "frame_presence_pct": 100.0,
+      "detection_count": 839,
+      "median_confidence": 0.9078242182731628,
+      "mean_confidence": 0.9077500180209209,
+      "track_ids": [
+        "1"
+      ]
+    },
+    {
+      "class_name": "gawang",
+      "frames_with_detection": 839,
+      "measured_frames": 839,
+      "frame_presence_pct": 100.0,
+      "detection_count": 839,
+      "median_confidence": 0.6692402958869934,
+      "mean_confidence": 0.668542670052725,
+      "track_ids": [
+        "3"
+      ]
+    },
+    {
+      "class_name": "robot",
+      "frames_with_detection": 839,
+      "measured_frames": 839,
+      "frame_presence_pct": 100.0,
+      "detection_count": 839,
+      "median_confidence": 0.7496650815010071,
+      "mean_confidence": 0.7495764209061897,
+      "track_ids": [
+        "2"
+      ]
+    }
+  ],
+  "accuracy_metrics": null,
+  "limitations": [
+    "Class frame-presence and confidence summarize model outputs, not accuracy; no frame-aligned ground truth was available.",
+    "Compared with the earlier KD idle run, preview was enabled, PyTorch thread settings differed, and op3_manager was unavailable; do not treat as a controlled before/after comparison.",
+    "No continuous video file was recorded; screenshot and per-frame detection/runtime CSV logs are retained."
+  ],
+  "source_files": {
+    "metadata": "runs/op3_pytorch/20261023_kd_pure_idle_retest_01.json",
+    "frame_metrics": "runs/op3_pytorch/20261023_kd_pure_idle_retest_01.csv",
+    "detections": "runs/op3_pytorch/20261023_kd_pure_idle_retest_01_detections.csv"
+  }
+}

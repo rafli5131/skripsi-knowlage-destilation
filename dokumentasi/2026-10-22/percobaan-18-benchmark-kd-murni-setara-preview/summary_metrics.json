@@ -1,0 +1,215 @@
+{
+  "experiment": 18,
+  "title": "Matched pure KD comparison with preview enabled",
+  "model": "pure KD / kd_seed42",
+  "checkpoint": "models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "device": "CPU FP32",
+  "logical_cpu_count": 16,
+  "camera_topic": "/thesis/image_raw",
+  "camera_resolution": "640x480",
+  "model_input_size": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "BoT-SORT",
+  "warmup_frames": 30,
+  "measurement_duration_target_s": 60,
+  "torch_num_threads": 4,
+  "torch_interop_threads": 2,
+  "preview_enabled": true,
+  "conditions": {
+    "servo_idle": {
+      "run_id": "20261022_kd_pure_matched_idle_preview_01",
+      "condition": "servo_idle",
+      "started_at_utc": "2026-10-22T08:30:13.483915+00:00",
+      "stopped_at_utc": "2026-10-22T08:31:16.844271+00:00",
+      "measurement_duration_s": 60.00685534299964,
+      "effective_fps": 13.011274611853134,
+      "processed_frames_total": 810,
+      "measured_frames": 780,
+      "frame_errors": 0,
+      "torch_num_threads": 4,
+      "torch_interop_threads": 2,
+      "preview_enabled": true,
+      "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "metrics": {
+        "end_to_end_ms": {
+          "median": 49.74545300024147,
+          "p95_nearest_rank": 157.84861600013755,
+          "mean": 63.847651521796365,
+          "max": 170.62103499984005
+        },
+        "inference_ms": {
+          "median": 29.187986500119223,
+          "p95_nearest_rank": 131.7456370002219,
+          "mean": 42.40600573204854,
+          "max": 141.72501899975032
+        },
+        "preprocess_ms": {
+          "median": 1.4652094998837129,
+          "p95_nearest_rank": 11.577691999718809,
+          "mean": 4.303803248717486,
+          "max": 17.432752999866352
+        },
+        "postprocess_ms": {
+          "median": 0.7972370001425588,
+          "p95_nearest_rank": 1.0739880003711733,
+          "mean": 0.7584575487166708,
+          "max": 3.4213019998787786
+        },
+        "cpu_percent_of_16_logical_cpus": {
+          "median": 77.328125,
+          "p95_nearest_rank": 87.16875,
+          "mean": 77.93919070512821,
+          "max": 89.7375
+        },
+        "rss_mib": {
+          "median": 359.56640625,
+          "p95_nearest_rank": 360.859375,
+          "mean": 358.5178235176282,
+          "max": 363.18359375
+        }
+      },
+      "detection_outputs": {
+        "ball": {
+          "frames_with_output": 780,
+          "measured_frames": 780,
+          "boxes": 780,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "1"
+          ],
+          "median_confidence": 0.8538677096366882
+        },
+        "gawang": {
+          "frames_with_output": 780,
+          "measured_frames": 780,
+          "boxes": 780,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "3"
+          ],
+          "median_confidence": 0.43411895632743835
+        },
+        "robot": {
+          "frames_with_output": 771,
+          "measured_frames": 780,
+          "boxes": 771,
+          "coverage_percent": 98.84615384615384,
+          "track_ids": [
+            "2"
+          ],
+          "median_confidence": 0.4413294196128845
+        }
+      },
+      "artifacts": {
+        "per_frame_csv": "../../../runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.csv",
+        "detections_csv": "../../../runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01_detections.csv",
+        "metadata_json": "../../../runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.json"
+      }
+    },
+    "walking": {
+      "run_id": "20261022_kd_pure_matched_walking_preview_01",
+      "condition": "walking",
+      "started_at_utc": "2026-10-22T08:31:42.333632+00:00",
+      "stopped_at_utc": "2026-10-22T08:32:44.969698+00:00",
+      "measurement_duration_s": 60.15962198900024,
+      "effective_fps": 12.365190881135003,
+      "processed_frames_total": 773,
+      "measured_frames": 743,
+      "frame_errors": 0,
+      "torch_num_threads": 4,
+      "torch_interop_threads": 2,
+      "preview_enabled": true,
+      "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "metrics": {
+        "end_to_end_ms": {
+          "median": 55.08375399995202,
+          "p95_nearest_rank": 161.7887260003954,
+          "mean": 70.46565035936503,
+          "max": 173.03112100034923
+        },
+        "inference_ms": {
+          "median": 29.984686000261718,
+          "p95_nearest_rank": 132.4665150000328,
+          "mean": 44.84747290444177,
+          "max": 141.68270499976643
+        },
+        "preprocess_ms": {
+          "median": 2.5150730002678756,
+          "p95_nearest_rank": 12.473158999910083,
+          "mean": 4.999450524901893,
+          "max": 18.494371999622672
+        },
+        "postprocess_ms": {
+          "median": 0.7918050000625954,
+          "p95_nearest_rank": 1.1601789997257583,
+          "mean": 0.7622250376940871,
+          "max": 3.7470049996954913
+        },
+        "cpu_percent_of_16_logical_cpus": {
+          "median": 77.3875,
+          "p95_nearest_rank": 84.5875,
+          "mean": 77.07815444145356,
+          "max": 88.01875
+        },
+        "rss_mib": {
+          "median": 352.42578125,
+          "p95_nearest_rank": 362.18359375,
+          "mean": 354.6480221652086,
+          "max": 362.34375
+        }
+      },
+      "detection_outputs": {
+        "ball": {
+          "frames_with_output": 743,
+          "measured_frames": 743,
+          "boxes": 743,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "1"
+          ],
+          "median_confidence": 0.8995105028152466
+        },
+        "gawang": {
+          "frames_with_output": 743,
+          "measured_frames": 743,
+          "boxes": 743,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "3"
+          ],
+          "median_confidence": 0.44248828291893005
+        },
+        "robot": {
+          "frames_with_output": 606,
+          "measured_frames": 743,
+          "boxes": 606,
+          "coverage_percent": 81.56123822341857,
+          "track_ids": [
+            "2"
+          ],
+          "median_confidence": 0.5116059184074402
+        }
+      },
+      "artifacts": {
+        "per_frame_csv": "../../../runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01.csv",
+        "detections_csv": "../../../runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01_detections.csv",
+        "metadata_json": "../../../runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01.json"
+      }
+    }
+  },
+  "walking_minus_idle": {
+    "effective_fps_absolute": -0.6460837307181304,
+    "effective_fps_change_percent": -4.96556832433277,
+    "end_to_end_median_ms_absolute": 5.338300999710555,
+    "end_to_end_median_change_percent": 10.73123406813612,
+    "end_to_end_p95_ms_absolute": 3.940110000257846,
+    "end_to_end_p95_change_percent": 2.49613211702433
+  },
+  "limitations": [
+    "Condition labels are operator supplied; gait motion is not inferred from telemetry.",
+    "One 60-second run per condition; results are descriptive, not repeated-run statistical estimates.",
+    "Detection outputs and confidence are not accuracy metrics because these benchmark frames have no ground-truth labels."
+  ]
+}

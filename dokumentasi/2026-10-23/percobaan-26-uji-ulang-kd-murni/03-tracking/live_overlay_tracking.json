@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T17:50:48.888450+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792691448,
+    "nanosec": 672951000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.4944758117198944,
+      "center_x_px": 301.70960998535156,
+      "center_y_px": 191.3040313720703,
+      "width_px": 188.94607543945312,
+      "height_px": 201.87661743164062
+    },
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.6764922142028809,
+      "center_x_px": 101.15068244934082,
+      "center_y_px": 246.33087158203125,
+      "width_px": 163.61425399780273,
+      "height_px": 162.43603515625
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.9706478118896484,
+      "center_x_px": 456.6584167480469,
+      "center_y_px": 250.70504760742188,
+      "width_px": 42.137939453125,
+      "height_px": 42.3739013671875
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-23/percobaan-26-uji-ulang-kd-murni/03-tracking/live_overlay_tracking.png"
+}

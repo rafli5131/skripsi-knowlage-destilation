@@ -1,0 +1,4 @@
+Class,Frames with detection,Frame percentage,Boxes,Median confidence,Track IDs
+ball,675/675,100.00%,675,0.9199,1
+gawang,675/675,100.00%,675,0.6286,2
+robot,644/675,95.41%,644,0.7472,3

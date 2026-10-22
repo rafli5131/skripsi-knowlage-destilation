@@ -1,0 +1,4 @@
+kondisi,frame,fps_efektif,callback_p50_ms,callback_p95_ms,cpu_host_p50_percent,rss_p50_mib,error_frame
+idle,726,12.0888,54.544,164.699,80.241,363.121,0
+walking,671,11.7550,60.034,168.259,80.525,363.723,0
+tracking,382,12.6290,55.338,164.147,80.481,360.566,0

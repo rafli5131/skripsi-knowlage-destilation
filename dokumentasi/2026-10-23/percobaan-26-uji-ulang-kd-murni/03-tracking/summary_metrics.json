@@ -1,0 +1,82 @@
+{
+  "run_id": "20261023_kd_pure_tracking_moving_ball_01",
+  "condition": "unknown",
+  "condition_note": "operator moved the ball; robot gait had been stopped; physical state not independently verified for this run",
+  "model": "kd_seed42",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "analysis_start_utc": "2026-10-22T17:50:20.373318+00:00",
+  "analysis_end_utc": "2026-10-22T17:50:50.373318+00:00",
+  "analysis_start_wib": "2026-10-23 00:50:20 WIB",
+  "analysis_end_wib": "2026-10-23 00:50:50 WIB",
+  "analysis_duration_s": 29.836723,
+  "measured_frames": 357,
+  "effective_fps": 11.931670806945265,
+  "frame_errors": 0,
+  "end_to_end_ms_p50": 54.901404000702314,
+  "end_to_end_ms_p95": 164.35037520132028,
+  "inference_ms_p50": 30.593985997256823,
+  "inference_ms_p95": 133.93445699912263,
+  "process_cpu_percent_p50": 1264.7,
+  "process_cpu_percent_p95": 1374.3,
+  "process_cpu_16cpu_p50": 79.04375,
+  "process_rss_mib_p50": 356.20703125,
+  "capture_gap_ms_p95": 168.01225,
+  "ball_detection_frames": 353,
+  "ball_detection_percent": 98.8795518207283,
+  "ball_center_x_min_px": 289.5513229370117,
+  "ball_center_x_max_px": 594.6505432128906,
+  "ball_center_x_range_px": 305.0992202758789,
+  "ball_center_y_min_px": 249.3985366821289,
+  "ball_center_y_max_px": 443.59600830078125,
+  "ball_center_y_range_px": 194.19747161865234,
+  "ball_track_ids": [
+    "1",
+    "4",
+    "7"
+  ],
+  "ball_track_id_counts": {
+    "1": 137,
+    "4": 162,
+    "7": 54
+  },
+  "ball_track_id_switches_between_detections": 2,
+  "ball_median_confidence": 0.9148222208023071,
+  "classes": [
+    {
+      "class": "ball",
+      "frames": 353,
+      "percent": 98.8795518207283,
+      "boxes": 353,
+      "median_conf": 0.9148222208023071,
+      "track_ids": [
+        "1",
+        "4",
+        "7"
+      ]
+    },
+    {
+      "class": "gawang",
+      "frames": 357,
+      "percent": 100.0,
+      "boxes": 357,
+      "median_conf": 0.5918949842453003,
+      "track_ids": [
+        "3"
+      ]
+    },
+    {
+      "class": "robot",
+      "frames": 342,
+      "percent": 95.7983193277311,
+      "boxes": 342,
+      "median_conf": 0.6090956330299377,
+      "track_ids": [
+        "2"
+      ]
+    }
+  ],
+  "notes": [
+    "The raw run continued after the 30-second operator movement interval; reported tracking statistics are limited to the first 30 seconds beginning at the first measured frame.",
+    "Track IDs and detection coverage are descriptive observations, not tracking accuracy or detection accuracy. No ground truth was available."
+  ]
+}

@@ -1,0 +1,15 @@
+Metrik,Nilai,Satuan
+Durasi terukur,29.84,detik
+Frame kamera,357,frame
+FPS efektif,11.93,frame/detik
+Frame dengan bola,353/357,98.88%
+Rentang pusat bola sumbu X,305.1,piksel
+Rentang pusat bola sumbu Y,194.2,piksel
+Jumlah ID track bola,3,ID
+Peralihan ID di antara deteksi,2,kali
+Confidence median bola,0.915,skor
+Latensi end-to-end P50,54.90,ms
+Latensi end-to-end P95,164.35,ms
+CPU proses median,1264.7,% satu CPU logis
+RSS proses median,356.2,MiB
+Error frame,0,frame

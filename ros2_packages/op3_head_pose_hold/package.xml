@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_head_pose_hold</name>
+  <version>0.1.0</version>
+  <description>Hold OP3 head servos at their current measured positions before enabling torque.</description>
+  <maintainer email="BhreW@users.noreply.github.com">BhreW</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>op3_servo_torque_control</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

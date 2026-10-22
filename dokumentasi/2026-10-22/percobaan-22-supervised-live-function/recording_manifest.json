@@ -1,0 +1,55 @@
+{
+  "topic": "/vision/debug_image",
+  "description": "annotated live detection with tracker overlays",
+  "video": "live_detection_tracking.mp4",
+  "codec": "H.264 (libx264)",
+  "width": 640,
+  "height": 480,
+  "frames_written": 668,
+  "duration_s_from_first_frame": 62.629,
+  "first_image_stamp": {
+    "sec": 1792680752,
+    "nanosec": 895905000
+  },
+  "last_image_stamp": {
+    "sec": 1792680815,
+    "nanosec": 674143000
+  },
+  "screenshots": [
+    {
+      "file": "ss_deteksi_awal.png",
+      "elapsed_s": 2.038,
+      "stamp": {
+        "sec": 1792680755,
+        "nanosec": 67970000
+      }
+    },
+    {
+      "file": "ss_deteksi_tengah.png",
+      "elapsed_s": 31.056,
+      "stamp": {
+        "sec": 1792680783,
+        "nanosec": 969014000
+      }
+    },
+    {
+      "file": "ss_deteksi_akhir.png",
+      "elapsed_s": 58.038,
+      "stamp": {
+        "sec": 1792680811,
+        "nanosec": 65970000
+      }
+    }
+  ],
+  "recorded_at_utc": "2026-10-22T14:54:00.345256+00:00",
+  "note": "Video/screenshots come from annotated /vision/debug_image, not raw footage. The recorder was an independent BEST_EFFORT depth-1 subscriber; it wrote fewer frames than the detector processed. Use detector CSV as the authoritative per-frame source. Video is illustrative, not a one-to-one archive of detector frames.",
+  "source_capture_video": "live_detection_tracking_capture_12fps.mp4",
+  "capture_encoded_fps": 12.0,
+  "playback_adjustment": "Frame timestamps were stretched proportionally so the fixed-rate MP4 duration matches measured ROS image arrival span; no frames were added or removed.",
+  "final_video_duration_s": 62.583333,
+  "final_video_avg_frame_rate": "8016/751",
+  "detector_processed_frames": 738,
+  "video_frames": 668,
+  "video_frames_as_fraction_of_detector_frames": 0.9051,
+  "source_capture_codec": "MPEG-4 Part 2 (mp4v)"
+}

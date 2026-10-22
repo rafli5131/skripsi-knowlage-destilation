@@ -1,2 +1,2 @@
-status
-[BELUM DIUKUR]
+status,measurement,value,unit,run_id_or_source,limitation
+NOT_MEASURED,fixed_frame_dataset_on_OP3_latency,,ms/frame,No fixed-frame OP3 run artifact found; live frame logs summarized in T18/T19,Live camera latency is variable-stream measurement; cannot substitute for repeated inference on an identical fixed frame set.

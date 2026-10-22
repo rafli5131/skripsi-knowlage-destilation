@@ -1,0 +1,4 @@
+Kelas,Frame dengan deteksi,Total frame ukur,Cakupan (%),Median confidence,ID tracker,Pergantian ID antar-frame terdeteksi
+Bola,314,361,87.0,0.844,12;3;5;8,3
+Gawang,358,361,99.2,0.411,1,0
+Robot,332,361,92.0,0.361,2,0

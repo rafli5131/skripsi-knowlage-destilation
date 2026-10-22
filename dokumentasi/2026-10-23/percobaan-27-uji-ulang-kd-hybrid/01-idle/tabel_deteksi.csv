@@ -1,0 +1,4 @@
+kelas,frame_dengan_keluaran,total_frame,persentase,jumlah_kotak,confidence_median,id_track
+ball,726,726,100.0,726,0.833,2
+gawang,726,726,100.0,726,0.337,3
+robot,726,726,100.0,726,0.858,1

@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T18:06:59.073940+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792692418,
+    "nanosec": 939464000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.8599933981895447,
+      "center_x_px": 109.65848541259766,
+      "center_y_px": 250.6667709350586,
+      "width_px": 156.0293426513672,
+      "height_px": 149.5707550048828
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.8337143063545227,
+      "center_x_px": 488.0770721435547,
+      "center_y_px": 309.5921325683594,
+      "width_px": 52.066680908203125,
+      "height_px": 51.9813232421875
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.4650097191333771,
+      "center_x_px": 312.3793411254883,
+      "center_y_px": 191.23420333862305,
+      "width_px": 181.92649841308594,
+      "height_px": 198.0505142211914
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/02-berjalan/live_overlay_walking.png"
+}

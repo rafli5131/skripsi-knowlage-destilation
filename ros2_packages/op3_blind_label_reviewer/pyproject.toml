@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "op3-blind-label-reviewer"
+version = "0.1.0"
+description = "Low-lag SSH-X reviewer for manual OP3 labels without model drafts"
+requires-python = ">=3.10"
+dependencies = ["opencv-python>=4.8", "numpy>=1.24"]
+
+[tool.setuptools]
+packages = ["op3_blind_label_reviewer"]

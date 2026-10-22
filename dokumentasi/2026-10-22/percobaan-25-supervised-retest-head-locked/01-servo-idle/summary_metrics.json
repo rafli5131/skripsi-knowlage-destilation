@@ -1,0 +1,126 @@
+{
+  "run_id": "20261022_supervised_retest_head_held_idle_01",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "status": "stopped",
+  "started_at_utc": "2026-10-22T16:49:05.566493+00:00",
+  "stopped_at_utc": "2026-10-22T16:50:08.104274+00:00",
+  "started_at_wib": "2026-10-22T23:49:05.566493+07:00",
+  "stopped_at_wib": "2026-10-22T23:50:08.104274+07:00",
+  "measurement_duration_s": 60.02797549600291,
+  "processed_frames_including_warmup": 754,
+  "measured_frames_after_warmup": 724,
+  "warmup_frames": 30,
+  "effective_fps_after_warmup": 12.055348958332813,
+  "frame_errors": 0,
+  "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "registered_model": "supervised_seed1337",
+  "runtime": {
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130",
+    "opencv": "4.11.0",
+    "device": "cpu",
+    "threads": 4,
+    "interop_threads": 2
+  },
+  "camera": {
+    "topic": "/thesis/image_raw",
+    "width": 640,
+    "height": 480,
+    "preview_enabled": true
+  },
+  "parameters": {
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "tracker": "botsort.yaml"
+  },
+  "runtime_metrics": {
+    "Pra-pemrosesan": {
+      "median": 3.64570400051889,
+      "p95": 12.913102948368762,
+      "unit": "ms/frame",
+      "source_column": "preprocess_ms"
+    },
+    "Inferensi": {
+      "median": 30.81600300174614,
+      "p95": 135.23177664828836,
+      "unit": "ms/frame",
+      "source_column": "inference_ms"
+    },
+    "Pascapemrosesan": {
+      "median": 0.7989274999999907,
+      "p95": 1.0160203455598096,
+      "unit": "ms/frame",
+      "source_column": "postprocess_ms"
+    },
+    "Callback end-to-end": {
+      "median": 52.12812350146123,
+      "p95": 163.94804714909696,
+      "unit": "ms/frame",
+      "source_column": "end_to_end_ms"
+    },
+    "CPU proses": {
+      "median": 1253.5,
+      "p95": 1388.1100000000001,
+      "unit": "% satu CPU logis",
+      "source_column": "process_cpu_percent"
+    },
+    "CPU host (16 CPU logis)": {
+      "median": 78.34375,
+      "p95": 86.75687500000001,
+      "unit": "% kapasitas host",
+      "source_column": "process_cpu_percent"
+    },
+    "RAM RSS": {
+      "median": 362.986328125,
+      "p95": 365.69140625,
+      "unit": "MiB",
+      "source_column": "process_rss_bytes"
+    }
+  },
+  "classes": {
+    "ball": {
+      "detection_rows": 724,
+      "frames_with_detection": 724,
+      "coverage_percent": 100.0,
+      "median_confidence": 0.847428947687149,
+      "track_ids": [
+        "1"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 0.569427490234375,
+      "center_y_span_px": 0.869049072265625
+    },
+    "gawang": {
+      "detection_rows": 724,
+      "frames_with_detection": 724,
+      "coverage_percent": 100.0,
+      "median_confidence": 0.3648824244737625,
+      "track_ids": [
+        "3"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 1.4283905029296875,
+      "center_y_span_px": 1.1193304061889648
+    },
+    "robot": {
+      "detection_rows": 724,
+      "frames_with_detection": 724,
+      "coverage_percent": 100.0,
+      "median_confidence": 0.6419951319694519,
+      "track_ids": [
+        "2"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 0.7981414794921875,
+      "center_y_span_px": 1.9568710327148438
+    }
+  },
+  "ground_truth_available": false,
+  "accuracy_metrics_measured": false,
+  "raw_csv": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_idle_01.csv",
+  "detection_csv": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_idle_01_detections.csv",
+  "metadata_json": "../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_idle_01.json"
+}

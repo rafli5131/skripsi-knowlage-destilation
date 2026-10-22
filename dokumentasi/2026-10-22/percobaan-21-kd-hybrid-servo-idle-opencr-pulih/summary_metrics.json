@@ -1,0 +1,66 @@
+{
+  "run_id": "20261022_kd_hybrid_servo_idle_after_opencr_recovery_01",
+  "date": "2026-10-22",
+  "model": "KD Hybrid full (hybrid_full_seed1337)",
+  "checkpoint": "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "condition": "servo_idle",
+  "condition_source": "operator request; verified OpenCR connection, joint-state telemetry reported zero velocity for 20 joints during pre/post checks",
+  "opencr": "responding; joint states and IMU published; manager initialized device torque; no gait or init-pose command issued",
+  "measurement_duration_s": 60.08250653599953,
+  "measured_frames": 708,
+  "frame_errors": 0,
+  "effective_fps": 11.795076708288718,
+  "callback_ms": {
+    "median": 53.21936599966648,
+    "p95": 159.87370799939526,
+    "mean": 70.52242077261043
+  },
+  "inference_ms": {
+    "median": 31.07066649999979,
+    "p95": 130.6422299994665,
+    "mean": 47.45087224716505
+  },
+  "cpu_raw_percent": {
+    "median": 1233.9,
+    "p95": 1376.3,
+    "mean": 1232.7063559322035
+  },
+  "cpu_percent_of_logical_capacity": {
+    "median": 77.11875,
+    "p95": 86.01875,
+    "mean": 77.04414724576272
+  },
+  "logical_cpu_count": 16,
+  "rss_mib": {
+    "median": 357.255859375,
+    "p95": 361.65234375,
+    "mean": 355.6194937323446
+  },
+  "detections_by_class_frames": {
+    "ball": 708,
+    "gawang": 708,
+    "robot": 708
+  },
+  "detection_confidence_median_by_class": {
+    "ball": 0.8421748876571655,
+    "gawang": 0.4094460755586624,
+    "robot": 0.533094972372055
+  },
+  "detection_metric_note": "Model output frequency and confidence only; no independently verified ground truth was used, so these are not accuracy, precision, or recall.",
+  "preview_enabled": true,
+  "device": "CPU FP32",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "BoT-SORT",
+  "threads": {
+    "intra_op": 4,
+    "inter_op": 2
+  },
+  "artifacts": {
+    "performance_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.csv",
+    "detections_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01_detections.csv",
+    "raw_metadata_json": "../../../runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.json"
+  }
+}

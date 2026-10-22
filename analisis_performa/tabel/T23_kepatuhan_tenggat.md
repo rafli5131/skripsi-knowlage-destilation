@@ -1,18 +1,18 @@
-# T23. kepatuhan tenggat
+# T23. kepatuhan tenggat pada sesi live
 
-Status: Sebagian; proporsi sampel live tersedia, benchmark frame tetap dan end-to-end sesi baru belum tersedia.
+Proporsi dihitung ulang dari frame ukur dalam CSV. Batas 33,3 ms dan 66,7 ms masing-masing setara tenggat nominal 30 FPS dan 15 FPS per frame; ini metrik latensi per callback, bukan bukti bahwa stream memenuhi laju tersebut secara konsisten.
 
-| run_id | condition | latency_metric | n_frames [frame] | frames_le_33_3_ms [percent] | frames_le_66_7_ms [percent] | source |
-| --- | --- | --- | --- | --- | --- | --- |
-| 20261019T080757Z | unknown | stage_total | 724 | 99,45 | 100 | runs/op3_pytorch/20261019T080757Z.csv |
-| 20261019T080757Z | unknown | callback_end_to_end | 724 | 99,31 | 99,86 | runs/op3_pytorch/20261019T080757Z.csv |
-| 20261019T083428Z | unknown | stage_total | 512 | 98,05 | 100 | runs/op3_pytorch/20261019T083428Z.csv |
-| 20261019T083428Z | unknown | callback_end_to_end | 512 | 97,85 | 99,8 | runs/op3_pytorch/20261019T083428Z.csv |
-| 20261019T084434Z | unknown | stage_total | 887 | 98,31 | 100 | runs/op3_pytorch/20261019T084434Z.csv |
-| 20261019T084434Z | unknown | callback_end_to_end | 887 | 98,08 | 99,89 | runs/op3_pytorch/20261019T084434Z.csv |
-| 20261019T123737Z_023704 | servo_idle | stage_total | 1501 | 65,62 | 100 | runs/op3_idle_trial/20261019T123737Z_023704/frames.csv |
-| 20261019T123737Z_023704 | servo_idle | worker_processing | 1501 | 9,99 | 99,93 | runs/op3_idle_trial/20261019T123737Z_023704/frames.csv |
+| Run | Kondisi | Ukuran | n | ≤33,3 ms | ≤66,7 ms |
+|---|---|---|---:|---:|---:|
+| 20261022_kd_pure_matched_idle_preview_01 | servo_idle | stage_total | 780 | 53.46% | 83.97% |
+| 20261022_kd_pure_matched_idle_preview_01 | servo_idle | callback_end_to_end | 780 | 0.00% | 80.64% |
+| 20261022_kd_pure_matched_walking_preview_01 | walking | stage_total | 743 | 46.03% | 81.97% |
+| 20261022_kd_pure_matched_walking_preview_01 | walking | callback_end_to_end | 743 | 0.00% | 75.37% |
+| 20261022_kd_hybrid_idle_final_01 | servo_idle | stage_total | 744 | 49.60% | 80.24% |
+| 20261022_kd_hybrid_idle_final_01 | servo_idle | callback_end_to_end | 744 | 0.40% | 76.21% |
+| 20261022_kd_hybrid_walking_final_01 | walking | stage_total | 734 | 38.56% | 80.25% |
+| 20261022_kd_hybrid_walking_final_01 | walking | callback_end_to_end | 734 | 0.00% | 72.34% |
+| 20261022_kd_hybrid_servo_idle_after_opencr_recovery_01 | servo_idle | stage_total | 708 | 39.41% | 78.11% |
+| 20261022_kd_hybrid_servo_idle_after_opencr_recovery_01 | servo_idle | callback_end_to_end | 708 | 0.00% | 72.32% |
 
-Sumber: runs/op3_pytorch/*.csv; runs/op3_idle_trial/20261019T123737Z_023704/frames.csv
-
-Stage_total adalah jumlah preprocess, inference, dan postprocess per frame. Worker_processing mulai saat worker mengambil frame, sehingga tidak setara callback_end_to_end dan tidak mencakup antrean/pengiriman tampilan. Proporsi ini deskriptif untuk sesi live, bukan benchmark frame tetap.
+Semua sesi historis dan hasil hitung lengkap ada di [CSV](T23_kepatuhan_tenggat.csv). `stage_total` menjumlah preprocess, inference, postprocess; `callback_end_to_end` adalah ukuran callback penuh. Benchmark fixed-frame belum ada.

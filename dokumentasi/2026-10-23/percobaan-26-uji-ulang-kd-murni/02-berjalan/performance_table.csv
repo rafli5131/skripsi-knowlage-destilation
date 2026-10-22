@@ -1,0 +1,16 @@
+Metric,Value,Unit
+Effective throughput (FPS),11.8385,frame/s
+Preprocess latency P50,4.9826,ms
+Preprocess latency P95,12.5322,ms
+Inference latency P50,32.6107,ms
+Inference latency P95,135.0712,ms
+Postprocess latency P50,0.8481,ms
+Postprocess latency P95,1.0617,ms
+End-to-end latency P50,59.0518,ms
+End-to-end latency P95,167.2425,ms
+Process CPU P50,1278.8000,% of one logical CPU
+Process CPU P95,1357.5000,% of one logical CPU
+Process RSS P50,358.4727,MiB
+Process RSS P95,361.7969,MiB
+Frame processing errors,0.0000,frame
+Measured frames,675.0000,frame

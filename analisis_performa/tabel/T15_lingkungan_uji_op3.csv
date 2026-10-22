@@ -1,8 +1,8 @@
 field,value,status,source
 cpu_model,12th Gen Intel Core i5-1240P,catatan operator,memory/2026-10-19.md
-physical_cores,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
-logical_cpu_threads,[BELUM DIUKUR],tidak direkam; CPU tidak dinormalisasi,[BELUM DIUKUR]
-system_ram_capacity,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+physical_cores,12,snapshot NUC 2026-10-22,hostname humanoid-NUC12WSHi5; psutil.cpu_count(logical=False)
+logical_cpu_threads,16,snapshot NUC 2026-10-22; run JSON juga mencatat 16 logical CPU,hostname humanoid-NUC12WSHi5; psutil.cpu_count(logical=True); runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.json
+system_ram_capacity,7874981888 bytes (7.33 GiB),snapshot NUC 2026-10-22,hostname humanoid-NUC12WSHi5; psutil.virtual_memory().total
 architecture,x86_64,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
 os,Ubuntu 24.04.5 LTS,catatan operator,memory/2026-10-19.md
 kernel,7.0.0-34-generic,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
@@ -11,8 +11,8 @@ pytorch,2.4.1+cpu,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.j
 ultralytics,8.4.130,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
 opencv,4.11.0,tercatat,runs/op3_idle_trial/20261019T123737Z_023704/summary.json
 ros_2,Jazzy,catatan operator,memory/2026-10-19.md
-governor,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
-power_mode,[BELUM DIUKUR],tidak direkam,[BELUM DIUKUR]
+governor,powersave,snapshot NUC 2026-10-22,/sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+power_mode,intel_pstate active; no_turbo=0 (turbo allowed),snapshot NUC 2026-10-22,/sys/devices/system/cpu/intel_pstate/status; /sys/devices/system/cpu/intel_pstate/no_turbo
 camera,Logitech C920,catatan sesi,dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md
 resolution_px,640x480,tercatat,runs/op3_pytorch/20261019T080757Z.csv
 capture_pixel_format,YUYV; ROS encoding rgb8,catatan sesi,analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md

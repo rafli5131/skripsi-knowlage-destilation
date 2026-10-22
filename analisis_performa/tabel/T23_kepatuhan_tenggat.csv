@@ -7,3 +7,13 @@ run_id,condition,latency_metric,n_frames [frame],frames_le_33_3_ms [percent],fra
 20261019T084434Z,unknown,callback_end_to_end,887,98.08,99.89,runs/op3_pytorch/20261019T084434Z.csv
 20261019T123737Z_023704,servo_idle,stage_total,1501,65.62,100,runs/op3_idle_trial/20261019T123737Z_023704/frames.csv
 20261019T123737Z_023704,servo_idle,worker_processing,1501,9.99,99.93,runs/op3_idle_trial/20261019T123737Z_023704/frames.csv
+20261022_kd_pure_matched_idle_preview_01,servo_idle,stage_total,780,53.46,83.97,runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.csv; excludes 30 warm-up frames
+20261022_kd_pure_matched_idle_preview_01,servo_idle,callback_end_to_end,780,0.00,80.64,runs/op3_pytorch/20261022_kd_pure_matched_idle_preview_01.csv; excludes 30 warm-up frames
+20261022_kd_pure_matched_walking_preview_01,walking,stage_total,743,46.03,81.97,runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01.csv; excludes 30 warm-up frames
+20261022_kd_pure_matched_walking_preview_01,walking,callback_end_to_end,743,0.00,75.37,runs/op3_pytorch/20261022_kd_pure_matched_walking_preview_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_idle_final_01,servo_idle,stage_total,744,49.60,80.24,runs/op3_pytorch/20261022_kd_hybrid_idle_final_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_idle_final_01,servo_idle,callback_end_to_end,744,0.40,76.21,runs/op3_pytorch/20261022_kd_hybrid_idle_final_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_walking_final_01,walking,stage_total,734,38.56,80.25,runs/op3_pytorch/20261022_kd_hybrid_walking_final_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_walking_final_01,walking,callback_end_to_end,734,0.00,72.34,runs/op3_pytorch/20261022_kd_hybrid_walking_final_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_servo_idle_after_opencr_recovery_01,servo_idle,stage_total,708,39.41,78.11,runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.csv; excludes 30 warm-up frames
+20261022_kd_hybrid_servo_idle_after_opencr_recovery_01,servo_idle,callback_end_to_end,708,0.00,72.32,runs/op3_pytorch/20261022_kd_hybrid_servo_idle_after_opencr_recovery_01.csv; excludes 30 warm-up frames

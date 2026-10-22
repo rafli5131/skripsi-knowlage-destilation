@@ -1,0 +1,95 @@
+{
+  "experiment": 17,
+  "run_id": "20261022_kd_pure_walking_01",
+  "condition": "walking",
+  "condition_source": "operator requested walking test; gait start/stop commands sent; detector metadata condition is operator supplied, not inferred from motion telemetry",
+  "model": "pure KD / kd_seed42",
+  "checkpoint": "models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "device": "CPU FP32",
+  "logical_cpu_count": 16,
+  "torch_num_threads": 4,
+  "torch_interop_threads": 2,
+  "camera_topic": "/thesis/image_raw",
+  "input_size": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "BoT-SORT",
+  "preview_enabled": true,
+  "warmup_frames": 30,
+  "measurement_duration_s": 60.12072233900017,
+  "total_processed_frames": 791,
+  "measured_frames": 761,
+  "frame_errors": 0,
+  "effective_fps": 12.658403893525168,
+  "metrics": {
+    "preprocess_ms": {
+      "median": 1.563477000217972,
+      "p95_nearest_rank": 12.44740099991759,
+      "mean": 4.451774868594694,
+      "max": 26.56256399995982
+    },
+    "inference_ms": {
+      "median": 30.48323800021535,
+      "p95_nearest_rank": 131.16933599985714,
+      "mean": 42.44876832457576,
+      "max": 146.23653500029832
+    },
+    "postprocess_ms": {
+      "median": 0.7986160003383702,
+      "p95_nearest_rank": 1.2364829999569338,
+      "mean": 0.7835713745150749,
+      "max": 6.753635999757535
+    },
+    "end_to_end_ms": {
+      "median": 54.67010400025174,
+      "p95_nearest_rank": 159.9671130002207,
+      "mean": 67.8378286189267,
+      "max": 210.62545399990995
+    },
+    "cpu_percent_of_logical_capacity": {
+      "median": 77.6625,
+      "p95_nearest_rank": 85.10625,
+      "mean": 77.27268396846254,
+      "max": 90.03125
+    },
+    "rss_mib": {
+      "median": 357.58203125,
+      "p95_nearest_rank": 360.55859375,
+      "mean": 356.034088575887,
+      "max": 361.890625
+    }
+  },
+  "detections": {
+    "ball": {
+      "frames_with_detection": 761,
+      "boxes": 761,
+      "track_ids": [
+        "1"
+      ],
+      "median_confidence": 0.9083854556083679
+    },
+    "gawang": {
+      "frames_with_detection": 761,
+      "boxes": 761,
+      "track_ids": [
+        "3"
+      ],
+      "median_confidence": 0.4670844078063965
+    },
+    "robot": {
+      "frames_with_detection": 711,
+      "boxes": 711,
+      "track_ids": [
+        "2"
+      ],
+      "median_confidence": 0.5488548874855042
+    }
+  },
+  "comparison_caveat": "The servo-idle reference used 12 intra-op/inter-op threads and preview disabled; this run used 4 intra-op, 2 inter-op threads and preview enabled. FPS/latency differences are not an isolated measurement of gait load.",
+  "artifacts": {
+    "per_frame_csv": "../../../runs/op3_pytorch/20261022_kd_pure_walking_01.csv",
+    "detections_csv": "../../../runs/op3_pytorch/20261022_kd_pure_walking_01_detections.csv",
+    "metadata_json": "../../../runs/op3_pytorch/20261022_kd_pure_walking_01.json"
+  }
+}

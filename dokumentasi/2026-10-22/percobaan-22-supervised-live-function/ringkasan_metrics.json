@@ -1,0 +1,71 @@
+{
+  "run_id": "20261022_external_supervised_function_unknown_02",
+  "model": "supervised_seed1337",
+  "condition": "unknown",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "total_frames": 738,
+  "warmup_frames": 30,
+  "measured_frames": 708,
+  "measured_duration_s": 60.22819989600248,
+  "effective_fps": 11.75002534066639,
+  "latency_ms": {
+    "median": 45.20555700037221,
+    "p95": 158.92769970105292,
+    "max": 169.89326199836796
+  },
+  "process_cpu_percent": {
+    "median": 1262.3,
+    "p95": 1432.76
+  },
+  "process_rss_mib": {
+    "median": 355.771484375,
+    "peak": 361.40625
+  },
+  "frame_errors": 0,
+  "detections": 2165,
+  "classes": {
+    "ball": {
+      "id_name": "Bola",
+      "color": "#2563eb",
+      "count": 738,
+      "frames": 738,
+      "coverage": 100.0,
+      "ids": [
+        "1"
+      ],
+      "switches": 0,
+      "conf_mean": 0.8622492269933385,
+      "conf_min": 0.8566346764564514,
+      "conf_max": 0.8674452304840088
+    },
+    "gawang": {
+      "id_name": "Gawang",
+      "color": "#0891b2",
+      "count": 738,
+      "frames": 738,
+      "coverage": 100.0,
+      "ids": [
+        "2"
+      ],
+      "switches": 0,
+      "conf_mean": 0.35309671087639766,
+      "conf_min": 0.3316352069377899,
+      "conf_max": 0.37389835715293884
+    },
+    "robot": {
+      "id_name": "Robot",
+      "color": "#16a34a",
+      "count": 689,
+      "frames": 689,
+      "coverage": 93.36043360433604,
+      "ids": [
+        "3"
+      ],
+      "switches": 0,
+      "conf_mean": 0.2873025812068076,
+      "conf_min": 0.2500329911708832,
+      "conf_max": 0.3476578891277313
+    }
+  },
+  "scope": "Exploratory function check only; model predictions and tracker IDs are not accuracy metrics."
+}

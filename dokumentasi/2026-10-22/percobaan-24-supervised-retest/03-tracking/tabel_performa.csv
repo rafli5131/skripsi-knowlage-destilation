@@ -1,0 +1,14 @@
+metric,median,p95,unit
+preprocess_ms,1.3791,11.4574,ms/frame
+inference_ms,27.0389,54.6466,ms/frame
+postprocess_ms,0.7891,0.8397,ms/frame
+callback_end_to_end_ms,45.8998,82.7323,ms/frame
+camera_age_ms,33.1099,62.0160,ms
+process_cpu_percent_one_logical_cpu,1280.9,1404.0,percent
+process_cpu_percent_host_16_logical_cpu,80.0563,87.75,percent
+process_rss_mib,355.5469,359.0078,MiB
+effective_fps_after_warmup,15.6831,,frame/s
+processed_fps_including_warmup,15.5129,,frame/s
+processed_frames,501,,frame
+measurement_frames_after_warmup,471,,frame
+frame_errors,0,,frame

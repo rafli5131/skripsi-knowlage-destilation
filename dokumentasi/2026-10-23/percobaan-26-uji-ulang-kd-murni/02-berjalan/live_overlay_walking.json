@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T17:46:42.729589+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792691202,
+    "nanosec": 604488000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.9067355990409851,
+      "center_x_px": 458.2388458251953,
+      "center_y_px": 329.4937438964844,
+      "width_px": 59.858245849609375,
+      "height_px": 59.69683837890625
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.6244956851005554,
+      "center_x_px": 300.99562072753906,
+      "center_y_px": 195.62931442260742,
+      "width_px": 192.44888305664062,
+      "height_px": 190.73465728759766
+    },
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.45273062586784363,
+      "center_x_px": 100.29485130310059,
+      "center_y_px": 245.2566909790039,
+      "width_px": 162.60499954223633,
+      "height_px": 163.47410583496094
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-23/percobaan-26-uji-ulang-kd-murni/02-berjalan/live_overlay_walking.png"
+}

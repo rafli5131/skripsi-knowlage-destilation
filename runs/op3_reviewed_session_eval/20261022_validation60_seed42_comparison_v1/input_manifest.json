@@ -1,0 +1,539 @@
+{
+  "sessions": {
+    "20261022_independent_validation_02": {
+      "role": "primary",
+      "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02",
+      "image_count": 60,
+      "review_log_sha256": "8a9d02d3efce23469a4f51a9da92ca3a396456c3febb4354a3fd390563901f74"
+    }
+  },
+  "frames": {
+    "20261022_independent_validation_02__frame_000001": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000001.jpg",
+      "image_sha256": "dfdbe0c72f7a77a8a2241d0d16b19f6b185d342ee74ce79e5c8209a27809b0d4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000001.txt",
+      "label_sha256": "22439736239084f30d76fa4cb0ff0a59fa0ff45fe7004bd0a8181e8e7a19ab9e",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000002": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000002.jpg",
+      "image_sha256": "3839081dbbcf81b5f01e722bbcb7b5ae7c09a67a828f2aa321d270749d656cb7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000002.txt",
+      "label_sha256": "c6e71817f2e8d3bd74194d4c56a2ffe0abf7b47728a61e5fe37d1250dac776ea",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000003": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000003.jpg",
+      "image_sha256": "7f16286c5e4980ab5784e0674b99f1804483cccf35d0fb739b236aee42fa20f4",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000003.txt",
+      "label_sha256": "7de31bf2332caf519e428c5c90c7f631414c5ed7df9605d922066aefcce097a2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000004": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000004.jpg",
+      "image_sha256": "eb2b83b641c24b0e931fb9c62a315336b95b7faf816c37a48080b5a89e3127c2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000004.txt",
+      "label_sha256": "fc14d8c51d7d13d6371a4c36af09d22968c5cc2dc60fc11f1368a5ce17cd8faa",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000005": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000005.jpg",
+      "image_sha256": "416f57583f61ad1d31e80c93b19e6a73fb83923e6c9d463db465f22bcc465235",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000005.txt",
+      "label_sha256": "33db45df84b3be6e807f523edc8b7e4fb933fb7a2bf8d80d59ec487d79200469",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000006": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000006.jpg",
+      "image_sha256": "83ac10eded6cbf4bc8aaeb94d503f29491de1958523daf1e1e0abfd550c28d8d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000006.txt",
+      "label_sha256": "4eeafd69ddc5e9c6d341eae74790ea50d2c4f72f25f57c9038f503e6555bd3eb",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000007": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000007.jpg",
+      "image_sha256": "2c4a77f7965b07f0da0213fdd813a41eb6989636f3403e0379ed02c7f1798676",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000007.txt",
+      "label_sha256": "8f1025138e6567d1486eb76b468fbb4d36f3cb98fb124529aa8fc9f13305ac6e",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000008": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000008.jpg",
+      "image_sha256": "d06897bc2970d7a968bae5a5f2353f39c098837dc42a7f484dc0c390c7618d42",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000008.txt",
+      "label_sha256": "d0f71989eb252e1bec51e64aa756e59b4dcc8c03b1d4405f88c4c4a762d115ec",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000009": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000009.jpg",
+      "image_sha256": "a5fb43bbefa2e9a8631e8705bcaba341b4a40a9207961d3eca4bab51e0170c0b",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000009.txt",
+      "label_sha256": "3fdae9c424b4e6f554460fab003de9b8f18bf95113ae7c43a1875630d833a195",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000010": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000010.jpg",
+      "image_sha256": "b06484a0fb76556ae8af693b01e2b8a037915c9776ac40a48e7a2539d9c0e421",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000010.txt",
+      "label_sha256": "6e34cac399ba0f177a1716fa073a97212cf99e6fcbc8318d152a18b3349b78a1",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000011": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000011.jpg",
+      "image_sha256": "194dec431d78d45022957f2604e854f0543c44560e5db458f2fda3a0fb6a0278",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000011.txt",
+      "label_sha256": "3e4e68460ff193a57ac018f6e6dd0dc6db614590978a4ef93c5517bfb2087233",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000012": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000012.jpg",
+      "image_sha256": "336f2b821cbf914da61ea34db41161f7e8de94e283f3bb27117f209e6c4694f7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000012.txt",
+      "label_sha256": "6b0166b6579b922c2503707379c178e21c452623af309335e7db00f2da38cc67",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000013": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000013.jpg",
+      "image_sha256": "cd002468a058fb54d3485815d51f02a24f15d504501d7ae1672c6374f2044af3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000013.txt",
+      "label_sha256": "62bfd2700e695581bdd0151a7021c806a821a694bad4d5cc5b2a72851facec18",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000014": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000014.jpg",
+      "image_sha256": "554319f930fabbf453c5a937c08c581f4d7b70d57162babe86689dd3033365c3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000014.txt",
+      "label_sha256": "70f0ef5c0a507e93dd929f6e1e5553a2022323e2c270105bce2504d6fa299c11",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000015": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000015.jpg",
+      "image_sha256": "0b960fcd94311459469dfbf73f776d282843328a61f2281970821b8734afc7c9",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000015.txt",
+      "label_sha256": "714c7e65b6211e97e0237dd05c09a916a9c22d642356dc50011e9cae87ffddfb",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000016": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000016.jpg",
+      "image_sha256": "8d91df41e0e73fe6cb0e9f2c8db8c0ea08e8f0ff17babe1f3cfbf05b56954232",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000016.txt",
+      "label_sha256": "ee6c66755307698b000b71f05ecd396db9b9ce94a590e4c800c415e57c631e0a",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000017": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000017.jpg",
+      "image_sha256": "0384f80468401bad66f0d2ddf10167f645599336dd9526dd8ab84a56bf66f6c7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000017.txt",
+      "label_sha256": "1d2b05fbbd9ce1ddf940f5aa77f342f190ffed57e9a36909ace58db073c83735",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000018": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000018.jpg",
+      "image_sha256": "26aab285358579365a96bbb19289c8b5e58bd2056075ca959265a5a47aa41ae2",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000018.txt",
+      "label_sha256": "b440146fd0022c4e41b746499404383dc07b5e3fdc5a49c4ddc4d69cc2aa9074",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000019": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000019.jpg",
+      "image_sha256": "9aac1aacafef33c2126c046205d3524dd7e6a1c77a47d59580cd29d3e0e803fe",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000019.txt",
+      "label_sha256": "181a1d786fcf9e0fc384d49ecbcce7bbef0582e4ae9dd517a624c41db4ffc70d",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000020": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000020.jpg",
+      "image_sha256": "748cfaf77e46be3a1cc81d7a1dacddf2c146b93dcc9d2917a91e848518492e44",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000020.txt",
+      "label_sha256": "587697b76fcc5cb2be29b809f773bc0d04f4db5eba0611207146b3004a98b3b0",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000021": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000021.jpg",
+      "image_sha256": "bc6ea730aafb490b1cf1afb0f7c601804c5e7b64836e197861b87ac4b4a75740",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000021.txt",
+      "label_sha256": "26b184a39990808388d5f6e1bb8b74bfc9f5c552b4ff53681f3b4c73228be7f9",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000022": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000022.jpg",
+      "image_sha256": "49d699cb05fa8442827d516a0c71df0b807f0bd1ce57ea48995e8cd6bcfa6b77",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000022.txt",
+      "label_sha256": "9c4b2f8a96d51284aebb672706df5f25171172d1946d9ce79464c8fa0f84947c",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000023": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000023.jpg",
+      "image_sha256": "32630eb86bc6f2677055a2d92a4cd7f44c39db2081789b54ac8f080edf69d593",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000023.txt",
+      "label_sha256": "d39cb3e6bdc7e37e5150431eef7aae8f9b09423d08c74507617c0b83bf4a81bc",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000024": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000024.jpg",
+      "image_sha256": "922ed1305a2ab9859d2923e2f4a29d690c905ec7453f64a76bfabe825673076c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000024.txt",
+      "label_sha256": "b8100f49e07066f0679584508da29a03229589e2b948f68b4e54ebbe68cbba52",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000025": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000025.jpg",
+      "image_sha256": "a3b5b5e7c7d9dc09cf9a8b1bf1a67facc93e4d5c08c8c4e17ff6984d4d903a99",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000025.txt",
+      "label_sha256": "0b0b202b58ff03d8e7056c1520620b717594c17fd5f7f135906c683e6d260e12",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000026": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000026.jpg",
+      "image_sha256": "8ad8213ca9252483a638193155d891196875572e500c7a94fd01cda9da401ec3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000026.txt",
+      "label_sha256": "4db6930ba0d63fe7356b71e7a84062701dfed101fc1b5c1a4ceea47907ce70b8",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000027": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000027.jpg",
+      "image_sha256": "75a23d6df26d6d2663d2a38c5ee7bd0a15d475f2182d6754f5a2102a563d3133",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000027.txt",
+      "label_sha256": "f20f0730f2ccbbe77fe22c7c9b0b80b61b1e9bf014451473b7290121cb89ab03",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000028": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000028.jpg",
+      "image_sha256": "c18a8319cbb3661555ab68ef92a596f4858be1a7ab8c446d873149702743d268",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000028.txt",
+      "label_sha256": "0467f50b0fd668a49802be374a29d9792e6e4fb7697d241cdb745fe76834d317",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000029": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000029.jpg",
+      "image_sha256": "e860cb93f1297e0103fbdbef5d81ebe5fa4403e87dfbd28301334e4eb3d311a8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000029.txt",
+      "label_sha256": "5e92f77181b37434aa1f70c9bebcd446aec56360aefa35a2ea75184e9c2a2966",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000030": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000030.jpg",
+      "image_sha256": "150cc5bc8732cb0b2e9b2a0d2568db95f7423fce96724cfe22ec320fe7029854",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000030.txt",
+      "label_sha256": "27e1e67141490c044dff67d16c5283a2a569c940403a451847080e1788e51cc2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000031": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000031.jpg",
+      "image_sha256": "b5c0c85f441a487c5a4b3fe6c68e13097cdee033cafd3da5af8c2d554baf7ca3",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000031.txt",
+      "label_sha256": "62cd310c35f8fc46d694bf5e29d31eef34c794ccb5aaaa4db9ec6022fca0ac89",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000032": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000032.jpg",
+      "image_sha256": "fe359a645d5d76e2d711d3febfafb86e60554e09f3f7695b33c667aba21caa54",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000032.txt",
+      "label_sha256": "4e31ceb91cbaad8d8568b36fcacbe8774cffd0d97d9d97d2aae8f7bf33fb8316",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000033": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000033.jpg",
+      "image_sha256": "96e2e94b0cf47793913ed3f0e3ca9c77da575150621dc546360c426ab0f10029",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000033.txt",
+      "label_sha256": "e61838fa4bd6906d4b5f58a994df37237b1e3ef77d64da896f4ab67910d39cf2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000034": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000034.jpg",
+      "image_sha256": "ac69d4b3da209e355178e4dbba15aa1a678a326eb341fb09e98ff01f0f90c069",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000034.txt",
+      "label_sha256": "3494a6fbea1df7f856839009116fbcd2febf6cc971cbb69bac9d3195933d3872",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000035": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000035.jpg",
+      "image_sha256": "cec86b43211d449cf97a2d46ae50ee078090e4ae72e80a6aba0ebea5ea76d870",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000035.txt",
+      "label_sha256": "7d595d5de4886ed6dc07af937ab1774ed7446daa1aa1cdbc5ad3ef8c17ff9216",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000036": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000036.jpg",
+      "image_sha256": "e846b8745f54e040e1b0724acbdd881e0394b468789713459e0d2641413ba740",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000036.txt",
+      "label_sha256": "9b5f087a8c1ef7a62ccf3e672fd3d3207bd53fea4ab37687ecf6df7cae6acec0",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000037": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000037.jpg",
+      "image_sha256": "b6978ce640487b1348d3cdf5ca6ec98159743b8cee076abf55f96634f9b3d549",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000037.txt",
+      "label_sha256": "59a07f6365a2904a44acc8cd76973125b90ae9b6fcaefacac4ba86667552827b",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000038": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000038.jpg",
+      "image_sha256": "8b7dacf69e4cb1fba9dbdd957add5b08a1a7a0c84d566eb6b9b18fb15e996972",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000038.txt",
+      "label_sha256": "1436dd6ee8f0b25c5f54243920c6a53b5aaa3b7dc886487ffb0cf8be7f75f4d7",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000039": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000039.jpg",
+      "image_sha256": "86112ef7fb0c306bfe4f3be9d6dc4d004f84dfd47450ab83601b553532472f88",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000039.txt",
+      "label_sha256": "74c31fea835e0b0f6e0d747b463aaab6faccd569c0ee6b61d7366eecb5789fd2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000040": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000040.jpg",
+      "image_sha256": "b4373e999c5f4e95e36aae9cee590fd5f43e4b798c7acbe0a36d45b38c3e9efe",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000040.txt",
+      "label_sha256": "91073c13d73ebab891c8ee23abd9bcf06a53404215bd1781cbde3ad1d5a324a2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000041": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000041.jpg",
+      "image_sha256": "651147986b6380c07b57d75b2d21cd193ef4c699e3ba195cf9a3224a1b85a937",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000041.txt",
+      "label_sha256": "2bda82c3d912626aa83090205fbdb05bd10c20ddf116f8a3b4cb37955a098739",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000042": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000042.jpg",
+      "image_sha256": "6ad66f6060f48dbd78a86df0320189920edad52aed6cba0c4f1ce04e896364d5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000042.txt",
+      "label_sha256": "57a958a21163a0605b73588a30e10a61a1623c1918abf5a98f1f1aaa980f03d8",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000043": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000043.jpg",
+      "image_sha256": "3226caef4b27f1d80b7082e491b06878dcf455df40ddca0d28ddf5d88f94a37a",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000043.txt",
+      "label_sha256": "61c1f2ab99342facb4613a4a7fcbc03268d50c5a8aa4c5aa54132aaabc7bb6a9",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000044": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000044.jpg",
+      "image_sha256": "7de935ff2b5b271b07d7a6b2353727e903f8a9b5013224fdf13a0f341aa38167",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000044.txt",
+      "label_sha256": "354ec47f22485347d7949bfc947d34d96f81b9e9825aec9b2a82fa835c196bb6",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000045": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000045.jpg",
+      "image_sha256": "1c0d06e4346ca306dfb14b43895b78631a0e08b0965f6602c1f53535ae287ea7",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000045.txt",
+      "label_sha256": "c06129fd0a22d99cd1d8e8c239c6c5283733f2de865cb327e2cd41b2e2a2db74",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000046": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000046.jpg",
+      "image_sha256": "e610b1762f55136a06af85b1d51799549ae296313d685ed99768675d1af413fb",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000046.txt",
+      "label_sha256": "25f5904cee213c12c5aff251f4fc3392c0e894d41d74cf8a09d3f4b0e5952431",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000047": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000047.jpg",
+      "image_sha256": "1ec9c1ae8e1f86f93d30478aa63f85083edc98b162f158049956f25fb73f43de",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000047.txt",
+      "label_sha256": "126763e3099a35607d81b2d3fc1e158d53246c04c045a8ffd3cc7da5e54e6c73",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000048": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000048.jpg",
+      "image_sha256": "30be2832c6b9c8ade14e26e51c5c98235bea2a7f03d9f7d8d2351693b0122ac0",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000048.txt",
+      "label_sha256": "22ad786d27bef525c23f85721c9d7bd9d41eaa9067a53d49c985b4823f418925",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000049": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000049.jpg",
+      "image_sha256": "7d8f05fa5037aada864eb33b5e1ec7fee7fa3aa022f981ebe583a3c16b083456",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000049.txt",
+      "label_sha256": "66b13f4cc1ec20d8982de122ff361ec163a0df88b0378d191b110e1f63131ba2",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000050": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000050.jpg",
+      "image_sha256": "7d9f0656a21a7f96e214abde0281fe5666b0c75f68c8b9ffd83ead14033d7b1d",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000050.txt",
+      "label_sha256": "d84fb89feb3213882eaebf5c8c9501a26f8e142d618b9ff9dd54123a48d6ce05",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000051": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000051.jpg",
+      "image_sha256": "61d2d2293ee255b6d5465605a7b96c43dc6216e5d2aa3db2243f0fae65b61946",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000051.txt",
+      "label_sha256": "396fcddb9ab755f4f6b3f1f37966470bcf1b40468eef72a42482c9c2d62698f0",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000052": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000052.jpg",
+      "image_sha256": "f5567fd3d83665ee56ba3d6c72e8ad0037a6ed98368c96ae034d5996053908de",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000052.txt",
+      "label_sha256": "2392718b3fa49b4efa44de6cb7871a1fc2ee2be3f818501524484ee324288be4",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000053": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000053.jpg",
+      "image_sha256": "5144a3fefb71a14c3936f89a411d1b9ae2f0dbcbaabcf8221247e0dd4ec34fb8",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000053.txt",
+      "label_sha256": "301c65716325897e13c3a9534a1ab449fa89539daea2a74ac14562be938a607e",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000054": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000054.jpg",
+      "image_sha256": "e2d7a7987f3dac8e953a25edc22746793b1afcc2562f38a23a48dac94a315cfb",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000054.txt",
+      "label_sha256": "7d826a24217f3ba8f6ad0000b050bf89d7c2f1f16ac891aabb53884086274fd1",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000055": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000055.jpg",
+      "image_sha256": "96bb2ccd0873d695d405736702f8aa52545561ff3d72d5655470f9b3b64e4f05",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000055.txt",
+      "label_sha256": "20bfe9eafe089ebe9e97f837401bf97c146f93d80e0a472eead9086f48fb2416",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000056": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000056.jpg",
+      "image_sha256": "65076da93f7bd321d7142c2028db2ecdf77c971952f10a34605823e07eba9a58",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000056.txt",
+      "label_sha256": "1acf91ff7daa690098b2516ff9cbcf18590bf00575ee973f089deb413b35b150",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000057": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000057.jpg",
+      "image_sha256": "51c419f0a93619a0abc3dd07913c1a5d3389106162262c88999a8c5111cd508c",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000057.txt",
+      "label_sha256": "c4029af20051aaf3205640fb1a4a3dddc84e6c973521354ba96d4f7a07e85dd5",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000058": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000058.jpg",
+      "image_sha256": "17c0bd70ff112a96374f9ebda3fa8df81ec9f1c4dbf6a90160179f392e2d90fc",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000058.txt",
+      "label_sha256": "6ac8920d955c575274e6298ecfb9a46c374aade845ceaf2be85e176f4a06946c",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000059": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000059.jpg",
+      "image_sha256": "c839d07fbf5242b980a33de897a91ccf5e10d494b6eb0910112b50d2108ece30",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000059.txt",
+      "label_sha256": "531aa95db230a3f5ded8a3e3201a1e613917fa555dff6d7a562e1e924ddc45d1",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    },
+    "20261022_independent_validation_02__frame_000060": {
+      "image": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/images/frame_000060.jpg",
+      "image_sha256": "c490d0e0459cbfd51534468515fad3856733ba55e065c9b60053621b487fe3b5",
+      "label": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261022_independent_validation_02/labels_reviewed/frame_000060.txt",
+      "label_sha256": "f4ff03e998774abb5f89616123727f6e099bf7307745c43ae2b32fea5bb1b90e",
+      "role": "primary",
+      "session": "20261022_independent_validation_02"
+    }
+  },
+  "created_at_utc": "2026-10-22T06:48:17.505143+00:00",
+  "status": "exploratory_reviewed_op3_camera_evaluation",
+  "capture_manifests": {
+    "20261022_independent_validation_02": {
+      "session_id": "20261022_independent_validation_02",
+      "condition": "unknown",
+      "image_topic": "/thesis/image_raw",
+      "started_at_utc": "2026-10-22T06:39:53.828741+00:00",
+      "ended_at_utc": "2026-10-22T06:40:59.832440+00:00",
+      "frame_count": 60,
+      "interval_sec": 1.0,
+      "max_frames": 60,
+      "duration_sec": 180.0,
+      "status": "max_frames_reached",
+      "images_dir": "images",
+      "frames_journal": "capture_frames.jsonl"
+    }
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130"
+  },
+  "settings": {
+    "imgsz": 640,
+    "device": "cpu",
+    "precision": "FP32",
+    "map_conf_floor": 0.001,
+    "operating_confidence": 0.25,
+    "nms_iou": 0.7,
+    "match_iou": 0.5
+  },
+  "label_provenance_note": "Automatic draft labels were generated by the KD runtime checkpoint models/weights/kd_student_best.pt (SHA-256 2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3), then reviewed by bhre on all 60 frames. The evaluated KD checkpoint is the same checkpoint that generated the drafts, so reviewer anchoring may favor KD; treat these metrics as exploratory rather than independent validation. The frames were captured at 1-second intervals in one session and are temporally correlated.",
+  "checkpoints": {
+    "kd_runtime": {
+      "path": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    },
+    "hybrid_seed42": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+      "sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a"
+    },
+    "supervised_seed42": {
+      "path": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+      "sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e"
+    }
+  }
+}

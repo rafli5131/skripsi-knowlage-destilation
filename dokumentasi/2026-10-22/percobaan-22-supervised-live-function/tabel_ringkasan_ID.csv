@@ -1,0 +1,11 @@
+Parameter,Hasil,Catatan
+Model/checkpoint,Supervised seed 1337,YOLO11-tiny; hash di manifest
+Kondisi robot,unknown,Posisi objek dikonfirmasi operator; keadaan gerak/servo tidak diverifikasi
+Frame,738 total; 708 terukur,30 warm-up; durasi 60.228 s
+FPS efektif,11.75,"Sesudah warm-up; preview aktif, bukan benchmark bersih"
+Latensi end-to-end,45.21 ms median; p95 158.93 ms,Log per frame
+CPU proses detektor,1262.3% median; p95 1432.8%,Psutil per proses; multithread dapat menghasilkan nilai di atas 100%
+RAM RSS,355.8 MiB median; puncak 361.4 MiB,Proses detektor
+Error frame,0,Kolom error runtime
+Baris prediksi,2165,"Prediksi, bukan ground truth"
+Tracking,ball ID 1; pergantian 0; gawang ID 2; pergantian 0; robot ID 3; pergantian 0,ID lokal sesi

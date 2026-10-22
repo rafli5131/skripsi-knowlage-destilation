@@ -1,0 +1,3 @@
+Sesi,Frame ukur,Frame bola terlihat,Cakupan bola (%),Rentang pusat X (px),Rentang pusat Y (px),ID bola,Pergantian ID,FPS efektif,Error frame
+"60 detik — percobaan awal, bola hampir statis",779,779,100.0,19.6,5.1,1,0,12.97,0
+30 detik — pengulangan bola bergerak,361,314,87.0,187.0,181.2,12;3;5;8,3,11.99,0

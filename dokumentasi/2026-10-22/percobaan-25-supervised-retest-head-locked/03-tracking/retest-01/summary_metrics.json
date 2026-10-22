@@ -1,0 +1,129 @@
+{
+  "run_id": "20261022_supervised_retest_head_held_tracking_moving_ball_retry01",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "status": "stopped",
+  "started_at_utc": "2026-10-22T16:56:14.115020+00:00",
+  "stopped_at_utc": "2026-10-22T16:56:46.624623+00:00",
+  "started_at_wib": "2026-10-22T23:56:14.115020+07:00",
+  "stopped_at_wib": "2026-10-22T23:56:46.624623+07:00",
+  "measurement_duration_s": 30.073636758002976,
+  "processed_frames_including_warmup": 391,
+  "measured_frames_after_warmup": 361,
+  "warmup_frames": 30,
+  "effective_fps_after_warmup": 11.985505129613083,
+  "frame_errors": 0,
+  "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "registered_model": "supervised_seed1337",
+  "runtime": {
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130",
+    "opencv": "4.11.0",
+    "device": "cpu",
+    "threads": 4,
+    "interop_threads": 2
+  },
+  "camera": {
+    "topic": "/thesis/image_raw",
+    "width": 640,
+    "height": 480,
+    "preview_enabled": true
+  },
+  "parameters": {
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "tracker": "botsort.yaml"
+  },
+  "runtime_metrics": {
+    "Pra-pemrosesan": {
+      "median": 3.74355299572926,
+      "p95": 12.765188002958894,
+      "unit": "ms/frame",
+      "source_column": "preprocess_ms"
+    },
+    "Inferensi": {
+      "median": 29.869179998058826,
+      "p95": 135.58605900470866,
+      "unit": "ms/frame",
+      "source_column": "inference_ms"
+    },
+    "Pascapemrosesan": {
+      "median": 0.7889320040703751,
+      "p95": 1.0274300002492964,
+      "unit": "ms/frame",
+      "source_column": "postprocess_ms"
+    },
+    "Callback end-to-end": {
+      "median": 51.960483004222624,
+      "p95": 163.44355699402513,
+      "unit": "ms/frame",
+      "source_column": "end_to_end_ms"
+    },
+    "CPU proses": {
+      "median": 1254.4,
+      "p95": 1392.7,
+      "unit": "% satu CPU logis",
+      "source_column": "process_cpu_percent"
+    },
+    "CPU host (16 CPU logis)": {
+      "median": 78.4,
+      "p95": 87.04375,
+      "unit": "% kapasitas host",
+      "source_column": "process_cpu_percent"
+    },
+    "RAM RSS": {
+      "median": 360.17578125,
+      "p95": 362.5390625,
+      "unit": "MiB",
+      "source_column": "process_rss_bytes"
+    }
+  },
+  "classes": {
+    "ball": {
+      "detection_rows": 316,
+      "frames_with_detection": 314,
+      "coverage_percent": 86.98060941828255,
+      "median_confidence": 0.843879222869873,
+      "track_ids": [
+        "12",
+        "3",
+        "5",
+        "8"
+      ],
+      "id_changes_between_detected_frames": 3,
+      "center_x_span_px": 187.01253128051758,
+      "center_y_span_px": 181.1785888671875
+    },
+    "gawang": {
+      "detection_rows": 358,
+      "frames_with_detection": 358,
+      "coverage_percent": 99.16897506925208,
+      "median_confidence": 0.41091717779636383,
+      "track_ids": [
+        "1"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 5.511932373046875,
+      "center_y_span_px": 3.612330436706543
+    },
+    "robot": {
+      "detection_rows": 332,
+      "frames_with_detection": 332,
+      "coverage_percent": 91.96675900277009,
+      "median_confidence": 0.3610365688800812,
+      "track_ids": [
+        "2"
+      ],
+      "id_changes_between_detected_frames": 0,
+      "center_x_span_px": 1.684539794921875,
+      "center_y_span_px": 2.5430221557617188
+    }
+  },
+  "ground_truth_available": false,
+  "accuracy_metrics_measured": false,
+  "raw_csv": "../../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_retry01.csv",
+  "detection_csv": "../../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_retry01_detections.csv",
+  "metadata_json": "../../../../../runs/op3_pytorch/20261022_supervised_retest_head_held_tracking_moving_ball_retry01.json"
+}

@@ -1,0 +1,192 @@
+{
+  "experiment": "supervised live function and tracking check",
+  "run_id": "20261022_external_supervised_function_unknown_02",
+  "local_date": "2026-10-22",
+  "timezone": "Asia/Jakarta",
+  "started_at_utc": "2026-10-22T14:52:32.261045+00:00",
+  "stopped_at_utc": "2026-10-22T14:53:35.766728+00:00",
+  "repo_commit": "d748def3d764cb84c9c776b551a848f59443163e",
+  "working_tree_was_dirty_before_session": true,
+  "robot_condition": "unknown",
+  "operator_confirmed_object_position_ready": true,
+  "actuator_commands_issued": false,
+  "camera": {
+    "topic": "/thesis/image_raw",
+    "type": "sensor_msgs/msg/Image",
+    "resolution": "640x480",
+    "publisher_qos": "RELIABLE",
+    "detector_subscription_qos": "BEST_EFFORT depth=1"
+  },
+  "model": {
+    "variant": "supervised_seed1337",
+    "checkpoint": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+    "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+    "classes": {
+      "0": "ball",
+      "1": "gawang",
+      "2": "robot"
+    },
+    "device": "CPU FP32",
+    "imgsz": 640,
+    "confidence": 0.25,
+    "nms_iou": 0.45,
+    "tracker": "botsort.yaml",
+    "preview": true,
+    "torch_threads": 4,
+    "interop_threads": 2
+  },
+  "environment": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "ros": "Jazzy",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130",
+    "opencv": "4.11.0",
+    "cpu": "Intel Core i5-1240P; 16 logical CPUs",
+    "ram_total": "7.3 GiB",
+    "governor": "powersave"
+  },
+  "scope": "Exploratory function check only; no ground truth; not a final accuracy evaluation or clean benchmark",
+  "processed_frames": 738,
+  "warmup_frames": 30,
+  "measured_frames": 708,
+  "frame_errors": 0,
+  "recording": {
+    "topic": "/vision/debug_image",
+    "description": "annotated live detection with tracker overlays",
+    "video": "live_detection_tracking.mp4",
+    "codec": "H.264 (libx264)",
+    "width": 640,
+    "height": 480,
+    "frames_written": 668,
+    "duration_s_from_first_frame": 62.629,
+    "first_image_stamp": {
+      "sec": 1792680752,
+      "nanosec": 895905000
+    },
+    "last_image_stamp": {
+      "sec": 1792680815,
+      "nanosec": 674143000
+    },
+    "screenshots": [
+      {
+        "file": "ss_deteksi_awal.png",
+        "elapsed_s": 2.038,
+        "stamp": {
+          "sec": 1792680755,
+          "nanosec": 67970000
+        }
+      },
+      {
+        "file": "ss_deteksi_tengah.png",
+        "elapsed_s": 31.056,
+        "stamp": {
+          "sec": 1792680783,
+          "nanosec": 969014000
+        }
+      },
+      {
+        "file": "ss_deteksi_akhir.png",
+        "elapsed_s": 58.038,
+        "stamp": {
+          "sec": 1792680811,
+          "nanosec": 65970000
+        }
+      }
+    ],
+    "recorded_at_utc": "2026-10-22T14:54:00.345256+00:00",
+    "note": "Video/screenshots come from annotated /vision/debug_image, not raw footage. The recorder was an independent BEST_EFFORT depth-1 subscriber; it wrote fewer frames than the detector processed. Use detector CSV as the authoritative per-frame source. Video is illustrative, not a one-to-one archive of detector frames.",
+    "source_capture_video": "live_detection_tracking_capture_12fps.mp4",
+    "capture_encoded_fps": 12.0,
+    "playback_adjustment": "Frame timestamps were stretched proportionally so the fixed-rate MP4 duration matches measured ROS image arrival span; no frames were added or removed.",
+    "final_video_duration_s": 62.583333,
+    "final_video_avg_frame_rate": "8016/751",
+    "detector_processed_frames": 738,
+    "video_frames": 668,
+    "video_frames_as_fraction_of_detector_frames": 0.9051,
+    "source_capture_codec": "MPEG-4 Part 2 (mp4v)"
+  },
+  "files": {
+    "README_EN.md": {
+      "bytes": 4360,
+      "sha256": "d88da8b1e0ee805b417a159ac1e0e009850e1f5a4190bee059fb8018b77b6126"
+    },
+    "README_ID.md": {
+      "bytes": 4411,
+      "sha256": "ee2cf7385fe2e65e4543bca9f07353c5663043de5dbbfffe06d790ee66728226"
+    },
+    "detection_tracking_graph_EN.png": {
+      "bytes": 244559,
+      "sha256": "84c04ca7804e48be504ebbd1bb4de994ab5cecf2d9a423f03f27e18b3b902b68"
+    },
+    "grafik_deteksi_tracking_ID.png": {
+      "bytes": 251351,
+      "sha256": "f1f5b18f80071f8450f971bf133de4314d433fabe93d7aebfedd1eedadc19e47"
+    },
+    "grafik_performa_ID.png": {
+      "bytes": 438613,
+      "sha256": "733664daa0f8c129f438e613f6781db73c97e22f29a5b2f54d2ecf0cbb7ff93e"
+    },
+    "live_detection_tracking.mp4": {
+      "bytes": 4294605,
+      "sha256": "2526674e79e3a8189d6c90c75ea02a128f11ec011e1dd559add6c81fcab4c5c3"
+    },
+    "live_detection_tracking_capture_12fps.mp4": {
+      "bytes": 8398075,
+      "sha256": "5f34f01cf0a421d70e8b38bc6a8dc3091daf46b99c97b471fddc24a19319fe85"
+    },
+    "log_detections_tracking.csv": {
+      "bytes": 375080,
+      "sha256": "0c2e237bd3d0e4f87758bd0e37933bc7f974ffc328a9247659e023c61ccf4a61"
+    },
+    "log_framewise.csv": {
+      "bytes": 197369,
+      "sha256": "86303a76277798dbdb9869f5e4f1e8a9d5b42ef16e5af35b6427b89ff5a5558f"
+    },
+    "metadata_runtime.json": {
+      "bytes": 2512,
+      "sha256": "60caef941ee699f7bdd4c0fbe97e7dea7cfbef71828c7ec8d2d39266f6ed330b"
+    },
+    "per_class_summary_EN.csv": {
+      "bytes": 245,
+      "sha256": "de651f9d79d0cb27ed50b6b42332eba534dd04cf647c90486c5f49d1b6dc99df"
+    },
+    "performance_graph_EN.png": {
+      "bytes": 433968,
+      "sha256": "ba1f38ed1ce331e4c8bd1e28cf8dc1564eb0b8e5594c4b1bf580bc2fa4af4634"
+    },
+    "recording_manifest.json": {
+      "bytes": 1843,
+      "sha256": "7b2df37c737aadccba8ee433fe7a1263fc3231eec0489aaf90c9746475f8f60f"
+    },
+    "ringkasan_metrics.json": {
+      "bytes": 1757,
+      "sha256": "12ded362e4954774cd00cef9f1bb870f08835d7d650919d6eedd1adee7253dc3"
+    },
+    "ss_deteksi_akhir.png": {
+      "bytes": 427164,
+      "sha256": "a97fc3b970e7a24a6cb2f2ad439b9d31fbbc41c37912a0bf30188ecb1f7ecf47"
+    },
+    "ss_deteksi_awal.png": {
+      "bytes": 427433,
+      "sha256": "8d001db5f0271f16b83cf3b88e946f5788bc80ccc068229d4a708d218a3b90d0"
+    },
+    "ss_deteksi_tengah.png": {
+      "bytes": 427391,
+      "sha256": "c7538d83864a5cc15970bdf9275150c62ad69d31a198dfceceade0622d469198"
+    },
+    "summary_table_EN.csv": {
+      "bytes": 757,
+      "sha256": "1eeca710eba133ebfb69d1570d5a2134bcfdebd2fb8b68eb358fb96f8de75033"
+    },
+    "tabel_per_kelas_ID.csv": {
+      "bytes": 249,
+      "sha256": "7ff73cec0990bca0d7323821e9ec44f072908a028f3c112ffb26595ffb8e1382"
+    },
+    "tabel_ringkasan_ID.csv": {
+      "bytes": 757,
+      "sha256": "aab07882dde394354d3c9253fbb5f9fb5e24481f5d5ef0196b626ba7469cd8bc"
+    }
+  },
+  "date_local": "2026-10-22"
+}

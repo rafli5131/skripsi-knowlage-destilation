@@ -1,0 +1,102 @@
+{
+  "run_id": "20261022_supervised_servo_idle_preview_01",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "started_at_utc": "2026-10-22T15:40:29.065333+00:00",
+  "stopped_at_utc": "2026-10-22T15:41:32.609960+00:00",
+  "started_at_local": "2026-10-22 22:40:29 WIB",
+  "stopped_at_local": "2026-10-22 22:41:32 WIB",
+  "model_variant": "supervised",
+  "registered_model": "supervised_seed1337",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "device": "cpu",
+  "precision": "FP32",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking_enabled": true,
+  "tracker_config": "botsort.yaml",
+  "preview_enabled": true,
+  "warmup_frames": 30,
+  "measured_frames": 703,
+  "measurement_duration_s": 60.11969924799996,
+  "effective_fps": 11.686819993971465,
+  "frame_errors": 0,
+  "latency": {
+    "Preprocess": {
+      "stage": "Preprocess",
+      "median_ms": 3.5578770002757665,
+      "p95_ms": 12.288488597187095,
+      "mean_ms": 5.864102196249626
+    },
+    "Inference": {
+      "stage": "Inference",
+      "median_ms": 27.961429997958476,
+      "p95_ms": 136.6424586998619,
+      "mean_ms": 58.178710256102946
+    },
+    "Postprocess": {
+      "stage": "Postprocess",
+      "median_ms": 0.7927070000732783,
+      "p95_ms": 0.8703512001375202,
+      "mean_ms": 0.7428415276965982
+    },
+    "End-to-end": {
+      "stage": "End-to-end",
+      "median_ms": 43.34346699761227,
+      "p95_ms": 160.3382393001084,
+      "mean_ms": 76.13333289757497
+    }
+  },
+  "cpu_process_pct": {
+    "median": 1269.3,
+    "p95": 1436.21
+  },
+  "cpu_host_capacity_pct_16cpu": {
+    "median": 79.33125,
+    "p95": 89.763125
+  },
+  "rss_mib": {
+    "median": 355.640625,
+    "p95": 357.934375
+  },
+  "class_outputs": [
+    {
+      "class": "ball",
+      "frames_with_output": 703,
+      "measured_frames": 703,
+      "coverage_pct": 100.0,
+      "detection_rows": 703,
+      "median_confidence": 0.8595765829086304,
+      "track_ids": "1",
+      "adjacent_frame_id_switches": 0
+    },
+    {
+      "class": "gawang",
+      "frames_with_output": 699,
+      "measured_frames": 703,
+      "coverage_pct": 99.43100995732574,
+      "detection_rows": 699,
+      "median_confidence": 0.27921992540359497,
+      "track_ids": "3",
+      "adjacent_frame_id_switches": 0
+    },
+    {
+      "class": "robot",
+      "frames_with_output": 703,
+      "measured_frames": 703,
+      "coverage_pct": 100.0,
+      "detection_rows": 703,
+      "median_confidence": 0.43280959129333496,
+      "track_ids": "2",
+      "adjacent_frame_id_switches": 0
+    }
+  ],
+  "interpretation": "Model outputs only; no ground-truth accuracy metrics.",
+  "servo_snapshot_comparison": {
+    "max_abs_position_delta_counts": 2,
+    "torque_ids_1_18_before_after": 1,
+    "torque_ids_19_20_before_after": 0,
+    "limitation": "Snapshots before/after only; joint velocity was not logged continuously."
+  }
+}

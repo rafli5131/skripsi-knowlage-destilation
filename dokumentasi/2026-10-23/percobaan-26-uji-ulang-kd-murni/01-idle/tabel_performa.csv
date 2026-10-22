@@ -1,0 +1,14 @@
+metric,mean,median_p50,p95,maximum,unit
+Callback overall,61.330549,46.874391,159.136045,171.919364,ms
+Preprocess,4.010945,1.436840,11.760939,17.755045,ms
+Inference,39.905397,27.283103,133.518505,141.043137,ms
+Postprocess,0.817136,0.801410,0.934666,3.270510,ms
+Effective throughput,13.942248,,,,frame/s
+CPU normalized mean,79.090249,,,,% of 16 logical CPUs
+CPU normalized median P50,79.012500,,,,% of 16 logical CPUs
+CPU normalized P95,87.020000,,,,% of 16 logical CPUs
+CPU normalized maximum,90.418750,,,,% of 16 logical CPUs
+RSS mean,356.655375,,,,MiB
+RSS median P50,357.378906,,,,MiB
+RSS P95,360.042969,,,,MiB
+RSS maximum,361.507812,,,,MiB

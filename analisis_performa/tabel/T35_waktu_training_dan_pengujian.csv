@@ -1,0 +1,12 @@
+phase,model_or_group,seed,checkpoint_count,images_per_checkpoint,duration_seconds,duration_hours,measurement_basis,source,notes
+training,kd_seed1337,1337,1,,10564.10,2.9345,results.csv:time_epoch_terakhir,runs/kd/yolo11_tiny_pure_kd_v4_seed1337,Shared server; wall time is not isolated computational cost
+training,kd_seed2025,2025,1,,10707.10,2.9742,results.csv:time_epoch_terakhir,runs/kd/yolo11_tiny_pure_kd_v4_seed2025,Shared server; wall time is not isolated computational cost
+training,kd_seed42,42,1,,19228.30,5.3412,results.csv:time_epoch_terakhir,runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42,Shared server; wall time is not isolated computational cost
+training,supervised_seed1337,1337,1,,13443.34,3.7343,manifest:jumlah_dua_segmen,runs/supervised/yolo11_tiny_supervised_seed1337,Supervised seed 1337 counts two resumed segments; interruption excluded
+training,supervised_seed2025,2025,1,,11643.00,3.2342,results.csv:time_epoch_terakhir,runs/supervised/yolo11_tiny_supervised_seed2025,Shared server; wall time is not isolated computational cost
+training,supervised_seed42,42,1,,20147.50,5.5965,results.csv:time_epoch_terakhir,runs/supervised/yolo11_tiny_supervised_seed42_retry1,Shared server; wall time is not isolated computational cost
+training,hybrid_full_seed42,42,1,,4840.09,1.3445,results.csv:last_epoch_time,runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/results.csv,Shared server; wall time is not isolated computational cost
+training,hybrid_full_seed1337,1337,1,,3779.57,1.0499,results.csv:last_epoch_time,runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/results.csv,Shared server; wall time is not isolated computational cost
+training,hybrid_full_seed2025,2025,1,,3719.85,1.0333,results.csv:last_epoch_time,runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/results.csv,Shared server; wall time is not isolated computational cost
+TEST session,pure_kd_TEST_session,multiple,7,592,167.217471,0.046449,manifest:finished_at_utc - started_at_utc,runs/final_test/pure_kd_official_split_locked_retry1/manifest.json,Complete multi-model evaluation pipeline including validation and reporting; not individual checkpoint test time
+TEST session,hybrid_full_TEST_session,multiple,6,592,52.783875,0.014662,manifest:finished_at_utc - started_at_utc,runs/final_test/hybrid_full_official_split_20261022/manifest.json,Complete multi-model evaluation pipeline including validation and reporting; not individual checkpoint test time

@@ -1,0 +1,4 @@
+class,frames_with_output,total_frames,percent,box_count,median_confidence,track_ids
+ball,671,671,100.0,671,0.838,2
+gawang,671,671,100.0,671,0.403,3
+robot,671,671,100.0,671,0.854,1

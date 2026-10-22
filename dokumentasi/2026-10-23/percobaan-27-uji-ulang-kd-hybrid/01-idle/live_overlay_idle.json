@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T18:04:33.271462+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792692273,
+    "nanosec": 37562000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.8579819798469543,
+      "center_x_px": 109.02468872070312,
+      "center_y_px": 249.98238372802734,
+      "width_px": 159.91287231445312,
+      "height_px": 147.82667541503906
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.8347288966178894,
+      "center_x_px": 486.5239562988281,
+      "center_y_px": 307.57855224609375,
+      "width_px": 53.88140869140625,
+      "height_px": 52.5904541015625
+    },
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.38515591621398926,
+      "center_x_px": 310.74776458740234,
+      "center_y_px": 189.22491836547852,
+      "width_px": 180.7384796142578,
+      "height_px": 199.74974822998047
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/01-idle/live_overlay_idle.png"
+}

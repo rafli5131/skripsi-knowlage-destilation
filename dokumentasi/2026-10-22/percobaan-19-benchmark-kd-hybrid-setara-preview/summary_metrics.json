@@ -1,0 +1,227 @@
+{
+  "experiment": 19,
+  "title": "KD Hybrid matched preview benchmark, idle and walking",
+  "model": "KD Hybrid full, hybrid_full_seed1337",
+  "checkpoint": "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "device": "CPU FP32",
+  "logical_cpu_count": 16,
+  "camera_topic": "/thesis/image_raw",
+  "camera_resolution": "640x480",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "BoT-SORT",
+  "preview_enabled": true,
+  "warmup_frames": 30,
+  "measurement_target_s": 60,
+  "torch_num_threads": 4,
+  "torch_interop_threads": 2,
+  "conditions": {
+    "servo_idle": {
+      "run_id": "20261022_kd_hybrid_idle_final_01",
+      "condition": "servo_idle",
+      "started_at_utc": "2026-10-22T08:55:57.535172+00:00",
+      "stopped_at_utc": "2026-10-22T08:56:59.792804+00:00",
+      "measurement_duration_s": 60.002689856999496,
+      "effective_fps": 12.390291101301269,
+      "processed_frames_total": 774,
+      "measured_frames": 744,
+      "frame_errors": 0,
+      "preview_enabled": true,
+      "registered_model": "hybrid_full_seed1337",
+      "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "torch_num_threads": 4,
+      "torch_interop_threads": 2,
+      "metrics": {
+        "end_to_end_ms": {
+          "median": 49.60115999983827,
+          "p95_nearest_rank": 158.14780200071255,
+          "mean": 66.86461900403629,
+          "max": 170.3698080000322
+        },
+        "inference_ms": {
+          "median": 29.218884999863803,
+          "p95_nearest_rank": 132.44597199991404,
+          "mean": 45.69903650267235,
+          "max": 141.8741540001065
+        },
+        "preprocess_ms": {
+          "median": 2.108861000124307,
+          "p95_nearest_rank": 12.711471000329766,
+          "mean": 4.9478531586033885,
+          "max": 22.14679000007891
+        },
+        "postprocess_ms": {
+          "median": 0.7857255000089935,
+          "p95_nearest_rank": 0.9367620004923083,
+          "mean": 0.7104374798539157,
+          "max": 2.5457769997956348
+        },
+        "cpu_percent_of_16_logical_cpus": {
+          "median": 77.071875,
+          "p95_nearest_rank": 87.275,
+          "mean": 77.50162970430108,
+          "max": 90.5
+        },
+        "rss_mib": {
+          "median": 361.3984375,
+          "p95_nearest_rank": 362.3984375,
+          "mean": 359.82786773353496,
+          "max": 362.875
+        }
+      },
+      "detection_outputs": {
+        "ball": {
+          "frames_with_output": 744,
+          "measured_frames": 744,
+          "boxes": 744,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "1"
+          ],
+          "median_confidence": 0.7989819347858429
+        },
+        "gawang": {
+          "frames_with_output": 0,
+          "measured_frames": 744,
+          "boxes": 0,
+          "coverage_percent": 0.0,
+          "track_ids": [],
+          "median_confidence": null
+        },
+        "robot": {
+          "frames_with_output": 743,
+          "measured_frames": 744,
+          "boxes": 743,
+          "coverage_percent": 99.86559139784946,
+          "track_ids": [
+            "2"
+          ],
+          "median_confidence": 0.4323466718196869
+        }
+      },
+      "artifacts": {
+        "per_frame_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_idle_final_01.csv",
+        "detections_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_idle_final_01_detections.csv",
+        "metadata_json": "../../../runs/op3_pytorch/20261022_kd_hybrid_idle_final_01.json"
+      }
+    },
+    "walking": {
+      "run_id": "20261022_kd_hybrid_walking_final_01",
+      "condition": "walking",
+      "started_at_utc": "2026-10-22T08:57:34.629158+00:00",
+      "stopped_at_utc": "2026-10-22T08:58:37.686490+00:00",
+      "measurement_duration_s": 60.182839940999656,
+      "effective_fps": 12.196439075733547,
+      "processed_frames_total": 764,
+      "measured_frames": 734,
+      "frame_errors": 0,
+      "preview_enabled": true,
+      "registered_model": "hybrid_full_seed1337",
+      "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "torch_num_threads": 4,
+      "torch_interop_threads": 2,
+      "metrics": {
+        "end_to_end_ms": {
+          "median": 56.38780200024485,
+          "p95_nearest_rank": 163.16703899974527,
+          "mean": 73.23061176974163,
+          "max": 172.07250600040425
+        },
+        "inference_ms": {
+          "median": 31.736060999719484,
+          "p95_nearest_rank": 134.11071199971047,
+          "mean": 47.97368800408194,
+          "max": 138.78820299942163
+        },
+        "preprocess_ms": {
+          "median": 2.1342374998312152,
+          "p95_nearest_rank": 13.315957000486378,
+          "mean": 5.2405452997238555,
+          "max": 21.60857099988789
+        },
+        "postprocess_ms": {
+          "median": 0.7922659997348092,
+          "p95_nearest_rank": 1.0245000003124005,
+          "mean": 0.747578446856267,
+          "max": 3.617839000071399
+        },
+        "cpu_percent_of_16_logical_cpus": {
+          "median": 78.584375,
+          "p95_nearest_rank": 85.04375,
+          "mean": 78.14771798365122,
+          "max": 87.21875
+        },
+        "rss_mib": {
+          "median": 362.42578125,
+          "p95_nearest_rank": 365.4296875,
+          "mean": 360.6233023245913,
+          "max": 366.84375
+        }
+      },
+      "detection_outputs": {
+        "ball": {
+          "frames_with_output": 734,
+          "measured_frames": 734,
+          "boxes": 734,
+          "coverage_percent": 100.0,
+          "track_ids": [
+            "1"
+          ],
+          "median_confidence": 0.7883957028388977
+        },
+        "gawang": {
+          "frames_with_output": 504,
+          "measured_frames": 734,
+          "boxes": 504,
+          "coverage_percent": 68.66485013623979,
+          "track_ids": [
+            "4"
+          ],
+          "median_confidence": 0.36168329417705536
+        },
+        "robot": {
+          "frames_with_output": 646,
+          "measured_frames": 734,
+          "boxes": 646,
+          "coverage_percent": 88.0108991825613,
+          "track_ids": [
+            "2"
+          ],
+          "median_confidence": 0.41223232448101044
+        }
+      },
+      "artifacts": {
+        "per_frame_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_walking_final_01.csv",
+        "detections_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_walking_final_01_detections.csv",
+        "metadata_json": "../../../runs/op3_pytorch/20261022_kd_hybrid_walking_final_01.json"
+      }
+    }
+  },
+  "walking_minus_idle": {
+    "effective_fps_absolute": -0.19385202556772185,
+    "effective_fps_change_percent": -1.5645477897396898,
+    "end_to_end_median_ms_absolute": 6.786642000406573,
+    "end_to_end_p95_ms_absolute": 5.019236999032728
+  },
+  "pure_kd_reference_same_matched_protocol": {
+    "servo_idle": {
+      "effective_fps": 13.011274611853134,
+      "callback_median_ms": 49.745453,
+      "callback_p95_ms": 157.848616
+    },
+    "walking": {
+      "effective_fps": 12.365190881135003,
+      "callback_median_ms": 55.083754,
+      "callback_p95_ms": 161.788726
+    }
+  },
+  "limitations": [
+    "One run per condition; no repeat-run interval.",
+    "Labels describe operator-requested conditions and gait commands; detector does not infer physical motion from telemetry.",
+    "Detection outputs are not accuracy metrics; no ground-truth labels were used.",
+    "Target presence and exact scene position were not independently verified during these runs.",
+    "Initial Hybrid prep and overlapping run logs were removed; only the clean reruns listed here are retained."
+  ]
+}

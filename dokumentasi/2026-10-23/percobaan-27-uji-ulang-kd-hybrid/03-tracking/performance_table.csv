@@ -1,0 +1,7 @@
+metric,median_p50,p95,unit
+Preprocessing,5.252,13.013,ms
+Inference,31.158,135.246,ms
+Postprocessing,0.803,1.034,ms
+End-to-end callback,55.338,164.147,ms
+Process CPU (% host),80.481,85.95,%
+Process RSS,360.566,363.932,MiB

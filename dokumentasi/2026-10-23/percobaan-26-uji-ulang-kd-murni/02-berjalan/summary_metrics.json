@@ -1,0 +1,75 @@
+{
+  "run_id": "20261023_kd_pure_walking_retest_02",
+  "model": "kd_seed42",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "analysis_start_utc": "2026-10-22T17:45:50+00:00",
+  "analysis_end_utc": "2026-10-22T17:46:47+00:00",
+  "analysis_duration_s": 57.0,
+  "analysis_start_wib": "2026-10-23 00:45:50 WIB",
+  "analysis_end_wib": "2026-10-23 00:46:47 WIB",
+  "measured_frames": 675,
+  "effective_fps": 11.8384726473319,
+  "frame_errors": 0,
+  "preprocess_ms_p50": 4.982599006325472,
+  "preprocess_ms_p95": 12.532230198848989,
+  "inference_ms_p50": 32.61074599868152,
+  "inference_ms_p95": 135.0711774015508,
+  "postprocess_ms_p50": 0.8481090044369921,
+  "postprocess_ms_p95": 1.0617406020173796,
+  "end_to_end_ms_p50": 59.051800999441184,
+  "end_to_end_ms_p95": 167.24247330275827,
+  "end_to_end_ms_mean": 75.71050202215298,
+  "process_cpu_percent_p50": 1278.8,
+  "process_cpu_percent_p95": 1357.5,
+  "process_cpu_percent_16cpu_p50": 79.925,
+  "process_cpu_percent_16cpu_p95": 84.84375,
+  "process_rss_mib_p50": 358.47265625,
+  "process_rss_mib_p95": 361.796875,
+  "capture_gap_ms_p50": 68.003,
+  "capture_gap_ms_p95": 168.02110000000002,
+  "capture_gap_ms_max": 300.161,
+  "class_output": [
+    {
+      "class": "ball",
+      "frames": 675,
+      "percent": 100.0,
+      "boxes": 675,
+      "median_conf": 0.9199232459068298,
+      "track_ids": [
+        "1"
+      ]
+    },
+    {
+      "class": "gawang",
+      "frames": 675,
+      "percent": 100.0,
+      "boxes": 675,
+      "median_conf": 0.6286209225654602,
+      "track_ids": [
+        "2"
+      ]
+    },
+    {
+      "class": "robot",
+      "frames": 644,
+      "percent": 95.4074074074074,
+      "boxes": 644,
+      "median_conf": 0.7472432553768158,
+      "track_ids": [
+        "3"
+      ]
+    }
+  ],
+  "head_pan_pre_gait_rad": 0.12891733395212507,
+  "head_pan_during_and_post_gait_rad": 0.12738260378602834,
+  "head_tilt_pre_gait_rad": -0.40343694675292974,
+  "head_tilt_during_and_post_gait_rad": -0.40343694675292974,
+  "head_pan_delta_rad": -0.0015347301660967316,
+  "head_tilt_delta_rad": 0.0,
+  "head_position_commands_sent": false,
+  "notes": [
+    "Run 01 is retained but excluded: joint controller module mapping was none, so no gait motion was verified.",
+    "Run 02 used the standard OP3 GUI module mapping: body IDs 1-18 to walking_module; head IDs 19-20 to head_control_module.",
+    "The reported window is a conservative 57 s overlap within an approximately 60 s gait command interval; raw runtime log also contains frames before and after gait."
+  ]
+}

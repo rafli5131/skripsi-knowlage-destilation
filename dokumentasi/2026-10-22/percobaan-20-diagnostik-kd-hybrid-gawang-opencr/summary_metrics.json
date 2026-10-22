@@ -1,0 +1,66 @@
+{
+  "run_id": "20261022_kd_hybrid_opencr_recovery_idle_diag_01",
+  "date": "2026-10-22",
+  "model": "KD Hybrid full (hybrid_full_seed1337)",
+  "checkpoint": "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "condition": "unknown",
+  "condition_note": "OpenCR did not answer, so servo torque and physical idle state could not be verified. This is a camera/model diagnostic, not a verified servo-idle benchmark.",
+  "measurement_duration_s": 60.32397622699955,
+  "measured_frames": 736,
+  "frame_errors": 0,
+  "effective_fps": 12.200787249673775,
+  "callback_ms": {
+    "median": 47.357283999645006,
+    "p95": 156.37000599963358,
+    "mean": 62.78725882881862
+  },
+  "inference_ms": {
+    "median": 26.722338500348997,
+    "p95": 130.6021160007731,
+    "mean": 41.27241982747814
+  },
+  "cpu_percent_of_logical_capacity": {
+    "median": 75.803125,
+    "p95": 87.175,
+    "mean": 76.01463994565218
+  },
+  "cpu_raw_percent": {
+    "median": 1212.85,
+    "p95": 1394.8,
+    "mean": 1216.2342391304348
+  },
+  "logical_cpu_count": 16,
+  "rss_mib": {
+    "median": 352.40625,
+    "p95": 360.27734375,
+    "mean": 353.72805388077444
+  },
+  "detections_by_class_frames": {
+    "ball": 736,
+    "gawang": 736,
+    "robot": 736
+  },
+  "measured_frame_count": 736,
+  "detection_confidence_median_by_class": {
+    "ball": 0.8502785563468933,
+    "gawang": 0.43292655050754547,
+    "robot": 0.4356466233730316
+  },
+  "detection_metric_note": "Frame incidence and confidence describe model outputs only. No independently verified ground-truth labels; do not interpret as accuracy, precision, or recall.",
+  "preview_enabled": true,
+  "device": "CPU FP32",
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "iou_threshold": 0.45,
+  "tracking": "BoT-SORT",
+  "threads": {
+    "intra_op": 4,
+    "inter_op": 2
+  },
+  "artifacts": {
+    "performance_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_opencr_recovery_idle_diag_01.csv",
+    "detections_csv": "../../../runs/op3_pytorch/20261022_kd_hybrid_opencr_recovery_idle_diag_01_detections.csv",
+    "raw_metadata_json": "../../../runs/op3_pytorch/20261022_kd_hybrid_opencr_recovery_idle_diag_01.json"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "servo_register_preflight_utc": "2026-10-22T16:47:05Z",
+  "servo_register_preflight": {
+    "19": {
+      "torque_enabled": 1,
+      "goal_position": 2228,
+      "present_position": 2228,
+      "operating_mode": 3,
+      "hardware_error": 0
+    },
+    "20": {
+      "torque_enabled": 1,
+      "goal_position": 1725,
+      "present_position": 1725,
+      "operating_mode": 3,
+      "hardware_error": 0
+    }
+  },
+  "manager_launch": {
+    "simulation": false,
+    "auto_start_init_pose": false,
+    "auto_reconnect": false
+  },
+  "head_target_commands_during_tests": 0,
+  "ros_joint_feedback_rad": {
+    "idle_sample": {
+      "head_pan": 0.27625142989741086,
+      "head_tilt": -0.49547579392089847
+    },
+    "walking_4s_sample": {
+      "head_pan": {
+        "min": 0.2747166997313142,
+        "max": 0.27625142989741086
+      },
+      "head_tilt": {
+        "min": -0.4985437554931641,
+        "max": -0.4970097747070313
+      }
+    },
+    "post_stop_3s_sample": {
+      "head_pan": {
+        "min": 0.2747166997313142,
+        "max": 0.2747166997313142
+      },
+      "head_tilt": {
+        "min": -0.4985437554931641,
+        "max": -0.4970097747070313
+      }
+    },
+    "after_all_runs_sample": {
+      "head_pan": 0.2747166997313142,
+      "head_tilt": -0.4985437554931641,
+      "head_pan_velocity_rad_s": 0.0,
+      "head_tilt_velocity_rad_s": 0.0,
+      "left_knee_rad": 1.1663949262335125,
+      "right_knee_rad": -1.1627574358886719,
+      "left_knee_velocity_rad_s": 0.0,
+      "right_knee_velocity_rad_s": 0.0,
+      "meaning": "Final read-only ROS sample after all tests: gait/head motion stopped."
+    }
+  },
+  "max_abs_feedback_deviation_from_idle_sample_rad": {
+    "head_pan": 0.0015347301660967,
+    "head_tilt": 0.0030679615722656
+  },
+  "interpretation": "No Goal_Position/head-pose command was issued during idle, walking, or tracking. ROS feedback stayed within roughly 1 pan count and 2 tilt counts of the initial sample. Feedback is not a direct post-run register read; torque/goal register values are from the preflight immediately before manager startup."
+}

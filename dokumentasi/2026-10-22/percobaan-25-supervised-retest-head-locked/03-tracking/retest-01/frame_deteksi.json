@@ -1,0 +1,42 @@
+{
+  "saved_at_utc": "2026-10-22T16:56:23.799845+00:00",
+  "camera_frame_id": "default_cam",
+  "image_topic": "/vision/debug_image",
+  "detections_topic": "/vision/detections",
+  "capture_stamp": {
+    "sec": 1792688183,
+    "nanosec": 578999000
+  },
+  "width": 640,
+  "height": 480,
+  "detections": [
+    {
+      "class_id": "1:gawang",
+      "class_name": "gawang",
+      "confidence": 0.45243263244628906,
+      "center_x_px": 314.2750549316406,
+      "center_y_px": 144.2287267446518,
+      "width_px": 105.33685302734375,
+      "height_px": 282.82849621772766
+    },
+    {
+      "class_id": "0:ball",
+      "class_name": "ball",
+      "confidence": 0.8120407462120056,
+      "center_x_px": 169.6846694946289,
+      "center_y_px": 365.5048522949219,
+      "width_px": 80.89033508300781,
+      "height_px": 74.900634765625
+    },
+    {
+      "class_id": "2:robot",
+      "class_name": "robot",
+      "confidence": 0.3576575815677643,
+      "center_x_px": 466.11952209472656,
+      "center_y_px": 312.32665252685547,
+      "width_px": 175.62460327148438,
+      "height_px": 218.8719024658203
+    }
+  ],
+  "image_path": "/home/humanoid/bre_skripsi/dokumentasi/2026-10-22/percobaan-25-supervised-retest-head-locked/03-tracking/retest-01/frame_deteksi.png"
+}

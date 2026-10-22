@@ -1,0 +1,3 @@
+ID servo,Torque preflight,Goal preflight,Present preflight,Range feedback saat gait (rad),Perubahan feedback max dari awal (rad),Catatan
+19,1,2228,2228,0.274717..0.276251,0.001535,Tidak ada perintah target kepala; readback ROS berfluktuasi 1–2 count
+20,1,1725,1725,-0.498544..-0.497010,0.003068,Tidak ada perintah target kepala; readback ROS berfluktuasi 1–2 count

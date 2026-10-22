@@ -1,0 +1,87 @@
+{
+  "run_id": "20261023_kd_hybrid_tracking_moving_ball_01",
+  "condition": "unknown",
+  "status": "stopped",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "first_frame_utc": "2026-10-22T18:08:29.745811+00:00",
+  "last_frame_utc": "2026-10-22T18:08:59.929903+00:00",
+  "frames": 382,
+  "capture_span_s": 30.1686,
+  "effective_fps": 12.629024880173425,
+  "frame_errors": 0,
+  "warmup_frames_excluded": 30,
+  "preview_enabled": true,
+  "logical_cpu_count": 16,
+  "performance": {
+    "preprocess_ms": {
+      "p50": 5.251864000456408,
+      "p95": 13.01308634901943
+    },
+    "inference_ms": {
+      "p50": 31.15759499996784,
+      "p95": 135.24567440108513
+    },
+    "postprocess_ms": {
+      "p50": 0.8033449994400144,
+      "p95": 1.0344991995225428
+    },
+    "end_to_end_ms": {
+      "p50": 55.337849000352435,
+      "p95": 164.14653144893236
+    },
+    "cpu_host_percent": {
+      "p50": 80.48124999999999,
+      "p95": 85.95
+    },
+    "rss_mib": {
+      "p50": 360.56640625,
+      "p95": 363.9322265625
+    }
+  },
+  "class_outputs": {
+    "ball": {
+      "frames_with_output": 382,
+      "total_frames": 382,
+      "coverage_percent": 100.0,
+      "boxes": 395,
+      "median_confidence": 0.8314974904060364,
+      "track_id_counts": {
+        "2": 382,
+        "5": 9,
+        "13": 4
+      }
+    },
+    "gawang": {
+      "frames_with_output": 301,
+      "total_frames": 382,
+      "coverage_percent": 78.79581151832461,
+      "boxes": 301,
+      "median_confidence": 0.38428735733032227,
+      "track_id_counts": {
+        "3": 275,
+        "21": 26
+      }
+    },
+    "robot": {
+      "frames_with_output": 382,
+      "total_frames": 382,
+      "coverage_percent": 100.0,
+      "boxes": 382,
+      "median_confidence": 0.8661786019802094,
+      "track_id_counts": {
+        "1": 382
+      }
+    }
+  },
+  "ball_tracking": {
+    "observed_main_track_id": "2",
+    "track_2_frames": 382,
+    "track_2_x_span_px": 257.1530456542969,
+    "track_2_y_span_px": 130.8132553100586,
+    "frames_with_extra_ball_boxes": 13,
+    "extra_track_id_counts": {
+      "5": 9,
+      "13": 4
+    }
+  }
+}

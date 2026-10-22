@@ -1,0 +1,4 @@
+class,frames_with_output,measured_frames,coverage_pct,detection_rows,median_confidence,track_ids,adjacent_frame_id_switches
+ball,703,703,100.0,703,0.8595765829086304,1,0
+gawang,699,703,99.43100995732574,699,0.27921992540359497,3,0
+robot,703,703,100.0,703,0.43280959129333496,2,0

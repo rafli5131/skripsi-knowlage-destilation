@@ -1,0 +1,7 @@
+metrik,median_p50,p95,satuan
+Pra-pemrosesan,5.252,13.013,ms
+Inferensi,31.158,135.246,ms
+Pasca-pemrosesan,0.803,1.034,ms
+Callback total,55.338,164.147,ms
+CPU proses (% host),80.481,85.95,%
+RAM proses RSS,360.566,363.932,MiB

@@ -1,0 +1,4 @@
+class,frames_with_detection,total_frames,detection_coverage,track_id,id_coverage,x_center_span_px,y_center_span_px,median_confidence
+ball,501,501,1.0,1,1.0,0.5083,0.7503,0.8492
+gawang,501,501,1.0,3,1.0,1.4578,1.1071,0.3476
+robot,501,501,1.0,2,1.0,0.8938,2.8261,0.5991

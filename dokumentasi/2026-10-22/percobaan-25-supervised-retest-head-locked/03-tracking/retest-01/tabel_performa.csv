@@ -1,0 +1,8 @@
+Metrik,Median,P95,Satuan
+Pra-pemrosesan,3.74,12.77,ms/frame
+Inferensi,29.87,135.59,ms/frame
+Pascapemrosesan,0.79,1.03,ms/frame
+Callback end-to-end,51.96,163.44,ms/frame
+CPU proses,1254.40,1392.70,% satu CPU logis
+CPU host (16 CPU logis),78.40,87.04,% kapasitas host
+RAM RSS,360.18,362.54,MiB

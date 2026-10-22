@@ -1,0 +1,6 @@
+Metrik,Robot diam,Robot berjalan,Satuan
+FPS efektif,12.06,12.31,frame/detik
+Latensi end-to-end median,52.13,55.60,ms
+CPU host median,78.34,79.86,% kapasitas host
+RAM RSS median,363.0,357.6,MiB
+Error frame,0,0,frame

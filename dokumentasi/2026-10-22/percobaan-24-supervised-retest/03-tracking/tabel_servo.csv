@@ -1,0 +1,3 @@
+servo_id,torque_before,torque_after,goal_before,goal_after,present_before,present_after,note
+19,0,0,2228,2228,2228,2228,unchanged in read-only snapshots
+20,0,0,1725,1725,1725,1726,present position readback changed by 1 count; goal unchanged

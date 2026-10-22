@@ -1,0 +1,105 @@
+{
+  "run_id": "20261022_kd_pure_servo_idle_01",
+  "condition": "servo_idle",
+  "condition_source": "operator_supplied_label; motion is not inferred from telemetry",
+  "model": "KD murni / kd_seed42",
+  "checkpoint": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "started_local": "2026-10-22 14:14:19 WIB",
+  "stopped_local": "2026-10-22 14:15:21 WIB",
+  "measurement_duration_s": 60.06528356200033,
+  "warmup_frames": 30,
+  "processed_frames_total": 910,
+  "measured_frames": 880,
+  "frame_errors": 0,
+  "effective_fps_after_warmup": 14.648754367586942,
+  "callback_end_to_end_ms": {
+    "median": 44.29645749951305,
+    "p95": 156.77918295014018,
+    "mean": 57.429336443175835,
+    "max": 170.26728100063337
+  },
+  "preprocess_ms": {
+    "median": 1.3139085003786022,
+    "p95": 11.389284350661908,
+    "mean": 3.014851104541611,
+    "max": 14.419980998354731
+  },
+  "inference_ms": {
+    "median": 26.442353499987803,
+    "p95": 134.72224939960142,
+    "mean": 38.81987568522618,
+    "max": 147.65966000049957
+  },
+  "postprocess_ms": {
+    "median": 0.7962884992593899,
+    "p95": 0.8852714490785728,
+    "mean": 0.7540058465958116,
+    "max": 4.00628500028688
+  },
+  "process_cpu_percent_one_logical_core": {
+    "median": 1267.55,
+    "p95": 1422.54,
+    "mean": 1277.2530681818182,
+    "max": 1472.9
+  },
+  "process_cpu_percent_total_16_logical_cpus": {
+    "median": 79.221875,
+    "p95": 88.90875,
+    "mean": 79.82831676136364,
+    "max": 92.05625
+  },
+  "process_rss_mib": {
+    "median": 357.17578125,
+    "p95": 360.922265625,
+    "mean": 356.42896839488634,
+    "max": 362.671875
+  },
+  "logical_cpu_count": 16,
+  "torch_threads": 12,
+  "torch_interop_threads": 12,
+  "host_cpu": "12th Gen Intel(R) Core(TM) i5-1240P",
+  "host_ram_total_mib": 7510.171875,
+  "camera_topic": "/thesis/image_raw",
+  "camera_width": 640,
+  "camera_height": 480,
+  "imgsz": 640,
+  "confidence_threshold": 0.25,
+  "nms_iou": 0.45,
+  "tracking": "botsort.yaml",
+  "preview_enabled": false,
+  "device": "cpu",
+  "precision": "FP32",
+  "detection_observations_after_warmup": {
+    "ball": {
+      "detections": 880,
+      "frames_with_detection": 880,
+      "track_ids": [
+        "1"
+      ],
+      "confidence_median": 0.9213999509811401
+    },
+    "gawang": {
+      "detections": 879,
+      "frames_with_detection": 879,
+      "track_ids": [
+        "3"
+      ],
+      "confidence_median": 0.36653417348861694
+    },
+    "robot": {
+      "detections": 875,
+      "frames_with_detection": 875,
+      "track_ids": [
+        "2"
+      ],
+      "confidence_median": 0.6472867131233215
+    }
+  },
+  "accuracy_metrics": null,
+  "source_files": {
+    "metadata": "runs/op3_pytorch/20261022_kd_pure_servo_idle_01.json",
+    "frame_metrics": "runs/op3_pytorch/20261022_kd_pure_servo_idle_01.csv",
+    "detections": "runs/op3_pytorch/20261022_kd_pure_servo_idle_01_detections.csv"
+  }
+}

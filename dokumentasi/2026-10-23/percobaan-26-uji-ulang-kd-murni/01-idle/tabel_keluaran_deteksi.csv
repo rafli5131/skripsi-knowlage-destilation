@@ -1,0 +1,4 @@
+class_name,frames_with_output,measured_frames,frame_presence_pct,detection_count,median_confidence,mean_confidence,track_ids
+ball,839,839,100.000,839,0.907824,0.907750,1
+gawang,839,839,100.000,839,0.669240,0.668543,3
+robot,839,839,100.000,839,0.749665,0.749576,2

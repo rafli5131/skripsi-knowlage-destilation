@@ -1,0 +1,4 @@
+class,frames_with_detection,measured_frames,coverage_percent,box_count,confidence_median,track_ids_observed
+ball,842,842,100.0,842,0.8466200232505798,['1']
+gawang,842,842,100.0,842,0.3700515478849411,['3']
+robot,842,842,100.0,842,0.6434798240661621,['2']

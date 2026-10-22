@@ -1,0 +1,4 @@
+Predicted class,Frames with box/total,Observed presence,Mean confidence (range),Track ID,ID switches
+ball,738/738,100.0%,0.862 (0.857–0.867),1,0
+gawang,738/738,100.0%,0.353 (0.332–0.374),2,0
+robot,689/738,93.4%,0.287 (0.250–0.348),3,0

@@ -1,30 +1,18 @@
-# T15. lingkungan uji op3
+# T15. lingkungan uji OP3
 
-Status: Sebagian; inti/logical CPU, kapasitas RAM, governor, dan mode daya belum direkam.
+**Status: lingkungan NUC tercatat.** Snapshot sistem dikumpulkan pada 22 Oktober 2026 dari host `humanoid-NUC12WSHi5`, yang juga tercatat memakai kernel dan runtime yang sama pada metadata benchmark 22 Oktober. Governor dan mode daya adalah snapshot host, bukan telemetry tersimpan per frame.
 
-| field | value | status | source |
-| --- | --- | --- | --- |
-| cpu_model | 12th Gen Intel Core i5-1240P | catatan operator | memory/2026-10-19.md |
-| physical_cores | [BELUM DIUKUR] | tidak direkam | [BELUM DIUKUR] |
-| logical_cpu_threads | [BELUM DIUKUR] | tidak direkam; CPU tidak dinormalisasi | [BELUM DIUKUR] |
-| system_ram_capacity | [BELUM DIUKUR] | tidak direkam | [BELUM DIUKUR] |
-| architecture | x86_64 | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| os | Ubuntu 24.04.5 LTS | catatan operator | memory/2026-10-19.md |
-| kernel | 7.0.0-34-generic | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| python | 3.12.3 | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| pytorch | 2.4.1+cpu | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| ultralytics | 8.4.130 | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| opencv | 4.11.0 | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| ros_2 | Jazzy | catatan operator | memory/2026-10-19.md |
-| governor | [BELUM DIUKUR] | tidak direkam | [BELUM DIUKUR] |
-| power_mode | [BELUM DIUKUR] | tidak direkam | [BELUM DIUKUR] |
-| camera | Logitech C920 | catatan sesi | dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md |
-| resolution_px | 640x480 | tercatat | runs/op3_pytorch/20261019T080757Z.csv |
-| capture_pixel_format | YUYV; ROS encoding rgb8 | catatan sesi | analisis_performa/UJI_LIVE_TRACKING_OP3_2026-10-19.md |
-| requested_camera_fps | 30 | catatan konfigurasi; bukan laju terukur | dokumentasi/2026-10-19/percobaan-04-live-tracking-servo-idle/README.md |
-| camera_topic | /thesis/image_raw | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| camera_qos_legacy | best_effort; KEEP_LAST depth 1 | tercatat | runs/op3_pytorch/20261019T080757Z.json |
-| camera_qos_idle_trial | reliable_depth_5_latest_frame_only | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
-| inference_device_precision | CPU FP32 | tercatat | runs/op3_idle_trial/20261019T123737Z_023704/summary.json |
+| Field | Nilai | Status / sumber |
+|---|---|---|
+| CPU | 12th Gen Intel Core i5-1240P | Catatan operator; memory 2026-10-19 |
+| Core fisik / thread logis | 12 / 16 | Snapshot NUC; JSON benchmark mencatat 16 CPU logis |
+| RAM terpasang | 7.33 GiB | Snapshot NUC |
+| Arsitektur / OS / kernel | x86_64 / Ubuntu 24.04.5 LTS / 7.0.0-38-generic | Metadata run dan catatan host |
+| Governor / mode daya | `powersave`; `intel_pstate active`, turbo diizinkan | Snapshot NUC 22-10-2026 |
+| Python / PyTorch / Ultralytics / OpenCV | 3.12.3 / 2.4.1+cpu / 8.4.130 / 4.11.0 | Metadata benchmark |
+| ROS 2 | Jazzy | Catatan operator |
+| Kamera / resolusi / format | Logitech C920 / 640×480 / YUYV, ROS `rgb8` | Catatan konfigurasi sesi |
+| Kamera diminta / topik | 30 FPS / `/thesis/image_raw` | Konfigurasi; 30 FPS bukan throughput detektor terukur |
+| Inferensi | CPU FP32 | Metadata run |
 
-Sumber: JSON sesi, CSV sesi, dan dokumentasi kamera yang tersimpan.
+Nilai detail dan sumber tiap field tersedia di [CSV](T15_lingkungan_uji_op3.csv). Snapshot NUC ini mendeskripsikan perangkat pengujian; ia tidak membuktikan governor/mode daya konstan sepanjang sesi historis.
