@@ -29,11 +29,11 @@
     "status": "complete"
   },
   "kd_hybrid_test_2026_10_22": {
-    "artifact_availability": "Hybrid best.pt seeds 1337 and 2025 are available in the lab workspace but are not included in the public repository pending explicit publication approval.",
+    "artifact_availability": "Hybrid best.pt checkpoints for seeds 1337 and 2025 are published in the public repository; last.pt and training caches remain local.",
     "outputs_sha256": {
       "analisis_performa/INDEKS.md": "d4a5af748424973ed557aaa39ee118dd4c120c30dbd0edf640a53cccd682135f",
-      "analisis_performa/lab_server/HASIL_KD_HYBRID_TEST_2026-10-22.md": "49f4142300dbb56cff0052acd95a5493afa944433130a3163b493147bca2537f",
-      "analisis_performa/lab_server/README.md": "85ed53e64e30a0294a32a10f2f366a26b4e7564e667cc94d496ec3b8e5842b0f",
+      "analisis_performa/lab_server/HASIL_KD_HYBRID_TEST_2026-10-22.md": "145ef799b407be76363edf3d3456eea912c31edf473d45ae3f58f324a0b30ca4",
+      "analisis_performa/lab_server/README.md": "99fc27c02bad6cef5df6f082194d9e08cafc4f7d3a844ea47e8b0b73eed00bb4",
       "analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.csv": "d205207503c4b17453772c68ea2c07f51d6c607b96248c6fbb617a881fccc02b",
       "analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md": "62d6dd4faa3ac687c0ca2d805632cc656c260c14b8e5f7e273982fc5c3da5db4",
       "analisis_performa/tabel/T31_kd_hybrid_test_per_kelas.csv": "a7f1d51d96e4d9858684e43672070c1ca03bc0bea8a525709fbe46433df2637e",
@@ -57,7 +57,7 @@
       "artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/kd_losses.py": "4723b135e0d0a50e023cb67842207d2166558f104ef8bada69d19a7f79655229",
       "artifacts/training_source_snapshots/yolo11_tiny_hybrid_full_seed42/train_kd.py": "5deec9a2abca030e58e4adee8b7226fb933dc1dadd9eaaf499d77aeaea8d91da",
       "configs/model_registry.yaml": "402bad1414ad671106d815e74c337d74778c4b77fedc648c758fc581021b865e",
-      "docs/DECISIONS.md": "189af5e0a7d952bc1d465949f3105f23c1563a0c7bce302b15b0dbe7ed186288",
+      "docs/DECISIONS.md": "2003dcad4b91d13c94aa7fdf94b490bb82cb2c09ec881db1f6da3963113bba4e",
       "docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md": "a8aa72db5aea6123a279d1ea65a7f19b6ca474286d9b5ef336250c1e4df737e6",
       "runs/benchmarks/hybrid_full_paired_20261022.json": "544f30aa35c647dd44b82bb3ad914ecdc144ea21ec0e6aed2fc6b998d3fa379b",
       "runs/final_test/hybrid_full_official_split_20261022/hybrid_full_seed1337_metrics.json": "a4f3d3a900682ed9193f0cc098197b01ebb9b1b5e2d2557e1f6def200b4b5864",
@@ -78,7 +78,7 @@
       "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/results.csv": "db72b17a7de0a10f16248259790ac76a874e6d617b45b33bdc01c82e3933d5ff",
       "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
       "scripts/benchmark_inference.py": "99603d207179aa06e3f882f28c2b56f985cccced57242780583fff572f9fb688",
-      "scripts/build_kd_hybrid_test_tables.py": "b42ebccc7f279a3bdeedb71dcfff60008346c13b50f3c5c1a6a3766735606f89",
+      "scripts/build_kd_hybrid_test_tables.py": "b35d3e38a9e43c43d618cc441bb893a757d3ff73cfe867c89e65e320ec85026b",
       "scripts/evaluate_hybrid_locked_test.py": "efb3e8abdd95bcc424967192e0a8b84b3b604416207b44bc0e58da1a417081b6",
       "scripts/evaluate_locked_test.py": "789760c5556ae4b9626397db85d8b7a73008eabb851831d5f0a6514b9d7ee0cb"
     },

@@ -58,4 +58,4 @@ Semua student memakai arsitektur, parameter, dan GFLOPs yang sama. Selisih waktu
 - Benchmark: [`runs/benchmarks/hybrid_full_paired_20261022.json`](../../runs/benchmarks/hybrid_full_paired_20261022.json), SHA-256 `544f30aa35c647dd44b82bb3ad914ecdc144ea21ec0e6aed2fc6b998d3fa379b`.
 - Tabel keseluruhan: [T30](../tabel/T30_kd_hybrid_test_berpasangan.md); per kelas: [T31](../tabel/T31_kd_hybrid_test_per_kelas.md); benchmark: [T32](../tabel/T32_kd_hybrid_benchmark_server.md); pelatihan: [T33](../tabel/T33_pelatihan_kd_hybrid_full.md).
 - Protokol praevaluasi: [`PROTOKOL_TEST_KD_HYBRID_2026-10-22.md`](../../docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md).
-- `best.pt` Hybrid seed 1337 dan 2025 tersimpan pada direktori run lab/server dan hash-nya dicatat di manifest serta registry. Payload bobot dua seed itu belum dipublikasikan ke repo GitHub publik; reproduksi inferensi di checkout lain memerlukan transfer artefak berizin.
+- `best.pt` Hybrid seed 1337 dan 2025 tersedia di repo GitHub publik pada direktori run masing-masing; SHA-256 dicatat di manifest dan registry. `last.pt` serta cache training tetap lokal.

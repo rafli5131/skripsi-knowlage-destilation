@@ -78,7 +78,7 @@ Hasil VAL mendasari pilihan Hybrid full sebagai kandidat evaluasi lanjutan. Chec
 
 Pada TEST resmi 592 gambar, rerata mAP50–95 Hybrid full **0,7469 ± 0,0022**, supervised **0,7225 ± 0,0035**, dan delta berpasangan **+0,0244 ± 0,0040** pada tiga seed. F1 makro pada confidence 0,25 adalah **0,9071 ± 0,0017** vs **0,9121 ± 0,0026** (delta **−0,0051 ± 0,0011**). Kelas gawang paling perlu ditinjau pada OP3: F1@0,25 per kelas turun sekitar **0,0193** walau AP50–95 naik. Hasil supervised yang diulang identik dengan evaluasi historis. Detail per kelas, interval bootstrap per checkpoint, benchmark L40, dan pelatihan Hybrid ada di [laporan TEST Hybrid](HASIL_KD_HYBRID_TEST_2026-10-22.md), T30–T33. Angka benchmark bukan FPS kamera OP3.
 
-Payload `best.pt` Hybrid seed 1337 dan 2025 tetap berada di lab/server. Hash, manifest, kurva training, dan snapshot kodenya tersedia pada artefak penelitian; bobot dua seed tersebut belum dipublikasikan di repo GitHub publik.
+Checkpoint Hybrid [`best.pt` seed 1337](../../runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt) dan [`best.pt` seed 2025](../../runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt) sudah tersedia di repo GitHub publik. Hash keduanya tercatat di [registry model](../../configs/model_registry.yaml) dan manifest. `last.pt` serta cache training tetap lokal.
 
 ## Data yang masih dibutuhkan
 

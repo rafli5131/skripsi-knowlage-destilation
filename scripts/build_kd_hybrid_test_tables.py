@@ -347,7 +347,7 @@ def write_report(test: dict, historical: dict, overall: list[dict], per_class: l
         f"- Benchmark: [`runs/benchmarks/hybrid_full_paired_20261022.json`](../../runs/benchmarks/hybrid_full_paired_20261022.json), SHA-256 `{sha256(BENCHMARK)}`.",
         "- Tabel keseluruhan: [T30](../tabel/T30_kd_hybrid_test_berpasangan.md); per kelas: [T31](../tabel/T31_kd_hybrid_test_per_kelas.md); benchmark: [T32](../tabel/T32_kd_hybrid_benchmark_server.md); pelatihan: [T33](../tabel/T33_pelatihan_kd_hybrid_full.md).",
         "- Protokol praevaluasi: [`PROTOKOL_TEST_KD_HYBRID_2026-10-22.md`](../../docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md).",
-        "- `best.pt` Hybrid seed 1337 dan 2025 tersimpan pada direktori run lab/server dan hash-nya dicatat di manifest serta registry. Payload bobot dua seed itu belum dipublikasikan ke repo GitHub publik; reproduksi inferensi di checkout lain memerlukan transfer artefak berizin.",
+        "- `best.pt` Hybrid seed 1337 dan 2025 tersedia di repo GitHub publik pada direktori run masing-masing; SHA-256 dicatat di manifest dan registry. `last.pt` serta cache training tetap lokal.",
         "",
     ])
     REPORT.write_text("\n".join(lines), encoding="utf-8")
@@ -392,12 +392,16 @@ def update_manifests() -> None:
     curated = read_json(CURATED_MANIFEST)
     curated["hybrid_test_added_on"] = "2026-10-22"
     curated["scope"] = "Curated lab/server tables plus KD Hybrid full three-seed training and VAL, follow-up TEST on the previously used official split, and L40 benchmark; OP3 metrics remain separate."
-    notes = [item for item in curated.setdefault("notes", []) if not item.startswith("T30–T31 are a Hybrid full versus supervised")]
+    notes = [
+        item for item in curated.setdefault("notes", [])
+        if not item.startswith("T30–T31 are a Hybrid full versus supervised")
+        and not item.startswith("Hybrid best.pt payloads for seeds 1337 and 2025")
+    ]
     curated["notes"] = notes
     note = "T30–T31 are a Hybrid full versus supervised follow-up TEST comparison on a split previously used for teacher and pure KD; T32 is a fixed-frame L40 benchmark, not OP3 FPS; T33 records three Hybrid training runs."
     if note not in notes:
         notes.append(note)
-    availability_note = "Hybrid best.pt payloads for seeds 1337 and 2025 remain local to the lab/server pending explicit approval for public publication; their SHA-256 values are recorded."
+    availability_note = "Hybrid best.pt checkpoints for seeds 1337 and 2025 are published in the public repository; their SHA-256 values are recorded."
     if availability_note not in notes:
         notes.append(availability_note)
     curated.setdefault("sources_sha256", {}).update(sources)
@@ -409,7 +413,7 @@ def update_manifests() -> None:
         "status": "complete",
         "scope": "Three Hybrid full training runs, three paired Hybrid and supervised seeds on official TEST, and a six-model L40 benchmark; TEST had historical use before this extension.",
         "pretest_protocol_commit": "084dfbaa4bd8c8ce7971f8d43aabc41fff1bdc45",
-        "artifact_availability": "Hybrid best.pt seeds 1337 and 2025 are available in the lab workspace but are not included in the public repository pending explicit publication approval.",
+        "artifact_availability": "Hybrid best.pt checkpoints for seeds 1337 and 2025 are published in the public repository; last.pt and training caches remain local.",
         "sources_sha256": sources,
         "outputs_sha256": outputs,
     }
