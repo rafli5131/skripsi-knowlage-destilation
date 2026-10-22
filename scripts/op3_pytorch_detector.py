@@ -15,9 +15,11 @@ from typing import Any
 
 try:
     from .model_registry import checkpoint_for_variant, validate_checkpoint
+    from .op3_runtime_metrics import effective_fps_after_warmup
     from .op3_tracking import detection_identifier, track_ids_for_boxes
 except ImportError:
     from model_registry import checkpoint_for_variant, validate_checkpoint
+    from op3_runtime_metrics import effective_fps_after_warmup
     from op3_tracking import detection_identifier, track_ids_for_boxes
 
 
@@ -71,6 +73,10 @@ def main(args: list[str] | None = None) -> int:
             self.declare_parameter("debug_image_topic", "/vision/debug_image")
             self.declare_parameter("output_dir", str(ROOT / "runs/op3_pytorch"))
             self.declare_parameter("run_id", "")
+            self.declare_parameter("torch_num_threads", 0)
+            self.declare_parameter("torch_interop_threads", 0)
+            self.declare_parameter("warmup_frames", 30)
+            self.declare_parameter("duration_s", 0.0)
 
             value = lambda name: self.get_parameter(name).value
             self.model_variant = str(value("model_variant"))
@@ -111,11 +117,19 @@ def main(args: list[str] | None = None) -> int:
             self.debug_topic = str(value("debug_image_topic"))
             self.output_dir = Path(str(value("output_dir"))).expanduser().resolve()
             self.run_id = str(value("run_id")) or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+            self.requested_torch_threads = int(value("torch_num_threads"))
+            self.requested_torch_interop_threads = int(value("torch_interop_threads"))
+            self.warmup_frames = int(value("warmup_frames"))
+            self.duration_s = float(value("duration_s"))
 
             if self.condition not in {"unknown", "servo_idle", "walking"}:
                 raise ValueError("experiment_condition must be unknown, servo_idle, or walking")
             if self.imgsz <= 0 or not 0 <= self.conf <= 1 or not 0 <= self.iou <= 1:
                 raise ValueError("imgsz must be positive and confidence/IoU must be in [0, 1]")
+            if self.requested_torch_threads < 0 or self.requested_torch_interop_threads < 0:
+                raise ValueError("thread counts must be non-negative; zero keeps the PyTorch default")
+            if self.warmup_frames < 0 or self.duration_s < 0:
+                raise ValueError("warmup_frames and duration_s must be non-negative")
             if self.enable_tracking and not self.tracker_config:
                 raise ValueError("tracker_config must be non-empty when tracking is enabled")
             if self.enable_tracking:
@@ -143,6 +157,10 @@ def main(args: list[str] | None = None) -> int:
             if configured_names != EXPECTED_NAMES:
                 raise ValueError(f"Dataset class mapping mismatch: {configured_names}")
 
+            if self.requested_torch_threads > 0:
+                torch.set_num_threads(self.requested_torch_threads)
+            if self.requested_torch_interop_threads > 0:
+                torch.set_num_interop_threads(self.requested_torch_interop_threads)
             if str(torch.__version__).startswith("2.4") is False:
                 self.get_logger().warning(f"PyTorch runtime is {torch.__version__}; verify checkpoint compatibility")
             self.model = ultralytics.YOLO(str(self.model_path), task="detect")
@@ -170,6 +188,9 @@ def main(args: list[str] | None = None) -> int:
             self.frame_count = 0
             self.error_count = 0
             self.started = time.monotonic()
+            self.measurement_started = None
+            self.stop_reason = "operator_interrupt"
+            self.capture_timestamps_ns: list[int] = []
             self.last_warning = 0.0
 
             self.output_dir.mkdir(parents=True, exist_ok=True)
@@ -180,6 +201,7 @@ def main(args: list[str] | None = None) -> int:
                 "width", "height", "preprocess_ms", "inference_ms", "postprocess_ms",
                 "end_to_end_ms", "fps_running", "process_cpu_percent", "process_rss_bytes",
                 "detection_count", "tracked_count", "n_ball", "n_gawang", "n_robot", "error",
+                "is_warmup", "effective_fps_after_warmup",
             ]
             self.csv_writer = csv.DictWriter(self.csv_stream, fieldnames=self.csv_fields, lineterminator="\n")
             self.csv_writer.writeheader()
@@ -213,6 +235,9 @@ def main(args: list[str] | None = None) -> int:
                 "model_registry": str(self.model_registry),
                 "registered_model": registered_model_name,
                 "registry_entry_sha256": str(model_registry_entry["sha256"]),
+                "checkpoint_local_override_used": bool(model_registry_entry.get("local_override_used", False)),
+                "checkpoint_local_override_path": model_registry_entry.get("local_override_path"),
+                "checkpoint_registry_sha256": str(model_registry_entry["sha256"]),
                 "device": "cpu", "precision": "FP32", "imgsz": self.imgsz,
                 "confidence_threshold": self.conf, "iou_threshold": self.iou,
                 "tracking_enabled": self.enable_tracking,
@@ -223,10 +248,18 @@ def main(args: list[str] | None = None) -> int:
                 "frame_queue_policy": "best_effort_keep_last_depth_1; callback is serial; stale frames are dropped",
                 "python": sys.version, "platform": platform.platform(), "torch": str(torch.__version__),
                 "ultralytics": ultralytics.__version__, "opencv": cv2.__version__,
+                "torch_num_threads_requested": self.requested_torch_threads,
+                "torch_num_threads_actual": torch.get_num_threads(),
+                "torch_interop_threads_requested": self.requested_torch_interop_threads,
+                "torch_interop_threads_actual": torch.get_num_interop_threads(),
+                "logical_cpu_count": psutil.cpu_count(logical=True), "model_device": "cpu",
+                "warmup_frames": self.warmup_frames, "duration_s_after_warmup": self.duration_s,
+                "effective_fps_after_warmup": None,
                 "csv": str(self.csv_path),
             }
             self.metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
             self.watchdog = self.create_timer(2.0, self.check_camera)
+            self.duration_timer = self.create_timer(0.25, self.check_duration)
             self.get_logger().info(
                 f"CPU FP32 checkpoint={self.model_path}; input={self.input_topic}; "
                 f"condition={self.condition}; detections=/vision/detections"
@@ -238,6 +271,9 @@ def main(args: list[str] | None = None) -> int:
 
         def on_image(self, message: Image) -> None:
             self.last_frame_time = time.monotonic()
+            is_warmup = self.frame_count < self.warmup_frames
+            if not is_warmup and self.measurement_started is None:
+                self.measurement_started = time.monotonic()
             started = time.perf_counter()
             now_utc = datetime.now(timezone.utc).isoformat()
             stamp_ns = int(message.header.stamp.sec) * 1_000_000_000 + int(message.header.stamp.nanosec)
@@ -304,6 +340,8 @@ def main(args: list[str] | None = None) -> int:
                     self.debug_publisher.publish(image_message)
 
                 self.frame_count += 1
+                self.capture_timestamps_ns.append(stamp_ns)
+                effective_fps = effective_fps_after_warmup(self.capture_timestamps_ns, self.warmup_frames)
                 if self.detection_csv_stream is not None:
                     self.detection_csv_stream.flush()
                 elapsed_ms = (time.perf_counter() - started) * 1000.0
@@ -317,7 +355,8 @@ def main(args: list[str] | None = None) -> int:
                     "process_rss_bytes": self.process.memory_info().rss,
                     "detection_count": len(detections.detections), "tracked_count": tracked_count,
                     "n_ball": class_counts["ball"], "n_gawang": class_counts["gawang"],
-                    "n_robot": class_counts["robot"], "error": "",
+                    "n_robot": class_counts["robot"], "error": "", "is_warmup": is_warmup,
+                    "effective_fps_after_warmup": effective_fps,
                 })
             except Exception as error:  # Keep the subscriber alive after a bad frame.
                 self.error_count += 1
@@ -328,12 +367,24 @@ def main(args: list[str] | None = None) -> int:
                     "width": message.width, "height": message.height,
                     "end_to_end_ms": (time.perf_counter() - started) * 1000.0,
                     "process_rss_bytes": self.process.memory_info().rss, "error": str(error),
+                    "is_warmup": is_warmup,
+                    "effective_fps_after_warmup": effective_fps_after_warmup(
+                        self.capture_timestamps_ns, self.warmup_frames
+                    ),
                 })
 
         def check_camera(self) -> None:
             if time.monotonic() - self.last_frame_time > 5.0 and time.monotonic() - self.last_warning > 5.0:
                 self.last_warning = time.monotonic()
                 self.get_logger().warning(f"No image received on {self.input_topic} for over 5 seconds")
+
+        def check_duration(self) -> None:
+            if self.duration_s <= 0 or self.measurement_started is None:
+                return
+            if time.monotonic() - self.measurement_started >= self.duration_s:
+                self.stop_reason = "duration_elapsed"
+                self.get_logger().info(f"Configured measurement duration reached: {self.duration_s:.3f}s")
+                rclpy.shutdown()
 
         def close(self) -> None:
             self.csv_stream.flush()
@@ -342,10 +393,18 @@ def main(args: list[str] | None = None) -> int:
                 self.detection_csv_stream.flush()
                 self.detection_csv_stream.close()
             metadata = json.loads(self.metadata_path.read_text(encoding="utf-8"))
+            measured_duration = (
+                time.monotonic() - self.measurement_started if self.measurement_started is not None else 0.0
+            )
+            effective_fps = effective_fps_after_warmup(self.capture_timestamps_ns, self.warmup_frames)
             metadata.update({
-                "status": "stopped", "stopped_at_utc": datetime.now(timezone.utc).isoformat(),
+                "status": "stopped", "stop_reason": self.stop_reason,
+                "stopped_at_utc": datetime.now(timezone.utc).isoformat(),
                 "processed_frames": self.frame_count, "frame_errors": self.error_count,
                 "mean_fps": self.frame_count / max(time.monotonic() - self.started, 1e-9),
+                "measured_frames_after_warmup": max(0, len(self.capture_timestamps_ns) - self.warmup_frames),
+                "measurement_duration_s_after_warmup": measured_duration,
+                "effective_fps_after_warmup": effective_fps,
             })
             self.metadata_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
 

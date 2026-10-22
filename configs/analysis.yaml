@@ -22,6 +22,13 @@ decisions:
     hybrid_approved: true
     hybrid_approved_at: 2026-10-21
     hybrid_modes: [hybrid_feature, hybrid_full]
+    thesis_primary_variant: hybrid_full
+    thesis_primary_variant_decided_at: 2026-10-22
+    thesis_primary_variant_selection: selected on Advance Vision VAL; report pure_v4 and hybrid_feature as ablations
+    thesis_primary_variant_source: analisis_performa/tabel/T04_ablasi_kd_val.csv
+    op3_candidate: hybrid_full_seed1337
+    op3_candidate_selected_from: VAL before Hybrid TEST evaluation
+    thesis_variant_advisor_confirmation: pending
   D3:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_epochs: 100
@@ -31,6 +38,11 @@ decisions:
   D4:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary: fixed confidence 0.25 and VAL-selected best-F1 confidence
+    op3_runtime_proposal:
+      confidence: 0.25
+      nms_iou: 0.45
+      rationale: keep the threshold consistent with existing OP3 runtime sessions
+      status: MENUNGGU PERSETUJUAN PENGGUNA
   D5:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary_grid:
@@ -41,6 +53,15 @@ decisions:
   D6:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary: choose one thread count from OP3 validation sweep
+    op3_thread_sweep_proposal:
+      candidate_threads: [2, 4, 6, 8]
+      warmup_frames: 30
+      duration_s_after_warmup: 60
+      preview: false
+      selection_rule: choose the smallest thread count with median end_to_end_ms <= 1.10 * best_median and effective_fps >= 0.95 * best_effective_fps
+      apply_same_value_to: all models and robot conditions
+      rationale: leave CPU capacity for op3_manager during walking
+      status: MENUNGGU PERSETUJUAN PENGGUNA
   D7:
     status: BELUM DIKUNCI # BELUM DIKUNCI
     temporary: 3 sessions x 60 seconds per variant per condition

@@ -11,6 +11,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = ROOT / "configs/model_registry.yaml"
+DEFAULT_LOCAL_REGISTRY = ROOT / "configs/model_registry_local.yaml"
 
 
 def sha256_file(path: Path) -> str:
@@ -36,7 +37,33 @@ def resolve_registered_path(value: str | Path) -> Path:
     return (ROOT / path).resolve() if not path.is_absolute() else path.resolve()
 
 
-def checkpoint_for_variant(variant: str, registry_path: Path = DEFAULT_REGISTRY) -> tuple[str, Path]:
+def load_local_overrides(
+    registry: dict[str, Any], local_registry_path: Path | None = None
+) -> dict[str, Path]:
+    """Baca path checkpoint lokal opsional tanpa mengubah hash acuan."""
+    path = local_registry_path or DEFAULT_LOCAL_REGISTRY
+    if not path.is_file():
+        return {}
+    data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if not isinstance(data, dict):
+        raise ValueError(f"Format registry lokal harus berupa pemetaan nama ke path: {path}")
+    model_names = registry["models"]
+    overrides: dict[str, Path] = {}
+    for name, value in data.items():
+        if name not in model_names:
+            raise ValueError(f"Model override lokal {name!r} tidak ada di registry utama.")
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(f"Path override lokal untuk {name!r} harus berupa string non-kosong.")
+        overrides[name] = resolve_registered_path(value)
+    return overrides
+
+
+def checkpoint_for_variant(
+    variant: str,
+    registry_path: Path = DEFAULT_REGISTRY,
+    *,
+    local_registry_path: Path | None = None,
+) -> tuple[str, Path]:
     """Pilih checkpoint default yang terdaftar untuk varian runtime."""
     registry = load_registry(registry_path)
     entry_names = {
@@ -51,7 +78,10 @@ def checkpoint_for_variant(variant: str, registry_path: Path = DEFAULT_REGISTRY)
     entry = registry.get("aliases", {}).get(entry_name) or registry["models"].get(entry_name)
     if entry is None:
         raise ValueError(f"Checkpoint default {entry_name!r} tidak tercatat di {registry_path}.")
-    return entry_name, resolve_registered_path(entry["checkpoint"])
+    model_name = str(entry.get("model", entry_name))
+    overrides = load_local_overrides(registry, local_registry_path)
+    path = overrides.get(model_name) or overrides.get(entry_name) or resolve_registered_path(entry["checkpoint"])
+    return entry_name, path
 
 
 def validate_checkpoint(
@@ -59,10 +89,12 @@ def validate_checkpoint(
     *,
     label: str | None = None,
     registry_path: Path = DEFAULT_REGISTRY,
+    local_registry_path: Path | None = None,
 ) -> tuple[str, dict[str, Any]]:
     """Pastikan path dan hash cocok dengan entri model atau alias yang terdaftar."""
     registry = load_registry(registry_path)
     candidate = Path(checkpoint).expanduser().resolve()
+    overrides = load_local_overrides(registry, local_registry_path)
     entries: dict[str, tuple[str, dict[str, Any]]] = {
         **{name: (name, value) for name, value in registry["models"].items()},
         **{
@@ -79,15 +111,20 @@ def validate_checkpoint(
 
     for entry_name, (model_name, entry) in selected.items():
         registered_path = resolve_registered_path(entry["checkpoint"])
-        if registered_path != candidate:
+        local_path = overrides.get(model_name) or overrides.get(entry_name)
+        using_local_override = local_path == candidate and local_path != registered_path
+        if registered_path != candidate and not using_local_override:
             continue
         if not candidate.is_file():
-            raise FileNotFoundError(f"Checkpoint registry tidak ditemukan: {candidate}")
+            raise FileNotFoundError(f"Checkpoint terdaftar tidak ditemukan: {candidate}")
         actual_hash = sha256_file(candidate)
         expected_hash = str(entry["sha256"])
         if actual_hash != expected_hash:
             raise ValueError(
                 f"Hash checkpoint {entry_name!r} tidak cocok: expected={expected_hash}, actual={actual_hash}"
             )
-        return model_name, entry
+        resolved_entry = dict(entry)
+        resolved_entry["local_override_used"] = using_local_override
+        resolved_entry["local_override_path"] = str(candidate) if using_local_override else None
+        return model_name, resolved_entry
     raise ValueError(f"Checkpoint tidak terdaftar: {candidate}")

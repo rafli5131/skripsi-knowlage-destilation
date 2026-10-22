@@ -1,5 +1,7 @@
 # Prompt percobaan KD Hybrid full pada ROBOTIS OP3
 
+> **Pembaruan:** gunakan [PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3_V2.md](PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3_V2.md) untuk persiapan OP3 terbaru. V2 menambahkan audit perangkat, pemilihan thread, transfer teacher privat, dan protokol benchmark Hybrid vs teacher. Prompt lama disimpan sebagai catatan versi terdahulu.
+
 > Salin bagian **Prompt siap pakai** ke agen yang bekerja langsung pada komputer OP3. Gunakan setelah repo terbaru tersedia di robot. Fokus percobaan: checkpoint Hybrid full seed 1337, deteksi dan tracking `ball`, `gawang`, `robot`, lalu pengukuran kamera OP3 saat servo idle dan saat berjalan. Jangan menganggap hasil lab/server sebagai hasil robot.
 
 ## Prompt siap pakai

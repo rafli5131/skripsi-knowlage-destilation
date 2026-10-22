@@ -2,6 +2,8 @@ __pycache__/
 *.py[cod]
 *.cache
 .venv-op3-pytorch/
+/models_local/
+/configs/model_registry_local.yaml
 /runs/*.log
 /runs/kd/*.log
 /runs/kd_hybrid_logs/

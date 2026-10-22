@@ -65,6 +65,10 @@ Parameter ROS:
 | `model_variant` | `kd` | Pilihan checkpoint bawaan: `kd`, `hybrid` (Hybrid full seed 1337), `supervised`, atau `teacher` |
 | `model_path` | kosong | Gunakan checkpoint bawaan variant; path eksplisit harus terdaftar dengan hash yang cocok |
 | `model_registry` | `configs/model_registry.yaml` | Path dan SHA-256 checkpoint tepercaya |
+| `torch_num_threads` | `0` | Jumlah thread intra-op; nol mempertahankan default PyTorch |
+| `torch_interop_threads` | `0` | Jumlah thread inter-op; nol mempertahankan default PyTorch |
+| `warmup_frames` | `30` | Jumlah frame sukses awal yang ditandai `is_warmup` dan tidak masuk hitung FPS efektif |
+| `duration_s` | `0` | Durasi pengukuran setelah warm-up; nol berarti sesi berjalan sampai dihentikan operator |
 | `data_config` | `configs/data_train_val.yaml` | Validasi mapping kelas |
 | `input_topic` | `/thesis/image_raw` | Topic `sensor_msgs/Image` yang tersedia |
 | `imgsz` | `640` | Ukuran sisi input model |
@@ -81,9 +85,12 @@ Parameter ROS:
 
 Threshold runtime 0.25/0.45 merupakan parameter eksplisit dan berbeda tujuan dari confidence floor/NMS protokol evaluasi offline. Catat nilai yang dipakai; jangan menafsirkan hasil tampilan sebagai akurasi kamera.
 
+Untuk checkpoint privat seperti teacher, `configs/model_registry_local.yaml` dapat memetakan nama model terdaftar ke path lokal. Override hanya mengubah path; SHA-256 tetap harus cocok dengan registry utama. File konfigurasi lokal dan direktori `models_local/` diabaikan Git, sehingga checkpoint privat tidak masuk repo.
+
 ## Log dan batas pengukuran
 
 Setiap peluncuran membuat `<run_id>.json` berisi konfigurasi aktual, hash checkpoint, mapping kelas, versi runtime, kondisi, dan status; `<run_id>.csv` mencatat timestamp frame ROS, resolusi, tahap preprocess/inference/postprocess, end-to-end callback, FPS berjalan, CPU/RAM proses, jumlah deteksi, jumlah track, jumlah per kelas, dan error. Ultralytics menangani letterbox dan postprocess/NMS; `Results.speed` menyediakan waktu tiga tahap tersebut. CSV di-flush setelah setiap frame.
+Kolom `is_warmup` dan `effective_fps_after_warmup` ditambahkan di akhir CSV; field lama tetap dipertahankan. FPS efektif memakai timestamp kamera dari frame sukses setelah jumlah frame warm-up yang dikonfigurasi, dengan rumus `(n - 1) / (t_n - t_1)`. JSON akhir mencatat jumlah thread PyTorch aktual, jumlah CPU logis, jumlah frame setelah warm-up, durasi ukur, FPS efektif, dan alasan sesi berhenti.
 Jika `log_detections` aktif, `<run_id>_detections.csv` mencatat kelas, confidence, bbox, dan ID tracker tiap kotak. CSV frame juga menyimpan jumlah deteksi per kelas dan jumlah kotak yang memiliki track ID. Log tidak menyimpan gambar atau video.
 
 QoS kamera menggunakan best-effort, `KEEP_LAST` dengan kedalaman 1, dan callback serial. Frame lama dapat dilewati saat inferensi tertinggal; antrian tidak dimaksudkan untuk menyimpan seluruh frame. Preview mati secara default karena rendering menambah beban. Log menyatakan waktu proses dan sumber timestamp camera-header; FPS dan latensi berlaku untuk runtime host yang benar benar dipakai.
