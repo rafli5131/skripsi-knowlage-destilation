@@ -31,6 +31,30 @@ models:
     gflops_640: 2.4291328
     checkpoint_size_bytes: 1907411
     manifest: runs/kd/yolo11_tiny_pure_kd_v4_seed2025/manifest.json
+  hybrid_full_seed42:
+    checkpoint: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt
+    sha256: 6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1910803
+    manifest: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/manifest.json
+  hybrid_full_seed1337:
+    checkpoint: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt
+    sha256: cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1910803
+    manifest: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/manifest.json
+  hybrid_full_seed2025:
+    checkpoint: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt
+    sha256: 68c4f20db711867e7bb508126638f09cbd482245887d835275d188ebd6e8afca
+    parameters_before_fusion: 810649
+    parameters_after_fusion: 806613
+    gflops_640: 2.4291328
+    checkpoint_size_bytes: 1910803
+    manifest: runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/manifest.json
   supervised_seed42:
     checkpoint: runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt
     sha256: c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e
