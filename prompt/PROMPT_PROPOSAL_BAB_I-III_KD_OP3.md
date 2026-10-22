@@ -1,3 +1,5 @@
+> **Arsip versi awal.** Prompt ini memakai fokus pure KD dan status OP3 sebelum eksperimen KD Hybrid 22 Oktober. Untuk proposal terkini gunakan [PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md](PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md).
+
 # Prompt penyusunan proposal skripsi Bab I–III: KD dan ROBOTIS OP3
 
 > Salin bagian **Prompt siap pakai** untuk meminta penyusunan proposal. Ini adalah instruksi penulisan, bukan perintah menjalankan ulang robot, training, atau evaluasi.

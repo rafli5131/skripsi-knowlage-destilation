@@ -10,7 +10,7 @@ Inventaris terdahulu mengacu pada proyek YOLO11 QAT/OpenVINO yang berbeda; rujuk
 | --- | --- | --- | --- |
 | Lab/server T01–T14 | Spesifikasi model, training, VAL, TEST terkunci, dan benchmark server | [Indeks lab/server](../analisis_performa/lab_server/README.md) | T01–T14 lengkap dalam scope sumbernya; T04 memuat pilot `pure_weighted` satu seed dan tiga baseline. T12/T13 memakai tiga model perwakilan. |
 | KD Hybrid T28–T33 | VAL dan TEST tiga seed berpasangan, benchmark L40, serta pelatihan Hybrid | [Laporan TEST Hybrid](../analisis_performa/lab_server/HASIL_KD_HYBRID_TEST_2026-10-22.md) | Selesai untuk scope lab/server; tidak mengukur kamera OP3 |
-| ROBOTIS OP3 T15–T27 | Runtime kamera, latensi, FPS, CPU/RAM, tracking, dan akurasi frame berlabel | [Indeks umum](../analisis_performa/INDEKS.md) | T15, T18, T20, T22, T23, T25, T26 sebagian dari log lama; T27 sebagian dari evaluasi eksploratif 21 Oktober; T16, T17, T19, T21, T24 belum diukur |
+| ROBOTIS OP3 T15–T27 | Runtime kamera, latensi, FPS, CPU/RAM, tracking, dan akurasi frame berlabel | [Indeks umum](../analisis_performa/INDEKS.md) | Semua tabel diperbarui dari bukti tersimpan; T16 fixed-frame OP3, sapuan thread terkendali T17, termal berkelanjutan T21, kamera-only berpasangan T22, preview terisolasi T24, dan evaluasi kamera lintas adegan T27 tetap memiliki batas pengukuran yang tercatat |
 
 Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisis_performa/tabel/`](../analisis_performa/tabel/). Rincian interval bootstrap tiap checkpoint melengkapi T05 di [folder lab/server](../analisis_performa/lab_server/interval_bootstrap_per_model.md).
 
@@ -18,9 +18,11 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
+| [Proposal Bab I–III KD OP3 — V2 terkini](PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md) | Menulis proposal baru dari keputusan dan bukti KD Hybrid, pure KD, supervised, serta uji OP3 terbaru | Prompt 22 Oktober; buat draf baru dan tandai keputusan pembimbing yang belum final. |
+| [Prompt proposal versi awal (arsip)](PROMPT_PROPOSAL_BAB_I-III_KD_OP3.md) | Riwayat prompt fokus pure KD sebelum hasil Hybrid OP3 | Digantikan V2; jangan gunakan untuk proposal terkini. |
 | [Tabel lab/server KD](PROMPT_TABEL_LAB_SERVER_KD.md) | Menyusun T01–T14 dari artefak training, VAL, TEST terkunci, dan benchmark server | Sudah dipakai untuk kurasi [T01–T14](../analisis_performa/lab_server/README.md) pada 20 Oktober 2026 |
 | [Tabel ROBOTIS OP3 KD](PROMPT_TABEL_ROBOT_OP3_KD.md) | Menyusun T15–T27 dari log robot yang sudah ada | Dipakai saat pembaruan tabel runtime robot, tanpa menjalankan perangkat |
-| [Percobaan KD Hybrid di OP3](PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3.md) | Panduan kandidat Hybrid seed 1337: prasyarat runtime, live tracking, capture, sesi performa, dan evaluasi frame berlabel | Prompt utama untuk percobaan robot berikutnya; hasil OP3 Hybrid belum diukur |
+| [Percobaan KD Hybrid di OP3](PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3.md) | Panduan kandidat Hybrid seed 1337: prasyarat runtime, live tracking, capture, sesi performa, dan evaluasi frame berlabel | Hasil runtime Hybrid tersedia pada dokumentasi percobaan 18–21; gunakan laporan hasil untuk status terkini |
 | [Uji live kamera dan tracking OP3](PROMPT_UJI_LIVE_KAMERA_TRACKING_OP3.md) | Panduan pemeriksaan kamera, kelas, dan ID tracking pada perangkat | Hasil uji harus dicatat sebagai observasi runtime, bukan mAP kamera |
 | [Monitor dan rekam OP3 bersamaan](PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md) | Deteksi/ID live di jendela sambil merekam frame mentah dari topic kamera yang sama | Pra-label setelah capture; log sesi gabungan bukan benchmark |
 | [Kumpul frame dan label kamera OP3](PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md) | Pengambilan frame mentah dan pra-label otomatis untuk ditinjau manusia | Gambar dan label draf di `data/op3_camera_eval/sessions/<session_id>/`; mAP menunggu label final |
