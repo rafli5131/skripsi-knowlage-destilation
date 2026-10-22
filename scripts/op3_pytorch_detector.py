@@ -88,7 +88,12 @@ def main(args: list[str] | None = None) -> int:
                 label=registered_default_name if not configured_model_path else None,
                 registry_path=self.model_registry,
             )
-            expected_prefix = {"kd": "kd_", "supervised": "supervised_", "teacher": "teacher_"}[self.model_variant]
+            expected_prefix = {
+                "kd": "kd_",
+                "hybrid": "hybrid_full_",
+                "supervised": "supervised_",
+                "teacher": "teacher_",
+            }[self.model_variant]
             if not registered_model_name.startswith(expected_prefix):
                 raise ValueError(
                     f"Checkpoint {registered_model_name!r} tidak cocok dengan model_variant={self.model_variant!r}"

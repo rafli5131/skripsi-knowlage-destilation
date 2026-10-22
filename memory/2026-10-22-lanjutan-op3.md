@@ -12,13 +12,13 @@ Catatan ini melanjutkan [memori eksperimen KD Hybrid](2026-10-22-kd-hybrid.md). 
 
 ## Temuan persiapan uji robot
 
-- [`scripts/model_registry.py`](../scripts/model_registry.py) saat ini hanya mengenal varian runtime `kd`, `supervised`, dan `teacher`. [`scripts/op3_pytorch_detector.py`](../scripts/op3_pytorch_detector.py) juga menolak nama model yang tidak diawali prefiks varian tersebut. Memberi `model_path` Hybrid sambil memakai `model_variant:=kd` akan ditolak. Dukungan varian `hybrid` harus ditambahkan secara kecil dan tercatat sebelum node Hybrid dijalankan; jangan mengubah alias `op3_default` atau menyamarkan Hybrid sebagai KD murni.
+- Audit setelah prompt pertama dibuat menemukan bahwa [`scripts/model_registry.py`](../scripts/model_registry.py) dan [`scripts/op3_pytorch_detector.py`](../scripts/op3_pytorch_detector.py) belum menerima varian `hybrid`. Pemetaan `hybrid` → `hybrid_full_seed1337` dan pemeriksaan prefiks `hybrid_full_` kemudian ditambahkan. Alias `op3_default` tetap KD murni. Checkout robot harus memuat pembaruan ini sebelum uji Hybrid.
 - Prompt kamera lama memakai `models/weights/kd_student_best.pt` dan cocok untuk KD murni, sehingga uji Hybrid menggunakan [prompt baru khusus OP3](../prompt/PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3.md). Prompt baru mengharuskan hash checkpoint, kelas `ball/gawang/robot`, versi runtime, topic kamera, dan kondisi robot diverifikasi.
 - `scripts/capture_op3_frames.py` menyimpan gambar mentah di `data/op3_camera_eval/sessions/<session_id>/images/`. `scripts/prelabel_op3_frames.py` membuat draf di `labels_auto/`; hasilnya **bukan** ground truth. Semua frame, termasuk frame kosong, harus ditinjau manusia menjadi `labels_reviewed/` sebelum menghitung mAP/P/R/F1 kamera OP3.
 
 ## Langkah berikutnya
 
-1. Siapkan checkout terbaru pada komputer OP3, cek dependensi ROS 2 Jazzy dan checkpoint Hybrid seed 1337, lalu tambahkan dukungan varian `hybrid` pada runtime tanpa mengganti model bawaan.
+1. Tarik checkout terbaru pada komputer OP3; periksa bahwa runtime menerima `model_variant:=hybrid`, dependensi ROS 2 Jazzy tersedia, dan hash checkpoint Hybrid seed 1337 cocok dengan registry. Model bawaan `op3_default` tidak perlu diganti.
 2. Jalankan sesi fungsi kamera dan tracking saat `servo_idle` sambil memantau serta merekam frame mentah. Agen tidak memberi perintah servo/gait; kondisi fisik ditentukan operator. Jalankan sesi `walking` terpisah ketika operator siap. Log sesi monitor + capture adalah observasi, bukan benchmark performa.
 3. Buat sesi runtime bersih dengan preview/capture mati dan pengaturan sama per model/kondisi; simpan latensi, FPS frame terproses, CPU, RAM, serta data deteksi/track. Untuk perbandingan kausal distilasi, bandingkan Hybrid seed 1337 dengan supervised seed 1337 pada protokol yang sama.
 4. Pra-label setelah capture selesai, tinjau manual seluruh frame, lalu evaluasi model pada gambar OP3 yang **sama** dan label final yang sama. Isi T15–T27 hanya dari bukti robot yang memenuhi syarat; status lain tetap `[BELUM DIUKUR]`.

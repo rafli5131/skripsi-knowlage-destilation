@@ -62,7 +62,7 @@ Parameter ROS:
 
 | Parameter | Default | Kegunaan |
 | --- | --- | --- |
-| `model_variant` | `kd` | Pilihan alias bawaan: `kd`, `supervised`, atau `teacher` |
+| `model_variant` | `kd` | Pilihan checkpoint bawaan: `kd`, `hybrid` (Hybrid full seed 1337), `supervised`, atau `teacher` |
 | `model_path` | kosong | Gunakan checkpoint bawaan variant; path eksplisit harus terdaftar dengan hash yang cocok |
 | `model_registry` | `configs/model_registry.yaml` | Path dan SHA-256 checkpoint tepercaya |
 | `data_config` | `configs/data_train_val.yaml` | Validasi mapping kelas |

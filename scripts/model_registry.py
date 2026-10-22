@@ -39,7 +39,12 @@ def resolve_registered_path(value: str | Path) -> Path:
 def checkpoint_for_variant(variant: str, registry_path: Path = DEFAULT_REGISTRY) -> tuple[str, Path]:
     """Pilih checkpoint default yang terdaftar untuk varian runtime."""
     registry = load_registry(registry_path)
-    entry_names = {"kd": "op3_default", "supervised": "supervised_seed42", "teacher": "teacher_fp32"}
+    entry_names = {
+        "kd": "op3_default",
+        "hybrid": "hybrid_full_seed1337",
+        "supervised": "supervised_seed42",
+        "teacher": "teacher_fp32",
+    }
     if variant not in entry_names:
         raise ValueError(f"Varian model tidak dikenal: {variant!r}")
     entry_name = entry_names[variant]
