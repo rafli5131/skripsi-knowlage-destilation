@@ -1,5 +1,7 @@
 # Prompt penulisan Bab IV–V skripsi KD dan ROBOTIS OP3
 
+> **Digantikan 23 Oktober 2026 oleh [`PROMPT_BAB_IV_V_HASIL_KD_OP3_V2.md`](PROMPT_BAB_IV_V_HASIL_KD_OP3_V2.md).** Bhre menetapkan uji live OP3 dengan kondisi setara sebagai pengujian akhir untuk rumusan masalah nomor 4 dan 5, sehingga arahan di bawah yang menempatkan live OP3 di luar hasil utama tidak berlaku lagi. Berkas ini disimpan sebagai riwayat; jangan dipakai untuk draf baru.
+
 Gunakan prompt ini **setelah** tabel dan dokumen hasil ditinjau. Instruksi ini hanya menyiapkan naskah; jangan menjalankan robot, kamera, training, atau pengujian ulang.
 
 ## Instruksi siap pakai

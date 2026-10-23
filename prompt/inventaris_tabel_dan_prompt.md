@@ -1,6 +1,6 @@
 # Inventaris prompt dan tabel skripsi
 
-Pembaruan: 23 Oktober 2026. Eksperimen mencakup **KD murni teacher-only** dan **KD Hybrid full**; student supervised menjadi kontrol. T35 merangkum waktu training dan sesi TEST untuk naskah; evaluasi live OP3 tidak menjadi hasil utama skripsi sesuai arahan terbaru. Prompt adalah instruksi kerja; angka dan klaim penelitian harus tetap ditelusuri ke artefak dan tabel hasil.
+Pembaruan: 23 Oktober 2026. Eksperimen mencakup **KD murni teacher-only** dan **KD Hybrid full**; student supervised menjadi kontrol. T35 merangkum waktu training dan sesi TEST sebagai informasi pendukung. Sejak 23 Oktober 2026, atas arahan Bhre, uji live OP3 dengan kondisi setara (empat model termasuk teacher, idle dan berjalan, tiga ulangan) menjadi pengujian akhir untuk rumusan masalah nomor 4 dan 5; arahan sebelumnya yang menempatkan live OP3 di luar hasil utama tidak berlaku lagi. Prompt adalah instruksi kerja; angka dan klaim penelitian harus tetap ditelusuri ke artefak dan tabel hasil.
 
 Inventaris terdahulu mengacu pada proyek YOLO11 QAT/OpenVINO yang berbeda; rujukan aktif adalah tabel T01–T35 di repository ini.
 
@@ -19,8 +19,12 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
-| [Proposal Bab I–III KD OP3 — V2 terkini](PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md) | Menulis proposal baru dari keputusan dan bukti KD Hybrid, pure KD, supervised, serta uji OP3 terbaru | Prompt 22 Oktober; buat draf baru dan tandai keputusan pembimbing yang belum final. |
-| [Bab IV–V hasil KD — fokus waktu training/TEST](PROMPT_BAB_IV_V_HASIL_KD_OP3_2026-10-23.md) | Menulis draf baru hasil dan kesimpulan dari training, VAL/TEST, durasi sesi TEST, dan benchmark per gambar | Prompt siap pakai; evaluasi live OP3 di luar hasil utama. |
+| [Proposal Bab 1 sampai 3 sesuai template dan Panduan FILKOM](PROMPT_PROPOSAL_BAB_1-3_TEMPLATE_FILKOM.md) | Menyusun proposal `.docx` Bab 1 sampai 3, Daftar Referensi, dan bagian awal mengikuti Template-ProposalSkripsi-v3.0 dan Panduan v3.0 (RPC implementatif-pengembangan, struktur skripsi tujuh bab), melanjutkan hasil TH-0 | Prompt aktif untuk proposal; mulai dari TH-1 |
+| [Proposal Bab I–III KD OP3 V2 (arsip)](PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md) | Versi 22 Oktober | Digantikan prompt template FILKOM; jangan gunakan untuk draf baru. |
+| [Perbaikan objektif KD jalur tengah](PROMPT_PERBAIKAN_KD_JALUR_TENGAH.md) | Server lab: diagnosis objektif KD hibrida, mode baru `hybrid_v2` (KL-DFL, bobot foreground kotak, penyetelan di VAL), konfirmasi tiga seed, ablasi teacher YOLO11s ke student t di VAL saja, aturan seleksi terkunci sebelum training, serah terima model final ke uji live | Belum dijalankan; dijalankan sebelum uji live setara; menghasilkan T39 sampai T43 |
+| [Uji ulang live OP3 setara dengan teacher](PROMPT_UJI_ULANG_LIVE_SETARA_OP3_DENGAN_TEACHER.md) | Pengujian akhir: teacher, KD Hybrid seed 1337, Supervised seed 1337, dan KD murni seed 42 pada kondisi idle (semua servo menyala) dan berjalan (ID 19/20 torque on tanpa gerak), preview SSH -X aktif, tiga ulangan dengan urutan digilir, dokumentasi per run, serta evaluasi offline empat model pada 260 frame | Belum dijalankan; menghasilkan T36, T37, dan T38 |
+| [Bab IV–V hasil KD V2: uji live OP3 sebagai pengujian akhir](PROMPT_BAB_IV_V_HASIL_KD_OP3_V2.md) | Menulis draf baru Bab IV dan V yang menjawab lima rumusan masalah; RQ4 dan RQ5 dari uji live setara | Prompt aktif untuk naskah |
+| [Bab IV–V hasil KD versi 23 Oktober (arsip)](PROMPT_BAB_IV_V_HASIL_KD_OP3_2026-10-23.md) | Versi lama yang berfokus pada waktu training/TEST | Digantikan V2; jangan gunakan untuk draf baru. |
 | [Prompt proposal versi awal (arsip)](PROMPT_PROPOSAL_BAB_I-III_KD_OP3.md) | Riwayat prompt fokus pure KD sebelum hasil Hybrid OP3 | Digantikan V2; jangan gunakan untuk proposal terkini. |
 | [Tabel lab/server KD](PROMPT_TABEL_LAB_SERVER_KD.md) | Menyusun T01–T14 dari artefak training, VAL, TEST terkunci, dan benchmark server | Sudah dipakai untuk kurasi [T01–T14](../analisis_performa/lab_server/README.md) pada 20 Oktober 2026 |
 | [Tabel ROBOTIS OP3 KD](PROMPT_TABEL_ROBOT_OP3_KD.md) | Menyusun T15–T27 dari log robot yang sudah ada | Dipakai saat pembaruan tabel runtime robot, tanpa menjalankan perangkat |

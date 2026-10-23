@@ -1,5 +1,7 @@
 # Prompt proposal skripsi Bab I–III: Knowledge Distillation dan ROBOTIS OP3
 
+> **Digantikan 23 Oktober 2026 oleh [`PROMPT_PROPOSAL_BAB_1-3_TEMPLATE_FILKOM.md`](PROMPT_PROPOSAL_BAB_1-3_TEMPLATE_FILKOM.md)**, yang mengikuti template proposal dan Panduan Skripsi FILKOM v3.0. Berkas ini disimpan sebagai riwayat; jangan dipakai untuk draf baru.
+
 Gunakan prompt ini untuk membuat draf proposal baru dari bukti repository. Jangan menimpa draf lama.
 
 ## Instruksi siap pakai
