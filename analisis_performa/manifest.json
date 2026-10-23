@@ -84,6 +84,45 @@
     },
     "status": "complete"
   },
+  "kd_objective_diagnosis_2026_10_23": {
+    "base_commit": "dc896667d3bdc3bc7a0ee9067a059a5421b7ef52",
+    "limitations": [
+      "Trained feature projector absent from student checkpoints",
+      "One fixed batch for head/loss magnitude is diagnostic",
+      "VAL-selected best confidence is not an independent estimate"
+    ],
+    "outputs_sha256": {
+      "analisis_performa/lab_server/HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md": "49be2ca94cf6a0e4b9e069b0555fb4ffdf0d034a4b3d4c42b34a2dfaa00bb2b5",
+      "analisis_performa/tabel/T39_diagnosis_objektif_kd.csv": "4dcc798258ea8c19d955c21f731fc702834e1bb0db48b503c7e86b533f861b2e",
+      "analisis_performa/tabel/T39_diagnosis_objektif_kd.md": "704c9ff1f723d69c8ca44d9ed860edc279265b585151053ee72029e183d2bd14",
+      "analisis_performa/tabel/T39_histogram_confidence_tp_fp.csv": "ec99771c8ad0464095ab20680672e987c13578f748329baebbc2a8190a1baec5",
+      "dokumentasi/2026-10-23/percobaan-29-diagnosis-kd-jalur-tengah/README_ID.md": "75a59a912af3011008ebff182b9098c95f0f34eb262c497e75d2c46cab6777f5",
+      "runs/kd_diagnosis/20261023_heads_val_batch16.json": "50d4047a2b232431a87c320d6b86b5e358c9c84a824a3659c9cb97501f769179",
+      "runs/kd_diagnosis/20261023_label_head_loss_val_batch16.json": "141c08628ee34ea76b0ac0270895b0cf8211de590acb45cf1407b8de5e67b255",
+      "runs/val_ablation/hybrid_20261023_phase0_reproduction/hybrid_full_seed42_val.json": "44fbbb212ed9191a78e16e1e2d1047182a76688051db61a7d2bc65120b6d2154",
+      "runs/val_ablation/hybrid_20261023_phase0_reproduction/supervised_seed42_val.json": "af8b8990a924787d63a801e78960529d17556eb341ee43534bd06c8901a60ca6",
+      "runs/val_diagnostics/hybrid_objective_20261023/hybrid_full_seed1337_predictions.json": "a57fd40b4468f705a453ccbc290428c3a121cb753ff89e2d6e6170995e51c0c9",
+      "runs/val_diagnostics/hybrid_objective_20261023/hybrid_full_seed2025_predictions.json": "26cbed506b98a1b9204d6fd1ec91b4d616ec5dbe3f77c25eb86d338f119f9ed9"
+    },
+    "report": "analisis_performa/lab_server/HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md",
+    "scope": "Official VAL only; no new training, TEST inference, or robot use",
+    "sources_sha256": {
+      "artifacts/advance_vision_dataset_fingerprint.json": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+      "configs/data_train_val.yaml": "e7e52327911a956df210f96c936870145321a0bfbc5ac6a4b52ab3df2cc4e9dd",
+      "configs/kd_hybrid_full.yaml": "f6d3d1407dca6bc53c56f26dd7d5a773177387b96279eb9629d6df56e24c1a79",
+      "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+      "runs/val_diagnostics/official_split_20261020/hybrid_full_seed42_predictions.json": "1f82a475c33193cd9ded585499a472f3c0d9e7cb152a2b4f5f014ab5084d5bb8",
+      "runs/val_diagnostics/official_split_20261020/supervised_seed1337_predictions.json": "ac9a5ea69c5f431fb8c402e3152ddddb62fc82b94ed7317fc6f475a4f6241453",
+      "runs/val_diagnostics/official_split_20261020/supervised_seed2025_predictions.json": "0ad9cc6ab106d188d79fc4ae802fc08c7f88b59aed6a92a271f21efcc3949187",
+      "runs/val_diagnostics/official_split_20261020/supervised_seed42_predictions.json": "3d959cdc49072713b1d9b16392164349e2ef351a93126697c25811036391df2c",
+      "scripts/build_t39_kd_diagnosis.py": "8ed64288ea094eac0bb1e004bb10e2f3abb1cbbd94a40f67278541190df3fdf7",
+      "scripts/capture_t39_val_predictions.py": "f05a1775b37906183b4f791332d95c7483864fb9e9d9e90a0be1923d28b37a01",
+      "scripts/diagnose_kd_heads_val.py": "c2af520e50c831f52fc51514a73231fc9fad60993a2eae5177daf933d4eaca41",
+      "scripts/diagnose_kd_label_head_loss_val.py": "b7ab2013b98ae364933d421a3f07c775f66eff92ec10dcce22eb88c46274fc62"
+    },
+    "status": "phase0_complete_phase1_partial",
+    "teacher_checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+  },
   "notes": [
     "Historical webcam runs predate tracking IDs.",
     "Advance Vision TEST metrics are image-level dataset results, not OP3 camera accuracy.",

@@ -24,10 +24,12 @@ from ultralytics.nn.distill_model import DistillationModel
 try:
     from .experiment_paths import resolve_training_data, write_resolved_data_yaml
     from .kd_losses import pure_weighted_head_losses
+    from .kd_losses_v2 import hybrid_v2_head_losses
     from .training_runtime import verify_training_runtime
 except ImportError:
     from experiment_paths import resolve_training_data, write_resolved_data_yaml
     from kd_losses import pure_weighted_head_losses
+    from kd_losses_v2 import hybrid_v2_head_losses
     from training_runtime import verify_training_runtime
 
 
@@ -344,6 +346,110 @@ def install_hybrid_full_kd_loss(distillation: dict[str, Any]) -> None:
     DistillationModel.loss = hybrid_full_loss
 
 
+def install_hybrid_v2_kd_loss(distillation: dict[str, Any], run_dir: Path) -> None:
+    """Use the old hybrid feature/label objective with configurable head KD."""
+    feature_weight = float(distillation["feature_weight"])
+    box_weight = float(distillation["box_weight"])
+    class_weight = float(distillation["class_weight"])
+    temperature = float(distillation["temperature"])
+    box_tau = float(distillation["box_tau"])
+    box_kd = str(distillation["box_kd"])
+    box_fg_weighting = str(distillation["box_fg_weighting"])
+    class_kd_weighting = str(distillation["class_kd_weighting"])
+    class_floor_alpha = float(distillation["class_floor_alpha"])
+    if min(feature_weight, box_weight, class_weight) < 0:
+        raise KDRunError("KD weights must be nonnegative")
+    if temperature <= 0 or box_tau <= 0 or not 0 <= class_floor_alpha <= 1:
+        raise KDRunError("Invalid KD temperature or class floor alpha")
+    if box_kd not in {"smooth_l1", "kl_dfl"} or box_fg_weighting not in {"none", "teacher_score"}:
+        raise KDRunError("Invalid hybrid_v2 box loss configuration")
+    if class_kd_weighting not in {"none", "floor"}:
+        raise KDRunError("Invalid hybrid_v2 class loss configuration")
+    sample_path = run_dir / "loss_component_samples.jsonl"
+    calls = 0
+
+    def head_branches(head: Any) -> list[dict[str, torch.Tensor]]:
+        if isinstance(head, dict) and "one2many" in head:
+            branches = [head["one2many"]]
+            if isinstance(head.get("one2one"), dict):
+                branches.append(head["one2one"])
+            return branches
+        return [head] if isinstance(head, dict) and {"boxes", "scores"}.issubset(head) else []
+
+    def hybrid_v2_loss(self, batch, preds=None):
+        nonlocal calls
+        if not self.training:
+            return ORIGINAL_DISTILLATION_LOSS(self, batch, preds)
+        self._teacher_feats.clear()
+        self._student_feats.clear()
+        with torch.no_grad():
+            self.teacher_model(batch["img"])
+        student_preds = self.student_model(batch["img"])
+        regular_loss, loss_items = self.student_model.loss(batch, student_preds)
+        teacher_head = self._teacher_feats[self.feats_idx[-1]]
+        student_head = self._student_feats[self.feats_idx[-1]]
+        teacher_scores = (
+            self.decouple_outputs(teacher_head, branch="one2many")["scores"]
+            + self.decouple_outputs(teacher_head, branch="one2one")["scores"]
+        ) / 2
+        neck_features = [self._teacher_feats[index] for index in self.feats_idx[:-1]]
+        score_parts = torch.split(
+            teacher_scores,
+            [feature.shape[-2] * feature.shape[-1] for feature in neck_features],
+            dim=-1,
+        )
+        teacher_scores = tuple(part.sigmoid().max(dim=1, keepdim=True).values for part in score_parts)
+        feature_loss = torch.zeros((), device=batch["img"].device)
+        for level, feature_index in enumerate(self.feats_idx[:-1]):
+            teacher_feature = self.decouple_outputs(self._teacher_feats[feature_index])
+            student_feature = self.projector[level](self.decouple_outputs(self._student_feats[feature_index]))
+            feature_loss = feature_loss + self.loss_sl2(
+                student_feature, teacher_feature, feat_idx=level, teacher_scores=teacher_scores
+            )
+        teacher_branches = head_branches(self.decouple_outputs(teacher_head))
+        student_branches = head_branches(self.decouple_outputs(student_head))
+        if not teacher_branches or len(teacher_branches) != len(student_branches):
+            raise KDRunError("Teacher and student Detect branches differ")
+        box_losses: list[torch.Tensor] = []
+        class_losses: list[torch.Tensor] = []
+        for teacher_branch, student_branch in zip(teacher_branches, student_branches):
+            teacher_boxes = teacher_branch["boxes"]
+            student_boxes = student_branch["boxes"]
+            teacher_logits = teacher_branch["scores"]
+            student_logits = student_branch["scores"]
+            teacher_reg_max = int(self.teacher_model.model[-1].reg_max)
+            student_reg_max = int(self.student_model.model[-1].reg_max)
+            if teacher_reg_max != student_reg_max:
+                raise KDRunError("Teacher and student reg_max differ")
+            box_loss, class_loss = hybrid_v2_head_losses(
+                teacher_boxes, student_boxes, teacher_logits, student_logits,
+                box_kd=box_kd, box_tau=box_tau, box_fg_weighting=box_fg_weighting,
+                class_kd_weighting=class_kd_weighting, class_floor_alpha=class_floor_alpha,
+                temperature=temperature, reg_max=teacher_reg_max,
+            )
+            box_losses.append(box_loss)
+            class_losses.append(class_loss)
+        box_loss = torch.stack(box_losses).mean()
+        class_loss = torch.stack(class_losses).mean()
+        kd_loss = feature_weight * feature_loss + box_weight * box_loss + class_weight * class_loss
+        loss_items["dis_loss"] = kd_loss.detach().reshape(1)
+        calls += 1
+        if calls == 1 or calls % 100 == 0:
+            sample = {
+                "train_batch_call": calls, "batch_size": int(batch["img"].shape[0]),
+                "labeled_box": float(regular_loss[0].detach()),
+                "labeled_class": float(regular_loss[1].detach()),
+                "labeled_dfl": float(regular_loss[2].detach()),
+                "feature_kd": float(feature_loss.detach()),
+                "box_kd": float(box_loss.detach()), "class_kd": float(class_loss.detach()),
+            }
+            with sample_path.open("a", encoding="utf-8") as stream:
+                stream.write(json.dumps(sample, sort_keys=True) + "\n")
+        return torch.cat([regular_loss, (kd_loss * batch["img"].shape[0]).reshape(1)]), loss_items
+
+    DistillationModel.loss = hybrid_v2_loss
+
+
 def validate_config(
     config_path: Path,
     seed_override: int | None = None,
@@ -403,15 +509,15 @@ def main() -> int:
         training = config["training"]
         distillation = config["distillation"]
         mode = str(distillation.get("mode", "pure_v4"))
-        if mode not in {"pure_v4", "pure_weighted", "hybrid_feature", "hybrid_full"}:
+        if mode not in {"pure_v4", "pure_weighted", "hybrid_feature", "hybrid_full", "hybrid_v2"}:
             raise KDRunError(f"Unsupported KD mode: {mode!r}")
         train_dis = float(distillation.get("dis", distillation["feature_weight"]))
         if train_dis < 0:
             raise KDRunError("Distillation weight dis must be nonnegative")
         if mode == "hybrid_feature" and train_dis != 6.0:
             raise KDRunError("hybrid_feature must use verified Ultralytics default dis=6.0")
-        if mode == "hybrid_full" and train_dis != float(distillation["feature_weight"]):
-            raise KDRunError("hybrid_full dis must equal feature_weight for provenance")
+        if mode in {"hybrid_full", "hybrid_v2"} and train_dis != float(distillation["feature_weight"]):
+            raise KDRunError(f"{mode} dis must equal feature_weight for provenance")
         manifest_path = run_dir.parent / f".{run_dir.name}.manifest.json"
         if manifest_path.exists():
             raise KDRunError(f"A pending manifest already exists; inspect it before rerunning: {manifest_path}")
@@ -430,6 +536,8 @@ def main() -> int:
         implementation_snapshot = source_snapshot_dir / "distill_model.py"
         head_loss_source = Path(inspect.getsourcefile(pure_weighted_head_losses) or "").resolve()
         head_loss_snapshot = source_snapshot_dir / "kd_losses.py"
+        v2_source = Path(inspect.getsourcefile(hybrid_v2_head_losses) or "").resolve()
+        v2_snapshot = source_snapshot_dir / "kd_losses_v2.py"
         if not head_loss_source.is_file():
             raise KDRunError(f"KD head-loss source is missing: {head_loss_source}")
         if source_snapshot_dir.exists():
@@ -440,6 +548,9 @@ def main() -> int:
                 or sha256_file(training_script_snapshot) != sha256_file(script_source)
                 or sha256_file(implementation_snapshot) != sha256_file(implementation_source)
                 or sha256_file(head_loss_snapshot) != sha256_file(head_loss_source)
+                or (mode == "hybrid_v2" and (
+                    not v2_snapshot.is_file() or sha256_file(v2_snapshot) != sha256_file(v2_source)
+                ))
             ):
                 raise KDRunError(
                     f"Existing training source snapshot differs from this attempt; use a new run name: {source_snapshot_dir}"
@@ -449,12 +560,16 @@ def main() -> int:
             training_script_snapshot.write_bytes(script_source.read_bytes())
             implementation_snapshot.write_bytes(implementation_source.read_bytes())
             head_loss_snapshot.write_bytes(head_loss_source.read_bytes())
+            if mode == "hybrid_v2":
+                v2_snapshot.write_bytes(v2_source.read_bytes())
         if sha256_file(training_script_snapshot) != sha256_file(script_source):
             raise KDRunError("Training script source snapshot does not match the running script.")
         if sha256_file(implementation_snapshot) != sha256_file(implementation_source):
             raise KDRunError("DistillationModel source snapshot does not match the imported implementation file.")
         if sha256_file(head_loss_snapshot) != sha256_file(head_loss_source):
             raise KDRunError("KD head-loss source snapshot does not match the running module.")
+        if mode == "hybrid_v2" and sha256_file(v2_snapshot) != sha256_file(v2_source):
+            raise KDRunError("Hybrid v2 head-loss source snapshot does not match the running module.")
         teacher_parameters = model_parameter_count(teacher)
         student_parameters = model_parameter_count(student)
         if student_parameters >= teacher_parameters:
@@ -470,6 +585,8 @@ def main() -> int:
                 if mode == "hybrid_feature" else
                 "KD hibrida: loss deteksi berlabel ditambah distilasi fitur, kotak, dan kelas pure_v4"
                 if mode == "hybrid_full" else
+                "KD hibrida v2: loss deteksi berlabel ditambah KD fitur dan head terkendali"
+                if mode == "hybrid_v2" else
                 f"{mode} pure FP32 teacher-only distillation; no supervised training loss and no QAT"
             ),
             "run_config_path": str(args.config.expanduser().resolve()),
@@ -491,6 +608,10 @@ def main() -> int:
                 "sha256": sha256_file(head_loss_snapshot),
                 "snapshot_recorded_at_run_time": True,
             },
+            **({"hybrid_v2_implementation": {
+                "path": str(v2_snapshot), "source_path": str(v2_source),
+                "sha256": sha256_file(v2_snapshot), "snapshot_recorded_at_run_time": True,
+            }} if mode == "hybrid_v2" else {}),
             "teacher_checkpoint": str(teacher),
             "teacher_sha256": sha256_file(teacher),
             "resolved_inputs": {
@@ -522,7 +643,7 @@ def main() -> int:
                 "type": (
                     "labeled detection plus feature distillation" if mode == "hybrid_feature" else
                     "labeled detection plus feature, box-output, and class-output distillation"
-                    if mode == "hybrid_full" else
+                    if mode in {"hybrid_full", "hybrid_v2"} else
                     "feature, box-output, and class-output distillation; no ground-truth loss"
                 ),
                 "mode": mode,
@@ -537,6 +658,9 @@ def main() -> int:
                 "box_weight": float(distillation["box_weight"]),
                 "class_weight": float(distillation["class_weight"]),
                 "class_temperature": float(distillation["temperature"]),
+                **({key: distillation[key] for key in (
+                    "box_kd", "box_tau", "box_fg_weighting", "class_kd_weighting", "class_floor_alpha"
+                )} if mode == "hybrid_v2" else {}),
             },
             "training": training,
             "versions": {
@@ -553,6 +677,8 @@ def main() -> int:
             install_teacher_only_kd_loss(distillation)
         elif mode == "hybrid_full":
             install_hybrid_full_kd_loss(distillation)
+        elif mode == "hybrid_v2":
+            install_hybrid_v2_kd_loss(distillation, run_dir)
         # hybrid_feature memakai DistillationModel.loss bawaan tanpa penimpaan.
         model = YOLO(str(student), task="detect")
         results = model.train(

@@ -1,0 +1,28 @@
+{"event": "driver_started", "stages": ["s4", "s5", "s6", "s7", "s8"], "time_utc": "2026-10-23T08:21:04.321905+00:00", "training_script_sha256": "b509d4e56505a39f54cae92a5bca189d0eacc607cb8a1a34b65cd1bc03f14bcd"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s4.yaml", "config_sha256": "7880a4b53c61dce4c73417c131cbd79acadd490a7225f8c3cbae69c8b7a76f8a", "event": "training_started", "stage": "s4", "time_utc": "2026-10-23T08:21:04.342374+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s4_seed42/weights/best.pt", "event": "training_complete", "stage": "s4", "time_utc": "2026-10-23T09:35:57.657958+00:00"}
+{"event": "evaluation_started", "stage": "s4", "time_utc": "2026-10-23T09:35:57.661834+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s4_seed42_val.json", "stage": "s4", "time_utc": "2026-10-23T09:36:36.399095+00:00"}
+{"accepted": false, "compared_to": "s2", "delta_f1_conf025": 3.558923943192127e-05, "delta_map50_95": 0.0023275855114492927, "event": "selection", "stage": "s4", "time_utc": "2026-10-23T09:36:36.403144+00:00"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s5.yaml", "config_sha256": "d5f50b5b3c1afc03d35d5f6650440687e287d7c6738b9483ea8df7b4f4541d96", "event": "training_started", "stage": "s5", "time_utc": "2026-10-23T09:36:36.421872+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s5_seed42/weights/best.pt", "event": "training_complete", "stage": "s5", "time_utc": "2026-10-23T10:50:09.961229+00:00"}
+{"event": "evaluation_started", "stage": "s5", "time_utc": "2026-10-23T10:50:09.965841+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s5_seed42_val.json", "stage": "s5", "time_utc": "2026-10-23T10:50:46.486091+00:00"}
+{"accepted": false, "compared_to": "s2", "delta_f1_conf025": -0.0007069369871682829, "delta_map50_95": -0.003084716685379907, "event": "selection", "stage": "s5", "time_utc": "2026-10-23T10:50:46.490316+00:00"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s6.yaml", "config_sha256": "037e5f765cc66ae98783c21eceb009798549c2c71b79eee7b3e05d19742e189f", "event": "training_started", "stage": "s6", "time_utc": "2026-10-23T10:50:46.509952+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s6_seed42/weights/best.pt", "event": "training_complete", "stage": "s6", "time_utc": "2026-10-23T12:02:16.078761+00:00"}
+{"event": "evaluation_started", "stage": "s6", "time_utc": "2026-10-23T12:02:16.083504+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s6_seed42_val.json", "stage": "s6", "time_utc": "2026-10-23T12:02:53.456351+00:00"}
+{"accepted": false, "compared_to": "s2", "delta_f1_conf025": 0.0001214927513263353, "delta_map50_95": -0.002402296068290566, "event": "selection", "stage": "s6", "time_utc": "2026-10-23T12:02:53.460927+00:00"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s7.yaml", "config_sha256": "bb208f7b950d96a33bcec168cb55a2399d6a3720651deaa4a2ef0649d0c37602", "event": "training_started", "stage": "s7", "time_utc": "2026-10-23T12:02:53.480961+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s7_seed42/weights/best.pt", "event": "training_complete", "stage": "s7", "time_utc": "2026-10-23T13:01:21.907433+00:00"}
+{"event": "evaluation_started", "stage": "s7", "time_utc": "2026-10-23T13:01:21.912766+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s7_seed42_val.json", "stage": "s7", "time_utc": "2026-10-23T13:02:00.050449+00:00"}
+{"accepted": false, "compared_to": "s2", "delta_f1_conf025": -0.013332117013942546, "delta_map50_95": -0.0031059890369924403, "event": "selection", "stage": "s7", "time_utc": "2026-10-23T13:02:00.054729+00:00"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s8.yaml", "config_sha256": "16f02c35c5927dd782a6bae64e81dbc4fcbb206b05c0f7cfbb576a48c0ee78ac", "event": "training_started", "stage": "s8", "time_utc": "2026-10-23T13:02:00.073797+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s8_seed42/weights/best.pt", "event": "training_complete", "stage": "s8", "time_utc": "2026-10-23T14:01:06.408394+00:00"}
+{"event": "evaluation_started", "stage": "s8", "time_utc": "2026-10-23T14:01:06.411748+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s8_seed42_val.json", "stage": "s8", "time_utc": "2026-10-23T14:01:44.127875+00:00"}
+{"accepted": false, "compared_to": "s2", "delta_f1_conf025": -0.0013008080852681125, "delta_map50_95": -0.000972477268345151, "event": "selection", "stage": "s8", "time_utc": "2026-10-23T14:01:44.131713+00:00"}
+{"best_stage": "s2", "csv": "/mnt/nas-hpg9/rafli5131/bre/analisis_performa/tabel/T40_penyaringan_hybrid_v2_val_s1_s8.csv", "event": "full_table_complete", "markdown": "/mnt/nas-hpg9/rafli5131/bre/analisis_performa/tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md", "time_utc": "2026-10-23T14:01:44.155082+00:00"}
+{"best_stage": "s2", "event": "screen_s1_s8_complete", "time_utc": "2026-10-23T14:01:44.159140+00:00"}

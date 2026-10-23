@@ -82,6 +82,8 @@ Checkpoint Hybrid [`best.pt` seed 1337](../../runs/kd_hybrid/yolo11_tiny_hybrid_
 
 ## Data yang masih dibutuhkan
 
+Diagnosis baru pada [T39](../tabel/T39_diagnosis_objektif_kd.md) dan [laporan 23 Oktober](HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md) memakai VAL saja untuk menilai ambang, TP/FP, bentuk DFL, dan komponen loss yang tersedia. `hybrid_v2` belum dilatih; T40–T43 belum ada. Feature loss historis tidak dapat dihitung dari checkpoint student yang tidak menyimpan proyektor terlatih.
+
 - T04/T28–T29 memuat VAL; T30–T31 memuat TEST lanjutan; T32 memuat benchmark L40; T33 memuat pelatihan Hybrid tiga seed. Split TEST sudah pernah dipakai sebelumnya, sehingga klaim dibatasi pada evaluasi gambar dataset resmi.
 - T12/T13 menyapu satu checkpoint per varian agar biaya diagnosis terukur. Sapuan seluruh seed memerlukan inferensi dan benchmark tambahan; hasil perwakilan tidak menunjukkan variasi antar-seed pada setiap titik grid.
 - T15–T27 adalah pengukuran OP3 terpisah. Akurasi kamera OP3 tidak dapat dihitung dari tabel lab/server ini tanpa frame kamera berlabel.

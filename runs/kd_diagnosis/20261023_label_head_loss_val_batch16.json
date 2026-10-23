@@ -1,0 +1,35 @@
+{
+  "VAL_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "class_kd_soft_BCE_tau2_mean": 0.010366520844399929,
+  "feature_kd": null,
+  "feature_kd_reason": "The trained feature projector is absent from student best.pt and last.pt; reconstructing a random projector would not reproduce the trained Hybrid objective.",
+  "images": [
+    "3dsense_2020_10_14__21_58_51_color_png_jpg.rf.3c78770d1d46d6b07735e4a544da6963.jpg",
+    "3dsense_2020_10_14__21_59_13_color_png_jpg.rf.2244dc70190a7ba276020b3b82a1a2e4.jpg",
+    "3dsense_2020_10_14__21_59_51_color_png_jpg.rf.38e526b51bbbabe0278f06840cee69e9.jpg",
+    "3dsense_2020_10_14__22_00_01_color_png_jpg.rf.0a6647e340ed6ba762118bb4567aafbe.jpg",
+    "3dsense_2020_10_14__22_03_38_color_png_jpg.rf.bea3f1a5ee9cb08a3e31cf41d0de9196.jpg",
+    "3dsense_2020_10_14__22_03_57_color_png_jpg.rf.16dad4dc9debf872e1e30798bcd7876b.jpg",
+    "3dsense_2020_10_14__22_04_02_color_png_jpg.rf.6c1bf19f7ca4eadff17f5d1fc193a7cc.jpg",
+    "3dsense_2020_10_14__22_04_05_color_png_jpg.rf.004d0a4cd9b8f35ef9f7e79d757a1817.jpg",
+    "3dsense_2020_10_14__22_04_14_color_png_jpg.rf.6b70d0020611293e5efaa4591fcad715.jpg",
+    "3dsense_2020_10_14__22_15_54_color_png_jpg.rf.bc9128db814057de8f88b99fd0140724.jpg",
+    "3dsense_2020_10_14__22_16_32_color_png_jpg.rf.cda0c2d19b34a602e0775023b876f737.jpg",
+    "KakaoTalk_20250203_160502315_mp4-0013_jpg.rf.6469c1b00e8c371f8198f9fbb6ba64e4.jpg",
+    "KakaoTalk_20250203_160502315_mp4-0025_jpg.rf.a8a7324ebaad66e43fbe1c25daf78f65.jpg",
+    "KakaoTalk_20250203_160502315_mp4-0027_jpg.rf.03cb1e13f52e935f28d78dc121aec253.jpg",
+    "KakaoTalk_20250203_160503119_mp4-0023_jpg.rf.fe0d2a1d2e8340ddf6490d0642e21b70.jpg",
+    "KakaoTalk_20250203_160505764_mp4-0001_jpg.rf.71a140f0948c02548d53940167a2c29d.jpg"
+  ],
+  "label_loss_terms_per_batch": {
+    "box_loss": 1.5055009126663208,
+    "cls_loss": 0.8806794881820679,
+    "dfl_loss": 1.4612407684326172
+  },
+  "labeled_objects": 18,
+  "preprocessing": "OpenCV direct resize 640x640, RGB float32/255; diagnostic, not exact rect VAL pipeline",
+  "raw_box_kd_smooth_l1_mean": 1.0071452856063843,
+  "scope": "diagnostic 16-image VAL batch with known labels; no optimization or TEST access",
+  "student_checkpoint_sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a",
+  "teacher_checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+}

@@ -1,0 +1,12 @@
+{"event": "driver_started", "stages": ["s1", "s2", "s3"], "time_utc": "2026-10-23T04:18:33.037740+00:00"}
+{"event": "evaluation_started", "run": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s1_seed42", "stage": "s1", "time_utc": "2026-10-23T05:40:33.470110+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s1_seed42_val.json", "stage": "s1", "time_utc": "2026-10-23T05:41:15.065152+00:00"}
+{"config": "configs/kd_hybrid_v2_s2.yaml", "event": "training_started", "stage": "s2", "time_utc": "2026-10-23T05:41:15.070533+00:00"}
+{"event": "training_complete", "run": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed42", "stage": "s2", "time_utc": "2026-10-23T06:47:01.105386+00:00"}
+{"event": "evaluation_started", "run": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed42", "stage": "s2", "time_utc": "2026-10-23T06:47:01.113513+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed42_val.json", "stage": "s2", "time_utc": "2026-10-23T06:47:35.948224+00:00"}
+{"config": "configs/kd_hybrid_v2_s3.yaml", "event": "training_started", "stage": "s3", "time_utc": "2026-10-23T06:47:35.953767+00:00"}
+{"event": "training_complete", "run": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s3_seed42", "stage": "s3", "time_utc": "2026-10-23T08:03:26.598323+00:00"}
+{"event": "evaluation_started", "run": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s3_seed42", "stage": "s3", "time_utc": "2026-10-23T08:03:26.607501+00:00"}
+{"event": "evaluation_complete", "result": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s3_seed42_val.json", "stage": "s3", "time_utc": "2026-10-23T08:04:02.671472+00:00"}
+{"event": "screen_s1_s3_complete", "time_utc": "2026-10-23T08:04:02.675353+00:00"}

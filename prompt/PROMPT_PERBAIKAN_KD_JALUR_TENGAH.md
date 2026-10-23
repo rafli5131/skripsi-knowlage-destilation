@@ -1,6 +1,6 @@
 # Prompt perbaikan objektif KD (jalur tengah) dengan ablasi *teacher* besar
 
-> Versi 23 Oktober 2026. Status: **belum dijalankan.** Dijalankan di server lab. Keputusan Bhre pada 23 Oktober 2026:
+> Versi 23 Oktober 2026, revisi diagnosis lab. Status: **Fase 0 selesai; Fase 1 sebagian selesai di server lab, belum ada training baru.** Keputusan Bhre pada 23 Oktober 2026:
 > - **Jalur tengah:** jalur utama tetap A, yaitu *teacher* YOLO11n ke *student* YOLO11 skala t. D1 dan lima rumusan masalah tidak berubah. Objektif KD diperbaiki, dan *teacher* YOLO11s ke *student* skala t diuji sebagai ablasi **di VAL saja**.
 > - **Uji live OP3 setara ditunda** sampai prompt ini selesai, agar model hasil KD yang diuji di robot adalah versi final. `prompt/PROMPT_UJI_ULANG_LIVE_SETARA_OP3_DENGAN_TEACHER.md` baru dijalankan setelah TH5.
 
@@ -11,7 +11,7 @@ Hasil saat ini (sumber T28, T30, T33, T34, `docs/DECISIONS.md`):
 - VAL mAP50-95 KD Hybrid full 0,7505 ± 0,0018 dan *supervised* 0,7208 ± 0,0041. Pada *confidence* 0,25, *precision* Hybrid lebih rendah dan *recall* lebih tinggi daripada *supervised* pada dua dari tiga *seed*.
 - TEST mAP50-95 Hybrid full 0,7469 ± 0,0022 dan *supervised* 0,7225 ± 0,0035 (selisih +0,0244 ± 0,0040, positif di 3/3 *seed*). F1@0,25 0,9071 dan 0,9121 (selisih −0,0051).
 - Pada 260 *frame* kamera OP3 (T34), Hybrid seed 1337 unggul mAP50-95 (0,4885 lawan 0,4414), tetapi F1 makro lebih rendah (0,5121 lawan 0,6054). Hybrid juga memberi kotak palsu pada 21/60 *frame* kosong, dan *recall* gawang pada ambang 0,25 hanya 2/80 walaupun AP50 gawang 0,4874.
-- Kurva VAL Hybrid masih naik di *epoch* 100 (T33), jadi pelatihan belum jenuh.
+- Kurva VAL Hybrid masih naik di *epoch* 100 (T33); ini indikasi kemungkinan pelatihan belum jenuh, bukan bukti bahwa penambahan *epoch* pasti memperbaiki hasil.
 - Pilot `pure_weighted` (*loss* kotak dan kelas dibobot skor *teacher*, tanpa *loss* label) gagal: VAL mAP50-95 0,5907 dan F1@0,25 0,0903. Dugaan penyebabnya, bobot kelas mendekati nol pada *anchor* latar sehingga *student* tidak lagi belajar menekan latar. Dugaan ini belum dibuktikan.
 
 Masalah yang tersisa dari Prioritas 2 dokumen analisis 19 Oktober:
@@ -30,12 +30,12 @@ Bertindak sebagai *engineer* *machine learning* dan pencatat eksperimen pada ser
 
 - Lingkungan tetap: Python 3.11.2, PyTorch 2.4.1+cu121, Ultralytics 8.4.130, NVIDIA L40. Jangan memutakhirkan paket.
 - Resep pelatihan tetap kecuali yang disebut berubah: 100 *epoch*, *batch* 16, `imgsz` 640, AdamW `lr0` 0,001, `lrf` 0,01, *warmup* 3, *weight decay* 0,0005, `close_mosaic` 10, AMP mati, `patience` 30, *seed* 42, 1337, 2025, *student* `pretrained: false`.
-- **TEST terkunci sampai TH5.** Semua penyaringan, pemilihan konfigurasi, *seed*, dan ambang hanya memakai VAL. *Frame* kamera OP3 tidak dipakai untuk memilih apa pun.
+- **Tidak ada evaluasi TEST baru sebelum TH5.** TEST resmi sudah pernah dibuka untuk varian lama sebelum rancangan `hybrid_v2`; karena itu evaluasi lanjutan pada split yang sama tidak boleh disebut *holdout* bersih atau konfirmasi independen. Semua penyaringan, pemilihan konfigurasi, *seed*, dan ambang baru hanya memakai VAL. Hasil OP3 T34 telah diketahui saat hipotesis perbaikan disusun; 260 *frame* itu tidak boleh dipakai untuk memilih model maupun diklaim sebagai uji independen `hybrid_v2`.
 - **Jangan menimpa apa pun.** *Run*, konfigurasi, tabel, dan entri registri lama tetap ada. Nama baru wajib unik. Alias `op3_default` dan entri `hybrid_full_*` tidak diubah.
 - Perilaku mode lama (`pure_v4`, `pure_weighted`, `hybrid_feature`, `hybrid_full`) tidak boleh berubah. Kode baru ditambahkan sebagai mode baru dan dibuktikan dengan uji regresi.
 - Bobot *teacher* (YOLO11n maupun YOLO11s) tidak boleh masuk repo publik. Jangan commit atau push tanpa izin Bhre.
 - Unduhan dari internet (misalnya `yolo11s.pt`) hanya dari rilis resmi Ultralytics dan hanya setelah Bhre mengizinkan. Catat URL dan SHA-256.
-- Bila sesuatu gagal, berhenti dan laporkan. Jangan menurunkan *batch*, mengubah resep, atau melewati langkah diam-diam.
+- Bila satu langkah gagal, catat penyebab dan lanjutkan hanya pemeriksaan independen yang tidak memerlukan langkah gagal itu. Jangan menurunkan *batch*, mengubah resep, atau melewati langkah diam-diam.
 - Dokumen ditulis dalam Bahasa Indonesia baku: tanpa tanda pisah *em dash*, "algoritme", "analisis", istilah asing miring, klaim pustaka bersitasi atau diberi `[BUTUH SITASI: ...]`.
 
 ### 1. Fase 0: audit dan reproduksi
@@ -46,8 +46,8 @@ Bertindak sebagai *engineer* *machine learning* dan pencatat eksperimen pada ser
 
 ### 2. Fase 1: diagnosis tanpa pelatihan
 
-1. **Bentuk keluaran *head*.** Pada satu *batch* VAL, cetak bentuk `boxes` dan `scores` *teacher* dan *student* untuk setiap cabang (`one2many`, `one2one`), nilai `reg_max`, dan apakah `boxes` berupa *logit* DFL (kanal = 4 × `reg_max`). Kutip berkas dan baris kode Ultralytics yang membuktikannya.
-2. **Besaran suku *loss*.** Pada *checkpoint* Hybrid full seed 42 dan beberapa *batch* VAL tetap, hitung besaran *loss* label (kotak, kelas, DFL), *loss* fitur, KD kotak, dan KD kelas. Laporkan suku mana yang dominan.
+1. **Bentuk keluaran *head*.** Pada satu *batch* VAL, cetak bentuk `boxes` dan `scores` *teacher* dan *student* untuk setiap cabang yang **benar-benar ada** (`one2many` dan, bila tersedia, `one2one`), nilai `reg_max`, dan apakah `boxes` berupa *logit* DFL (kanal = 4 × `reg_max`). Kutip berkas dan baris kode Ultralytics yang membuktikannya. Audit 23 Oktober pada checkpoint yang tersedia menemukan hanya cabang `one2many`.
+2. **Besaran suku *loss*.** Pada *checkpoint* Hybrid full seed 42 dan beberapa *batch* VAL tetap, hitung besaran *loss* label (kotak, kelas, DFL), *loss* fitur, KD kotak, dan KD kelas. Laporkan suku mana yang dominan **hanya jika semua komponennya berasal dari keadaan model yang sama**. Checkpoint `best.pt`/`last.pt` yang tersedia hanya memuat `DetectionModel` student dan tidak menyimpan proyektor fitur terlatih; jangan menggantinya dengan proyektor acak lalu mengklaim besaran *loss* fitur historis. Komponen yang tersedia boleh dilaporkan sebagai diagnosis parsial; instrumen pelatihan baru perlu mencatat seluruh komponen untuk run berikutnya.
 3. **Proporsi latar.** Hitung proporsi *anchor* dengan skor maksimum *teacher* di atas 0,05; 0,25; dan 0,5.
 4. **Kalibrasi dan ambang.** Untuk Hybrid full dan *supervised* (tiga *seed* masing-masing) di VAL, hitung *precision*, *recall*, dan F1 makro terhadap *confidence* 0,05 sampai 0,90; ambang yang memaksimalkan F1 per model; histogram *confidence* untuk TP dan FP per kelas; serta galat kalibrasi bila mudah dihitung. Rujukan kalibrasi yang ada di folder Paper: Guo, et al. (2017) dan Küppers, et al. (2020). Jangan mengubah D4; cukup laporkan apakah selisih F1 terhadap *supervised* hilang bila ambang dipilih per model di VAL.
 5. Tulis hasil ke **T39** `analisis_performa/tabel/T39_diagnosis_objektif_kd.{csv,md}` dan dokumentasi percobaan.
@@ -78,7 +78,7 @@ Jangan memulai pelatihan sebelum TH1 disetujui.
 
 Uji unit minimum:
 
-- semua suku KD bernilai nol bila keluaran *student* sama dengan *teacher*;
+- *loss* kotak dan fitur bernilai nol bila keluaran *student* sama dengan *teacher*; untuk klasifikasi BCE target lunak, nilai *loss* pada kondisi sama adalah entropi target dan umumnya **tidak nol**. Verifikasi nilainya minimum untuk target tersebut dan gradien terhadap *logit student* mendekati nol. Bila formulasi kelas diganti menjadi KL yang mengurangkan entropi *teacher*, barulah nilai nol dapat dituntut;
 - gradien hanya mengalir ke *student* dan proyektor;
 - bila semua bobot KD nol, *loss* sama dengan *loss* label pada *batch* yang sama;
 - `hybrid_v2` dengan `box_kd: smooth_l1` dan pembobotan `none` menghasilkan *loss* yang sama dengan `hybrid_full` pada *batch* dan *seed* yang sama;
@@ -114,8 +114,8 @@ Tulis ke **T40** `T40_penyaringan_hybrid_v2_val.{csv,md}`.
 **4b. Ablasi *teacher* YOLO11s (VAL saja).**
 
 1. Latih *teacher* YOLO11s dari bobot pralatih COCO `yolo11s.pt` (setelah izin unduh) pada TRAIN dan VAL yang sama, `nc` 3, urutan kelas `ball`, `gawang`, `robot`, resep bagian 0 dengan `pretrained: true`, *seed* 42. Simpan di luar repo publik, misalnya `artifacts_local/teacher_yolo11s/`, catat SHA-256, jumlah parameter, VAL mAP50-95, waktu pelatihan, dan memori GPU puncak. *Teacher* ini **tidak** dievaluasi di TEST.
-2. Bila Bhre menyetujuinya di TH1, latih juga *teacher* YOLO11n dengan resep yang sama. Tujuannya memisahkan efek ukuran *teacher* dari efek resep pelatihan *teacher*, karena resep *teacher* YOLO11n asal Advance Vision tidak tercatat lengkap.
-3. Latih *student* skala t dengan *teacher* YOLO11s memakai konfigurasi KD terbaik dari 4a (atau `hybrid_full` bila tidak ada kandidat yang lebih baik), tiga *seed*, di `runs/kd_teacher_ablation/`.
+2. Untuk menyimpulkan **efek ukuran *teacher***, latih juga *teacher* YOLO11n dengan resep dan data yang sama. Resep *teacher* YOLO11n asal Advance Vision tidak tercatat lengkap. Bila kontrol ini tidak dibuat, tetap boleh menjalankan perbandingan eksploratif, tetapi sebut sebagai perbandingan dua *pipeline teacher*, bukan efek ukuran semata.
+3. Latih *student* skala t dengan *teacher* YOLO11s memakai konfigurasi KD terbaik dari 4a (atau `hybrid_full` bila tidak ada kandidat yang lebih baik), tiga *seed*, di `runs/kd_teacher_ablation/`. Jika kontrol YOLO11n baru dibuat, latih pula *student* dengan kontrol itu memakai konfigurasi dan tiga *seed* yang sama agar perbandingan ukuran berpasangan.
 4. Laporkan: VAL *teacher* YOLO11n dan YOLO11s; VAL *student* dengan masing-masing *teacher*; selisih terhadap *supervised*; rasio pemulihan (KD − *supervised*) / (*teacher* − *supervised*), dengan peringatan bila penyebutnya kecil; waktu pelatihan dan memori GPU. Tulis ke **T42** `T42_ablasi_teacher_yolo11s_val.{csv,md}`.
 5. Saat membahas hasil, rujuk Cho dan Hariharan (2019) serta Mirzadeh, et al. (2020) di folder Paper tentang selisih kapasitas *teacher* dan *student*. Sebutkan bahwa keduanya studi klasifikasi.
 6. Hasil ablasi **tidak** mengganti *teacher* utama, model hasil KD, atau rumusan masalah. Bila *teacher* YOLO11s jelas lebih baik, laporkan kepada Bhre sebagai bahan diskusi dengan pembimbing.
@@ -135,7 +135,7 @@ Bila tidak ada kandidat yang lolos, `hybrid_full` tetap menjadi model hasil KD d
 
 ### 6. Fase 4 (opsional): anggaran *epoch* lebih panjang
 
-Jalankan hanya bila Bhre menyetujuinya di TH3. Latih *supervised* dan model hasil KD terpilih dengan anggaran *epoch* yang sama dan lebih panjang (usulan 200), tiga *seed* masing-masing, dengan nama *run* baru. Perkiraan biaya berdasarkan T33: sekitar 1 sampai 1,4 jam per *run* untuk 100 *epoch*, jadi enam *run* 200 *epoch* butuh sekitar 12 sampai 17 jam GPU. Bila dipakai, pembanding *supervised* di Bab 6 harus memakai anggaran yang sama. Terapkan ulang aturan bagian 5 untuk versi panjang terhadap versi 100 *epoch*.
+Jalankan hanya bila Bhre menyetujuinya di TH3. Latih *supervised* dan model hasil KD terpilih dengan anggaran *epoch* yang sama dan lebih panjang (usulan 200), tiga *seed* masing-masing, dengan nama *run* baru. Perkiraan biaya berdasarkan T33: sekitar 1 sampai 1,4 jam per *run* untuk 100 *epoch*, jadi enam *run* 200 *epoch* butuh sekitar 12 sampai 17 jam GPU. Jika versi 200 *epoch* dipakai untuk **perbandingan tiga metode**, latih juga KD murni pada tiga *seed* dengan anggaran yang sama; bila tidak, laporkan enam *run* itu sebagai eksperimen tambahan dua metode dan pertahankan perbandingan tiga metode 100 *epoch* sebagai analisis utama. Terapkan ulang aturan bagian 5 untuk versi panjang terhadap versi 100 *epoch*.
 
 ### 7. Fase 5: TEST lanjutan dan serah terima ke uji live (TH5)
 

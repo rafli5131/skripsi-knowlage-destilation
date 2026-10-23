@@ -1,0 +1,34 @@
+teacher_checkpoint: /mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt
+student_model: models/yolo11_tiny_kd.yaml
+data_yaml: configs/data_train_val.yaml
+run:
+  project: runs/kd_hybrid_v2
+  name: yolo11_tiny_hybrid_v2_s2_seed1337
+distillation:
+  mode: hybrid_v2
+  dis: 1.0
+  feature_weight: 1.0
+  box_weight: 1.0
+  class_weight: 1.0
+  temperature: 2.0
+  box_kd: kl_dfl
+  box_tau: 1.0
+  box_fg_weighting: none
+  class_kd_weighting: none
+  class_floor_alpha: 0.1
+training:
+  epochs: 100
+  batch: 16
+  workers: 2
+  imgsz: 640
+  device: '0'
+  seed: 1337
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  warmup_epochs: 3.0
+  weight_decay: 0.0005
+  close_mosaic: 10
+  amp: false
+  patience: 30
+  pretrained: false
