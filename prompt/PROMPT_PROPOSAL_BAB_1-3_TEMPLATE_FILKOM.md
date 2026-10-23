@@ -1,6 +1,6 @@
 # Prompt penyusunan proposal skripsi Bab 1 sampai 3 sesuai template dan Panduan FILKOM
 
-> Versi 23 Oktober 2026. Menggantikan `PROMPT_PROPOSAL_KD_OP3_CLAUDE_CODE.md` (22 Oktober, sudah dijalankan sampai TH-0), `PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md`, dan versi awalnya. Perubahan utama: (1) melanjutkan hasil TH-0 tanpa mengulanginya; (2) temuan TH-0 tentang Panduan diselesaikan dengan **mengikuti Panduan**; (3) struktur skripsi mengikuti contoh tipe implementatif-pengembangan Panduan (tujuh bab); (4) konteks penelitian diperbarui: KD Hybrid sebagai model hasil KD dan uji live OP3 dengan kondisi setara, termasuk *teacher*, sebagai pengujian akhir.
+> Versi 23 Oktober 2026. Menggantikan `PROMPT_PROPOSAL_KD_OP3_CLAUDE_CODE.md` (22 Oktober, sudah dijalankan sampai TH-0), `PROMPT_PROPOSAL_BAB_I-III_KD_OP3_V2.md`, dan versi awalnya. Perubahan utama: (1) melanjutkan hasil TH-0 tanpa mengulanginya; (2) temuan TH-0 tentang Panduan diselesaikan dengan **mengikuti Panduan**; (3) struktur skripsi mengikuti contoh tipe implementatif-pengembangan Panduan (tujuh bab); (4) konteks penelitian diperbarui: KD Hybrid sebagai model hasil KD dan uji live OP3 dengan kondisi setara, termasuk *teacher*, sebagai pengujian akhir. Revisi 23 Oktober 2026 sore: inventaris pustaka diperbarui untuk 19 berkas baru di folder Paper, K9 ditetapkan, rujukan pada kerangka disesuaikan dengan isi folder Paper, keputusan K14 ditambahkan, serta aturan pemeriksaan ejaan dan kata baku terhadap folder `EYD & KBBI/` ditambahkan, dengan edisi acuan berkas di folder itu (K15).
 
 Jalankan prompt ini di Claude Code pada komputer Bhre. Salin seluruh bagian **Prompt**.
 
@@ -56,7 +56,8 @@ TH-0 selesai pada 22 Oktober 2026 dengan repo di commit `a5b59d5`. Jangan mengul
 
 1. Cek `sha256sum -c audit/SHA256_BERKAS_ASLI_TH0.txt` untuk memastikan berkas asli tidak berubah.
 2. Bandingkan berkas pengerjaan dengan cuplikan `cuplikan/Proposal_KD_OP3_TH0.docx`. Bila berkas pengerjaan sudah berubah sejak TH-0, laporkan perbedaannya dan tunggu keputusan Bhre sebelum menyunting.
-3. Catat HEAD repo saat ini (minimal `d8b4af9`), lalu periksa perubahan sejak `a5b59d5` yang memengaruhi fakta bagian 3: `docs/DECISIONS.md`, `configs/analysis.yaml`, `configs/model_registry.yaml`, `analisis_performa/tabel/`, `dokumentasi/`, `memory/`, dan `prompt/`. Tambahkan bagian "Pembaruan 23 Oktober" di `VERIFIKASI_FAKTA.md`. Jangan menjalankan `git pull` tanpa izin.
+3. Catat HEAD repo saat ini (minimal `dc89666`), lalu periksa perubahan sejak `a5b59d5` yang memengaruhi fakta bagian 3: `docs/DECISIONS.md`, `configs/analysis.yaml`, `configs/model_registry.yaml`, `analisis_performa/tabel/`, `dokumentasi/`, `memory/`, dan `prompt/`. Tambahkan bagian "Pembaruan 23 Oktober" di `VERIFIKASI_FAKTA.md`. Jangan menjalankan `git pull` tanpa izin.
+4. Perbarui `INVENTARIS_PAPER.csv` tanpa mengulang TH-0. Inventaris TH-0 memuat 46 baris (45 PDF dan skripsi kating), sedangkan folder Paper per 23 Oktober 2026 berisi 64 berkas. Tambahkan baris untuk 19 berkas baru yang tercantum di bagian 7, isi kolom `jenis` untuk cetakan halaman web dengan `dokumentasi`, lalu buat *cache* `pdftotext -layout` di `pdf_text/` hanya untuk berkas baru. Bandingkan isi folder dengan inventaris dan laporkan selisihnya di kedua arah.
 
 ### 3. Keputusan yang sudah ditetapkan
 
@@ -67,10 +68,12 @@ Bhre meminta naskah disesuaikan dengan template dan Panduan. Karena itu temuan T
 | B | Sitasi dalam teks: dua atau tiga penulis ditulis semua; empat penulis atau lebih memakai "Nama, et al. (tahun)" dengan koma. Daftar Referensi menulis semua penulis | Panduan hlm 55 sampai 56 |
 | C | Bab 3 hanya menjelaskan **cara** meneliti dan hasil yang diharapkan dari setiap tahap. Daftar kebutuhan yang sudah diidentifikasi dan hasil perancangan (arsitektur rinci, *node* ROS 2, *flowchart* sistem) tidak dimuat di Bab 3; tempatnya di Bab 4 dan Bab 5 skripsi | Panduan hlm 41 dan 44 sampai 45; Bab 3 skripsi kating Adipratama (2026) |
 | D | Bidang RPC, tipe implementatif-pengembangan, Lampiran A.5.1.1 | Konfirmasi Bhre 22 Oktober; Panduan hlm 121 sampai 122 |
-| E | Arık dan Ağgül (2026) dipakai dalam versi terbit di folder Paper; angka Raspberry Pi 3B+ dan Jetson Nano disebut sebagai milik model *pseudo-labeling*, bukan model KD | `VERIFIKASI_FAKTA.md` butir 35 |
+| E | Arik dan Ağgül (2026) dipakai dalam versi terbit di folder Paper (PDF terbit mencetak "Arik", bukan "Arık" seperti versi pracetak); angka Raspberry Pi 3B+ dan Jetson Nano disebut sebagai milik model *pseudo-labeling*, bukan model KD | `VERIFIKASI_FAKTA.md` butir 35 |
 | Struktur skripsi | Sistematika Pembahasan memakai tujuh bab: Bab 1 Pendahuluan, Bab 2 Landasan Kepustakaan, Bab 3 Metodologi Penelitian, Bab 4 Rekayasa Kebutuhan, Bab 5 Perancangan dan Implementasi, Bab 6 Pengujian dan Evaluasi, Bab 7 Penutup. Tandai sebagai menunggu konfirmasi pembimbing (K12) | Panduan hlm 44 sampai 45, subbab 3.4.4.4 |
+| K9 | Dokumentasi daring boleh disitasi. Bukti aksesnya berupa cetakan PDF halaman web di folder Paper yang dicetak 23 Oktober 2026 (tanggal cetak tercantum di kepala halaman). Format mengikuti Panduan butir 18 untuk situs web dan butir 17 untuk program komputer; halaman tanpa tanggal memakai "n.d." (butir 23); beberapa karya organisasi yang sama dengan tahun sama dibedakan dengan huruf kecil (butir 5) | Keputusan Bhre 23 Oktober 2026; Panduan hlm 57 dan 64 sampai 67 |
+| K15 | Ejaan dan kata baku mengacu pada berkas di folder `EYD & KBBI/`: `EYD_permen_46_2009.pdf` dan `KamusIndonesia-KBBI-edisi4-2008.pdf`. Edisi lain tidak dipakai | Keputusan Bhre 23 Oktober 2026 |
 
-Keputusan TH-0 yang masih terbuka diajukan lagi di TH-1: A (*pandoc* untuk persamaan OMML), F (nama model komputer OP3), G dan H (akses web untuk verifikasi metadata).
+Keputusan TH-0 yang masih terbuka diajukan lagi di TH-1: A (*pandoc* untuk persamaan OMML), F (nama model komputer OP3), G dan H (akses web untuk verifikasi metadata, kini terutama untuk butir `[PERLU DICEK]` di bagian 7).
 
 ### 4. Ketentuan Panduan dan template yang wajib dipenuhi
 
@@ -112,7 +115,7 @@ Nomor 1 dijawab oleh tahap analisis kebutuhan, perancangan, implementasi, dan pe
 
 - Himpunan data Roboflow `humanoid-atom/advance_vision_human` versi v1, tiga kelas `ball`, `gawang`, `robot`. TRAIN 4.600 citra (6.143 objek), VAL 1.213 (1.525), TEST 592 (734). Ada nama sumber bersama antar-*split*, sehingga TEST tidak boleh diklaim mengukur adegan baru (`AUDIT_DATASET_SKRIPSI.md`).
 - Pelatihan di server lab NVIDIA L40, Python 3.11.2, PyTorch 2.4.1+cu121, Ultralytics 8.4.130.
-- Robot ROBOTIS OP3: CPU Intel Core i5-1240P, 16 CPU logis, Ubuntu 24.04.5, Python 3.12.3, PyTorch 2.4.1+cpu, Ultralytics 8.4.130, ROS 2 Jazzy, kamera Logitech C920 640×480 pada *topic* `/thesis/image_raw`. Nama model NUC belum terverifikasi (keputusan F). Skripsi Adipratama (2026) mencatat OP3 memakai NUC7i3BNK; jelaskan perbedaan unit ini hanya setelah Bhre memberikan keluaran `cat /sys/class/dmi/id/product_name` dari OP3. Tulis "komputer *onboard*", bukan "perangkat bawaan".
+- Robot ROBOTIS OP3: CPU Intel Core i5-1240P, 16 CPU logis, Ubuntu 24.04.5, Python 3.12.3, PyTorch 2.4.1+cpu, Ultralytics 8.4.130, ROS 2 Jazzy, kamera Logitech C920 640×480 pada *topic* `/thesis/image_raw`. Nama model NUC belum terverifikasi (keputusan F). e-Manual ROBOTIS (n.d.) mencantumkan Intel NUC i3 *dual core* dan kamera Logitech C920 untuk kedua versi OP3, sehingga unit penelitian ini harus disebut terpisah dari spesifikasi pabrikan. Bhre pernah menyebut unitnya NUC12WSHi5; tetap tunggu keluaran `product_name` sebelum menuliskannya. Skripsi Adipratama (2026) mencatat OP3 memakai NUC7i3BNK; jelaskan perbedaan unit ini hanya setelah Bhre memberikan keluaran `cat /sys/class/dmi/id/product_name` dari OP3. Tulis "komputer *onboard*", bukan "perangkat bawaan".
 
 **5.4 Rencana pengujian** (ditulis di Bab 3 sebagai metode)
 
@@ -130,9 +133,9 @@ Rekan mengerjakan QAT dan OpenVINO, yang mengubah representasi bobot (INT8) dan 
 
 **5.7 Koreksi pustaka yang sudah terverifikasi di TH-0** (`VERIFIKASI_FAKTA.md` bagian C)
 
-- Pottier dan Lau (2025): 7,98 sampai 8,01 FPS adalah FPS *idle* tanpa deteksi; dengan deteksi 5,92 sampai 6,22 FPS (statis) dan 4,41 sampai 6,68 FPS (dinamis). Model mereka dikonversi ke ONNX/OpenVINO dan dikuantisasi, jadi angkanya tidak setara dengan PyTorch FP32. Konteksnya FIRA HuroCup dengan ROS 1.
-- Saltık et al. (2025): mAP50 YOLO11n 0,838 menjadi 0,859 dengan CWD, yaitu 2,1 poin (sekitar 2,5% relatif). Naskahnya sendiri tidak konsisten antara "*absolute*" dan "*relative*"; pakai angka tabel.
-- Arık dan Ağgül (2026): lihat keputusan E.
+- Lau dan Pottier (2026), *Biomimetics*, dipakai sebagai sitasi utama menggantikan pracetak Pottier dan Lau (2025). Keduanya memakai OP3, YOLOv9, dan ROS Kinetic dengan tabel FPS *idle* yang identik, tetapi artikel 2026 tidak menyebut pracetaknya; catat hubungan ini di `VERIFIKASI_FAKTA.md`. Koreksi TH-0 berikut berasal dari pracetak dan wajib diverifikasi ulang pada versi 2026, termasuk klaim konversi ke ONNX/OpenVINO, sebelum dikutip: 7,98 sampai 8,01 FPS adalah FPS *idle* tanpa deteksi; dengan deteksi 5,92 sampai 6,22 FPS (statis) dan 4,41 sampai 6,68 FPS (dinamis). Model mereka dikonversi ke ONNX/OpenVINO dan dikuantisasi, jadi angkanya tidak setara dengan PyTorch FP32. Konteksnya FIRA HuroCup dengan ROS 1.
+- Saltık, et al. (2025): mAP50 YOLO11n 0,838 menjadi 0,859 dengan CWD, yaitu 2,1 poin (sekitar 2,5% relatif). Naskahnya sendiri tidak konsisten antara "*absolute*" dan "*relative*"; pakai angka tabel.
+- Arik dan Ağgül (2026): lihat keputusan E.
 
 ### 6. Aturan bahasa
 
@@ -140,6 +143,9 @@ Rekan mengerjakan QAT dan OpenVINO, yang mengubah representasi bobot (INT8) dan 
 - **Dilarang memakai tanda pisah *em dash* (U+2014).** Susun ulang kalimatnya. Untuk rentang angka, tulis "sampai".
 - Hindari pola khas AI: pembuka klise seperti "Dalam era digital saat ini", "Selain itu" beruntun, kalimat yang mengulang pertanyaan, dan penutup paragraf yang merangkum ulang tanpa isi baru.
 - Kata baku: "algoritme", "analisis"; jangan memakai "rancang bangun" (Panduan hlm 70 menyarankan "pengembangan").
+- **Ejaan dan kata baku diperiksa terhadap folder `EYD & KBBI/`.** Ejaan, tanda baca, huruf kapital, penulisan kata depan, gabungan kata, kata ulang, singkatan, dan penulisan angka dicek terhadap `EYD_permen_46_2009.pdf`. Kebakuan kata dicek terhadap `KamusIndonesia-KBBI-edisi4-2008.pdf`. Ekstrak teks kedua berkas sekali ke `pdf_text/` agar mudah dicari. Kata yang tidak ditemukan di KBBI atau penulisannya meragukan dicatat di `CEK_KBBI.md` dengan status `[PERLU DICEK]`, bukan ditebak.
+- Edisi acuan adalah kedua berkas di folder itu, yaitu pedoman ejaan tahun 2009 dan KBBI edisi IV tahun 2008 (keputusan K15). Jangan memakai atau menebak aturan dari edisi lain; bila ada keraguan, tandai dan laporkan.
+- Perhatikan kesalahan umum yang disebut Panduan hlm 69 sampai 70: kata depan "di", "ke", dan "dari" ditulis terpisah dari kata yang mengikutinya (kecuali bentuk baku seperti "kepada" dan "daripada"); istilah asing miring; tidak memakai bahasa lisan (misalnya "nampak" seharusnya "tampak"); huruf kapital pada "Gambar" dan "Tabel"; tidak merujuk letak dengan "di atas" atau "di bawah"; istilah tidak baku.
 - Istilah asing miring kecuali nama produk (YOLO11, ROS 2, PyTorch, Ultralytics, OpenVINO, Roboflow, ROBOTIS OP3, Intel NUC, Logitech C920). Buat `ISTILAH.md` dan pakai konsisten.
 - Singkatan diuraikan pada kemunculan pertama di setiap bab. Koma desimal dan titik ribuan.
 - Proposal memakai kalimat rencana ("akan"). Susun kalimat agar mudah diubah ke kalimat lampau ketika Bab 1 sampai 3 dibawa ke template skripsi.
@@ -148,7 +154,22 @@ Rekan mengerjakan QAT dan OpenVINO, yang mengubah representasi bobot (INT8) dan 
 
 - Sitasi hanya dari folder Paper dan skripsi kating. Utamakan terbitan 2020 ke atas; sumber lebih lama dipakai untuk karya fondasional (misalnya Hinton, Vinyals, dan Dean, 2015; Romero, et al., 2015; Lin, et al., 2014) atau bila tidak ada pengganti yang lebih baru. Panduan tidak menetapkan batas usia pustaka untuk RPC (hlm 40); laporkan proporsi pustaka 2020 ke atas di setiap TH.
 - Metadata Daftar Referensi diambil dari halaman pertama PDF dan dicocokkan dengan nama berkas serta `INVENTARIS_PAPER.csv`. Bila DOI, volume, atau halaman tidak dapat diverifikasi, jangan diisi; beri `[PERLU DICEK]`.
-- Klaim tanpa sumber ditulis `[BUTUH SITASI: ...]` dan dimasukkan ke `DAFTAR_UNDUH.md`. Contoh yang sudah diketahui belum ada di folder Paper: deskripsi platform OP3 dari ROBOTIS, BoT-SORT, pembanding kuantisasi untuk paragraf pembeda.
+- Klaim tanpa sumber ditulis `[BUTUH SITASI: ...]` dan dimasukkan ke `DAFTAR_UNDUH.md`. Per 23 Oktober 2026, deskripsi platform OP3, BoT-SORT, dan pembanding kuantisasi sudah punya sumber di folder Paper. Yang masih kurang adalah cetakan halaman dataset Roboflow (`Humanoid-Atom, 2026. advance_vision_human dataset.pdf`), yang akan disimpan Bhre secara manual; sampai berkas itu ada, sitasi dataset diberi `[PERLU DICEK]`.
+- **Berkas baru sejak TH-0** (19 berkas; nama berkas mengikuti awal entri Daftar Referensi):
+  - paper: Ha, Tamura, dan Asama (2013); Hoefler dan Belli (2015); Jacob, et al. (2018); Fiedler, et al. (2019); Reddi, et al. (2020); Gholami, et al. (2021); Nagel, et al. (2021); Aharon, Orfaig, dan Bobrovsky (2022); Huang, et al. (2022); Narayanaswami, et al. (2023); Addufairi dan Setyawan (2026); Setyawan, et al. (2026); Lau dan Pottier (2026);
+  - cetakan halaman web: ROBOTIS (n.d.) *ROBOTIS OP3 e-Manual*; Ultralytics (n.d.) *Knowledge distillation*; Ultralytics (n.d.) *Ultralytics YOLO11*; Ultralytics (n.d.) *Performance metrics deep dive*; COCO (n.d.) *Detection evaluation*; PyTorch (2026) *Reproducibility*, diperbarui 14 Mei 2026.
+- **Nama berkas dengan "et al."**: empat berkas (Bouthillier, Meneghetti, Paszke, Reddi) memakai "et al." karena batas panjang jalur Windows. Daftar penulis lengkap untuk Daftar Referensi diambil dari halaman pertama PDF, bukan dari nama berkas.
+- **Sumber daring (K9)**:
+  - contoh entri sesuai Panduan butir 18: `ROBOTIS, n.d. ROBOTIS OP3 e-Manual. [online] Tersedia di: <https://emanual.robotis.com/docs/en/platform/op3/introduction/> [Diakses 23 Oktober 2026]`;
+  - tiga halaman Ultralytics sama-sama bertahun n.d., sehingga perlu huruf pembeda sesuai butir 5; usulkan bentuknya di TH-1 (misalnya n.d.a, n.d.b, n.d.c) dan pakai konsisten;
+  - pustaka Ultralytics sebagai program komputer (butir 17) memakai sitasi yang disarankan halaman YOLO11: Jocher dan Qiu (2024), *Ultralytics YOLO11* versi 11.0.0, <https://github.com/ultralytics/ultralytics>. Versi paket yang benar-benar dipakai (8.4.130) tetap disebut di Bab 3;
+  - COCO (n.d.) mendefinisikan objek kecil, sedang, dan besar dengan ambang area 32² dan 96² piksel yang dihitung dari *mask* segmentasi. Bila ukuran objek dipakai, tulis bahwa penelitian ini memakai luas kotak pembatas sebagai padanannya.
+- **Butir `[PERLU DICEK]` yang sudah diketahui**:
+  - Addufairi dan Setyawan (2026): kepala halaman PDF masih "hlm. x-x"; nomor halaman dicek di J-PTIIK;
+  - Narayanaswami, et al. (2023): PDF versi penulis hanya menyebut RoboCup 2022; tahun 2023 dan halaman 62 sampai 74 berasal dari daftar unduh, belum dari PDF;
+  - Gholami, et al. (2021): versi arXiv; status terbit resminya belum dipastikan;
+  - Lin, et al. (2014): PDF di folder adalah arXiv v3 dengan 10 penulis, sedangkan `REFERENSI_SKRIPSI.bib` memakai versi ECCV dengan 8 penulis. Ikuti PDF yang disitasi;
+  - Efron (1979): dipakai hanya bila *bootstrap* disebut di Bab 3. PDF-nya pindaian JSTOR tanpa lapisan teks, sehingga `pdftotext` tidak menghasilkan isi dan kutipan langsung harus diketik manual.
 - Gambar dari pustaka diutamakan digambar ulang; bila dikutip, beri "Sumber: …" sesuai Panduan.
 
 ### 8. Penanganan `.docx`
@@ -166,7 +187,7 @@ Kerangka ini usulan dan difinalkan di TH-1.
 
 **Bab 1 Pendahuluan**
 
-- **1.1 Latar Belakang**, piramida terbalik (hlm 33 sampai 34): kebutuhan robot humanoid sepak bola mendeteksi bola, gawang, dan robot; keterbatasan komputasi CPU komputer *onboard* (Pottier dan Lau, 2025, dengan koreksi 5.7; Adipratama, 2026); kompromi ukuran model terhadap akurasi dan kecepatan; KD sebagai cara melatih *student* kecil meniru *teacher* tanpa mengubah biaya inferensi *student* (Hinton, Vinyals, dan Dean, 2015; Gou, et al., 2021; Shehzadi, et al., 2026); KD pada keluarga YOLO dan sistem tepi (Saltık, et al., 2025; Jung dan Nam, 2025; Sharma, et al., 2026; Billy, 2019; Zaini, 2024); celah yang ditulis sebagai batas penelusuran penulis, bukan klaim mutlak; pembeda dengan kuantisasi; kalimat jembatan ke penelitian ini.
+- **1.1 Latar Belakang**, piramida terbalik (hlm 33 sampai 34): kebutuhan robot humanoid sepak bola mendeteksi bola, gawang, dan robot; keterbatasan komputasi CPU komputer *onboard* (Adipratama, 2026; Lau dan Pottier, 2026, dengan koreksi 5.7); kompromi ukuran model terhadap akurasi dan kecepatan; KD sebagai cara melatih *student* kecil meniru *teacher* tanpa mengubah biaya inferensi *student* (Hinton, Vinyals, dan Dean, 2015; Gou, et al., 2021; Shehzadi, et al., 2026); KD pada keluarga YOLO dan sistem tepi (Saltık, et al., 2025; Jung dan Nam, 2025; Sharma, et al., 2026; Billy, 2019; Zaini, 2024); celah yang ditulis sebagai batas penelusuran penulis, bukan klaim mutlak; pembeda dengan kuantisasi (Jacob, et al., 2018; Nagel, et al., 2021, atau Gholami, et al., 2021 sebagai rujukan survei); kalimat jembatan ke penelitian ini.
 - **1.2 Rumusan Masalah**: lima nomor di 5.1 apa adanya.
 - **1.3 Tujuan**: satu tujuan per rumusan masalah, berurutan, dalam bentuk pernyataan (hlm 37 sampai 38).
 - **1.4 Manfaat**: bagi tim robot sepak bola humanoid (nama tim `[ISI]`) dan bagi penelitian KD pada sistem tertanam; tanpa "untuk memenuhi syarat gelar" (hlm 39).
@@ -176,8 +197,8 @@ Kerangka ini usulan dan difinalkan di TH-1.
 
 **Bab 2 Landasan Kepustakaan**
 
-- **2.1 Kajian Pustaka**: tabel penelitian terdahulu dengan kolom penelitian, objek dan perangkat, *teacher* ke *student*, metode KD, metrik dan hasil pokok, serta perbedaan dengan penelitian ini. Kandidat: Billy (2019), Zaini (2024), Saltık, et al. (2025), Jung dan Nam (2025), Arık dan Ağgül (2026), Sharma, et al. (2026), Sabaghian, Keyvanrad, dan Moghadami (2025), Pottier dan Lau (2025), Jati, Ilyasa, dan Dominic (2024), Barry, et al. (2019), Meneghetti, et al. (2021), Bordado, Silveria, dan Laureano (2023), Adipratama (2026). Tutup dengan paragraf posisi penelitian yang menegaskan keunikan sesuai A.5.1.1 (arsitektur sistem, metode, atau data).
-- **2.2 Dasar Teori**, usulan urutan: robot humanoid ROBOTIS OP3 dan sepak bola robot; deteksi objek dan YOLO11 (Redmon, et al., 2016; Khanam dan Hussain, 2024), termasuk *head* Detect dan *Distribution Focal Loss* (Li, et al., 2020); *knowledge distillation* (target lunak, temperatur, taksonomi respons, fitur, relasi); KD untuk detektor (distilasi fitur dengan proyektor: Romero, et al., 2015; Chen, et al., 2017; Wang, et al., 2019; distilasi respons pada klasifikasi sigmoid: Yang, et al., 2023; distilasi lokalisasi: Zheng, et al., 2022; KD murni dan KD hibrida); ROS 2 (Macenski, et al., 2022) dan latensi sistem multi-*node* (Kronauer, et al., 2021); pelacakan BoT-SORT bila Bhre ingin membahasnya (`[BUTUH SITASI]`); metrik akurasi IoU, *precision*, *recall*, F1, AP, mAP50, mAP50-95 (Lin, et al., 2014; Padilla, et al., 2021); metrik kinerja latensi, FPS efektif, CPU, RAM; variasi antar-*seed* (Picard, 2021; Bouthillier, et al., 2021).
+- **2.1 Kajian Pustaka**: tabel penelitian terdahulu dengan kolom penelitian, objek dan perangkat, *teacher* ke *student*, metode KD, metrik dan hasil pokok, serta perbedaan dengan penelitian ini. Kandidat: Billy (2019), Zaini (2024), Saltık, et al. (2025), Jung dan Nam (2025), Arik dan Ağgül (2026), Sharma, et al. (2026), Sabaghian, Keyvanrad, dan Moghadami (2025), Lau dan Pottier (2026), Jati, Ilyasa, dan Dominic (2024), Barry, et al. (2019), Fiedler, et al. (2019), Meneghetti, et al. (2021), Bordado, Silveria, dan Laureano (2023), Narayanaswami, et al. (2023), Addufairi dan Setyawan (2026), Setyawan, et al. (2026), Adipratama (2026). Tutup dengan paragraf posisi penelitian yang menegaskan keunikan sesuai A.5.1.1 (arsitektur sistem, metode, atau data).
+- **2.2 Dasar Teori**, usulan urutan: robot humanoid ROBOTIS OP3 dan sepak bola robot (Ha, Tamura, dan Asama, 2013; ROBOTIS, n.d.); deteksi objek dan YOLO11 (Redmon, et al., 2016; Khanam dan Hussain, 2024), termasuk *head* Detect dan *Distribution Focal Loss* (Li, et al., 2020); *knowledge distillation* (target lunak, temperatur, taksonomi respons, fitur, relasi); pengaruh ukuran dan kekuatan *teacher* sebagai dasar ablasi YOLO11s (Cho dan Hariharan, 2019; Mirzadeh, et al., 2020; Huang, et al., 2022); KD untuk detektor (distilasi fitur dengan proyektor: Romero, et al., 2015; Chen, et al., 2017; Wang, et al., 2019; distilasi respons pada klasifikasi sigmoid: Yang, et al., 2023; distilasi lokalisasi: Zheng, et al., 2022; KD murni dan KD hibrida); ROS 2 (Macenski, et al., 2022) dan latensi sistem multi-*node* (Kronauer, et al., 2021); pelacakan BoT-SORT bila Bhre ingin membahasnya (Aharon, Orfaig, dan Bobrovsky, 2022); *non-maximum suppression* (Bodla, et al., 2017); metrik akurasi IoU, *precision*, *recall*, F1, AP, mAP50, mAP50-95 (Lin, et al., 2014; Padilla, et al., 2021; Ultralytics, n.d.), beserta ambang ukuran objek bila dipakai (COCO, n.d.); metrik kinerja latensi, FPS efektif, CPU, RAM (Hoefler dan Belli, 2015; Reddi, et al., 2020); variasi antar-*seed* dan reproduksibilitas (Bouthillier, et al., 2021; Picard, 2021; PyTorch, 2026).
 - Rumus *loss* setiap varian ditulis sebagai persamaan bernomor dengan notasi dijelaskan. Rumus yang menggambarkan implementasi repo diverifikasi terhadap `scripts/train_kd.py` dan `configs/`.
 
 **Bab 3 Metodologi Penelitian** (hlm 40 sampai 41; tanpa daftar kebutuhan dan hasil rancangan)
@@ -223,11 +244,13 @@ TH-5  Daftar Referensi dan pemeriksaan akhir
    - **K6**: jadwal dan target sidang;
    - **K7**: data sampul (nama lengkap, NIM, nama program studi dan jurusan, tahun);
    - **K8**: evaluasi citra kamera OP3 sebagai pengujian utama atau pendukung;
-   - **K9**: boleh tidaknya menyitasi dokumentasi daring (Ultralytics, ROBOTIS e-Manual, ROS 2);
+   - **K9**: sudah ditetapkan di bagian 3 (dokumentasi daring boleh disitasi); laporkan saja bentuk huruf pembeda n.d. yang diusulkan;
    - **K10**: rumusan hipotesis dipakai atau tidak;
    - **K11**: tanggal persetujuan pembimbing atas rumusan masalah;
    - **K12**: struktur tujuh bab skripsi sudah disetujui pembimbing atau belum;
-   - **K13**: *supervised* dan KD murni disebut sebagai pembanding pelengkap pada pengujian runtime, mengingat rumusan masalah nomor 4 dan 5 hanya menyebut model hasil KD dan *teacher*.
+   - **K13**: *supervised* dan KD murni disebut sebagai pembanding pelengkap pada pengujian runtime, mengingat rumusan masalah nomor 4 dan 5 hanya menyebut model hasil KD dan *teacher*;
+   - **K14**: penghubung dua nama terakhir pada sitasi di dalam kurung. Contoh Panduan hlm 56 memakai "&", misalnya (Rumbaugh, Jacobson, & Booch, 2005), sedangkan contoh di prompt ini memakai "dan", misalnya (Hinton, Vinyals, dan Dean, 2015). Contoh Panduan sendiri tidak seragam; pilih satu bentuk dan pakai konsisten di seluruh naskah;
+   - **K15**: sudah ditetapkan di bagian 3 (edisi acuan ejaan dan kata baku adalah berkas di folder `EYD & KBBI/`).
 
 **TH-2 sampai TH-4**
 
@@ -238,7 +261,7 @@ TH-5  Daftar Referensi dan pemeriksaan akhir
 **TH-5**
 
 1. Daftar Referensi dari sitasi yang benar-benar dipakai.
-2. Skrip pemeriksaan otomatis atas seluruh teks, termasuk tabel dan *caption*: tidak ada U+2014 (laporkan juga U+2013); tidak ada "algoritma", "analisa", "rancang bangun"; frekuensi "Selain itu"; setiap sitasi dalam teks ada di Daftar Referensi dan sebaliknya; aturan "et al." sesuai bagian 3; istilah di `ISTILAH.md` yang belum miring; desimal bertitik dalam kalimat; rujukan "di atas" atau "di bawah"; sisa penanda `[BUTUH SITASI]`, `[ISI]`, `[PERLU DICEK]`, `[PERLU VERIFIKASI REPO]`.
+2. Skrip pemeriksaan otomatis atas seluruh teks, termasuk tabel dan *caption*: tidak ada U+2014 (laporkan juga U+2013); tidak ada "algoritma", "analisa", "rancang bangun"; frekuensi "Selain itu"; setiap sitasi dalam teks ada di Daftar Referensi dan sebaliknya; aturan "et al." sesuai bagian 3; istilah di `ISTILAH.md` yang belum miring; desimal bertitik dalam kalimat; rujukan "di atas" atau "di bawah"; sisa penanda `[BUTUH SITASI]`, `[ISI]`, `[PERLU DICEK]`, `[PERLU VERIFIKASI REPO]`. Skrip juga menghasilkan daftar kandidat kata depan "di", "ke", dan "dari" yang tersambung dengan kata tempat atau waktu untuk ditinjau manual (awalan pasif "di-" bukan kesalahan), serta daftar kata tidak baku yang disebut Panduan hlm 69 sampai 70. Lampirkan `CEK_KBBI.md` berisi kata yang sudah dicek ke KBBI, hasilnya, dan halaman KBBI tempat kata itu ditemukan.
 3. Daftar periksa kesesuaian dengan Panduan: kerangka proposal, sampul, enam subbab Bab 1, subbab Jadwal Penelitian, larangan isi Bab 3, kecukupan A.5.1.1, format tabel, gambar, dan persamaan.
 4. Ubah ke PDF dan periksa tata letak.
 
