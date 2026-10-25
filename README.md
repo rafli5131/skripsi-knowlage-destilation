@@ -1,9 +1,26 @@
-# BhreSkripsi
+# YOLO11 Knowledge Distillation for ROBOTIS OP3
+
+Research on reducing YOLO11 model complexity through teacher–student knowledge distillation and evaluating the resulting models for robotics inference.
+
+## Project at a glance
+
+| Area | Scope |
+| --- | --- |
+| Computer vision | Object detection for `ball`, `gawang`, and `robot` |
+| Model optimization | Pure teacher-only knowledge distillation compared with supervised training |
+| Experimental evaluation | Validation and held-out testing, checkpoint analysis, and inference benchmarks |
+| Robotics integration | ROS 2 / Ultralytics inference trials on ROBOTIS OP3 |
+
+**Key research outcome:** The experiments reduced model size and computational cost but did not demonstrate improved held-out detection accuracy over the supervised student. The result and its limitations are recorded below rather than treated as a production claim.
+
+For technical readers, continue with the experiment status and source-linked results below. This is a research repository containing active notes, drafts, and evaluation artifacts.
+
+---
 
 ## Pure Teacher-Only Knowledge Distillation
 
 This workspace evaluates a narrower YOLO11 student trained from the frozen
-FP32 teacher in `/mnt/nas-hpg9/rafli5131/rafli/advance_vision`. The KD objective
+FP32 teacher using the Advance Vision research data and teacher checkpoint. The KD objective
 uses teacher-only feature and detection-output distillation: there is no NNCF,
 fake quantization, or supervised detection loss in the student update. TEST was
 excluded from all student training and checkpoint selection; it was opened only
