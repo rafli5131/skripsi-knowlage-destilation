@@ -1,0 +1,10 @@
+{"candidate": "s2", "event": "confirmation_started", "seeds": [1337, 2025], "time_utc": "2026-10-23T16:14:21.458827+00:00", "training_script_sha256": "b509d4e56505a39f54cae92a5bca189d0eacc607cb8a1a34b65cd1bc03f14bcd"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s2_seed1337.yaml", "event": "training_started", "seed": 1337, "time_utc": "2026-10-23T16:14:21.478155+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed1337/weights/best.pt", "event": "training_complete", "seed": 1337, "time_utc": "2026-10-23T17:33:56.212176+00:00"}
+{"event": "evaluation_started", "seed": 1337, "time_utc": "2026-10-23T17:33:56.216240+00:00"}
+{"event": "evaluation_complete", "seed": 1337, "time_utc": "2026-10-23T17:34:39.907075+00:00", "val_json": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed1337_val.json"}
+{"config": "/mnt/nas-hpg9/rafli5131/bre/configs/kd_hybrid_v2_s2_seed2025.yaml", "event": "training_started", "seed": 2025, "time_utc": "2026-10-23T17:34:39.928231+00:00"}
+{"checkpoint": "/mnt/nas-hpg9/rafli5131/bre/runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed2025/weights/best.pt", "event": "training_complete", "seed": 2025, "time_utc": "2026-10-23T18:33:18.511970+00:00"}
+{"event": "evaluation_started", "seed": 2025, "time_utc": "2026-10-23T18:33:18.516907+00:00"}
+{"event": "evaluation_complete", "seed": 2025, "time_utc": "2026-10-23T18:33:56.482470+00:00", "val_json": "/mnt/nas-hpg9/rafli5131/bre/runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed2025_val.json"}
+{"event": "confirmation_complete", "table": "/mnt/nas-hpg9/rafli5131/bre/analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.md", "time_utc": "2026-10-23T18:33:56.582075+00:00"}

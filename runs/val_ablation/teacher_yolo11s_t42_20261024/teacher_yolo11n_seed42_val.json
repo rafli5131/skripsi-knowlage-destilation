@@ -1,0 +1,68 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/rafli5131/bre/models_local/teacher_ablation_t42/training/teacher_yolo11n_seed42_retry1/weights/best.pt",
+  "checkpoint_sha256": "efd3381f1a47d3e42e3c1828ae1ff2edd025dc8d9ab488b392b14a2deeb4bc4e",
+  "created_at_utc": "2026-10-24T06:09:52.853983+00:00",
+  "fixed_confidence_metrics": {
+    "F1_macro": 0.9355308890328325,
+    "precision_macro": 0.9032940047718373,
+    "recall_macro": 0.9701538779071449
+  },
+  "images": 1213,
+  "model": "teacher_yolo11n_seed42",
+  "per_class": {
+    "ball": {
+      "AP50": 0.9923214622197095,
+      "AP50_95": 0.8978933567799505,
+      "F1_conf025": 0.9863760217983651,
+      "ground_truth_count": 182,
+      "precision_conf025": 0.9783783783783784,
+      "recall_conf025": 0.9945054945054945,
+      "validator_precision": 0.9775601456068066,
+      "validator_recall": 0.9945054945054945
+    },
+    "gawang": {
+      "AP50": 0.9471891966042911,
+      "AP50_95": 0.5978337083720635,
+      "F1_conf025": 0.8491287717807054,
+      "ground_truth_count": 1048,
+      "precision_conf025": 0.7655172413793103,
+      "recall_conf025": 0.9532442748091603,
+      "validator_precision": 0.8786917917351423,
+      "validator_recall": 0.8874045801526718
+    },
+    "robot": {
+      "AP50": 0.9869851975250582,
+      "AP50_95": 0.832358659291914,
+      "F1_conf025": 0.964346349745331,
+      "ground_truth_count": 295,
+      "precision_conf025": 0.9659863945578231,
+      "recall_conf025": 0.9627118644067797,
+      "validator_precision": 0.9749000609375906,
+      "validator_recall": 0.9525423728813559
+    }
+  },
+  "settings": {
+    "augment": false,
+    "batch": 16,
+    "confidence_floor_for_AP": 0.001,
+    "device": "cpu",
+    "fixed_confidence": 0.25,
+    "imgsz": 640,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "training_manifest": "/mnt/nas-hpg9/rafli5131/bre/models_local/teacher_ablation_t42/training/teacher_yolo11n_seed42_retry1/manifest.json",
+  "training_manifest_sha256": "af838108a79595eaa1a6a9a6a61a2599dc020ecc3f8c514bb3b3c5030eec543e",
+  "training_mode": "teacher_supervised_pretrained",
+  "ultralytics": "8.4.130",
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "validator_metrics": {
+    "fitness": 0.7760285748146427,
+    "metrics/mAP50(B)": 0.9754986187830196,
+    "metrics/mAP50-95(B)": 0.7760285748146427,
+    "metrics/precision(B)": 0.9437173327598464,
+    "metrics/recall(B)": 0.944817482513174
+  }
+}

@@ -84,6 +84,31 @@
     },
     "status": "complete"
   },
+  "kd_hybrid_v2_val_2026_10_24": {
+    "outputs_sha256": {
+      "analisis_performa/lab_server/HASIL_KD_HYBRID_V2_2026-10-24.md": "bb1989d92cd393dcb96470376d087a18a90298e18f2f3df36ff4408a43353276",
+      "analisis_performa/tabel/T40_penyaringan_hybrid_v2_val_s1_s8.csv": "0121ba1e837eb683ddf6edefbafd4bc54d6514a6df277d065acf97a94c47bb95",
+      "analisis_performa/tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md": "10d0a23efb5226e09f96ed0a118b9e2a5feaf6041026d41dafb0051e2f602912",
+      "analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.csv": "e4827126b6216f42ef67a5032263757a7906d706c27564fae98ea6e6c0302fae",
+      "analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.md": "29d90cdb4154f6df8b85babe1617236f4f2110e66a01d84b6edcaac0b02060ac"
+    },
+    "scope": "Official VAL: S1-S8 screening seed 42, S2 confirmation seeds 42/1337/2025; no TEST or OP3 selection",
+    "selection": "Hybrid full remains main KD model; S2 fails predeclared three-seed replacement rule",
+    "sources_sha256": {
+      "docs/PROTOKOL_HYBRID_V2_2026-10-23.md": "d2081d60e6fb6cb5b45f79d1bded9eb0a86ee364d2ade212ddd7177c8d8d9ab8",
+      "runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed1337/manifest.json": "e52ea06e540733d444a4608bfd01548e5bddabcb551d285466fd0ada5798043e",
+      "runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed2025/manifest.json": "c0a29d50c36980fa60cbb3cb805befc565a9b5a6954d161247c313899c2cc6eb",
+      "runs/kd_hybrid_v2/yolo11_tiny_hybrid_v2_s2_seed42/manifest.json": "f6734f0a5e05b175dd43367ea5ebde6b4a8f9be8ef2e6b8155a019bebd54c019",
+      "runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed1337_val.json": "1563f0051f644caf86631466c0bce7ee59194dddd9853d730483a47483270fdb",
+      "runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed2025_val.json": "a20629ff5a9d6029cb9c708a177b70997fedfc25b3221909bf2cdab328678bff",
+      "runs/val_ablation/hybrid_v2_20261023/yolo11_tiny_hybrid_v2_s2_seed42_val.json": "e7e9e3cd4e128a5baac239eeab81ee7a9f8b6b27b01b00c340782375657a4273",
+      "scripts/build_t41_hybrid_v2_val.py": "83ab98b7d8c2ba1b85063e12685bb2434a9a10fbc4f61cdd1819c7d38757c4dd",
+      "scripts/evaluate_hybrid_v2_val.py": "15b418998ed05aa5f58e9eb603cbc33b623daaa49b9a9d8a72416a393e046e6e",
+      "scripts/kd_losses_v2.py": "b4d9949adcc767f1d67f2ca5cb9fc2a652bd8282a504cb988e60143fb9fafd0e",
+      "scripts/train_kd.py": "b509d4e56505a39f54cae92a5bca189d0eacc607cb8a1a34b65cd1bc03f14bcd"
+    },
+    "status": "complete"
+  },
   "kd_objective_diagnosis_2026_10_23": {
     "base_commit": "dc896667d3bdc3bc7a0ee9067a059a5421b7ef52",
     "limitations": [

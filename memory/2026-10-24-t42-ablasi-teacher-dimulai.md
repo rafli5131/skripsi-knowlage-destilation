@@ -1,0 +1,9 @@
+# Memori: T42 ablasi kapasitas teacher dimulai, 24 Oktober 2026
+
+Bhre meminta ablasi teacher YOLO11s pada jalur tengah dijalankan. Protokol [T42](../docs/PROTOKOL_T42_ABLASI_TEACHER_2026-10-24.md) menetapkan dua teacher baru, YOLO11n dan YOLO11s, dari bobot COCO resmi dan resep TRAIN/VAL sama. Student YOLO11 skala t memakai KD Hybrid full dengan seed 42/1337/2025 untuk masing-masing teacher. TEST dan frame OP3 tidak dipakai. Model Hybrid full seed 1337 yang dipilih untuk OP3 tidak berubah.
+
+Bobot pralatih resmi disimpan lokal di `models_local/teacher_ablation_t42/pretrained/` dengan hash di protokol. Driver `scripts/run_t42_teacher_ablation.py` telah dimulai pada server; status kanonik ada di `runs/kd_teacher_ablation/t42_status.jsonl`, log tiap tahap di `runs/kd_teacher_ablation/logs/`. Pada awal sesi, ketiga GPU L40 masih dipakai job lain; driver menunggu GPU yang cukup kosong sebelum training pertama. **T42 belum memiliki hasil pada saat memori ini ditulis.**
+
+Driver akan melatih dua teacher di `models_local/teacher_ablation_t42/training/`, enam student di `runs/kd_teacher_ablation/`, mengevaluasi semua checkpoint pada VAL di `runs/val_ablation/teacher_yolo11s_t42_20261024/`, lalu membuat `analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.{csv,md}`. Bila salah satu tahap gagal, driver mencatat kegagalan dan berhenti tanpa menimpa run. Setelah T42 selesai, periksa tabel dan log, dokumentasikan durasi/VRAM dan batas interpretasi, lalu perbarui indeks laporan. Jangan push bobot teacher atau artefak privat.
+
+Pembaruan 24 Oktober: saat GPU 1 tersedia, upaya `teacher_yolo11n_seed42` berhenti sebelum epoch pertama karena pemanggilan penghitung puncak memori CUDA sebelum inisialisasi. Log dan direktori upaya itu dipertahankan. Pemanggilan tersebut dihapus dan driver dilanjutkan dengan nama `teacher_yolo11n_seed42_retry1`. Log retry telah menunjukkan **epoch 1/100 berjalan di GPU 1**. T42 masih berlangsung dan belum memiliki metrik akhir.
