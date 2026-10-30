@@ -1,0 +1,41 @@
+{
+  "status": "template_not_executed",
+  "session_id": null,
+  "run_id": null,
+  "model_key": null,
+  "checkpoint_sha256": null,
+  "operator": null,
+  "condition": "unknown",
+  "condition_evidence": null,
+  "hardware": null,
+  "runtime_versions": null,
+  "camera_topic": null,
+  "camera_qos": null,
+  "repetition": null,
+  "benchmark_protocol": "prompt/PROMPT_UJI_ROBOT_OP3_SETELAH_KONFIRMASI_KD_2026-10-24.md",
+  "benchmark": {
+    "device": "cpu",
+    "precision": "fp32",
+    "imgsz": 640,
+    "confidence": 0.25,
+    "nms_iou": 0.45,
+    "tracker": "botsort.yaml",
+    "intra_op_threads": 4,
+    "inter_op_threads": 2,
+    "warmup_frames": 30,
+    "measurement_seconds": 60,
+    "rest_seconds": 120,
+    "preview": "SSH-X"
+  },
+  "accuracy_session": {
+    "sample_size": null,
+    "sampling_rule": null,
+    "sessions_and_conditions": null,
+    "annotation_rules": null,
+    "frame_hash_manifest": null,
+    "reviewed_label_hash_manifest": null,
+    "reviewer": null
+  },
+  "valid_run": null,
+  "exclusion_reason": null
+}

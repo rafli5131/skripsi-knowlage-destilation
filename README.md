@@ -1,21 +1,51 @@
-# YOLO11 Knowledge Distillation for ROBOTIS OP3
+# YOLO11 Knowledge Distillation untuk ROBOTIS OP3
 
-Research on reducing YOLO11 model complexity through teacher–student knowledge distillation and evaluating the resulting models for robotics inference.
+Penelitian deteksi `ball`, `gawang`, dan `robot` dengan teacher YOLO11n FP32 serta student YOLO11 skala **t kustom** (810.649 parameter). Metode yang dibandingkan ialah supervised, Pure KD teacher-only, dan KD Hybrid full yang menggabungkan loss berlabel dengan distilasi fitur, kotak, dan kelas.
 
-## Project at a glance
+## Mulai tes di robot
 
-| Area | Scope |
+Gunakan **[prompt tes OP3 terbaru — 30 Oktober 2026](prompt/PROMPT_TES_ROBOT_OP3_2026-10-30.md)**. Salin bagian prompt ke agen di robot. Prompt mencakup audit environment dan hash, pemeriksaan fungsi, 24 run benchmark setara, pengumpulan frame baru, serta dokumentasi sesi.
+
+1. Periksa environment CPU/ROS, kamera, empat checkpoint, dan kesiapan operator pada OP3. Audit server belum membuktikan kesiapan robot.
+2. Jalankan pemeriksaan deteksi/tracking, lalu benchmark empat model × dua kondisi × tiga ulangan untuk T36/T37. Durasi node **75 detik sesudah 30 frame warm-up**, dengan **jendela analisis 60 detik**.
+3. Kumpulkan frame baru pada sesi terpisah, tinjau seluruh label, lalu evaluasi model pada gambar dan label identik.
+
+Model utama adalah **Hybrid full seed 1337**, dipilih berdasarkan VAL. Gunakan `model_variant:=hybrid`; alias `op3_default` tetap Pure KD seed 42. Kontrol supervised harus memakai path seed 1337 eksplisit. Teacher utama dipindahkan secara privat dan diverifikasi sesuai [panduan transfer](docs/TRANSFER_TEACHER_KE_OP3.md); bobot T42 tidak dipakai pada sesi ini. Operator menangani seluruh tindakan fisik robot.
+
+- [Persiapan OP3 dari lab](docs/PERSIAPAN_OP3_DARI_LAB_2026-10-30.md) · [Audit empat checkpoint](artifacts/lab_audit_20261030/op3_preflight.json)
+- [Runtime PyTorch/ROS 2](OP3_PYTORCH_RUNTIME.md) · [Protokol live rinci](prompt/PROMPT_UJI_ULANG_LIVE_SETARA_OP3_DENGAN_TEACHER.md)
+- [Inventaris prompt](prompt/inventaris_tabel_dan_prompt.md) · [Indeks hasil](analisis_performa/INDEKS.md)
+
+## Status penelitian — 30 Oktober 2026
+
+| Pekerjaan | Status dan sumber |
 | --- | --- |
-| Computer vision | Object detection for `ball`, `gawang`, and `robot` |
-| Model optimization | Pure teacher-only knowledge distillation compared with supervised training |
-| Experimental evaluation | Validation and held-out testing, checkpoint analysis, and inference benchmarks |
-| Robotics integration | ROS 2 / Ultralytics inference trials on ROBOTIS OP3 |
+| Training utama | Pure KD, supervised, dan Hybrid full, masing-masing tiga seed, selesai |
+| Konfirmasi Hybrid v2 S2 | Selesai; gagal aturan penggantian. Hybrid full tetap utama ([T41](analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.md), D16) |
+| Persiapan OP3 dari server | Empat checkpoint lolos hash, pemuatan, dan mapping kelas |
+| Benchmark OP3 setara T36/T37 | Menunggu sesi robot; hasil live historis tetap bukti pendahuluan |
+| Akurasi OP3 pada frame baru | Menunggu capture terpisah dan tinjauan seluruh label |
+| T42: ablasi kapasitas teacher | Teacher YOLO11n selesai; kelanjutan teacher YOLO11s dan enam student diluncurkan 30 Oktober. Tabel akhir belum tersedia pada pembaruan ini |
 
-**Key research outcome:** The experiments reduced model size and computational cost but did not demonstrate improved held-out detection accuracy over the supervised student. The result and its limitations are recorded below rather than treated as a production claim.
+T42 berjalan di checkout eksperimen `/mnt/nas-hpg9/rafli5131/bre`. Status kanonik berada di `runs/kd_teacher_ablation/t42_status.jsonl` pada checkout tersebut. Salinan status dalam repo publik tidak tersinkron otomatis. T42 terpisah dari uji OP3 dan tidak perlu ditunggu untuk menguji model utama.
 
-For technical readers, continue with the experiment status and source-linked results below. This is a research repository containing active notes, drafts, and evaluation artifacts.
+## Hasil utama dan batasnya
 
----
+Hybrid full memperoleh TEST mAP50–95 **0,7469 ± 0,0022**, dibanding supervised **0,7225 ± 0,0035**. F1 pada confidence 0,25 sedikit lebih rendah: **0,9071 ± 0,0017** versus **0,9121 ± 0,0026** ([T30](analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md)). Pure KD mencapai mAP50–95 **0,6630 ± 0,0108** pada tahap sebelumnya. Arsitektur kecil menentukan pengurangan parameter; pengaruh objective KD dinilai terhadap supervised berarsitektur sama.
+
+TEST resmi sudah digunakan sebelum evaluasi lanjutan Hybrid dan tidak disebut holdout yang belum pernah disentuh. Tiga seed memberi bukti eksploratif. Split gambar resmi belum membuktikan pemisahan sesi/adegan, dan provenance data teacher lama belum lengkap. Benchmark L40 mengukur server; runtime OP3 perlu diukur pada robot.
+
+Evaluasi kamera [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) pada 260 frame lama bersifat eksploratif: Hybrid lebih tinggi pada mAP50–95, tetapi lebih rendah pada F1 makro dan menghasilkan lebih banyak false positive pada frame negatif. Set itu tidak menggantikan frame baru dengan label yang ditinjau.
+
+## Environment dan catatan kerja
+
+Dependency training yang diaudit sesuai seluruh 114 paket snapshot. Gunakan interpreter proyek sesuai [agent.md](agent.md), dengan `env -u PYTHONPATH`; Python bawaan terminal dapat memiliki versi paket lain. [Environment provenance](environment/README.md) menyimpan lock dan snapshot; [requirements GPU](requirements/train-gpu.txt) dan [requirements OP3 CPU](requirements-op3-pytorch.txt) mempunyai tujuan berbeda.
+
+[Memory 30 Oktober](memory/2026-10-30-lab-lanjutan.md) dan [log audit lab](artifacts/lab_audit_20261030/audit.jsonl) mencatat pemeriksaan, kelanjutan T42, serta perubahan dokumen. Draf [Bab I–III](DRAF_PROPOSAL_BAB_I-III.md) dan [Bab IV–V](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) telah diselaraskan dengan hasil Hybrid; pengesahan pembimbing dan hasil robot yang belum ada tetap diperlukan.
+
+## Catatan historis tahap Pure KD
+
+Bagian berikut mempertahankan rincian eksperimen awal Pure KD, deployment alias lama, dan contoh perintah training. Status model utama serta instruksi sesi robot terbaru mengikuti bagian di atas. Contoh training adalah rujukan reproduksibilitas, bukan antrean yang perlu dijalankan ulang.
 
 ## Pure Teacher-Only Knowledge Distillation
 
@@ -26,7 +56,7 @@ fake quantization, or supervised detection loss in the student update. TEST was
 excluded from all student training and checkpoint selection; it was opened only
 after the six student checkpoints had been locked by VAL. Training uses FP32.
 
-## Current OP3 direction
+## Observasi OP3 pada tahap awal Pure KD
 
 The completed experiments below use Advance Vision data and establish the
 current pure-KD checkpoints. The selected student `.pt` has been run on
@@ -63,7 +93,7 @@ Recorded offline smoke details are in
 Per-run reports grouped by date and trial are indexed in
 [`dokumentasi/INDEKS.md`](dokumentasi/INDEKS.md).
 
-## Final result status
+## Hasil tahap awal Pure KD
 
 The six paired student runs, locked TEST evaluation, NVIDIA L40 inference
 benchmark, and analysis are complete. The working hypothesis that pure KD
@@ -112,7 +142,7 @@ tables and benchmark manifest. The student starts from random initialization;
 the final TEST result is lower than the separate supervised control. Any future
 changes must be selected on VAL and evaluated on a new locked test protocol.
 
-## Deployment checkpoint
+## Checkpoint deployment historis dan alias default
 
 `models/weights/kd_student_best.pt` is the selected seed-42 pure-KD checkpoint,
 copied from `runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt`.

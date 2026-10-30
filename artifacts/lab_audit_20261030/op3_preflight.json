@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-10-30T05:55:00.020271+00:00",
+  "scope": "Audit server; tidak membuktikan kesiapan robot",
+  "models": [
+    {
+      "model": "teacher_fp32",
+      "path": "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt",
+      "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "classes": {
+        "0": "ball",
+        "1": "gawang",
+        "2": "robot"
+      },
+      "parameters": 2590425
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "path": "/mnt/nas-hpg9/rafli5131/projects/bre/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "classes": {
+        "0": "ball",
+        "1": "gawang",
+        "2": "robot"
+      },
+      "parameters": 810649
+    },
+    {
+      "model": "supervised_seed1337",
+      "path": "/mnt/nas-hpg9/rafli5131/projects/bre/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "classes": {
+        "0": "ball",
+        "1": "gawang",
+        "2": "robot"
+      },
+      "parameters": 810649
+    },
+    {
+      "model": "kd_seed42",
+      "path": "/mnt/nas-hpg9/rafli5131/projects/bre/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+      "classes": {
+        "0": "ball",
+        "1": "gawang",
+        "2": "robot"
+      },
+      "parameters": 810649
+    }
+  ],
+  "op3_default": "kd_seed42",
+  "runtime": {
+    "python": "3.11.2",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130",
+    "numpy": "1.26.4"
+  },
+  "pending_on_robot": [
+    "ROS/CPU runtime and lap",
+    "camera/topic/QoS",
+    "operator and physical condition",
+    "T36/T37 live runs",
+    "new frames and reviewed labels"
+  ]
+}

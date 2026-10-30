@@ -1,6 +1,6 @@
 # Draf Bab IV–V: Hasil dan Pembahasan
 
-> Draf ini memakai hasil eksperimen terkunci yang selesai pada 10 Oktober 2026. Angka dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
+> Draf diperbarui 30 Oktober 2026. Bagian 4.2–4.6 mempertahankan hasil tahap awal Pure KD/supervised tanggal 10 Oktober; bagian 4.8–4.10 menambahkan Hybrid, konfirmasi S2, dan status OP3/T42. Angka dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
 
 ## BAB IV — HASIL DAN PEMBAHASAN
 
@@ -14,7 +14,7 @@ Metrik utama adalah mAP50–95. AP dihitung dengan confidence floor 0,001; preci
 
 ### 4.2 Pelaksanaan training dan pemilihan checkpoint
 
-Enam student diselesaikan dengan seed berpasangan 42, 1337, dan 2025. Ketiga seed pure KD menggunakan objective teacher-only: fitur P3/P4/P5, logit regresi box teacher, dan target lunak kelas teacher dengan bobot 1:1:1 serta temperatur 2. Label TRAIN tidak digunakan dalam loss KD. Baseline supervised memakai arsitektur student yang sama dalam run terpisah dan menggunakan label TRAIN. Seluruh run menyatakan `test_split_used=false`; checkpoint `best.pt` masing-masing dipilih berdasarkan VAL.
+Pada tahap awal, enam student diselesaikan dengan seed berpasangan 42, 1337, dan 2025. Ketiga seed pure KD menggunakan objective teacher-only: fitur P3/P4/P5, logit regresi box teacher, dan target lunak kelas teacher dengan bobot 1:1:1 serta temperatur 2. Label TRAIN tidak digunakan dalam loss KD. Baseline supervised memakai arsitektur student yang sama dalam run terpisah dan menggunakan label TRAIN. Seluruh run menyatakan `test_split_used=false`; checkpoint `best.pt` masing-masing dipilih berdasarkan VAL.
 
 Resep bersama memakai AdamW, maksimum 100 epoch, batch 16, ukuran gambar 640, learning rate awal 0,001, warm-up 3 epoch, weight decay 0,0005, `close_mosaic=10`, FP32, dan patience 30. Manifest lima dari enam run merekam NVIDIA L40 dan runtime secara terstruktur. Manifest supervised seed 42 merupakan pengecualian legacy: run telah dimulai sebelum pencatatan metadata runtime dan hash awal konfigurasi diperluas; keterbatasan ini tidak ditutup dengan hash retrospektif.
 
@@ -117,11 +117,31 @@ Evaluasi TEST sempat memiliki satu percobaan harness yang gagal pada batch perta
 
 Tabel analisis final yang sudah mengoreksi sumber hitungan parameter tersedia di [`artifacts/thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/). Seluruh file di folder itu terdaftar dengan SHA-256 pada `analysis_manifest.json`. Folder [`artifacts/thesis_analysis_final/`](artifacts/thesis_analysis_final/) adalah keluaran analisis pertama sebelum audit hitungan parameter dan sebaiknya tidak dipakai untuk tabel final.
 
+### 4.8 Hasil utama Hybrid full dan konfirmasi S2
+
+Hybrid full menggabungkan loss deteksi berlabel dengan distilasi fitur, box, dan kelas. Tiga seed memakai arsitektur student yang sama dengan kontrol supervised. Pada VAL, mAP50–95 Hybrid full adalah 0,7505 ± 0,0018, dibanding supervised 0,7208 ± 0,0041 ([T28](analisis_performa/tabel/T28_selisih_kd_hybrid_val.md)).
+
+Pada TEST resmi, Hybrid full memperoleh mAP50–95 0,7469 ± 0,0022 dibanding supervised 0,7225 ± 0,0035; selisih berpasangan +0,0244 ± 0,0040. F1@0,25 Hybrid 0,9071 ± 0,0017 sedikit lebih rendah daripada supervised 0,9121 ± 0,0026 ([T30](analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md)). Kenaikan mAP tidak berarti semua metrik membaik. TEST sudah digunakan pada tahap sebelumnya; hasil ini bukan evaluasi pada holdout baru dan tiga seed tidak mendukung klaim signifikansi kuat.
+
+Penyaringan S1–S8 selesai (T40). Konfirmasi S2 tiga seed menghasilkan VAL mAP50–95 0,7475 ± 0,0013 dan F1@0,25 0,9251 ± 0,0024. Penurunan mAP sekitar 0,0030 dan kenaikan F1 sekitar 0,0046 gagal batas penggantian yang ditetapkan sebelum training ([T41](analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.md)). Hybrid full tetap model utama; seed 1337 dipilih dari VAL untuk OP3 sesuai D16.
+
+### 4.9 Bukti OP3 dan pekerjaan yang masih diperlukan
+
+Uji live Hybrid sudah tercatat pada percobaan 27. Evaluasi offline eksploratif [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) membandingkan Hybrid dan supervised seed 1337 pada 260 frame identik: mAP50–95 0,4885 versus 0,4414, F1 makro 0,5121 versus 0,6054, dan frame negatif dengan false positive 21/60 versus 0/60. Label berawal dari draf Pure KD sebelum tinjauan manusia; pengambilan berasal dari satu rangkaian sesi. Temuan ini terbatas pada set tersebut dan tidak digunakan memilih ulang model atau ambang.
+
+T36/T37 belum tersedia. Uji live setara empat model, dua kondisi, tiga ulangan akan menjawab latensi/FPS serta CPU/RAM pada OP3. Set akurasi baru memerlukan sampling dan aturan anotasi yang dibekukan, tinjauan setiap frame, serta hash frame/label sebelum evaluasi. Angka L40 tidak menggantikan pengukuran OP3.
+
+### 4.10 Status ablasi kapasitas teacher T42
+
+Teacher YOLO11n T42 selesai 100 epoch dengan durasi manifest 8.145,535 detik; VAL mAP50–95 0,7760286 dan F1@0,25 0,9355309. Manifest privat dan hasil VAL telah diperiksa. Kelanjutan teacher YOLO11s dan enam student dimulai sebagai antrean pada 30 Oktober 2026. Tabel akhir belum tersedia, sehingga belum ada kesimpulan pengaruh ukuran teacher. Protokol ini memakai TRAIN/VAL saja dan tidak mengganti model OP3.
+
 ## BAB V — KESIMPULAN DAN SARAN
 
 ### 5.1 Kesimpulan
 
-1. Pada split resmi level-gambar Advance Vision, pure teacher-only KD menghasilkan mean TEST mAP50–95 0,6630 ± 0,0108, lebih rendah daripada teacher FP32 (0,7800) dan supervised student berarsitektur sama (0,7225 ± 0,0035). Selisih berpasangan KD–supervised adalah −0,0595 ± 0,0138. Hipotesis bahwa KD mengungguli supervised pada metrik utama tidak didukung.
+Hybrid full merupakan model KD utama: mAP50–95 TEST meningkat terhadap supervised pada tiga seed, sedangkan F1@0,25 sedikit menurun. S2 tetap ablasi. Implementasi Hybrid pada OP3 telah memiliki bukti historis, tetapi kesimpulan runtime utama menunggu T36/T37 dan generalisasi kamera memerlukan set baru. Rincian berikut mempertahankan temuan tahap awal Pure KD.
+
+1. Pada split resmi level-gambar Advance Vision, pure teacher-only KD menghasilkan mean TEST mAP50–95 0,6630 ± 0,0108, lebih rendah daripada teacher FP32 (0,7800) dan supervised student berarsitektur sama (0,7225 ± 0,0035). Selisih berpasangan KD–supervised adalah −0,0595 ± 0,0138. Hipotesis awal khusus Pure KD tidak didukung; hasil Hybrid berbeda seperti dijelaskan pada bagian 4.8.
 2. Student yang dilatih dengan pure KD memiliki 68,71% lebih sedikit parameter, ukuran checkpoint 65,20% lebih kecil, dan FLOPs 62,64% lebih rendah daripada teacher. Pengurangan ini mencerminkan arsitektur student yang lebih kecil: baseline supervised dengan arsitektur sama memiliki parameter dan GFLOPs identik, serta ukuran checkpoint yang hampir sama. Pada benchmark NVIDIA L40, mean latensi median student KD adalah 25,01 ms, student supervised 25,00 ms, dan teacher 25,72 ms. Perbedaan tersebut terbatas pada konfigurasi host dan tidak cukup untuk menyimpulkan manfaat real-time di robot.
 3. Gap mAP50–95 KD terhadap teacher paling besar pada kelas `ball` (−0,1828) dan `robot` (−0,1378). Kelas `gawang` memiliki gap −0,0302, tetapi mAP50–95 absolutnya paling rendah. Temuan ini bersifat deskriptif dan terkait distribusi serta karakteristik split yang diuji.
 4. Kesimpulan dibatasi pada checkpoint, konfigurasi, dan split level-gambar yang dilaporkan. Eksperimen ini tidak membuktikan generalisasi pada adegan baru atau keunggulan inferensi pada perangkat robot.

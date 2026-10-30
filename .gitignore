@@ -21,3 +21,5 @@ __pycache__/
 /runs/op3_pytorch/20261023_kd_hybrid_live_preview_post_tests_02_detections.csv
 # Generated ROS 2 build logs.
 /log/
+# Log launcher T42 lokal; status audit terkurasi disimpan terpisah.
+/runs/kd_teacher_ablation/continuation_*.log
