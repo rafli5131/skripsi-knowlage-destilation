@@ -26,7 +26,7 @@ Protokol inti sudah kuat: pemilihan model dan *seed* di VAL, tiga *seed* per met
 | KF-03 | Sistem melacak objek dengan BoT-SORT | Gerakkan bola perlahan di depan kamera | Objek mendapat ID dan ID bertahan selama objek terlihat |
 | KF-04 | Sistem mencatat log *runtime* per *frame* | Jalankan satu *run* pendek, lalu buka CSV | Kolom cap waktu, waktu tiap tahap, CPU, RSS, dan jumlah deteksi per kelas terisi |
 | KF-05 | Sistem menampilkan *preview* deteksi ke laptop | Aktifkan `publish_debug_image:=true` dan penampil SSH-X | Kotak, kelas, ID, dan *confidence* tampil di laptop |
-| KNF-01 | Laju pemrosesan | Uji *runtime* sesuai protokol setara | FPS efektif rata-rata minimal 8 pada kondisi diam dan berjalan (acuan Lau dan Pottier, 2026) |
+| KNF-01 | Laju pemrosesan | Uji *runtime* sesuai protokol setara | FPS efektif rata-rata minimal 8 pada kondisi diam dan berjalan. Angka 8 adalah batas atas rentang 4 sampai 8 FPS yang dinilai Lau dan Pottier (2026) memadai untuk navigasi dan interaksi objek, sama dengan acuan di Bab 3 proposal. Rentang itu diukur pada OP3 dengan Core i3-6100U dan model yang dikuantisasi lewat OpenVINO, jadi bukan pembanding langsung untuk PyTorch FP32 |
 
 Catatan: KF-05 bersifat pilihan; empat kebutuhan pertama sudah memenuhi syarat minimal. Skenario dinyatakan berhasil bila keluaran aktual sama dengan yang diharapkan. Pemeriksaan ini terpisah dari 24 *run* benchmark.
 
@@ -49,7 +49,7 @@ D5 (sapuan *grid*), D9 (penyimpanan), dan D10 (ukuran objek) tidak dipakai untuk
 
 ## 3. Ukuran set *frame* OP3 baru
 
-**Masalah.** Set ini satu-satunya evaluasi yang bersih karena TEST sudah pernah dibuka (DECISIONS D13, R-24) dan T34 sudah dipakai untuk merancang `hybrid_v2`. Prompt 30 Oktober meminta jumlah *frame* dibekukan sebelum perekaman, tetapi angkanya belum ada (D8 `null`).
+**Masalah.** Set ini satu-satunya evaluasi yang bersih karena TEST sudah pernah dibuka (DECISIONS D12) dan T34 sudah dipakai untuk merancang `hybrid_v2`. Prompt 30 Oktober meminta jumlah *frame* dibekukan sebelum perekaman, tetapi angkanya belum ada (D8 `null`).
 
 **Acuan.** T34 memakai 260 *frame* (200 berobjek dan 60 tanpa objek; 400 kotak) untuk satu rangkaian. Di TEST, anotasi bola hanya 83 dan robot 119, dibanding gawang 532, sehingga metrik per kelas bola dan robot rawan tidak stabil.
 
