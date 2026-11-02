@@ -1,0 +1,5 @@
+metric,label_id,label_en,mean_ms,median_ms,p95_ms
+preprocess_ms,Pra-pemrosesan,Preprocessing,5.937824724770686,5.113170000186074,12.986704399554569
+inference_ms,Inferensi,Inference,77.44264250084551,59.94527099937841,156.2729653996939
+postprocess_ms,Pasca-pemrosesan,Postprocessing,0.8160493418892236,0.830649999443267,1.096434200189833
+end_to_end_ms,Callback total,Total callback,96.75155224618082,78.73041099992406,181.19226760027232

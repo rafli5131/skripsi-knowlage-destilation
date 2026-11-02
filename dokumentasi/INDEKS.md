@@ -52,6 +52,10 @@ Versi GitHub memuat laporan, tabel, grafik analisis, dan metadata hasil yang dik
 - [Percobaan 27 — uji ulang KD Hybrid: idle, berjalan, dan tracking](2026-10-23/percobaan-27-uji-ulang-kd-hybrid/README_ID.md) · [English](2026-10-23/percobaan-27-uji-ulang-kd-hybrid/README_EN.md)
 - [Percobaan 28 — evaluasi offline berpasangan KD Hybrid vs Supervised pada 260 frame OP3](2026-10-23/percobaan-28-evaluasi-offline-hybrid-supervised-260/README_ID.md) · [English](2026-10-23/percobaan-28-evaluasi-offline-hybrid-supervised-260/README_EN.md)
 
+## 2026-11-02
+
+- [Percobaan 30 — uji live setara empat model OP3, progres 9/24 slot](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) · [English](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_EN.md) · [Log progres](2026-11-02/percobaan-30-uji-live-setara-empat-model/log_progres.md) · [Tabel 24 slot](2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv)
+
 ## Materi skripsi dan audit
 
 - [Audit kelengkapan dokumentasi skripsi](AUDIT_KELENGKAPAN_SKRIPSI_2026-10-22.md)

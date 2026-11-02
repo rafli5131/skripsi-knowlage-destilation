@@ -1,0 +1,29 @@
+{
+  "run_id": "20261102_eq_teacher_walk_retest_u3",
+  "condition": "walking",
+  "window_start_utc": "2026-11-02T12:10:06.930782+00:00",
+  "window_end_utc": "2026-11-02T12:11:06.930782+00:00",
+  "frames_window": 604,
+  "error_frames": 0,
+  "latency_mean_ms": 94.39903923844786,
+  "latency_median_ms": 75.3692995003803,
+  "latency_p95_ms": 180.0092859499273,
+  "fps": 10.065543715883253,
+  "cpu_percent": 1337.9917218543046,
+  "rss_mib": 377.97477105753313,
+  "head_max_delta_rad": 0.0015339807861328159,
+  "body_max_delta_rad": 0.49087385156249996,
+  "gait_start_ack_utc": "2026-11-02T12:10:04.930782+00:00",
+  "gait_guard_status": "completed",
+  "mid_gait_samples_source": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/head_guard_samples.csv",
+  "mid_gait_sample_times_utc": {
+    "mid1": "2026-11-02T12:10:25.388108+00:00",
+    "mid2": "2026-11-02T12:10:44.539863+00:00"
+  },
+  "status": "lulus_cek_otomatis",
+  "reasons": [],
+  "source_csv": "runs/op3_pytorch/20261102_eq_teacher_walk_retest_u3.csv",
+  "slot_key": "teacher_walk_u3",
+  "display_repetition": 3,
+  "source_run_id": "20261102_eq_teacher_walk_retest_u3"
+}

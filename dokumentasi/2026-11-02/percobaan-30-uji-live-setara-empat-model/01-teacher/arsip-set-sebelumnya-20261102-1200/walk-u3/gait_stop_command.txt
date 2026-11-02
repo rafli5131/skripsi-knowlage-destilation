@@ -1,0 +1,4 @@
+topic=/robotis/walking/command
+data=stop
+command_utc=2026-11-02T11:50:39.483557+00:00
+source=gait_guard.json

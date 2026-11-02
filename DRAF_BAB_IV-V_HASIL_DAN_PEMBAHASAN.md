@@ -1,6 +1,6 @@
 # Draf Bab IV–V: Hasil dan Pembahasan
 
-> Draf diperbarui 30 Oktober 2026. Bagian 4.2–4.6 mempertahankan hasil tahap awal Pure KD/supervised tanggal 10 Oktober; bagian 4.8–4.10 menambahkan Hybrid, konfirmasi S2, dan status OP3/T42. Angka dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
+> Catatan progres 2 November 2026: bagian 4.2–4.6 mempertahankan hasil tahap awal Pure KD/supervised tanggal 10 Oktober; bagian 4.8–4.10 menambahkan Hybrid, konfirmasi S2, dan status OP3/T42. [Uji live setara terbaru](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) baru mengukur 9/24 slot dan belum menghasilkan T36/T37 final. Angka hasil yang sudah ada dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
 
 ## BAB IV — HASIL DAN PEMBAHASAN
 
@@ -129,7 +129,7 @@ Penyaringan S1–S8 selesai (T40). Konfirmasi S2 tiga seed menghasilkan VAL mAP5
 
 Uji live Hybrid sudah tercatat pada percobaan 27. Evaluasi offline eksploratif [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) membandingkan Hybrid dan supervised seed 1337 pada 260 frame identik: mAP50–95 0,4885 versus 0,4414, F1 makro 0,5121 versus 0,6054, dan frame negatif dengan false positive 21/60 versus 0/60. Label berawal dari draf Pure KD sebelum tinjauan manusia; pengambilan berasal dari satu rangkaian sesi. Temuan ini terbatas pada set tersebut dan tidak digunakan memilih ulang model atau ambang.
 
-T36/T37 belum tersedia. Uji live setara empat model, dua kondisi, tiga ulangan akan menjawab latensi/FPS serta CPU/RAM pada OP3. Set akurasi baru memerlukan sampling dan aturan anotasi yang dibekukan, tinjauan setiap frame, serta hash frame/label sebelum evaluasi. Angka L40 tidak menggantikan pengukuran OP3.
+T36/T37 final belum tersedia. [Uji live setara 2 November](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) telah mengukur 9/24 slot: teacher idle/berjalan dan Hybrid idle masing-masing tiga ulangan. Data per run, grafik, dan penyimpangan pemilihan ulang teacher berjalan sudah dicatat; 15 slot lain serta audit akhir masih diperlukan untuk kesimpulan latensi/FPS dan CPU/RAM empat model pada OP3. Set akurasi baru memerlukan sampling dan aturan anotasi yang dibekukan, tinjauan setiap frame, serta hash frame/label sebelum evaluasi. Angka L40 tidak menggantikan pengukuran OP3.
 
 ### 4.10 Status ablasi kapasitas teacher T42
 
@@ -139,7 +139,7 @@ Teacher YOLO11n T42 selesai 100 epoch dengan durasi manifest 8.145,535 detik; VA
 
 ### 5.1 Kesimpulan
 
-Hybrid full merupakan model KD utama: mAP50–95 TEST meningkat terhadap supervised pada tiga seed, sedangkan F1@0,25 sedikit menurun. S2 tetap ablasi. Implementasi Hybrid pada OP3 telah memiliki bukti historis, tetapi kesimpulan runtime utama menunggu T36/T37 dan generalisasi kamera memerlukan set baru. Rincian berikut mempertahankan temuan tahap awal Pure KD.
+Hybrid full merupakan model KD utama: mAP50–95 TEST meningkat terhadap supervised pada tiga seed, sedangkan F1@0,25 sedikit menurun. S2 tetap ablasi. Implementasi Hybrid pada OP3 memiliki bukti historis dan tiga run idle pada uji setara terbaru; kesimpulan runtime utama menunggu T36/T37 lengkap dan generalisasi kamera memerlukan set baru. Rincian berikut mempertahankan temuan tahap awal Pure KD.
 
 1. Pada split resmi level-gambar Advance Vision, pure teacher-only KD menghasilkan mean TEST mAP50–95 0,6630 ± 0,0108, lebih rendah daripada teacher FP32 (0,7800) dan supervised student berarsitektur sama (0,7225 ± 0,0035). Selisih berpasangan KD–supervised adalah −0,0595 ± 0,0138. Hipotesis awal khusus Pure KD tidak didukung; hasil Hybrid berbeda seperti dijelaskan pada bagian 4.8.
 2. Student yang dilatih dengan pure KD memiliki 68,71% lebih sedikit parameter, ukuran checkpoint 65,20% lebih kecil, dan FLOPs 62,64% lebih rendah daripada teacher. Pengurangan ini mencerminkan arsitektur student yang lebih kecil: baseline supervised dengan arsitektur sama memiliki parameter dan GFLOPs identik, serta ukuran checkpoint yang hampir sama. Pada benchmark NVIDIA L40, mean latensi median student KD adalah 25,01 ms, student supervised 25,00 ms, dan teacher 25,72 ms. Perbedaan tersebut terbatas pada konfigurasi host dan tidak cukup untuk menyimpulkan manfaat real-time di robot.

@@ -1,0 +1,4 @@
+class,frames_detected,frames_window,coverage_percent,median_confidence,unique_track_ids
+ball,614,614,100.0,0.8837556838989258,1
+gawang,614,614,100.0,0.3458048105239868,1
+robot,614,614,100.0,0.7719700932502747,1

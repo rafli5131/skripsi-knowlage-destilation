@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>op3_equal_live_report</name>
+  <version>0.1.0</version>
+  <description>Capture overlay evidence and build HD plots for equal OP3 live runs.</description>
+  <maintainer email="BhreW@users.noreply.github.com">BhreW</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

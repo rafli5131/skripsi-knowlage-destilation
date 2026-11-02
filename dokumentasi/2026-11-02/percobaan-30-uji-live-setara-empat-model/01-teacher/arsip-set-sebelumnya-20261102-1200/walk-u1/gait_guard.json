@@ -1,0 +1,16 @@
+{
+  "run_csv": "runs/op3_pytorch/20261102_eq_teacher_walk_u1.csv",
+  "started_at_utc": "2026-11-02T11:33:41.012368+00:00",
+  "baseline_pan_rad": -0.07209709694824219,
+  "baseline_tilt_rad": -0.26998061835937504,
+  "head_limit_rad": 0.0030679615757712823,
+  "t_w_utc": "2026-11-02T11:34:08.749229+00:00",
+  "start_command_utc": "2026-11-02T11:34:11.763961+00:00",
+  "start_ack_receive_utc": "2026-11-02T11:34:11.771719+00:00",
+  "stop_command_utc": "2026-11-02T11:35:14.781409+00:00",
+  "stop_ack_receive_utc": "2026-11-02T11:35:14.787089+00:00",
+  "status": "completed",
+  "max_head_delta_rad": 0.0015339807861328159,
+  "head_violation": false,
+  "finished_at_utc": "2026-11-02T11:35:14.787132+00:00"
+}

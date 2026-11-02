@@ -1,0 +1,25 @@
+top - 19:50:46 up  2:44,  3 users,  load average: 14.17, 13.08, 13.48
+Tasks: 547 total,   3 running, 544 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 48.6 us, 32.2 sy,  0.0 ni, 18.6 id,  0.0 wa,  0.0 hi,  0.6 si,  0.0 st 
+MiB Mem :   7510.2 total,    981.5 free,   5586.9 used,   1301.0 buff/cache     
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.   1923.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  32989 humanoid  20   0 4324784 368104 101660 R  1145   4.8  18:40.68 pt_main+
+  11961 humanoid  20   0 1050260  79056  48540 R  18.2   1.0  17:07.65 usb_cam+
+  17771 humanoid  20   0 1645544  88276  57340 S   9.1   1.1  18:48.91 op3_man+
+  17772 humanoid  20   0  884364  66056  26040 S   9.1   0.9  10:19.66 zmp_node
+  31429 humanoid  20   0 3083836 126132  63488 S   9.1   1.6   0:36.47 python
+  33303 humanoid  20   0   15280   4552   2368 R   9.1   0.1   0:00.01 top
+      1 root      20   0   24060  12188   6548 S   0.0   0.2   0:04.01 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.29 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_wo+
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.21 ksoftir+
+     15 root      20   0       0      0      0 I   0.0   0.0   0:05.63 rcu_pre+
