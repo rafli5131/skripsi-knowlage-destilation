@@ -1,0 +1,28 @@
+{
+  "run_id": "20261103_eq_sup1337_idle_u3",
+  "condition": "servo_idle",
+  "window_start_utc": "2026-11-03T06:06:35.743638+00:00",
+  "window_end_utc": "2026-11-03T06:07:35.743638+00:00",
+  "frames_window": 746,
+  "error_frames": 0,
+  "latency_mean_ms": 71.4740861125936,
+  "latency_median_ms": 57.268979999662406,
+  "latency_p95_ms": 159.53450574966155,
+  "fps": 12.42949784444979,
+  "cpu_percent": 1300.1105898123324,
+  "rss_mib": 359.99968058813675,
+  "head_max_delta_rad": 0.0015339807861328159,
+  "body_max_delta_rad": 0.004604190498290167,
+  "gait_start_ack_utc": null,
+  "gait_guard_status": null,
+  "mid_gait_samples_source": null,
+  "mid_gait_sample_times_utc": {},
+  "status": "perlu_audit",
+  "reasons": [
+    "telemetry_badan_belum_lengkap_atau_bergeser"
+  ],
+  "source_csv": "runs/op3_pytorch/20261103_eq_sup1337_idle_u3.csv",
+  "slot_key": "sup1337_idle_u3",
+  "display_repetition": 3,
+  "source_run_id": "20261103_eq_sup1337_idle_u3"
+}

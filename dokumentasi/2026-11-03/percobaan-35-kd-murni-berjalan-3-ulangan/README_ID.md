@@ -1,0 +1,7 @@
+# Percobaan 35 — KD murni berjalan
+
+Ketiga slot berjalan KD murni selesai setelah konfirmasi operator per run dan mendapat ack mulai/berhenti. [Ulangan 1](04-kd-murni/walk-u1/README_ID.md), [ulangan 2](04-kd-murni/walk-u2/README_ID.md), dan [pengganti ulangan 3](04-kd-murni/walk-u3-ulang1/README_ID.md) lulus cek otomatis CSV/telemetry. [Ulangan 3 sebelumnya](04-kd-murni/walk-u3/README_ID.md) tetap tersimpan dengan status perlu audit. Pengganti dipetakan ke slot aktif sesuai permintaan pengguna. Deviasi kepala maksimum satu count pada ketiga guard aktif; tidak ada perintah posisi ID 19/20.
+
+Secara deskriptif, tiga run aktif menghasilkan rerata ± SD sampel **72,65 ± 2,55 ms**, **12,21 ± 0,15 FPS**, CPU proses **1295,65 ± 1,35% satu CPU logis**, dan RSS **360,18 ± 4,69 MiB**. Ada 2.198 frame ukur tanpa error. Keluaran deteksi live bukan akurasi berlabel.
+
+[Tabel tiga run](05-ringkasan/tabel_3_run.csv), [agregat sementara](05-ringkasan/tabel_agregat_saat_ini.csv), [grafik HD Indonesia](04-kd-murni/grafik_kd42_walk_ulangan_1_2_3_hd.png), dan [grafik English](04-kd-murni/graph_kd42_walk_repetitions_1_2_3_hd.png) memakai pengganti. [Arsip ringkasan sebelum penggantian](arsip-sebelum-pengganti-u3/) dan run lama tetap tersedia. Seluruh **24/24 slot aktif lulus cek otomatis**. T36/T37 final menunggu audit protokol. Kondisi torque tidak dibaca langsung saat manager menguasai bus; preview tidak direkam sebagai video layar.

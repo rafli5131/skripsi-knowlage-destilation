@@ -1,5 +1,7 @@
 # T19. Runtime OP3 pada kondisi idle dan berjalan
 
+**Pembaruan 3 November:** pengukuran 24 slot dengan tiga ulangan per model/kondisi tersedia pada [T36](T36_runtime_live_setara_per_run.md) dan [T37](T37_runtime_live_setara_ringkasan.md). Angka lama di bawah tetap sebagai riwayat; lihat [batas audit protokol](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md).
+
 **Status: terukur secara eksploratif.** Bagian ini menampilkan uji terbaru dengan preview SSH-X aktif. Tiap kondisi satu run; angka menggambarkan sesi tersebut, bukan perubahan kinerja yang terisolasi akibat gerak robot. Riwayat 22 Oktober dipertahankan di [CSV](T19_servo_idle_vs_walking.csv).
 
 | Model dan percobaan | Kondisi | Frame ukur | FPS efektif | Callback P50 / P95 (ms) | CPU median (% kapasitas 16 CPU logis) | RSS median (MiB) | Frame dengan keluaran gawang | Error frame |

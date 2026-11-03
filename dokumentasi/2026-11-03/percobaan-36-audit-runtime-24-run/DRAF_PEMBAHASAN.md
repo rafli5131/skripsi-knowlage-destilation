@@ -1,0 +1,11 @@
+# Draf pembahasan hasil runtime OP3
+
+Sebanyak 24 run aktif dikumpulkan dari empat checkpoint pada kondisi idle dan berjalan, masing-masing tiga ulangan dengan preview SSH-X aktif. Audit log dan sampel telemetry menemukan bahwa 24 run memenuhi pemeriksaan otomatis yang diterapkan. Ack mulai dan berhenti tersedia pada 12 run berjalan. Hasil lengkap per run dan agregat terdapat pada T36 dan T37; pemeriksaan otomatis ini tidak membuktikan seluruh aspek kesetaraan fisik pengujian.
+
+Pengguna menerima hasil tersebut untuk analisis deskriptif dengan keterbatasan yang dijelaskan di bawah. Penerimaan ini tidak melengkapi bukti yang tidak terekam; persetujuan pembimbing belum dicatat.
+
+Pada kondisi idle, teacher menghasilkan latency rata-rata antar-run 96,24 ± 3,60 ms dan 9,88 ± 0,31 FPS; Hybrid menghasilkan 64,70 ± 1,92 ms dan 13,60 ± 0,35 FPS. Pada kondisi berjalan, teacher menghasilkan 95,85 ± 1,27 ms dan 9,87 ± 0,17 FPS; Hybrid menghasilkan 71,47 ± 2,98 ms dan 12,54 ± 0,38 FPS. Angka setelah ± adalah simpangan baku sampel tiga rerata run. FPS dihitung dari timestamp kamera yang valid, bukan kebalikan latency. CPU dinyatakan sebagai persen satu CPU logis, sehingga nilai di atas 100% dapat terjadi pada proses multithread; RAM dinyatakan sebagai RSS.
+
+Perbandingan bersifat deskriptif. Urutan pengukuran berbentuk blok pada dua hari, bukan urutan bergilir; suhu, waktu, penataan objek dan jarak tidak sepenuhnya dikendalikan. Set teacher berjalan dipilih ulang setelah cakupan gawang diamati. Dua screenshot teacher idle sesuai waktu protokol tidak tersedia dan satu baseline Hybrid berjalan mencakup enam sendi. Kondisi torque pada beberapa sesi tidak dibaca langsung. Oleh sebab itu, hasil ini tidak cukup untuk menyimpulkan pengaruh berjalan atau metode distilasi secara kausal.
+
+Mutu deteksi berlabel dilaporkan terpisah dari runtime live. T05 dan T30 merangkum TEST resmi; T34 adalah evaluasi eksploratif dua model pada 260 frame kamera OP3 yang sudah ditinjau manusia dengan bantuan pra-label. TEST resmi pernah digunakan sebelumnya, sedangkan frame OP3 berasal dari satu rangkaian dan bukan bukti generalisasi lintas adegan. Cakupan kotak selama live tidak dinyatakan sebagai precision atau mAP. T35 menjadi sumber waktu training dan durasi sesi pengujian.

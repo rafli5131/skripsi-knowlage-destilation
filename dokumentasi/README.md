@@ -1,6 +1,6 @@
 # Hasil inferensi kamera OP3
 
-Halaman ini mengarsipkan **satu sesi 19 Oktober 2026**. Untuk status penelitian terbaru, lihat [indeks seluruh percobaan](INDEKS.md) dan [uji live setara 2 November, 9/24 slot](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md). Angka dan pernyataan historis di bawah hanya berlaku untuk sesi `20261019T083428Z`.
+Halaman ini mengarsipkan **satu sesi 19 Oktober 2026**. Untuk status penelitian terbaru, lihat [indeks seluruh percobaan](INDEKS.md) dan [uji live lintas hari 2–3 November, 12/24 slot](2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md). Angka dan pernyataan historis di bawah hanya berlaku untuk sesi `20261019T083428Z`.
 
 ## Status terbaru kode deteksi dan tracking
 

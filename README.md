@@ -1,47 +1,19 @@
 # YOLO11 Knowledge Distillation untuk ROBOTIS OP3
 
-Penelitian deteksi `ball`, `gawang`, dan `robot` dengan teacher YOLO11n FP32 serta student YOLO11 skala **t kustom** (810.649 parameter). Metode yang dibandingkan ialah supervised, Pure KD teacher-only, dan KD Hybrid full yang menggabungkan loss berlabel dengan distilasi fitur, kotak, dan kelas.
+Penelitian deteksi `ball`, `gawang`, dan `robot` membandingkan teacher YOLO11n FP32 dengan student YOLO11 skala **t kustom** (810.649 parameter), yang dilatih secara supervised, KD murni, dan KD Hybrid full menggunakan ROS 2 pada ROBOTIS OP3.
 
-## Uji robot dan status terbaru
+## Status terbaru — 3 November 2026
 
-Gunakan [protokol uji live setara](prompt/PROMPT_UJI_ULANG_LIVE_SETARA_OP3_DENGAN_TEACHER.md) bersama [prompt persiapan OP3 30 Oktober](prompt/PROMPT_TES_ROBOT_OP3_2026-10-30.md). [Percobaan 30 pada 2 November](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) telah mengukur **9 dari 24 slot**; [log progres](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/log_progres.md) mencatat urutan dan sumber data aktif. Lanjutkan dari slot yang belum terukur setelah pemeriksaan ulang perangkat dan operator.
+Sebanyak **24/24 slot runtime OP3** terukur: empat model × kondisi idle/berjalan × tiga ulangan. Seluruh slot aktif lulus cek otomatis log dan telemetry. Pengguna [menerima hasil untuk analisis deskriptif](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md) dengan keterbatasan yang dicatat; kesetaraan kondisi fisik tidak terbukti penuh dan persetujuan pembimbing belum dicatat.
 
-1. Periksa kembali environment CPU/ROS, kamera, empat checkpoint, posisi kepala, dan kesiapan operator pada OP3.
-2. Selesaikan **15 slot tersisa** pada empat model × dua kondisi × tiga ulangan untuk T36/T37. Durasi node **75 detik sesudah 30 frame warm-up**, dengan **jendela analisis 60 detik**. Catat penyimpangan sesuai kejadian.
-3. Setelah run lengkap, audit protokol dan susun T36/T37. Evaluasi empat model pada 260 frame OP3 berlabel identik untuk T38 bersifat retrospektif/eksploratif; set baru terpisah diperlukan bila ingin klaim generalisasi lintas adegan.
+- [Audit 24 run dan keterbatasan](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md) · [Log progres hari ini](dokumentasi/2026-11-03/LOG_PROGRES_SKRIPSI.md) · [Memory terbaru](memory/2026-11-03-progress-skripsi-prompt-bab-iv-v.md)
+- [T36 per run](analisis_performa/tabel/T36_runtime_live_setara_per_run.md) · [T37 ringkasan](analisis_performa/tabel/T37_runtime_live_setara_ringkasan.md) · [Grafik runtime ID](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/grafik_runtime_24_run_id_hd.png) · [English](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/grafik_runtime_24_run_en_hd.png)
+- [Akurasi TEST empat metode](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/TABEL_AKURASI_TEST.md) · [Waktu training dan pengujian T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) · [Draf pembahasan](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/DRAF_PEMBAHASAN.md)
+- [Prompt Bab IV–V V3](prompt/PROMPT_BAB_IV_V_HASIL_KD_OP3_V3_2026-11-03.md) · [Inventaris prompt](prompt/inventaris_tabel_dan_prompt.md) · [Indeks hasil](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md)
 
-Model utama adalah **Hybrid full seed 1337**, dipilih berdasarkan VAL. Gunakan `model_variant:=hybrid`; alias `op3_default` tetap Pure KD seed 42. Kontrol supervised harus memakai path seed 1337 eksplisit. Teacher utama dipindahkan secara privat dan diverifikasi sesuai [panduan transfer](docs/TRANSFER_TEACHER_KE_OP3.md); bobot T42 tidak dipakai pada sesi ini. Operator menangani seluruh tindakan fisik robot.
+T34 adalah evaluasi eksploratif Hybrid dan supervised pada 260 frame OP3 yang ditinjau dengan bantuan pra-label; 50 frame parsial dipisahkan. T38 empat model pada frame yang sama belum dijalankan. Cakupan keluaran live bukan precision, recall atau mAP. Hasil TEST resmi pernah digunakan pada tahap sebelumnya; generalisasi lintas adegan dan provenance training teacher memiliki batas yang dijelaskan dalam laporan audit.
 
-- [Persiapan OP3 dari lab](docs/PERSIAPAN_OP3_DARI_LAB_2026-10-30.md) · [Audit empat checkpoint](artifacts/lab_audit_20261030/op3_preflight.json)
-- [Runtime PyTorch/ROS 2](OP3_PYTORCH_RUNTIME.md) · [Protokol live rinci](prompt/PROMPT_UJI_ULANG_LIVE_SETARA_OP3_DENGAN_TEACHER.md)
-- [Inventaris prompt](prompt/inventaris_tabel_dan_prompt.md) · [Indeks hasil](analisis_performa/INDEKS.md)
-
-## Status penelitian — 2 November 2026
-
-| Pekerjaan | Status dan sumber |
-| --- | --- |
-| Training utama | Pure KD, supervised, dan Hybrid full, masing-masing tiga seed, selesai |
-| Konfirmasi Hybrid v2 S2 | Selesai; gagal aturan penggantian. Hybrid full tetap utama ([T41](analisis_performa/tabel/T41_konfirmasi_hybrid_v2_val.md), D16) |
-| Persiapan OP3 dari server | Empat checkpoint lolos hash, pemuatan, dan mapping kelas |
-| Benchmark OP3 setara T36/T37 | **9/24 slot diukur:** teacher idle/berjalan dan KD Hybrid idle masing-masing tiga ulangan. [Tabel sementara](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv) dan [grafik](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/grafik_24_run_ulangan_1_2_3_hd.png) tersedia; T36/T37 belum final. |
-| Akurasi OP3 | [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) mengevaluasi Hybrid/Supervised pada 260 frame eksploratif. T38 empat model pada frame yang sama dan set baru lintas adegan belum dikerjakan. |
-| T42: ablasi kapasitas teacher | Teacher YOLO11n selesai; kelanjutan teacher YOLO11s dan enam student diluncurkan 30 Oktober. Tabel akhir belum tersedia pada pembaruan ini |
-
-T42 berjalan di checkout eksperimen `/mnt/nas-hpg9/rafli5131/bre`. Status kanonik berada di `runs/kd_teacher_ablation/t42_status.jsonl` pada checkout tersebut. Salinan status dalam repo publik tidak tersinkron otomatis. T42 terpisah dari uji OP3 dan tidak perlu ditunggu untuk menguji model utama.
-
-## Hasil utama dan batasnya
-
-Hybrid full memperoleh TEST mAP50–95 **0,7469 ± 0,0022**, dibanding supervised **0,7225 ± 0,0035**. F1 pada confidence 0,25 sedikit lebih rendah: **0,9071 ± 0,0017** versus **0,9121 ± 0,0026** ([T30](analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md)). Pure KD mencapai mAP50–95 **0,6630 ± 0,0108** pada tahap sebelumnya. Arsitektur kecil menentukan pengurangan parameter; pengaruh objective KD dinilai terhadap supervised berarsitektur sama.
-
-TEST resmi sudah digunakan sebelum evaluasi lanjutan Hybrid dan tidak disebut holdout yang belum pernah disentuh. Tiga seed memberi bukti eksploratif. Split gambar resmi belum membuktikan pemisahan sesi/adegan, dan provenance data teacher lama belum lengkap. Benchmark L40 mengukur server; runtime OP3 perlu diukur pada robot.
-
-Evaluasi kamera [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) pada 260 frame lama bersifat eksploratif: Hybrid lebih tinggi pada mAP50–95, tetapi lebih rendah pada F1 makro dan menghasilkan lebih banyak false positive pada frame negatif. Set itu tidak menggantikan frame baru dengan label yang ditinjau. Keluaran live 9/24 run mengukur latensi, FPS, CPU/RAM, dan cakupan deteksi; **cakupan deteksi bukan precision atau akurasi**. [Peta rumusan masalah](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/PETA_RUMUSAN_MASALAH.md) memisahkan bukti TEST berlabel dari runtime OP3.
-
-## Environment dan catatan kerja
-
-Dependency training yang diaudit sesuai seluruh 114 paket snapshot. Gunakan interpreter proyek sesuai [agent.md](agent.md), dengan `env -u PYTHONPATH`; Python bawaan terminal dapat memiliki versi paket lain. [Environment provenance](environment/README.md) menyimpan lock dan snapshot; [requirements GPU](requirements/train-gpu.txt) dan [requirements OP3 CPU](requirements-op3-pytorch.txt) mempunyai tujuan berbeda.
-
-[Memory 2 November](memory/2026-11-02-uji-live-setara-op3-9-dari-24.md) dan [log progres OP3](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/log_progres.md) mencatat run terbaru; [memory 30 Oktober](memory/2026-10-30-lab-lanjutan.md) dan [log audit lab](artifacts/lab_audit_20261030/audit.jsonl) menyimpan pemeriksaan server. Draf [Bab I–III](DRAF_PROPOSAL_BAB_I-III.md) dan [Bab IV–V](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) perlu diperbarui setelah 24 run dan audit protokol selesai.
+Data mentah kamera, video, label, telemetry dan log robot tetap berada pada mesin OP3 sesuai aturan proyek. Ringkasan publik dapat merujuk artefak lokal tersebut; ketersediaan file mentah tidak dapat diasumsikan dari checkout GitHub. Saat melanjutkan eksperimen robot, periksa ulang kondisi fisik dan perangkat; pengguna meminta konfirmasi sebelum setiap ulangan berjalan serta menjaga arah kepala ID 19/20.
 
 ## Catatan historis tahap Pure KD
 

@@ -1,0 +1,2 @@
+model,condition,runs,frames_total,status,latency_mean_ms_mean,latency_mean_ms_sd_sample,fps_mean,fps_sd_sample,cpu_percent_mean,cpu_percent_sd_sample,rss_mib_mean,rss_mib_sd_sample
+sup1337,idle,3,2185,semua_lulus_cek_otomatis,73.11774093544676,3.2657801742699735,12.137161799316198,0.292158068057673,1299.1776993430794,3.322035086472468,355.92841919944823,3.3243417172529597

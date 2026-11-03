@@ -1,5 +1,7 @@
 # T26. Trade-off akurasi TEST dan runtime OP3
 
+**Pembaruan runtime:** hasil OP3 24 slot dengan tiga ulangan per kondisi tersedia pada [T37](T37_runtime_live_setara_ringkasan.md); baris lama di bawah tetap sebagai riwayat protokolnya. Akurasi TEST dan runtime OP3 diukur pada sumber data serta perangkat yang berbeda.
+
 | Model | Metode | TEST mAP50–95 | TEST F1 | Latensi frame tetap (ms) | FPS idle | FPS walking | CPU median idle | RSS median idle (MiB) | Parameter | GFLOPs@640 | Cakupan runtime |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
 | kd_seed42 | Pure KD | 0.674424 | 0.839511 | [BELUM DIUKUR] | 13.9422 | 11.8385 | 79.013% of 16 logical CPUs | 357.379 | 810649 | 2.429 | OP3 preview aktif; manager mati saat idle, aktif saat walking; gait terverifikasi telemetry |

@@ -1,0 +1,9 @@
+# Trial 31 — KD Hybrid walking, three repetitions
+
+On **3 November 2026**, the operator requested three walking repetitions using KD Hybrid full seed 1337 with an active SSH-X preview. Object placement and live frames were checked before **each** run. Each gait received start and stop acknowledgments; no position command was sent to head IDs 19/20. The [three-run summary](02-kd-hybrid/README_EN.md) has result tables, high-resolution axis-labeled charts, output coverage, and audit limits. [Repetition 1](02-kd-hybrid/walk-u1/README_EN.md), [2](02-kd-hybrid/walk-u2/README_EN.md), and [3](02-kd-hybrid/walk-u3/README_EN.md) each contain a camera overlay, telemetry, plots, tables, and a gait-guard JSON report.
+
+During preparation OpenCR showed 12.6–12.7 V input but the servo bus was off. With the operator supporting the robot, bus power was enabled, all 20 servos were inspected with no hardware error, and the manager started with automatic init pose disabled. The [pre-run screenshots](00-persiapan/) show all three objects. Head position remained stable through startup and module assignment. The [session log](log_penyimpangan.md) records power recovery and data limitations.
+
+**Four-model campaign status:** together with [nine 2 November runs](../../2026-11-02/percobaan-30-uji-live-setara-empat-model/README_EN.md), **12/24 slots** are now measured. The [cross-day 24-slot table and chart](../../2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv) have been updated; **12 Supervised and pure-KD slots** remain. Final T36/T37 tables still require all runs and a protocol audit. Live detection outputs are not labeled accuracy.
+
+The KD Hybrid preview was relaunched after repetition 3 and had fresh frames at the last check. Recheck process and robot state before future testing; gait was stopped while the manager and torque remained active at the end of this trial.

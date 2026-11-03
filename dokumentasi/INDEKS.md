@@ -1,5 +1,17 @@
 # Indeks dokumentasi percobaan OP3
 
+> Pembaruan terbaru: [audit 24 run, T36/T37 dan batas protokol](2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md); seluruh cek log/telemetry lulus, pengesahan kesetaraan fisik masih terbuka. Status terdahulu di bawah merupakan snapshot historis.
+
+> Status terbaru: [pengganti KD murni berjalan ulangan 3](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/README_ID.md) lulus cek otomatis; 24/24 slot aktif lulus cek otomatis. Audit protokol akhir masih terbuka; status di bawah adalah snapshot sebelumnya.
+
+> Status terbaru: [KD murni berjalan tiga ulangan](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/README_ID.md) selesai; 24/24 slot terukur, 23 lulus cek otomatis dan satu perlu audit. Status sebelumnya di bawah merupakan snapshot historis.
+
+> Status terbaru: [KD murni idle tiga ulangan](2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/README_ID.md) selesai; kampanye 21/24 slot. Status sebelumnya di bawah adalah snapshot historis.
+
+> Status terbaru: [Supervised berjalan tiga ulangan](2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/README_ID.md) selesai; kampanye 18/24 slot. Status di bawah merupakan snapshot sebelumnya.
+
+> Status terbaru: [Supervised idle tiga ulangan](2026-11-03/percobaan-32-supervised-idle-3-ulangan/README_ID.md) selesai; kampanye 15/24 slot. Pernyataan 12/24 di bawah adalah snapshot sebelumnya.
+
 Laporan per percobaan ditautkan di bawah. Isi folder berbeda-beda: ringkasan metode dan hasil, grafik, contoh gambar/audit visual, serta tautan ke CSV dan metadata JSON jika artefaknya tersedia. Data mentah berada di `runs/`; tabel evaluasi model dan analisis performa berada di [`../analisis_performa/INDEKS.md`](../analisis_performa/INDEKS.md).
 
 Versi GitHub memuat laporan, tabel, grafik analisis, dan metadata hasil yang dikurasi. Rujukan bertanda **lokal** menunjuk log mentah, snapshot kamera, atau video yang disimpan pada checkout robot; berkas tersebut tidak ikut commit publik. Salinan lengkap perubahan sebelum kurasi dipertahankan pada cabang lokal `archive/op3-progress-full-local-20261023`.
@@ -54,7 +66,11 @@ Versi GitHub memuat laporan, tabel, grafik analisis, dan metadata hasil yang dik
 
 ## 2026-11-02
 
-- [Percobaan 30 — uji live setara empat model OP3, progres 9/24 slot](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) · [English](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_EN.md) · [Log progres](2026-11-02/percobaan-30-uji-live-setara-empat-model/log_progres.md) · [Tabel 24 slot](2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv)
+- [Percobaan 30 — awal uji live setara empat model OP3, kini 12/24 slot lintas hari](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) · [English](2026-11-02/percobaan-30-uji-live-setara-empat-model/README_EN.md) · [Log awal](2026-11-02/percobaan-30-uji-live-setara-empat-model/log_progres.md) · [Tabel 24 slot terbaru](2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv)
+
+## 2026-11-03
+
+- [Percobaan 31 — KD Hybrid berjalan tiga ulangan](2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md) · [English](2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_EN.md) · [Grafik tiga ulangan HD](2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/grafik_hybrid1337_walk_ulangan_1_2_3_hd.png) · [Tabel tiga run](2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/05-ringkasan/tabel_3_run.csv)
 
 ## Materi skripsi dan audit
 

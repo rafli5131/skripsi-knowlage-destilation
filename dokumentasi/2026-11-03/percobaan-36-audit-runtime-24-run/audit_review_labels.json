@@ -1,0 +1,101 @@
+[
+  {
+    "session": "20261021_robot_ball_01",
+    "role": "primary",
+    "frames_manifest": 40,
+    "frames_reviewed_bhre": 40,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 40
+  },
+  {
+    "session": "20261021_robot_gawang_01",
+    "role": "primary",
+    "frames_manifest": 40,
+    "frames_reviewed_bhre": 40,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 41
+  },
+  {
+    "session": "20261021_robot_ball_moving_01",
+    "role": "primary",
+    "frames_manifest": 40,
+    "frames_reviewed_bhre": 40,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 40
+  },
+  {
+    "session": "20261021_ball_moving_candidate_01",
+    "role": "primary",
+    "frames_manifest": 40,
+    "frames_reviewed_bhre": 40,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 41
+  },
+  {
+    "session": "20261021_all_three_position_01",
+    "role": "primary",
+    "frames_manifest": 10,
+    "frames_reviewed_bhre": 10,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 10
+  },
+  {
+    "session": "20261021_all_three_position_02",
+    "role": "primary",
+    "frames_manifest": 10,
+    "frames_reviewed_bhre": 10,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 11
+  },
+  {
+    "session": "20261021_all_three_position_03",
+    "role": "primary",
+    "frames_manifest": 10,
+    "frames_reviewed_bhre": 10,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 10
+  },
+  {
+    "session": "20261021_all_three_position_04",
+    "role": "primary",
+    "frames_manifest": 10,
+    "frames_reviewed_bhre": 10,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 10
+  },
+  {
+    "session": "20261021_negative_candidate_01",
+    "role": "negative",
+    "frames_manifest": 60,
+    "frames_reviewed_bhre": 60,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 60
+  },
+  {
+    "session": "20261021_gawang_ball_01",
+    "role": "partial",
+    "frames_manifest": 40,
+    "frames_reviewed_bhre": 40,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 41
+  },
+  {
+    "session": "20261021_all_three_position_05",
+    "role": "partial",
+    "frames_manifest": 10,
+    "frames_reviewed_bhre": 10,
+    "missing_review": [],
+    "log_hash_matches": true,
+    "review_log_entries": 10
+  }
+]

@@ -1,0 +1,2 @@
+model,condition,runs,frames_total,status,latency_mean_ms_mean,latency_mean_ms_sd_sample,fps_mean,fps_sd_sample,cpu_percent_mean,cpu_percent_sd_sample,rss_mib_mean,rss_mib_sd_sample
+kd42,walk,3,2198,semua_lulus_cek_otomatis,72.65155039560118,2.5473247772646643,12.213727146960608,0.14520023162371815,1295.6487857260893,1.350346986811351,360.183088733656,4.69206110192488

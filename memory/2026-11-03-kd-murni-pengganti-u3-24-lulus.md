@@ -1,0 +1,5 @@
+# Memory — pengganti KD murni berjalan ulangan 3
+
+Atas permintaan pengguna, run `20261103_eq_kd42_walk_u3_ulang1` direkam setelah konfirmasi operator untuk menggantikan slot ulangan 3 KD murni berjalan. Gait menerima ack mulai/berhenti, deviasi kepala maksimum satu count tanpa perintah posisi ID 19/20. Run lulus cek otomatis CSV/telemetry: 742 frame tanpa error, 69,82 ms, 12,38 FPS, CPU 1294,10% satu CPU logis, RSS 359,81 MiB. [Dokumentasi](../dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/README_ID.md).
+
+Run awal ulangan 3 yang berstatus `perlu_audit` tetap disimpan bersama [arsip ringkasan sebelum penggantian](../dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/arsip-sebelum-pengganti-u3/). Matriks sekarang 24/24 slot aktif lulus cek otomatis. Rerata aktif KD murni berjalan: 72,65 ± 2,55 ms, 12,21 ± 0,15 FPS, CPU 1295,65 ± 1,35%, RSS 360,18 ± 4,69 MiB, tiga run. Pengesahan protokol akhir dan T36/T37 final tetap perlu audit; jangan menganggap cek otomatis sebagai audit akhir. Preview KD murni dinyalakan kembali; periksa ulang kondisi fisik dan proses saat melanjutkan.

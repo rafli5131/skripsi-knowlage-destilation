@@ -1,6 +1,8 @@
 # Draf Bab IV–V: Hasil dan Pembahasan
 
-> Catatan progres 2 November 2026: bagian 4.2–4.6 mempertahankan hasil tahap awal Pure KD/supervised tanggal 10 Oktober; bagian 4.8–4.10 menambahkan Hybrid, konfirmasi S2, dan status OP3/T42. [Uji live setara terbaru](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) baru mengukur 9/24 slot dan belum menghasilkan T36/T37 final. Angka hasil yang sudah ada dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
+> Pembaruan terbaru: [audit 24 run, T36/T37 dan batas protokol](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/DRAF_PEMBAHASAN.md); seluruh cek log/telemetry lulus, pengesahan kesetaraan fisik masih terbuka. Status terdahulu di bawah merupakan snapshot historis.
+
+> Catatan progres 3 November 2026: bagian 4.2–4.6 mempertahankan hasil tahap awal Pure KD/supervised tanggal 10 Oktober; bagian 4.8–4.10 menambahkan Hybrid, konfirmasi S2, dan status OP3/T42. [Uji live setara lintas hari](dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md) telah mengukur 12/24 slot dan belum menghasilkan T36/T37 final. Angka hasil yang sudah ada dapat ditelusuri ke [`thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/), manifest TEST, dan benchmark yang ditautkan di bawah. Sesuaikan penomoran tabel, gaya sitasi, dan istilah dengan pedoman program studi serta arahan pembimbing.
 
 ## BAB IV — HASIL DAN PEMBAHASAN
 
@@ -129,7 +131,7 @@ Penyaringan S1–S8 selesai (T40). Konfirmasi S2 tiga seed menghasilkan VAL mAP5
 
 Uji live Hybrid sudah tercatat pada percobaan 27. Evaluasi offline eksploratif [T34](analisis_performa/tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) membandingkan Hybrid dan supervised seed 1337 pada 260 frame identik: mAP50–95 0,4885 versus 0,4414, F1 makro 0,5121 versus 0,6054, dan frame negatif dengan false positive 21/60 versus 0/60. Label berawal dari draf Pure KD sebelum tinjauan manusia; pengambilan berasal dari satu rangkaian sesi. Temuan ini terbatas pada set tersebut dan tidak digunakan memilih ulang model atau ambang.
 
-T36/T37 final belum tersedia. [Uji live setara 2 November](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) telah mengukur 9/24 slot: teacher idle/berjalan dan Hybrid idle masing-masing tiga ulangan. Data per run, grafik, dan penyimpangan pemilihan ulang teacher berjalan sudah dicatat; 15 slot lain serta audit akhir masih diperlukan untuk kesimpulan latensi/FPS dan CPU/RAM empat model pada OP3. Set akurasi baru memerlukan sampling dan aturan anotasi yang dibekukan, tinjauan setiap frame, serta hash frame/label sebelum evaluasi. Angka L40 tidak menggantikan pengukuran OP3.
+T36/T37 final belum tersedia. [Uji live setara 2–3 November](dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md) telah mengukur 12/24 slot: teacher dan Hybrid masing-masing idle/berjalan tiga ulangan. KD Hybrid berjalan menghasilkan rerata tiga run latensi **71,47 ± 2,98 ms**, FPS **12,54 ± 0,38**, CPU proses **1303,77 ± 3,88%** dari satu CPU logis, dan RSS **356,31 ± 2,09 MiB**; ini data sementara dengan urutan model per blok lintas hari. Data per run, grafik, dan penyimpangan sudah dicatat; 12 slot Supervised/KD murni serta audit akhir masih diperlukan untuk kesimpulan empat model pada OP3. Set akurasi baru memerlukan sampling dan aturan anotasi yang dibekukan, tinjauan setiap frame, serta hash frame/label sebelum evaluasi. Angka L40 tidak menggantikan pengukuran OP3.
 
 ### 4.10 Status ablasi kapasitas teacher T42
 

@@ -2,7 +2,7 @@
 
 **Judul kerja:** *Implementasi dan Evaluasi YOLO11 Skala t Hasil Knowledge Distillation pada ROBOTIS OP3*
 
-> Catatan progres 2 November 2026: fokus metode adalah KD Hybrid full sesuai D16; Pure KD menjadi ablasi. Judul kerja dan rincian protokol masih memerlukan pengesahan pembimbing. [Uji live setara](dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) baru mengukur 9/24 slot; T36/T37 final dan set OP3 baru belum tersedia. Bagian metode di bawah tetap rancangan protokol.
+> Catatan progres 3 November 2026: fokus metode adalah KD Hybrid full sesuai D16; Pure KD menjadi ablasi. Judul kerja dan rincian protokol masih memerlukan pengesahan pembimbing. [Uji live setara lintas hari](dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md) telah mengukur 12/24 slot; T36/T37 final dan set OP3 baru belum tersedia. Bagian metode di bawah tetap rancangan protokol.
 
 > Draf ini disusun dari audit datasheet dan protokol eksperimen yang dibekukan. Nama prodi, pedoman sitasi, format subbab, dan persetujuan pembimbing masih perlu disesuaikan. Eksperimen multi-seed, TEST, dan benchmark selesai; draf Bab IV–V berbasis hasil terkunci tersedia di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md). Bab I–III tetap perlu ditelaah dan disahkan bersama pembimbing.
 

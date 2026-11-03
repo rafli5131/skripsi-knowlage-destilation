@@ -1,0 +1,7 @@
+# Memory — Supervised idle, 15/24 slot
+
+Pengguna meminta tiga ulangan idle Supervised tanpa konfirmasi per run. Pada 3 November 2026 ketiga slot aktif Supervised seed 1337 lulus cek otomatis. Run aktif: slot 1 `20261103_eq_sup1337_idle_u1_ulang2`, slot 2 `20261103_eq_sup1337_idle_u2`, slot 3 `20261103_eq_sup1337_idle_u3_ulang1`. Run awal 1 dan 3 serta pengganti pertama 1 melewati batas dua count pada `r_sho_pitch` dan tetap disimpan. Tidak ada perintah gerak. Lihat [dokumentasi](../dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/README_ID.md) dan [log penyimpangan](../dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/log_penyimpangan.md).
+
+Rerata tiga run aktif: 73,12 ± 3,27 ms, 12,14 ± 0,29 FPS, CPU 1299,18 ± 3,32% satu CPU logis, RSS 355,93 ± 3,32 MiB. Terdapat 2.185 frame ukur tanpa error. Cakupan keluaran tiga kelas 100% bukan akurasi berlabel. Audit akhir protokol dan verifikasi torque terkini masih diperlukan.
+
+[Matriks kampanye](../dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv) kini 15/24 slot, semua lulus cek otomatis; sisa Supervised berjalan tiga run dan KD murni idle/berjalan enam run. Sebelum gait berikutnya cek ulang perangkat dan kesiapan operator serta minta konfirmasi setiap run sesuai instruksi sebelumnya. Jaga kepala ID 19/20 tanpa perintah posisi. Preview Supervised dinyalakan kembali setelah run terakhir; periksa ulang proses saat melanjutkan.

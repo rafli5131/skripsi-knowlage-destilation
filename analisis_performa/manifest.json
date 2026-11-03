@@ -427,5 +427,25 @@
     },
     "analisis_performa/DEFINISI.md": "ebad6c76c74bb29b7869588c32901083bde1d0dadfb0179e63a13f6abad7a781",
     "analisis_performa/INDEKS.md": "4542feb1fabd873c230bd4b3af3e24c7471a1435dbb4734545bbf874ce2af1c4"
+  },
+  "op3_runtime_audit_24_2026_11_03": {
+    "status": "cek_log_dan_telemetry_lulus_audit_protokol_terbuka",
+    "package": "ros2_packages/op3_runtime_audit_24",
+    "artifacts": {
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/audit.json": "4d8dce6571e7f0d167b046633b85dde6446a2b0f9fa7e194f7d2abf6440e275f",
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/audit_telemetry.csv": "9c7917b7dc49193a60273d70c4ca1b9ccb1b9cbf5be57c84de8ab0c9576c84cf",
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/audit_review_labels.json": "349151e34c76a6b3ece4f580dd1413e6e941f0f8397a8c2c9c000675590bffe7",
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/T36_runtime_per_run.csv": "3afb8ab3469acac2ff5c94ad1062813318fd01c9e3a35e0ac77d6adf7ccd5aff",
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/T37_runtime_ringkasan.csv": "a0748da6042409c06645157892077d50dd85b1cd0388da91af62acf6ed92aebf",
+      "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/rincian_tahapan_per_run.csv": "12d6a8bc81d2b912dd12efecde2fcbc6cb4f2caba58a6d223c3ad0ed4d887913",
+      "analisis_performa/tabel/T36_runtime_live_setara_per_run.csv": "3afb8ab3469acac2ff5c94ad1062813318fd01c9e3a35e0ac77d6adf7ccd5aff",
+      "analisis_performa/tabel/T37_runtime_live_setara_ringkasan.csv": "a0748da6042409c06645157892077d50dd85b1cd0388da91af62acf6ed92aebf"
+    },
+    "scope": "24 run aktif, label OP3 manifest 310 frame; tidak menyatakan torque atau kesetaraan adegan terbukti",
+    "keputusan_pengguna": {
+      "scope": "diterima_untuk_analisis_deskriptif_dengan_keterbatasan",
+      "decision_file": "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md",
+      "persetujuan_pembimbing": "belum_dicatat"
+    }
   }
 }

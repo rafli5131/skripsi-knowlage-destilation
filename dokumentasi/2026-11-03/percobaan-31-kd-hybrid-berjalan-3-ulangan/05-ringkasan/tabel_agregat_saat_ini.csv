@@ -1,0 +1,2 @@
+model,condition,runs,frames_total,status,latency_mean_ms_mean,latency_mean_ms_sd_sample,fps_mean,fps_sd_sample,cpu_percent_mean,cpu_percent_sd_sample,rss_mib_mean,rss_mib_sd_sample
+hybrid1337,walk,3,2256,semua_lulus_cek_otomatis,71.46893236313524,2.984228274920437,12.543625214999864,0.3824823139043897,1303.7685824595785,3.8761136881397467,356.30875046088323,2.0891800508155582

@@ -3,5 +3,25 @@
     "1": "20261102_eq_teacher_walk_u3",
     "2": "20261102_eq_teacher_walk_retest_u2",
     "3": "20261102_eq_teacher_walk_retest_u3"
+  },
+  "sup1337_idle": {
+    "1": "20261103_eq_sup1337_idle_u1_ulang2",
+    "2": "20261103_eq_sup1337_idle_u2",
+    "3": "20261103_eq_sup1337_idle_u3_ulang1"
+  },
+  "sup1337_walk": {
+    "1": "20261103_eq_sup1337_walk_u1",
+    "2": "20261103_eq_sup1337_walk_u2",
+    "3": "20261103_eq_sup1337_walk_u3"
+  },
+  "kd42_idle": {
+    "1": "20261103_eq_kd42_idle_u1",
+    "2": "20261103_eq_kd42_idle_u2",
+    "3": "20261103_eq_kd42_idle_u3"
+  },
+  "kd42_walk": {
+    "1": "20261103_eq_kd42_walk_u1",
+    "2": "20261103_eq_kd42_walk_u2",
+    "3": "20261103_eq_kd42_walk_u3_ulang1"
   }
 }

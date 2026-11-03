@@ -1,0 +1,12 @@
+{
+  "slots": 24,
+  "log_passed": 24,
+  "log_issues": {},
+  "label_roles": {
+    "primary": 200,
+    "negative": 60,
+    "partial": 50
+  },
+  "label_hash_errors": [],
+  "note": "Cek log tidak membuktikan torque, kontinuitas tampilan, atau kesetaraan adegan."
+}

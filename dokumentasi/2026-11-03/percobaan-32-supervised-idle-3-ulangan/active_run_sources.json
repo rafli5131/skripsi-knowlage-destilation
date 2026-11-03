@@ -1,0 +1,42 @@
+{
+  "sup1337_idle": {
+    "1": "20261103_eq_sup1337_idle_u1_ulang2",
+    "2": "20261103_eq_sup1337_idle_u2",
+    "3": "20261103_eq_sup1337_idle_u3_ulang1"
+  },
+  "teacher_idle": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "teacher_walk": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "hybrid1337_idle": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "hybrid1337_walk": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "sup1337_walk": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "kd42_idle": {
+    "1": null,
+    "2": null,
+    "3": null
+  },
+  "kd42_walk": {
+    "1": null,
+    "2": null,
+    "3": null
+  }
+}
