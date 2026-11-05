@@ -73,6 +73,17 @@ class ServerPathTests(unittest.TestCase):
         with clean_env(), patch.object(server_paths, "LEGACY_PYTHON", "/does/not/exist"):
             self.assertEqual(server_paths.training_python(), sys.executable)
 
+    def test_training_python_unreadable_legacy_falls_back(self):
+        original = Path.exists
+
+        def deny(path):
+            if str(path) == server_paths.LEGACY_PYTHON:
+                raise PermissionError(13, "Permission denied", str(path))
+            return original(path)
+
+        with clean_env(), patch.object(Path, "exists", deny):
+            self.assertEqual(server_paths.training_python(), sys.executable)
+
     def test_evaluation_data_yaml_legacy_returns_source(self):
         with tempfile.TemporaryDirectory() as directory:
             source = Path(directory) / "data.yaml"

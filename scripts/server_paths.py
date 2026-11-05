@@ -25,12 +25,20 @@ LEGACY_DATA_ROOT = "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advanc
 _ATTEMPT_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$")
 
 
+def _is_readable_file(path: str | Path) -> bool:
+    """False bila berkas tidak ada atau tidak bisa diakses (mis. folder server lama tanpa izin baca)."""
+    try:
+        return Path(path).exists()
+    except OSError:
+        return False
+
+
 def training_python() -> str:
     """Interpreter untuk subproses training: variabel lingkungan, server lama, lalu interpreter aktif."""
     configured = os.environ.get("KD_TRAIN_PYTHON", "").strip()
     if configured:
         return configured
-    return LEGACY_PYTHON if Path(LEGACY_PYTHON).exists() else sys.executable
+    return LEGACY_PYTHON if _is_readable_file(LEGACY_PYTHON) else sys.executable
 
 
 def data_root() -> Path:
