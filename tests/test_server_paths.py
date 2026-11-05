@@ -73,6 +73,32 @@ class ServerPathTests(unittest.TestCase):
         with clean_env(), patch.object(server_paths, "LEGACY_PYTHON", "/does/not/exist"):
             self.assertEqual(server_paths.training_python(), sys.executable)
 
+    def test_evaluation_data_yaml_legacy_returns_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "data.yaml"
+            source.write_text("train: /x/train\nval: /x/val\n", encoding="utf-8")
+            with clean_env():
+                self.assertEqual(server_paths.evaluation_data_yaml(source, Path(directory) / "out"), source)
+            self.assertFalse((Path(directory) / "out").exists())
+
+    def test_evaluation_data_yaml_rebases_all_splits(self):
+        legacy = server_paths.LEGACY_DATA_ROOT
+        with tempfile.TemporaryDirectory() as directory:
+            source = Path(directory) / "data.yaml"
+            source.write_text(yaml.safe_dump({
+                "path": "/ignored", "train": f"{legacy}/train/images", "val": f"{legacy}/valid/images",
+                "nc": 3, "names": {0: "ball", 1: "gawang", 2: "robot"}}), encoding="utf-8")
+            with clean_env(KD_DATA_ROOT="/data/av"):
+                target = server_paths.evaluation_data_yaml(source, Path(directory) / "out")
+            resolved = yaml.safe_load(target.read_text(encoding="utf-8"))
+            original = yaml.safe_load(source.read_text(encoding="utf-8"))
+        self.assertEqual(target.name, ".resolved_data_eval.yaml")
+        self.assertEqual(resolved["train"], "/data/av/train/images")
+        self.assertEqual(resolved["val"], "/data/av/valid/images")
+        self.assertNotIn("path", resolved)
+        self.assertEqual(resolved["names"], {0: "ball", 1: "gawang", 2: "robot"})
+        self.assertEqual(original["train"], f"{legacy}/train/images")  # YAML sumber tidak diubah
+
 
 class DriverTests(unittest.TestCase):
     def prepare(self, root: Path, attempt: str):

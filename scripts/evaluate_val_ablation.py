@@ -26,9 +26,11 @@ from ultralytics.models.yolo.detect.val import DetectionValidator
 try:
     from .analyze_val_detections import DATA_YAML, NAMES, ROOT, source_paths, verify_val_bytes
     from .evaluate_locked_test import ReadOnlyTestDataset
+    from .server_paths import evaluation_data_yaml
 except ImportError:
     from analyze_val_detections import DATA_YAML, NAMES, ROOT, source_paths, verify_val_bytes
     from evaluate_locked_test import ReadOnlyTestDataset
+    from server_paths import evaluation_data_yaml
 
 
 OUT = ROOT / "runs/val_ablation/pure_weighted_20261020"
@@ -95,7 +97,7 @@ def evaluate(label: str, images: Path, expected_images: set[str], fingerprint: d
         raise RuntimeError(f"Class mapping differs from expected: {label}")
     model.to(device).float().eval()
     cfg = get_cfg(DEFAULT_CFG, {
-        "task": "detect", "mode": "val", "split": "val", "data": str(DATA_YAML),
+        "task": "detect", "mode": "val", "split": "val", "data": str(evaluation_data_yaml(DATA_YAML, output_dir)),
         "imgsz": 640, "batch": 16, "workers": 0,
         "device": "cpu" if device.type == "cpu" else "0", "cache": False,
         "fraction": 1.0, "rect": True, "augment": False, "amp": False,

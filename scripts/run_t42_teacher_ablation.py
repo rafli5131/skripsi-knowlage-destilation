@@ -113,11 +113,11 @@ def run_step(name: str, command: list[str], *, gpu: bool) -> None:
         raise RuntimeError(f"T42 step failed ({code}): {name}; inspect {log}")
 
 
-def evaluate(label: str, checkpoint: Path, manifest: Path) -> None:
+def evaluate(label: str, checkpoint: Path, manifest: Path, step_name: str | None = None) -> None:
     output = EVAL / f"{label}_val.json"
     if output.exists():
         raise FileExistsError(f"T42 VAL result already exists: {output}")
-    run_step(f"eval_{label}", [PYTHON, str(ROOT / "scripts/evaluate_t42_val.py"),
+    run_step(step_name or f"eval_{label}", [PYTHON, str(ROOT / "scripts/evaluate_t42_val.py"),
                                "--checkpoint", str(checkpoint), "--manifest", str(manifest),
                                "--label", label, "--output-dir", str(EVAL)], gpu=False)
 

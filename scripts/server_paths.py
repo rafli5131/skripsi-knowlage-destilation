@@ -17,6 +17,8 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+import yaml
+
 
 LEGACY_PYTHON = "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python"
 LEGACY_DATA_ROOT = "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human"
@@ -49,6 +51,28 @@ def rebase_data_path(path: str | Path) -> Path:
     except ValueError:
         return path
     return Path(configured) / relative
+
+
+def evaluation_data_yaml(source: Path, output_dir: Path) -> Path:
+    """YAML data untuk validator Ultralytics.
+
+    Tanpa ``KD_DATA_ROOT`` hasilnya adalah ``source`` apa adanya (perilaku server lama).
+    Bila diisi, path ``train``/``val``/``test`` di bawah akar dataset lama dipindah ke
+    ``KD_DATA_ROOT`` dan disalin ke berkas tersembunyi di ``output_dir``. Validator memeriksa
+    keberadaan semua path itu, sehingga path server lama yang tidak terbaca membuat evaluasi gagal.
+    """
+    configured = os.environ.get("KD_DATA_ROOT", "").strip()
+    if not configured:
+        return source
+    raw = yaml.safe_load(source.read_text(encoding="utf-8")) or {}
+    for key in ("train", "val", "test"):
+        if key in raw:
+            raw[key] = str(rebase_data_path(raw[key]))
+    raw.pop("path", None)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    target = output_dir / ".resolved_data_eval.yaml"
+    target.write_text(yaml.safe_dump(raw, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    return target
 
 
 def t42_attempt() -> str:
