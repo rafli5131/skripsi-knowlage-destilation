@@ -79,9 +79,31 @@ Folder `.venv-train/` sudah masuk `.gitignore`.
 
 Dataset aslinya adalah ekspor Roboflow `humanoid-atom/advance_vision_human` versi v1 (V1-Base, 31 Agustus 2026, CC BY 4.0): <https://universe.roboflow.com/humanoid-atom/advance_vision_human>.
 
-1. Bila kamu masih punya *zip* ekspor asli, pakai itu.
-2. Bila tidak, unduh versi **v1** dari halaman Roboflow di atas dalam format YOLO (YOLOv8 atau YOLOv11; struktur foldernya sama). Pengunduhan perlu akun Roboflow.
-3. Ekstrak ke `$DATA` sehingga strukturnya `train/images`, `train/labels`, `valid/images`, `valid/labels`, `test/images`, `test/labels`.
+1. Bila kamu masih punya *zip* ekspor asli, salin ke server lalu ekstrak ke `$DATA`.
+2. Bila tidak, unduh versi **v1** langsung di server dengan Roboflow Python SDK. Kamu perlu akun Roboflow dan *API key* yang ada di pengaturan *workspace* Roboflow-mu. Folder `$DATA` sebaiknya belum ada sebelum mengunduh. Pasang paket `roboflow` di *venv* terpisah agar *venv* training tidak ikut berubah, karena paket itu bisa membawa versi dependensi lain:
+
+   ```bash
+   python3 -m venv ~/rf-venv
+   ~/rf-venv/bin/pip install roboflow
+   export ROBOFLOW_API_KEY='isi-api-key-kamu'      # jangan ditulis ke repo
+   mkdir -p "$(dirname "$DATA")"
+   ~/rf-venv/bin/python - <<'EOF'
+   import os
+   from roboflow import Roboflow
+   rf = Roboflow(api_key=os.environ["ROBOFLOW_API_KEY"])
+   version = rf.workspace("humanoid-atom").project("advance_vision_human").version(1)
+   dataset = version.download(model_format="yolov8", location=os.environ["DATA"], overwrite=False)
+   print(dataset.location)
+   EOF
+   ```
+
+   Alternatifnya lewat CLI Roboflow: `roboflow download -f yolov8 -l "$DATA" humanoid-atom/advance_vision_human/1`. Format `yolov11` juga tersedia; struktur folder dan label teksnya sama dengan `yolov8`.
+3. Pastikan strukturnya `train/images`, `train/labels`, `valid/images`, `valid/labels`, `test/images`, `test/labels`:
+
+   ```bash
+   ls "$DATA"; for s in train valid test; do echo "$s: $(ls "$DATA/$s/images" | wc -l) gambar, $(ls "$DATA/$s/labels" | wc -l) label"; done
+   #   harus 4600, 1213, dan 592 gambar
+   ```
 
 Lalu cocokkan isinya dengan sidik jari yang dikunci di repo:
 
@@ -100,6 +122,16 @@ EOF
 ```
 
 Perintah ini membandingkan nama dan hash setiap gambar dan label TRAIN serta VAL. Bila hasilnya "COCOK", lanjutkan. **Bila muncul *error* hash atau inventaris berbeda, berhenti.** Artinya ekspor ulang tidak identik byte demi byte dengan data lama. Saya tidak yakin ekspor ulang Roboflow selalu menghasilkan berkas yang identik. Dalam kasus itu, T42 tidak lagi sebanding dengan kontrol *supervised* T41 dan perlu keputusan dulu, jadi kirim pesan *error*-nya ke agen atau ke Claude.
+
+**Kasus yang sudah diketahui: satu label TRAIN berupa poligon.** Pada ekspor ulang format `yolov8` pada 5 November 2026, hanya satu label TRAIN (`KakaoTalk_20250203_160516031_mp4-0049_jpg.rf.71283140d6e7ec0db99bc112144a3695.txt`) yang berbeda: berkas itu berisi satu baris poligon, sedangkan data lama berisi kotak. `AUDIT_DATASET_SKRIPSI.md` mencatat bahwa satu label TRAIN memang pernah diekspor sebagai poligon lalu dikonversi ke kotak YOLO. Mengganti baris poligon dengan kotak pembatas sumbunya (x pusat, y pusat, lebar, tinggi, 12 desimal, baris baru di akhir berkas) menghasilkan SHA-256 yang sama persis dengan hash terkunci, sehingga berkas hasil konversi identik byte demi byte dengan berkas lama. `scripts/restore_polygon_label.py` melakukan pemulihan itu. Skrip ini hanya memeriksa kecuali diberi `--apply`, hanya menulis bila semua selisih di TRAIN dan VAL bisa dipulihkan dengan hash yang cocok persis, menyalin label asli ke `<DATA>_backup_label_polygon/`, dan memverifikasi hasil tulisannya:
+
+```bash
+cd "$REPO"
+$PY scripts/restore_polygon_label.py "$DATA" 2>&1 | tee ~/restore_dry.log            # periksa dulu
+$PY scripts/restore_polygon_label.py "$DATA" --apply 2>&1 | tee ~/restore_apply.log  # hanya bila hasil periksa sesuai
+```
+
+Setelah itu ulangi cek sidik jari di atas. Bila ada selisih yang tidak bisa dipulihkan dengan cara ini, berhenti dan jangan memakai `--apply`. Catat pemulihan ini di laporan T42.
 
 ## 5. Unduh bobot pralatih resmi
 
@@ -179,6 +211,7 @@ Event yang perlu diperhatikan: `step_started` dan `step_finished` per tahap, `t4
 - **Jangan menghapus folder apa pun.** *Driver* sengaja menolak dijalankan ulang dengan `T42_ATTEMPT` yang sama.
 - Bila gagal di awal (misalnya di *teacher* YOLO11n), perbaiki penyebabnya, lalu jalankan ulang dengan nama percobaan baru, misalnya `T42_ATTEMPT=server2b`.
 - Bila gagal setelah beberapa tahap selesai, jangan memulai dari nol. Kirim `tail -n 20` berkas status beserta 50 baris terakhir *log* yang gagal ke agen, supaya dibuatkan lanjutan yang terdokumentasi seperti `continue_t42_after_teacher_n.py`.
+- Bila evaluasi VAL gagal dengan `PermissionError` pada path `/mnt/nas-hpg9/rafli5131/...`, penyebabnya `configs/data_train_val.yaml` yang masih berisi path server lama. Pastikan `KD_DATA_ROOT` terisi dan repo sudah di-`git pull`. Lanjutannya untuk percobaan `server2` adalah `scripts/continue_t42_attempt_after_eval_fix.py`: jalankan dulu tanpa argumen untuk audit, lalu dengan `--execute`.
 
 ## 9. Setelah selesai: commit dan push
 
