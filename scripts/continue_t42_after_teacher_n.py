@@ -15,6 +15,8 @@ def prepare(root):
     spec = importlib.util.spec_from_file_location('t42_driver', root / 'scripts/run_t42_teacher_ablation.py')
     driver = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(driver)
+    if driver.LAYOUT.attempt:
+        raise RuntimeError('Skrip ini hanya untuk percobaan T42 lama; kosongkan T42_ATTEMPT atau jalankan run_t42_teacher_ablation.py.')
     events = [json.loads(line) for line in driver.STATUS.read_text().splitlines()]
     last = events[-1]
     if last.get('event') != 'step_finished' or last.get('name') != 'eval_teacher_yolo11n_seed42' or last.get('exit_code') != 0:

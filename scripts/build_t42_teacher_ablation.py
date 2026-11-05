@@ -8,11 +8,18 @@ from pathlib import Path
 from statistics import mean, stdev
 
 
+try:
+    from .server_paths import t42_layout
+except ImportError:
+    from server_paths import t42_layout
+
+
 ROOT = Path(__file__).resolve().parents[1]
-EVAL = ROOT / "runs/val_ablation/teacher_yolo11s_t42_20261024"
+LAYOUT = t42_layout(ROOT)
+EVAL = LAYOUT.evaluation
 TABLE = ROOT / "analisis_performa/tabel"
-PROJECT = ROOT / "runs/kd_teacher_ablation"
-PRIVATE = ROOT / "models_local/teacher_ablation_t42/training"
+PROJECT = LAYOUT.project
+PRIVATE = LAYOUT.private
 SEEDS = (42, 1337, 2025)
 SUPERVISED = {
     int(row["seed"]): float(row["map50_95"])
@@ -43,13 +50,13 @@ def main() -> None:
     teacher = {variant: read(f"teacher_yolo11{variant}_seed42") for variant in ("n", "s")}
     students = {(variant, seed): read(f"student_teacher_yolo11{variant}_seed{seed}")
                 for variant in ("n", "s") for seed in SEEDS}
-    events = [json.loads(line) for line in (PROJECT / "t42_status.jsonl").read_text(encoding="utf-8").splitlines()]
+    events = [json.loads(line) for line in LAYOUT.status.read_text(encoding="utf-8").splitlines()]
     completed = {event["name"]: event for event in events if event["event"] == "step_finished"}
     rows = []
     for variant in ("n", "s"):
         teacher_map = map_value(teacher[variant])
         teacher_label = f"teacher_yolo11{variant}_seed42"
-        teacher_run = "teacher_yolo11n_seed42_retry1" if variant == "n" else teacher_label
+        teacher_run = LAYOUT.teacher_run_name(variant)
         teacher_manifest = json.loads((PRIVATE / teacher_run / "manifest.json").read_text(encoding="utf-8"))
         for seed in SEEDS:
             payload = students[variant, seed]
@@ -90,7 +97,9 @@ def main() -> None:
         "",
         "Kedua teacher dilatih dari bobot COCO resmi dengan data, resep, dan seed 42 yang sama. "
         "Student YOLO11 skala t dilatih dengan Hybrid full dan tiga seed berpasangan. "
-        "Hasil ini hanya pada VAL; TEST dan kamera OP3 tidak dipakai.",
+        "Hasil ini hanya pada VAL; TEST dan kamera OP3 tidak dipakai."
+        + (f" Percobaan: `{LAYOUT.attempt}` (status `{LAYOUT.status.relative_to(ROOT).as_posix()}`)."
+           if LAYOUT.attempt else ""),
         "",
         "| Teacher | mAP50–95 teacher | mAP50–95 student, rerata ± SD |",
         "| --- | ---: | ---: |",

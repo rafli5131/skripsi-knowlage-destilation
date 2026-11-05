@@ -16,15 +16,18 @@ from ultralytics import YOLO
 
 try:
     from .experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from .server_paths import data_root, t42_layout
     from .training_runtime import verify_training_runtime
 except ImportError:
     from experiment_paths import resolve_training_data, write_resolved_data_yaml
+    from server_paths import data_root, t42_layout
     from training_runtime import verify_training_runtime
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_ROOT = Path("/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human")
-PRIVATE = ROOT / "models_local/teacher_ablation_t42"
+# Default values match the original server; see scripts/server_paths.py for overrides.
+DATA_ROOT = data_root()
+LAYOUT = t42_layout(ROOT)
 PRETRAINED_HASH = {
     "n": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
     "s": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
@@ -41,13 +44,13 @@ def main() -> None:
     parser.add_argument("--run-name", help="Unique run directory for a documented retry")
     args = parser.parse_args()
     runtime = verify_training_runtime()
-    source = PRIVATE / "pretrained" / f"yolo11{args.variant}.pt"
+    source = LAYOUT.pretrained / f"yolo11{args.variant}.pt"
     if sha256(source) != PRETRAINED_HASH[args.variant]:
         raise RuntimeError(f"Official YOLO11{args.variant} pretrained hash mismatch")
     run_name = args.run_name or f"teacher_yolo11{args.variant}_seed42"
     if Path(run_name).name != run_name or run_name in {".", ".."}:
         raise ValueError("Run name must be a single directory name")
-    run_dir = PRIVATE / "training" / run_name
+    run_dir = LAYOUT.private / run_name
     if run_dir.exists():
         raise FileExistsError(f"Refusing to overwrite teacher run: {run_dir}")
     data_yaml, data, data_meta = resolve_training_data(
@@ -76,6 +79,7 @@ def main() -> None:
         raise RuntimeError(f"Teacher class mapping changed: {names}")
     manifest = {
         "status": "complete", "kind": "matched_teacher_training_t42",
+        "t42_attempt": LAYOUT.attempt or "legacy", "dataset_root": str(DATA_ROOT),
         "variant": f"yolo11{args.variant}", "seed": 42,
         "started_at_utc": started.isoformat(),
         "finished_at_utc": datetime.now(timezone.utc).isoformat(),

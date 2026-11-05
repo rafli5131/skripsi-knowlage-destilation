@@ -30,9 +30,11 @@ from ultralytics.models.yolo.detect.val import DetectionValidator
 try:
     from .evaluate_locked_test import ReadOnlyTestDataset
     from .model_registry import validate_checkpoint
+    from .server_paths import rebase_data_path
 except ImportError:
     from evaluate_locked_test import ReadOnlyTestDataset
     from model_registry import validate_checkpoint
+    from server_paths import rebase_data_path
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,7 +83,7 @@ def registry_models() -> dict[str, dict[str, Any]]:
 
 def source_paths() -> tuple[Path, set[str], dict[str, Any]]:
     data = yaml.safe_load(DATA_YAML.read_text(encoding="utf-8"))
-    images = Path(data["val"]).resolve()
+    images = rebase_data_path(data["val"]).resolve()
     fingerprint = json.loads(FINGERPRINT.read_text(encoding="utf-8"))["splits"]["val"]
     expected = {item["image"] for item in fingerprint["files"]}
     actual = {path.name for path in images.iterdir() if path.is_file() and path.suffix.lower() in {".jpg", ".jpeg", ".png", ".bmp", ".webp"}}
@@ -92,7 +94,7 @@ def source_paths() -> tuple[Path, set[str], dict[str, Any]]:
 
 def verify_val_bytes(fingerprint: dict[str, Any]) -> None:
     """Check VAL image and label bytes against the previously locked inventory."""
-    images = Path(fingerprint["images_dir"])
+    images = rebase_data_path(fingerprint["images_dir"])
     labels = images.parent / "labels"
     for item in fingerprint["files"]:
         if sha256(images / item["image"]) != item["image_sha256"]:

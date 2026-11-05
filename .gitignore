@@ -23,3 +23,8 @@ __pycache__/
 /log/
 # Log launcher T42 lokal; status audit terkurasi disimpan terpisah.
 /runs/kd_teacher_ablation/continuation_*.log
+# T42 percobaan baru di server lain: log training mentah, last.pt, dan venv tetap lokal.
+/runs/kd_teacher_ablation/*/logs/
+/runs/kd_teacher_ablation/**/weights/last.pt
+/.venv-train/
+/runs/kd_teacher_ablation/run_*.log

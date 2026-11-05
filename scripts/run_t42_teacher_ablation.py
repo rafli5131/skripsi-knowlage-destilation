@@ -12,19 +12,26 @@ from pathlib import Path
 
 import yaml
 
+try:
+    from .server_paths import data_root, t42_layout, training_python
+except ImportError:
+    from server_paths import data_root, t42_layout, training_python
+
 
 ROOT = Path(__file__).resolve().parents[1]
-PYTHON = "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python"
-DATA_ROOT = "/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human"
-PROJECT = ROOT / "runs/kd_teacher_ablation"
-PRIVATE = ROOT / "models_local/teacher_ablation_t42/training"
-EVAL = ROOT / "runs/val_ablation/teacher_yolo11s_t42_20261024"
-STATUS = PROJECT / "t42_status.jsonl"
+# Default values match the original server; see scripts/server_paths.py for overrides.
+PYTHON = training_python()
+DATA_ROOT = str(data_root())
+LAYOUT = t42_layout(ROOT)
+PROJECT = LAYOUT.project
+PRIVATE = LAYOUT.private
+EVAL = LAYOUT.evaluation
+STATUS = LAYOUT.status
 
 
 def teacher_run_name(variant: str) -> str:
-    # The first YOLO11n attempt stopped before epoch 1; preserve it for audit.
-    return "teacher_yolo11n_seed42_retry1" if variant == "n" else "teacher_yolo11s_seed42"
+    # Legacy attempt: the first YOLO11n run stopped before epoch 1 and is preserved for audit.
+    return LAYOUT.teacher_run_name(variant)
 
 
 def record(event: str, **details: object) -> None:
@@ -119,9 +126,9 @@ def student_config(variant: str, seed: int) -> Path:
     source = yaml.safe_load((ROOT / "configs/kd_hybrid_full.yaml").read_text(encoding="utf-8"))
     run_name = f"student_teacher_yolo11{variant}_seed{seed}"
     source["teacher_checkpoint"] = str(PRIVATE / teacher_run_name(variant) / "weights/best.pt")
-    source["run"] = {"project": "runs/kd_teacher_ablation", "name": run_name}
+    source["run"] = {"project": PROJECT.relative_to(ROOT).as_posix(), "name": run_name}
     source["training"]["seed"] = seed
-    output = ROOT / "configs" / f"t42_{run_name}.yaml"
+    output = LAYOUT.student_config_path(run_name)
     if output.exists():
         raise FileExistsError(f"T42 config already exists: {output}")
     output.write_text(yaml.safe_dump(source, sort_keys=False), encoding="utf-8")
@@ -135,6 +142,8 @@ def main() -> None:
     (PROJECT / "logs").mkdir(exist_ok=True)
     EVAL.mkdir(parents=True, exist_ok=True)
     baseline = hashlib.sha256((ROOT / "configs/kd_hybrid_full.yaml").read_bytes()).hexdigest()
+    if STATUS.exists() and LAYOUT.attempt:
+        raise RuntimeError(f"Status T42 percobaan {LAYOUT.attempt!r} sudah ada; audit dulu atau pakai T42_ATTEMPT baru")
     if STATUS.exists():
         events = [json.loads(line) for line in STATUS.read_text(encoding="utf-8").splitlines()]
         failed = [event for event in events if event["event"] == "step_failed"]
@@ -146,7 +155,8 @@ def main() -> None:
                new_run="teacher_yolo11n_seed42_retry1", reason="CUDA peak counter called before training")
     else:
         record("t42_started", recipe_sha256=baseline, teachers=["yolo11n", "yolo11s"],
-               student_mode="hybrid_full", student_seeds=[42, 1337, 2025], split="TRAIN/VAL only")
+               student_mode="hybrid_full", student_seeds=[42, 1337, 2025], split="TRAIN/VAL only",
+               attempt=LAYOUT.attempt or "legacy", training_python=PYTHON, data_root=DATA_ROOT)
     try:
         for variant in ("n", "s"):
             label = f"teacher_yolo11{variant}_seed42"
