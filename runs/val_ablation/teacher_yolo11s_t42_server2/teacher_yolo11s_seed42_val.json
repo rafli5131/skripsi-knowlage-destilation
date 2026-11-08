@@ -1,0 +1,68 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/models_local/teacher_ablation_t42/server2/training/teacher_yolo11s_seed42/weights/best.pt",
+  "checkpoint_sha256": "fc9ec7a8bcb11f16ddf01233211aa037e41c8e5df58ea7b2adf696d04fe7f4f4",
+  "created_at_utc": "2026-11-05T08:15:49.298993+00:00",
+  "fixed_confidence_metrics": {
+    "F1_macro": 0.9422225850756202,
+    "precision_macro": 0.9108189725802993,
+    "recall_macro": 0.9758690214344244
+  },
+  "images": 1213,
+  "model": "teacher_yolo11s_seed42",
+  "per_class": {
+    "ball": {
+      "AP50": 0.9915205446366573,
+      "AP50_95": 0.9013936667632201,
+      "F1_conf025": 0.9891304347826088,
+      "ground_truth_count": 182,
+      "precision_conf025": 0.978494623655914,
+      "recall_conf025": 1.0,
+      "validator_precision": 0.9816641115417205,
+      "validator_recall": 1.0
+    },
+    "gawang": {
+      "AP50": 0.9545907170313476,
+      "AP50_95": 0.6062097118173506,
+      "F1_conf025": 0.8557939914163091,
+      "ground_truth_count": 1048,
+      "precision_conf025": 0.7776911076443058,
+      "recall_conf025": 0.9513358778625954,
+      "validator_precision": 0.8839735368792884,
+      "validator_recall": 0.9014521920923766
+    },
+    "robot": {
+      "AP50": 0.9913592912360213,
+      "AP50_95": 0.8451557631564564,
+      "F1_conf025": 0.976271186440678,
+      "ground_truth_count": 295,
+      "precision_conf025": 0.976271186440678,
+      "recall_conf025": 0.976271186440678,
+      "validator_precision": 0.9794781429994288,
+      "validator_recall": 0.9707525437622216
+    }
+  },
+  "settings": {
+    "augment": false,
+    "batch": 16,
+    "confidence_floor_for_AP": 0.001,
+    "device": "cpu",
+    "fixed_confidence": 0.25,
+    "imgsz": 640,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "training_manifest": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/models_local/teacher_ablation_t42/server2/training/teacher_yolo11s_seed42/manifest.json",
+  "training_manifest_sha256": "2e54360c6aae89736a0431784abbc682b4a620a11c7234243dc535472a5ddd06",
+  "training_mode": "teacher_supervised_pretrained",
+  "ultralytics": "8.4.130",
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "validator_metrics": {
+    "fitness": 0.7842530472456757,
+    "metrics/mAP50(B)": 0.9791568509680086,
+    "metrics/mAP50-95(B)": 0.7842530472456757,
+    "metrics/precision(B)": 0.9483719304734791,
+    "metrics/recall(B)": 0.9574015786181994
+  }
+}

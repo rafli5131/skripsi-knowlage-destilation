@@ -1,0 +1,29 @@
+teacher_checkpoint: /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/models_local/teacher_ablation_t42/server2/training/teacher_yolo11s_seed42/weights/best.pt
+student_model: models/yolo11_tiny_kd.yaml
+data_yaml: configs/data_train_val.yaml
+run:
+  project: runs/kd_teacher_ablation/server2
+  name: student_teacher_yolo11s_seed1337
+distillation:
+  mode: hybrid_full
+  dis: 1.0
+  feature_weight: 1.0
+  box_weight: 1.0
+  class_weight: 1.0
+  temperature: 2.0
+training:
+  epochs: 100
+  batch: 16
+  workers: 2
+  imgsz: 640
+  device: '0'
+  seed: 1337
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  warmup_epochs: 3.0
+  weight_decay: 0.0005
+  close_mosaic: 10
+  amp: false
+  patience: 30
+  pretrained: false

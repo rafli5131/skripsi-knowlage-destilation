@@ -1,0 +1,68 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_teacher_ablation/server2/student_teacher_yolo11n_seed2025/weights/best.pt",
+  "checkpoint_sha256": "e2d14bb90a0fc5291cb8d4bef46853a32a26a2d404152451a2d014b3f51ed69d",
+  "created_at_utc": "2026-11-05T15:11:23.083578+00:00",
+  "fixed_confidence_metrics": {
+    "F1_macro": 0.9235035604535249,
+    "precision_macro": 0.8868464796639198,
+    "recall_macro": 0.9633216817684408
+  },
+  "images": 1213,
+  "model": "student_teacher_yolo11n_seed2025",
+  "per_class": {
+    "ball": {
+      "AP50": 0.987124501480648,
+      "AP50_95": 0.8398532490552899,
+      "F1_conf025": 0.9619565217391304,
+      "ground_truth_count": 182,
+      "precision_conf025": 0.9516129032258065,
+      "recall_conf025": 0.9725274725274725,
+      "validator_precision": 0.9668377803271692,
+      "validator_recall": 0.9725274725274725
+    },
+    "gawang": {
+      "AP50": 0.9515876866428347,
+      "AP50_95": 0.5996907757005518,
+      "F1_conf025": 0.8647007805724197,
+      "ground_truth_count": 1048,
+      "precision_conf025": 0.7925278219395866,
+      "recall_conf025": 0.9513358778625954,
+      "validator_precision": 0.8951938653220064,
+      "validator_recall": 0.8639231043374176
+    },
+    "robot": {
+      "AP50": 0.988652495963694,
+      "AP50_95": 0.804640552477062,
+      "F1_conf025": 0.9405940594059404,
+      "ground_truth_count": 295,
+      "precision_conf025": 0.9163987138263665,
+      "recall_conf025": 0.9661016949152542,
+      "validator_precision": 0.9405034939567354,
+      "validator_recall": 0.9525423728813559
+    }
+  },
+  "settings": {
+    "augment": false,
+    "batch": 16,
+    "confidence_floor_for_AP": 0.001,
+    "device": "cpu",
+    "fixed_confidence": 0.25,
+    "imgsz": 640,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "training_manifest": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_teacher_ablation/server2/student_teacher_yolo11n_seed2025/manifest.json",
+  "training_manifest_sha256": "f4c60f65a75353099a01e6892814602fc10bfd1d1c002aff036ee388669b51c0",
+  "training_mode": "hybrid_full",
+  "ultralytics": "8.4.130",
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "validator_metrics": {
+    "fitness": 0.7480615257443012,
+    "metrics/mAP50(B)": 0.975788228029059,
+    "metrics/mAP50-95(B)": 0.7480615257443012,
+    "metrics/precision(B)": 0.9341783798686368,
+    "metrics/recall(B)": 0.929664316582082
+  }
+}

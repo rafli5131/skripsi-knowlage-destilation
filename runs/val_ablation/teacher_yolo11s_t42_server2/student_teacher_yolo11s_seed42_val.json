@@ -1,0 +1,68 @@
+{
+  "checkpoint": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_teacher_ablation/server2/student_teacher_yolo11s_seed42/weights/best.pt",
+  "checkpoint_sha256": "4605045f295586a3b8a68c7ae9fbae6631002b77c9ae8a3a949c8b16107c2c76",
+  "created_at_utc": "2026-11-05T16:35:37.864864+00:00",
+  "fixed_confidence_metrics": {
+    "F1_macro": 0.9202499938992291,
+    "precision_macro": 0.8788755489419163,
+    "recall_macro": 0.9657124208004011
+  },
+  "images": 1213,
+  "model": "student_teacher_yolo11s_seed42",
+  "per_class": {
+    "ball": {
+      "AP50": 0.9906884079770666,
+      "AP50_95": 0.8554079328179081,
+      "F1_conf025": 0.9675675675675677,
+      "ground_truth_count": 182,
+      "precision_conf025": 0.9521276595744681,
+      "recall_conf025": 0.9835164835164835,
+      "validator_precision": 0.98894922182951,
+      "validator_recall": 0.9834221077072294
+    },
+    "gawang": {
+      "AP50": 0.9405483355191768,
+      "AP50_95": 0.5932781637949908,
+      "F1_conf025": 0.8429541595925296,
+      "ground_truth_count": 1048,
+      "precision_conf025": 0.7591743119266054,
+      "recall_conf025": 0.9475190839694656,
+      "validator_precision": 0.8842143555214846,
+      "validator_recall": 0.8525650858496698
+    },
+    "robot": {
+      "AP50": 0.9788267351812406,
+      "AP50_95": 0.7928515886737985,
+      "F1_conf025": 0.945273631840796,
+      "ground_truth_count": 295,
+      "precision_conf025": 0.9253246753246753,
+      "recall_conf025": 0.9661016949152542,
+      "validator_precision": 0.9558504564095042,
+      "validator_recall": 0.9540834639886031
+    }
+  },
+  "settings": {
+    "augment": false,
+    "batch": 16,
+    "confidence_floor_for_AP": 0.001,
+    "device": "cpu",
+    "fixed_confidence": 0.25,
+    "imgsz": 640,
+    "match_iou": 0.5,
+    "nms_iou": 0.7,
+    "rect": true,
+    "threads": 8
+  },
+  "training_manifest": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_teacher_ablation/server2/student_teacher_yolo11s_seed42/manifest.json",
+  "training_manifest_sha256": "baa3fde277a2ad8757fc467c71b3c5c884f63281987e03c6586a08331e46a58b",
+  "training_mode": "hybrid_full",
+  "ultralytics": "8.4.130",
+  "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+  "validator_metrics": {
+    "fitness": 0.7471792284288991,
+    "metrics/mAP50(B)": 0.9700211595591614,
+    "metrics/mAP50-95(B)": 0.7471792284288991,
+    "metrics/precision(B)": 0.9430046779201663,
+    "metrics/recall(B)": 0.9300235525151676
+  }
+}
