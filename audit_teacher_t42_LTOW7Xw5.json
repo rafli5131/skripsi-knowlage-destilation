@@ -1,0 +1,66 @@
+{
+  "attempt": "server2",
+  "mode": "read_only",
+  "teachers": {
+    "teacher_yolo11n_seed42": {
+      "checks": {
+        "manifest_hash_matches_evaluation": true,
+        "identity_status": true,
+        "train_recipe_matches_protocol": true,
+        "val_only_and_train_val_verified": true,
+        "checkpoint_hash_agrees": true,
+        "official_pretrained_hash_agrees": true,
+        "dataset_fingerprint_file_hash": true,
+        "data_yaml_hash": true,
+        "val_identity": true
+      },
+      "values": {
+        "teacher_sha256": "8e5416a393fd4f310d0f398a7308a43149cb856f2f88d6f563a8296b9cf02968",
+        "pretrained_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+        "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+        "parameters": 2590425,
+        "duration_seconds": 3538.11795283854,
+        "versions": {
+          "python": "3.11.2",
+          "torch": "2.4.1+cu121",
+          "ultralytics": "8.4.130"
+        }
+      }
+    },
+    "teacher_yolo11s_seed42": {
+      "checks": {
+        "manifest_hash_matches_evaluation": true,
+        "identity_status": true,
+        "train_recipe_matches_protocol": true,
+        "val_only_and_train_val_verified": true,
+        "checkpoint_hash_agrees": true,
+        "official_pretrained_hash_agrees": true,
+        "dataset_fingerprint_file_hash": true,
+        "data_yaml_hash": true,
+        "val_identity": true
+      },
+      "values": {
+        "teacher_sha256": "fc9ec7a8bcb11f16ddf01233211aa037e41c8e5df58ea7b2adf696d04fe7f4f4",
+        "pretrained_sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+        "dataset_fingerprint_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+        "val_split_fingerprint_sha256": "117e61befe2d0b2fe7cab5b5a81812572c7100281a4edc6912c3681c45362710",
+        "parameters": 9428953,
+        "duration_seconds": 4976.108527911827,
+        "versions": {
+          "python": "3.11.2",
+          "torch": "2.4.1+cu121",
+          "ultralytics": "8.4.130"
+        }
+      }
+    }
+  },
+  "checks": {
+    "teacher_recipes_match": true,
+    "dataset_fingerprint_matches": true,
+    "versions_match": true,
+    "val_fingerprints_match": true
+  },
+  "issues": [],
+  "complete": true
+}
