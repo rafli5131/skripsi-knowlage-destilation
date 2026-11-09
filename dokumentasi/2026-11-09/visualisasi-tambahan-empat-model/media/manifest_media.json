@@ -1,0 +1,48 @@
+{
+  "media": [
+    {
+      "file": "teacher_berjalan_u1_sesudah.png",
+      "model": "teacher",
+      "run_id": "20261102_eq_teacher_walk_u3",
+      "source": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/frame_deteksi_sesudah_jendela.png",
+      "sha256": "4259bb4cd353b594fbe5bee4aca7108217850867d4f6095156e7056d5624d201",
+      "note": "Snapshot sesudah jendela analisis run berjalan; bukan bukti gait bergerak pada gambar tunggal."
+    },
+    {
+      "file": "hybrid_berjalan_u3_sesudah.png",
+      "model": "hybrid1337",
+      "run_id": "20261103_eq_hybrid1337_walk_u3",
+      "source": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u3/frame_deteksi_sesudah_jendela.png",
+      "sha256": "fdc3d0b86b73c7c91a66d4cffdc9f95c24093b6261c5b69594b45e9aadb106d3",
+      "note": "Snapshot sesudah jendela analisis run berjalan; bukan bukti gait bergerak pada gambar tunggal."
+    },
+    {
+      "file": "supervised_berjalan_u1_sesudah.png",
+      "model": "sup1337",
+      "run_id": "20261103_eq_sup1337_walk_u1",
+      "source": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/frame_deteksi_sesudah_jendela.png",
+      "sha256": "d6ae0f020919613d09a34ae206148b994f420dbf551178579a617a6688df2b1c",
+      "note": "Snapshot sesudah jendela analisis run berjalan; bukan bukti gait bergerak pada gambar tunggal."
+    },
+    {
+      "file": "kd_murni_berjalan_u3_sesudah.png",
+      "model": "kd42",
+      "run_id": "20261103_eq_kd42_walk_u3_ulang1",
+      "source": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/frame_deteksi_sesudah_jendela.png",
+      "sha256": "e992fdf050ccb02fbf63da14326116e59f60605f21b0ea977936afdbb8b3717a",
+      "note": "Snapshot sesudah jendela analisis run berjalan; bukan bukti gait bergerak pada gambar tunggal."
+    },
+    {
+      "file": "supervised_deteksi_tracking_10detik.mp4",
+      "model": "supervised_seed1337",
+      "run_id": "20261022_external_supervised_function_unknown_02",
+      "source": "dokumentasi/2026-10-22/percobaan-22-supervised-live-function/live_detection_tracking.mp4",
+      "source_sha256": "2526674e79e3a8189d6c90c75ea02a128f11ec011e1dd559add6c81fcab4c5c3",
+      "sha256": "fc04ac12e39e7e0754764c6bf16c09f23c26572682928d8772194b0e60525a34",
+      "start_seconds": 10,
+      "duration_seconds": 10,
+      "condition": "unknown",
+      "note": "Video keluaran topik debug dengan overlay deteksi/tracking, bukan screen capture desktop atau bukti gait; bukan arsip tiap frame detektor."
+    }
+  ]
+}

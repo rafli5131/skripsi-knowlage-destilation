@@ -1,0 +1,37 @@
+{
+  "status": "exploratory_retrospective",
+  "frames_and_sessions_identical_to_T34": true,
+  "hybrid_and_supervised_results_identical_to_T34": true,
+  "composition": {
+    "primary": 200,
+    "negative": 60,
+    "partial": 50
+  },
+  "checkpoints": {
+    "hybrid_full_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363"
+    },
+    "supervised_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041"
+    },
+    "teacher_fp32": {
+      "path": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/best.pt",
+      "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+    },
+    "kd_seed42": {
+      "path": "/home/humanoid/bre_skripsi/models/weights/kd_student_best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    }
+  },
+  "input_manifest_sha256": "1ae146962a2bee7cde147e37e8c2b38f0866a2371b7ea3bb9069cdff3442bb88",
+  "results_sha256": "2d3bd08ff18253f78c11ce6a37f6840ebd4da75768c0462c9efd7d7947cba112",
+  "csv_sha256": "7f8178aca613c07eb8ed21fb96a02bd34168f52bb64ef6163004e51ffcedab7b",
+  "limitations": [
+    "single_capture_sequence",
+    "pure_kd_assisted_initial_labels",
+    "partial_goals_excluded_from_primary",
+    "not_independent_external_test"
+  ]
+}
