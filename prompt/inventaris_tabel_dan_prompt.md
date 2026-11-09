@@ -1,5 +1,7 @@
 # Inventaris prompt dan tabel skripsi
 
+> Bahan hasil terbaru: [draf terpadu Bab IV–V](../laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) dan [arsip draf](../laporan/draf-bab-iv-v/README.md). Penomoran akhir mengikuti pedoman kampus.
+
 > Prompt terbaru: [audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) dan [perbaikan Bab I–III serta penyelesaian draf](PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md).
 
 > Pembaruan 9 November 2026: [T42 server2](../analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai untuk dua teacher dan enam student; status T42 sebelumnya di bawah adalah historis. Lihat [audit teacher](../audit_teacher_t42_LTOW7Xw5.json).

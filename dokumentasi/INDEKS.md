@@ -1,5 +1,7 @@
 # Indeks dokumentasi percobaan OP3
 
+> **9 November 2026:** [Draf Bab IV–V dan arsip](../laporan/draf-bab-iv-v/README.md) · [Log progres skripsi](2026-11-09/LOG_PROGRES_SKRIPSI.md) · [Matriks bukti dan celah](2026-11-09/MATRIKS_BUKTI_DAN_CELAH.md).
+
 > [Dokumentasi per model dan confusion matrix](model/README.md): Teacher, KD Hybrid, Supervised, KD Murni, serta perbandingan gabungan.
 
 > **9 November 2026:** [Grafik tambahan empat model, screenshot, dan cuplikan video](2026-11-09/visualisasi-tambahan-empat-model/README.md) sudah tersedia di repositori.

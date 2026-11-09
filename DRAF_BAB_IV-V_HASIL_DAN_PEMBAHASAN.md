@@ -1,4 +1,8 @@
+> **Arsip historis:** untuk hasil dan status terbaru gunakan [draf terpadu Bab IV–V](laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md). Isi berikut dipertahankan sebagai riwayat.
+
 # Draf Bab IV–V: Hasil dan Pembahasan
+
+> Pembaruan 5 November 2026: [T38 akurasi empat model pada 260 frame OP3](analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) telah selesai; gunakan [draf pembahasan T38](dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/DRAF_PEMBAHASAN_T38.md) beserta batas interpretasinya. Pernyataan lama tentang T38 di bawah merupakan riwayat.
 
 > Pembaruan terbaru: [audit 24 run, T36/T37 dan batas protokol](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/DRAF_PEMBAHASAN.md); seluruh cek log/telemetry lulus, pengesahan kesetaraan fisik masih terbuka. Status terdahulu di bawah merupakan snapshot historis.
 

@@ -12,6 +12,7 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 | Confusion matrix empat model dalam satu gambar | [Jumlah kotak](dokumentasi/model/gabungan/confusion_matrix_empat_model_jumlah_id.png) · [Persentase](dokumentasi/model/gabungan/confusion_matrix_empat_model_persen_id.png) · [Cara membaca](dokumentasi/model/gabungan/README.md) |
 | Grafik akurasi, runtime dan training | [Indeks 30 grafik HD: Indonesia dan Inggris](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) |
 | Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
+| Draf laporan Bab IV–V | [Folder draf dan arsip](laporan/draf-bab-iv-v/README.md) · [Draf terpadu terkini](laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) |
 | Tabel lengkap untuk penelitian | [Indeks tabel](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md) |
 | Prompt audit dan penyusunan skripsi | [Audit celah](prompt/PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) · [Perbaikan Bab I–III dan draf lengkap](prompt/PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md) · [Semua prompt](prompt/inventaris_tabel_dan_prompt.md) |
 
@@ -133,6 +134,7 @@ skripsi-knowlage-destilation/
 ├── artifacts/                 Fingerprint, manifest dan ringkasan hasil
 ├── data/                      Dataset dan sesi lokal, sebagian tidak masuk Git
 ├── runs/                      Output eksperimen, sebagian hanya lokal
+├── laporan/draf-bab-iv-v/     Draf terpadu dan arsip hasil/pembahasan
 ├── prompt/                    Prompt audit, proposal, laporan dan robot
 ├── memory/                    Catatan progres dan keputusan bertanggal
 ├── docs/                      Protokol, keputusan, tutorial dan audit
