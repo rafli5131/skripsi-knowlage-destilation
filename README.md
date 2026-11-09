@@ -1,71 +1,171 @@
-# YOLO11 Knowledge Distillation untuk ROBOTIS OP3
+# Deteksi Objek ROBOTIS OP3 dengan YOLO11 dan Knowledge Distillation
 
-> Pembaruan 9 November 2026: [T42 ablasi teacher pada VAL](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai di server2. [Audit teacher](audit_teacher_t42_LTOW7Xw5.json) mencatat hasil pemeriksaan; checkpoint utama OP3 tidak berubah.
+Repositori penelitian ini membandingkan model deteksi objek untuk kamera robot humanoid **ROBOTIS OP3**. Sistem berbasis **ROS 2** mendeteksi tiga kelas: **bola (`ball`)**, **gawang**, dan **robot**. Penelitian membandingkan teacher YOLO11n dengan student YOLO11 skala **t kustom** yang dilatih secara Supervised, KD Murni, dan KD Hybrid.
 
-> [Visualisasi tambahan empat model](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) memuat 30 grafik HD ID/EN, empat screenshot, dan video deteksi berdurasi 10 detik. [Audit teacher server](audit_teacher_t42_LTOW7Xw5.json) telah tersedia.
+Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakukan saat robot **diam** dan **berjalan**. Percobaan tracking yang pernah dilakukan adalah tambahan, bukan tujuan wajib penelitian.
 
-Penelitian deteksi `ball`, `gawang`, dan `robot` membandingkan teacher YOLO11n FP32 dengan student YOLO11 skala **t kustom** (810.649 parameter), yang dilatih secara supervised, KD murni, dan KD Hybrid full menggunakan ROS 2 pada ROBOTIS OP3.
+## Mulai dari sini
 
-## Mulai dari hasil per model
+| Ingin melihat | Buka |
+|---|---|
+| Hasil, grafik dan dokumentasi setiap model | [Indeks empat model](dokumentasi/model/README.md) |
+| Confusion matrix empat model dalam satu gambar | [Jumlah kotak](dokumentasi/model/gabungan/confusion_matrix_empat_model_jumlah_id.png) · [Persentase](dokumentasi/model/gabungan/confusion_matrix_empat_model_persen_id.png) · [Cara membaca](dokumentasi/model/gabungan/README.md) |
+| Grafik akurasi, runtime dan training | [Indeks 30 grafik HD: Indonesia dan Inggris](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) |
+| Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
+| Tabel lengkap untuk penelitian | [Indeks tabel](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md) |
+| Prompt audit dan penyusunan skripsi | [Audit celah](prompt/PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) · [Perbaikan Bab I–III dan draf lengkap](prompt/PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md) · [Semua prompt](prompt/inventaris_tabel_dan_prompt.md) |
 
-Dokumentasi model disusun sebagai pintu masuk tanpa memindahkan artefak eksperimen lama. Setiap folder memuat confusion matrix jumlah/persentase, CSV/JSON, ringkasan akurasi dan runtime, serta tautan ke grafik dan contoh kamera.
+## Model yang dibandingkan
 
-- [Teacher YOLO11n](dokumentasi/model/teacher_yolo11n/README.md)
-- [KD Hybrid full seed 1337](dokumentasi/model/kd_hybrid/README.md)
-- [Supervised seed 1337](dokumentasi/model/supervised/README.md)
-- [KD Murni seed 42](dokumentasi/model/kd_murni/README.md)
-- [Confusion matrix gabungan dan cara membaca](dokumentasi/model/gabungan/README.md) · [Indeks empat model](dokumentasi/model/README.md)
+| Model | Peran | Checkpoint OP3 / sumber |
+|---|---|---|
+| **Teacher YOLO11n** | Model acuan dan sumber pengetahuan untuk distilasi | [Dokumentasi teacher](dokumentasi/model/teacher_yolo11n/README.md) |
+| **KD Hybrid full** | Student dengan loss deteksi berlabel dan distilasi fitur, kotak, serta kelas | [Seed 1337](dokumentasi/model/kd_hybrid/README.md) |
+| **Supervised** | Student berarsitektur sama yang dilatih menggunakan label tanpa distilasi | [Seed 1337](dokumentasi/model/supervised/README.md) |
+| **KD Murni** | Student dengan objective *teacher-only* | [Seed 42](dokumentasi/model/kd_murni/README.md) |
 
-Confusion matrix di atas dihitung **offline pada 260 frame kamera OP3 T38**, bukan confusion matrix TEST. Setiap matriks memakai 400 kotak acuan, confidence >0,25 dan IoU ≥0,5. Pencocokan sekelas diprioritaskan seperti T38; sisa pasangan lintas kelas dicatat sebagai kesalahan. Dokumentasi menjelaskan arti latar, kotak terlewat, dan perbedaan dengan keluaran Ultralytics bawaan.
+Student YOLO11 skala t yang dipakai adalah **arsitektur kustom berisi 810.649 parameter**, bukan YOLO11n standar. Alias `op3_default` dalam [registry model](configs/model_registry.yaml) masih menunjuk KD Murni seed 42; kandidat Hybrid untuk OP3 ditentukan secara terpisah. Jangan mengubah alias tanpa keputusan baru.
 
-## Struktur folder dan isi
+## Alur sistem
+
+```text
+Kamera OP3 → topik gambar ROS 2 → model deteksi → kotak dan kelas objek
+                                            ├── preview kamera
+                                            └── catatan hasil dan runtime
+```
+
+Model berjalan pada komputer onboard robot. Deteksi menghasilkan keluaran visual dan data performa; gerakan robot diatur melalui prosedur robot yang terpisah. Petunjuk runtime dan konfigurasi tersedia di [OP3 PyTorch Runtime](OP3_PYTORCH_RUNTIME.md).
+
+## Ringkasan hasil
+
+### 1. Akurasi pada dataset TEST
+
+Dataset TEST berisi **592 gambar**. Angka student merupakan rata-rata tiga seed; teacher menggunakan satu checkpoint. Hasil ini berasal dari dataset TEST, **bukan** dari kamera OP3.
+
+| Model | mAP50 | mAP50–95 | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|---:|
+| Teacher YOLO11n | 0,9642 | 0,7800 | 0,8915 | 0,9697 | 0,9290 |
+| KD Hybrid full | 0,9583 | 0,7469 | 0,8519 | 0,9698 | 0,9071 |
+| Supervised | 0,9601 | 0,7225 | 0,8609 | 0,9699 | 0,9121 |
+| KD Murni | 0,9446 | 0,6630 | 0,7547 | 0,9631 | 0,8462 |
+
+F1 pada tabel TEST dihitung dari precision dan recall makro. Sumber, standar deviasi, ambang dan hasil per seed tersedia pada [T05](analisis_performa/tabel/T05_akurasi_test_keseluruhan.md) dan [T30](analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md). TEST pernah digunakan pada tahap eksperimen sebelumnya.
+
+### 2. Evaluasi frame kamera OP3 dan confusion matrix
+
+[T38](analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) mengevaluasi empat checkpoint pada **260 frame yang sama**: 200 frame berobjek dan 60 frame tanpa target. Sebanyak 50 frame gawang parsial dianalisis terpisah. F1 T38 adalah **rata-rata F1 per kelas**, sehingga definisinya berbeda dari tabel TEST.
+
+| Model OP3 | mAP50–95 | F1 makro per kelas | Frame tanpa target dengan deteksi salah |
+|---|---:|---:|---:|
+| Teacher | 0,5004 | 0,6829 | 2/60 |
+| KD Hybrid seed 1337 | 0,4885 | 0,5121 | 21/60 |
+| Supervised seed 1337 | 0,4414 | 0,6054 | 0/60 |
+| KD Murni seed 42 | 0,4218 | 0,5008 | 0/60 |
+
+[Confusion matrix per model dan gabungan](dokumentasi/model/README.md) memakai 400 kotak acuan, confidence > 0,25, NMS IoU 0,7 dan IoU pencocokan ≥ 0,5. Baris adalah label acuan dan kolom adalah prediksi; perhitungan mengutamakan pasangan sekelas sesuai T38, lalu mencatat pasangan salah kelas yang tersisa. Hasil dapat berbeda dari confusion matrix bawaan Ultralytics yang memakai aturan asosiasi lain.
+
+Frame T38 berasal dari satu rangkaian pengambilan; label awal dibantu KD Murni sebelum ditinjau manusia. Evaluasi ini bersifat retrospektif dan mencakup frame dari sesi sebelumnya, termasuk sesi objek bergerak; jangan menganggap seluruh set T38 sebagai data khusus objek statis atau sebagai bukti generalisasi lintas adegan.
+
+### 3. Runtime robot diam dan berjalan
+
+Terdapat **24 run aktif**: empat model × dua kondisi × tiga ulangan. Angka berikut adalah rata-rata tiga run. Lihat [T36 per run](analisis_performa/tabel/T36_runtime_live_setara_per_run.md), [T37 ringkasan](analisis_performa/tabel/T37_runtime_live_setara_ringkasan.md), dan [audit runtime](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md).
+
+| Model | Latensi diam (ms) | FPS diam | Latensi berjalan (ms) | FPS berjalan |
+|---|---:|---:|---:|---:|
+| Teacher | 96,24 | 9,88 | 95,85 | 9,87 |
+| KD Hybrid | 64,70 | 13,60 | 71,47 | 12,54 |
+| Supervised | 73,12 | 12,14 | 70,80 | 12,64 |
+| KD Murni | 74,09 | 12,07 | 72,65 | 12,21 |
+
+CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; RSS bukan total RAM robot. FPS efektif tidak dihitung dengan membalik nilai latensi. Pengukuran digunakan sebagai analisis deskriptif dengan batas yang dijelaskan dalam audit.
+
+### 4. Ablasi tambahan dan waktu training
+
+[T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) membandingkan dua teacher yang dilatih ulang dan enam student pada **VAL**. Hasilnya tidak mengganti teacher utama atau checkpoint OP3. [Audit teacher di server](audit_teacher_t42_LTOW7Xw5.json) mencatat pemeriksaan yang dilakukan.
+
+[T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) memisahkan durasi training, durasi satu sesi TEST multi-model, dan benchmark inferensi. Durasi sesi TEST bukan waktu per checkpoint; benchmark server L40 bukan FPS robot OP3.
+
+## Contoh hasil kamera dan rekaman
+
+![Contoh deteksi KD Hybrid: bola, gawang, dan robot](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/hybrid_berjalan_u3_sesudah.png)
+
+*Contoh keluaran KD Hybrid pada frame setelah jendela pengukuran berjalan. Angka pada kotak adalah confidence model, bukan akurasi keseluruhan.*
+
+| Media | Lokasi | Keterangan |
+|---|---|---|
+| Screenshot Teacher | [Buka](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png) | Frame setelah jendela run berjalan. |
+| Screenshot KD Hybrid | [Buka](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/hybrid_berjalan_u3_sesudah.png) | Frame setelah jendela run berjalan. |
+| Screenshot Supervised | [Buka](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_berjalan_u1_sesudah.png) | Frame setelah jendela run berjalan. |
+| Screenshot KD Murni | [Buka](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/kd_murni_berjalan_u3_sesudah.png) | Frame setelah jendela run berjalan. |
+| **Video deteksi Supervised, 10 detik** | [Putar atau unduh](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_deteksi_tracking_10detik.mp4) | Cuplikan keluaran gambar beranotasi dari sesi 22 Oktober; kondisi fisik robot `unknown`. |
+
+Video tersebut sudah ditautkan dari [halaman model Supervised](dokumentasi/model/supervised/README.md). File video berada di folder `dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/`, bukan disalin ke masing-masing folder model. Rekaman adalah keluaran topik gambar beranotasi, bukan rekaman layar desktop; objek dalam cuplikan relatif statis. Screenshot bukan bukti gerakan kontinu atau akurasi seluruh sesi. Sumber dan hash media ada di [manifest media](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/manifest_media.json).
+
+## Arti istilah
+
+- **mAP50 / mAP50–95:** ukuran kualitas deteksi yang mempertimbangkan ketepatan kelas dan lokasi kotak; lebih tinggi lebih baik.
+- **Precision:** proporsi deteksi yang cocok dengan acuan. **Recall:** proporsi objek acuan yang berhasil ditemukan. **F1:** ringkasan precision dan recall; periksa cara agregasinya pada tiap tabel.
+- **Latensi:** waktu pemrosesan dalam milidetik. **FPS:** jumlah frame per detik. CPU dan RSS pada laporan ini merujuk proses detektor.
+- **Confusion matrix:** tabel label acuan dibanding prediksi. Diagonal adalah pasangan benar; baris latar memuat prediksi tanpa pasangan dan kolom terlewat memuat objek tanpa pasangan. Kesalahan kelas dihitung sebagai FP dan FN; sel latar–latar bukan *true negative*.
+
+## Struktur folder dan file
 
 ```text
 skripsi-knowlage-destilation/
-├── README.md                  Peta repo dan pintu masuk hasil
+├── README.md                  Gambaran, hasil, media dan peta repositori
 ├── dokumentasi/
-│   ├── model/                 Dokumentasi dan confusion matrix per model
-│   │   ├── teacher_yolo11n/   Teacher: matriks, CSV/JSON dan ringkasan
-│   │   ├── kd_hybrid/         KD Hybrid: matriks, CSV/JSON dan ringkasan
-│   │   ├── supervised/        Supervised: matriks, CSV/JSON dan ringkasan
-│   │   ├── kd_murni/          KD Murni: matriks, CSV/JSON dan ringkasan
-│   │   └── gabungan/          Perbandingan matriks empat model
-│   ├── 2026-10-19 ... 11-09/  Riwayat percobaan dan dokumentasi per tanggal
-│   └── INDEKS.md              Indeks percobaan dan laporan
+│   ├── model/
+│   │   ├── teacher_yolo11n/   Hasil dan confusion matrix teacher
+│   │   ├── kd_hybrid/         Hasil dan confusion matrix KD Hybrid
+│   │   ├── supervised/        Hasil dan confusion matrix Supervised
+│   │   ├── kd_murni/          Hasil dan confusion matrix KD Murni
+│   │   └── gabungan/          Matriks empat model dan CSV gabungan
+│   ├── 2026-10-19 ... 11-09/  Dokumentasi percobaan berdasarkan tanggal
+│   └── INDEKS.md              Daftar percobaan dan laporan
 ├── analisis_performa/
-│   ├── tabel/                 Tabel hasil T01–T42 dan CSV sumber
+│   ├── tabel/                 Tabel hasil bernomor dan CSV sumber
 │   ├── grafik/                Grafik analisis tambahan
-│   └── lab_server/            Laporan eksperimen dan evaluasi server
-├── ros2_packages/             Package ROS 2 dan alat analisis OP3 yang terpisah
-├── scripts/                   Script training, evaluasi, audit, dan visualisasi
-├── configs/                   Konfigurasi data, model, training, dan registry
+│   └── lab_server/            Analisis eksperimen pada server
+├── ros2_packages/             Package robot dan alat analisis yang terpisah
+├── scripts/                   Script training, evaluasi, audit dan visualisasi
+├── configs/                   Konfigurasi dataset, model dan eksperimen
 ├── models/                    Arsitektur student dan bobot yang disediakan
-├── artifacts/                 Manifest, fingerprint dan ringkasan hasil
-├── data/                      Dataset/sesi lokal; tidak semuanya masuk Git
-├── runs/                      Keluaran run; sebagian besar data mentah lokal
-├── prompt/                    Prompt kerja audit, proposal, laporan, dan OP3
-├── memory/                    Catatan keputusan dan progres berdasarkan tanggal
-├── docs/                      Protokol, keputusan, tutorial, dan audit
-├── datasheet/                 Deskripsi dan metadata dataset/model
+├── artifacts/                 Fingerprint, manifest dan ringkasan hasil
+├── data/                      Dataset dan sesi lokal, sebagian tidak masuk Git
+├── runs/                      Output eksperimen, sebagian hanya lokal
+├── prompt/                    Prompt audit, proposal, laporan dan robot
+├── memory/                    Catatan progres dan keputusan bertanggal
+├── docs/                      Protokol, keputusan, tutorial dan audit
+├── datasheet/                 Metadata dataset dan model
 ├── requirements/              Spesifikasi dependency
 ├── tests/                     Tes otomatis script umum
-└── environment/, log/         Info environment dan log lokal/generated
+└── environment/, log/         Informasi environment dan log lokal/generated
 ```
 
-Folder bertanggal mempertahankan susunan penelitian semula agar tautan dan provenance tidak rusak. `data/`, sebagian `runs/`, checkpoint privat, log mentah, dan environment lokal tidak selalu tersedia di checkout GitHub. [Indeks dokumentasi](dokumentasi/INDEKS.md) dan [indeks tabel](analisis_performa/INDEKS.md) menjelaskan isi lebih rinci.
+Folder percobaan lama tetap pada lokasi semula supaya sumber dan tautannya tidak rusak. GitHub berisi tabel dan media yang dikurasi; **sebagian** data mentah kamera, label, telemetry, log, checkpoint privat dan environment hanya tersedia pada mesin tempat eksperimen dilakukan. Periksa ketersediaannya sebelum mereproduksi hasil.
 
-## Status runtime OP3 — 3 November 2026
+## Menjalankan analisis ulang
 
-Sebanyak **24/24 slot runtime OP3** terukur: empat model × kondisi idle/berjalan × tiga ulangan. Seluruh slot aktif lulus cek otomatis log dan telemetry. Pengguna [menerima hasil untuk analisis deskriptif](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md) dengan keterbatasan yang dicatat; kesetaraan kondisi fisik tidak terbukti penuh dan persetujuan pembimbing belum dicatat.
+Confusion matrix dapat dibuat ulang secara offline **jika** manifest, gambar, label tinjauan, prediksi T38, dan environment OP3 tersedia pada mesin yang digunakan. Package baru menggunakan fungsi evaluasi bersama tanpa mengubah package lama dan tidak mengaktifkan kamera atau aktuator:
 
-- [Audit 24 run dan keterbatasan](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md) · [Log progres hari ini](dokumentasi/2026-11-03/LOG_PROGRES_SKRIPSI.md) · [Memory terbaru](memory/2026-11-03-progress-skripsi-prompt-bab-iv-v.md)
-- [T36 per run](analisis_performa/tabel/T36_runtime_live_setara_per_run.md) · [T37 ringkasan](analisis_performa/tabel/T37_runtime_live_setara_ringkasan.md) · [Grafik runtime ID](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/grafik_runtime_24_run_id_hd.png) · [English](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/grafik_runtime_24_run_en_hd.png)
-- [Akurasi TEST empat metode](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/TABEL_AKURASI_TEST.md) · [Waktu training dan pengujian T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) · [Draf pembahasan](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/DRAF_PEMBAHASAN.md)
-- [Prompt Bab IV–V V3](prompt/PROMPT_BAB_IV_V_HASIL_KD_OP3_V3_2026-11-03.md) · [Inventaris prompt](prompt/inventaris_tabel_dan_prompt.md) · [Indeks hasil](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md)
+```bash
+PYTHONPATH=ros2_packages/op3_camera_eval:ros2_packages/op3_multi_session_eval:ros2_packages/op3_confusion_matrix \
+  .venv-op3-pytorch/bin/python -m op3_confusion_matrix --output /tmp/confusion_matrix_op3_baru
+```
 
-T34 adalah evaluasi eksploratif Hybrid dan supervised pada 260 frame OP3 yang ditinjau dengan bantuan pra-label; 50 frame parsial dipisahkan. [T38 empat model](analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) pada frame yang sama selesai pada 5 November 2026 dan bersifat retrospektif. Cakupan keluaran live bukan precision, recall atau mAP. Hasil TEST resmi pernah digunakan pada tahap sebelumnya; generalisasi lintas adegan dan provenance training teacher memiliki batas yang dijelaskan dalam laporan audit.
+Folder tujuan harus belum ada. Penjelasan input dan metode ada di [README package confusion matrix](ros2_packages/op3_confusion_matrix/README.md). Pengaturan runtime robot dan environment training yang sebenarnya dapat berbeda antar-mesin; lihat [runtime OP3](OP3_PYTORCH_RUNTIME.md) dan [provenance environment](environment/README.md).
 
-Data mentah kamera, label, telemetry dan log robot tetap berada pada mesin OP3; beberapa screenshot dan satu cuplikan video telah dipublikasikan sebagai contoh terkurasi. Ringkasan publik dapat merujuk artefak lokal tersebut; ketersediaan file mentah tidak dapat diasumsikan dari checkout GitHub. Saat melanjutkan eksperimen robot, periksa ulang kondisi fisik dan perangkat; pengguna meminta konfirmasi sebelum setiap ulangan berjalan serta menjaga arah kepala ID 19/20.
+## Batas interpretasi
+
+- Hasil TEST, frame kamera OP3, runtime robot, dan ablasi T42 berasal dari konteks berbeda dan tidak boleh diperlakukan sebagai satu pengujian yang sama.
+- Hasil OP3 bersifat deskriptif; beberapa kondisi fisik dan artefak sesi tidak terekam lengkap. T38 berasal dari satu rangkaian frame dan bukan pengujian independen lintas adegan.
+- Asal checkpoint teacher utama terikat hash, tetapi kesamaan byte seluruh dataset training lama belum dapat dipastikan. Teacher baru pada T42 bukan teacher utama tersebut.
+- Preview dan confidence memperlihatkan keluaran model; keduanya tidak menggantikan metrik dengan ground truth.
+
+<details>
+<summary>Arsip teknis Pure KD: catatan dan perintah historis</summary>
+
+> Bagian ini dipertahankan untuk riwayat. Keterangan dan perintah di dalamnya menggambarkan tahap awal dan dapat berbeda dari status terbaru di atas. Periksa protokol terkini sebelum menjalankan perintah eksperimen.
 
 ## Catatan historis tahap Pure KD
 
@@ -279,3 +379,5 @@ in the run manifest and results draft.
 
 Environment provenance (the source lock snapshot and clean runtime package
 freeze) is documented in [`environment/README.md`](environment/README.md).
+
+</details>
