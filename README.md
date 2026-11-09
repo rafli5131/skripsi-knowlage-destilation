@@ -1,8 +1,60 @@
 # YOLO11 Knowledge Distillation untuk ROBOTIS OP3
 
+> Pembaruan 9 November 2026: [T42 ablasi teacher pada VAL](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai di server2. [Audit teacher](audit_teacher_t42_LTOW7Xw5.json) mencatat hasil pemeriksaan; checkpoint utama OP3 tidak berubah.
+
+> [Visualisasi tambahan empat model](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) memuat 30 grafik HD ID/EN, empat screenshot, dan video deteksi berdurasi 10 detik. [Audit teacher server](audit_teacher_t42_LTOW7Xw5.json) telah tersedia.
+
 Penelitian deteksi `ball`, `gawang`, dan `robot` membandingkan teacher YOLO11n FP32 dengan student YOLO11 skala **t kustom** (810.649 parameter), yang dilatih secara supervised, KD murni, dan KD Hybrid full menggunakan ROS 2 pada ROBOTIS OP3.
 
-## Status terbaru — 3 November 2026
+## Mulai dari hasil per model
+
+Dokumentasi model disusun sebagai pintu masuk tanpa memindahkan artefak eksperimen lama. Setiap folder memuat confusion matrix jumlah/persentase, CSV/JSON, ringkasan akurasi dan runtime, serta tautan ke grafik dan contoh kamera.
+
+- [Teacher YOLO11n](dokumentasi/model/teacher_yolo11n/README.md)
+- [KD Hybrid full seed 1337](dokumentasi/model/kd_hybrid/README.md)
+- [Supervised seed 1337](dokumentasi/model/supervised/README.md)
+- [KD Murni seed 42](dokumentasi/model/kd_murni/README.md)
+- [Confusion matrix gabungan dan cara membaca](dokumentasi/model/gabungan/README.md) · [Indeks empat model](dokumentasi/model/README.md)
+
+Confusion matrix di atas dihitung **offline pada 260 frame kamera OP3 T38**, bukan confusion matrix TEST. Setiap matriks memakai 400 kotak acuan, confidence >0,25 dan IoU ≥0,5. Pencocokan sekelas diprioritaskan seperti T38; sisa pasangan lintas kelas dicatat sebagai kesalahan. Dokumentasi menjelaskan arti latar, kotak terlewat, dan perbedaan dengan keluaran Ultralytics bawaan.
+
+## Struktur folder dan isi
+
+```text
+skripsi-knowlage-destilation/
+├── README.md                  Peta repo dan pintu masuk hasil
+├── dokumentasi/
+│   ├── model/                 Dokumentasi dan confusion matrix per model
+│   │   ├── teacher_yolo11n/   Teacher: matriks, CSV/JSON dan ringkasan
+│   │   ├── kd_hybrid/         KD Hybrid: matriks, CSV/JSON dan ringkasan
+│   │   ├── supervised/        Supervised: matriks, CSV/JSON dan ringkasan
+│   │   ├── kd_murni/          KD Murni: matriks, CSV/JSON dan ringkasan
+│   │   └── gabungan/          Perbandingan matriks empat model
+│   ├── 2026-10-19 ... 11-09/  Riwayat percobaan dan dokumentasi per tanggal
+│   └── INDEKS.md              Indeks percobaan dan laporan
+├── analisis_performa/
+│   ├── tabel/                 Tabel hasil T01–T42 dan CSV sumber
+│   ├── grafik/                Grafik analisis tambahan
+│   └── lab_server/            Laporan eksperimen dan evaluasi server
+├── ros2_packages/             Package ROS 2 dan alat analisis OP3 yang terpisah
+├── scripts/                   Script training, evaluasi, audit, dan visualisasi
+├── configs/                   Konfigurasi data, model, training, dan registry
+├── models/                    Arsitektur student dan bobot yang disediakan
+├── artifacts/                 Manifest, fingerprint dan ringkasan hasil
+├── data/                      Dataset/sesi lokal; tidak semuanya masuk Git
+├── runs/                      Keluaran run; sebagian besar data mentah lokal
+├── prompt/                    Prompt kerja audit, proposal, laporan, dan OP3
+├── memory/                    Catatan keputusan dan progres berdasarkan tanggal
+├── docs/                      Protokol, keputusan, tutorial, dan audit
+├── datasheet/                 Deskripsi dan metadata dataset/model
+├── requirements/              Spesifikasi dependency
+├── tests/                     Tes otomatis script umum
+└── environment/, log/         Info environment dan log lokal/generated
+```
+
+Folder bertanggal mempertahankan susunan penelitian semula agar tautan dan provenance tidak rusak. `data/`, sebagian `runs/`, checkpoint privat, log mentah, dan environment lokal tidak selalu tersedia di checkout GitHub. [Indeks dokumentasi](dokumentasi/INDEKS.md) dan [indeks tabel](analisis_performa/INDEKS.md) menjelaskan isi lebih rinci.
+
+## Status runtime OP3 — 3 November 2026
 
 Sebanyak **24/24 slot runtime OP3** terukur: empat model × kondisi idle/berjalan × tiga ulangan. Seluruh slot aktif lulus cek otomatis log dan telemetry. Pengguna [menerima hasil untuk analisis deskriptif](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md) dengan keterbatasan yang dicatat; kesetaraan kondisi fisik tidak terbukti penuh dan persetujuan pembimbing belum dicatat.
 
@@ -11,9 +63,9 @@ Sebanyak **24/24 slot runtime OP3** terukur: empat model × kondisi idle/berjala
 - [Akurasi TEST empat metode](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/TABEL_AKURASI_TEST.md) · [Waktu training dan pengujian T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) · [Draf pembahasan](dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/DRAF_PEMBAHASAN.md)
 - [Prompt Bab IV–V V3](prompt/PROMPT_BAB_IV_V_HASIL_KD_OP3_V3_2026-11-03.md) · [Inventaris prompt](prompt/inventaris_tabel_dan_prompt.md) · [Indeks hasil](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md)
 
-T34 adalah evaluasi eksploratif Hybrid dan supervised pada 260 frame OP3 yang ditinjau dengan bantuan pra-label; 50 frame parsial dipisahkan. T38 empat model pada frame yang sama belum dijalankan. Cakupan keluaran live bukan precision, recall atau mAP. Hasil TEST resmi pernah digunakan pada tahap sebelumnya; generalisasi lintas adegan dan provenance training teacher memiliki batas yang dijelaskan dalam laporan audit.
+T34 adalah evaluasi eksploratif Hybrid dan supervised pada 260 frame OP3 yang ditinjau dengan bantuan pra-label; 50 frame parsial dipisahkan. [T38 empat model](analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) pada frame yang sama selesai pada 5 November 2026 dan bersifat retrospektif. Cakupan keluaran live bukan precision, recall atau mAP. Hasil TEST resmi pernah digunakan pada tahap sebelumnya; generalisasi lintas adegan dan provenance training teacher memiliki batas yang dijelaskan dalam laporan audit.
 
-Data mentah kamera, video, label, telemetry dan log robot tetap berada pada mesin OP3 sesuai aturan proyek. Ringkasan publik dapat merujuk artefak lokal tersebut; ketersediaan file mentah tidak dapat diasumsikan dari checkout GitHub. Saat melanjutkan eksperimen robot, periksa ulang kondisi fisik dan perangkat; pengguna meminta konfirmasi sebelum setiap ulangan berjalan serta menjaga arah kepala ID 19/20.
+Data mentah kamera, label, telemetry dan log robot tetap berada pada mesin OP3; beberapa screenshot dan satu cuplikan video telah dipublikasikan sebagai contoh terkurasi. Ringkasan publik dapat merujuk artefak lokal tersebut; ketersediaan file mentah tidak dapat diasumsikan dari checkout GitHub. Saat melanjutkan eksperimen robot, periksa ulang kondisi fisik dan perangkat; pengguna meminta konfirmasi sebelum setiap ulangan berjalan serta menjaga arah kepala ID 19/20.
 
 ## Catatan historis tahap Pure KD
 

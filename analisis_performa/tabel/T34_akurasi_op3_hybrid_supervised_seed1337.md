@@ -1,5 +1,7 @@
 # T34. Akurasi kamera OP3 eksploratif: KD Hybrid full vs Supervised seed 1337
 
+> Pembaruan 5 November 2026: [T38](T38_akurasi_op3_empat_model_260.md) menambahkan teacher dan KD murni pada frame yang sama; hasil Hybrid dan Supervised sama persis dengan T34.
+
 Kedua checkpoint dievaluasi pada **260 gambar identik** (200 gambar berobjek dan 60 tanpa target), dengan 400 kotak ground truth yang telah ditinjau `bhre`: 160 ball, 80 gawang, dan 160 robot. Pengaturan: `imgsz=640`, CPU FP32, NMS IoU 0,7; AP memakai confidence floor 0,001, sedangkan P/R/F1 memakai confidence **>0,25** dan pencocokan satu-ke-satu IoU **≥0,5**. Ini evaluasi *offline*, terpisah dari throughput live OP3.
 
 | Model | mAP50 | mAP50–95 | P makro | R makro | F1 makro | F1 mikro | TP / FP / FN | Frame negatif dengan FP |

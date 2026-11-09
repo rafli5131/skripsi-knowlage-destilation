@@ -1,5 +1,7 @@
 # Audit of 24 OP3 runs
 
+> Update, 5 November 2026: [T38 for four models on 260 OP3 frames](../../../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) is complete; the T38 status in this 3 November audit is historical.
+
 **Decision:** the user accepted these runs for descriptive runtime analysis with the documented limitations. Supervisor approval has not been recorded; physical equivalence is not established. See [the user's decision](KEPUTUSAN_PENGGUNA.md).
 
 All 24 active runs passed the checks performed on raw logs and available sampled telemetry. The audit verifies checkpoint hashes, inference settings, measurement windows, timestamps and reported metrics; all 12 walking runs have start/stop acknowledgments. This does not establish full physical equivalence across sessions.

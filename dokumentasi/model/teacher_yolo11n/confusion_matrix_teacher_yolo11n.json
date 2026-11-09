@@ -1,0 +1,40 @@
+{
+  "model": "teacher_fp32",
+  "frames_main": 260,
+  "frames_targets": 200,
+  "frames_negative": 60,
+  "ground_truth_boxes": 400,
+  "confidence_strictly_above": 0.25,
+  "matching_iou_minimum": 0.5,
+  "nms_iou": 0.7,
+  "axes": "baris label acuan; kolom prediksi",
+  "class_matching": "sekelas berdasar urutan confidence seperti T38, lalu lintas kelas IoU terbesar pada sisa",
+  "matrix_counts": [
+    [
+      160,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      6,
+      1,
+      73
+    ],
+    [
+      0,
+      0,
+      156,
+      4
+    ],
+    [
+      0,
+      2,
+      25,
+      null
+    ]
+  ],
+  "bottom_right": "tidak terdefinisi; bukan true negative",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+}

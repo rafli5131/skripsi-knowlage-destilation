@@ -447,5 +447,27 @@
       "decision_file": "dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md",
       "persetujuan_pembimbing": "belum_dicatat"
     }
+  },
+  "op3_t38_offline_2026_11_05": {
+    "status": "exploratory_retrospective",
+    "primary_frames": 260,
+    "primary_target_frames": 200,
+    "negative_frames": 60,
+    "partial_frames_separate": 50,
+    "input_manifest": "runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/input_manifest.json",
+    "results": "runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/results.json",
+    "artifacts": {
+      "analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md": "d1c5fd480e56982f8c1e3ada585683f8d9cecfe4ebb81d0cd9b903fad64ece1f",
+      "analisis_performa/tabel/T38_akurasi_op3_empat_model_260.csv": "7f8178aca613c07eb8ed21fb96a02bd34168f52bb64ef6163004e51ffcedab7b",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md": "a6b828b4c7282cb9d6ec73a6011852cdc902f27519dd2c89c6cd6600f0487462",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_EN.md": "5bd6d8a89a66ee0c647eedcf57683c781ba6069efb5fd4077a030c515406e56a",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/DRAF_PEMBAHASAN_T38.md": "68cb8e4763554473af93a5db8fb1598c7034776dc455afe1f54c3020d953596d",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/audit_t38.json": "f7d6ffbcb28da1ddae4e9387d653dad348602459e59dadc476cba89086daf997",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/grafik_t38_empat_model_en_hd.png": "6dc5ee5dc719b94a75a22922ca0ec4b152b5e9fa74f382146bfa5339392bcbd3",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/grafik_t38_empat_model_id_hd.png": "c568b68514bd28cf6ed9d5e253bd7c4c7a6d3f3a74f2c3d979a08faf0fbd4f18",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/grafik_t38_kelas_negatif_en_hd.png": "4611aee2aa787caab6174335d777367902a2520db16dc85d73f3bca4e5d0b0c0",
+      "dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/grafik_t38_kelas_negatif_id_hd.png": "b71d671ad53d6bfbef22017acac7b491354fa89599ae7f1be31864d9448053dd"
+    },
+    "notes": "Offline; input dan hasil Hybrid/Supervised identik dengan T34; batas dan hash checkpoint dicatat pada audit_t38.json."
   }
 }

@@ -1,0 +1,40 @@
+{
+  "model": "hybrid_full_seed1337",
+  "frames_main": 260,
+  "frames_targets": 200,
+  "frames_negative": 60,
+  "ground_truth_boxes": 400,
+  "confidence_strictly_above": 0.25,
+  "matching_iou_minimum": 0.5,
+  "nms_iou": 0.7,
+  "axes": "baris label acuan; kolom prediksi",
+  "class_matching": "sekelas berdasar urutan confidence seperti T38, lalu lintas kelas IoU terbesar pada sisa",
+  "matrix_counts": [
+    [
+      159,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      2,
+      0,
+      78
+    ],
+    [
+      0,
+      0,
+      105,
+      55
+    ],
+    [
+      4,
+      1,
+      152,
+      null
+    ]
+  ],
+  "bottom_right": "tidak terdefinisi; bukan true negative",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363"
+}

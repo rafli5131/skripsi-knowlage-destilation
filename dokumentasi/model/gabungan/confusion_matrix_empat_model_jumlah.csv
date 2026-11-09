@@ -1,0 +1,17 @@
+model,label_acuan\prediksi,ball,gawang,robot,terlewat_FN
+teacher_fp32,ball,160,0,0,0
+teacher_fp32,gawang,0,6,1,73
+teacher_fp32,robot,0,0,156,4
+teacher_fp32,latar_FP,0,2,25,
+hybrid_full_seed1337,ball,159,0,0,1
+hybrid_full_seed1337,gawang,0,2,0,78
+hybrid_full_seed1337,robot,0,0,105,55
+hybrid_full_seed1337,latar_FP,4,1,152,
+supervised_seed1337,ball,159,0,0,1
+supervised_seed1337,gawang,0,21,0,59
+supervised_seed1337,robot,0,0,74,86
+supervised_seed1337,latar_FP,1,0,130,
+kd_seed42,ball,159,0,0,1
+kd_seed42,gawang,0,12,0,68
+kd_seed42,robot,0,0,44,116
+kd_seed42,latar_FP,10,0,116,

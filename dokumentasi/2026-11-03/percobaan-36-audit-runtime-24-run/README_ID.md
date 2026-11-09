@@ -1,5 +1,7 @@
 # Audit 24 run dan bahan hasil skripsi
 
+> Pembaruan 5 November 2026: [T38 empat model pada 260 frame OP3](../../../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) telah selesai; status T38 dalam audit 3 November ini adalah catatan historis.
+
 Audit baca-saja menemukan **24 dari 24 run aktif lolos pemeriksaan log dan sampel telemetry**. Hash checkpoint, parameter inferensi, label kondisi, warm-up, jendela 60 detik, urutan waktu, frame error, timestamp kamera, FPS dan rerata latensi cocok dengan sumber yang diperiksa. Dua belas run berjalan memiliki guard dan ack mulai/berhenti; pemeriksaan ulang telemetry menggunakan fungsi laporan yang sudah ada. Ini adalah hasil pemeriksaan bukti yang tersedia, **bukan pengesahan penuh kesetaraan protokol**.
 
 ## Hasil dan berkas

@@ -1,5 +1,7 @@
 # Tabel lab/server T01–T14, T28–T33, dan T39–T41
 
+> Pembaruan 9 November 2026: [T42 pada server2](../tabel/T42_ablasi_teacher_yolo11s_val.md) selesai; [audit teacher](../../audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 lama di bawah adalah catatan historis.
+
 Pembaruan: 24 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Analisis ini memuat eksperimen utama **KD murni teacher-only**, **KD Hybrid full**, serta ablasi **Hybrid v2 S2** yang dibandingkan pada VAL. Split TEST sudah pernah dipakai dalam eksperimen teacher dan KD murni; hasil Hybrid adalah perbandingan lanjutan pada split yang sama. Semua hasil akurasi ini berlaku pada level gambar dan bukan ukuran akurasi kamera ROBOTIS OP3.
 
 ## Lokasi berkas
@@ -82,7 +84,7 @@ Checkpoint Hybrid [`best.pt` seed 1337](../../runs/kd_hybrid/yolo11_tiny_hybrid_
 
 ## Data yang masih dibutuhkan
 
-Diagnosis pada [T39](../tabel/T39_diagnosis_objektif_kd.md) dan [laporan 23 Oktober](HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md) memakai VAL saja untuk menilai ambang, TP/FP, bentuk DFL, dan komponen loss yang tersedia. Penyaringan `hybrid_v2` S1–S8 selesai pada [T40](../tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md), dan konfirmasi S2 tiga seed selesai pada [T41](../tabel/T41_konfirmasi_hybrid_v2_val.md). S2 tidak lolos aturan penggantian; Hybrid full tetap model KD utama. Feature loss historis tidak dapat dihitung dari checkpoint student lama yang tidak menyimpan proyektor terlatih. T42 sedang dilanjutkan setelah teacher YOLO11n selesai; tabel akhir belum ada. T43 tidak diperlukan karena model utama tidak diganti.
+Diagnosis pada [T39](../tabel/T39_diagnosis_objektif_kd.md) dan [laporan 23 Oktober](HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md) memakai VAL saja untuk menilai ambang, TP/FP, bentuk DFL, dan komponen loss yang tersedia. Penyaringan `hybrid_v2` S1–S8 selesai pada [T40](../tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md), dan konfirmasi S2 tiga seed selesai pada [T41](../tabel/T41_konfirmasi_hybrid_v2_val.md). S2 tidak lolos aturan penggantian; Hybrid full tetap model KD utama. Feature loss historis tidak dapat dihitung dari checkpoint student lama yang tidak menyimpan proyektor terlatih. [T42 server2](../tabel/T42_ablasi_teacher_yolo11s_val.md) telah selesai pada VAL; [audit teacher](../../audit_teacher_t42_LTOW7Xw5.json) dilaporkan lulus. T43 tidak diperlukan karena model utama tidak diganti.
 
 - T04/T28–T29 memuat VAL; T30–T31 memuat TEST lanjutan; T32 memuat benchmark L40; T33 memuat pelatihan Hybrid tiga seed. Split TEST sudah pernah dipakai sebelumnya, sehingga klaim dibatasi pada evaluasi gambar dataset resmi.
 - T12/T13 menyapu satu checkpoint per varian agar biaya diagnosis terukur. Sapuan seluruh seed memerlukan inferensi dan benchmark tambahan; hasil perwakilan tidak menunjukkan variasi antar-seed pada setiap titik grid.

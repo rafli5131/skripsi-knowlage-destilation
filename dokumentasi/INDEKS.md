@@ -1,16 +1,24 @@
 # Indeks dokumentasi percobaan OP3
 
+> [Dokumentasi per model dan confusion matrix](model/README.md): Teacher, KD Hybrid, Supervised, KD Murni, serta perbandingan gabungan.
+
+> **9 November 2026:** [Grafik tambahan empat model, screenshot, dan cuplikan video](2026-11-09/visualisasi-tambahan-empat-model/README.md) sudah tersedia di repositori.
+
+> [Audit integritas hasil](2026-11-09/AUDIT_INTEGRITAS_HASIL.md) merangkum pemeriksaan dan batas sumber yang tersedia.
+
+> **5 November 2026:** [Percobaan 37 — T38 empat model pada 260 frame OP3](2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md) selesai secara offline; hasil bersifat eksploratif dan retrospektif.
+
 > Pembaruan terbaru: [audit 24 run, T36/T37 dan batas protokol](2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md); seluruh cek log/telemetry lulus, pengesahan kesetaraan fisik masih terbuka. Status terdahulu di bawah merupakan snapshot historis.
 
-> Status terbaru: [pengganti KD murni berjalan ulangan 3](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/README_ID.md) lulus cek otomatis; 24/24 slot aktif lulus cek otomatis. Audit protokol akhir masih terbuka; status di bawah adalah snapshot sebelumnya.
+> Arsip progres: [pengganti KD murni berjalan ulangan 3](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/README_ID.md) lulus cek otomatis; 24/24 slot aktif lulus cek otomatis. Audit protokol akhir masih terbuka; status di bawah adalah snapshot sebelumnya.
 
-> Status terbaru: [KD murni berjalan tiga ulangan](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/README_ID.md) selesai; 24/24 slot terukur, 23 lulus cek otomatis dan satu perlu audit. Status sebelumnya di bawah merupakan snapshot historis.
+> Arsip progres: [KD murni berjalan tiga ulangan](2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/README_ID.md) selesai; 24/24 slot terukur, 23 lulus cek otomatis dan satu perlu audit. Status sebelumnya di bawah merupakan snapshot historis.
 
-> Status terbaru: [KD murni idle tiga ulangan](2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/README_ID.md) selesai; kampanye 21/24 slot. Status sebelumnya di bawah adalah snapshot historis.
+> Arsip progres: [KD murni idle tiga ulangan](2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/README_ID.md) selesai; kampanye 21/24 slot. Status sebelumnya di bawah adalah snapshot historis.
 
-> Status terbaru: [Supervised berjalan tiga ulangan](2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/README_ID.md) selesai; kampanye 18/24 slot. Status di bawah merupakan snapshot sebelumnya.
+> Arsip progres: [Supervised berjalan tiga ulangan](2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/README_ID.md) selesai; kampanye 18/24 slot. Status di bawah merupakan snapshot sebelumnya.
 
-> Status terbaru: [Supervised idle tiga ulangan](2026-11-03/percobaan-32-supervised-idle-3-ulangan/README_ID.md) selesai; kampanye 15/24 slot. Pernyataan 12/24 di bawah adalah snapshot sebelumnya.
+> Arsip progres: [Supervised idle tiga ulangan](2026-11-03/percobaan-32-supervised-idle-3-ulangan/README_ID.md) selesai; kampanye 15/24 slot. Pernyataan 12/24 di bawah adalah snapshot sebelumnya.
 
 Laporan per percobaan ditautkan di bawah. Isi folder berbeda-beda: ringkasan metode dan hasil, grafik, contoh gambar/audit visual, serta tautan ke CSV dan metadata JSON jika artefaknya tersedia. Data mentah berada di `runs/`; tabel evaluasi model dan analisis performa berada di [`../analisis_performa/INDEKS.md`](../analisis_performa/INDEKS.md).
 
