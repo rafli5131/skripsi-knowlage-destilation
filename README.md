@@ -4,6 +4,19 @@ Repositori penelitian ini membandingkan model deteksi objek untuk kamera robot h
 
 Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakukan saat robot **diam** dan **berjalan**. Percobaan tracking yang pernah dilakukan adalah tambahan, bukan tujuan wajib penelitian.
 
+## Langkah berikutnya
+
+Status per 11 November 2026. Jalankan berurutan; setiap prompt berdiri sendiri dan dibaca agen di komputer OP3 setelah `git pull --ff-only origin main`.
+
+| No | Tempat | Pekerjaan | Prompt atau rujukan |
+|---|---|---|---|
+| 1 | Robot OP3 | Membuat grafik garis runtime (latensi, FPS, CPU, RSS) per model dan gabungan dari 24 log run aktif. Hanya membaca berkas; tanpa kamera, servo, atau detektor. | [`PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md`](prompt/PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) |
+| 2 | Robot OP3 | Evaluasi set frame kamera baru (usulan T43): pembekuan rencana, perekaman, label buta 20%, pra-label dari model yang tidak dievaluasi, tinjauan semua frame, lalu evaluasi empat checkpoint. Bhre mengatur objek dan kondisi robot. Salin dulu bobot teacher YOLO11s T42 ke `models_local/` di robot dengan verifikasi hash; bila tidak tersedia, prompt memakai gabungan prediksi empat model. | [`PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md`](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) · keputusan D19 |
+| 3 | Laptop | Menyusun slide presentasi progres untuk pembimbing dari hasil terbaru. | [Log progres 11 November](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [catatan keputusan](docs/DECISIONS.md) |
+| 4 | Laptop | Menulis naskah tujuh bab (D17), termasuk tabel uji kotak hitam KF/KNF di bab pengujian. | [Folder draf](laporan/draf-bab-iv-v/README.md) |
+
+Frame, label, dan log robot tetap lokal kecuali Bhre mengizinkan unggahan. Bobot teacher tidak masuk repo.
+
 ## Mulai dari sini
 
 | Ingin melihat | Buka |
