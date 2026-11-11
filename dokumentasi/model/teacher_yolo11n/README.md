@@ -48,3 +48,11 @@ Sumber dan rincian pengukuran waktu: [T35](../../../analisis_performa/tabel/T35_
 [Ringkasan ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_teacher_id.png) · [Overview EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_teacher_en.png) · [Garis waktu ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_teacher_id.png) · [Timeline EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_teacher_en.png) · [Screenshot contoh](../../2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png)
 
 Screenshot berasal dari frame sesudah jendela pengukuran berjalan, bukan bukti gerak dari gambar tunggal. Video, bila ada, adalah sesi Supervised lain dengan kondisi fisik `unknown`. [Indeks empat model](../README.md).
+
+## Grafik garis kontinu (11 November 2026)
+
+- **Akurasi per epoch:** tidak tersedia. Kurva training teacher utama tidak ada di repo karena teacher dilatih di repositori lain pada server lama.
+- **Precision, recall, dan F1 terhadap ambang confidence (VAL):** [Indonesia](garis_sapuan_confidence_val_teacher_yolo11n_id.png) · [English](garis_sapuan_confidence_val_teacher_yolo11n_en.png).
+- **Runtime OP3 (latensi, FPS, CPU, RSS) per waktu:** belum dibuat. Dari 24 berkas `jendela_runtime.csv` run aktif T36, 15 berkas sesi 3 November belum ada di repo dan masih di robot. Grafik dibuat dengan `--bagian runtime` setelah berkas itu tersedia.
+
+Definisi: kurva per epoch memakai VAL (1.213 gambar) yang tercatat saat training, bukan TEST dan bukan confidence 0,25. Precision dan recall per epoch adalah keluaran validator Ultralytics 8.4.130 pada confidence yang memaksimalkan F1 rata-rata; F1 dihitung sebagai rerata harmonik keduanya. Sapuan confidence berasal dari T11 (VAL, IoU pencocokan 0,5). Hash sumber dan keluaran ada di [manifest](../manifest_grafik_garis_akurasi.json); generator `scripts/build_grafik_garis_model_20261111.py`.

@@ -1,0 +1,56 @@
+{
+  "generated_utc": "2026-11-11T13:00:12.912535+00:00",
+  "part": "akurasi",
+  "generator": "scripts/build_grafik_garis_model_20261111.py",
+  "generator_sha256": "dc9739e855b9e082aec06bc600571458be720f8230c54f6d415863501bef0c5a",
+  "bin_seconds": 2.0,
+  "notes": [
+    "Akurasi per epoch berasal dari VAL saat training; bukan TEST dan bukan confidence 0,25.",
+    "Precision/recall per epoch = keluaran validator Ultralytics 8.4.130 pada confidence yang memaksimalkan F1 rata-rata; F1 dihitung sebagai rerata harmonik keduanya.",
+    "Kurva training teacher utama tidak tersedia di repo.",
+    "T11 tidak memuat Hybrid seed 1337; grafik sapuan Hybrid memakai seed 42.",
+    "Runtime: bin 2 detik dari jendela 60 detik; rerata latensi dan jumlah frame per run dicocokkan ulang dengan T36."
+  ],
+  "sources_sha256": {
+    "runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
+    "runs/supervised/yolo11_tiny_supervised_seed1337/results.csv": "538cff72caa54f961d38e1f4cf04989b4939ecee4c07cea88b8aa3f818eb3d85",
+    "runs/supervised/yolo11_tiny_supervised_seed2025/results.csv": "2d8b446bee3fd5265959d0ac3ac4ce9369fbcdaafd6f2fde9733ab18e645fa37",
+    "runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/results.csv": "cd221ba5b9a06d292e0c7768fe0f704b6a0448ff63c533e953a9088ad602d6ba",
+    "runs/kd/yolo11_tiny_pure_kd_v4_seed1337/results.csv": "bdf60d9893992bd2b7682950e3a8c4176b0fdc17659deb41a49842fa4910fb0e",
+    "runs/kd/yolo11_tiny_pure_kd_v4_seed2025/results.csv": "1b2997051ba1d3f7c40ba6880f0653d5667ecc21e96286f0336219b20151dc43",
+    "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/results.csv": "db72b17a7de0a10f16248259790ac76a874e6d617b45b33bdc01c82e3933d5ff",
+    "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/results.csv": "392319ad53aba67b8a10abac8fdb6b2a4ba736f9f858e9c1ba34f232049b1ecc",
+    "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/results.csv": "a2d90baf565214edcb1e62a45cb44f69040b2467ae4d05510ac0aadb72e766bd",
+    "analisis_performa/tabel/T11_sapuan_confidence.csv": "f05866d8a52137659e399f70a5c828dc754693ab058067becf1d4f0d08503363"
+  },
+  "outputs_sha256": {
+    "dokumentasi/model/supervised/garis_akurasi_val_per_epoch_supervised_id.png": "b648fe6eec0695ed6e3e7a5ba3c1fd601998dc9b355994c20ee5fe40b85967e4",
+    "dokumentasi/model/kd_murni/garis_akurasi_val_per_epoch_kd_murni_id.png": "74a8752447af9074f070f38d708ccf75242ef874228ac961ba97dd7a59ce20a1",
+    "dokumentasi/model/kd_hybrid/garis_akurasi_val_per_epoch_kd_hybrid_id.png": "eaac1a439f3072394f114f44b71c0231ef2beecc85de021198f9d30d6f901a1b",
+    "dokumentasi/model/teacher_yolo11n/garis_sapuan_confidence_val_teacher_yolo11n_id.png": "b4b7d3ba91bf02fd7ad55fccdd0566b392fa4ac2e418e557fa065252fb9f9e95",
+    "dokumentasi/model/kd_hybrid/garis_sapuan_confidence_val_kd_hybrid_id.png": "dedf37e478e1553cf8fb814b75e7fc0f43c811a51db6285eb1fccf57537899f5",
+    "dokumentasi/model/supervised/garis_sapuan_confidence_val_supervised_id.png": "2b14446e52dfad627fdf98af63fb13a3c044d29569cf498752b46781a6cd0dde",
+    "dokumentasi/model/kd_murni/garis_sapuan_confidence_val_kd_murni_id.png": "7aabd0f088d4482457bd8e9bec1cd2b67435cb967cfb29b24f3b59ec9b4e871c",
+    "dokumentasi/model/gabungan/garis_akurasi_val_per_epoch_tiga_metode_id.png": "2221d47ec33a4cbb54aa32dc74412220a57bf4d320ff1244ae8397836dfffe9e",
+    "dokumentasi/model/gabungan/garis_sapuan_confidence_val_empat_model_id.png": "70b7e0e478b090c1e6a099d13b9800ed168f79fdd8c6f880f331c42d7ac9a603",
+    "dokumentasi/model/gabungan/data_garis_akurasi_val_per_epoch_tiga_metode.csv": "ae6cbe805a6bd209420b4ea23cf294681c2980e6a5af4cd297427349bb370fa8",
+    "dokumentasi/model/supervised/garis_akurasi_val_per_epoch_supervised_en.png": "5563127972820b33fc1263a1ae90ffae0dd0e47b5b7eef83e4264c4086c5c10c",
+    "dokumentasi/model/kd_murni/garis_akurasi_val_per_epoch_kd_murni_en.png": "81bcd15d511f8c6c1723fdc0cafec054f09454df0cc7a58da452a770e9cb37b3",
+    "dokumentasi/model/kd_hybrid/garis_akurasi_val_per_epoch_kd_hybrid_en.png": "606c4dfc2925a485184938cf63ab6b86d6f7725fa289f72e584e0f8456aa9012",
+    "dokumentasi/model/teacher_yolo11n/garis_sapuan_confidence_val_teacher_yolo11n_en.png": "eab2dcb68c4b7190bc99a8b99682481dd89afdf6eed09dfb58f8f5caa497718e",
+    "dokumentasi/model/kd_hybrid/garis_sapuan_confidence_val_kd_hybrid_en.png": "761b5556a3be9de35fccc3c91eb525000dc57082c3830f16f833c206daacd182",
+    "dokumentasi/model/supervised/garis_sapuan_confidence_val_supervised_en.png": "2467c7679624ab726f389dec812704dd456c6596a383fee5cc41e137cd2ceaa3",
+    "dokumentasi/model/kd_murni/garis_sapuan_confidence_val_kd_murni_en.png": "0384a9f9e6d50ea7c21827085d3c0e01e47d954b951df8e51ea1aee85ac737ac",
+    "dokumentasi/model/gabungan/garis_akurasi_val_per_epoch_tiga_metode_en.png": "6df9479291a6d471a71ba8182f8de0674874064c502f919fc43abb3dfae3841c",
+    "dokumentasi/model/gabungan/garis_sapuan_confidence_val_empat_model_en.png": "00404d4d59639f229e0bd4a33f87e89cb4442f1660d6c38d2c2dbd99058d7a3e"
+  },
+  "tambahan": {
+    "generator": "scripts/build_kurva_map50_95_val_20261111.py",
+    "generator_sha256": "ef3d813f7f4866405b342398e4435d459abf3d67d9d3cf61ef4b97ad6df77afd",
+    "keterangan": "Grafik tunggal mAP50-95 VAL per epoch tiga metode (rerata 3 seed, pita min-maks); sumber results.csv yang sama.",
+    "outputs_sha256": {
+      "dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png": "c1cec85f555930dff35fb7c096a143452e8fde2616d8eb68a8a19cb443d9d6ae",
+      "dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_en.png": "d48047e300a684f3c1387e518f9c08d8a00dc2f7c96fba1b8b793cfe1b9196e8"
+    }
+  }
+}

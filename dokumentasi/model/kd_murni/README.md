@@ -54,3 +54,11 @@ Sumber dan rincian pengukuran waktu: [T35](../../../analisis_performa/tabel/T35_
 [Ringkasan ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_kd42_id.png) · [Overview EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_kd42_en.png) · [Garis waktu ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_kd42_id.png) · [Timeline EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_kd42_en.png) · [Screenshot contoh](../../2026-11-09/visualisasi-tambahan-empat-model/media/kd_murni_berjalan_u3_sesudah.png)
 
 Screenshot berasal dari frame sesudah jendela pengukuran berjalan, bukan bukti gerak dari gambar tunggal. Video, bila ada, adalah sesi Supervised lain dengan kondisi fisik `unknown`. [Indeks empat model](../README.md).
+
+## Grafik garis kontinu (11 November 2026)
+
+- **Akurasi VAL per epoch** (mAP50, mAP50–95, precision, recall, F1; tiga seed, seed 42 yang dipakai di robot ditebalkan): [Indonesia](garis_akurasi_val_per_epoch_kd_murni_id.png) · [English](garis_akurasi_val_per_epoch_kd_murni_en.png). Bukti pendukung rumusan masalah 2 dan 3 dari sisi pelatihan.
+- **Precision, recall, dan F1 terhadap ambang confidence (VAL):** [Indonesia](garis_sapuan_confidence_val_kd_murni_id.png) · [English](garis_sapuan_confidence_val_kd_murni_en.png).
+- **Runtime OP3 (latensi, FPS, CPU, RSS) per waktu:** belum dibuat. Dari 24 berkas `jendela_runtime.csv` run aktif T36, 15 berkas sesi 3 November belum ada di repo dan masih di robot. Grafik dibuat dengan `--bagian runtime` setelah berkas itu tersedia.
+
+Definisi: kurva per epoch memakai VAL (1.213 gambar) yang tercatat saat training, bukan TEST dan bukan confidence 0,25. Precision dan recall per epoch adalah keluaran validator Ultralytics 8.4.130 pada confidence yang memaksimalkan F1 rata-rata; F1 dihitung sebagai rerata harmonik keduanya. Sapuan confidence berasal dari T11 (VAL, IoU pencocokan 0,5). Hash sumber dan keluaran ada di [manifest](../manifest_grafik_garis_akurasi.json); generator `scripts/build_grafik_garis_model_20261111.py`.
