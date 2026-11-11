@@ -45,6 +45,7 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
+| [Grafik garis runtime OP3](PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) | Membuat grafik garis latensi, FPS, CPU, dan RSS per model dan gabungan dari 24 log run aktif T36 | Dijalankan di robot; hanya membaca log, tanpa perintah servo atau kamera. Grafik akurasi per epoch dan sapuan confidence sudah ada di [`dokumentasi/model/`](../dokumentasi/model/README.md). |
 | [Audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) | Audit rumusan masalah, data, hasil, bukti, sitasi dan status berkas | Prompt audit terbaru; tidak memerlukan robot aktif. |
 | [Perbaikan Bab I–III dan draf skripsi lengkap](PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md) | Revisi naskah awal dan lanjutkan bab yang diwajibkan pedoman | Prompt penulisan terbaru; validasi template dan sumber yang tersedia. |
 | [Tes robot setelah audit server 30 Oktober](PROMPT_TES_ROBOT_OP3_2026-10-30.md) | Panduan audit environment dan checkpoint, pemeriksaan fungsi, 24 run T36/T37, set akurasi baru, serta memory/log | Mempertahankan model D16; durasi node 75 detik dan jendela analisis 60 detik. Pengukuran OP3 setara sudah dimulai; lihat [percobaan 30](../dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md). |
