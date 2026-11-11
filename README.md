@@ -12,8 +12,11 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 | Confusion matrix empat model dalam satu gambar | [Jumlah kotak](dokumentasi/model/gabungan/confusion_matrix_empat_model_jumlah_id.png) · [Persentase](dokumentasi/model/gabungan/confusion_matrix_empat_model_persen_id.png) · [Cara membaca](dokumentasi/model/gabungan/README.md) |
 | Grafik akurasi, runtime dan training | [Indeks 30 grafik HD: Indonesia dan Inggris](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) |
 | Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
+| Grafik garis akurasi per epoch dan sapuan confidence | [Per model dan gabungan](dokumentasi/model/README.md) · [Kurva mAP50–95 VAL tiga metode](dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png) |
+| Keputusan dan progres terbaru | [Log 11 November 2026](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D19](docs/DECISIONS.md) |
 | Draf laporan Bab IV–V | [Folder draf dan arsip](laporan/draf-bab-iv-v/README.md) · [Draf terpadu terkini](laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) |
 | Tabel lengkap untuk penelitian | [Indeks tabel](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md) |
+| Prompt untuk robot | [Grafik garis runtime](prompt/PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) · [Evaluasi set frame baru](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) |
 | Prompt audit dan penyusunan skripsi | [Audit celah](prompt/PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) · [Perbaikan Bab I–III dan draf lengkap](prompt/PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md) · [Semua prompt](prompt/inventaris_tabel_dan_prompt.md) |
 
 ## Model yang dibandingkan
@@ -78,11 +81,11 @@ Terdapat **24 run aktif**: empat model × dua kondisi × tiga ulangan. Angka ber
 | Supervised | 73,12 | 12,14 | 70,80 | 12,64 |
 | KD Murni | 74,09 | 12,07 | 72,65 | 12,21 |
 
-CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; RSS bukan total RAM robot. FPS efektif tidak dihitung dengan membalik nilai latensi. Pengukuran digunakan sebagai analisis deskriptif dengan batas yang dijelaskan dalam audit.
+CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; RSS bukan total RAM robot. Proses detektor memakai sekitar 1300% satu CPU logis pada keempat model, sehingga persentase CPU tidak membedakan efisiensi antarmodel. Tiga student berarsitektur identik; selisih latensi di antara mereka mencerminkan hari dan urutan run (blok 2–3 November), bukan efek metode. Grafik garis runtime per waktu sedang disiapkan. FPS efektif tidak dihitung dengan membalik nilai latensi. Pengukuran digunakan sebagai analisis deskriptif dengan batas yang dijelaskan dalam audit.
 
 ### 4. Ablasi tambahan dan waktu training
 
-[T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) membandingkan dua teacher yang dilatih ulang dan enam student pada **VAL**. Hasilnya tidak mengganti teacher utama atau checkpoint OP3. [Audit teacher di server](audit_teacher_t42_LTOW7Xw5.json) mencatat pemeriksaan yang dilakukan.
+[T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) membandingkan dua teacher yang dilatih ulang dan enam student pada **VAL**. Teacher YOLO11n dan YOLO11s mencapai mAP50–95 0,7760 dan 0,7843, sedangkan student masing-masing 0,7482 ± 0,0003 dan 0,7473 ± 0,0003; teacher yang lebih besar tidak menaikkan student. Hasilnya tidak mengganti teacher utama atau checkpoint OP3. [Audit teacher di server](audit_teacher_t42_LTOW7Xw5.json) mencatat pemeriksaan yang dilakukan.
 
 [T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) memisahkan durasi training, durasi satu sesi TEST multi-model, dan benchmark inferensi. Durasi sesi TEST bukan waktu per checkpoint; benchmark server L40 bukan FPS robot OP3.
 

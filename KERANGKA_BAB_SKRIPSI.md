@@ -1,3 +1,5 @@
+> **Historis.** Kerangka ini berasal dari tahap Pure KD dan memuat pertanyaan penelitian lama. Sejak 11 November 2026 naskah memakai struktur tujuh bab (D17 di [`docs/DECISIONS.md`](docs/DECISIONS.md)) dan lima rumusan masalah di [`docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md`](docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md); model KD utama adalah Hybrid full.
+
 # Kerangka Bab Skripsi
 
 **Judul kerja:** *Kompresi Model YOLO untuk Deteksi Objek Advance Vision Menggunakan Pure Teacher-Only Knowledge Distillation*  

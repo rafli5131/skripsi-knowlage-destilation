@@ -1,3 +1,5 @@
+> **Historis.** Draf ini berasal dari tahap Pure KD dan belum mencerminkan Hybrid full sebagai model utama, uji OP3, maupun struktur tujuh bab (D17). Jangan dipakai sebagai abstrak akhir tanpa ditulis ulang.
+
 # Draf Abstrak Skripsi
 
 **Judul kerja:** *Kompresi Model YOLO untuk Deteksi Objek Advance Vision Menggunakan Pure Teacher-Only Knowledge Distillation*

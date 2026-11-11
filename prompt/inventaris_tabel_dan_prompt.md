@@ -2,6 +2,8 @@
 
 > Bahan hasil terbaru: [draf terpadu Bab IV–V](../laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) dan [arsip draf](../laporan/draf-bab-iv-v/README.md). Penomoran akhir mengikuti pedoman kampus.
 
+> Prompt terbaru untuk robot (11 November 2026): [grafik garis runtime OP3](PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md), lalu [evaluasi set frame baru](PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md).
+
 > Prompt terbaru: [audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) dan [perbaikan Bab I–III serta penyelesaian draf](PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md).
 
 > Pembaruan 9 November 2026: [T42 server2](../analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai untuk dua teacher dan enam student; status T42 sebelumnya di bawah adalah historis. Lihat [audit teacher](../audit_teacher_t42_LTOW7Xw5.json).
@@ -45,6 +47,7 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
+| [Evaluasi set frame OP3 baru](PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) | Rekam, pra-label terkendali, tinjau, audit label buta 20%, dan evaluasi empat checkpoint beku pada set frame baru (usulan T43) | Dasar D19; dijalankan di robot setelah prompt grafik runtime; frame dan label tetap lokal kecuali diizinkan. |
 | [Grafik garis runtime OP3](PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) | Membuat grafik garis latensi, FPS, CPU, dan RSS per model dan gabungan dari 24 log run aktif T36 | Dijalankan di robot; hanya membaca log, tanpa perintah servo atau kamera. Grafik akurasi per epoch dan sapuan confidence sudah ada di [`dokumentasi/model/`](../dokumentasi/model/README.md). |
 | [Audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) | Audit rumusan masalah, data, hasil, bukti, sitasi dan status berkas | Prompt audit terbaru; tidak memerlukan robot aktif. |
 | [Perbaikan Bab I–III dan draf skripsi lengkap](PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md) | Revisi naskah awal dan lanjutkan bab yang diwajibkan pedoman | Prompt penulisan terbaru; validasi template dan sumber yang tersedia. |

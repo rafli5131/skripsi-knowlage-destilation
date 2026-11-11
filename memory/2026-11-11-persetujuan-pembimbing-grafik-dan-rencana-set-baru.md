@@ -1,0 +1,9 @@
+# Memory: persetujuan pembimbing, grafik garis, dan rencana set frame baru, 11 November 2026
+
+Bhre melaporkan persetujuan pembimbing (D18): protokol uji live dan hasil runtime T36/T37 sebagai analisis deskriptif; daftar KF-01 sampai KF-05 dan KNF-01 dengan pengujian kotak hitam retrospektif dari log 24 run; Hybrid full seed 1337 sebagai model KD utama; serta nilai D3, D4, D6, D7, D8 (T38 = 260 frame) dan D11 (F1 utama = rerata harmonik precision dan recall makro). Tanggal dan bentuk persetujuan belum dicatat. Naskah memakai struktur tujuh bab (D17).
+
+Grafik garis akurasi per epoch dan sapuan confidence sudah ada di `dokumentasi/model/`. Kurva per epoch adalah VAL saat training; precision dan recall per epoch berasal dari validator Ultralytics pada confidence yang memaksimalkan F1, bukan 0,25. Teacher utama tidak punya kurva per epoch di repo, dan sapuan Hybrid memakai seed 42 karena T11 tidak memuat seed 1337. Grafik runtime menunggu 15 `jendela_runtime.csv` sesi 3 November yang hanya ada di robot; prosedurnya di `prompt/PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md`.
+
+Set frame OP3 baru (D19, usulan T43) boleh memakai pra-label dari model yang tidak dievaluasi (utama teacher YOLO11s T42, cadangan gabungan empat model), dengan tinjauan semua frame dan audit label buta 20%; set dilaporkan terpisah dari T38. Bobot teacher T42 bersifat privat: salin ke `models_local/` di robot dengan verifikasi hash, jangan di-commit. Prosedur: `prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md`.
+
+Interpretasi yang perlu dijaga: CPU proses detektor sekitar 1300% satu CPU logis pada semua model sehingga persentase CPU tidak membedakan efisiensi; latensi tiga student berarsitektur identik berbeda karena hari dan urutan run, bukan karena metode; recall gawang T38 rendah pada semua model.
