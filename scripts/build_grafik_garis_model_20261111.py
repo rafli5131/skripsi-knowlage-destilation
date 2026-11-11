@@ -109,7 +109,7 @@ def write_csv(rows: list[dict], name: str, folder: str) -> None:
     if path.exists():
         raise FileExistsError(f"Tidak menimpa berkas yang sudah ada: {path}")
     with path.open("x", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     OUTPUTS.append(path.relative_to(ROOT).as_posix())

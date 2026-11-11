@@ -2,14 +2,15 @@
   "generated_utc": "2026-11-11T13:00:12.912535+00:00",
   "part": "akurasi",
   "generator": "scripts/build_grafik_garis_model_20261111.py",
-  "generator_sha256": "dc9739e855b9e082aec06bc600571458be720f8230c54f6d415863501bef0c5a",
+  "generator_sha256": "09cbe1217ced5a84ee1ead4d4358ed80da5bb5328481bead8750c8c5f7639a4b",
   "bin_seconds": 2.0,
   "notes": [
     "Akurasi per epoch berasal dari VAL saat training; bukan TEST dan bukan confidence 0,25.",
     "Precision/recall per epoch = keluaran validator Ultralytics 8.4.130 pada confidence yang memaksimalkan F1 rata-rata; F1 dihitung sebagai rerata harmonik keduanya.",
     "Kurva training teacher utama tidak tersedia di repo.",
     "T11 tidak memuat Hybrid seed 1337; grafik sapuan Hybrid memakai seed 42.",
-    "Runtime: bin 2 detik dari jendela 60 detik; rerata latensi dan jumlah frame per run dicocokkan ulang dengan T36."
+    "Runtime: bin 2 detik dari jendela 60 detik; rerata latensi dan jumlah frame per run dicocokkan ulang dengan T36.",
+    "Hash CSV data dihitung setelah normalisasi akhir baris LF sesuai .gitattributes; generator diperbarui menulis LF."
   ],
   "sources_sha256": {
     "runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414",
@@ -33,7 +34,7 @@
     "dokumentasi/model/kd_murni/garis_sapuan_confidence_val_kd_murni_id.png": "7aabd0f088d4482457bd8e9bec1cd2b67435cb967cfb29b24f3b59ec9b4e871c",
     "dokumentasi/model/gabungan/garis_akurasi_val_per_epoch_tiga_metode_id.png": "2221d47ec33a4cbb54aa32dc74412220a57bf4d320ff1244ae8397836dfffe9e",
     "dokumentasi/model/gabungan/garis_sapuan_confidence_val_empat_model_id.png": "70b7e0e478b090c1e6a099d13b9800ed168f79fdd8c6f880f331c42d7ac9a603",
-    "dokumentasi/model/gabungan/data_garis_akurasi_val_per_epoch_tiga_metode.csv": "ae6cbe805a6bd209420b4ea23cf294681c2980e6a5af4cd297427349bb370fa8",
+    "dokumentasi/model/gabungan/data_garis_akurasi_val_per_epoch_tiga_metode.csv": "67e1388bf4666531ffb89bbb36f0ba4b05f2b2e9142b5c17dd3cdbe1ec7634cd",
     "dokumentasi/model/supervised/garis_akurasi_val_per_epoch_supervised_en.png": "5563127972820b33fc1263a1ae90ffae0dd0e47b5b7eef83e4264c4086c5c10c",
     "dokumentasi/model/kd_murni/garis_akurasi_val_per_epoch_kd_murni_en.png": "81bcd15d511f8c6c1723fdc0cafec054f09454df0cc7a58da452a770e9cb37b3",
     "dokumentasi/model/kd_hybrid/garis_akurasi_val_per_epoch_kd_hybrid_en.png": "606c4dfc2925a485184938cf63ab6b86d6f7725fa289f72e584e0f8456aa9012",
