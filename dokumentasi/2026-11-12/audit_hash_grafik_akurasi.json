@@ -1,0 +1,308 @@
+{
+  "date": "2026-11-12",
+  "scope": "Audit hash 18 PNG historis, data dan reproduksi; manifest 11 November dipertahankan",
+  "historical_manifest": "dokumentasi/model/manifest_grafik_garis_akurasi.json",
+  "historical_manifest_sha256": "8da9833480703b2e2041a87b20b9e8c1bcde60ce1ff2d81ce051b5e8c3488965",
+  "source_hash_matches": 10,
+  "source_hash_total": 10,
+  "combined_csv_rows_verified": 1500,
+  "combined_csv_mismatches": 0,
+  "png_count": 18,
+  "png_manifest_mismatch_count": 18,
+  "png_matches_original_commit": 18,
+  "regenerated_environment": {
+    "matplotlib": "3.6.3",
+    "same_pixel_count_rgb": 0,
+    "note": "Reproduksi offline sementara; perbedaan piksel dan hash belum membuktikan penyebab perbedaan asli."
+  },
+  "images": [
+    {
+      "file": "dokumentasi/model/supervised/garis_akurasi_val_per_epoch_supervised_id.png",
+      "manifest_sha256": "b648fe6eec0695ed6e3e7a5ba3c1fd601998dc9b355994c20ee5fe40b85967e4",
+      "git_file_sha256": "7b892b71099f796aec12bdb72c25f3137a18d28a020c4eb7e062ba90157f8214",
+      "recreated_sha256": "5dfa514cc15665e69702ec567d6bc7d6e97cdb5541b308adcf0fac8a415f757e",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "7b892b71099f796aec12bdb72c25f3137a18d28a020c4eb7e062ba90157f8214"
+    },
+    {
+      "file": "dokumentasi/model/kd_murni/garis_akurasi_val_per_epoch_kd_murni_id.png",
+      "manifest_sha256": "74a8752447af9074f070f38d708ccf75242ef874228ac961ba97dd7a59ce20a1",
+      "git_file_sha256": "75ea46d783a122de626de1ad037455ef6c978a1fabfee0a022edcb2be111a786",
+      "recreated_sha256": "967194eec0ee140f7954a6aeddbcba93e2cdc07f256201bc22fd67805b8d1c5e",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "75ea46d783a122de626de1ad037455ef6c978a1fabfee0a022edcb2be111a786"
+    },
+    {
+      "file": "dokumentasi/model/kd_hybrid/garis_akurasi_val_per_epoch_kd_hybrid_id.png",
+      "manifest_sha256": "eaac1a439f3072394f114f44b71c0231ef2beecc85de021198f9d30d6f901a1b",
+      "git_file_sha256": "0744790e432e27d49db8cf275cc04f8fbb20a03f29d7d74a741191beb6490a09",
+      "recreated_sha256": "37d536cb717c813e19e48eb6897faef0d323bbc13da6339fb4dd9de9a3e6f6d8",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "0744790e432e27d49db8cf275cc04f8fbb20a03f29d7d74a741191beb6490a09"
+    },
+    {
+      "file": "dokumentasi/model/teacher_yolo11n/garis_sapuan_confidence_val_teacher_yolo11n_id.png",
+      "manifest_sha256": "b4b7d3ba91bf02fd7ad55fccdd0566b392fa4ac2e418e557fa065252fb9f9e95",
+      "git_file_sha256": "5602e0ab244929dfa012ea2da4140ee76e422ba77a9f443626c6aa80d17f78cf",
+      "recreated_sha256": "a18990bea267ffa587bcead9ad9029678d6fcb6b9e2bd2f13cff712a30acfded",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "5602e0ab244929dfa012ea2da4140ee76e422ba77a9f443626c6aa80d17f78cf"
+    },
+    {
+      "file": "dokumentasi/model/kd_hybrid/garis_sapuan_confidence_val_kd_hybrid_id.png",
+      "manifest_sha256": "dedf37e478e1553cf8fb814b75e7fc0f43c811a51db6285eb1fccf57537899f5",
+      "git_file_sha256": "c73cbbaeeb46bc10637cfd47aa6ac45177a8c423fcaa3e9b87f2d23f98ca2d91",
+      "recreated_sha256": "2fa128863d9d442cdabf712e81c72b9b0984c5059b8193b15355081ce76c31bc",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "c73cbbaeeb46bc10637cfd47aa6ac45177a8c423fcaa3e9b87f2d23f98ca2d91"
+    },
+    {
+      "file": "dokumentasi/model/supervised/garis_sapuan_confidence_val_supervised_id.png",
+      "manifest_sha256": "2b14446e52dfad627fdf98af63fb13a3c044d29569cf498752b46781a6cd0dde",
+      "git_file_sha256": "152e8ab0d95e090cb920806606430721177aa15c2807b9bffa4b3c69ada09622",
+      "recreated_sha256": "12f25dc9b99345cb25d3d9e819c5d5fa6b175985391d2c2a1fcf102f4d01eb89",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "152e8ab0d95e090cb920806606430721177aa15c2807b9bffa4b3c69ada09622"
+    },
+    {
+      "file": "dokumentasi/model/kd_murni/garis_sapuan_confidence_val_kd_murni_id.png",
+      "manifest_sha256": "7aabd0f088d4482457bd8e9bec1cd2b67435cb967cfb29b24f3b59ec9b4e871c",
+      "git_file_sha256": "41f35477b4aa3bafea8fccacb0267b20b958cb31bf22c8b1af882018fc21c197",
+      "recreated_sha256": "f1553635999f06e34ec3d16fd84a95844bb8f0838aa722155eb0e98d5c93b7f3",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "41f35477b4aa3bafea8fccacb0267b20b958cb31bf22c8b1af882018fc21c197"
+    },
+    {
+      "file": "dokumentasi/model/gabungan/garis_akurasi_val_per_epoch_tiga_metode_id.png",
+      "manifest_sha256": "2221d47ec33a4cbb54aa32dc74412220a57bf4d320ff1244ae8397836dfffe9e",
+      "git_file_sha256": "a562b3ccfae785046a9ff2f3e258ba57ee3eb9acb0ea31c49940f1adf865be6e",
+      "recreated_sha256": "fa158f2b33378b18682039d6ea3ba648eaa85ce7d476c329a59641c95aacc5e5",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "a562b3ccfae785046a9ff2f3e258ba57ee3eb9acb0ea31c49940f1adf865be6e"
+    },
+    {
+      "file": "dokumentasi/model/gabungan/garis_sapuan_confidence_val_empat_model_id.png",
+      "manifest_sha256": "70b7e0e478b090c1e6a099d13b9800ed168f79fdd8c6f880f331c42d7ac9a603",
+      "git_file_sha256": "bd2a75431c29f90911db9dee7a4edb0838c036234d535d92633019a162754dbe",
+      "recreated_sha256": "dd35e4b2fb9a75b9be9cd3696426f07013e899398e31ebcc8b1ea1dd516052dc",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3200,
+        1240
+      ],
+      "dimensions_recreated": [
+        3200,
+        1240
+      ],
+      "sha256_commit_67ecf0c": "bd2a75431c29f90911db9dee7a4edb0838c036234d535d92633019a162754dbe"
+    },
+    {
+      "file": "dokumentasi/model/supervised/garis_akurasi_val_per_epoch_supervised_en.png",
+      "manifest_sha256": "5563127972820b33fc1263a1ae90ffae0dd0e47b5b7eef83e4264c4086c5c10c",
+      "git_file_sha256": "508a5ca5cdbdd83dd7ef37bd28c02ac1b5f15233fa06b4a100f2e7632dd354e3",
+      "recreated_sha256": "eceb751c308ced5ae7deba7ac602e74dd7e0b3bdca194f8483c75c454b2a30ff",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "508a5ca5cdbdd83dd7ef37bd28c02ac1b5f15233fa06b4a100f2e7632dd354e3"
+    },
+    {
+      "file": "dokumentasi/model/kd_murni/garis_akurasi_val_per_epoch_kd_murni_en.png",
+      "manifest_sha256": "81bcd15d511f8c6c1723fdc0cafec054f09454df0cc7a58da452a770e9cb37b3",
+      "git_file_sha256": "67259f0d40db482c098127f0b2e47d9e849772a5b491d76fc2d8a68cc3b1216d",
+      "recreated_sha256": "38de4463f76cd92fbc80a20f280f12d275804ce0d7cb52479da48085baf1f1d5",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "67259f0d40db482c098127f0b2e47d9e849772a5b491d76fc2d8a68cc3b1216d"
+    },
+    {
+      "file": "dokumentasi/model/kd_hybrid/garis_akurasi_val_per_epoch_kd_hybrid_en.png",
+      "manifest_sha256": "606c4dfc2925a485184938cf63ab6b86d6f7725fa289f72e584e0f8456aa9012",
+      "git_file_sha256": "c79bba6ca42f4d6fc6b31ed37a656998736f04d4678b7fd5e78ad883f63a8eef",
+      "recreated_sha256": "21685e6f8dd9014a5493e2e255f29540d085bc2589af9d34ad81efa913b8e891",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "c79bba6ca42f4d6fc6b31ed37a656998736f04d4678b7fd5e78ad883f63a8eef"
+    },
+    {
+      "file": "dokumentasi/model/teacher_yolo11n/garis_sapuan_confidence_val_teacher_yolo11n_en.png",
+      "manifest_sha256": "eab2dcb68c4b7190bc99a8b99682481dd89afdf6eed09dfb58f8f5caa497718e",
+      "git_file_sha256": "dd18313e8b4c580629b375eb3739dc15191eb45847dc4335e948386a16b524da",
+      "recreated_sha256": "e1443b5a3f9103dbabb0e23eb4a323bfbd7aa86161e934065b8b4ab4d0758351",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "dd18313e8b4c580629b375eb3739dc15191eb45847dc4335e948386a16b524da"
+    },
+    {
+      "file": "dokumentasi/model/kd_hybrid/garis_sapuan_confidence_val_kd_hybrid_en.png",
+      "manifest_sha256": "761b5556a3be9de35fccc3c91eb525000dc57082c3830f16f833c206daacd182",
+      "git_file_sha256": "738ea610d42aa917d31232817bad8cff44d96002ba080bd1ce415d63e53646f3",
+      "recreated_sha256": "fc1cee17f6a9d233ea736c68e9dfd3495edd6cee99841c2e8de1bd3019acec86",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "738ea610d42aa917d31232817bad8cff44d96002ba080bd1ce415d63e53646f3"
+    },
+    {
+      "file": "dokumentasi/model/supervised/garis_sapuan_confidence_val_supervised_en.png",
+      "manifest_sha256": "2467c7679624ab726f389dec812704dd456c6596a383fee5cc41e137cd2ceaa3",
+      "git_file_sha256": "4b098001c95726760b57c2d67ce71fb3c54206a671c87ab1ac32c14629e1accd",
+      "recreated_sha256": "dab51de1cb1e0e0d3cbdcde1aa8a0fa25ca0980338eba82ad6c0042c52a67428",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "4b098001c95726760b57c2d67ce71fb3c54206a671c87ab1ac32c14629e1accd"
+    },
+    {
+      "file": "dokumentasi/model/kd_murni/garis_sapuan_confidence_val_kd_murni_en.png",
+      "manifest_sha256": "0384a9f9e6d50ea7c21827085d3c0e01e47d954b951df8e51ea1aee85ac737ac",
+      "git_file_sha256": "0e080a676f3f4dcd83b1cbc894ace66b50943766879debd574ad04d0333cb6a5",
+      "recreated_sha256": "9af6a87150851c0255cfce8f626d7af52922f6a67f33941395ad7c0387b04560",
+      "pixels_identical": false,
+      "dimensions_original": [
+        2200,
+        1320
+      ],
+      "dimensions_recreated": [
+        2200,
+        1320
+      ],
+      "sha256_commit_67ecf0c": "0e080a676f3f4dcd83b1cbc894ace66b50943766879debd574ad04d0333cb6a5"
+    },
+    {
+      "file": "dokumentasi/model/gabungan/garis_akurasi_val_per_epoch_tiga_metode_en.png",
+      "manifest_sha256": "6df9479291a6d471a71ba8182f8de0674874064c502f919fc43abb3dfae3841c",
+      "git_file_sha256": "3b35bdcdfc9563fbb55a6063285163879e70005235e776722af66ff61ab7d06b",
+      "recreated_sha256": "42e5bd24292766639fcab84dafe5f96d1c922b1bfbd957480e6a039edc191c36",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3000,
+        1720
+      ],
+      "dimensions_recreated": [
+        3000,
+        1720
+      ],
+      "sha256_commit_67ecf0c": "3b35bdcdfc9563fbb55a6063285163879e70005235e776722af66ff61ab7d06b"
+    },
+    {
+      "file": "dokumentasi/model/gabungan/garis_sapuan_confidence_val_empat_model_en.png",
+      "manifest_sha256": "00404d4d59639f229e0bd4a33f87e89cb4442f1660d6c38d2c2dbd99058d7a3e",
+      "git_file_sha256": "8cebec88187c9939aee433f30b6e4c078275a789244f4528a69c316290288ae5",
+      "recreated_sha256": "e54206d478553a7e4934a18607dd8e9fc0d698ba2fabb7ae13d280a271a8e51d",
+      "pixels_identical": false,
+      "dimensions_original": [
+        3200,
+        1240
+      ],
+      "dimensions_recreated": [
+        3200,
+        1240
+      ],
+      "sha256_commit_67ecf0c": "8cebec88187c9939aee433f30b6e4c078275a789244f4528a69c316290288ae5"
+    }
+  ]
+}

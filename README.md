@@ -4,18 +4,13 @@ Repositori penelitian ini membandingkan model deteksi objek untuk kamera robot h
 
 Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakukan saat robot **diam** dan **berjalan**. Percobaan tracking yang pernah dilakukan adalah tambahan, bukan tujuan wajib penelitian.
 
-## Langkah berikutnya
+## Progres dan langkah berikutnya
 
-Status per 11 November 2026. Jalankan berurutan; setiap prompt berdiri sendiri dan dibaca agen di komputer OP3 setelah `git pull --ff-only origin main`.
+Per 12 November 2026, grafik runtime dari 24 run dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah disusun. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah, dan penyebab selisih historis belum diketahui. Lihat [log progres](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
 
-| No | Tempat | Pekerjaan | Prompt atau rujukan |
-|---|---|---|---|
-| 1 | Robot OP3 | Membuat grafik garis runtime (latensi, FPS, CPU, RSS) per model dan gabungan dari 24 log run aktif. Hanya membaca berkas; tanpa kamera, servo, atau detektor. | [`PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md`](prompt/PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) |
-| 2 | Robot OP3 | Evaluasi set frame kamera baru (usulan T43): pembekuan rencana, perekaman, label buta 20%, pra-label dari model yang tidak dievaluasi, tinjauan semua frame, lalu evaluasi empat checkpoint. Bhre mengatur objek dan kondisi robot. Salin dulu bobot teacher YOLO11s T42 ke `models_local/` di robot dengan verifikasi hash; bila tidak tersedia, prompt memakai gabungan prediksi empat model. | [`PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md`](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) · keputusan D19 |
-| 3 | Laptop | Menyusun slide presentasi progres untuk pembimbing dari hasil terbaru. | [Log progres 11 November](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [catatan keputusan](docs/DECISIONS.md) |
-| 4 | Laptop | Menulis naskah tujuh bab (D17), termasuk tabel uji kotak hitam KF/KNF di bab pengujian. | [Folder draf](laporan/draf-bab-iv-v/README.md) |
-
-Frame, label, dan log robot tetap lokal kecuali Bhre mengizinkan unggahan. Bobot teacher tidak masuk repo.
+1. Periksa dan lengkapi sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, lalu konsultasikan draf dengan pembimbing.
+2. T43 adalah rencana evaluasi kamera tambahan; sepakati protokol terlebih dahulu jika akan dikerjakan. [Prompt T43](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) memerlukan peninjauan manusia dan pemisahan hasil dari T38. Pilihan cadangan pra-label gabungan memakai prediksi model yang dievaluasi sehingga tetap berpotensi menimbulkan bias.
+3. Siapkan slide progres dan cadangan data/checkpoint yang diperlukan. Frame, label dan log robot tetap lokal kecuali ada instruksi publikasi.
 
 ## Mulai dari sini
 
@@ -27,6 +22,9 @@ Frame, label, dan log robot tetap lokal kecuali Bhre mengizinkan unggahan. Bobot
 | Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
 | Grafik garis akurasi per epoch dan sapuan confidence | [Per model dan gabungan](dokumentasi/model/README.md) · [Kurva mAP50–95 VAL tiga metode](dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png) |
 | Keputusan dan progres terbaru | [Log 11 November 2026](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D19](docs/DECISIONS.md) |
+| Draf skripsi tujuh bab | [Buka indeks Bab 1–7](laporan/draf-7-bab/README.md) |
+| Grafik akurasi hasil reproduksi | [Grafik ID/EN dan manifest baru](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) · [Audit gambar historis](dokumentasi/2026-11-12/AUDIT_GRAFIK_AKURASI.md) |
+| Grafik runtime per waktu | [Per model dan gabungan](dokumentasi/model/README.md) |
 | Draf laporan Bab IV–V | [Folder draf dan arsip](laporan/draf-bab-iv-v/README.md) · [Draf terpadu terkini](laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) |
 | Tabel lengkap untuk penelitian | [Indeks tabel](analisis_performa/INDEKS.md) · [Indeks dokumentasi](dokumentasi/INDEKS.md) |
 | Prompt untuk robot | [Grafik garis runtime](prompt/PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) · [Evaluasi set frame baru](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) |
@@ -94,7 +92,7 @@ Terdapat **24 run aktif**: empat model × dua kondisi × tiga ulangan. Angka ber
 | Supervised | 73,12 | 12,14 | 70,80 | 12,64 |
 | KD Murni | 74,09 | 12,07 | 72,65 | 12,21 |
 
-CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; RSS bukan total RAM robot. Proses detektor memakai sekitar 1300% satu CPU logis pada keempat model, sehingga persentase CPU tidak membedakan efisiensi antarmodel. Tiga student berarsitektur identik; selisih latensi di antara mereka mencerminkan hari dan urutan run (blok 2–3 November), bukan efek metode. Grafik garis runtime per waktu sedang disiapkan. FPS efektif tidak dihitung dengan membalik nilai latensi. Pengukuran digunakan sebagai analisis deskriptif dengan batas yang dijelaskan dalam audit.
+CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; RSS bukan total RAM robot. Proses detektor memakai sekitar 1300% satu CPU logis pada keempat model, sehingga persentase CPU tidak membedakan efisiensi antarmodel. Tiga student berarsitektur identik; hari dan urutan run (blok 2–3 November) dapat memengaruhi selisih latensi, sehingga penyebabnya tidak dapat dipastikan. Grafik garis runtime per waktu sudah tersedia. FPS efektif tidak dihitung dengan membalik nilai latensi. Pengukuran digunakan sebagai analisis deskriptif dengan batas yang dijelaskan dalam audit.
 
 ### 4. Ablasi tambahan dan waktu training
 
@@ -137,7 +135,7 @@ skripsi-knowlage-destilation/
 │   │   ├── supervised/        Hasil dan confusion matrix Supervised
 │   │   ├── kd_murni/          Hasil dan confusion matrix KD Murni
 │   │   └── gabungan/          Matriks empat model dan CSV gabungan
-│   ├── 2026-10-19 ... 11-09/  Dokumentasi percobaan berdasarkan tanggal
+│   ├── 2026-10-19 ... 11-12/  Dokumentasi percobaan berdasarkan tanggal
 │   └── INDEKS.md              Daftar percobaan dan laporan
 ├── analisis_performa/
 │   ├── tabel/                 Tabel hasil bernomor dan CSV sumber
@@ -150,7 +148,8 @@ skripsi-knowlage-destilation/
 ├── artifacts/                 Fingerprint, manifest dan ringkasan hasil
 ├── data/                      Dataset dan sesi lokal, sebagian tidak masuk Git
 ├── runs/                      Output eksperimen, sebagian hanya lokal
-├── laporan/draf-bab-iv-v/     Draf terpadu dan arsip hasil/pembahasan
+├── laporan/draf-7-bab/        Draf terkini Bab 1–7
+├── laporan/draf-bab-iv-v/     Draf terdahulu dan arsip hasil/pembahasan
 ├── prompt/                    Prompt audit, proposal, laporan dan robot
 ├── memory/                    Catatan progres dan keputusan bertanggal
 ├── docs/                      Protokol, keputusan, tutorial dan audit

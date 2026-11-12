@@ -1,0 +1,8 @@
+{
+  "input": "analisis_performa/tabel/T38_akurasi_op3_empat_model_260.csv",
+  "input_sha256": "7f8178aca613c07eb8ed21fb96a02bd34168f52bb64ef6163004e51ffcedab7b",
+  "output": "dokumentasi/2026-11-12/T38_F1_D11_turunan.csv",
+  "output_sha256": "9e5d82bd6eaf179975ae4d7cfc26cfdb8fe7f58858df99e1cbf381381dbb6487",
+  "method": "2*precision_macro*recall_macro/(precision_macro+recall_macro); F1 T38 mean per class dipertahankan",
+  "count": 4
+}

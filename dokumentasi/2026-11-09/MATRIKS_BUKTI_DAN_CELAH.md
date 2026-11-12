@@ -1,5 +1,7 @@
 # Matriks bukti rumusan masalah dan celah — 9 November 2026
 
+> **Pembaruan 12 November:** status lama di bawah adalah snapshot. D18 mencatat persetujuan pembimbing yang dilaporkan pengguna; tanggal dan bentuknya belum dicatat. Lihat [log terbaru](../2026-11-12/LOG_PROGRES_SKRIPSI.md) dan [draf tujuh bab](../../laporan/draf-7-bab/README.md).
+
 Matriks ini memisahkan data yang tersedia dari klaim yang dapat disimpulkan; bukan pengesahan pembimbing.
 
 | Tujuan | Sumber utama | Status dan batas |

@@ -21,7 +21,7 @@ dokumentasi/model/
 └── manifest_confusion_matrix.json    Hash input dan file keluaran generator
 ```
 
-Setiap folder model berisi `README.md`, matriks PNG versi jumlah dan persentase dalam bahasa Indonesia dan Inggris, CSV jumlah, CSV persentase, dan JSON metadata. Grafik runtime serta screenshot tetap berada di [folder visualisasi terkurasi](../2026-11-09/visualisasi-tambahan-empat-model/README.md) dan ditautkan dari setiap README agar berkas yang sama tidak digandakan. Contoh media kamera tidak menunjukkan akurasi keseluruhan.
+Setiap folder model berisi `README.md`, grafik garis runtime baru, matriks PNG versi jumlah dan persentase dalam bahasa Indonesia dan Inggris, CSV jumlah, CSV persentase, dan JSON metadata. Grafik runtime sebelumnya serta screenshot berada di [folder visualisasi terkurasi](../2026-11-09/visualisasi-tambahan-empat-model/README.md) dan ditautkan dari setiap README agar berkas yang sama tidak digandakan. Contoh media kamera tidak menunjukkan akurasi keseluruhan.
 
 ## Cara membaca confusion matrix
 
@@ -32,3 +32,5 @@ Pencocokan dilakukan dalam dua tahap: pertama mencocokkan kelas yang sama sesuai
 Pada versi persentase, tiga baris kelas dinormalisasi menurut jumlah kotak acuan kelas tersebut. Baris latar dan sel latar–latar dibiarkan `—` karena tidak ada populasi *true negative* yang terdefinisi untuk kotak deteksi. Gunakan matriks jumlah untuk melihat prediksi tanpa pasangan. Sumber foto, label dan prediksi mentah tetap lokal; [package generator](../../ros2_packages/op3_confusion_matrix/README.md) memakai fungsi bersama dari package evaluasi yang sudah ada.
 
 Frame T38 berasal dari satu rangkaian, dan label awal dibantu KD Murni sebelum ditinjau manusia. Hasil bersifat retrospektif dan tidak membuktikan generalisasi lintas adegan. Hasil TEST, runtime dan T42 VAL tersedia terpisah pada [indeks tabel](../../analisis_performa/INDEKS.md).
+
+Grafik garis runtime baru tersedia pada setiap folder model dan [gabungan](gabungan/README.md). Lihat juga [audit hash grafik akurasi](../2026-11-12/AUDIT_GRAFIK_AKURASI.md).

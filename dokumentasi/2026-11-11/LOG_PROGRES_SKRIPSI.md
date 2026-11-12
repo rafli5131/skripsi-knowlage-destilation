@@ -1,5 +1,7 @@
 # Log progres skripsi, 11 November 2026
 
+> **Pembaruan 12 November:** grafik runtime dan draf tujuh bab sudah tersedia; lihat [log terbaru](../2026-11-12/LOG_PROGRES_SKRIPSI.md). Status pekerjaan terbuka di bawah merupakan snapshot 11 November.
+
 ## Keputusan
 
 - **D17:** naskah memakai struktur tujuh bab implementatif-pengembangan. Pemetaan materi ada di [folder draf](../../laporan/draf-bab-iv-v/README.md).

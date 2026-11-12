@@ -1,5 +1,7 @@
 # Inventaris prompt dan tabel skripsi
 
+> **12 November 2026:** [Grafik runtime](../dokumentasi/model/README.md) dan [draf tujuh bab](../laporan/draf-7-bab/README.md) tersedia. Status sebelumnya di bawah adalah arsip; rencana T43 dibahas terpisah.
+
 > Bahan hasil terbaru: [draf terpadu Bab IV–V](../laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) dan [arsip draf](../laporan/draf-bab-iv-v/README.md). Penomoran akhir mengikuti pedoman kampus.
 
 > Prompt terbaru untuk robot (11 November 2026): [grafik garis runtime OP3](PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md), lalu [evaluasi set frame baru](PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md).

@@ -1,5 +1,7 @@
 # Indeks dokumentasi percobaan OP3
 
+> **12 November 2026:** [Log progres](2026-11-12/LOG_PROGRES_SKRIPSI.md) · [audit hash](2026-11-12/AUDIT_GRAFIK_AKURASI.md) · [grafik akurasi reproduksi](2026-11-12/grafik-akurasi-terverifikasi/README.md) · [grafik runtime](model/README.md) · [draf tujuh bab](../laporan/draf-7-bab/README.md).
+
 > **11 November 2026:** [Log progres](2026-11-11/LOG_PROGRES_SKRIPSI.md) · [grafik garis kontinu akurasi per model](model/README.md) · keputusan D17 (tujuh bab), D18 (persetujuan pembimbing), dan D19 (rencana set frame baru) di [`DECISIONS.md`](../docs/DECISIONS.md).
 
 > **9 November 2026:** [Draf Bab IV–V dan arsip](../laporan/draf-bab-iv-v/README.md) · [Log progres skripsi](2026-11-09/LOG_PROGRES_SKRIPSI.md) · [Matriks bukti dan celah](2026-11-09/MATRIKS_BUKTI_DAN_CELAH.md).

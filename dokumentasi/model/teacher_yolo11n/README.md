@@ -53,6 +53,8 @@ Screenshot berasal dari frame sesudah jendela pengukuran berjalan, bukan bukti g
 
 - **Akurasi per epoch:** tidak tersedia. Kurva training teacher utama tidak ada di repo karena teacher dilatih di repositori lain pada server lama.
 - **Precision, recall, dan F1 terhadap ambang confidence (VAL):** [Indonesia](garis_sapuan_confidence_val_teacher_yolo11n_id.png) · [English](garis_sapuan_confidence_val_teacher_yolo11n_en.png).
-- **Runtime OP3 (latensi, FPS, CPU, RSS) per waktu:** belum dibuat. Dari 24 berkas `jendela_runtime.csv` run aktif T36, 15 berkas sesi 3 November belum ada di repo dan masih di robot. Grafik dibuat dengan `--bagian runtime` setelah berkas itu tersedia.
+- **Runtime OP3 (latensi, FPS, CPU, RSS) per waktu:** [Indonesia](garis_runtime_op3_teacher_yolo11n_id.png) · [English](garis_runtime_op3_teacher_yolo11n_en.png) · [manifest](../manifest_grafik_garis_runtime.json). Per bin 2 detik; batas 8 FPS dievaluasi sebagai rerata run, bukan jaminan setiap bin.
 
 Definisi: kurva per epoch memakai VAL (1.213 gambar) yang tercatat saat training, bukan TEST dan bukan confidence 0,25. Precision dan recall per epoch adalah keluaran validator Ultralytics 8.4.130 pada confidence yang memaksimalkan F1 rata-rata; F1 dihitung sebagai rerata harmonik keduanya. Sapuan confidence berasal dari T11 (VAL, IoU pencocokan 0,5). Hash sumber dan keluaran ada di [manifest](../manifest_grafik_garis_akurasi.json); generator `scripts/build_grafik_garis_model_20261111.py`.
+
+> **Audit 12 November:** hash 18 grafik akurasi/sapuan pada manifest 11 November tidak cocok dengan file sejak commit asal. Sumber dan data gabungan cocok; lihat [audit serta hash aktual](../../2026-11-12/AUDIT_GRAFIK_AKURASI.md). Grafik runtime memiliki manifest terpisah.

@@ -1,5 +1,7 @@
 # Draf Bab IV–V dan arsip laporan
 
+> **Pembaruan 12 November:** gunakan [draf tujuh bab](../draf-7-bab/README.md) untuk struktur terbaru; folder ini dipertahankan sebagai bahan dan arsip.
+
 Folder ini menyediakan bahan penulisan hasil, pembahasan, kesimpulan, dan saran. Isinya masih **draf**, belum merupakan naskah akhir atau dokumen yang telah disetujui pembimbing.
 
 | Berkas | Isi dan cara memakai |
