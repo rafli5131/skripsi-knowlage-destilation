@@ -28,12 +28,12 @@ decisions:
     thesis_primary_variant_source: analisis_performa/tabel/T04_ablasi_kd_val.csv
     op3_candidate: hybrid_full_seed1337
     op3_candidate_selected_from: VAL before Hybrid TEST evaluation
-    thesis_variant_advisor_confirmation: approved_reported_by_user_2026-11-11 # tanggal dan bentuk persetujuan pembimbing belum dicatat
+    thesis_variant_advisor_confirmation: approved_orally_by_advisor_2026-11-12 # dilaporkan Bhre
   D3:
     status: DIKUNCI OLEH PENGGUNA
     value: 100
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18); tanggal dan bentuk persetujuan belum dicatat
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18)
     temporary_epochs: 100
     pure_weighted_pilot_epochs: 100 # matches the existing pure_v4 seed-42 budget
     hybrid_proposed_epochs: 100 # usulan agar sebanding dengan run lama
@@ -48,7 +48,7 @@ decisions:
       evaluation_nms_iou: 0.7
       evaluation_match_iou: 0.5
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18); nilai sudah dipakai pada TEST, T38, dan 24 run T36
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18); nilai sudah dipakai pada TEST, T38, dan 24 run T36
     temporary: fixed confidence 0.25 and VAL-selected best-F1 confidence
     op3_runtime_proposal:
       confidence: 0.25
@@ -69,7 +69,7 @@ decisions:
       torch_interop_threads: 2
       thread_sweep_executed: false
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18); nilai tetap yang dipakai percobaan 20 sampai 36
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18); nilai tetap yang dipakai percobaan 20 sampai 36
     temporary: choose one thread count from OP3 validation sweep
     op3_thread_sweep_proposal:
       candidate_threads: [2, 4, 6, 8]
@@ -84,14 +84,14 @@ decisions:
     status: DIKUNCI OLEH PENGGUNA
     value: 3 sessions x 60 seconds per model per condition, 30 warm-up frames
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18)
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18)
     temporary: 3 sessions x 60 seconds per variant per condition
   D8:
     status: DIKUNCI OLEH PENGGUNA
     value: T38 = 260 frames (200 with objects, 60 negative); 50 partial-goal frames analysed separately
     scope: ukuran set T38 saja; set frame baru (D19) menetapkan ukurannya sendiri sebelum perekaman
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18)
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18)
     temporary_labeled_op3_frames: null
   D9:
     status: BELUM DIKUNCI # BELUM DIKUNCI
@@ -106,7 +106,7 @@ decisions:
       primary_F1: harmonic_mean_of_macro_precision_and_macro_recall
       secondary_F1: arithmetic_mean_of_per_class_F1
     decided_at: 2026-11-11
-    basis: persetujuan pembimbing dilaporkan Bhre (D18); T38 lama melaporkan F1 per kelas dan harus diberi label definisi
+    basis: persetujuan lisan pembimbing 12 November 2026, dilaporkan Bhre (D18); T38 lama melaporkan F1 per kelas dan harus diberi label definisi
     proposed_primary_F1: harmonic_mean_of_macro_precision_and_macro_recall
     proposed_secondary_F1: arithmetic_mean_of_per_class_F1
     scope: T04 T05 T27; usulan penyeragaman metrik tanpa pemilihan model baru

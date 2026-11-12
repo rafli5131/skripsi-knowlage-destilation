@@ -49,6 +49,7 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
+| [Uji sensitivitas T43](PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) | Sapuan confidence pada 260 frame T43, peninjau kedua, dan konvensi kotak alternatif pada 52 frame sampel | Offline di robot, tanpa perintah gerak; butuh satu peninjau tambahan untuk bagian B. Dasar D21. |
 | [Evaluasi set frame OP3 baru](PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) | Rekam, pra-label terkendali, tinjau, audit label buta 20%, dan evaluasi empat checkpoint beku pada set frame baru (usulan T43) | Dasar D19; dijalankan di robot setelah prompt grafik runtime; frame dan label tetap lokal kecuali diizinkan. |
 | [Grafik garis runtime OP3](PROMPT_GRAFIK_RUNTIME_OP3_GARIS_KONTINU_2026-11-11.md) | Membuat grafik garis latensi, FPS, CPU, dan RSS per model dan gabungan dari 24 log run aktif T36 | Dijalankan di robot; hanya membaca log, tanpa perintah servo atau kamera. Grafik akurasi per epoch dan sapuan confidence sudah ada di [`dokumentasi/model/`](../dokumentasi/model/README.md). |
 | [Audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) | Audit rumusan masalah, data, hasil, bukti, sitasi dan status berkas | Prompt audit terbaru; tidak memerlukan robot aktif. |

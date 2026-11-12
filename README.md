@@ -6,11 +6,16 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 
 ## Progres dan langkah berikutnya
 
-Per 12 November 2026, grafik runtime dari 24 run dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah disusun. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah, dan penyebab selisih historis belum diketahui. Lihat [log progres](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
+Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md), dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah selesai. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah. Lihat [log progres](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md) dan [catatan keputusan](docs/DECISIONS.md) (D18 sampai D21).
 
-1. Periksa dan lengkapi sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, lalu konsultasikan draf dengan pembimbing.
-2. [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) telah mengevaluasi empat model pada 260 frame baru yang ditinjau Bhre. Audit confidence dan kotak gawang menjadi langkah berikutnya. Hasil dipisahkan dari T38 karena konvensi kotak berbeda; pra-label gabungan memakai empat model yang dievaluasi dan tetap berpotensi bias.
-3. Siapkan slide progres dan cadangan data/checkpoint yang diperlukan. Frame, label dan log robot tetap lokal kecuali ada instruksi publikasi.
+| No | Tempat | Pekerjaan | Prompt atau rujukan |
+|---|---|---|---|
+| 1 | Robot OP3 | Uji sensitivitas T43 secara offline: sapuan confidence pada 260 frame (bagian A), lalu peninjau kedua dan konvensi kotak alternatif pada 52 frame sampel (bagian B, butuh satu orang tambahan). Tanpa kamera, servo, atau gait. Jalankan setelah `git pull --ff-only origin main`. | [`PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md`](prompt/PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) · D21 |
+| 2 | Laptop | Menyusun slide presentasi progres untuk pembimbing. | [Log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md) |
+| 3 | Laptop | Mengembangkan naskah tujuh bab (D17): sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, tabel uji kotak hitam, dan pembahasan T43. | [Draf tujuh bab](laporan/draf-7-bab/README.md) |
+| 4 | Laptop | Menyimpan cadangan bobot teacher utama dan teacher T42 di luar robot dan server, dengan verifikasi hash. | [`model_registry.yaml`](configs/model_registry.yaml) · [T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) |
+
+T43 dipisahkan dari T38 karena konvensi kotak berbeda, dan pra-labelnya memakai gabungan keempat model yang dievaluasi. Frame, label, dan log robot tetap lokal kecuali ada instruksi publikasi. Bobot teacher tidak masuk repo.
 
 ## Mulai dari sini
 
