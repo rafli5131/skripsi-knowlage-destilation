@@ -1,0 +1,3 @@
+# Persiapan pose jalan T43
+
+Package ini memetakan hanya dua belas sendi kaki ke `walking_module`; kepala diperiksa tetap `none` dan telemetry-nya dipantau. Pemetaan dapat memicu transisi pose berjalan pada badan/kaki, sehingga operator wajib menopang robot dan menjaga area kosong. Package tidak memerintahkan gait `start` atau target kepala. Jika telemetry terputus atau kepala menyimpang lebih dari dua count, package mengirim `stop` dan melapor; perintah stop tidak dijamin menghentikan transisi `WalkingInitPose` yang sedang berjalan. Operator harus terus menopang robot. Status akhir hanya menyatakan pemetaan selesai; operator harus memverifikasi pose dan kestabilan sebelum gait.

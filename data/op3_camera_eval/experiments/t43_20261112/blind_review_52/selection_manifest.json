@@ -1,0 +1,375 @@
+{
+  "status": "selected_not_reviewed",
+  "seed": 20261112,
+  "sampling": "stratified; idle object 20, each walking object run 10, idle negative 6, walking negative 6; shuffled display order",
+  "capture_manifest_sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+  "selection_count": 52,
+  "prior_exposure": "operator saw Hybrid preview during setup; blind interface hides prediction boxes during annotation",
+  "goal_convention": "one box around the whole visible goal structure; clip to image boundary; do not label only one post if more frame is visible",
+  "samples": [
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000015.jpg",
+      "sha256": "828654526416cd5b530a6087cd7f5628c59b9e5772fbf5049ec117297ae19c98",
+      "blind_image": "frame_000001.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000003.jpg",
+      "sha256": "7ae2d99147b5cd188d1b4a0e58b3ceef94a22edaf67d43c5500ee3cc27e46b4f",
+      "blind_image": "frame_000002.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000025.jpg",
+      "sha256": "adbfa8714575b1a24fe5643bbc2abb6d8c9b9070fb7eddce3cae558a6cc6a0e5",
+      "blind_image": "frame_000003.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000061.jpg",
+      "sha256": "38a316f39bb5548102f1980280514f402ef62fa90feed84cfe77c4ad9102d3f2",
+      "blind_image": "frame_000004.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000002.jpg",
+      "sha256": "431d84b1ebb3fd9f612937f00c86585e87d502015dcaab88a8e8041639963738",
+      "blind_image": "frame_000005.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000065.jpg",
+      "sha256": "baad188da77958ab304fee743d1eade160c64c1e83626d288414343fbef17b56",
+      "blind_image": "frame_000006.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000070.jpg",
+      "sha256": "b1c9ed69c9dfc8d6ba2630d3b81c9be1aa480b8444f3a6c4e763245c0e8ab7d1",
+      "blind_image": "frame_000007.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000043.jpg",
+      "sha256": "f95cc660fb63135527291f5198f8bfa7f715d0943f12194f7fb8c14b47d69124",
+      "blind_image": "frame_000008.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000040.jpg",
+      "sha256": "e33fd4b58a58d4b126aa5d64d8e33b9c699c66db70b39effd6cb81c476aba1ac",
+      "blind_image": "frame_000009.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000068.jpg",
+      "sha256": "82230c4b8db71d40bc411633e61b5a1b53e0d8db007f8a744af1e739b47dfda3",
+      "blind_image": "frame_000010.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000011.jpg",
+      "sha256": "8b5bf111f080b61e9f223243ac333ade063808f5d8018b03d6a5846bd9eed5ff",
+      "blind_image": "frame_000011.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000022.jpg",
+      "sha256": "088a9f10da68c1ebb09ecdf98550a9fcc5e0e4f36f61d07cfc2b97179cbdbde7",
+      "blind_image": "frame_000012.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000028.jpg",
+      "sha256": "059d37271772de58be146e9011f92e300f429f8e52ec5f566831c4252695ad02",
+      "blind_image": "frame_000013.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000023.jpg",
+      "sha256": "58c9892e209c245202fbe46b11ed28054b5b2e1039eee0347bba1de620c92683",
+      "blind_image": "frame_000014.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000026.jpg",
+      "sha256": "93638ec803358eb97738dcc24de465b6e5a5a8fcab7473baa4527a94a03b560a",
+      "blind_image": "frame_000015.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000019.jpg",
+      "sha256": "c6a199e915a14db43520b06b3b2419d1b750a880e3c27323a6bb013f9a09878c",
+      "blind_image": "frame_000016.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000049.jpg",
+      "sha256": "3a80ec4a5d1c63d5606652d5d6a2271edcc31e74ff2186a48cad29d816665a28",
+      "blind_image": "frame_000017.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000008.jpg",
+      "sha256": "e0c78db82512d29d1e16ff81be66566d13bcb82924d7c771e0fb8ee6ed595605",
+      "blind_image": "frame_000018.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000014.jpg",
+      "sha256": "9e2ee04c4b051cadb5f7d80d062f7f3699fdaea8d9602b6512e70d9cd58938d8",
+      "blind_image": "frame_000019.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000078.jpg",
+      "sha256": "aed07f8cfaa3d178480eaf08a9165dd5187a06a3608a3c5e966374c43204aa55",
+      "blind_image": "frame_000020.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000022.jpg",
+      "sha256": "984ed0a6b85862c5506d1785c62d87c550fdefb222de3044084782b8b38e8768",
+      "blind_image": "frame_000021.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000016.jpg",
+      "sha256": "fd30f7a893dab6039946645037065ee5168f2c34d48728783a84b7af2902cc69",
+      "blind_image": "frame_000022.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000007.jpg",
+      "sha256": "37e31f38c7b49606a9d872dbf229bd5b87e10b375387277227736bc1da452e64",
+      "blind_image": "frame_000023.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000035.jpg",
+      "sha256": "1df9655c815d98343295f2b083c223d295a70bc3eb3f34f991567c7818736c55",
+      "blind_image": "frame_000024.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000011.jpg",
+      "sha256": "23f42e450454328336d4c5a603dc726d3dcda69f858c5ea1471c93f9cfb79818",
+      "blind_image": "frame_000025.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000032.jpg",
+      "sha256": "1a819390a413ff62794f8464075488be33956a5166d839167738903d677f8f5f",
+      "blind_image": "frame_000026.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000030.jpg",
+      "sha256": "c3b3f8dad2b822fec027a1dc21cb6d65091282168660ea728f0757c61069a28c",
+      "blind_image": "frame_000027.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000027.jpg",
+      "sha256": "d9c87de4dfc16fabf291a368e09fed6441ce4de378ae3aab9138d7ba60fc70dd",
+      "blind_image": "frame_000028.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000027.jpg",
+      "sha256": "5c7feaddf6aaf32c6ca7ca8937247854b0b7f0a592e47f8a7289ca19f1071751",
+      "blind_image": "frame_000029.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000094.jpg",
+      "sha256": "ff27b4919e06985057451f4ad7483c8f33f2957fd947afe2c1f7e3f89ec247e6",
+      "blind_image": "frame_000030.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000045.jpg",
+      "sha256": "f52c4c4055da554d07be13d96d421d57d67b2241f3de6da56b3c8e710d9930a2",
+      "blind_image": "frame_000031.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000039.jpg",
+      "sha256": "f8896e97908efc06a57d8b22f87bba4be6f79ebeda6ff61f113506151274316c",
+      "blind_image": "frame_000032.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000046.jpg",
+      "sha256": "d1d7fde3ca298e3134d8aaf403947031a211f4bd76c39cbda3187b986c414184",
+      "blind_image": "frame_000033.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000007.jpg",
+      "sha256": "7d7badfc1c8776a562bb53617609fd006068f233729db11a419795e35e6dc763",
+      "blind_image": "frame_000034.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000049.jpg",
+      "sha256": "102f40e78eb2125b6521b1d6b449633c453f4b8782aaedc8b7b04f90638e85a6",
+      "blind_image": "frame_000035.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000041.jpg",
+      "sha256": "2191a38f66a7c79eed4107b562b87def61d4d9f055355cf03c6c7cd64ac19b85",
+      "blind_image": "frame_000036.jpg"
+    },
+    {
+      "role": "jalan_berobjek_1",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000021.jpg",
+      "sha256": "96cdd55f35fc083b9bfac33ca320908414fa948651e229d890e47a261e72d0f5",
+      "blind_image": "frame_000037.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000013.jpg",
+      "sha256": "acf20a8cf33aca0a03154fc1cd3103e2fc7269e513720f2d87e039504f5c7f24",
+      "blind_image": "frame_000038.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000018.jpg",
+      "sha256": "5d989ec617ca24622ab1132e8571ca54fe3305700fe1d915cdbeaea077957485",
+      "blind_image": "frame_000039.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000004.jpg",
+      "sha256": "32b2be9c85a9fe2d08b73dc73163b3cbe6fc19c49a639469cc717a5605534c36",
+      "blind_image": "frame_000040.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000004.jpg",
+      "sha256": "6aeca91371dc85ab4a0ec1d5e884172e8d64011090fa99167fe4b9561da88234",
+      "blind_image": "frame_000041.jpg"
+    },
+    {
+      "role": "jalan_berobjek_2",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000046.jpg",
+      "sha256": "72fdd59ca58acfe188f1e983d1a447c50910a0248badc102f7b35cbdccc0d0c0",
+      "blind_image": "frame_000042.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000098.jpg",
+      "sha256": "507cf1cc2d8e72d5dc415013c0902a0f5858ae743dc0732a0e1af999f3860a61",
+      "blind_image": "frame_000043.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000027.jpg",
+      "sha256": "7dec8968c18939dbc446b185785093b7321f249edc16069216c7c6109c833da5",
+      "blind_image": "frame_000044.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000014.jpg",
+      "sha256": "7aa15bfae186a0435ff300270854a9c8767eeb5327470d7934b4f9a697a42573",
+      "blind_image": "frame_000045.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000056.jpg",
+      "sha256": "c3987dc5b62efbf6415cfbc354d21d0d154bac8ad8469decd19623866d5734df",
+      "blind_image": "frame_000046.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000003.jpg",
+      "sha256": "82a1e6991a51aa877db4a2db8962d697e46abcea1ef45a9eaa60b56d91536244",
+      "blind_image": "frame_000047.jpg"
+    },
+    {
+      "role": "diam_kosong",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000018.jpg",
+      "sha256": "cca9ad42722383cdff1d75d54619f28c3e3277e60450f434e12a48011182b6fe",
+      "blind_image": "frame_000048.jpg"
+    },
+    {
+      "role": "jalan_kosong",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000020.jpg",
+      "sha256": "8d03bcd5c85c662a67ef4afbedf9680b493ac0335eaa2e38056051d569d797de",
+      "blind_image": "frame_000049.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000012.jpg",
+      "sha256": "700bb9dca20ea3734a53a91d667af0ee208bfa8fac9dcadec8509a52ac5b5918",
+      "blind_image": "frame_000050.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000064.jpg",
+      "sha256": "4ca620e531298a89b2b640333401177c84d28e333bcc2cb316b6d4d0714105bb",
+      "blind_image": "frame_000051.jpg"
+    },
+    {
+      "role": "diam_berobjek",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000067.jpg",
+      "sha256": "1aa091aea547219b89e439859a8b00fca8b9d774c7b5f29bb1b8a3eed332d327",
+      "blind_image": "frame_000052.jpg"
+    }
+  ]
+}

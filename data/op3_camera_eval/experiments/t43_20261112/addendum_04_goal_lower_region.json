@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-12T09:29:58.107393+00:00",
+  "decision": "Operator explicitly selected the lower goal region as drawn in the current human labels, rather than the entire visible goal frame.",
+  "applies_to": "T43 labels; review current samples for consistency before use",
+  "timing": "Clarified after the 52 initial human annotations, before model prelabel or evaluation; selection made after seeing annotations.",
+  "limitation": "The upper cutoff of the lower-region box is not yet specified by a physical landmark; initial labels vary. The exact boundary and consequences for comparability with T38 require review.",
+  "supersedes": "goal_convention in blind_review_52/selection_manifest.json only; original manifest preserved",
+  "approved_by": "operator in conversation",
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+  "review_log_sha256_at_decision": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+}

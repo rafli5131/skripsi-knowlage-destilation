@@ -1,0 +1,3 @@
+# OP3 action walkready body-only
+
+Package baru menggunakan action page 9 `walkready` dari motion file robot, memeriksa checksum dan nama, memetakan hanya 18 sendi badan ke `action_module`, dan memakai `StartAction` dengan daftar sendi badan eksplisit. Walaupun page mengandung target kepala, ID 19/20 tidak masuk perintah dan modulnya harus tetap `none`. Preview dan telemetry kepala dipantau; jika terjadi gangguan atau pergeseran lebih dari dua count setelah action dikirim, package mengirim perintah brake pada action. Operator harus menopang robot dan memeriksa pose setelah selesai. Tidak mengirim start gait. Hasil dan sampel telemetry lokal berada di `runs/op3_t43_action_ready/`.

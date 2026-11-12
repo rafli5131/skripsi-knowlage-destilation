@@ -28,3 +28,12 @@ __pycache__/
 /runs/kd_teacher_ablation/**/weights/last.pt
 /.venv-train/
 /runs/kd_teacher_ablation/run_*.log
+
+# T43: frame, label, sampel review dan prediksi frame tetap lokal.
+/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/
+/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_reviewed/
+/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/
+/runs/op3_t43_evaluation/**/dataset/images/
+/runs/op3_t43_evaluation/**/dataset/labels/
+/runs/op3_t43_evaluation/**/per_frame_*.jsonl
+/dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/contoh_frame_label_manusia.png

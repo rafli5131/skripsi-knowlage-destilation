@@ -1,0 +1,7 @@
+# T43: pengambilan, tinjauan, dan evaluasi OP3 — 12 November 2026
+
+T43 selesai sebagai evaluasi offline eksploratif empat model pada 260 frame yang sama: masing-masing 100 frame berobjek dan 30 negatif dalam kondisi diam dan berjalan di tempat. `bhre` menyimpan semua label; 52 sampel ditinjau tanpa kotak prediksi lebih dulu. Pra-label menggunakan union empat model karena checkpoint teacher YOLO11s T42 tidak tersedia lokal. Operator melihat preview Hybrid dan menerima masukan saat anotasi; dua tinjauan oleh orang sama bukan audit antarpeninjau independen.
+
+Operator memilih label bagian bawah gawang parsial dan badan robot; batas atas gawang belum memiliki landmark tetap. Hasil tidak sebanding langsung dengan T38, dan frame berturut-turut dari satu setup bukan bukti generalisasi. mAP50–95 gabungan: teacher 0,7462, Hybrid 0,8275, supervised 0,7865, KD Murni 0,7074. F1 harmonik makro pada confidence >0,25: 0,6616 / 0,9950 / 0,9081 / 0,6667. Teacher dan KD Murni tidak menghasilkan prediksi gawang di atas confidence >0,25; audit confidence/kotak adalah langkah berikutnya. Jangan memilih ulang model menggunakan set ini.
+
+Rujukan: [tabel](../analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md), [dokumentasi dan grafik](../dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md), [log](../dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md). Frame, label, log dan prediksi per frame tetap lokal.

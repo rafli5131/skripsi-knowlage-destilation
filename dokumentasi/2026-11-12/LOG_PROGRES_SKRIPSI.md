@@ -15,3 +15,9 @@ Grafik: [teacher](../model/teacher_yolo11n/README.md), [Hybrid](../model/kd_hybr
 [Draf tujuh bab](../../laporan/draf-7-bab/README.md) memetakan hasil ke D17 dan menyertakan tabel fungsional retrospektif. [F1 utama T38](T38_F1_D11_turunan.csv) dihitung dari precision dan recall makro sumber; nilai historis rerata F1 kelas tetap ditampilkan terpisah. KF-03 hanya didukung keberadaan ID, belum merupakan bukti lulus kestabilan ID pada objek bergerak; tracking bukan tujuan wajib. Kriteria KNF-01 dipakai pada FPS rerata per run: minimum T36 9,6869 FPS.
 
 Draf masih memerlukan pengembangan pembahasan pustaka, verifikasi sitasi, penyesuaian format kampus dan tinjauan pembimbing. T43 masih rencana dan tidak dijalankan. Tidak ada kamera, servo, robot, training, atau evaluasi baru yang dijalankan untuk pekerjaan ini.
+
+## Evaluasi T43 — pembaruan setelah pengambilan
+
+T43 dilaksanakan setelah catatan sebelumnya: 260 frame (100 berobjek + 30 kosong untuk masing-masing kondisi diam dan berjalan di tempat), ditinjau `bhre`; 52 frame sampel dilabeli tanpa kotak prediksi sebelum pra-label. Seluruh 260 label dan log penyimpanannya lengkap. Pra-label merupakan gabungan empat model, operator telah melihat preview Hybrid, dan konvensi diklarifikasi setelah sampel awal. Batas atas kotak bagian bawah gawang belum ditentukan dengan landmark tetap.
+
+[Hasil empat model dan grafik](percobaan-39-evaluasi-t43/README_ID.md) serta [T43](../../analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md) bersifat eksploratif; semua frame bergawang parsial, dengan kotak bagian bawah gawang dan badan robot, berbeda dari T38. Evaluasi offline menggunakan confidence >0,25 untuk precision/recall/F1 dan floor 0,001 untuk AP. Pada ambang tetap teacher dan KD Murni memiliki 0/200 TP gawang; perlu audit sebaran confidence dan kotak. Tinjauan 52 frame oleh orang yang sama bukan bukti kesepakatan antarpeninjau. Data mentah dan log robot tetap lokal.

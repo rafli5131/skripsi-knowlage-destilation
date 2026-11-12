@@ -2,3 +2,6 @@
 *.pt binary
 *.png binary
 *.pdf binary
+# Preserve T43 generated CSV bytes for recorded SHA-256 provenance.
+/analisis_performa/tabel/T43_akurasi_op3_empat_model_260.csv -text whitespace=cr-at-eol
+/runs/op3_t43_evaluation/20261112_reviewed_260/summary.csv -text whitespace=cr-at-eol

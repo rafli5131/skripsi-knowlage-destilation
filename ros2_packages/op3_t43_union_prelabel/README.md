@@ -1,0 +1,5 @@
+# Pra-label union T43
+
+Package terpisah ini membuat pra-label dari gabungan empat model setelah 52 sampel audit buta selesai ditinjau. NMS lintas model dilakukan per kelas sesuai plan T43; label tetap harus ditinjau manusia. Package tidak membuka kamera, mengendalikan motor, atau mengubah package lama.
+
+Gunakan environment OP3 dan `PYTHONPATH=ros2_packages/op3_t43_union_prelabel`, lalu jalankan `python -m op3_t43_union_prelabel --session-dir <sesi> --plan <frozen_plan.json> --blind-completion <manifest-selesai.json>`. Manifest buta memuat `status: complete`, `frozen_plan_sha256`, serta daftar 52 `samples`; setiap sampel berisi `image`, `label`, `review_log` dengan `path` dan `sha256`. Skrip memeriksa hash sebelum menghasilkan label, menolak menimpa `labels_auto`, dan menyimpan semua kandidat serta hasil NMS. Konfirmasi kelengkapan review dan pemilihan sampel tetap harus diaudit terpisah; keberadaan file saja tidak membuktikan tinjauan yang benar. Union menggunakan model yang dievaluasi dan dapat memengaruhi label.

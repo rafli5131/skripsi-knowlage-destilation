@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-12T05:16:15.451386+00:00",
+  "decision": "Operator requested replacing the previous 100 idle-object frames with 100 newly captured idle-object frames and using a partially visible goal for both idle and walking conditions.",
+  "original_plan_sha256": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83",
+  "previous_addendum_sha256": "e52c2c24ea8c644fed0f7cfee7891d34a8bdaeb4f15cac049af7b15719da6c0b",
+  "replacement_policy": "Previous 21+79 images are archived in their existing session directories, excluded from active primary set once 100 retake frames are complete; no source deleted or overwritten.",
+  "goal_rule": "Partially visible goal is eligible in primary idle and walking object frames, as explicitly selected by operator; annotated visible region, flag partial. Full-goal-only interpretation is not applicable; describe prior plan change.",
+  "timing": "Amendment after initial idle session and operator request, before new capture and before walking capture. No reviewed-label metrics available.",
+  "review": "All new frames and negatives require human review; no automatic exclusions based on model predictions.",
+  "operator_authorization": "conversation"
+}

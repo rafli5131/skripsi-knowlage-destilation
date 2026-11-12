@@ -9,7 +9,7 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 Per 12 November 2026, grafik runtime dari 24 run dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah disusun. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah, dan penyebab selisih historis belum diketahui. Lihat [log progres](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
 
 1. Periksa dan lengkapi sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, lalu konsultasikan draf dengan pembimbing.
-2. T43 adalah rencana evaluasi kamera tambahan; sepakati protokol terlebih dahulu jika akan dikerjakan. [Prompt T43](prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md) memerlukan peninjauan manusia dan pemisahan hasil dari T38. Pilihan cadangan pra-label gabungan memakai prediksi model yang dievaluasi sehingga tetap berpotensi menimbulkan bias.
+2. [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) telah mengevaluasi empat model pada 260 frame baru yang ditinjau Bhre. Audit confidence dan kotak gawang menjadi langkah berikutnya. Hasil dipisahkan dari T38 karena konvensi kotak berbeda; pra-label gabungan memakai empat model yang dievaluasi dan tetap berpotensi bias.
 3. Siapkan slide progres dan cadangan data/checkpoint yang diperlukan. Frame, label dan log robot tetap lokal kecuali ada instruksi publikasi.
 
 ## Mulai dari sini
@@ -23,6 +23,7 @@ Per 12 November 2026, grafik runtime dari 24 run dan [draf tujuh bab](laporan/dr
 | Grafik garis akurasi per epoch dan sapuan confidence | [Per model dan gabungan](dokumentasi/model/README.md) · [Kurva mAP50–95 VAL tiga metode](dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png) |
 | Keputusan dan progres terbaru | [Log 11 November 2026](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D19](docs/DECISIONS.md) |
 | Draf skripsi tujuh bab | [Buka indeks Bab 1–7](laporan/draf-7-bab/README.md) |
+| Evaluasi tambahan kamera T43 | [Tabel dan batas interpretasi](analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md) · [Grafik dan confusion matrix](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) |
 | Grafik akurasi hasil reproduksi | [Grafik ID/EN dan manifest baru](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) · [Audit gambar historis](dokumentasi/2026-11-12/AUDIT_GRAFIK_AKURASI.md) |
 | Grafik runtime per waktu | [Per model dan gabungan](dokumentasi/model/README.md) |
 | Draf laporan Bab IV–V | [Folder draf dan arsip](laporan/draf-bab-iv-v/README.md) · [Draf terpadu terkini](laporan/draf-bab-iv-v/DRAF_TERPADU_T38_T42.md) |

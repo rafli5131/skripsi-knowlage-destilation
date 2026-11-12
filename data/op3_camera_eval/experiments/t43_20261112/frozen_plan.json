@@ -1,0 +1,88 @@
+{
+  "name": "T43 evaluasi kamera OP3 baru",
+  "created_at_utc": "2026-11-12T04:44:22.681393+00:00",
+  "status": "frozen_before_capture_pending_operator_start",
+  "checkpoints": {
+    "teacher_fp32": {
+      "path": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/best.pt",
+      "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+    },
+    "hybrid_full_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363"
+    },
+    "supervised_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041"
+    },
+    "kd_seed42": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    }
+  },
+  "camera": {
+    "topic": "/thesis/image_raw",
+    "device": "/dev/video0",
+    "resolution": [
+      640,
+      480
+    ],
+    "interval_seconds": 1.0
+  },
+  "targets": {
+    "idle": {
+      "berobjek": 100,
+      "negatif": 30
+    },
+    "walking": {
+      "berobjek": 100,
+      "negatif": 30
+    },
+    "min_boxes_each_class_total": 100,
+    "classes": [
+      "ball",
+      "gawang",
+      "robot"
+    ],
+    "objects_static": true
+  },
+  "condition_proof": "operator and recorded evidence; unknown if unverified; detector does not command gait",
+  "negative_definition": "No ball, gawang, or robot target visible anywhere; after review relabel category on disagreement; retain every capture and record reason for exclusion or replacement independent of model results.",
+  "goal_partial": "Frame containing a goal clipped by image boundary or visible only in part is retained and analysed separately from primary full-goal/negative set, with decision by human reviewer independent of model predictions.",
+  "scene": "one setup per user preference; record scene/position qualitatively; new acquisition is not proof of independent scenes or generalization",
+  "review": {
+    "blind_fraction": 0.2,
+    "blind_random_seed": 20261112,
+    "stratification": "condition and intended object/negative category",
+    "review_all": true,
+    "reviewer": "bhre",
+    "warning": "Operator saw hybrid preview during setup; blind labelling removes boxes during labelling, does not erase prior visual exposure."
+  },
+  "prelabel": {
+    "method": "four_model_union_classwise_nms",
+    "reason": "YOLO11s T42 checkpoint not available locally",
+    "member_sha256": {
+      "teacher_fp32": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+      "hybrid_full_seed1337": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+      "supervised_seed1337": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+      "kd_seed42": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    },
+    "confidence": 0.1,
+    "model_nms_iou": 0.7,
+    "cross_model_classwise_nms_iou": 0.5,
+    "caveat": "union uses evaluated models and may bias labels; blind subset and human review mitigate but do not eliminate bias"
+  },
+  "evaluation": {
+    "image_size": 640,
+    "device": "cpu_fp32",
+    "nms_iou": 0.7,
+    "ap_confidence_floor": 0.001,
+    "operating_confidence_strictly_greater_than": 0.25,
+    "match_iou_greater_or_equal": 0.5,
+    "primary_f1": "harmonic_mean_of_macro_precision_and_macro_recall",
+    "secondary_f1": "mean_per_class_f1"
+  },
+  "preview": "Hybrid detector enabled for operator setup; not saved as dataset images",
+  "no_motor_commands": true,
+  "source_protocol": "prompt/PROMPT_EVALUASI_SET_FRAME_BARU_OP3_2026-11-11.md"
+}
