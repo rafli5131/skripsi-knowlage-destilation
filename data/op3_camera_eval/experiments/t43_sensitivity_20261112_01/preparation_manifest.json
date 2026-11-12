@@ -1,0 +1,8 @@
+{
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+  "rules_t43_sha256": "0f1c8efca3685f7bb83dc705c6cdd5b12f13f5fbb9f23a98f77a687a47a3d3f9",
+  "rules_alternative_sha256": "577eaac77e0eb414124c63e88d3e03ceb5791f0622ea823d048fa78abd73aecf",
+  "image_count": 52,
+  "reviewer2": "Dipo",
+  "status": "prepared_awaiting_confirmation_no_labels"
+}

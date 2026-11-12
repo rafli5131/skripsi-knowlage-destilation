@@ -1,0 +1,201 @@
+{
+  "created_utc": "2026-11-12T10:36:13.698521+00:00",
+  "status": "complete",
+  "input_hashes": {
+    "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/review_260_audit_and_frozen_hashes.json": "c8db6e38482763448e8a74ea11e6c36fe3db4bf71f83f1ee6e72e9a6f2d81543",
+    "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/capture_260_manifest.json": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+    "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_completion.json": "83f59a13d8f82fb2af5f6fd67acb9486b9ca38f8741b015b695e7c43e33df8fa",
+    "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/selection_manifest.json": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+    "/home/humanoid/bre_skripsi/runs/op3_t43_evaluation/20261112_reviewed_260/results.json": "dd9bb12431da08bc41ab028c9e5a1dde47a06532a13976893f80f217736175d9"
+  },
+  "models": {
+    "teacher_fp32": {
+      "path": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/best.pt",
+      "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c"
+    },
+    "hybrid_full_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+      "sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363"
+    },
+    "supervised_seed1337": {
+      "path": "/home/humanoid/bre_skripsi/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+      "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041"
+    },
+    "kd_seed42": {
+      "path": "/home/humanoid/bre_skripsi/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+      "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+    }
+  },
+  "frames": 260,
+  "thresholds": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9
+  ],
+  "threshold_comparison": ">",
+  "match_iou": 0.5,
+  "prediction_floor": 0.001,
+  "nms_iou": 0.7,
+  "device": "cpu",
+  "versions": {
+    "python": "3.12.3",
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130"
+  },
+  "limitations": [
+    "one scene; correlated frames",
+    "same four evaluated models used for prelabels",
+    "retrospective sweep is not threshold selection",
+    "goal lower region and robot body label conventions"
+  ],
+  "models_verified": {
+    "teacher_fp32": {
+      "recomputed_ap": {
+        "mAP50": 0.9948691056910569,
+        "mAP50-95": 0.7461595636617863,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7558749999999999
+          },
+          "gawang": {
+            "mAP50": 0.9946073170731707,
+            "mAP50-95": 0.6559104541976181
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.82669323678774
+          }
+        }
+      },
+      "baseline_frame_counts_equal": true,
+      "matched_goal_confidence": {
+        "count": 68,
+        "distribution": {
+          "min": 0.0010084022069349885,
+          "q1": 0.0014408116112463176,
+          "median": 0.0035035571781918406,
+          "q3": 0.009324932238087058,
+          "max": 0.03617173433303833
+        }
+      }
+    },
+    "hybrid_full_seed1337": {
+      "recomputed_ap": {
+        "mAP50": 0.9949171617161716,
+        "mAP50-95": 0.8275315926415051,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.8007753000545554
+          },
+          "gawang": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.884115993680904
+          },
+          "robot": {
+            "mAP50": 0.9947514851485149,
+            "mAP50-95": 0.7977034841890565
+          }
+        }
+      },
+      "baseline_frame_counts_equal": true,
+      "matched_goal_confidence": {
+        "count": 200,
+        "distribution": {
+          "min": 0.15914490818977356,
+          "q1": 0.4052722454071045,
+          "median": 0.4355543851852417,
+          "q3": 0.4557456150650978,
+          "max": 0.5152643322944641
+        }
+      }
+    },
+    "supervised_seed1337": {
+      "recomputed_ap": {
+        "mAP50": 0.995,
+        "mAP50-95": 0.7864894879552451,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7145441977585472
+          },
+          "gawang": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.6973313584592798
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.9475929076479076
+          }
+        }
+      },
+      "baseline_frame_counts_equal": true,
+      "matched_goal_confidence": {
+        "count": 200,
+        "distribution": {
+          "min": 0.1560320407152176,
+          "q1": 0.1965794861316681,
+          "median": 0.23455101996660233,
+          "q3": 0.32779840379953384,
+          "max": 0.4122862219810486
+        }
+      }
+    },
+    "kd_seed42": {
+      "recomputed_ap": {
+        "mAP50": 0.8658438256507109,
+        "mAP50-95": 0.7073878723488684,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.994755
+          },
+          "gawang": {
+            "mAP50": 0.6075314769521329,
+            "mAP50-95": 0.34356901226941944
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7838396047771858
+          }
+        }
+      },
+      "baseline_frame_counts_equal": true,
+      "matched_goal_confidence": {
+        "count": 191,
+        "distribution": {
+          "min": 0.0011389972642064095,
+          "q1": 0.007161399815231562,
+          "median": 0.012812864035367966,
+          "q3": 0.020521101541817188,
+          "max": 0.05113101750612259
+        }
+      }
+    }
+  },
+  "outputs": {
+    "confidence_sweep_sha256": "cdbc0554a5efe346a40e894036d77f74f3e73e552584de0de7160e8296171d42",
+    "predictions_sha256": {
+      "teacher_fp32": "0ec0ebfa610b54cabe986a176627abb7350c767961fff956cdb311f4168a046d",
+      "hybrid_full_seed1337": "d07f03b3bc912aae59c016c93af26eb32dfbca01d6e1e48625fa7e1ce6c82ceb",
+      "supervised_seed1337": "2ce50ee71e02975acba82770f16a71ecf6128f0e986bd6fe03f86e7151582506",
+      "kd_seed42": "a98a1576ad9ea3fa0a01d45fd82e1b178839ae2870d10e2bbdeb775f6550c87b"
+    }
+  }
+}

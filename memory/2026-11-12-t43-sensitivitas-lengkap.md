@@ -1,0 +1,7 @@
+# Sensitivitas T43 selesai — 12 November 2026
+
+Bagian A: sapuan confidence offline keempat model pada 260 frame mereproduksi AP baseline dan hitungan setiap frame pada >0,25. Teacher dan KD Murni tidak mencapai recall gawang ≥0,9 pada grid >0,05–0,90; Hybrid tertinggi >0,35 dan supervised >0,15. Pemeriksaan teacher menunjukkan validator AP menerima tensor 512×672 dan NMS multi-label, sedangkan prediksi operasi menerima 480×640 dan NMS default. Efek padding serta NMS belum diisolasi, sehingga jangan menyimpulkan selisih AP dan F1 hanya disebabkan confidence.
+
+Bagian B: Bhre, Dipo konvensi diperjelas, dan Dipo konvensi alternatif memakai 52 gambar identik; frame alternatif 29 disimpan ulang oleh Dipo setelah kesalahan kelas ditemukan. Kesepakatan Bhre–Dipo pada IoU ≥0,5 40/40 per kelas; IoU rata-rata bola/gawang/robot 0,6811/0,6389/0,8882. Urutan mAP50–95 berubah: Bhre Hybrid > supervised > teacher > KD Murni; Dipo supervised > teacher > Hybrid > KD Murni; alternatif supervised > KD Murni > teacher > Hybrid. Beda aturan, peninjau, dan urutan anotasi tidak terpisah. Ini sampel eksploratif satu setup, tidak untuk pemilihan ulang model atau ambang.
+
+[Tabel 52 frame](../analisis_performa/tabel/T43_sensitivitas_label_52.md), [tabel confidence](../analisis_performa/tabel/T43_sensitivitas_confidence.md), [dokumentasi/grafik](../dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md). Frame, label, log dan prediksi per frame tetap lokal. Belum commit/push.

@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-11-12T10:30:47.572940+00:00",
+  "status": "frozen_before_alternative_annotation",
+  "rules": {
+    "ball": "Kotak mencakup seluruh bola yang terlihat, dibatasi tepi gambar.",
+    "gawang": "Satu kotak mencakup seluruh rangka gawang yang terlihat, dibatasi tepi gambar.",
+    "robot": "Satu kotak mencakup seluruh tubuh robot yang terlihat, dibatasi tepi gambar."
+  },
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+  "reviewer": "belum ditentukan"
+}

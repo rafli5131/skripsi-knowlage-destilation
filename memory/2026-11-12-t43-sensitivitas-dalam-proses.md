@@ -1,0 +1,11 @@
+# Sensitivitas T43: bagian A selesai, peninjau kedua menunggu SSH-X
+
+> Catatan historis; status akhir tersedia di [memory sensitivitas lengkap](2026-11-12-t43-sensitivitas-lengkap.md).
+
+Bagian A prompt sensitivitas selesai offline: empat checkpoint, manifest dan 260 gambar/label cocok; AP gabungan serta hitungan pada confidence >0,25 per frame cocok baseline untuk empat model. Grid >0,05–0,90 per 0,05 mencakup 864 baris. Recall gawang gabungan ≥0,9 dicapai sampai >0,35 untuk Hybrid dan >0,15 untuk supervised; teacher dan KD Murni tidak mencapainya pada grid. Tabel dan grafik: `analisis_performa/tabel/T43_sensitivitas_confidence.md` dan `dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md`.
+
+Perbedaan penting: validator AP teacher memakai tensor 512×672 dan NMS multi-label, sedangkan jalur prediksi operasi memakai 480×640 dan NMS default. Pada salah satu frame, confidence berubah jika padding prediksi diubah. Prediksi validator teacher dalam JSON yang dibulatkan menghasilkan 200/200 TP gawang pada floor 0,001 dan 37/200 pada >0,25; jalur prediksi operasi menghasilkan 68/200 dan 0/200. Pengaruh padding dan NMS belum diisolasi; jangan menyatakan selisih hanya akibat kalibrasi atau mengganti ambang D4.
+
+Bhre membekukan aturan: bola utuh terlihat; bagian bawah salah satu tiang gawang sampai titik tengah bagian tiang yang terlihat; badan robot termasuk tangan/kaki, tidak termasuk bagian hitam di atas badan. Aturan diperjelas setelah label awal T43. Peninjau kedua Dipo menyetujui pembukaan peninjau buta. 52 gambar dan aturan terpisah ada di `data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/`. Peluncuran gagal karena DISPLAY kosong; belum ada label Dipo. Setelah SSH-X aktif, buka `op3_blind_label_reviewer` pada subdirektori `reviewer2` dengan reviewer `Dipo`. Setelah sesi Dipo lengkap, minta konfirmasi terpisah untuk pelabelan konvensi alternatif dan tentukan pelabel. Jangan menghitung perbandingan antarpeninjau atau urutan model sebelum dua sesi lengkap.
+
+Tidak ada kamera/servo/gait baru, pelatihan, commit atau push. File frame, label dan prediksi per-frame tetap lokal. Tabel T43 utama hanya ditambahi tautan; versi sebelumnya diarsipkan dengan hash historis dan manifest baru mencakup kedua versi.

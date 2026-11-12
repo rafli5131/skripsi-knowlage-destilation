@@ -14,3 +14,7 @@ mAP menggunakan confidence floor 0,001; precision, recall, F1 dan TP menggunakan
 Pra-label berasal dari gabungan keempat model yang dievaluasi. Operator juga telah melihat preview Hybrid dan mendapat masukan selama pelabelan; tinjauan awal bukan independen sempurna. Pada 52 sampel, satu orang yang sama menghasilkan 40/40 pasangan IoU ≥0,5 di masing-masing kelas; itu bukan kesepakatan antarpeninjau dan tidak memastikan kotak benar. Batas atas kotak gawang bagian bawah belum dipatok pada landmark tetap, dan konvensi kotak berdampak pada AP terutama IoU tinggi. Frame berurutan tidak independen; jangan menafsirkan 260 frame sebagai 260 adegan.
 
 Rincian per kondisi/kelas/TP/FP/FN dalam [CSV](T43_akurasi_op3_empat_model_260.csv). Rincian metodologi, grafik dan confusion matrix tersedia di [dokumentasi T43](../../dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md). Hasil ini tidak menggantikan T38 atau hasil pengujian runtime yang ada.
+
+## Uji sensitivitas tambahan
+
+[Sapuan confidence T43](T43_sensitivitas_confidence.md) selesai secara offline. [Sensitivitas label 52 frame](T43_sensitivitas_label_52.md) telah selesai untuk label Bhre, Dipo dan konvensi alternatif Dipo. Hasil utama di atas tidak diubah; pemeriksaan menemukan perbedaan jalur padding dan NMS antara AP dan prediksi operasi. [Arsip tabel sebelum penambahan tautan](../../dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/arsip_tabel_T43_sebelum_sensitivitas.md) mempertahankan hash historis.

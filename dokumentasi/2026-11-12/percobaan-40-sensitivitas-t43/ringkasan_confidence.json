@@ -1,0 +1,62 @@
+{
+  "status": "complete_part_A",
+  "models": [
+    {
+      "model": "teacher_fp32",
+      "highest_threshold_recall_ge_0_9": null,
+      "recall_0_05": 0.0,
+      "recall_0_25": 0.0,
+      "matched_count_floor": 68,
+      "confidence": {
+        "min": 0.0010084022069349885,
+        "q1": 0.0014408116112463176,
+        "median": 0.0035035571781918406,
+        "q3": 0.009324932238087058,
+        "max": 0.03617173433303833
+      }
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "highest_threshold_recall_ge_0_9": "0.35",
+      "recall_0_05": 1.0,
+      "recall_0_25": 0.98,
+      "matched_count_floor": 200,
+      "confidence": {
+        "min": 0.15914490818977356,
+        "q1": 0.4052722454071045,
+        "median": 0.4355543851852417,
+        "q3": 0.4557456150650978,
+        "max": 0.5152643322944641
+      }
+    },
+    {
+      "model": "supervised_seed1337",
+      "highest_threshold_recall_ge_0_9": "0.15",
+      "recall_0_05": 1.0,
+      "recall_0_25": 0.495,
+      "matched_count_floor": 200,
+      "confidence": {
+        "min": 0.1560320407152176,
+        "q1": 0.1965794861316681,
+        "median": 0.23455101996660233,
+        "q3": 0.32779840379953384,
+        "max": 0.4122862219810486
+      }
+    },
+    {
+      "model": "kd_seed42",
+      "highest_threshold_recall_ge_0_9": null,
+      "recall_0_05": 0.005,
+      "recall_0_25": 0.0,
+      "matched_count_floor": 191,
+      "confidence": {
+        "min": 0.0011389972642064095,
+        "q1": 0.007161399815231562,
+        "median": 0.012812864035367966,
+        "q3": 0.020521101541817188,
+        "max": 0.05113101750612259
+      }
+    }
+  ],
+  "caveat": "Prediction path sweep differs in padding and NMS from AP validation path; no causal or calibration-only conclusion."
+}

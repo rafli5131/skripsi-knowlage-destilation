@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-11-12T10:43:26.107197+00:00",
+  "status": "part_A_complete_part_B_pending",
+  "prior_t43_table_historical_sha256": "e79dc217e2e2f806e06a2254615416b10fadd458c42e63f0ffe2cd0d9997ef32",
+  "prior_t43_table_archived_as": "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/arsip_tabel_T43_sebelum_sensitivitas.md",
+  "scope": "hashes for sources and outputs; raw frames, labels and frame-level predictions stay local",
+  "files": {
+    "analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md": "6d1443707b75f2bd51872d8deb1c2978488e06a41b2643c46e4982f4262ade43",
+    "analisis_performa/tabel/T43_sensitivitas_confidence.md": "ead37f6e896298b66a18f7f21a95bbaa220259ac03e54dcbdf389587f8bf5d10",
+    "analisis_performa/tabel/T43_sensitivitas_confidence.csv": "cdbc0554a5efe346a40e894036d77f74f3e73e552584de0de7160e8296171d42",
+    "analisis_performa/tabel/T43_sensitivitas_label_52.md": "7f65cfeadc1a4598df18f2d669ebdd0a37944ef10d6158c4a3c0e4d0847b7f54",
+    "runs/op3_t43_sensitivity/20261112_confidence_01/run_manifest.json": "e0397515ffa43ee29e4752478101c222568900ae7c7b21623bbaaf4d7559a6cb",
+    "data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/rules_konvensi_t43.json": "0f1c8efca3685f7bb83dc705c6cdd5b12f13f5fbb9f23a98f77a687a47a3d3f9",
+    "data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/rules_konvensi_alternatif.json": "577eaac77e0eb414124c63e88d3e03ceb5791f0622ea823d048fa78abd73aecf",
+    "data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/preparation_manifest.json": "67a3ac260c6da9cb6054baa6510a4ee16d00f7f9300a0c198e3527205813d984",
+    "ros2_packages/op3_t43_sensitivity/report.py": "38e3302febb4e65bcf940a3f71d3e3bbdad26bdf4538b016ee3a95b193a5d23c",
+    "ros2_packages/op3_t43_sensitivity/sweep.py": "9382959f71a6e0aaf7844a76fa1e49c1afb52897fef1ddfe23bfa6ac0f3d2e41",
+    "ros2_packages/op3_t43_sensitivity/diagnose.py": "020d13f51e5c042321dc5aa86e0db9be5cfca0e7d23984228826c89aa956dbf1",
+    "ros2_packages/op3_t43_sensitivity/README.md": "a7e0dcd9110a589e76c79734bd3ad34cd1d221b4c658d51fcef63ed2ad604ff6",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_EN.md": "a942b70bb8017843c88835e78bdbcb63cb0bec3b68df253f829a3d2d5ba73e63",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md": "f4266fef6f8dad9866b4b186a8d4e29ea765d315f70e55e3fad69b0423bb86ed",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/arsip_tabel_T43_sebelum_sensitivitas.md": "e79dc217e2e2f806e06a2254615416b10fadd458c42e63f0ffe2cd0d9997ef32",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/diagnostik_teacher_agregat.json": "1ca9e6bdba3360047fffa302062a07971e5509bcab91543e1410d556c25d9180",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_ball_en.png": "58653345d5e968e3bca5f5969de6462a7f01cdf0552daa7d0339d867fda27b84",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_ball_id.png": "c658aaa9c72733d44e56ee43b1a87a1ce4ed1b59b291348121c0c0c7e2d0794a",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_gawang_en.png": "513464b1940ff664a0c7591ca0a97b68679792cbeec1103cb4421b155068dce6",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_gawang_id.png": "2fa67e1d05fac2592cda8a1d05318974dd3535145a62638d861655d7fc4f8384",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_robot_en.png": "892ec9cd992ab597189a6bf9e23a8a0d8e794a5918fdca3429cd4b06676754f1",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/grafik/sapuan_robot_id.png": "58a1c60e6d488eabfc18b94a3acd966c0bd1c0ce1a57736514a9ac5a24d42012",
+    "dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/ringkasan_confidence.json": "89ff123e4fbde5abc89e10940f43c0e036ab34593cc3ac8266b8ed6d818b1677"
+  }
+}

@@ -1,0 +1,3 @@
+# Uji sensitivitas T43 offline
+
+Package baru ini menggunakan fungsi skor dan AP dari evaluator bersama tanpa mengubah package lama. `sweep.py` memverifikasi hash checkpoint, gambar, label, log dan manifest; membuat salinan dataset pada direktori run baru; menghitung ulang AP serta prediksi confidence ≥0,001; dan menghentikan proses jika AP gabungan atau hitungan per frame pada confidence >0,25 tidak identik dengan baseline T43. Setelah itu dihitung sapuan confidence >0,05–0,90 dalam langkah 0,05. Run dibuat dengan exclusive-create agar data lama tidak tertimpa. Tidak ada kamera atau kendali robot.

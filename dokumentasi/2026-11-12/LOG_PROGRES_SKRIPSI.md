@@ -27,3 +27,9 @@ T43 dilaksanakan setelah catatan sebelumnya: 260 frame (100 berobjek + 30 kosong
 - **D18:** persetujuan pembimbing diberikan secara lisan pada 12 November 2026 (dilaporkan Bhre).
 - **D20:** kondisi berjalan pada T36 dan T43 dibangkitkan oleh skrip pengujian atas arahan peneliti; rincian ada di [`docs/DECISIONS.md`](../../docs/DECISIONS.md).
 - **Interpretasi T43 (D21):** AP50 gawang teacher, Hybrid, dan supervised sama-sama 0,995, sedangkan pada confidence > 0,25 gawang yang lolos 0/200, 196/200, dan 99/200 (KD murni 0/200, AP50 0,608). Selisih F1 terutama berasal dari confidence pada gawang parsial, bukan kemampuan menemukan objek. Selisih mAP50–95 gawang (Hybrid 0,884, teacher 0,656) bergantung pada konvensi kotak bagian bawah. Uji sensitivitas direncanakan di [prompt T43 sensitivitas](../../prompt/PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md). Sumber angka: `runs/op3_t43_evaluation/20261112_reviewed_260/results.json`.
+
+## Sensitivitas T43 — bagian A dan B selesai
+
+Sapuan confidence pada 260 frame mereproduksi AP dan hitungan baseline >0,25 untuk keempat model. Pemeriksaan teacher menemukan jalur validasi AP memakai tensor 512×672 dan NMS multi-label, sedangkan jalur prediksi operasi 480×640 dengan NMS default. Efek masing-masing belum diisolasi; jangan menjelaskan selisih AP–F1 hanya sebagai kalibrasi.
+
+Dipo meninjau 52 frame mengikuti aturan yang diperjelas dan kemudian 52 frame dengan konvensi alternatif. Frame alternatif 29 diperiksa dan disimpan ulang oleh Dipo setelah satu kelas salah ditemukan. Pada IoU ≥0,5 kesepakatan dengan Bhre adalah 40/40 per kelas; rata-rata IoU bola/gawang/robot 0,6811/0,6389/0,8882. Urutan mAP50–95 berubah antartiga label; efek peninjau, klarifikasi aturan dan urutan anotasi tidak terpisah. Lihat [tabel tiga set](../../analisis_performa/tabel/T43_sensitivitas_label_52.md) dan [dokumentasi](percobaan-40-sensitivitas-t43/README_ID.md). Hasil eksploratif, model utama dan ambang operasi tidak diganti.

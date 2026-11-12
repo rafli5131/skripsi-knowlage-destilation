@@ -1,0 +1,164 @@
+{
+  "bhre": {
+    "mAP50-95": [
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.8134173574215975
+      },
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.7888069274908791
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.7408567768397308
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.7056262517022379
+      }
+    ],
+    "F1": [
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.9875831789805859
+      },
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.9041095890410958
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.6666666666666666
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.6582278481012659
+      }
+    ]
+  },
+  "dipo": {
+    "mAP50-95": [
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.5230452918493347
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.4625089322733727
+      },
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.43278853453582966
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.39950523402185667
+      }
+    ],
+    "F1": [
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.9875831789805859
+      },
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.9041095890410958
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.6666666666666666
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.6582278481012659
+      }
+    ]
+  },
+  "alternative": {
+    "mAP50-95": [
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.3093888504487754
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.2913222399998449
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.28996571259804954
+      },
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.26489803041522964
+      }
+    ],
+    "F1": [
+      {
+        "models": [
+          "Supervised"
+        ],
+        "value": 0.8674698795180722
+      },
+      {
+        "models": [
+          "KD Hybrid"
+        ],
+        "value": 0.6711322213278716
+      },
+      {
+        "models": [
+          "KD Murni"
+        ],
+        "value": 0.6583333333333333
+      },
+      {
+        "models": [
+          "Teacher YOLO11n"
+        ],
+        "value": 0.6582278481012659
+      }
+    ]
+  }
+}

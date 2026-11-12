@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-11-12T10:30:47.572718+00:00",
+  "author": "bhre",
+  "reviewer": "Dipo",
+  "status": "frozen_before_reviewer_view",
+  "rules": {
+    "ball": "Kotak mencakup seluruh bola yang terlihat, dibatasi tepi gambar.",
+    "gawang": "Kotak mencakup bagian bawah satu tiang gawang yang terlihat, dari ujung bawah sampai titik tengah tinggi bagian tiang yang terlihat pada gambar.",
+    "robot": "Kotak mencakup badan robot serta tangan dan kaki yang terlihat; bagian hitam di atas badan yang sebelumnya tidak dilabeli tetap dikecualikan."
+  },
+  "negative": "Simpan label kosong bila tidak ada target.",
+  "limitation": "Batas tengah tiang dan cakupan tangan-kaki dipertegas oleh Bhre setelah label awal T43; kesesuaian dengan setiap label awal tidak dijamin.",
+  "source": "Konfirmasi Bhre pada percakapan sebelum peninjau kedua melihat gambar.",
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f"
+}

@@ -37,3 +37,12 @@ __pycache__/
 /runs/op3_t43_evaluation/**/dataset/labels/
 /runs/op3_t43_evaluation/**/per_frame_*.jsonl
 /dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/contoh_frame_label_manusia.png
+
+# Uji sensitivitas T43: foto, label manusia dan prediksi frame tetap lokal.
+/data/op3_camera_eval/experiments/t43_sensitivity_*/reviewer2/
+/data/op3_camera_eval/experiments/t43_sensitivity_*/alternative_convention/
+/runs/op3_t43_sensitivity/**/dataset/images/
+/runs/op3_t43_sensitivity/**/dataset/labels/
+/runs/op3_t43_sensitivity/**/predictions_*.jsonl
+
+/runs/op3_t43_sensitivity/**/predictions.json

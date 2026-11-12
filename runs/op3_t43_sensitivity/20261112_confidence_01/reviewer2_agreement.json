@@ -1,0 +1,1433 @@
+{
+  "created_utc": "2026-11-12T11:09:14.184620+00:00",
+  "status": "reviewer2_complete",
+  "reviewer2_completion_sha256": "5f5d870d4a94dc649a994ae72203821321df2b2ad6d768f4e7f564855f118474",
+  "matching": "one-to-one classwise, maximize match count at IoU >= 0.5 then IoU",
+  "frames": 52,
+  "classes": {
+    "ball": {
+      "bhre": 40,
+      "dipo": 40,
+      "matches": 40,
+      "bhre_unmatched": 0,
+      "dipo_unmatched": 0,
+      "fraction_bhre_matched": 1.0,
+      "fraction_dipo_matched": 1.0,
+      "iou_mean": 0.6810802949088058,
+      "iou_median": 0.6747800598248634
+    },
+    "gawang": {
+      "bhre": 40,
+      "dipo": 40,
+      "matches": 40,
+      "bhre_unmatched": 0,
+      "dipo_unmatched": 0,
+      "fraction_bhre_matched": 1.0,
+      "fraction_dipo_matched": 1.0,
+      "iou_mean": 0.6389093341038237,
+      "iou_median": 0.6307147238741349
+    },
+    "robot": {
+      "bhre": 40,
+      "dipo": 40,
+      "matches": 40,
+      "bhre_unmatched": 0,
+      "dipo_unmatched": 0,
+      "fraction_bhre_matched": 1.0,
+      "fraction_dipo_matched": 1.0,
+      "iou_mean": 0.8881566362859641,
+      "iou_median": 0.8969114243427192
+    }
+  },
+  "per_frame": [
+    {
+      "blind_image": "frame_000001.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000015.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8801020408163256
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5817490548337608
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8358974050966473
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000002.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000003.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000003.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000025.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8148148167060665
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6220651931830055
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8179487094505488
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000004.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000061.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7115108819907914
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.614744104068183
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8775336723218075
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000005.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000002.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6519354387509694
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6699146999135882
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8990458691993141
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000006.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000065.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7283603334242925
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.617489843706431
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8846830905489764
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000007.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000070.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7672479643932716
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.610772908517967
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9577913275981911
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000008.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000043.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6391524113851991
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7096689432780943
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8910700531966481
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000009.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000040.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.770491756749561
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6042041999972824
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9146896084731329
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000010.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000068.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7198473765575445
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6282378075681406
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.889246115908432
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000011.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000011.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000012.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000022.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000013.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000028.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000014.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000023.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7246688649086287
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6301242140141837
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9079768181818183
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000015.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000026.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000016.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000019.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6382977924852932
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6705040218434063
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8765492214177726
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000017.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000049.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6962963216161608
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6665427526526032
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9217927600307276
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000018.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000008.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6670967771045163
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6918462555655533
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9494737020689195
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000019.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000014.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000020.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000078.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6127633587660029
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5809773460531761
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9146210021787231
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000021.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000022.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7300296376660911
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6826997776254404
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8969134042677785
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000022.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000016.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7558479807017533
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6538263363061434
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8719414595948346
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000023.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000007.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000024.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000035.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7131034513875861
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6968708482680426
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9176247716579758
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000025.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000011.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7385714317942856
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6925721529654972
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9276841769204843
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000026.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000032.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7527272486400011
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6722111716614109
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9166773878295672
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000027.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000030.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6863395436645586
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.620405044159246
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8547231585737359
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000028.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000027.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000029.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000027.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6113127587875751
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7485931186853162
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8681458467769909
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000030.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000094.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5850763304419023
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5778508016628332
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8658261040082649
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000031.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000045.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5511982771241822
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6916222794164933
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8837692857591264
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000032.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000039.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6677419141161299
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5629303324465744
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9158805674089658
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000033.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000046.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.681818205533597
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6250411959980476
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.79449648710557
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000034.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000007.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5758841757727652
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6269668036597473
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8729694883973185
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000035.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000049.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6575698744639368
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5856114526545757
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9000082689644916
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000036.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000041.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6053864215791223
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6646771799741323
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9125711410740941
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000037.jpg",
+      "session": "20261112_t43_walk_objek_ulang_01",
+      "image": "frame_000021.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6538842922121701
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6805648940559497
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9064781962046501
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000038.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000013.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6509433765752939
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6410256410256411
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9168387791212664
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000039.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000018.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5692722407119969
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5879481884738129
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9301348186909667
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000040.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000004.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6879361914257226
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6390306183673471
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8400150230630636
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000041.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000004.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7333333855072477
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6520282314302378
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.89690944441766
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000042.jpg",
+      "session": "20261112_t43_walk_objek_ulang_02",
+      "image": "frame_000046.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7302260152542357
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6219636218444796
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9158105802273703
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000043.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000098.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6178266593030909
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6056210354170702
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8531188621900734
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000044.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000027.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6420595731055548
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5693580048355652
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8190262110184471
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000045.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000014.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000046.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000056.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7160152430272706
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5538703697791685
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9025293110951456
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000047.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000003.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000048.jpg",
+      "session": "20261112_t43_idle_negatif_01",
+      "image": "frame_000018.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000049.jpg",
+      "session": "20261112_t43_walk_negatif_01",
+      "image": "frame_000020.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "gawang": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        },
+        "robot": {
+          "bhre": 0,
+          "dipo": 0,
+          "matched_ious": []
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000050.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000012.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6497175141242931
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.7024750941345704
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.877526281422144
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000051.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000064.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.5948276026159337
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6313052337340861
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.9010309273919496
+          ]
+        }
+      }
+    },
+    {
+      "blind_image": "frame_000052.jpg",
+      "session": "20261112_t43_idle_objek_ulang_01",
+      "image": "frame_000067.jpg",
+      "classes": {
+        "ball": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.661976315161316
+          ]
+        },
+        "gawang": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.6704625903761399
+          ]
+        },
+        "robot": {
+          "bhre": 1,
+          "dipo": 1,
+          "matched_ious": [
+            0.8292961125849623
+          ]
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Rules were clarified after Bhre initial T43 annotation; reviewer and convention effects are confounded",
+    "Bhre previously saw Hybrid preview; prior Dipo exposure is unknown",
+    "Images belong to one setting and are correlated"
+  ]
+}

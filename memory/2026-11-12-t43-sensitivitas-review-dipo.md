@@ -1,0 +1,11 @@
+# T43 sensitivitas — tinjauan Dipo selesai, konvensi alternatif berlangsung
+
+> Catatan historis; status akhir tersedia di [memory sensitivitas lengkap](2026-11-12-t43-sensitivitas-lengkap.md).
+
+Dipo menyimpan 52/52 label pada salinan terpisah, 12 frame kosong; 53 entri log berasal dari satu penyimpanan ulang. Hasil Bhre final dan Dipo menggunakan 52 gambar identik. Hash sumber dan label Dipo dibekukan di `data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/reviewer2_completion_manifest.json`. Pada IoU ≥0,5, tiap kelas memiliki 40/40 pasangan. Rata-rata IoU bola/gawang/robot adalah 0,6811/0,6389/0,8882; median 0,6748/0,6307/0,8969. Aturan diperjelas sesudah Bhre melabeli sehingga efek perbedaan aturan dan peninjau tercampur.
+
+Evaluasi offline keempat model telah selesai pada kedua label. mAP50–95 label Bhre: teacher/Hybrid/supervised/KD Murni = 0,7409/0,8134/0,7888/0,7056; label Dipo = 0,4625/0,4328/0,5230/0,3995. Urutan berubah; hasil bersifat sementara dan tidak digunakan memilih ulang model. Dataset, settings, label dan hasil masing-masing di `runs/op3_t43_sensitivity/20261112_confidence_01/label_52/{bhre,dipo}/`. Perbedaan jalur preprocessing AP dan prediksi yang terdokumentasi tetap berlaku.
+
+Dipo menyetujui sesi konvensi alternatif: satu kotak seluruh rangka gawang terlihat, satu kotak seluruh tubuh robot terlihat, bola utuh terlihat. `op3_blind_label_reviewer` dibuka melalui `DISPLAY=localhost:10.0` dengan reviewer Dipo pada `data/op3_camera_eval/experiments/t43_sensitivity_20261112_01/alternative_convention`; label alternatif belum lengkap. Setelah pengguna menyatakan selesai, audit 52 label dan log, bekukan hash pada `alternative_completion_manifest.json`, jalankan `ros2_packages/op3_t43_sensitivity/evaluate_52.py --label-set alternative`, lalu dokumentasikan tiga set label, urutan, tabel CSV/MD, keterbatasan dan manifest. Jangan mengganti hasil T43, mengoperasikan robot, atau melakukan push tanpa permintaan.
+
+[Ringkasan sementara](../analisis_performa/tabel/T43_sensitivitas_label_52.md) dan [dokumentasi sensitivitas](../dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md). Arsip manifest dan README sebelum hasil Dipo dipertahankan di `arsip_sebelum_review_dipo/`.

@@ -1,0 +1,9 @@
+{
+  "created_utc": "2026-11-12T11:09:36.880543+00:00",
+  "reviewer": "Dipo",
+  "rules_sha256": "577eaac77e0eb414124c63e88d3e03ceb5791f0622ea823d048fa78abd73aecf",
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+  "images": 52,
+  "status": "prepared_awaiting_confirmation_no_labels",
+  "note": "Aturan alternatif dibekukan sebelum anotasi; identitas pelabel ditetapkan setelah Dipo selesai sesi sebelumnya."
+}

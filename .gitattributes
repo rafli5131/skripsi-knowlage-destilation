@@ -5,3 +5,7 @@
 # Preserve T43 generated CSV bytes for recorded SHA-256 provenance.
 /analisis_performa/tabel/T43_akurasi_op3_empat_model_260.csv -text whitespace=cr-at-eol
 /runs/op3_t43_evaluation/20261112_reviewed_260/summary.csv -text whitespace=cr-at-eol
+# Preserve T43 sensitivity CSV bytes for SHA-256 provenance.
+/analisis_performa/tabel/T43_sensitivitas_confidence.csv -text whitespace=cr-at-eol
+/analisis_performa/tabel/T43_sensitivitas_label_52.csv -text whitespace=cr-at-eol
+/runs/op3_t43_sensitivity/20261112_confidence_01/confidence_sweep.csv -text whitespace=cr-at-eol

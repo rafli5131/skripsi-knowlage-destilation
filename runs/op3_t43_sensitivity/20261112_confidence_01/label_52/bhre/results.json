@@ -1,0 +1,294 @@
+{
+  "status": "complete",
+  "label_set": "bhre",
+  "models": {
+    "teacher_fp32": {
+      "ap": {
+        "mAP50": 0.9948373983739837,
+        "mAP50-95": 0.7408567768397308,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7526249999999999
+          },
+          "gawang": {
+            "mAP50": 0.9945121951219512,
+            "mAP50-95": 0.6513063321612281
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.8186389983579639
+          }
+        }
+      },
+      "operating": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "gawang": {
+            "ground_truth": 40,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 40,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0
+          },
+          "robot": {
+            "ground_truth": 40,
+            "predictions": 38,
+            "true_positives": 38,
+            "false_positives": 0,
+            "false_negatives": 2,
+            "precision": 1.0,
+            "recall": 0.95,
+            "F1": 0.9743589743589743
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666666666,
+          "recall": 0.65,
+          "F1": 0.6581196581196581,
+          "F1_mean_per_class": 0.6581196581196581,
+          "F1_harmonic_macro_precision_recall": 0.6582278481012659
+        },
+        "micro": {
+          "precision": 1.0,
+          "recall": 0.65,
+          "F1": 0.787878787878788
+        },
+        "ground_truth": 120,
+        "predictions": 78,
+        "true_positives": 78,
+        "false_positives": 0,
+        "false_negatives": 42
+      },
+      "negative_frames_with_fp": 0
+    },
+    "hybrid_full_seed1337": {
+      "ap": {
+        "mAP50": 0.9927616959064327,
+        "mAP50-95": 0.8134173574215975,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7981333333333334
+          },
+          "gawang": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.8802025719894141
+          },
+          "robot": {
+            "mAP50": 0.9882850877192982,
+            "mAP50-95": 0.7619161669420452
+          }
+        }
+      },
+      "operating": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "gawang": {
+            "ground_truth": 40,
+            "predictions": 38,
+            "true_positives": 38,
+            "false_positives": 0,
+            "false_negatives": 2,
+            "precision": 1.0,
+            "recall": 0.95,
+            "F1": 0.9743589743589743
+          },
+          "robot": {
+            "ground_truth": 40,
+            "predictions": 41,
+            "true_positives": 40,
+            "false_positives": 1,
+            "false_negatives": 0,
+            "precision": 0.975609756097561,
+            "recall": 1.0,
+            "F1": 0.9876543209876543
+          }
+        },
+        "macro": {
+          "precision": 0.991869918699187,
+          "recall": 0.9833333333333334,
+          "F1": 0.9873377651155429,
+          "F1_mean_per_class": 0.9873377651155429,
+          "F1_harmonic_macro_precision_recall": 0.9875831789805859
+        },
+        "micro": {
+          "precision": 0.9915966386554622,
+          "recall": 0.9833333333333333,
+          "F1": 0.9874476987447698
+        },
+        "ground_truth": 120,
+        "predictions": 119,
+        "true_positives": 118,
+        "false_positives": 1,
+        "false_negatives": 2
+      },
+      "negative_frames_with_fp": 0
+    },
+    "supervised_seed1337": {
+      "ap": {
+        "mAP50": 0.995,
+        "mAP50-95": 0.7888069274908791,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7187511904761905
+          },
+          "gawang": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.709302167754022
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.9383674242424241
+          }
+        }
+      },
+      "operating": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "gawang": {
+            "ground_truth": 40,
+            "predictions": 19,
+            "true_positives": 19,
+            "false_positives": 0,
+            "false_negatives": 21,
+            "precision": 1.0,
+            "recall": 0.475,
+            "F1": 0.6440677966101694
+          },
+          "robot": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          }
+        },
+        "macro": {
+          "precision": 1.0,
+          "recall": 0.8250000000000001,
+          "F1": 0.8813559322033898,
+          "F1_mean_per_class": 0.8813559322033898,
+          "F1_harmonic_macro_precision_recall": 0.9041095890410958
+        },
+        "micro": {
+          "precision": 1.0,
+          "recall": 0.825,
+          "F1": 0.9041095890410958
+        },
+        "ground_truth": 120,
+        "predictions": 99,
+        "true_positives": 99,
+        "false_positives": 0,
+        "false_negatives": 21
+      },
+      "negative_frames_with_fp": 0
+    },
+    "kd_seed42": {
+      "ap": {
+        "mAP50": 0.8672040135188538,
+        "mAP50-95": 0.7056262517022379,
+        "per_class": {
+          "ball": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.9949999999999999
+          },
+          "gawang": {
+            "mAP50": 0.6116120405565615,
+            "mAP50-95": 0.34684587163882974
+          },
+          "robot": {
+            "mAP50": 0.995,
+            "mAP50-95": 0.7750328834678835
+          }
+        }
+      },
+      "operating": {
+        "per_class": {
+          "ball": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          },
+          "gawang": {
+            "ground_truth": 40,
+            "predictions": 0,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 40,
+            "precision": 0.0,
+            "recall": 0.0,
+            "F1": 0.0
+          },
+          "robot": {
+            "ground_truth": 40,
+            "predictions": 40,
+            "true_positives": 40,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "F1": 1.0
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "F1": 0.6666666666666666,
+          "F1_mean_per_class": 0.6666666666666666,
+          "F1_harmonic_macro_precision_recall": 0.6666666666666666
+        },
+        "micro": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "F1": 0.8
+        },
+        "ground_truth": 120,
+        "predictions": 80,
+        "true_positives": 80,
+        "false_positives": 0,
+        "false_negatives": 40
+      },
+      "negative_frames_with_fp": 0
+    }
+  }
+}

@@ -10,7 +10,7 @@ Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru 
 
 | No | Tempat | Pekerjaan | Prompt atau rujukan |
 |---|---|---|---|
-| 1 | Robot OP3 | Uji sensitivitas T43 secara offline: sapuan confidence pada 260 frame (bagian A), lalu peninjau kedua dan konvensi kotak alternatif pada 52 frame sampel (bagian B, butuh satu orang tambahan). Tanpa kamera, servo, atau gait. Jalankan setelah `git pull --ff-only origin main`. | [`PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md`](prompt/PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) · D21 |
+| 1 | Robot OP3 | Uji sensitivitas T43 offline selesai: sapuan confidence 260 frame dan tiga set label 52 frame. Urutan mAP50–95 berubah antarset; evaluasi perbedaan padding dan NMS sebelum kesimpulan lanjutan. Tanpa kamera, servo, atau gait. | [`PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md`](prompt/PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) · D21 |
 | 2 | Laptop | Menyusun slide presentasi progres untuk pembimbing. | [Log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md) |
 | 3 | Laptop | Mengembangkan naskah tujuh bab (D17): sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, tabel uji kotak hitam, dan pembahasan T43. | [Draf tujuh bab](laporan/draf-7-bab/README.md) |
 | 4 | Laptop | Menyimpan cadangan bobot teacher utama dan teacher T42 di luar robot dan server, dengan verifikasi hash. | [`model_registry.yaml`](configs/model_registry.yaml) · [T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) |
