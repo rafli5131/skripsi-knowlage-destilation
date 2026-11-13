@@ -6,13 +6,15 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 
 ## Progres dan langkah berikutnya
 
-Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md), dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah selesai. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah. Lihat [log progres](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md) dan [catatan keputusan](docs/DECISIONS.md) (D18 sampai D21).
+Per 13 November 2026, [verifikasi jalur inferensi TEST](analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) selesai untuk sembilan student (D23). Pada ambang yang sama, angka `model.predict` dan angka TEST resmi (`model.val`) berselisih paling besar 0,0035 untuk rerata mAP50–95 kelompok dan 0,0024 untuk F1, dan urutan mAP50–95 tidak berubah. Pada ambang runtime 0,25/0,45, F1 semua model naik 0,02 sampai 0,07, dan F1 Hybrid serta Supervised setara (0,9334 dan 0,9337). T05/T30 tidak diubah. Lihat [log 13 November](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) dan [catatan keputusan](docs/DECISIONS.md) (D18 sampai D23).
+
+Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) beserta [uji sensitivitasnya](dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md), dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah selesai. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah. Lihat [log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
 
 | No | Tempat | Pekerjaan | Prompt atau rujukan |
 |---|---|---|---|
-| 1 | Robot OP3 | Uji sensitivitas T43 offline selesai: sapuan confidence 260 frame dan tiga set label 52 frame. Urutan mAP50–95 berubah antarset; evaluasi perbedaan padding dan NMS sebelum kesimpulan lanjutan. Tanpa kamera, servo, atau gait. | [`PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md`](prompt/PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) · D21 |
-| 2 | Laptop | Menyusun slide presentasi progres untuk pembimbing. | [Log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md) |
-| 3 | Laptop | Mengembangkan naskah tujuh bab (D17): sitasi, pembahasan pustaka, format kampus, nomor tabel dan gambar, tabel uji kotak hitam, dan pembahasan T43. | [Draf tujuh bab](laporan/draf-7-bab/README.md) |
+| 1 | Robot OP3 | Sesi offline: salin teacher utama, hitung ulang T38/T43 dengan satu jalur `model.predict` serta pisahkan pengaruh padding dan NMS, rincian latensi per tahap 24 run, dan diagnosis CPU sekitar 1.300%. Tanpa kamera, servo, atau gait. | [`PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md`](prompt/PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md) · D22, D23 |
+| 2 | Server lab | Melengkapi baris teacher pada verifikasi jalur TEST setelah bobot teacher tersalin dari OP3. | [`PROMPT_VERIFIKASI_JALUR_TEST_SERVER_2026-11-13.md`](prompt/PROMPT_VERIFIKASI_JALUR_TEST_SERVER_2026-11-13.md) |
+| 3 | Laptop | Mengembangkan naskah tujuh bab (D17) dari proposal Bab 1–3 dan pola skripsi FILKOM; Bab 4–5 dapat disusun sekarang, Bab 6 menunggu nomor 1. | [Draf tujuh bab](laporan/draf-7-bab/README.md) · [Log 13 November](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) |
 | 4 | Laptop | Menyimpan cadangan bobot teacher utama dan teacher T42 di luar robot dan server, dengan verifikasi hash. | [`model_registry.yaml`](configs/model_registry.yaml) · [T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) |
 
 T43 dipisahkan dari T38 karena konvensi kotak berbeda, dan pra-labelnya memakai gabungan keempat model yang dievaluasi. Frame, label, dan log robot tetap lokal kecuali ada instruksi publikasi. Bobot teacher tidak masuk repo.
@@ -26,7 +28,8 @@ T43 dipisahkan dari T38 karena konvensi kotak berbeda, dan pra-labelnya memakai 
 | Grafik akurasi, runtime dan training | [Indeks 30 grafik HD: Indonesia dan Inggris](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) |
 | Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
 | Grafik garis akurasi per epoch dan sapuan confidence | [Per model dan gabungan](dokumentasi/model/README.md) · [Kurva mAP50–95 VAL tiga metode](dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png) |
-| Keputusan dan progres terbaru | [Log 11 November 2026](dokumentasi/2026-11-11/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D19](docs/DECISIONS.md) |
+| Keputusan dan progres terbaru | [Log 13 November 2026](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D23](docs/DECISIONS.md) |
+| Verifikasi jalur `model.val` vs `model.predict` pada TEST | [Ringkasan](analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) · [Skrip](scripts/verify_test_inference_path.py) · D23 |
 | Draf skripsi tujuh bab | [Buka indeks Bab 1–7](laporan/draf-7-bab/README.md) |
 | Evaluasi tambahan kamera T43 | [Tabel dan batas interpretasi](analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md) · [Grafik dan confusion matrix](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) |
 | Grafik akurasi hasil reproduksi | [Grafik ID/EN dan manifest baru](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) · [Audit gambar historis](dokumentasi/2026-11-12/AUDIT_GRAFIK_AKURASI.md) |

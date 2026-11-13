@@ -1,5 +1,7 @@
 # Indeks tabel analisis performa
 
+> **13 November 2026:** [Verifikasi jalur inferensi TEST](lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) membandingkan T05/T30 (`model.val`) dengan `model.predict` pada ambang TEST dan ambang runtime untuk sembilan student (D23). Teacher menyusul. Rencana T44 (jalur tunggal T38/T43) dan T45 (rincian latensi dan CPU OP3) ada di [prompt sesi OP3](../prompt/PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md).
+
 > **9 November 2026:** [T42 ablasi teacher](tabel/T42_ablasi_teacher_yolo11s_val.md) pada server2 selesai untuk dua teacher dan enam student; [audit teacher](../audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 sebelumnya di bawah bersifat historis.
 
 > **5 November 2026:** [T38 empat model](tabel/T38_akurasi_op3_empat_model_260.md) telah selesai pada 260 frame OP3 yang sama. Hasil ini retrospektif dan eksploratif; [dokumentasi dan grafik](../dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md) mencatat batasnya. Status T38 belum ada di bawah merupakan snapshot historis.
