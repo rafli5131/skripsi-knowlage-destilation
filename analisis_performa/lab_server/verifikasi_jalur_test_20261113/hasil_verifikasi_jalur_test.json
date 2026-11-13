@@ -1,0 +1,1646 @@
+{
+  "purpose": "Verifikasi jalur model.val vs model.predict pada TEST; bukan seleksi model",
+  "started_at_utc": "2026-11-13T10:01:58+00:00",
+  "finished_at_utc": "2026-11-13T13:04:05+00:00",
+  "arguments": {
+    "data": "None",
+    "test_images": "/mnt/nas-hpg9/dindarosyidah/skripsi/data/advance_vision_human/test/images",
+    "device": "cpu",
+    "imgsz": 640,
+    "models": [
+      "hybrid_full_seed42",
+      "hybrid_full_seed1337",
+      "hybrid_full_seed2025",
+      "supervised_seed42",
+      "supervised_seed1337",
+      "supervised_seed2025",
+      "kd_seed42",
+      "kd_seed1337",
+      "kd_seed2025"
+    ],
+    "command": "scripts/verify_test_inference_path.py --test-images /mnt/nas-hpg9/dindarosyidah/skripsi/data/advance_vision_human/test/images --device cpu"
+  },
+  "data": {
+    "source": "--test-images",
+    "data_yaml_sha256": null,
+    "image_count": 592,
+    "annotation_count": 734,
+    "polygon_labels_converted_to_box": 0
+  },
+  "fingerprint": {
+    "fingerprint_file": "artifacts/advance_vision_dataset_fingerprint.json",
+    "fingerprint_file_sha256": "bb98c76aafac2a2f09b30223d0dbf59916483ca5122be5044ce8a84f72bb0ef6",
+    "expected_images": 592,
+    "found_images": 592,
+    "missing_images": [],
+    "unexpected_images": [],
+    "image_hash_mismatch": [],
+    "label_hash_mismatch": [],
+    "missing_labels": [],
+    "all_match": true
+  },
+  "variants": {
+    "protokol_test": {
+      "conf": 0.001,
+      "iou": 0.7,
+      "keterangan": "ambang sama dengan evaluator TEST resmi"
+    },
+    "robot": {
+      "conf": 0.25,
+      "iou": 0.45,
+      "keterangan": "ambang sama dengan runtime OP3 (D4)"
+    }
+  },
+  "matching": {
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "operating_confidence": 0.25,
+    "operating_match_iou": 0.5,
+    "rule": "sekelas, serakah menurut IoU, satu prediksi per label"
+  },
+  "letterbox_shapes_summary": {
+    "640x640": 5328
+  },
+  "environment": {
+    "python": "3.11.2",
+    "platform": "Linux-6.1.0-43-amd64-x86_64-with-glibc2.36",
+    "hostname": "labkc-l40-debian",
+    "torch": "2.4.1+cu121",
+    "ultralytics": "8.4.130",
+    "numpy": "1.26.4",
+    "git_commit": "f9647ae73907d113b8c4de3937c9ac6795c7f856",
+    "git_dirty": true,
+    "script": "scripts/verify_test_inference_path.py",
+    "script_sha256": "1a23684caa4b34535e0ebbc82cb66375fc1db644002c71b6414f9444bb7ca315",
+    "validator_nms_call": "non_max_suppression( preds, self.args.conf, self.args.iou, nc=0 if self.args.task == \"detect\" else self.nc, multi_label=True, agnostic=self.args.single_cls or self.args.agnostic_nms, max_det=self.args.max_det, end2end=self.end2end, rotated=self.args.task == \"obb\", )"
+  },
+  "results": {
+    "hybrid_full_seed42": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed42/weights/best.pt",
+        "sha256": "6cc425a2142fccb1ddc6be3d5fe070f27362c9fd3a71cc4e8dff346839e24c8a"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/hybrid_full_seed42_metrics.json",
+      "official_source_sha256": "36b8b4db67fd519bb0bc0e9f6e94af9d620e96655fee13818833220d03c5394b",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9057019347763836,
+          "mAP50": 0.9592353216207877,
+          "mAP50-95": 0.7447128278982137,
+          "precision": 0.8498499509645049,
+          "recall": 0.9694114805085001
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9585798816568047,
+            "ground_truth_count": 83,
+            "mAP50": 0.9793400417311705,
+            "mAP50-95": 0.8748961880449032,
+            "precision": 0.9418604651162791,
+            "predictions_above_confidence": 86,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8164609053497942,
+            "ground_truth_count": 532,
+            "mAP50": 0.9228371597569904,
+            "mAP50-95": 0.5599028017709929,
+            "precision": 0.726207906295754,
+            "predictions_above_confidence": 683,
+            "recall": 0.9323308270676691,
+            "true_positives_at_iou50": 496
+          },
+          "robot": {
+            "F1": 0.937007874015748,
+            "ground_truth_count": 119,
+            "mAP50": 0.975528763374202,
+            "mAP50-95": 0.7993394938787446,
+            "precision": 0.8814814814814815,
+            "predictions_above_confidence": 135,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 4163,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8553466691266066,
+              "recall": 0.9666485490835522,
+              "F1": 0.907598009490839,
+              "F1_rerata_per_kelas": 0.9062808891062223
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9302325581395349,
+                "recall": 0.963855421686747,
+                "F1": 0.9467455621301776,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 86,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.7477477477477478,
+                "recall": 0.9360902255639098,
+                "F1": 0.8313856427378965,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 666,
+                "true_positives_at_iou50": 498
+              },
+              "robot": {
+                "precision": 0.8880597014925373,
+                "recall": 1.0,
+                "F1": 0.9407114624505929,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 134,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9566508429145101,
+              "mAP50-95": 0.7410582706405174
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9785371489512975,
+                "mAP50-95": 0.8729913889988659
+              },
+              "gawang": {
+                "mAP50": 0.9204072927287037,
+                "mAP50-95": 0.5617327008428388
+              },
+              "robot": {
+                "mAP50": 0.9710080870635293,
+                "mAP50-95": 0.7884507220798481
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 779,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.9017293316198924,
+              "recall": 0.9616360177552314,
+              "F1": 0.9307196829036583,
+              "F1_rerata_per_kelas": 0.9305225183456224
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9302325581395349,
+                "recall": 0.963855421686747,
+                "F1": 0.9467455621301776,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 86,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.8734402852049911,
+                "recall": 0.9210526315789473,
+                "F1": 0.8966148215919486,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 561,
+                "true_positives_at_iou50": 490
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "hybrid_full_seed1337": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+        "sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/hybrid_full_seed1337_metrics.json",
+      "official_source_sha256": "a4f3d3a900682ed9193f0cc098197b01ebb9b1b5e2d2557e1f6def200b4b5864",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9065450968287248,
+          "mAP50": 0.9577269927634363,
+          "mAP50-95": 0.7467948953914789,
+          "precision": 0.8513359192832309,
+          "recall": 0.9694114805085001
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9585798816568047,
+            "ground_truth_count": 83,
+            "mAP50": 0.9748780487804878,
+            "mAP50-95": 0.8698129000001608,
+            "precision": 0.9418604651162791,
+            "predictions_above_confidence": 86,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8151191454396056,
+            "ground_truth_count": 532,
+            "mAP50": 0.9208082637154633,
+            "mAP50-95": 0.5547049378465299,
+            "precision": 0.724087591240876,
+            "predictions_above_confidence": 685,
+            "recall": 0.9323308270676691,
+            "true_positives_at_iou50": 496
+          },
+          "robot": {
+            "F1": 0.9407114624505929,
+            "ground_truth_count": 119,
+            "mAP50": 0.9774946657943576,
+            "mAP50-95": 0.8158668483277459,
+            "precision": 0.8880597014925373,
+            "predictions_above_confidence": 134,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 4188,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8531453655482513,
+              "recall": 0.9744240118368209,
+              "F1": 0.9097606253033166,
+              "F1_rerata_per_kelas": 0.9077239577239578
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9529411764705882,
+                "recall": 0.9759036144578314,
+                "F1": 0.9642857142857143,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 85,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7314949201741655,
+                "recall": 0.9473684210526315,
+                "F1": 0.8255528255528256,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 689,
+                "true_positives_at_iou50": 504
+              },
+              "robot": {
+                "precision": 0.875,
+                "recall": 1.0,
+                "F1": 0.9333333333333333,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 136,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9557078742728896,
+              "mAP50-95": 0.7391786737145617
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.975,
+                "mAP50-95": 0.8723202196003623
+              },
+              "gawang": {
+                "mAP50": 0.9197417156158808,
+                "mAP50-95": 0.5579268337262786
+              },
+              "robot": {
+                "mAP50": 0.972381907202788,
+                "mAP50-95": 0.787288967817044
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 777,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.9077040218308214,
+              "recall": 0.9687849140924601,
+              "F1": 0.9372503572775716,
+              "F1_rerata_per_kelas": 0.9367948324641238
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9529411764705882,
+                "recall": 0.9759036144578314,
+                "F1": 0.9642857142857143,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 85,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.8886894075403949,
+                "recall": 0.9304511278195489,
+                "F1": 0.9090909090909091,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 557,
+                "true_positives_at_iou50": 495
+              },
+              "robot": {
+                "precision": 0.8814814814814815,
+                "recall": 1.0,
+                "F1": 0.937007874015748,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 135,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "hybrid_full_seed2025": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_hybrid/yolo11_tiny_hybrid_full_seed2025/weights/best.pt",
+        "sha256": "68c4f20db711867e7bb508126638f09cbd482245887d835275d188ebd6e8afca"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/hybrid_full_seed2025_metrics.json",
+      "official_source_sha256": "aa969b485fc42c22a8a66a2c5dd90748612db47463cf6531299efe456c4a6795",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9089472803069051,
+          "mAP50": 0.957932860272015,
+          "mAP50-95": 0.7491804851467718,
+          "precision": 0.85460905577114,
+          "recall": 0.9706646133405803
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9529411764705883,
+            "ground_truth_count": 83,
+            "mAP50": 0.9785883281127182,
+            "mAP50-95": 0.8813598187250747,
+            "precision": 0.9310344827586207,
+            "predictions_above_confidence": 87,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8211046990931574,
+            "ground_truth_count": 532,
+            "mAP50": 0.9218502635463734,
+            "mAP50-95": 0.5559491171900971,
+            "precision": 0.7312775330396476,
+            "predictions_above_confidence": 681,
+            "recall": 0.9360902255639098,
+            "true_positives_at_iou50": 498
+          },
+          "robot": {
+            "F1": 0.9482071713147411,
+            "ground_truth_count": 119,
+            "mAP50": 0.9733599891569529,
+            "mAP50-95": 0.8102325195251435,
+            "precision": 0.9015151515151515,
+            "predictions_above_confidence": 132,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 4807,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.854290111327409,
+              "recall": 0.9725443125887007,
+              "F1": 0.9095898108720908,
+              "F1_rerata_per_kelas": 0.9079361487691656
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9310344827586207,
+                "recall": 0.9759036144578314,
+                "F1": 0.9529411764705883,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 87,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7303206997084548,
+                "recall": 0.9417293233082706,
+                "F1": 0.8226600985221675,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 686,
+                "true_positives_at_iou50": 501
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9579526881872639,
+              "mAP50-95": 0.7500353908724053
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9753863610180583,
+                "mAP50-95": 0.8763956363809642
+              },
+              "gawang": {
+                "mAP50": 0.9249262677485616,
+                "mAP50-95": 0.5645338258678612
+              },
+              "robot": {
+                "mAP50": 0.973545435795172,
+                "mAP50-95": 0.809176710368391
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 777,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.9023672018666457,
+              "recall": 0.9643989491801793,
+              "F1": 0.9323524328602669,
+              "F1_rerata_per_kelas": 0.9321870639406756
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9310344827586207,
+                "recall": 0.9759036144578314,
+                "F1": 0.9529411764705883,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 87,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.8745519713261649,
+                "recall": 0.9172932330827067,
+                "F1": 0.8954128440366973,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 558,
+                "true_positives_at_iou50": 488
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "supervised_seed42": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/supervised/yolo11_tiny_supervised_seed42_retry1/weights/best.pt",
+        "sha256": "c2d940ec3800dde0e311df310438eaba28b4013d7819ad958a79489c5b36568e"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/supervised_seed42_metrics.json",
+      "official_source_sha256": "9b2992d400b3fbc682e3e8c52fb077c9e19f61738afe7bf7376a8d98a0503781",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9095090562128358,
+          "mAP50": 0.9584610391037435,
+          "mAP50-95": 0.7202672540792384,
+          "precision": 0.857269629000684,
+          "recall": 0.9685282483316726
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9580838323353292,
+            "ground_truth_count": 83,
+            "mAP50": 0.9812507232401156,
+            "mAP50-95": 0.8221904373959494,
+            "precision": 0.9523809523809523,
+            "predictions_above_confidence": 84,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8315352697095436,
+            "ground_truth_count": 532,
+            "mAP50": 0.918643027351364,
+            "mAP50-95": 0.5481621232018329,
+            "precision": 0.7444279346210996,
+            "predictions_above_confidence": 673,
+            "recall": 0.9417293233082706,
+            "true_positives_at_iou50": 501
+          },
+          "robot": {
+            "F1": 0.9333333333333333,
+            "ground_truth_count": 119,
+            "mAP50": 0.9754893667197508,
+            "mAP50-95": 0.7904492016399327,
+            "precision": 0.875,
+            "predictions_above_confidence": 136,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 3709,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8424194554055155,
+              "recall": 0.9725443125887007,
+              "F1": 0.9028171962618655,
+              "F1_rerata_per_kelas": 0.9015732606128363
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9310344827586207,
+                "recall": 0.9759036144578314,
+                "F1": 0.9529411764705883,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 87,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7522522522522522,
+                "recall": 0.9417293233082706,
+                "F1": 0.8363939899833055,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 666,
+                "true_positives_at_iou50": 501
+              },
+              "robot": {
+                "precision": 0.8439716312056738,
+                "recall": 1.0,
+                "F1": 0.9153846153846154,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 141,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9617278374857118,
+              "mAP50-95": 0.7242750926971725
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9797511695211153,
+                "mAP50-95": 0.8525958941761445
+              },
+              "gawang": {
+                "mAP50": 0.9309976575233933,
+                "mAP50-95": 0.5529911295458289
+              },
+              "robot": {
+                "mAP50": 0.9744346854126268,
+                "mAP50-95": 0.7672382543695443
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 784,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8929857464366092,
+              "recall": 0.9687849140924601,
+              "F1": 0.9293423062124511,
+              "F1_rerata_per_kelas": 0.9285852271032228
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9418604651162791,
+                "recall": 0.9759036144578314,
+                "F1": 0.9585798816568047,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 86,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.8870967741935484,
+                "recall": 0.9304511278195489,
+                "F1": 0.9082568807339448,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 558,
+                "true_positives_at_iou50": 495
+              },
+              "robot": {
+                "precision": 0.85,
+                "recall": 1.0,
+                "F1": 0.9189189189189189,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 140,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "supervised_seed1337": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+        "sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/supervised_seed1337_metrics.json",
+      "official_source_sha256": "1102000f3752cf1284c9da0190421543fb6e331fec14e4c0223b64ed46c06807",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9122955712097313,
+          "mAP50": 0.9578258182490496,
+          "mAP50-95": 0.7264933293359825,
+          "precision": 0.8632299159129385,
+          "recall": 0.9672751154995923
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9523809523809523,
+            "ground_truth_count": 83,
+            "mAP50": 0.9735862206292314,
+            "mAP50-95": 0.8286569610567168,
+            "precision": 0.9411764705882353,
+            "predictions_above_confidence": 85,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8358458961474038,
+            "ground_truth_count": 532,
+            "mAP50": 0.9254673936282116,
+            "mAP50-95": 0.5488070136551567,
+            "precision": 0.7537764350453172,
+            "predictions_above_confidence": 662,
+            "recall": 0.9379699248120301,
+            "true_positives_at_iou50": 499
+          },
+          "robot": {
+            "F1": 0.9444444444444444,
+            "ground_truth_count": 119,
+            "mAP50": 0.9744238404897055,
+            "mAP50-95": 0.8020160132960743,
+            "precision": 0.8947368421052632,
+            "predictions_above_confidence": 133,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 3893,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8668758416761256,
+              "recall": 0.9694114805085001,
+              "F1": 0.9152809399092643,
+              "F1_rerata_per_kelas": 0.91416911875238
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9418604651162791,
+                "recall": 0.9759036144578314,
+                "F1": 0.9585798816568047,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 86,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7572519083969466,
+                "recall": 0.9323308270676691,
+                "F1": 0.835720303285594,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 655,
+                "true_positives_at_iou50": 496
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9555184050871487,
+              "mAP50-95": 0.7291264095562624
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9745194003527337,
+                "mAP50-95": 0.8359787923669162
+              },
+              "gawang": {
+                "mAP50": 0.9184998570403277,
+                "mAP50-95": 0.5489702787390056
+              },
+              "robot": {
+                "mAP50": 0.9735359578683848,
+                "mAP50-95": 0.8024301575628648
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 774,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.909422567654122,
+              "recall": 0.9669052148443398,
+              "F1": 0.937283380189592,
+              "F1_rerata_per_kelas": 0.9370662725591427
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9418604651162791,
+                "recall": 0.9759036144578314,
+                "F1": 0.9585798816568047,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 86,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.8848920863309353,
+                "recall": 0.924812030075188,
+                "F1": 0.9044117647058822,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 556,
+                "true_positives_at_iou50": 492
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "supervised_seed2025": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/supervised/yolo11_tiny_supervised_seed2025/weights/best.pt",
+        "sha256": "0157546d16279d48b8ca5e0ec147b771202353daeb6195eaab93cb8872098301"
+      },
+      "official_source": "runs/final_test/hybrid_full_official_split_20261022/supervised_seed2025_metrics.json",
+      "official_source_sha256": "30d36b89d3b2f4b10b694940fb54c989c353db0c014eb8014d248a9c995d77f1",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.9146332804884434,
+          "mAP50": 0.9639347257543539,
+          "mAP50-95": 0.7207884333120275,
+          "precision": 0.8622465182728326,
+          "recall": 0.9737974454207808
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.9529411764705883,
+            "ground_truth_count": 83,
+            "mAP50": 0.9730479302832243,
+            "mAP50-95": 0.8213853673334134,
+            "precision": 0.9310344827586207,
+            "predictions_above_confidence": 87,
+            "recall": 0.9759036144578314,
+            "true_positives_at_iou50": 81
+          },
+          "gawang": {
+            "F1": 0.8432523051131601,
+            "ground_truth_count": 532,
+            "mAP50": 0.9357530521573147,
+            "mAP50-95": 0.5488154830888806,
+            "precision": 0.7609682299546142,
+            "predictions_above_confidence": 661,
+            "recall": 0.9454887218045113,
+            "true_positives_at_iou50": 503
+          },
+          "robot": {
+            "F1": 0.9444444444444444,
+            "ground_truth_count": 119,
+            "mAP50": 0.9830031948225224,
+            "mAP50-95": 0.7921644495137887,
+            "precision": 0.8947368421052632,
+            "predictions_above_confidence": 133,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 4091,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8605262538014177,
+              "recall": 0.96815834767642,
+              "F1": 0.9111748142235965,
+              "F1_rerata_per_kelas": 0.9107317735065426
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9101123595505618,
+                "recall": 0.9759036144578314,
+                "F1": 0.9418604651162792,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 89,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7767295597484277,
+                "recall": 0.9285714285714286,
+                "F1": 0.845890410958904,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 636,
+                "true_positives_at_iou50": 494
+              },
+              "robot": {
+                "precision": 0.8947368421052632,
+                "recall": 1.0,
+                "F1": 0.9444444444444444,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 133,
+                "true_positives_at_iou50": 119
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9609128475713807,
+              "mAP50-95": 0.7210294149625205
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9733603828547649,
+                "mAP50-95": 0.8339048184085367
+              },
+              "gawang": {
+                "mAP50": 0.9327887800170378,
+                "mAP50-95": 0.5480359653204314
+              },
+              "robot": {
+                "mAP50": 0.9765893798423394,
+                "mAP50-95": 0.7811474611585933
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 763,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.9052288505520397,
+              "recall": 0.9656520820122596,
+              "F1": 0.9344647315797037,
+              "F1_rerata_per_kelas": 0.9341814529878696
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9101123595505618,
+                "recall": 0.9759036144578314,
+                "F1": 0.9418604651162792,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 89,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.9040590405904059,
+                "recall": 0.9210526315789473,
+                "F1": 0.9124767225325884,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 542,
+                "true_positives_at_iou50": 490
+              },
+              "robot": {
+                "precision": 0.9015151515151515,
+                "recall": 1.0,
+                "F1": 0.9482071713147411,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 132,
+                "true_positives_at_iou50": 119
+              }
+            }
+          }
+        }
+      }
+    },
+    "kd_seed42": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd/yolo11_tiny_pure_kd_v4_locked_seed42/weights/best.pt",
+        "sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3"
+      },
+      "official_source": "runs/final_test/pure_kd_official_split_locked_retry1/kd_seed42_metrics.json",
+      "official_source_sha256": "50e9eace3190cf20d079998229dece458a8c52a6da3caf7269eb8170d8bde9cf",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.8395112202906242,
+          "mAP50": 0.948078274751973,
+          "mAP50-95": 0.6744243558211228,
+          "precision": 0.7450869845313332,
+          "recall": 0.9613411629712125
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.8163265306122449,
+            "ground_truth_count": 83,
+            "mAP50": 0.9642731478263434,
+            "mAP50-95": 0.7513350303959972,
+            "precision": 0.7079646017699115,
+            "predictions_above_confidence": 113,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8240200166805671,
+            "ground_truth_count": 532,
+            "mAP50": 0.9165322024357817,
+            "mAP50-95": 0.53992442518766,
+            "precision": 0.7406296851574213,
+            "predictions_above_confidence": 667,
+            "recall": 0.9285714285714286,
+            "true_positives_at_iou50": 494
+          },
+          "robot": {
+            "F1": 0.8773234200743494,
+            "ground_truth_count": 119,
+            "mAP50": 0.9634294739937942,
+            "mAP50-95": 0.7320136118797119,
+            "precision": 0.7866666666666666,
+            "predictions_above_confidence": 150,
+            "recall": 0.9915966386554622,
+            "true_positives_at_iou50": 118
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 3420,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.7623976889744825,
+              "recall": 0.9563654884908942,
+              "F1": 0.8484366523556123,
+              "F1_rerata_per_kelas": 0.8482198520704802
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.8,
+                "recall": 0.963855421686747,
+                "F1": 0.8743169398907104,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 100,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.7388059701492538,
+                "recall": 0.9304511278195489,
+                "F1": 0.8236272878535773,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 670,
+                "true_positives_at_iou50": 495
+              },
+              "robot": {
+                "precision": 0.7483870967741936,
+                "recall": 0.9747899159663865,
+                "F1": 0.8467153284671532,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 155,
+                "true_positives_at_iou50": 116
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9483008487266158,
+              "mAP50-95": 0.6763394596429945
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9664936271058122,
+                "mAP50-95": 0.7732237269920824
+              },
+              "gawang": {
+                "mAP50": 0.9172971779649174,
+                "mAP50-95": 0.5347758684781854
+              },
+              "robot": {
+                "mAP50": 0.9611117411091178,
+                "mAP50-95": 0.7210187834587158
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 784,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8771154149885493,
+              "recall": 0.9538592228267339,
+              "F1": 0.9138789918669864,
+              "F1_rerata_per_kelas": 0.913706312675903
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.8888888888888888,
+                "recall": 0.963855421686747,
+                "F1": 0.9248554913294798,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 90,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.8767857142857143,
+                "recall": 0.9229323308270677,
+                "F1": 0.8992673992673993,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 560,
+                "true_positives_at_iou50": 491
+              },
+              "robot": {
+                "precision": 0.8656716417910447,
+                "recall": 0.9747899159663865,
+                "F1": 0.9169960474308301,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 134,
+                "true_positives_at_iou50": 116
+              }
+            }
+          }
+        }
+      }
+    },
+    "kd_seed1337": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd/yolo11_tiny_pure_kd_v4_seed1337/weights/best.pt",
+        "sha256": "bb51513031b8b522303a6c51e7914f72adf523f4af1dad984415c69fe3833fe5"
+      },
+      "official_source": "runs/final_test/pure_kd_official_split_locked_retry1/kd_seed1337_metrics.json",
+      "official_source_sha256": "b6d050680e2de8e1e968ea374e89930faa08e1c28528268309dd6f07296e056e",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.8372467855907291,
+          "mAP50": 0.9402957563290876,
+          "mAP50-95": 0.6530584049843047,
+          "precision": 0.7404125211599578,
+          "recall": 0.9632208622193329
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.8333333333333334,
+            "ground_truth_count": 83,
+            "mAP50": 0.9475197610732233,
+            "mAP50-95": 0.7145003569689944,
+            "precision": 0.7339449541284404,
+            "predictions_above_confidence": 109,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.82013201320132,
+            "ground_truth_count": 532,
+            "mAP50": 0.9150407131350342,
+            "mAP50-95": 0.5412017515945469,
+            "precision": 0.7308823529411764,
+            "predictions_above_confidence": 680,
+            "recall": 0.9342105263157895,
+            "true_positives_at_iou50": 497
+          },
+          "robot": {
+            "F1": 0.8581818181818182,
+            "ground_truth_count": 119,
+            "mAP50": 0.9583267947790052,
+            "mAP50-95": 0.703473106389373,
+            "precision": 0.7564102564102564,
+            "predictions_above_confidence": 156,
+            "recall": 0.9915966386554622,
+            "true_positives_at_iou50": 118
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 3004,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.7448101692358651,
+              "recall": 0.9625942958032928,
+              "F1": 0.839812750924587,
+              "F1_rerata_per_kelas": 0.8397507852428944
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.7339449541284404,
+                "recall": 0.963855421686747,
+                "F1": 0.8333333333333334,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 109,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.7391952309985097,
+                "recall": 0.9323308270676691,
+                "F1": 0.8246051537822111,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 671,
+                "true_positives_at_iou50": 496
+              },
+              "robot": {
+                "precision": 0.7612903225806451,
+                "recall": 0.9915966386554622,
+                "F1": 0.8613138686131386,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 155,
+                "true_positives_at_iou50": 118
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9477311712330666,
+              "mAP50-95": 0.6555103032058684
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9615674824991759,
+                "mAP50-95": 0.7303186995362251
+              },
+              "gawang": {
+                "mAP50": 0.9151798769496684,
+                "mAP50-95": 0.5374753340296967
+              },
+              "robot": {
+                "mAP50": 0.9664461542503555,
+                "mAP50-95": 0.6987368760516832
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 783,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.8922020257378313,
+              "recall": 0.9607145965551726,
+              "F1": 0.9251916668993926,
+              "F1_rerata_per_kelas": 0.9245330976848486
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.9411764705882353,
+                "recall": 0.963855421686747,
+                "F1": 0.9523809523809523,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 85,
+                "true_positives_at_iou50": 80
+              },
+              "gawang": {
+                "precision": 0.8803571428571428,
+                "recall": 0.9266917293233082,
+                "F1": 0.9029304029304029,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 560,
+                "true_positives_at_iou50": 493
+              },
+              "robot": {
+                "precision": 0.855072463768116,
+                "recall": 0.9915966386554622,
+                "F1": 0.9182879377431906,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 138,
+                "true_positives_at_iou50": 118
+              }
+            }
+          }
+        }
+      }
+    },
+    "kd_seed2025": {
+      "checkpoint": {
+        "path": "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd/yolo11_tiny_pure_kd_v4_seed2025/weights/best.pt",
+        "sha256": "79997050873a1b9cf2759148d8315546b81845b7c0e02e6bfca656534b280389"
+      },
+      "official_source": "runs/final_test/pure_kd_official_split_locked_retry1/kd_seed2025_metrics.json",
+      "official_source_sha256": "c6c5a157004fd3f38147d9fc28d54c4b2217d5262f07766c7df6dfaef9036f40",
+      "official_test_metrics": {
+        "overall": {
+          "F1": 0.8617939601887398,
+          "mAP50": 0.9455321285158503,
+          "mAP50-95": 0.661625518763487,
+          "precision": 0.7786811919587304,
+          "recall": 0.964768849835432
+        },
+        "per_class": {
+          "ball": {
+            "F1": 0.8695652173913044,
+            "ground_truth_count": 83,
+            "mAP50": 0.9562017311499909,
+            "mAP50-95": 0.7248084615946977,
+            "precision": 0.7920792079207921,
+            "predictions_above_confidence": 101,
+            "recall": 0.963855421686747,
+            "true_positives_at_iou50": 80
+          },
+          "gawang": {
+            "F1": 0.8243130724396337,
+            "ground_truth_count": 532,
+            "mAP50": 0.9100191180520946,
+            "mAP50-95": 0.5335921984367648,
+            "precision": 0.7399103139013453,
+            "predictions_above_confidence": 669,
+            "recall": 0.9304511278195489,
+            "true_positives_at_iou50": 495
+          },
+          "robot": {
+            "F1": 0.8913857677902622,
+            "ground_truth_count": 119,
+            "mAP50": 0.9703755363454657,
+            "mAP50-95": 0.7264758962589986,
+            "precision": 0.8040540540540541,
+            "predictions_above_confidence": 148,
+            "recall": 1.0,
+            "true_positives_at_iou50": 119
+          }
+        }
+      },
+      "predict": {
+        "protokol_test": {
+          "settings": {
+            "conf": 0.001,
+            "iou": 0.7,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan evaluator TEST resmi",
+          "prediction_count": 3572,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.7608260918282269,
+              "recall": 0.9672369264763611,
+              "F1": 0.8517039978842328,
+              "F1_rerata_per_kelas": 0.8516796621182587
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.7570093457943925,
+                "recall": 0.9759036144578314,
+                "F1": 0.8526315789473685,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 107,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.7440119760479041,
+                "recall": 0.9342105263157895,
+                "F1": 0.8283333333333334,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 668,
+                "true_positives_at_iou50": 497
+              },
+              "robot": {
+                "precision": 0.7814569536423841,
+                "recall": 0.9915966386554622,
+                "F1": 0.874074074074074,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 151,
+                "true_positives_at_iou50": 118
+              }
+            }
+          },
+          "average_precision": {
+            "overall": {
+              "mAP50": 0.9428350301693741,
+              "mAP50-95": 0.6621783311182188
+            },
+            "per_class": {
+              "ball": {
+                "mAP50": 0.9591523875044972,
+                "mAP50-95": 0.7349339498120153
+              },
+              "gawang": {
+                "mAP50": 0.898655910277842,
+                "mAP50-95": 0.5304996261195771
+              },
+              "robot": {
+                "mAP50": 0.970696792725783,
+                "mAP50-95": 0.7211014174230638
+              }
+            }
+          }
+        },
+        "robot": {
+          "settings": {
+            "conf": 0.25,
+            "iou": 0.45,
+            "imgsz": 640,
+            "precision": "FP32",
+            "device": "cpu",
+            "batch": 1,
+            "max_det": 300,
+            "agnostic_nms": false
+          },
+          "keterangan": "ambang sama dengan runtime OP3 (D4)",
+          "prediction_count": 790,
+          "letterbox_tensor_shapes": {
+            "640x640": 592
+          },
+          "operating_point": {
+            "overall": {
+              "precision": 0.882784223401668,
+              "recall": 0.9647306608122005,
+              "F1": 0.9219400768825301,
+              "F1_rerata_per_kelas": 0.9218462587597692
+            },
+            "per_class": {
+              "ball": {
+                "precision": 0.8901098901098901,
+                "recall": 0.9759036144578314,
+                "F1": 0.9310344827586207,
+                "ground_truth_count": 83,
+                "predictions_above_confidence": 91,
+                "true_positives_at_iou50": 81
+              },
+              "gawang": {
+                "precision": 0.8710247349823321,
+                "recall": 0.9266917293233082,
+                "F1": 0.8979963570127504,
+                "ground_truth_count": 532,
+                "predictions_above_confidence": 566,
+                "true_positives_at_iou50": 493
+              },
+              "robot": {
+                "precision": 0.8872180451127819,
+                "recall": 0.9915966386554622,
+                "F1": 0.9365079365079365,
+                "ground_truth_count": 119,
+                "predictions_above_confidence": 133,
+                "true_positives_at_iou50": 118
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
