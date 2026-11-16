@@ -7,3 +7,5 @@ All 48 baseline identity checks passed. Four models were assessed offline on fro
 Initial replay exposed an Ultralytics CPU backend reset to 8 intra-op threads after metadata was recorded; the primary replay resets and verifies 4. Historical post-initialization thread counts were not measured, so an additional one-thread OpenBLAS control reduces replay CPU substantially. Actual OpenBLAS and post-initialization thread counts were not observed during historical runs, so their CPU cause cannot be established conclusively. Teacher weights, images, labels, raw logs and frame-level predictions remain local.
 
 The predictor endpoint also matched precision, recall, F1 and counts in all 20 model–dataset pairs. Validator AP reproduced in 14/20; six student/T38 mismatches were not interpreted. Prompt and reference code were read from fetched Git object `ade031a` without updating the working branch because untracked local data existed.
+
+After the experiment, the local results commit was merged with four upstream commits in preparation for push; raw data were excluded. The earlier manifest was archived.

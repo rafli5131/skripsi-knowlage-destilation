@@ -1,0 +1,72 @@
+# Indeks tabel analisis performa
+
+> **9 November 2026:** [T42 ablasi teacher](tabel/T42_ablasi_teacher_yolo11s_val.md) pada server2 selesai untuk dua teacher dan enam student; [audit teacher](../audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 sebelumnya di bawah bersifat historis.
+
+> **5 November 2026:** [T38 empat model](tabel/T38_akurasi_op3_empat_model_260.md) telah selesai pada 260 frame OP3 yang sama. Hasil ini retrospektif dan eksploratif; [dokumentasi dan grafik](../dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md) mencatat batasnya. Status T38 belum ada di bawah merupakan snapshot historis.
+
+> Keputusan terbaru: [pengguna menerima 24 run untuk analisis deskriptif](../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/KEPUTUSAN_PENGGUNA.md) dengan keterbatasan audit; persetujuan pembimbing belum dicatat.
+
+> Pembaruan terbaru: [audit 24 run, T36/T37 dan batas protokol](../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md); seluruh cek log/telemetry lulus, pengesahan kesetaraan fisik masih terbuka. Status terdahulu di bawah merupakan snapshot historis.
+
+> Arsip progres: [pengganti KD murni berjalan ulangan 3](../dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/README_ID.md) lulus cek otomatis; 24/24 slot aktif lulus cek otomatis. Audit protokol akhir masih terbuka; status di bawah adalah snapshot sebelumnya.
+
+> Arsip progres: [KD murni berjalan tiga ulangan](../dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/README_ID.md) selesai; 24/24 slot terukur, 23 lulus cek otomatis dan satu perlu audit. Status sebelumnya di bawah merupakan snapshot historis.
+
+> Arsip progres: [KD murni idle tiga ulangan](../dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/README_ID.md) selesai; kampanye 21/24 slot. Status sebelumnya di bawah adalah snapshot historis.
+
+> Arsip progres: [Supervised berjalan tiga ulangan](../dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/README_ID.md) selesai; kampanye 18/24 slot. Status di bawah merupakan snapshot sebelumnya.
+
+> Arsip progres: [Supervised idle tiga ulangan](../dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/README_ID.md) selesai; kampanye 15/24 slot. Pernyataan 12/24 di bawah adalah snapshot sebelumnya.
+
+Pembaruan: 2026-11-03. T28–T29 merangkum VAL KD Hybrid full, T30–T31 memuat evaluasi TEST lanjutannya, T32 memuat benchmark server, T33 memuat pelatihan tiga seed, T35 merangkum waktu training serta durasi sesi TEST, dan T39 memuat diagnosis awal perbaikan objektif KD pada VAL. [Indeks lab/server](lab_server/README.md) menjelaskan sumber dan protokol. T15–T26 merangkum tabel runtime OP3 historis. T27 memuat evaluasi kamera OP3 seed 42, sedangkan T34 memuat evaluasi berpasangan Hybrid dan Supervised seed 1337 pada 260 frame yang sama. Definisi F1 utama T27 (F1 dari P/R makro) berbeda dari F1 makro T34 (rerata F1 tiap kelas); jangan menggabungkan angka keduanya. Hasil TEST Advance Vision bukan akurasi kamera OP3. Sesuai keputusan D14, uji live OP3 setara menjadi bukti runtime utama RQ4/RQ5 setelah seluruh run dan audit protokol selesai; hasil live lama tetap pendahuluan.
+
+**Arsip progres awal, saat 12/24 slot:** [Percobaan 30](../dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/README_ID.md) dan [31](../dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/README_ID.md) merekam teacher serta KD Hybrid idle/berjalan. [Tabel sementara](../dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_24_run.csv), [agregat awal](../dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/05-ringkasan/tabel_agregat_saat_ini.csv), dan [grafik KD Hybrid berjalan](../dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/grafik_hybrid1337_walk_ulangan_1_2_3_hd.png) dipertahankan. Status terkini: [24 run dan audit](../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md), [T38](tabel/T38_akurasi_op3_empat_model_260.md), serta [visualisasi terbaru](../dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md).
+
+| Tabel | Status | Berkas |
+| --- | --- | --- |
+| T01 | Lengkap dari artefak historis; bukan validasi kamera OP3. | [CSV](tabel/T01_spesifikasi_model.csv) · [Markdown](tabel/T01_spesifikasi_model.md) |
+| T02 | Lengkap; durasi enam run ditelusuri ke results.csv atau manifest resume. | [CSV](tabel/T02_resep_pelatihan.csv) · [Markdown](tabel/T02_resep_pelatihan.md) |
+| T03 | Lengkap dari results.csv run yang sudah ada. | [CSV](tabel/T03_konvergensi.csv) · [Markdown](tabel/T03_konvergensi.md) |
+| T04 | Lengkap untuk KD pure tiga seed, pilot pure_weighted seed 42, hybrid_feature seed 42, dan hybrid_full tiga seed; hasil Hybrid full dibandingkan dengan supervised pada T28–T29. | [CSV](tabel/T04_ablasi_kd_val.csv) · [Markdown](tabel/T04_ablasi_kd_val.md) · [Per kelas](tabel/T04_ablasi_kd_val_per_kelas.md) |
+| T05 | Lengkap untuk ringkasan tiga seed, bootstrap antar-seed, dan [interval per checkpoint](lab_server/interval_bootstrap_per_model.md); bootstrap antar-seed eksploratif karena n=3. | [CSV](tabel/T05_akurasi_test_keseluruhan.csv) · [Markdown](tabel/T05_akurasi_test_keseluruhan.md) |
+| T06 | Lengkap dari hasil TEST terkunci yang sudah ada. | [CSV](tabel/T06_akurasi_per_kelas.csv) · [Markdown](tabel/T06_akurasi_per_kelas.md) |
+| T07 | Lengkap untuk lima metrik keseluruhan pada tiga pasangan seed dan retensi mAP50–95 terhadap teacher. | [CSV](tabel/T07_selisih_berpasangan.csv) · [Markdown](tabel/T07_selisih_berpasangan.md) |
+| T08 | Lengkap untuk tiga kelas × tiga ukuran × tujuh checkpoint pada VAL. | [CSV](tabel/T08_akurasi_ukuran_objek.csv) · [Markdown](tabel/T08_akurasi_ukuran_objek.md) |
+| T09 | Lengkap dari diagnosis tujuh checkpoint pada VAL; kategori FP saling eksklusif. | [CSV](tabel/T09_analisis_kesalahan.csv) · [Markdown](tabel/T09_analisis_kesalahan.md) |
+| T10 | Lengkap dari prediksi VAL dan pencocokan satu-ke-satu. | [CSV](tabel/T10_matriks_kebingungan.csv) · [Markdown](tabel/T10_matriks_kebingungan.md) |
+| T11 | Lengkap dari sapuan confidence pada VAL; hasil TEST historis tidak dipilih ulang. | [CSV](tabel/T11_sapuan_confidence.csv) · [Markdown](tabel/T11_sapuan_confidence.md) |
+| T12 | Lengkap untuk lima ambang NMS pada tiga model perwakilan di VAL. | [CSV](tabel/T12_sapuan_iou_nms.csv) · [Markdown](tabel/T12_sapuan_iou_nms.md) |
+| T13 | Lengkap untuk empat ukuran input pada tiga model perwakilan CPU server, ditambah tujuh titik dasar 640 NVIDIA L40. | [CSV](tabel/T13_sapuan_imgsz.csv) · [Markdown](tabel/T13_sapuan_imgsz.md) |
+| T14 | Lengkap dari prediksi VAL yang lolos confidence 0,25 dan bin ECE. | [CSV](tabel/T14_kalibrasi_confidence.csv) · [Markdown](tabel/T14_kalibrasi_confidence.md) |
+| T15 | Lingkungan NUC dilengkapi dengan snapshot 22 Oktober: CPU fisik/logis, RAM, governor, dan intel_pstate; bukan telemetry per-run. | [CSV](tabel/T15_lingkungan_uji_op3.csv) · [Markdown](tabel/T15_lingkungan_uji_op3.md) |
+| T16 | Belum ada benchmark fixed-frame di CPU OP3; log live dirangkum di T18/T19 dan tidak disetarakan sebagai fixed-frame. | [CSV](tabel/T16_latensi_frame_tetap.csv) · [Markdown](tabel/T16_latensi_frame_tetap.md) |
+| T17 | Konfigurasi thread aktual dari enam run dirangkum; sapuan thread terkontrol belum dilakukan karena preview/kondisi ikut berubah. | [CSV](tabel/T17_sapuan_thread.csv) · [Markdown](tabel/T17_sapuan_thread.md) |
+| T18 | Enam sesi historis ditambah lima benchmark live 22 Oktober; protokol dan label kondisi dicatat per run. | [CSV](tabel/T18_sesi_live_historis.csv) · [Markdown](tabel/T18_sesi_live_historis.md) |
+| T19 | Uji terbaru Supervised, KD murni, dan KD Hybrid idle/walking; enam run terbaru beserta lima run historis di CSV. Manager mati saat idle KD murni; gait run terbaru diverifikasi telemetry. | [CSV](tabel/T19_servo_idle_vs_walking.csv) · [Markdown](tabel/T19_servo_idle_vs_walking.md) |
+| T20 | Callback frame pertama dan sumber daya memuat lima run benchmark 22 Oktober; waktu load model tetap tidak direkam. | [CSV](tabel/T20_sumber_daya_startup.csv) · [Markdown](tabel/T20_sumber_daya_startup.md) |
+| T21 | Dua snapshot suhu servo kepala tersedia; uji kestabilan termal berkelanjutan dan suhu CPU/NUC belum ada. | [CSV](tabel/T21_stabilitas_termal.csv) · [Markdown](tabel/T21_stabilitas_termal.md) |
+| T22 | Lima run terbaru menambah throughput dan capture-gap; laju topic mentah dan uji kamera-saja berpasangan belum ada. | [CSV](tabel/T22_aliran_kamera.csv) · [Markdown](tabel/T22_aliran_kamera.md) |
+| T23 | Proporsi deadline callback dan stage dihitung untuk lima run 22 Oktober selain sesi historis; fixed-frame belum ada. | [CSV](tabel/T23_kepatuhan_tenggat.csv) · [Markdown](tabel/T23_kepatuhan_tenggat.md) |
+| T24 | Preview on/off teramati pada dua sesi KD murni idle; thread ikut berubah sehingga efek preview tidak terisolasi. | [CSV](tabel/T24_pengaruh_preview.csv) · [Markdown](tabel/T24_pengaruh_preview.md) |
+| T25 | Statistik per kelas, confidence, perubahan hitungan, dan ID ditambahkan untuk lima benchmark utama 22 Oktober; keluaran bukan akurasi. | [CSV](tabel/T25_observasi_deteksi_live.csv) · [Markdown](tabel/T25_observasi_deteksi_live.md) |
+| T26 | TEST Advance Vision dipasangkan secara deskriptif dengan runtime OP3 terbaru Supervised, KD murni, dan Hybrid. Fixed-frame OP3 dan runtime teacher/supervised seed 42 belum ada. | [CSV](tabel/T26_tradeoff_utama.csv) · [Markdown](tabel/T26_tradeoff_utama.md) |
+| T27 | Sebagian: evaluasi eksploratif 260 frame utama (200 berobjek + 60 negatif). Set 50 frame gawang parsial hanya catatan dan tidak digunakan membandingkan model karena definisi kotak berbeda serta draf label berasal dari KD. Set final D8 belum dikunci; risiko bias anotasi juga berlaku pada set utama. | [CSV](tabel/T27_akurasi_frame_kamera_op3.csv) · [Markdown](tabel/T27_akurasi_frame_kamera_op3.md) · [Audit label](lab_server/AUDIT_DEFINISI_GAWANG_2026-10-21.md) · [Asal frame negatif](lab_server/AUDIT_ASAL_FRAME_NEGATIF_2026-10-21.md) |
+| T28 | Evaluasi VAL berpasangan KD Hybrid full vs supervised pada tiga seed, rerata ± SD dan delta. | [CSV](tabel/T28_selisih_kd_hybrid_val.csv) · [Markdown](tabel/T28_selisih_kd_hybrid_val.md) |
+| T29 | Evaluasi VAL per kelas berpasangan KD Hybrid full vs supervised pada tiga seed. | [CSV](tabel/T29_kd_hybrid_val_per_kelas.csv) · [Markdown](tabel/T29_kd_hybrid_val_per_kelas.md) |
+| T30 | Evaluasi TEST lanjutan berpasangan KD Hybrid full vs supervised pada tiga seed; split pernah dipakai eksperimen lama. | [CSV](tabel/T30_kd_hybrid_test_berpasangan.csv) · [Markdown](tabel/T30_kd_hybrid_test_berpasangan.md) |
+| T31 | Evaluasi TEST lanjutan per kelas berpasangan. | [CSV](tabel/T31_kd_hybrid_test_per_kelas.csv) · [Markdown](tabel/T31_kd_hybrid_test_per_kelas.md) |
+| T32 | Benchmark enam checkpoint pada frame VAL tetap dan NVIDIA L40; bukan FPS OP3. | [CSV](tabel/T32_kd_hybrid_benchmark_server.csv) · [Markdown](tabel/T32_kd_hybrid_benchmark_server.md) |
+| T33 | Resep, durasi, dan konvergensi training KD Hybrid full tiga seed. | [CSV](tabel/T33_pelatihan_kd_hybrid_full.csv) · [Markdown](tabel/T33_pelatihan_kd_hybrid_full.md) |
+| T34 | Eksploratif: KD Hybrid full dan Supervised seed 1337 pada 260 frame kamera OP3 yang sama; P/R/F1 per kelas, AP, dan false positive frame negatif. | [CSV](tabel/T34_akurasi_op3_hybrid_supervised_seed1337.csv) · [Markdown](tabel/T34_akurasi_op3_hybrid_supervised_seed1337.md) · [Dokumentasi](../dokumentasi/2026-10-23/percobaan-28-evaluasi-offline-hybrid-supervised-260/README_ID.md) |
+| T35 | Waktu training sembilan run; durasi dua sesi TEST multi-model; latensi inferensi per gambar tetap di T32. | [CSV](tabel/T35_waktu_training_dan_pengujian.csv) · [Markdown](tabel/T35_waktu_training_dan_pengujian.md) · [Grafik training](grafik/T35_waktu_training.png) · [Grafik TEST](grafik/T35_durasi_sesi_TEST.png) |
+| T36 | Runtime OP3 per run untuk 24 slot aktif; cek log dan telemetry selesai, interpretasi dibatasi audit protokol. | [CSV](tabel/T36_runtime_live_setara_per_run.csv) · [Markdown](tabel/T36_runtime_live_setara_per_run.md) |
+| T37 | Ringkasan rata-rata dan SD runtime per model/kondisi; diterima pengguna sebagai analisis deskriptif. | [CSV](tabel/T37_runtime_live_setara_ringkasan.csv) · [Markdown](tabel/T37_runtime_live_setara_ringkasan.md) |
+| T38 | Evaluasi offline retrospektif empat model pada 260 frame OP3 identik, label ditinjau setelah bantuan pra-label KD. | [CSV](tabel/T38_akurasi_op3_empat_model_260.csv) · [Markdown](tabel/T38_akurasi_op3_empat_model_260.md) · [Dokumentasi](../dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md) |
+| T39 | Diagnosis awal KD jalur tengah pada VAL tiga seed: ambang F1, FP, histogram confidence, serta audit head/loss satu batch. Penyaringan dan konfirmasi selesai pada T40/T41. | [CSV](tabel/T39_diagnosis_objektif_kd.csv) · [Markdown](tabel/T39_diagnosis_objektif_kd.md) · [Histogram TP/FP](tabel/T39_histogram_confidence_tp_fp.csv) · [Laporan](lab_server/HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md) |
+| T40 | Penyaringan `hybrid_v2` S1–S8 pada VAL seed 42 selesai. Konfirmasi tiga seed selesai pada T41; S2 tidak mengganti Hybrid full. | [CSV lengkap](tabel/T40_penyaringan_hybrid_v2_val_s1_s8.csv) · [Markdown lengkap](tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md) · [Tahap S1–S3](tabel/T40_penyaringan_hybrid_v2_val.md) |
+| T41 | Konfirmasi `hybrid_v2` S2 pada VAL tiga seed selesai. S2 tidak memenuhi syarat penggantian; Hybrid full tetap model KD utama. | [CSV](tabel/T41_konfirmasi_hybrid_v2_val.csv) · [Markdown](tabel/T41_konfirmasi_hybrid_v2_val.md) · [Laporan](lab_server/HASIL_KD_HYBRID_V2_2026-10-24.md) |
+| T42 | Ablasi dua teacher dan enam student pada VAL server2; audit teacher dilaporkan lulus. | [CSV](tabel/T42_ablasi_teacher_yolo11s_val.csv) · [Markdown](tabel/T42_ablasi_teacher_yolo11s_val.md) · [Audit server](../audit_teacher_t42_LTOW7Xw5.json) |
+
+T42 server2 selesai untuk dua teacher dan enam student pada VAL; lihat [tabel](tabel/T42_ablasi_teacher_yolo11s_val.md), [status](../runs/kd_teacher_ablation/server2/t42_status.jsonl), dan [hasil audit teacher](../audit_teacher_t42_LTOW7Xw5.json). Ini eksperimen terpisah dan tidak mengganti model OP3.
+
+- [T44 — jalur tunggal OP3](tabel/T44_jalur_tunggal_op3_t38_t43.md) dan [T45 — rincian latensi dan CPU](tabel/T45_rincian_latensi_dan_cpu_op3.md).

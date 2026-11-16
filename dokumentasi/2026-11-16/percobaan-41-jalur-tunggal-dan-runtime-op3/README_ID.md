@@ -27,3 +27,5 @@ ssh dindarosyidah@labkc-l40-debian 'sha256sum "$HOME/skripsi/skripsi-knowlage-de
 Dua puluh dari dua puluh endpoint predictor cocok juga untuk precision, recall, F1, TP dan frame negatif. Endpoint AP validator cocok pada 14 dari 20 pasangan model–set; enam ketidakcocokan adalah tiga student pada dua set T38 dan faktor tersebut tidak ditafsirkan. Hasil lengkap ada pada `runs/op3_single_path_eval/20261116_analysis_01/endpoint_operating_audit.json`.
 
 Prompt dan skrip acuan dibaca dari objek Git `origin/main` revisi `ade031a89d0e9d5cb088c5615e31746fd9c43a4c`; branch kerja dimulai dari `d35c31b` dan tidak di-pull karena banyak file lokal belum dilacak. Kode acuan dipakai dari objek Git dengan hash tercatat, tanpa menimpa file lokal. Penambahan tautan ke T38/T43 mengubah hash Markdown, bukan angkanya; versi sebelum penambahan disimpan sebagai arsip dan manifest historis tetap dipertahankan.
+
+Setelah pengujian selesai, commit hasil lokal dan empat commit GitHub digabungkan untuk menyiapkan push; tidak ada data mentah yang disertakan. Manifest diperbarui untuk indeks hasil gabungan, dan versi sebelumnya diarsipkan.

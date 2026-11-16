@@ -6,7 +6,7 @@
   "teacher_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
   "raw_frames_labels_predictions_logs_remain_local": true,
   "files": {
-    "analisis_performa/INDEKS.md": "2ee875c163dd2158864178c12c34010d20d064248ce32729be83103dcfb9144f",
+    "analisis_performa/INDEKS.md": "199263c26876c7b87acaf3fb2d0b988ba33c5f0a81ba4b31127adf5c50faa6b9",
     "analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md": "fe271981818f3c34d68ccb84904ddff90db50fa5a922ba97a37f908568ca9702",
     "analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md": "f592c53b741071a5c514569cc6116f053e8e5b17b96949c9d7d07e3c5e91c409",
     "analisis_performa/tabel/T44_jalur_tunggal_op3_t38_t43.csv": "231f77665be8dedb7f7618a8395cbf1706cb82123a56124a2c034eb4fa7f92ca",
@@ -14,8 +14,8 @@
     "analisis_performa/tabel/T45_cpu_thread_replay.csv": "cdc236c33327863ec866b3512c0b3a32f096eec92b90d690ea91803ba95a902c",
     "analisis_performa/tabel/T45_rincian_latensi_dan_cpu_op3.csv": "e14056ca73c6a9d20eb459e8336932df028480a69f0c92e58cf223f27812d898",
     "analisis_performa/tabel/T45_rincian_latensi_dan_cpu_op3.md": "1699dd05f07503db6ee84e683f323384b32a8236e2628bc6aeb6b710cfded988",
-    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_EN.md": "5d4cfa9d664cbd607612dcb6e0b26df5c9259f5d7f507f64602453ef65097cb1",
-    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_ID.md": "7c97ac8f95e56d404132bd70083bf6f0d57f776502fa4ce78ff1e5ce10f588e8",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_EN.md": "893eee271d63993adb1e61afd2addb6989fa2265cf8ef04ab9748dcfd9df9f2b",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_ID.md": "a145225367b4c7b27c39343e01c4beeb1e9e4cd31438031b086ed4506a4c8c59",
     "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_T44_T38_akurasi_op3_empat_model_260.md": "d1c5fd480e56982f8c1e3ada585683f8d9cecfe4ebb81d0cd9b903fad64ece1f",
     "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_T44_T43_akurasi_op3_empat_model_260.md": "beb996e7987696bc16a0527c849b77b76ecdadedf278a5f17304f7811b36574c",
     "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/botsort_terpasang.yaml": "8cd88930d3be5557be0777f384eecff0a36a7011850fe613fc0a68178bfd5b01",
@@ -62,8 +62,17 @@
     "ros2_packages/op3_single_path_eval/audit_endpoints.py": "9183a8e34a6b0b2dca072d448192e8532fb7e2d6a3b606e9aea94940a80c69c6",
     "ros2_packages/op3_single_path_eval/plot_context.py": "f3c2d466ff40b18b023d8674adb48eb412ee9e1ee7a8aaa57be2cf8f528e1dc0",
     "ros2_packages/op3_single_path_eval/README.md": "4cbbbf71cec94cb367ad146b3c516b7dd0d62c471baaf2d893cd75386a6384b5",
-    "memory/2026-11-16-op3-jalur-tunggal-runtime.md": "0a8130df2a6bff32ba94433b5ae4caf9d102d02b385185cb6a6310b6cfe6a770"
+    "memory/2026-11-16-op3-jalur-tunggal-runtime.md": "3de3cb2008a460c8b254e2c617c7a55c992730bcbeedf438f0ccc88b04e0c96e",
+    "README.md": "5230730d383477c40ff684f41cf8317401c7721fdf6813ea1da8177a971b0aa6",
+    "dokumentasi/2026-11-16/LOG_PROGRES_SKRIPSI.md": "30b1f5afb49411c4624669d198bffc34ee5dda2f8f5fa9b238a2e9a1eda7d4fb",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github/INDEKS_sebelum_merge.md": "2ee875c163dd2158864178c12c34010d20d064248ce32729be83103dcfb9144f",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github/README_EN.md": "5d4cfa9d664cbd607612dcb6e0b26df5c9259f5d7f507f64602453ef65097cb1",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github/README_ID.md": "7c97ac8f95e56d404132bd70083bf6f0d57f776502fa4ce78ff1e5ce10f588e8",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github/manifest_hasil_sha256.json": "abbb409f452c068cad7de33f64a278329f52866e593a190a76be9b5b3237b40d",
+    "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github/memory_sebelum_merge.md": "0a8130df2a6bff32ba94433b5ae4caf9d102d02b385185cb6a6310b6cfe6a770"
   },
-  "updated_utc": "2026-11-16T07:02:27.143057+00:00",
-  "previous_manifest_sha256": "2394c90e9df7159ac47048d594571202119746a353e4a6c886c429e4bf749b4b"
+  "updated_utc": "2026-11-16T07:07:09.834640+00:00",
+  "previous_manifest_sha256": "2394c90e9df7159ac47048d594571202119746a353e4a6c886c429e4bf749b4b",
+  "pre_merge_manifest_sha256": "abbb409f452c068cad7de33f64a278329f52866e593a190a76be9b5b3237b40d",
+  "pre_merge_archive": "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_penggabungan_github"
 }
