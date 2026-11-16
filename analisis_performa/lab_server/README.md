@@ -1,5 +1,7 @@
 # Tabel lab/server T01–T14, T28–T33, dan T39–T41
 
+> Pembaruan 16 November 2026: verifikasi jalur inferensi TEST (`model.val` vs `model.predict`) lengkap untuk sepuluh checkpoint: [sembilan student, 13 November](verifikasi_jalur_test_20261113/RINGKASAN.md) (D23) dan [teacher, 16 November](verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) (D24).
+
 > Pembaruan 9 November 2026: [T42 pada server2](../tabel/T42_ablasi_teacher_yolo11s_val.md) selesai; [audit teacher](../../audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 lama di bawah adalah catatan historis.
 
 Pembaruan: 24 Oktober 2026. Folder ini adalah pintu masuk untuk tabel dataset, pelatihan, evaluasi gambar, dan benchmark server. Analisis ini memuat eksperimen utama **KD murni teacher-only**, **KD Hybrid full**, serta ablasi **Hybrid v2 S2** yang dibandingkan pada VAL. Split TEST sudah pernah dipakai dalam eksperimen teacher dan KD murni; hasil Hybrid adalah perbandingan lanjutan pada split yang sama. Semua hasil akurasi ini berlaku pada level gambar dan bukan ukuran akurasi kamera ROBOTIS OP3.
