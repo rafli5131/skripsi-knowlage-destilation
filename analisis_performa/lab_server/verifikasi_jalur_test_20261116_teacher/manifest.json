@@ -1,0 +1,11 @@
+{
+  "created_at_utc": "2026-11-16T07:02:54+00:00",
+  "files": {
+    "hasil_verifikasi_jalur_test.json": "fc40b862182b3e5cccfbe277a536da90486f96633f23904228f5ae4d40fc4ed0",
+    "ringkasan_per_model.csv": "74003e5e6265e6759d7e3bc73c36771d75ceb2d3ac82f61673de95c389a0efec",
+    "ringkasan_per_kelompok.csv": "5201ec9e15301505962e68d45f30ebed444348daadb701dc6b43b4d06d35c339",
+    "RINGKASAN.md": "e75cc48e36d96adddbed8e7d32278c169fd52b2ee798a31a7cbfe05ed7b9e8b0"
+  },
+  "script_sha256": "1a23684caa4b34535e0ebbc82cb66375fc1db644002c71b6414f9444bb7ca315",
+  "git_commit": "ade031a89d0e9d5cb088c5615e31746fd9c43a4c"
+}

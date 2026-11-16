@@ -1,5 +1,7 @@
 # Indeks tabel analisis performa
 
+> **16 November 2026 (server):** [Baris teacher verifikasi jalur TEST](lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) melengkapi D23 (D24). Selisih mAP50–95 resmi vs predict -0,0009; selisih F1 -0,0170 berasal dari presisi.
+
 > **16 November 2026:** [T44 jalur tunggal OP3](tabel/T44_jalur_tunggal_op3_t38_t43.md) dan [T45 latensi dan CPU](tabel/T45_rincian_latensi_dan_cpu_op3.md) selesai; enam endpoint faktor student T38 tidak ditafsirkan dan replay CPU bersifat offline.
 
 > **13 November 2026:** [Verifikasi jalur inferensi TEST](lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) membandingkan T05/T30 (`model.val`) dengan `model.predict` pada ambang TEST dan ambang runtime untuk sembilan student (D23). Teacher menyusul. Rencana T44 (jalur tunggal T38/T43) dan T45 (rincian latensi dan CPU OP3) ada di [prompt sesi OP3](../prompt/PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md).
