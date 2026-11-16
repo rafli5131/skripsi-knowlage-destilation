@@ -68,3 +68,5 @@ Pembaruan: 2026-11-03. T28–T29 merangkum VAL KD Hybrid full, T30–T31 memuat 
 | T42 | Ablasi dua teacher dan enam student pada VAL server2; audit teacher dilaporkan lulus. | [CSV](tabel/T42_ablasi_teacher_yolo11s_val.csv) · [Markdown](tabel/T42_ablasi_teacher_yolo11s_val.md) · [Audit server](../audit_teacher_t42_LTOW7Xw5.json) |
 
 T42 server2 selesai untuk dua teacher dan enam student pada VAL; lihat [tabel](tabel/T42_ablasi_teacher_yolo11s_val.md), [status](../runs/kd_teacher_ablation/server2/t42_status.jsonl), dan [hasil audit teacher](../audit_teacher_t42_LTOW7Xw5.json). Ini eksperimen terpisah dan tidak mengganti model OP3.
+
+- [T44 — jalur tunggal OP3](tabel/T44_jalur_tunggal_op3_t38_t43.md) dan [T45 — rincian latensi dan CPU](tabel/T45_rincian_latensi_dan_cpu_op3.md).

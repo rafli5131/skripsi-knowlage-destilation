@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-11-16T06:58:21.647225+00:00",
+  "method": "separate processes, same core import order as node; no camera or model loaded",
+  "results": {
+    "default": {
+      "openblas_num_threads": 16,
+      "opencv_num_threads": 1,
+      "torch_before_select_device": 4,
+      "torch_after_select_device": 8,
+      "openblas_env": null,
+      "omp_env": "1"
+    },
+    "blas_one": {
+      "openblas_num_threads": 1,
+      "opencv_num_threads": 1,
+      "torch_before_select_device": 4,
+      "torch_after_select_device": 8,
+      "openblas_env": "1",
+      "omp_env": "1"
+    }
+  }
+}

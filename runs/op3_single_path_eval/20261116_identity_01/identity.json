@@ -1,0 +1,316 @@
+{
+  "status": "complete",
+  "created_utc": "2026-11-16T06:36:57.401037+00:00",
+  "repository_head": "d35c31b5f4568c613ef2a3801bf3670c761e58c2",
+  "prompt_source": "origin/main:prompt/PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md",
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.4.1+cpu",
+    "ultralytics": "8.4.130"
+  },
+  "sources": {
+    "runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/input_manifest.json": "1ae146962a2bee7cde147e37e8c2b38f0866a2371b7ea3bb9069cdff3442bb88",
+    "runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/results.json": "2d3bd08ff18253f78c11ce6a37f6840ebd4da75768c0462c9efd7d7947cba112",
+    "runs/op3_t43_evaluation/20261112_reviewed_260/input_manifest.json": "fa07869778b45ef97f9aab6dcf1947ccc5a7e47ef100255e5fada901e24e11b3",
+    "runs/op3_t43_evaluation/20261112_reviewed_260/results.json": "dd9bb12431da08bc41ab028c9e5a1dde47a06532a13976893f80f217736175d9",
+    "data/op3_camera_eval/experiments/t43_20261112/frozen_plan.json": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83"
+  },
+  "counts": {
+    "t38_primary": 260,
+    "t38_partial": 50,
+    "t43_idle": 130,
+    "t43_walking": 130,
+    "t43_combined": 260,
+    "t43_partial_goal": 200
+  },
+  "checks": [
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_primary",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_partial",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_idle",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_walking",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_combined",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_partial_goal",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_primary",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_partial",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_idle",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_walking",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_combined",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_partial_goal",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_primary",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_partial",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_idle",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_walking",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_combined",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_partial_goal",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_primary",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_partial",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_idle",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_walking",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_combined",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_partial_goal",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_primary",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_partial",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_idle",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_walking",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_combined",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_partial_goal",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_primary",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_partial",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_idle",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_walking",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_combined",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_partial_goal",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_primary",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_partial",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_idle",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_walking",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_combined",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_partial_goal",
+      "check": "AP50/AP50-95 overall and per class",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_primary",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_partial",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_idle",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_walking",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_combined",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_partial_goal",
+      "check": "operating per-class TP/FP/FN, precision/recall/mean-class-F1",
+      "pass": true
+    }
+  ]
+}

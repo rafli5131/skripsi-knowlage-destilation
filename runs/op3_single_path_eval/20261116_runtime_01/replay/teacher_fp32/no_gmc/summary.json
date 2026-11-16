@@ -1,0 +1,244 @@
+{
+  "model": "teacher_fp32",
+  "variant": "no_gmc",
+  "created_utc": "2026-11-16T06:48:52.436824+00:00",
+  "frames": 300,
+  "warmup_frames": 30,
+  "unique_source_images": 260,
+  "frame_reuse": "260 source frames cycled deterministically; 300 measurement frames include repeats; 30 preceding warmup frames",
+  "tracking": true,
+  "preview_plot": true,
+  "tracker_config": "/home/humanoid/bre_skripsi/runs/op3_single_path_eval/20261116_runtime_01/replay/teacher_fp32/no_gmc/botsort_no_gmc.yaml",
+  "installed_tracker_sha256": "8cd88930d3be5557be0777f384eecff0a36a7011850fe613fc0a68178bfd5b01",
+  "gmc_method": "none",
+  "opencv_num_threads": 1,
+  "torch_num_threads": 8,
+  "torch_interop_threads": 2,
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "capture_manifest_sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+  "process_cpu_seconds": 234.53,
+  "wall_seconds": 17.21952811699998,
+  "cpu_ms_per_frame": 781.7666666666667,
+  "cpu_percent_one_logical": 1362.0001570685333,
+  "cpu_percent_16_logical": 85.12500981678333,
+  "input_rate_fps": 17.422080208099604,
+  "max_thread_count_sampled": 30,
+  "thread_cpu_sampled": [
+    {
+      "tid": 7839,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.22,
+      "present_at_start": true
+    },
+    {
+      "tid": 7794,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.21,
+      "present_at_start": true
+    },
+    {
+      "tid": 7830,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.21,
+      "present_at_start": true
+    },
+    {
+      "tid": 7842,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.139999999999997,
+      "present_at_start": true
+    },
+    {
+      "tid": 7831,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.13,
+      "present_at_start": true
+    },
+    {
+      "tid": 7840,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.12,
+      "present_at_start": true
+    },
+    {
+      "tid": 7841,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.099999999999998,
+      "present_at_start": true
+    },
+    {
+      "tid": 7829,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 17.07,
+      "present_at_start": true
+    },
+    {
+      "tid": 7800,
+      "name": "python",
+      "cpu_seconds_sampled": 14.05,
+      "present_at_start": true
+    },
+    {
+      "tid": 7796,
+      "name": "python",
+      "cpu_seconds_sampled": 14.020000000000001,
+      "present_at_start": true
+    },
+    {
+      "tid": 7795,
+      "name": "python",
+      "cpu_seconds_sampled": 13.960000000000003,
+      "present_at_start": true
+    },
+    {
+      "tid": 7801,
+      "name": "python",
+      "cpu_seconds_sampled": 13.940000000000001,
+      "present_at_start": true
+    },
+    {
+      "tid": 7798,
+      "name": "python",
+      "cpu_seconds_sampled": 13.81,
+      "present_at_start": true
+    },
+    {
+      "tid": 7797,
+      "name": "python",
+      "cpu_seconds_sampled": 13.809999999999999,
+      "present_at_start": true
+    },
+    {
+      "tid": 7799,
+      "name": "python",
+      "cpu_seconds_sampled": 13.71,
+      "present_at_start": true
+    },
+    {
+      "tid": 7802,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7803,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7804,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7805,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7806,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7807,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7808,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7809,
+      "name": "python",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7832,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7833,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7834,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7835,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7836,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7837,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 7838,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    }
+  ],
+  "thread_cpu_note": "Sampled once per frame via psutil /proc; short-lived threads may be missed or undercounted; total process CPU is measured separately.",
+  "timings": {
+    "preprocess_ms": {
+      "mean_ms": 1.4445154433307532,
+      "median_ms": 1.3193644999773824,
+      "p95_ms": 1.7523073000006701
+    },
+    "inference_ms": {
+      "mean_ms": 51.09710830333446,
+      "median_ms": 50.71810749996075,
+      "p95_ms": 54.88979214991332
+    },
+    "postprocess_ms": {
+      "mean_ms": 0.8312796966629321,
+      "median_ms": 0.8914215000004333,
+      "p95_ms": 0.9626714998830721
+    },
+    "replay_end_to_end_ms": {
+      "mean_ms": 55.46366931666777,
+      "median_ms": 55.39522250001028,
+      "p95_ms": 59.57764240002916
+    },
+    "residual_ms": {
+      "mean_ms": 2.0907658733396297,
+      "median_ms": 2.025206499979504,
+      "p95_ms": 3.3139748999019507
+    }
+  },
+  "limitations": [
+    "Replay input is preloaded arrays, no ROS or camera, no messages are published",
+    "replay end-to-end includes model.track/predict and result.plot but excludes ROS conversion, publish and CSV logging",
+    "frame repetitions and different image content may affect tracking/GMC",
+    "CPU and wall measurements include per-frame thread sampling overhead",
+    "thread CPU time is sampled and is a lower bound for short-lived threads"
+  ],
+  "frame_log_sha256": "7806f3267baf2d7d7cfda9b20514256db6c3d01879eb22155a2763e8bb0850d9"
+}

@@ -18,3 +18,7 @@ Rincian per kondisi/kelas/TP/FP/FN dalam [CSV](T43_akurasi_op3_empat_model_260.c
 ## Uji sensitivitas tambahan
 
 [Sapuan confidence T43](T43_sensitivitas_confidence.md) selesai secara offline. [Sensitivitas label 52 frame](T43_sensitivitas_label_52.md) telah selesai untuk label Bhre, Dipo dan konvensi alternatif Dipo. Hasil utama di atas tidak diubah; pemeriksaan menemukan perbedaan jalur padding dan NMS antara AP dan prediksi operasi. [Arsip tabel sebelum penambahan tautan](../../dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/arsip_tabel_T43_sebelum_sensitivitas.md) mempertahankan hash historis.
+
+## Perbandingan jalur tunggal
+
+[Evaluasi T44 jalur tunggal OP3](T44_jalur_tunggal_op3_t38_t43.md) membandingkan hasil historis dan jalur predict tanpa mengubah angka sebelumnya.

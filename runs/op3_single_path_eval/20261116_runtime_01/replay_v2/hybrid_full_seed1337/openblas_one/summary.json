@@ -1,0 +1,111 @@
+{
+  "model": "hybrid_full_seed1337",
+  "variant": "openblas_one",
+  "created_utc": "2026-11-16T06:57:24.898729+00:00",
+  "frames": 300,
+  "warmup_frames": 30,
+  "unique_source_images": 260,
+  "frame_reuse": "260 source frames cycled deterministically; 300 measurement frames include repeats; 30 preceding warmup frames",
+  "tracking": true,
+  "preview_plot": true,
+  "tracker_config": "/home/humanoid/bre_skripsi/.venv-op3-pytorch/lib/python3.12/site-packages/ultralytics/cfg/trackers/botsort.yaml",
+  "installed_tracker_sha256": "8cd88930d3be5557be0777f384eecff0a36a7011850fe613fc0a68178bfd5b01",
+  "gmc_method": "sparseOptFlow",
+  "opencv_num_threads": 1,
+  "openblas_num_threads": 1,
+  "torch_num_threads": 4,
+  "torch_interop_threads": 2,
+  "torch_threads_configured_before_first_infer": 4,
+  "torch_threads_after_backend_initialization": 8,
+  "torch_threads_forced_after_backend_initialization": 4,
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "capture_manifest_sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+  "process_cpu_seconds": 33.99,
+  "wall_seconds": 8.513092147999942,
+  "cpu_ms_per_frame": 113.3,
+  "cpu_percent_one_logical": 399.26738027833494,
+  "cpu_percent_16_logical": 24.954211267395934,
+  "input_rate_fps": 35.23983938908517,
+  "max_thread_count_sampled": 7,
+  "thread_cpu_sampled": [
+    {
+      "tid": 9348,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 8.520000000000001,
+      "present_at_start": true
+    },
+    {
+      "tid": 9380,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 8.5,
+      "present_at_start": true
+    },
+    {
+      "tid": 9382,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 8.5,
+      "present_at_start": true
+    },
+    {
+      "tid": 9381,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 8.499999999999998,
+      "present_at_start": true
+    },
+    {
+      "tid": 9395,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 9396,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    },
+    {
+      "tid": 9397,
+      "name": "pt_main_thread",
+      "cpu_seconds_sampled": 0.0,
+      "present_at_start": true
+    }
+  ],
+  "thread_cpu_note": "Sampled once per frame via psutil /proc; short-lived threads may be missed or undercounted; total process CPU is measured separately.",
+  "timings": {
+    "preprocess_ms": {
+      "mean_ms": 0.9451511833382634,
+      "median_ms": 0.9919715000705764,
+      "p95_ms": 1.0488171998645157
+    },
+    "inference_ms": {
+      "mean_ms": 15.925699006663763,
+      "median_ms": 16.01067850003801,
+      "p95_ms": 16.402168249953775
+    },
+    "postprocess_ms": {
+      "mean_ms": 0.39591444999814485,
+      "median_ms": 0.4232144999605225,
+      "p95_ms": 0.4386280000744591
+    },
+    "replay_end_to_end_ms": {
+      "mean_ms": 28.0255322633343,
+      "median_ms": 27.85845349990268,
+      "p95_ms": 29.9293296001224
+    },
+    "residual_ms": {
+      "mean_ms": 10.758767623334128,
+      "median_ms": 10.437226000021838,
+      "p95_ms": 12.382718150172423
+    }
+  },
+  "limitations": [
+    "Replay input is preloaded arrays, no ROS or camera, no messages are published",
+    "replay end-to-end includes model.track/predict and result.plot but excludes ROS conversion, publish and CSV logging",
+    "frame repetitions and different image content may affect tracking/GMC",
+    "CPU and wall measurements include per-frame thread sampling overhead",
+    "Torch threads restored to 4 after Ultralytics backend selects CPU; historic node logged threads before first inference",
+    "thread CPU time is sampled and is a lower bound for short-lived threads"
+  ],
+  "frame_log_sha256": "14daae12567a2e22fb2623c38850312e7ddb837a1005a812ebdd33f0e58e0e7f"
+}

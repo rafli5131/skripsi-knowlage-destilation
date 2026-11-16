@@ -1,0 +1,15 @@
+{
+  "reason": "append links only; pre-existing historical manifests retain hashes of archived prior bytes",
+  "files": [
+    {
+      "original": "analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md",
+      "sha256_before": "d1c5fd480e56982f8c1e3ada585683f8d9cecfe4ebb81d0cd9b903fad64ece1f",
+      "archive": "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_T44_T38_akurasi_op3_empat_model_260.md"
+    },
+    {
+      "original": "analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md",
+      "sha256_before": "beb996e7987696bc16a0527c849b77b76ecdadedf278a5f17304f7811b36574c",
+      "archive": "dokumentasi/2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/arsip_sebelum_T44_T43_akurasi_op3_empat_model_260.md"
+    }
+  ]
+}

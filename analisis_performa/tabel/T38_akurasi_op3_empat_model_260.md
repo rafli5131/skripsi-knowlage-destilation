@@ -29,3 +29,7 @@
 Pengaturan: 640 piksel, CPU FP32, NMS IoU 0,7; AP memakai confidence floor 0,001, sedangkan precision/recall/F1 pada confidence >0,25 dan pencocokan IoU ≥0,5. F1 makro adalah rerata F1 per kelas. Angka Hybrid dan Supervised identik dengan T34; empat checkpoint, sesi, hash gambar dan label telah diverifikasi.
 
 [CSV lengkap per model/kelas](T38_akurasi_op3_empat_model_260.csv) · [Dokumentasi dan grafik](../../dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md). Hasil per kelas dan per sesi, termasuk 50 parsial, ada pada `runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/results.json` di mesin lokal.
+
+## Perbandingan jalur tunggal
+
+[Evaluasi T44 jalur tunggal OP3](T44_jalur_tunggal_op3_t38_t43.md) membandingkan hasil historis dan jalur predict tanpa mengubah angka sebelumnya.

@@ -1,0 +1,167 @@
+{
+  "created_utc": "2026-11-16T07:01:13.216017+00:00",
+  "comparison_sha256": "ff7303edf50c8a3c26a05012f18847e8f278932437c5d7fb645382ac1c9e0328",
+  "tolerance": 1e-09,
+  "checks": [
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_primary",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t38_partial",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_idle",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_walking",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "teacher_fp32",
+      "dataset": "t43_combined",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_primary",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t38_partial",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_idle",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_walking",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "hybrid_full_seed1337",
+      "dataset": "t43_combined",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_primary",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t38_partial",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_idle",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_walking",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "supervised_seed1337",
+      "dataset": "t43_combined",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_primary",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t38_partial",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": false,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_idle",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_walking",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    },
+    {
+      "model": "kd_seed42",
+      "dataset": "t43_combined",
+      "predict_operating_matches": true,
+      "issues": [],
+      "val_AP_endpoint_matches": true,
+      "predict_AP_endpoint_matches": true
+    }
+  ]
+}

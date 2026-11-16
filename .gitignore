@@ -46,3 +46,9 @@ __pycache__/
 /runs/op3_t43_sensitivity/**/predictions_*.jsonl
 
 /runs/op3_t43_sensitivity/**/predictions.json
+
+# Evaluasi jalur tunggal: dataset snapshot dan prediksi frame tetap lokal.
+/runs/op3_single_path_eval/**/dataset/images/
+/runs/op3_single_path_eval/**/dataset/labels/
+/runs/op3_single_path_eval/**/predictions*.jsonl
+/runs/op3_single_path_eval/**/frame_log.csv
