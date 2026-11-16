@@ -1,5 +1,9 @@
 # Indeks dokumentasi percobaan OP3
 
+> **16 November 2026:** [Log progres](2026-11-16/LOG_PROGRES_SKRIPSI.md) · [percobaan 41: jalur tunggal dan runtime OP3](2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_ID.md) · [baris teacher verifikasi jalur TEST](../analisis_performa/lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) (D24) · [spesifikasi server lab](../environment/README.md#server-hardware-observed-2026-11-16).
+
+> **13 November 2026:** [Log progres](2026-11-13/LOG_PROGRES_SKRIPSI.md) · [verifikasi jalur inferensi TEST sembilan student](../analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) (D23).
+
 > **12 November 2026:** [Log progres](2026-11-12/LOG_PROGRES_SKRIPSI.md) · [audit hash](2026-11-12/AUDIT_GRAFIK_AKURASI.md) · [grafik akurasi reproduksi](2026-11-12/grafik-akurasi-terverifikasi/README.md) · [grafik runtime](model/README.md) · [draf tujuh bab](../laporan/draf-7-bab/README.md).
 
 > **11 November 2026:** [Log progres](2026-11-11/LOG_PROGRES_SKRIPSI.md) · [grafik garis kontinu akurasi per model](model/README.md) · keputusan D17 (tujuh bab), D18 (persetujuan pembimbing), dan D19 (rencana set frame baru) di [`DECISIONS.md`](../docs/DECISIONS.md).

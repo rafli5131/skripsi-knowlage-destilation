@@ -1,0 +1,21 @@
+== host
+labkc-l40-debian
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+VERSION="12 (bookworm)"
+6.1.0-43-amd64
+== cpu
+CPU(s):                                  80
+Model name:                              AMD EPYC 7413 24-Core Processor
+Thread(s) per core:                      1
+Core(s) per socket:                      40
+Socket(s):                               2
+L3 cache:                                1.3 GiB (80 instances)
+== ram
+               total        used        free      shared  buff/cache   available
+Mem:           283Gi       7.6Gi       222Gi       111Mi        55Gi       275Gi
+== gpu
+index, name, memory.total [MiB], driver_version
+0, NVIDIA L40, 46068 MiB, 535.261.03
+1, NVIDIA L40, 46068 MiB, 535.261.03
+2, NVIDIA L40, 46068 MiB, 535.261.03
+| NVIDIA-SMI 535.261.03             Driver Version: 535.261.03   CUDA Version: 12.2     |

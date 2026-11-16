@@ -16,6 +16,12 @@ read-only snapshot of packages visible in the training virtual environment.
   contaminate package discovery. `UV_CACHE_DIR` was directed to `/tmp` because
   the default cache location is read-only in this workspace. No packages were
   installed or changed.
+- `spesifikasi_server_20261116.txt` is the hardware snapshot of the lab server
+  `labkc-l40-debian`, captured on 2026-11-16 from account `dindarosyidah` with
+  `hostname`, `/etc/os-release`, `uname -r`, `lscpu`, `free -h`, and
+  `nvidia-smi`. The copy on the server is
+  `~/spesifikasi_server_20261116.txt`; both copies have the same SHA-256.
+  Nothing was installed or changed.
 
 SHA-256 checksums of these workspace copies:
 
@@ -24,6 +30,26 @@ SHA-256 checksums of these workspace copies:
 | `advance_vision_pyproject.toml` | `2ff6c15dd47c4d6d7bcbe9b47a62d52e268aa5a96495dce7351c214ea809eff4` |
 | `advance_vision_uv.lock` | `a508b970ee19ec8cf6af1f64bfdd6dd047692cdb74e6d5c8518ae94ca34ba85d` |
 | `runtime_freeze_2026-10-09.txt` | `01b664a10576442140be1316de44fc997c2a402b65c399c99f232668fa87a65a` |
+| `spesifikasi_server_20261116.txt` | `4c0a25b765b5865891f04413927873abcb9cfcad4e1ee7423278b6a9570821cb` |
+
+## Server hardware observed (2026-11-16)
+
+| Item | Value |
+| --- | --- |
+| Host | `labkc-l40-debian`, KVM virtual machine (`systemd-detect-virt`: `kvm`; machine type Q35 + ICH9) |
+| OS | Debian GNU/Linux 12 (bookworm), kernel `6.1.0-43-amd64` |
+| CPU | AMD EPYC 7413, 80 vCPU as reported by the guest (2 sockets × 40 cores, 1 thread per core) |
+| RAM | 283 GiB |
+| GPU | 3 × NVIDIA L40, 46,068 MiB each |
+| NVIDIA driver | 535.261.03; CUDA version reported by the driver: 12.2 |
+
+The CPU topology is the one exposed to the virtual machine. A physical EPYC
+7413 has 24 cores per socket, so the 40-cores-per-socket figure describes vCPUs,
+not physical cores. The virtualization check was run separately and is not part
+of the text file. The snapshot was taken after the training and TEST runs; it
+describes the server on 2026-11-16 and does not prove the configuration on
+earlier dates. Training used one GPU; the CPU-only TEST inference-path
+verification (13 and 16 November) used the CPU of this machine.
 
 ## Runtime observed
 

@@ -43,6 +43,8 @@
 
 - Environment training yang dibekukan berada di `/mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv`; jalankan dengan `env -u PYTHONPATH` dan interpreter environment tersebut. Versi yang dikunci: Python 3.11.2, PyTorch 2.4.1+cu121, Ultralytics 8.4.130, NumPy 1.26.4.
 - Pada repo server akun `dindarosyidah`, environment setara ada di `.venv-train` (Ultralytics 8.4.130, PyTorch 2.4.1+cu121); `~/rf-venv` tidak berisi Ultralytics. Verifikasi jalur TEST 13 dan 16 November memakai `.venv-train`.
+- Spesifikasi server lab `labkc-l40-debian` per 16 November 2026: VM KVM Debian 12 (kernel 6.1.0-43), AMD EPYC 7413 80 vCPU, RAM 283 GiB, 3 × NVIDIA L40 46.068 MiB, driver 535.261.03, CUDA 12.2 menurut driver. Sumbernya [`environment/spesifikasi_server_20261116.txt`](environment/spesifikasi_server_20261116.txt). Angka 40 core per soket adalah topologi virtual; jangan menyebutnya core fisik. Snapshot ini diambil sesudah training dan TEST, jadi jangan dipakai sebagai bukti konfigurasi pada tanggal sebelumnya.
+- Verifikasi jalur TEST di CPU server memakan sekitar 20 menit per checkpoint (batch 1, dua varian, 592 gambar). Jalankan job panjang dengan `nohup` atau `tmux` dan catat PID serta lokasi log.
 - Akses GPU dapat berbeda antara sandbox workspace dan konteks host. Pada pemeriksaan 22 Oktober 2026, host melihat tiga L40 dan environment terkunci melihat CUDA; GPU saat itu digunakan proses lain. Periksa kondisi terbaru sebelum menjalankan job. Jangan mengubah driver sistem atau membuat environment duplikat tanpa kebutuhan.
 - Simpan provenance dataset, checkpoint, YAML, config, skrip, seed, runtime, dan perangkat dalam manifest. Gunakan fingerprint dataset yang ada; jangan memasukkan TEST ke YAML training.
 - Sebelum menambah training, pastikan eksperimen memang belum ada di manifest/registry dan protokolnya tidak menggunakan ulang TEST untuk seleksi. Gunakan direktori run baru.
@@ -55,5 +57,6 @@
 - Hasil tabel: [`analisis_performa/INDEKS.md`](analisis_performa/INDEKS.md) dan [`analisis_performa/lab_server/README.md`](analisis_performa/lab_server/README.md).
 - Runtime robot dan instruksi sesi: [`OP3_PYTORCH_RUNTIME.md`](OP3_PYTORCH_RUNTIME.md), `prompt/PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3_V2.md`, serta README package yang terkait.
 - Audit server terakhir: [`docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md`](docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md).
+- Environment dan perangkat server: [`environment/README.md`](environment/README.md), termasuk spesifikasi perangkat 16 November 2026.
 
 Jika ringkasan memory berbeda dari manifest, registry, atau artefak primer, periksa artefak primer dan perbarui memory dengan tanggal serta rujukan yang jelas.
