@@ -8,4 +8,6 @@ Audit hash manifest: [`analisis_performa/AUDIT_HASH_MANIFEST_20261121.md`](../an
 
 Penyalinan berkas dari sesi cloud ke laptop lewat alat penyalin desktop mengubah isi PNG (ukuran dan SHA-256 berubah, berkas teks tidak). Gambar di `bukti_kebutuhan/` disalin ulang langsung dari berkas asli di laptop dan hash-nya sudah cocok dengan manifest. Untuk gambar, salin di laptop dari berkas sumber, lalu cek hash sebelum commit. Ini kemungkinan penyebab 18 PNG akurasi `dokumentasi/model/` yang tidak cocok dengan manifest sejak 11 November, tetapi belum terbukti.
 
+Jejak waktu: [`jejak_waktu/`](../jejak_waktu/README.md) (`scripts/build_jejak_waktu.py --replace`). Teacher utama dilatih di server lab pada proyek Advance Vision, bukan di robot; waktu training teacher tidak tersedia. Bhre akan mencari di robot log per frame 15 run live, manifest capture T38/T43, dan manifest atau log training teacher di `/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/`.
+
 Masih terbuka: jalur angka utama T38/T43 dan penyajian CPU RM5 (keputusan Bhre dan pembimbing). Tidak ada pekerjaan tersisa di robot atau server.

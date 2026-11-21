@@ -36,3 +36,7 @@ Status KF-03 sebelumnya ditulis "belum dinyatakan lulus" di Bab 6 karena sesi bo
 - Sekitar 400 tautan relatif di README percobaan menunjuk berkas lokal robot (telemetri, preview, `runs/`, `data/`) yang sengaja tidak masuk Git, atau berada di README arsip yang disalin ke folder lain. Dokumen aktif (README utama, indeks, draf bab, tabel, keputusan) tidak memiliki tautan rusak ke berkas yang seharusnya ada di Git.
 - Pilihan jalur angka utama T38/T43 (`model.val` atau `model.predict`) dan cara penyajian CPU untuk RM5 belum diputuskan; Bab 6 menyajikan keduanya dan memberi catatan draf.
 - Draf tujuh bab masih ringkas dan baru memuat rujukan pada Bab 4 dan Bab 6.
+
+## Jejak waktu
+
+Folder [`jejak_waktu/`](../../jejak_waktu/README.md) dibangkitkan oleh `scripts/build_jejak_waktu.py`. Isinya kronologi 64 kegiatan (training utama dan pendukung, sesi TEST, verifikasi jalur, evaluasi offline OP3, dan 24 run live), waktu per epoch sembilan student utama (900 baris), ringkasan timestamp frame 24 run live, serta grafik garis waktu. Teacher utama dilatih di server lab pada proyek Advance Vision; robot hanya menyimpan salinan bobotnya, sehingga waktu training teacher tidak tersedia. Bhre akan mencari di robot: log per frame 15 run live (`runs/op3_pytorch/<run_id>.csv`), manifest capture T38/T43, dan berkas manifest atau log training di folder bobot teacher.
