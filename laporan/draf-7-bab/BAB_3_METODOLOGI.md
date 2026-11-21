@@ -1,4 +1,4 @@
-# BAB 3 — METODOLOGI PENELITIAN
+# BAB 3 METODOLOGI PENELITIAN
 
 > Draf berdasarkan eksperimen yang terdokumentasi, bukan protokol untuk mengulangi pengujian. Periksa dan sesuaikan susunan subbab dengan pedoman kampus.
 
@@ -28,6 +28,6 @@ T38 mengevaluasi empat checkpoint pada 200 frame berobjek dan 60 frame negatif y
 
 ## 3.4 Runtime OP3
 
-Empat checkpoint diukur pada kondisi diam dan berjalan, tiga ulangan per kondisi, sehingga ada 24 run aktif. Konfigurasi mencatat warm-up 30 frame, jendela ukur 60 detik, confidence runtime 0,25, NMS IoU 0,45, empat thread intra-op dan dua inter-op. Sapuan thread tidak dilakukan. Hasil per run dan rata-rata disajikan pada [T36](../../analisis_performa/tabel/T36_runtime_live_setara_per_run.md) dan [T37](../../analisis_performa/tabel/T37_runtime_live_setara_ringkasan.md).
+Empat checkpoint diukur pada kondisi diam dan berjalan, tiga ulangan per kondisi, sehingga ada 24 run aktif. Konfigurasi mencatat warm-up 30 frame, jendela ukur 60 detik, confidence runtime 0,25, dan NMS IoU 0,45. Metadata run mencatat empat thread intra-op dan dua inter-op saat node diinisialisasi, sebelum inferensi pertama. Pemeriksaan ulang secara offline menunjukkan bahwa inisialisasi perangkat CPU oleh Ultralytics dapat mengubah jumlah thread intra-op menjadi delapan, sedangkan jumlah thread aktual selama 24 run tidak terekam ([T45](../../analisis_performa/tabel/T45_rincian_latensi_dan_cpu_op3.md)). Sapuan thread tidak dilakukan. Hasil per run dan rata-rata disajikan pada [T36](../../analisis_performa/tabel/T36_runtime_live_setara_per_run.md) dan [T37](../../analisis_performa/tabel/T37_runtime_live_setara_ringkasan.md).
 
 CPU dan RSS diukur pada proses detektor, bukan sistem keseluruhan. Urutan berbentuk blok lintas hari, ada penggantian run dan bukti fisik yang tidak lengkap; interpretasi bersifat deskriptif sesuai [audit](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md). Model deteksi tidak digunakan untuk mengendalikan motor. Kebutuhan, realisasi, dan bukti uji fungsional dibahas dalam Bab 4–6.

@@ -1,0 +1,25 @@
+model,kondisi,ulangan,run_id,frame,fps_efektif,latensi_rerata_ms,batas_minimum_fps,status
+Teacher YOLO11n,diam,1,20261102_eq_teacher_idle_u1,584,9.7218,98.91,8.0,lulus
+Teacher YOLO11n,diam,2,20261102_eq_teacher_idle_u2,614,10.2381,92.15,8.0,lulus
+Teacher YOLO11n,diam,3,20261102_eq_teacher_idle_u3,581,9.6869,97.67,8.0,lulus
+KD Hybrid seed 1337,diam,1,20261102_eq_hybrid1337_idle_u1,792,13.1969,66.82,8.0,lulus
+KD Hybrid seed 1337,diam,2,20261102_eq_hybrid1337_idle_u2,825,13.7482,63.08,8.0,lulus
+KD Hybrid seed 1337,diam,3,20261102_eq_hybrid1337_idle_u3,830,13.8463,64.21,8.0,lulus
+Supervised seed 1337,diam,1,20261103_eq_sup1337_idle_u1_ulang2,719,11.9993,74.48,8.0,lulus
+Supervised seed 1337,diam,2,20261103_eq_sup1337_idle_u2,749,12.4727,69.39,8.0,lulus
+Supervised seed 1337,diam,3,20261103_eq_sup1337_idle_u3_ulang1,717,11.9395,75.48,8.0,lulus
+KD murni seed 42,diam,1,20261103_eq_kd42_idle_u1,728,12.1286,72.9,8.0,lulus
+KD murni seed 42,diam,2,20261103_eq_kd42_idle_u2,721,12.0391,74.6,8.0,lulus
+KD murni seed 42,diam,3,20261103_eq_kd42_idle_u3,723,12.046,74.78,8.0,lulus
+Teacher YOLO11n,berjalan,1,20261102_eq_teacher_walk_u3,589,9.8039,96.41,8.0,lulus
+Teacher YOLO11n,berjalan,2,20261102_eq_teacher_walk_retest_u2,585,9.7539,96.75,8.0,lulus
+Teacher YOLO11n,berjalan,3,20261102_eq_teacher_walk_retest_u3,604,10.0655,94.4,8.0,lulus
+KD Hybrid seed 1337,berjalan,1,20261103_eq_hybrid1337_walk_u1,772,12.8708,68.37,8.0,lulus
+KD Hybrid seed 1337,berjalan,2,20261103_eq_hybrid1337_walk_u2,758,12.637,71.72,8.0,lulus
+KD Hybrid seed 1337,berjalan,3,20261103_eq_hybrid1337_walk_u3,726,12.1231,74.32,8.0,lulus
+Supervised seed 1337,berjalan,1,20261103_eq_sup1337_walk_u1,742,12.3629,71.65,8.0,lulus
+Supervised seed 1337,berjalan,2,20261103_eq_sup1337_walk_u2,794,13.2306,67.77,8.0,lulus
+Supervised seed 1337,berjalan,3,20261103_eq_sup1337_walk_u3,739,12.3121,72.99,8.0,lulus
+KD murni seed 42,berjalan,1,20261103_eq_kd42_walk_u1,725,12.0987,74.75,8.0,lulus
+KD murni seed 42,berjalan,2,20261103_eq_kd42_walk_u2,731,12.1656,73.39,8.0,lulus
+KD murni seed 42,berjalan,3,20261103_eq_kd42_walk_u3_ulang1,742,12.3769,69.82,8.0,lulus

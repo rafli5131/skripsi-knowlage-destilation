@@ -1,5 +1,7 @@
 # Indeks tabel analisis performa
 
+> **21 November 2026:** [Audit hash manifest](AUDIT_HASH_MANIFEST_20261121.md) memeriksa 914 pasangan path dan SHA-256 di manifest yang dilacak Git. Entri tertinggal terutama berasal dari bagian `tables` di [`manifest.json`](manifest.json) yang ditulis 19 Oktober. Bukti uji KF/KNF ada di [`bukti_kebutuhan/`](../bukti_kebutuhan/README.md).
+
 > **16 November 2026 (server):** [Baris teacher verifikasi jalur TEST](lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) melengkapi D23 (D24). Selisih mAP50–95 resmi vs predict -0,0009; selisih F1 -0,0170 berasal dari presisi.
 
 > **16 November 2026:** [T44 jalur tunggal OP3](tabel/T44_jalur_tunggal_op3_t38_t43.md) dan [T45 latensi dan CPU](tabel/T45_rincian_latensi_dan_cpu_op3.md) selesai; enam endpoint faktor student T38 tidak ditafsirkan dan replay CPU bersifat offline.

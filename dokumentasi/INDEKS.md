@@ -1,5 +1,7 @@
 # Indeks dokumentasi percobaan OP3
 
+> **21 November 2026:** [Log progres](2026-11-21/LOG_PROGRES_SKRIPSI.md) · [bukti uji KF/KNF](../bukti_kebutuhan/README.md) · [audit hash manifest](../analisis_performa/AUDIT_HASH_MANIFEST_20261121.md).
+
 > **16 November 2026:** [Log progres](2026-11-16/LOG_PROGRES_SKRIPSI.md) · [percobaan 41: jalur tunggal dan runtime OP3](2026-11-16/percobaan-41-jalur-tunggal-dan-runtime-op3/README_ID.md) · [baris teacher verifikasi jalur TEST](../analisis_performa/lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) (D24) · [spesifikasi server lab](../environment/README.md#server-hardware-observed-2026-11-16).
 
 > **13 November 2026:** [Log progres](2026-11-13/LOG_PROGRES_SKRIPSI.md) · [verifikasi jalur inferensi TEST sembilan student](../analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) (D23).

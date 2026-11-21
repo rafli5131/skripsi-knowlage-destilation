@@ -1,4 +1,4 @@
-# BAB 2 — LANDASAN KEPUSTAKAAN
+# BAB 2 LANDASAN KEPUSTAKAAN
 
 > Draf bahan kerja. Lengkapi kutipan akademik dan periksa kembali setiap sumber primer serta format daftar pustaka sebelum penyerahan.
 

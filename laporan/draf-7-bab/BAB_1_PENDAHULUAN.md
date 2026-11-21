@@ -1,4 +1,4 @@
-# BAB 1 — PENDAHULUAN
+# BAB 1 PENDAHULUAN
 
 > Draf kerja 12 November 2026. Judul, format, sitasi dan substansi akhir perlu ditelaah sesuai pedoman program studi dan arahan pembimbing.
 

@@ -1,0 +1,198 @@
+{
+  "dibuat_utc": "2026-11-21T14:23:58+00:00",
+  "skrip": "scripts/build_bukti_kebutuhan.py",
+  "skrip_sha256": "e68401216a3cb3c46b2273d3aab4c43a3f8bf6a755831437424a07243a94ad3b",
+  "commit_repo": "4f9c6cff1a7a6d4bee423853f9c7c2dc13f002ab",
+  "kriteria": "retrospektif dari indikator Bab 4; daftar KF/KNF disetujui pembimbing (D18)",
+  "status": {
+    "KF-01": "Lulus",
+    "KF-02": "Lulus",
+    "KF-03": "Lulus dengan catatan",
+    "KF-04": "Lulus",
+    "KF-05": "Lulus untuk contoh yang tersedia",
+    "KNF-01": "Lulus"
+  },
+  "sumber": {
+    "analisis_performa/tabel/T36_runtime_live_setara_per_run.csv": "3afb8ab3469acac2ff5c94ad1062813318fd01c9e3a35e0ac77d6adf7ccd5aff",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_id_track_bola_id.png": "6ee8740f39e65e2dac7fdf09fbf2ad122b943b69773f2fd710872aa2c7789707",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_lintasan_bola_id.png": "868f1df8e6af864872512e0fae45ab0bd200547f24495a71e18adfa53094e55c",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_deteksi.csv": "04dac58f72d1a6651d585f65174e47668657ed50775216b31059fff64dbc4b50",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_runtime.csv": "4c263ecd3ddaa294e947d39b84938a7959a933d88c1d0d6762b5c5b96c856efd",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/summary_metrics.json": "d7e0b99d35eee5630a2dab3a378f0f5be8f964e25ff9410a24ccfb0b40e99f23",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/jendela_runtime.csv": "6afc0e71e0abe55d2bc047e57e020dc700bcb6f99021c66fdee555a6d20200e2",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/summary_metrics.json": "97d09a896f584230cd3cec94f0f599d03307c10b08e1af961cd49713147decd4",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/tabel_deteksi.csv": "250c6913075a3bc14dd408a7e6a827decda775602c3e5d5fd497b0a271aed19f",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/jendela_runtime.csv": "63905a15e99d3d176e3ad6df770587df287e8c7ca60c3968d142fa439999a7e9",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/summary_metrics.json": "41189b3ccaaf1b48eabb5ad837a3153c3518c8e86acd18ccf3d0d193b6efe9f6",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/tabel_deteksi.csv": "4aefa85f205738fc7dc5c5fbbf1152441144afa431488faa4e7883730f38271c",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/jendela_runtime.csv": "1ed88e5d243c2e686d0ba8dfddb9884bc2212b9fde9e2b90c07424d1f073d3a5",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/summary_metrics.json": "33012ef36e52a49de58f419af2526370b5994feea0679a3eb1791a0c912ece31",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/tabel_deteksi.csv": "e1c30e06003e9ab922b94028dadf20d523d82f7fafd4764858b0f13fc4b98cf8",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/jendela_runtime.csv": "86ac5cc57dd48bc44238ffb411f6b436e46e2a127fcdba9ef282f348cd5976d5",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/summary_metrics.json": "1f4c375f042ac182e2d76c10d4ec5f5ed3dbd76b7d85174a247da519732fc2f0",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/tabel_deteksi.csv": "9df93dc8269b8fd86bef1c2383ee2cc57871cefb696892f611e2346ee421871d",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/jendela_runtime.csv": "4986fa489c3955b43b5a73571ce0230e22455e61f57a07fdc8c353053a4b0d5e",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/summary_metrics.json": "b8521f01e90dbc92a8ca46defdd31b3c9caadc98ad2b409ee713dddf70afd0da",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/tabel_deteksi.csv": "5b57cc75856d657f6c72e38616e671d333ab8ab0b280d2fa626b78a69a0ba81f",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/jendela_runtime.csv": "ca286435d7e562945c2d39a3c778f2cd368691dce934c9852e5229310ca2f99d",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/summary_metrics.json": "d80f26016487111b5df7026819f48d929dbb6634174d3bb0876c7766f4d29ed8",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/tabel_deteksi.csv": "97c34570d44680ed04fd758783052cb7566dd139eecb3e1829c8ee06e75dd6b0",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/frame_deteksi_sesudah_jendela.png": "226adb9b4aa546a5d9c24f550d31d26c7b0c05553fc7a7e4e9c335b96b599ecf",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/grafik_keluaran_kelas_id.png": "3b8be7cb02ebefdee75d54159ea5fd6f79db5680f365b1f06a585deaf56402cb",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/jendela_runtime.csv": "580d4ad8a515aba9fc6d4090b7278bf5d46853d0a5d9f873c98634597c1c23c2",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/preview_sebelum_run.png": "2e591a940fd7a716042915d23ee52ad13b6bbfdb3cfe6308d8e3011a234e2a6e",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/summary_metrics.json": "cea3dcd1991e9b6a443b6f54ba3862fa1f9f35378649cccdd5c161461f6a1e85",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/tabel_deteksi.csv": "5ce804fcf82f79cc8709179b9534f609e163c7a8d7c2fcbb087fcd9a7e1f9ff8",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/jendela_runtime.csv": "51df79571c29026a9169615074e72949ce9db08205608fa7ef1446b49e6c33cb",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/summary_metrics.json": "cbea8e7ee46a8523536c691541375fc520faa5a504644739144701acaf03e07c",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/tabel_deteksi.csv": "5ed1cadf4794aca2c746cc8c0a170f11531f9e154863261cbbe1e4f9538e816a",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/jendela_runtime.csv": "6aa3eb1c4afa6dba265b376e61cd9ebd815585656a012c0e180e113ab879b740",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/summary_metrics.json": "6bd5a944e8a9ba4668bfaa8cb2f78d402f6595b0867f18f1f643c15de7fcfd83",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/tabel_deteksi.csv": "36db01787667b17ad2324a136292e252020b43d2db7123d1343767e6123f68e2",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u1/summary_metrics.json": "c99570f5ce5984b6828797eef7721b3c14ce2f21bae38e2a081ae85ba57f1f52",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u1/tabel_deteksi.csv": "5425820c187d57e8fcdca3b1b986c406dc4e596ec06bec18f00de1f0c587e989",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u2/summary_metrics.json": "f739b80254ee241c74730ccf7059bf5030f55328e9159b0bbf0ee5d23aee1db2",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u2/tabel_deteksi.csv": "61459174a737ed5b2b6a38d05f549a111cf27db3cfeba64fae8d98964cbc04ed",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u3/summary_metrics.json": "42b44a600d35c840ea9c6df1104cde05ad9519ef0b06b488d4876f2d54665b34",
+    "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u3/tabel_deteksi.csv": "b52dc9b48f7c021093f60ba521229e760edf2822ca8cbf49e961600f9d05a6f8",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u1-ulang2/summary_metrics.json": "18b53344a477550dde03526fdccd493943efe98671e88b01a23465e4465d1911",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u1-ulang2/tabel_deteksi.csv": "131cb1d041d0d45d96d8e02ca84955bf3b550209608ffed1ae818296f6ece513",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u2/summary_metrics.json": "44ba00d6a5aa5637baff7fa21b468b2f8e608b11f8ab4567b4cd3af012902b78",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u2/tabel_deteksi.csv": "fd6e20ed6ebdd8b09b93023b2ef5844799484d6c3f5dc53acfa4969421577ade",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u3-ulang1/summary_metrics.json": "2062d0d2ae1956183a834671822fa412546dcabdc6ee1c6f195e9f2673177dbb",
+    "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u3-ulang1/tabel_deteksi.csv": "40692f32ed9049c092edb5b90cf0ae074b9df8fca6b6b33ec54b7a31ab73ee7f",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/summary_metrics.json": "3ad3c59adbe0f95eb19bd8c6bdc28ca10f94e3ac433bd24116a509d48f3e65b7",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/tabel_deteksi.csv": "9eb26ebef293e234b6c6a2503f310520619fd9d0b718c0133ff42653ba4b082c",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u2/summary_metrics.json": "6fc6466ed81633b2733dfd97ab8ecb2b2f38b61b2b5852dbf0687ef020eac08f",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u2/tabel_deteksi.csv": "4f43796f71ccd8ba17cb95e1768939301d171dc3642ec1ff0677f977128bc8ab",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u3/summary_metrics.json": "d71ae41def322f25e957c9d7b05701253d36eef36026866a195b19b788fee459",
+    "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u3/tabel_deteksi.csv": "f7e110ceba71429e157df05bd23a2075cfb3b5de00a53388211a04b617fc2765",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u1/summary_metrics.json": "b9328f76e285c320077e1207f165fa831ac3ae72ad700b1c4567a2f292e0c34b",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u1/tabel_deteksi.csv": "634933690e433b8d123d150f1ca72850f3d1e399c3a406c1f3ac6b3e1209e25e",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u2/summary_metrics.json": "beff1cbe47f1996c8a8be2068d9dcd9e05f7f9ff972d6d0b084804c09b3beb78",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u2/tabel_deteksi.csv": "49ef78362d4b3ac4eea169836f218cf52338e3957ba2ffb1263c7284036f060d",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u3/summary_metrics.json": "4ef06add1d407bb730af1bd94a4452554bd2e7e816c49b8a448ffafc949cf684",
+    "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u3/tabel_deteksi.csv": "40f1f7f7bbdfb80be756df143590586db217de260de9ce112805aafcfa36b9b5",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u1/summary_metrics.json": "e17c7bd2aeafc51aa10226b52c022fd62d20263aa370b47a2bc30ec2d11b2438",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u1/tabel_deteksi.csv": "3fca8da3b95cb50cdeeaf4af98d77272474687dc54123c92d1acd84d197f574c",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u2/summary_metrics.json": "8c338ed35e00a8601b054faec55149ac964795bd8c16a8c1ab6de33088ad2622",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u2/tabel_deteksi.csv": "f6cb8d64c842cd772ebccef25598781dcb035df4cac0c4dc8443454c113b41f6",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/summary_metrics.json": "102f603a0c51732700c83e82f61fcbc9775a95408a899ab1fd0fab832bdbf03f",
+    "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/tabel_deteksi.csv": "5521b644017298514a93e8d3fda4cc73c112b13335443781598e643fe4ee43de",
+    "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/hybrid_berjalan_u3_sesudah.png": "fdc3d0b86b73c7c91a66d4cffdc9f95c24093b6261c5b69594b45e9aadb106d3",
+    "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/kd_murni_berjalan_u3_sesudah.png": "e992fdf050ccb02fbf63da14326116e59f60605f21b0ea977936afdbb8b3717a",
+    "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_berjalan_u1_sesudah.png": "d6ae0f020919613d09a34ae206148b994f420dbf551178579a617a6688df2b1c",
+    "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png": "4259bb4cd353b594fbe5bee4aca7108217850867d4f6095156e7056d5624d201",
+    "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png": "985306d8cbb12f495c089a97bbcf4f9b2457ff852451e5239efdd1e729091cf0",
+    "runs/op3_single_path_eval/20261116_runtime_01/runtime_stages_manifest.json": "bd72b388ad30b7357b209d768b47d4c44c969fe65dde3a2c3c003da70ee07a9a",
+    "scripts/op3_pytorch_detector.py": "8aa61b239cda0bdcdf17f88dac9aabd5ed99ebe6044fcd78d7d259faa26f2250"
+  },
+  "keluaran": {
+    "KF-01_menerima_citra/README.md": {
+      "sha256": "585af5ed99ed4114567b82ce8b7dae9b15f0addbc2d112fe7d786a5ccbfdb570",
+      "jenis": "dibangkitkan"
+    },
+    "KF-01_menerima_citra/bukti_frame_dan_error_24_run.csv": {
+      "sha256": "d587f901e7d2fa092490087067559eb8d4dddef3f6ac36336dd24059971bc0d4",
+      "jenis": "dibangkitkan"
+    },
+    "KF-02_deteksi_tiga_kelas/README.md": {
+      "sha256": "f1737dd8021298c9ca7c7071b599c8deeaeb91c8f234c6378b3d720ce1cb27bc",
+      "jenis": "dibangkitkan"
+    },
+    "KF-02_deteksi_tiga_kelas/bukti_cakupan_kelas_24_run.csv": {
+      "sha256": "be6950ce115301094af7ce3ba91ac120c8279867c9e52ca2415b2beeed0af56d",
+      "jenis": "dibangkitkan"
+    },
+    "KF-02_deteksi_tiga_kelas/contoh_keluaran_hybrid_diam_u1.png": {
+      "sha256": "226adb9b4aa546a5d9c24f550d31d26c7b0c05553fc7a7e4e9c335b96b599ecf",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/frame_deteksi_sesudah_jendela.png"
+    },
+    "KF-02_deteksi_tiga_kelas/grafik_keluaran_kelas_hybrid_diam_u1.png": {
+      "sha256": "3b8be7cb02ebefdee75d54159ea5fd6f79db5680f365b1f06a585deaf56402cb",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/grafik_keluaran_kelas_id.png"
+    },
+    "KF-03_id_pelacakan/README.md": {
+      "sha256": "7aec9958369a60a0a2da9950af2fce43e9bf0ee9cde02e6f3f2c6b0c87ea1d10",
+      "jenis": "dibangkitkan"
+    },
+    "KF-03_id_pelacakan/bukti_id_bola_per_frame.csv": {
+      "sha256": "3b360fdfa9e2ede4e21d323b2b1524c6aa5efb21bf1e2f00c239601e3a5632ef",
+      "jenis": "dibangkitkan"
+    },
+    "KF-03_id_pelacakan/grafik_id_track_bola.png": {
+      "sha256": "6ee8740f39e65e2dac7fdf09fbf2ad122b943b69773f2fd710872aa2c7789707",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_id_track_bola_id.png"
+    },
+    "KF-03_id_pelacakan/grafik_lintasan_bola_id2.png": {
+      "sha256": "868f1df8e6af864872512e0fae45ab0bd200547f24495a71e18adfa53094e55c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_lintasan_bola_id.png"
+    },
+    "KF-04_log_runtime/README.md": {
+      "sha256": "13603dbd09108a7b5d038aeecf01b19a1861e3bab85e63b33ad940f9cc671f8a",
+      "jenis": "dibangkitkan"
+    },
+    "KF-04_log_runtime/bukti_kolom_log_jendela_repo.csv": {
+      "sha256": "e4c2f62061b456bb252c3e79a1c93d205ddb3fb394b47690cde32b066436f908",
+      "jenis": "dibangkitkan"
+    },
+    "KF-04_log_runtime/bukti_log_mentah_24_run_T45.csv": {
+      "sha256": "43a26a69891dff9e54a62f27640fb9e1fcb6ae1539beb1eb4e0700776ecba8eb",
+      "jenis": "dibangkitkan"
+    },
+    "KF-05_preview/README.md": {
+      "sha256": "7b95695fb72e84178fd9a09014a4d7baa85b1a2bdebcc037dd84ef0d6ecae3d2",
+      "jenis": "dibangkitkan"
+    },
+    "KF-05_preview/preview_hybrid_berjalan.png": {
+      "sha256": "fdc3d0b86b73c7c91a66d4cffdc9f95c24093b6261c5b69594b45e9aadb106d3",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/hybrid_berjalan_u3_sesudah.png"
+    },
+    "KF-05_preview/preview_hybrid_diam_u1_sebelum_run.png": {
+      "sha256": "2e591a940fd7a716042915d23ee52ad13b6bbfdb3cfe6308d8e3011a234e2a6e",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/preview_sebelum_run.png"
+    },
+    "KF-05_preview/preview_kd_murni_berjalan.png": {
+      "sha256": "e992fdf050ccb02fbf63da14326116e59f60605f21b0ea977936afdbb8b3717a",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/kd_murni_berjalan_u3_sesudah.png"
+    },
+    "KF-05_preview/preview_supervised_berjalan.png": {
+      "sha256": "d6ae0f020919613d09a34ae206148b994f420dbf551178579a617a6688df2b1c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_berjalan_u1_sesudah.png"
+    },
+    "KF-05_preview/preview_teacher_berjalan.png": {
+      "sha256": "4259bb4cd353b594fbe5bee4aca7108217850867d4f6095156e7056d5624d201",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png"
+    },
+    "KNF-01_laju_pemrosesan/README.md": {
+      "sha256": "4910e875cff48d580c5b356bcdfbf5c3f9aa25f59c34aabd169e0decf41434cd",
+      "jenis": "dibangkitkan"
+    },
+    "KNF-01_laju_pemrosesan/bukti_fps_24_run.csv": {
+      "sha256": "2cbb6b6b431eb44132effb2845ace84e66f420392090f37eac04aae4fbc59b48",
+      "jenis": "dibangkitkan"
+    },
+    "KNF-01_laju_pemrosesan/garis_runtime_op3_empat_model_id.png": {
+      "sha256": "985306d8cbb12f495c089a97bbcf4f9b2457ff852451e5239efdd1e729091cf0",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png"
+    },
+    "README.md": {
+      "sha256": "312cc67323b2f0da6571b93e23fe5f27617801a3db836547537d72430aea0e0c",
+      "jenis": "dibangkitkan"
+    },
+    "kasus_uji_kf_knf.csv": {
+      "sha256": "2888c1349c8a42b728be4588340617a352bbd69010a8ef05dabb2c3a05f2cd03",
+      "jenis": "dibangkitkan"
+    }
+  }
+}
