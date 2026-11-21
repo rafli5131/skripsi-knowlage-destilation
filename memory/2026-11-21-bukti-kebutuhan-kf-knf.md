@@ -6,4 +6,6 @@ Persetujuan D18 adalah lisan pada 12 November 2026; baris D18 di `docs/DECISIONS
 
 Audit hash manifest: [`analisis_performa/AUDIT_HASH_MANIFEST_20261121.md`](../analisis_performa/AUDIT_HASH_MANIFEST_20261121.md). Bagian `tables` di `analisis_performa/manifest.json` mencatat versi 19 Oktober; jangan memakainya sebagai hash tabel saat ini.
 
+Penyalinan berkas dari sesi cloud ke laptop lewat alat penyalin desktop mengubah isi PNG (ukuran dan SHA-256 berubah, berkas teks tidak). Gambar di `bukti_kebutuhan/` disalin ulang langsung dari berkas asli di laptop dan hash-nya sudah cocok dengan manifest. Untuk gambar, salin di laptop dari berkas sumber, lalu cek hash sebelum commit. Ini kemungkinan penyebab 18 PNG akurasi `dokumentasi/model/` yang tidak cocok dengan manifest sejak 11 November, tetapi belum terbukti.
+
 Masih terbuka: jalur angka utama T38/T43 dan penyajian CPU RM5 (keputusan Bhre dan pembimbing). Tidak ada pekerjaan tersisa di robot atau server.

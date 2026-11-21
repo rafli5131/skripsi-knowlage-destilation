@@ -31,6 +31,8 @@ Status KF-03 sebelumnya ditulis "belum dinyatakan lulus" di Bab 6 karena sesi bo
 
 ## Temuan audit yang tidak diubah
 
+- Penyalinan berkas dari sesi cloud ke laptop mengubah isi PNG, sedangkan berkas teks tetap identik. Sepuluh gambar di `bukti_kebutuhan/` sudah disalin ulang dari berkas asli di laptop dan cocok dengan manifest. Mekanisme ini kemungkinan menjelaskan 18 PNG akurasi `dokumentasi/model/` yang tidak cocok dengan manifest sejak 11 November; dugaan ini belum dibuktikan.
+
 - Sekitar 400 tautan relatif di README percobaan menunjuk berkas lokal robot (telemetri, preview, `runs/`, `data/`) yang sengaja tidak masuk Git, atau berada di README arsip yang disalin ke folder lain. Dokumen aktif (README utama, indeks, draf bab, tabel, keputusan) tidak memiliki tautan rusak ke berkas yang seharusnya ada di Git.
 - Pilihan jalur angka utama T38/T43 (`model.val` atau `model.predict`) dan cara penyajian CPU untuk RM5 belum diputuskan; Bab 6 menyajikan keduanya dan memberi catatan draf.
 - Draf tujuh bab masih ringkas dan baru memuat rujukan pada Bab 4 dan Bab 6.
