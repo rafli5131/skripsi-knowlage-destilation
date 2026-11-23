@@ -1,8 +1,8 @@
 {
-  "dibuat_utc": "2026-11-21T15:08:42+00:00",
+  "dibuat_utc": "2026-11-23T02:00:43+00:00",
   "skrip": "scripts/build_jejak_waktu.py",
-  "skrip_sha256": "ab2c98a9211001fcf82f0d9002120cdaee1e386609ce45e593474967823f6760",
-  "commit_repo": "7807c3b47b4863dff0ae8ba95f9039f013d31c6d",
+  "skrip_sha256": "140852b7b547768a43bd57dde9e8aa71ee0934b305a93c71e3e71a0f50538b14",
+  "commit_repo": "4a9f34453bee6b8f6746aec1c989517c284643d2",
   "sumber": {
     "analisis_performa/lab_server/verifikasi_jalur_test_20261113/hasil_verifikasi_jalur_test.json": "bcd38beac62b32a6493c460d740a339b5dbaa256a4049941ff892472a7f938d8",
     "analisis_performa/lab_server/verifikasi_jalur_test_20261116_teacher/hasil_verifikasi_jalur_test.json": "fc40b862182b3e5cccfbe277a536da90486f96633f23904228f5ae4d40fc4ed0",
@@ -65,7 +65,7 @@
     "runs/supervised/yolo11_tiny_supervised_seed42_retry1/results.csv": "f12640b323f34e2db6291161b1737b11d28018bf55dbb6dc67f117767949e414"
   },
   "keluaran": {
-    "README.md": "461d52ac55b89aa26e0f27f1946f4213e1f540d54206ab145579618d1f19a8d8",
+    "README.md": "bbcce864aa0012bf3b9ec730331b75c329fc5acda0847af8d1f8082cfc4813d4",
     "garis_waktu_kegiatan_id.png": "c6ca142161d508524f60af7a71a5cddb52c9adf7d66f2a63b7b5a62ac79a4ba3",
     "kronologi_kegiatan.csv": "4b8108ae071f2d44e6b84e365ff1f3e208a4d890adb7271f9bb661d15379a18c",
     "timestamp_frame_live_24_run.csv": "2948057dafd39d7e76568521e4d0b768a324da5f6be75adbace573ada6a14fef",

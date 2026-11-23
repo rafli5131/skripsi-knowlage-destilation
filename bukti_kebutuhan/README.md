@@ -59,4 +59,4 @@ dokumentasi percobaan; sumber aslinya tidak diubah.
 python3 scripts/build_bukti_kebutuhan.py --replace
 ```
 
-Dibangkitkan dari commit `4f9c6cff1a7a`.
+Dibangkitkan dari commit `4a9f34453bee`.

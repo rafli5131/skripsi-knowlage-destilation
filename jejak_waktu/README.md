@@ -78,4 +78,4 @@ disalin ke repositori, jalankan ulang skrip agar tabel frame terisi lengkap.
 python3 scripts/build_jejak_waktu.py --replace
 ```
 
-Dibangkitkan dari commit `7807c3b47b48`.
+Dibangkitkan dari commit `4a9f34453bee`.

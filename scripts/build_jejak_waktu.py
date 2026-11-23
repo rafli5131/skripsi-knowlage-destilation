@@ -25,6 +25,9 @@ OUT_DEFAULT = ROOT / "jejak_waktu"
 REGISTRY = ROOT / "configs/model_registry.yaml"
 T36 = ROOT / "analisis_performa/tabel/T36_runtime_live_setara_per_run.csv"
 RUN_ROOTS = [ROOT / "dokumentasi/2026-11-02", ROOT / "dokumentasi/2026-11-03"]
+# Log jendela pelengkap yang diekstrak dari OP3 (prompt 23 November 2026).
+PELENGKAP = ROOT / "log_op3_pelengkap/live_24_run"
+TEACHER_TRAINING = ROOT / "log_op3_pelengkap/teacher_training"
 
 METODE = {"kd": "KD murni", "supervised": "Supervised", "hybrid_full": "KD Hybrid full"}
 MODEL_LIVE = {"teacher": "Teacher YOLO11n", "hybrid1337": "KD Hybrid seed 1337",
@@ -127,6 +130,24 @@ def training_main(w: Writer):
     registry = yaml.safe_load(w.source(REGISTRY).read_text(encoding="utf-8"))["models"]
     activities, epochs, main_dirs = [], [], set()
     for key, info in registry.items():
+        if key == "teacher_fp32" and (TEACHER_TRAINING / "manifest.json").exists():
+            manifest = json.loads(w.source(TEACHER_TRAINING / "manifest.json").read_text(encoding="utf-8"))
+            rows = results_rows(w.source(TEACHER_TRAINING / "results.csv"))
+            stamp = parse(manifest.get("timestamp"))
+            activities.append(["training_utama", "teacher_fp32", "Teacher YOLO11n", "42", "", iso(stamp), "",
+                               manifest.get("gpu_name", ""), len(rows), round(float(rows[-1]["time"]), 1),
+                               rel(TEACHER_TRAINING / "manifest.json"),
+                               "Manifest teacher hanya memuat satu kolom timestamp; ditempatkan sebagai waktu selesai "
+                               "karena belum dipastikan apakah menandai awal atau akhir training."])
+            previous = 0.0
+            for row in rows:
+                t = float(row["time"])
+                epochs.append(["teacher_fp32", "Teacher YOLO11n", "42", int(row["epoch"]), t,
+                               round(t - previous, 2) if t >= previous else "",
+                               row.get("metrics/precision(B)", ""), row.get("metrics/recall(B)", ""),
+                               row.get("metrics/mAP50(B)", ""), row.get("metrics/mAP50-95(B)", "")])
+                previous = t
+            continue
         if key == "teacher_fp32":
             activities.append(["training_utama", "teacher_fp32", "Teacher YOLO11n", "", "", "", "",
                                "NVIDIA L40 (menurut audit 22 Oktober)", "100", "",
@@ -223,6 +244,8 @@ def live_runs(w: Writer) -> tuple[list[list], list[list]]:
         start, finish = parse(run["window_start_utc"]), parse(run["window_end_utc"])
         folder = folders[run["run_id"]]
         window = folder / "jendela_runtime.csv"
+        if not window.exists() and (PELENGKAP / run["run_id"] / "jendela_runtime.csv").exists():
+            window = PELENGKAP / run["run_id"] / "jendela_runtime.csv"
         status = "ada di repositori" if window.exists() else "hanya di OP3"
         activities.append(["run_live", run["run_id"], MODEL_LIVE[run["model"]], "", iso(start), iso(finish),
                            round((finish - start).total_seconds(), 1), "OP3 i5-1240P CPU", "", "",
@@ -307,6 +330,21 @@ def readme(w: Writer, activities, epochs, frames, commit: str) -> None:
     live = [a for a in activities if a[0] == "run_live"]
     first, last = min(parse(a[4]) for a in live), max(parse(a[5]) for a in live)
     in_repo = sum(1 for f in frames if not f[11].startswith("OP3:"))
+    teacher = next(a for a in activities if a[1] == "teacher_fp32")
+    if teacher[5]:
+        teacher_text = (
+            "**Teacher utama** dilatih di server lab pada proyek Advance Vision, bukan di robot. Robot hanya menyimpan\n"
+            "salinan bobotnya (SHA-256 `e05b2b21...420b8c`). Salinan manifest dan `results.csv` training teacher ada di\n"
+            f"[`log_op3_pelengkap/teacher_training/`](../log_op3_pelengkap/teacher_training/). Manifest hanya memuat satu\n"
+            f"timestamp ({wib(parse(teacher[5]))} WIB) yang belum dipastikan menandai awal atau akhir training; durasi\n"
+            "training diambil dari kolom `time` epoch terakhir. `dataset_version` teacher tetap kosong, sehingga\n"
+            "keterbatasan provenance dataset teacher masih berlaku.")
+    else:
+        teacher_text = (
+            "**Teacher utama** dilatih di server lab pada proyek Advance Vision, bukan di robot. Robot hanya menyimpan\n"
+            "salinan bobotnya (SHA-256 `e05b2b21...420b8c`). Audit 22 Oktober mencatat bahwa manifest dan log teacher\n"
+            "menyebut 100 epoch, seed 42, dan GPU L40, tetapi berkas tersebut berada di akun server lama yang kini tidak\n"
+            "dapat diakses, sehingga waktu mulai dan selesai training teacher tidak tersedia di repositori.")
     w.write("README.md", f"""# Jejak waktu training, evaluasi, dan pengujian
 
 Folder ini merangkum kapan setiap model dilatih, dievaluasi, dan diuji di robot. Semua angka dibaca dari
@@ -337,10 +375,7 @@ Durasi training diambil dari kolom `time` epoch terakhir, sama dengan
 dan dilanjutkan dari checkpoint, sehingga durasinya adalah jumlah dua segmen dan selisih mulai-selesai
 memuat jeda interupsi.
 
-**Teacher utama** dilatih di server lab pada proyek Advance Vision, bukan di robot. Robot hanya menyimpan
-salinan bobotnya (SHA-256 `e05b2b21...420b8c`). Audit 22 Oktober mencatat bahwa manifest dan log teacher
-menyebut 100 epoch, seed 42, dan GPU L40, tetapi berkas tersebut berada di akun server lama yang kini tidak
-dapat diakses, sehingga waktu mulai dan selesai training teacher tidak tersedia di repositori.
+{teacher_text}
 
 ## Evaluasi TEST dan verifikasi jalur
 

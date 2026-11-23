@@ -1,8 +1,8 @@
 {
-  "dibuat_utc": "2026-11-21T14:23:58+00:00",
+  "dibuat_utc": "2026-11-23T02:00:43+00:00",
   "skrip": "scripts/build_bukti_kebutuhan.py",
-  "skrip_sha256": "e68401216a3cb3c46b2273d3aab4c43a3f8bf6a755831437424a07243a94ad3b",
-  "commit_repo": "4f9c6cff1a7a6d4bee423853f9c7c2dc13f002ab",
+  "skrip_sha256": "43bd4ae9c064cea1ad3cb2720f449992a67b3feb773982e939e0f3e1740479d1",
+  "commit_repo": "4a9f34453bee6b8f6746aec1c989517c284643d2",
   "kriteria": "retrospektif dari indikator Bab 4; daftar KF/KNF disetujui pembimbing (D18)",
   "status": {
     "KF-01": "Lulus",
@@ -187,7 +187,7 @@
       "sumber": "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png"
     },
     "README.md": {
-      "sha256": "312cc67323b2f0da6571b93e23fe5f27617801a3db836547537d72430aea0e0c",
+      "sha256": "793becdc2698e3945b7377fbd1ec319edcbc58e044a07342ea8dfe1e194f0a3a",
       "jenis": "dibangkitkan"
     },
     "kasus_uji_kf_knf.csv": {

@@ -30,6 +30,8 @@ T45_MANIFEST = ROOT / "runs/op3_single_path_eval/20261116_runtime_01/runtime_sta
 P27 = ROOT / "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking"
 DETECTOR = ROOT / "scripts/op3_pytorch_detector.py"
 RUN_ROOTS = [ROOT / "dokumentasi/2026-11-02", ROOT / "dokumentasi/2026-11-03"]
+# Log jendela pelengkap yang diekstrak dari OP3 (prompt 23 November 2026).
+PELENGKAP = ROOT / "log_op3_pelengkap/live_24_run"
 
 MODEL_LABEL = {
     "teacher": "Teacher YOLO11n",
@@ -262,6 +264,8 @@ def build_kf04(w: Writer, runs: list[dict]) -> dict:
     rows, ok_files = [], 0
     for run in runs:
         path = run["folder"] / "jendela_runtime.csv"
+        if not path.exists():
+            path = PELENGKAP / run["run_id"] / "jendela_runtime.csv"
         if not path.exists():
             continue
         data = list(csv.DictReader(w.source(path).open(encoding="utf-8")))
@@ -505,6 +509,13 @@ ganda atau deteksi palsu sesaat. Gawang memakai dua ID selama sesi (lihat dokume
 acuan identitas, sehingga hasil ini tidak mengukur metrik pelacakan seperti MOTA atau IDF1.
 """)
 
+    if kf04["files"] < 24:
+        batas_kf04 = (f"log jendela {24 - kf04['files']} run lain (supervised, KD murni, dan Hybrid berjalan) tidak\n"
+                      "disimpan di repositori. Untuk run tersebut, bukti berupa hash dan kecocokan rerata yang dihitung dari log\n"
+                      "mentah di OP3.")
+    else:
+        batas_kf04 = ("log jendela 24 run tersedia di repositori; sebagian diekstrak kemudian dari log mentah OP3 "
+                      "ke `log_op3_pelengkap/` setelah hash log mentah dicocokkan dengan T36.")
     w.text("KF-04_log_runtime/README.md", f"""# KF-04 Mencatat runtime per frame
 
 **Kebutuhan:** setiap frame yang diproses dicatat beserta timestamp, durasi tahap pemrosesan,
@@ -531,9 +542,7 @@ penggunaan CPU, RSS, dan status error.
 ([`bukti_log_mentah_24_run_T45.csv`](bukti_log_mentah_24_run_T45.csv),
 [T45](../../analisis_performa/tabel/T45_rincian_latensi_dan_cpu_op3.md)).
 
-**Batas:** log jendela {24 - kf04['files']} run lain (supervised, KD murni, dan Hybrid berjalan) tidak
-disimpan di repositori. Untuk run tersebut, bukti berupa hash dan kecocokan rerata yang dihitung dari log
-mentah di OP3.
+**Batas:** {batas_kf04}
 """)
 
     w.text("KF-05_preview/README.md", """# KF-05 Menampilkan preview deteksi
