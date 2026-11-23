@@ -49,7 +49,7 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 
 | Prompt | Kegunaan | Hasil atau langkah terkait |
 | --- | --- | --- |
-| [Pelengkap log OP3](PROMPT_PELENGKAP_LOG_OP3_2026-11-23.md) | Ekstraksi log jendela 15 run live, manifest capture T38/T43 (metadata saja), dan catatan training teacher ke `log_op3_pelengkap/` | Offline di robot; hash log mentah wajib cocok dengan T36; tanpa gambar, label, prediksi, atau bobot |
+| [Pelengkap log OP3](PROMPT_PELENGKAP_LOG_OP3_2026-11-23.md) | Ekstraksi log jendela 15 run live, manifest capture T38/T43 (metadata saja), dan catatan training teacher ke `log_op3_pelengkap/` | Dijalankan dari laptop melalui SSH ke OP3; robot hanya dibaca; hash log mentah wajib cocok dengan T36; tanpa gambar, label, prediksi, atau bobot |
 | [Sesi OP3 offline jalur tunggal dan runtime](PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md) | T44 jalur tunggal T38/T43 dan T45 rincian latensi serta CPU | Selesai 16 November |
 | [Verifikasi jalur TEST di server](PROMPT_VERIFIKASI_JALUR_TEST_SERVER_2026-11-13.md) | Perbandingan `model.val` dan `model.predict` pada TEST | Selesai 13 dan 16 November (D23, D24) |
 | [Uji sensitivitas T43](PROMPT_T43_UJI_SENSITIVITAS_2026-11-12.md) | Sapuan confidence pada 260 frame T43, peninjau kedua, dan konvensi kotak alternatif pada 52 frame sampel | Offline di robot, tanpa perintah gerak; butuh satu peninjau tambahan untuk bagian B. Dasar D21. |
