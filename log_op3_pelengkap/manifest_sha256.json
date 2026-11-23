@@ -287,7 +287,7 @@
     "live_24_run/20261103_eq_sup1337_walk_u3/jendela_deteksi.csv": "cfc51d4d690b74be09841010eb2de4165b3ba17698dec4585999b71fb389a82c",
     "live_24_run/20261103_eq_sup1337_walk_u3/jendela_runtime.csv": "62a6a9c88a7135bcf7c784a501201d0477bcb2e359b34cd054f2296215f56efe",
     "live_24_run/status_ekstraksi.json": "300a92d52b85afa75ea79e06f9d2f09972c027cdbefd7fcc5d18091ff16d7bed",
-    "README.md": "7122bf319233234961b82af611cd5c4022dca1be5175827388892dd4a5e428a5",
+    "README.md": "da5416b071fed57bff1c39782d367d06648de4ab161524af7836db0209d10d6e",
     "ringkasan_capture.csv": "6656edbca97d468409e2d96e77ee0bc5ffc0e7be16bea554020b7874a967e406",
     "status_metadata.json": "7acc91615af2a82ec3ace48927d9b68ff218073840e3bcddf3b4b739a7c80310",
     "t38_capture/20261021_all_three_position_01/capture_frames.jsonl": "951711811f5ad1a6a6fb5a71225dc163bb1d11b2360177fb2957da44d4b1e5fe",
@@ -355,5 +355,5 @@
     "teacher_training/manifest.json": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
     "teacher_training/results.csv": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e"
   },
-  "catatan": "LAPORAN_SESI.md dan berkas ini tidak dicantumkan di keluaran_sha256 karena ditulis paling akhir."
+  "catatan": "LAPORAN_SESI.md dan berkas ini tidak dicantumkan di keluaran_sha256 karena ditulis paling akhir. Hash README.md diperbarui 23 November 2026 karena README disunting setelah manifest ditulis dan sebelum commit 037f445; isi berkas lain tidak berubah."
 }

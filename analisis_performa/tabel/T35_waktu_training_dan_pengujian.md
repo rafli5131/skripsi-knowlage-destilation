@@ -10,7 +10,7 @@ Tabel ini memisahkan **durasi training tiap run**, **durasi satu sesi TEST multi
 | Supervised | 5,597 jam (20.147,50 s) | 3,734 jam (13.443,34 s) | 3,234 jam (11.643,00 s) | [T02](T02_resep_pelatihan.md) |
 | KD Hybrid full | 1,344 jam (4.840,09 s) | 1,050 jam (3.779,57 s) | 1,033 jam (3.719,85 s) | [T33](T33_pelatihan_kd_hybrid_full.md) |
 
-Durasi diambil dari `time` pada epoch terakhir di `results.csv`, kecuali Supervised seed 1337 yang merupakan jumlah dua segmen training dari manifest resume; jeda interupsi tidak dihitung. Semua run menggunakan server bersama. Perbedaan waktu antar-metode **tidak otomatis** membuktikan biaya komputasi kausal karena beban server dan periode eksperimen dapat berbeda. Waktu training teacher tidak tersedia dengan provenance yang setara dan tidak diisi.
+Durasi diambil dari `time` pada epoch terakhir di `results.csv`, kecuali Supervised seed 1337 yang merupakan jumlah dua segmen training dari manifest resume; jeda interupsi tidak dihitung. Semua run menggunakan server bersama. Perbedaan waktu antar-metode **tidak otomatis** membuktikan biaya komputasi kausal karena beban server dan periode eksperimen dapat berbeda. Waktu training teacher tidak diisi pada tabel ini karena dilatih pada proyek dan periode yang berbeda. Catatan training teacher yang kemudian ditemukan di OP3 (dicatat 23 November 2026, [`log_op3_pelengkap/teacher_training/`](../../log_op3_pelengkap/teacher_training/)) menunjukkan 100 epoch dengan `time` epoch terakhir 3.385,53 detik (0,940 jam) pada NVIDIA L40, dimulai 2 September 2026; lihat [jejak waktu](../../jejak_waktu/README.md).
 
 ![Durasi training per metode dan seed](../grafik/T35_waktu_training.png)
 

@@ -85,6 +85,6 @@ CPU sekitar 1.300% satu CPU logis setara dengan 81 sampai 84% dari 16 CPU logis.
 
 ## 6.5 Waktu dan ablasi tambahan
 
-[T35](../../analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) memisahkan waktu training student, satu sesi TEST multi-model, dan benchmark L40. Durasi sesi multi-model bukan durasi per checkpoint; waktu teacher utama dengan provenance setara tidak tersedia. Benchmark server bukan runtime OP3.
+[T35](../../analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) memisahkan waktu training student, satu sesi TEST multi-model, dan benchmark L40. Durasi sesi multi-model bukan durasi per checkpoint. Teacher utama dilatih lebih dahulu pada 2 September 2026 selama 100 epoch dengan durasi 3.385,53 detik (0,940 jam) pada NVIDIA L40, menurut catatan training yang tersimpan di OP3 ([jejak waktu](../../jejak_waktu/README.md)); dataset teacher tetap tidak tercatat versinya. Benchmark server bukan runtime OP3.
 
 Pada VAL T42, teacher YOLO11n/s mencapai mAP50–95 0,7760/0,7843 dan student masing-masing 0,7482 ± 0,0003/0,7473 ± 0,0003. Teacher s yang lebih tinggi tidak menghasilkan rerata mAP student yang lebih tinggi dalam eksperimen ini. T42 memakai teacher yang dilatih ulang, hanya satu teacher per ukuran, dan tiga seed student; ia bukan TEST atau pengganti checkpoint utama. Lihat [T42](../../analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md).

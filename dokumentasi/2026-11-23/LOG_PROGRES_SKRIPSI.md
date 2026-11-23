@@ -23,3 +23,14 @@
 - **Skrip build:** keluaran `jejak_waktu/` dan `bukti_kebutuhan/` identik dengan yang di-commit kecuali PNG garis waktu (versi matplotlib), baris commit pembangkit di README, dan manifest yang mencatat keduanya.
 - **Koreksi log 13 November:** "TP gawang hanya turun 3 sampai 13 dibanding jalur prediksi pada ambang TEST" diperiksa terhadap hasil 13 November dan benar.
 - **`test_kd_hybrid.py` di server lab:** 5 dari 5 lulus di CPU dengan `.venv-train` (torch 2.4.1, ultralytics 8.4.130), lewat `unittest discover` karena pytest tidak ada di venv itu. Path teacher `/mnt/nas-hpg9/rafli5131/...` tidak dapat diakses karena akun `rafli5131` sudah dihapus; tes memakai path cadangan yang ditautkan ke `models_local/teacher_utama/best.pt` dengan hash cocok. Rincian di [laporan uji](LAPORAN_UJI_LAPTOP_UBUNTU.md#7-tindak-lanjut-test_kd_hybridpy-di-server-lab).
+
+## Pemeriksaan hasil pelengkap log
+
+Hasil sesi pelengkap log diperiksa ulang secara terpisah di Linux:
+
+- 15 log jendela baru cocok dengan T36: jumlah frame, error 0, rerata `end_to_end_ms`, dan FPS efektif (toleransi 1e-6). Cakupan kelas per run sama dengan `tabel_deteksi.csv`, dan rerata `preprocess_ms`, `inference_ms`, serta `postprocess_ms` sama dengan rincian per run T45.
+- 97 dari 98 hash keluaran di `log_op3_pelengkap/manifest_sha256.json` cocok. `README.md` disunting setelah manifest ditulis; hash-nya diperbarui dan diberi catatan.
+- Metadata capture T38/T43 tidak memuat koordinat kotak, prediksi, atau data gambar. Berkas teks teacher dari robot (LF) identik dengan salinan laptop (CRLF) setelah normalisasi akhir baris.
+- Tidak ditemukan kata sandi, token, kunci, atau alamat IP pada berkas yang masuk sejak commit `a4bc9b2`.
+- `jejak_waktu/` dan `bukti_kebutuhan/` dapat dibangkitkan ulang dengan hasil CSV yang identik; 40 tes lulus.
+- Pernyataan lama bahwa waktu training teacher tidak tersedia diperbarui di `agent.md`, T35, dan Bab 6 §6.5.
