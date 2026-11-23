@@ -22,7 +22,7 @@ Seluruh folder `E:\Kuliah\Thesis` ditinjau: repo eksperimen, proposal KD (`Propo
 
 - Pada ambang yang sama, selisih per checkpoint maksimum 0,0076 (mAP50-95) dan 0,0101 (F1); urutan mAP50-95 tidak berubah.
 - Jalur validator TEST memakai tensor 672 x 672 (`rect`, `pad=0.5`) dan NMS `multi_label=True`; jalur prediksi 640 x 640 tanpa multi-label. Perbedaan jalur ada, tetapi pengaruhnya kecil pada TEST. Bentuk 672 x 672 diperiksa pada Ultralytics 8.4.130 dengan dataset uji kecil, bukan dari log server.
-- Pada pengaturan runtime (0,25 dan 0,45), F1 naik 0,02 sampai 0,07, terutama dari precision: prediksi gawang yang lolos turun dari sekitar 680 menjadi sekitar 560 per model dengan TP gawang hanya turun 3 sampai 11.
+- Pada pengaturan runtime (0,25 dan 0,45), F1 naik 0,02 sampai 0,07, terutama dari precision: prediksi gawang yang lolos turun dari sekitar 680 menjadi sekitar 560 per model dengan TP gawang hanya turun 3 sampai 13 dibanding jalur prediksi pada ambang TEST.
 - Selisih F1 Hybrid dikurangi supervised: -0,0050 (resmi), -0,0008 (predict), -0,0003 (runtime). Untuk naskah, F1 keduanya lebih tepat disebut setara.
 - Teacher belum dievaluasi karena bobot utama hanya tersimpan di OP3.
 
