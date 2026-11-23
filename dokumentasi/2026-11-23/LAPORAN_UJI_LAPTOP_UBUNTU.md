@@ -64,3 +64,24 @@ Semua CSV dan berkas lain identik byte demi byte. Folder yang di-commit tidak di
 ```
 
 Perubahan pada log 13 November sudah ada sebelum sesi. Angkanya diperiksa terhadap `hasil_verifikasi_jalur_test.json` 13 November: TP gawang pada IoU 0,5 turun 3 sampai 13 dari varian `protokol_test` ke varian `robot`, sehingga koreksi itu benar dan ikut di-commit (koreksi "3 sampai 11" menjadi "3 sampai 13 dibanding jalur prediksi pada ambang TEST") dan bukan milik sesi ini. `.pytest_cache/`, `scripts/__pycache__/`, dan `tests/__pycache__/` ada sejak sebelum tes dijalankan dan sudah diabaikan Git. Tidak ada perubahan baru pada berkas terlacak dan tidak ada berkas baru di repositori.
+
+## 7. Tindak lanjut: `test_kd_hybrid.py` di server lab
+
+Dijalankan Bhre pada 23 November 2026 di server lab (`labkc-l40-debian`, akun `dindarosyidah`), commit repo `be6ba9f`, dengan `.venv-train` (Python 3.11.2, torch 2.4.1+cu121, ultralytics 8.4.130) dan `CUDA_VISIBLE_DEVICES=""` sehingga berjalan di CPU. Hasil: **5 dari 5 tes lulus** dalam 3,1 detik. Log lengkap: [`test_kd_hybrid_server_lab.log`](test_kd_hybrid_server_lab.log).
+
+| Tes | Hasil |
+|---|---|
+| `test_pure_v4_matches_snapshot` | ok |
+| `test_hybrid_full_zero_kd_equals_detection_loss` | ok |
+| `test_hybrid_full_kd_equals_pure_v4_and_gradients` | ok |
+| `test_hybrid_feature_uses_original_loss` | ok |
+| `test_hybrid_full_validation_log_shape` | ok |
+
+Catatan pelaksanaan:
+
+- Path teacher utama di tes, `/mnt/nas-hpg9/rafli5131/rafli/advance_vision/artifacts/checkpoints/fp32/best.pt`, tidak dapat diakses (`Permission denied`) karena akun `rafli5131` sudah dihapus. Path yang sama masih tercatat di `configs/model_registry.yaml`.
+- Tes memakai path cadangan `../rafli/advance_vision/artifacts/checkpoints/fp32/best.pt` relatif terhadap repositori. Di server, path itu dibuat sebagai tautan simbolik di luar repositori ke `models_local/teacher_utama/best.pt`. SHA-256 sumber dan tautan sama: `e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c`. Bobot tidak disalin, dan isi tes tidak diubah.
+- `.venv-train` tidak berisi pytest, dan venv itu tidak diubah. Tes dijalankan dengan `env -u PYTHONPATH CUDA_VISIBLE_DEVICES="" .venv-train/bin/python -m unittest discover -s tests -p test_kd_hybrid.py -v`. `-m unittest tests.test_kd_hybrid` gagal karena `tests/` tidak memiliki `__init__.py`.
+- Peringatan `no model scale passed. Assuming scale='t'` sesuai dengan student skala `t` kustom. `Could not initialize NNPACK` hanya menandakan satu pustaka percepatan CPU tidak didukung; keduanya tidak memengaruhi hasil.
+
+Dengan hasil ini, seluruh tes di `tests/` sudah dijalankan: 40 lulus di laptop Ubuntu dan 5 lulus di server lab.

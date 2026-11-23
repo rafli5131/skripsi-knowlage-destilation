@@ -1,0 +1,22 @@
+test_hybrid_feature_uses_original_loss (test_kd_hybrid.HybridLossTests.test_hybrid_feature_uses_original_loss)
+Mode fitur tidak memasang penimpaan pada DistillationModel. ... ok
+test_hybrid_full_kd_equals_pure_v4_and_gradients (test_kd_hybrid.HybridLossTests.test_hybrid_full_kd_equals_pure_v4_and_gradients)
+Komponen KD sama dengan pure_v4, dan teacher tetap beku. ... WARNING ⚠️ no model scale passed. Assuming scale='t'.
+[W1123 12:19:34.910792403 NNPACK.cpp:61] Could not initialize NNPACK! Reason: Unsupported hardware.
+WARNING ⚠️ no model scale passed. Assuming scale='t'.
+ok
+test_hybrid_full_validation_log_shape (test_kd_hybrid.HybridLossTests.test_hybrid_full_validation_log_shape)
+Nilai dis_loss pada validasi tetap berbentuk satu elemen. ... WARNING ⚠️ no model scale passed. Assuming scale='t'.
+ok
+test_hybrid_full_zero_kd_equals_detection_loss (test_kd_hybrid.HybridLossTests.test_hybrid_full_zero_kd_equals_detection_loss)
+KD berbobot nol mempertahankan loss deteksi berlabel. ... WARNING ⚠️ no model scale passed. Assuming scale='t'.
+ok
+test_pure_v4_matches_snapshot (test_kd_hybrid.HybridLossTests.test_pure_v4_matches_snapshot)
+Pastikan loss pure_v4 identik dengan skrip run lama. ... WARNING ⚠️ no model scale passed. Assuming scale='t'.
+WARNING ⚠️ no model scale passed. Assuming scale='t'.
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.105s
+
+OK
