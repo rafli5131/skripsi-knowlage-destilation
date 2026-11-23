@@ -1,0 +1,44 @@
+{
+  "saved_utc": "2026-11-12T04:51:50.281535+00:00",
+  "session_id": "20261112_t43_idle_berobjek_01",
+  "count": 21,
+  "capture_manifest_status": "interrupted",
+  "actual_end": "operator-requested pause by assistant due apparent partially clipped goal; do not discard original images",
+  "preliminary_observation": "frame_000001 shows goal truncated by top edge; remaining frames require human review; no automatic decisions",
+  "interval_seconds_min_mean_max": [
+    0.9999070167541504,
+    1.0707595586776733,
+    1.5360419750213623
+  ],
+  "frozen_plan_sha256": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83",
+  "capture_manifest_sha256": "a0d4f538bb1d8ffd069da69155460077a60805fa9b4460d39d2341679177add9",
+  "capture_log_sha256": "7fa34e150664b272d00c864bec6f051cc46da3cc6d16e54f1ed87cccb3659934",
+  "images_sha256": {
+    "frame_000001.jpg": "170520bb4b43910fd8a4358e910609c729a4503f121ba7f939931826eb62b1bf",
+    "frame_000002.jpg": "a74ff82586a56801f030ead688d4911720f63869f37d45a50d7fdfa237e54f44",
+    "frame_000003.jpg": "ba95cc4d7790f68751898ba595037b46faeca16cbfa0a8717d4a40113efe4b9a",
+    "frame_000004.jpg": "7acce1def2effb8991ed1c67482f525be10064976afee1668a1ced3029a3fa47",
+    "frame_000005.jpg": "44347827f011978d60afe58a391254514175d0fbb91b88a738ec62f08eb9cfc6",
+    "frame_000006.jpg": "e81d03dc2503f993266b07c343d1bb7151c5ba86a1614fb9672a0016cf2af4e3",
+    "frame_000007.jpg": "792f93473736fefefec7d19a06db8ef3642f732f4f15ea3f5c00a489946af23c",
+    "frame_000008.jpg": "66cecd0efc2785cc912a02249c5cb57d11c8331b631bde065eb2d2596de746d7",
+    "frame_000009.jpg": "7f1073b3fc81b3984969309d243e393e1382f86761d4f8ea596e6691c62fa5ff",
+    "frame_000010.jpg": "40b164e9b96012f54bcd76c049456782ca537cb5ce38d344eed4e45c5882ae72",
+    "frame_000011.jpg": "1740a4872ed7902e5d5ed8fd0267eaf852f54a6a253c481371ab226339491fba",
+    "frame_000012.jpg": "b1c072896868e41add5b2f0a370296f90510583193c28a35e7cf684b032981eb",
+    "frame_000013.jpg": "07e090b02bfccb6c9cc944741f706fba26c4ba44bc08897e14999a1077a28f55",
+    "frame_000014.jpg": "342e7f424edae258ef2c82db7b367bd403c3fb47e3873fb8cd58a79830b4e1e6",
+    "frame_000015.jpg": "1320617b464040a05b7125bb268decbd07a430035cfb97c75a9feb43459d22f0",
+    "frame_000016.jpg": "6f2e060b89e6683fb8ad3260cd9572c60a97ab87467e2a8320cd5e381d3e9483",
+    "frame_000017.jpg": "853d46af40b2151b3a73ba7fb2ca94fbd2b825ae704a6508968f82bbbb6eb659",
+    "frame_000018.jpg": "504ee46d1fbcf48034beab7405a3a031cc069f681a0822b9b99c88a33e60721a",
+    "frame_000019.jpg": "88dbd92d78f3b2f637ad43df40353db2c2cc8d29580117e9a0626d61ef2cecbd",
+    "frame_000020.jpg": "fb613f3611dc232677f4f7dee4606d5bdccab18ac39d3b283a8d9d36ddae3fc0",
+    "frame_000021.jpg": "ef6fd2d5237f59c0b55ced87f3fd777a9f00b90dfa1c94e82d6ae34a15839a95"
+  },
+  "head_torque_during_setup": {
+    "id19": 1,
+    "id20": 0
+  },
+  "operator_requested_idle": true
+}

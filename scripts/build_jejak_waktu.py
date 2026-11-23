@@ -134,11 +134,13 @@ def training_main(w: Writer):
             manifest = json.loads(w.source(TEACHER_TRAINING / "manifest.json").read_text(encoding="utf-8"))
             rows = results_rows(w.source(TEACHER_TRAINING / "results.csv"))
             stamp = parse(manifest.get("timestamp"))
-            activities.append(["training_utama", "teacher_fp32", "Teacher YOLO11n", "42", "", iso(stamp), "",
+            activities.append(["training_utama", "teacher_fp32", "Teacher YOLO11n", "42", iso(stamp), "", "",
                                manifest.get("gpu_name", ""), len(rows), round(float(rows[-1]["time"]), 1),
                                rel(TEACHER_TRAINING / "manifest.json"),
-                               "Manifest teacher hanya memuat satu kolom timestamp; ditempatkan sebagai waktu selesai "
-                               "karena belum dipastikan apakah menandai awal atau akhir training."])
+                               "Manifest teacher hanya memuat satu kolom timestamp. Menurut scripts/step03_train_fp32.py "
+                               "yang tersimpan, nilai itu diisi sebelum model.train() (status started) dan tidak diperbarui "
+                               "saat selesai, sehingga ditempatkan sebagai waktu mulai; versi skrip yang dipakai saat "
+                               "training tidak terverifikasi. Waktu selesai tidak tercatat."])
             previous = 0.0
             for row in rows:
                 t = float(row["time"])
@@ -276,7 +278,8 @@ def chart(w: Writer, activities: list[list]) -> None:
     import matplotlib.pyplot as plt
 
     groups = [
-        ("Training utama", [a for a in activities if a[0] == "training_utama" and a[4]]),
+        # Teacher (2 September) tidak digambar: waktu selesainya tidak tercatat dan berada di luar rentang grafik.
+        ("Training utama", [a for a in activities if a[0] == "training_utama" and a[4] and a[1] != "teacher_fp32"]),
         ("Training pendukung", [a for a in activities if a[0] == "training_pendukung" and a[4]]),
         ("Evaluasi TEST dan verifikasi", [a for a in activities if a[0] in ("evaluasi_test", "verifikasi_test")]),
         ("Evaluasi offline OP3", [a for a in activities if a[0] == "evaluasi_offline_op3"]),
@@ -310,7 +313,10 @@ def chart(w: Writer, activities: list[list]) -> None:
               frameon=False, fontsize=8)
     ax.set_title("Garis waktu training, evaluasi, dan pengujian (UTC, Oktober sampai November 2026)",
                  loc="left", fontsize=10.5, color="#111827")
-    fig.text(0.01, 0.005, "Sumber: manifest run, T36, dan verifikasi jalur TEST di repositori. Teacher utama tidak memiliki catatan waktu training.",
+    teacher_note = ("Training teacher utama (mulai 2 September 2026) tidak digambar karena waktu selesainya tidak tercatat."
+                    if any(a[1] == "teacher_fp32" and a[4] for a in activities)
+                    else "Teacher utama tidak memiliki catatan waktu training.")
+    fig.text(0.01, 0.005, f"Sumber: manifest run, T36, dan verifikasi jalur TEST di repositori. {teacher_note}",
              fontsize=7, color="#6b7280")
     fig.tight_layout()
     buffer = io.BytesIO()
@@ -331,20 +337,58 @@ def readme(w: Writer, activities, epochs, frames, commit: str) -> None:
     first, last = min(parse(a[4]) for a in live), max(parse(a[5]) for a in live)
     in_repo = sum(1 for f in frames if not f[11].startswith("OP3:"))
     teacher = next(a for a in activities if a[1] == "teacher_fp32")
-    if teacher[5]:
+    if teacher[4]:
         teacher_text = (
             "**Teacher utama** dilatih di server lab pada proyek Advance Vision, bukan di robot. Robot hanya menyimpan\n"
             "salinan bobotnya (SHA-256 `e05b2b21...420b8c`). Salinan manifest dan `results.csv` training teacher ada di\n"
             f"[`log_op3_pelengkap/teacher_training/`](../log_op3_pelengkap/teacher_training/). Manifest hanya memuat satu\n"
-            f"timestamp ({wib(parse(teacher[5]))} WIB) yang belum dipastikan menandai awal atau akhir training; durasi\n"
-            "training diambil dari kolom `time` epoch terakhir. `dataset_version` teacher tetap kosong, sehingga\n"
-            "keterbatasan provenance dataset teacher masih berlaku.")
+            f"timestamp ({wib(parse(teacher[4]))} WIB). Menurut `scripts/step03_train_fp32.py` yang tersimpan, nilai itu\n"
+            "diisi sebelum training dimulai dan tidak diperbarui saat selesai, sehingga ditempatkan sebagai waktu mulai;\n"
+            "versi skrip yang dipakai saat training tidak terverifikasi, dan waktu selesai tidak tercatat. Durasi training\n"
+            "diambil dari kolom `time` epoch terakhir. `dataset_version` teacher tetap kosong, sehingga keterbatasan\n"
+            "provenance dataset teacher masih berlaku. Baris teacher tidak digambar pada grafik di atas.")
     else:
         teacher_text = (
             "**Teacher utama** dilatih di server lab pada proyek Advance Vision, bukan di robot. Robot hanya menyimpan\n"
             "salinan bobotnya (SHA-256 `e05b2b21...420b8c`). Audit 22 Oktober mencatat bahwa manifest dan log teacher\n"
             "menyebut 100 epoch, seed 42, dan GPU L40, tetapi berkas tersebut berada di akun server lama yang kini tidak\n"
             "dapat diakses, sehingga waktu mulai dan selesai training teacher tidak tersedia di repositori.")
+    from_pelengkap = sum(1 for f in frames if f[11].startswith("log_op3_pelengkap/"))
+    only_op3 = len(frames) - in_repo
+    live_text = ("Log per frame (`capture_stamp_ns`, `receive_time_utc`, durasi tiap tahap, CPU, RSS, error) untuk\n"
+                 f"{in_repo} run tersimpan di repositori")
+    if from_pelengkap:
+        live_text += (f"; {from_pelengkap} di antaranya diekstrak dari log mentah OP3 pada 23 November 2026 ke\n"
+                      "[`log_op3_pelengkap/live_24_run/`](../log_op3_pelengkap/README.md) setelah SHA-256 log mentah\n"
+                      "dan metadatanya dicocokkan dengan T36")
+    live_text += "."
+    if only_op3:
+        live_text += (f" Untuk {only_op3} run lainnya, log mentah hanya ada di OP3; repositori menyimpan\n"
+                      "hash-nya pada kolom `raw_csv_sha256` T36 dan kolom `sha256` tabel frame.")
+    teacher_found = bool(teacher[4] or teacher[5])
+    capture_found = (ROOT / "log_op3_pelengkap/ringkasan_capture.csv").exists()
+    missing = []
+    if only_op3:
+        missing.append(f"| Log per frame {only_op3} run live | `runs/op3_pytorch/<run_id>.csv` pada repo robot | "
+                       "`sha256sum` harus sama dengan kolom `sha256` pada `timestamp_frame_live_24_run.csv` |")
+    if not capture_found:
+        missing.append("| Manifest capture frame T38 dan T43 | `data/op3_camera_eval/sessions/` dan "
+                       "`data/op3_camera_eval/experiments/t43_20261112/` | Cocokkan dengan manifest beku T38 dan "
+                       "`review_260_audit_and_frozen_hashes.json` |")
+    if not teacher_found:
+        missing.append("| Manifest atau log training teacher | `/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/"
+                       "checkpoints/fp32/` (folder yang sama dengan bobot teacher) | Cari `manifest.json`, `args.yaml`, "
+                       "atau `results.csv`; bila tidak ada, catat sebagai tidak tersedia |")
+    if missing:
+        masih_dicari = ("## Yang masih dicari di robot\n\n| Yang dicari | Lokasi yang diduga di OP3 | Cara memeriksa |\n"
+                        "|---|---|---|\n" + "\n".join(missing) + "\n\nFrame, label, dan log mentah dari robot tetap "
+                        "tidak masuk Git kecuali Bhre memintanya. Bila log mentah\ndisalin ke repositori, jalankan "
+                        "ulang skrip agar tabel frame terisi lengkap.")
+    else:
+        masih_dicari = ("## Log pelengkap dari robot\n\nLog jendela run live, metadata capture T38 dan T43, dan catatan "
+                        "training teacher sudah\ndisalin dari OP3 ke [`log_op3_pelengkap/`](../log_op3_pelengkap/README.md) "
+                        "beserta SHA-256 sumbernya. Gambar,\nlabel, prediksi per frame, bobot, dan log mentah penuh tetap "
+                        "tidak masuk Git.")
     w.write("README.md", f"""# Jejak waktu training, evaluasi, dan pengujian
 
 Folder ini merangkum kapan setiap model dilatih, dievaluasi, dan diuji di robot. Semua angka dibaca dari
@@ -359,7 +403,7 @@ dalam UTC; tabel di halaman ini juga menampilkannya dalam WIB (UTC+7).
 | Berkas | Isi |
 |---|---|
 | [`kronologi_kegiatan.csv`](kronologi_kegiatan.csv) | {len(activities)} kegiatan berurutan waktu: training utama dan pendukung, sesi TEST, verifikasi jalur, evaluasi offline OP3, dan 24 run live, lengkap dengan perangkat dan berkas sumber |
-| [`training_per_epoch.csv`](training_per_epoch.csv) | {len(epochs)} baris: waktu kumulatif dan durasi tiap epoch, serta precision, recall, mAP50, dan mAP50-95 VAL untuk sembilan student utama |
+| [`training_per_epoch.csv`](training_per_epoch.csv) | {len(epochs)} baris: waktu kumulatif dan durasi tiap epoch, serta precision, recall, mAP50, dan mAP50-95 VAL untuk sembilan student utama{' dan teacher utama' if any(e[0] == 'teacher_fp32' for e in epochs) else ''} |
 | [`timestamp_frame_live_24_run.csv`](timestamp_frame_live_24_run.csv) | Untuk tiap run live: jumlah frame, timestamp frame pertama dan terakhir, rentang timestamp kamera, jeda terbesar, dan jumlah error |
 | `garis_waktu_kegiatan_id.png` | Grafik garis waktu di atas |
 | [`manifest_jejak_waktu_sha256.json`](manifest_jejak_waktu_sha256.json) | SHA-256 berkas keluaran dan setiap berkas sumber |
@@ -388,20 +432,9 @@ Durasi sesi TEST mencakup seluruh checkpoint dalam sesi dan overhead penyiapan, 
 ## Pengujian live di OP3
 
 24 run live berlangsung dari {wib(first)} sampai {wib(last)} WIB, masing-masing dengan jendela ukur 60
-detik. Log per frame (`capture_stamp_ns`, `receive_time_utc`, durasi tiap tahap, CPU, RSS, error) untuk
-{in_repo} run tersimpan di repositori. Untuk {len(frames) - in_repo} run lainnya, log mentah hanya ada di OP3;
-repositori menyimpan hash-nya pada kolom `raw_csv_sha256` T36 dan kolom `sha256` tabel frame.
+detik. {live_text}
 
-## Yang masih dicari di robot
-
-| Yang dicari | Lokasi yang diduga di OP3 | Cara memeriksa |
-|---|---|---|
-| Log per frame {len(frames) - in_repo} run live | `runs/op3_pytorch/<run_id>.csv` pada repo robot | `sha256sum` harus sama dengan kolom `sha256` pada `timestamp_frame_live_24_run.csv` |
-| Manifest capture frame T38 dan T43 | `data/op3_camera_eval/sessions/` dan `data/op3_camera_eval/experiments/t43_20261112/` | Cocokkan dengan manifest beku T38 dan `review_260_audit_and_frozen_hashes.json` |
-| Manifest atau log training teacher | `/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/` (folder yang sama dengan bobot teacher) | Cari `manifest.json`, `args.yaml`, atau `results.csv`; bila tidak ada, catat sebagai tidak tersedia |
-
-Frame, label, dan log mentah dari robot tetap tidak masuk Git kecuali Bhre memintanya. Bila log mentah
-disalin ke repositori, jalankan ulang skrip agar tabel frame terisi lengkap.
+{masih_dicari}
 
 ## Membangkitkan ulang
 

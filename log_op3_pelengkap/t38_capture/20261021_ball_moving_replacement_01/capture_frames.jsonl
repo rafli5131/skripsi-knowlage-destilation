@@ -1,0 +1,12 @@
+{"image": "frame_000001.jpg", "captured_at_utc": "2026-10-21T10:38:59.111483+00:00", "ros_stamp_sec": 1792579139, "ros_stamp_nanosec": 64622000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000002.jpg", "captured_at_utc": "2026-10-21T10:39:01.850066+00:00", "ros_stamp_sec": 1792579141, "ros_stamp_nanosec": 804873000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000003.jpg", "captured_at_utc": "2026-10-21T10:39:02.941389+00:00", "ros_stamp_sec": 1792579142, "ros_stamp_nanosec": 904786000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000004.jpg", "captured_at_utc": "2026-10-21T10:39:03.951663+00:00", "ros_stamp_sec": 1792579143, "ros_stamp_nanosec": 908871000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000005.jpg", "captured_at_utc": "2026-10-21T10:39:06.461721+00:00", "ros_stamp_sec": 1792579146, "ros_stamp_nanosec": 413250000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000006.jpg", "captured_at_utc": "2026-10-21T10:39:08.532925+00:00", "ros_stamp_sec": 1792579148, "ros_stamp_nanosec": 485422000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000007.jpg", "captured_at_utc": "2026-10-21T10:39:09.593321+00:00", "ros_stamp_sec": 1792579149, "ros_stamp_nanosec": 553371000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000008.jpg", "captured_at_utc": "2026-10-21T10:39:10.662362+00:00", "ros_stamp_sec": 1792579150, "ros_stamp_nanosec": 625518000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000009.jpg", "captured_at_utc": "2026-10-21T10:39:11.661380+00:00", "ros_stamp_sec": 1792579151, "ros_stamp_nanosec": 625533000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000010.jpg", "captured_at_utc": "2026-10-21T10:39:12.664493+00:00", "ros_stamp_sec": 1792579152, "ros_stamp_nanosec": 629604000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000011.jpg", "captured_at_utc": "2026-10-21T10:39:15.582008+00:00", "ros_stamp_sec": 1792579155, "ros_stamp_nanosec": 534019000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000012.jpg", "captured_at_utc": "2026-10-21T10:39:16.609475+00:00", "ros_stamp_sec": 1792579156, "ros_stamp_nanosec": 569956000, "frame_id": "camera", "width": 640, "height": 480}

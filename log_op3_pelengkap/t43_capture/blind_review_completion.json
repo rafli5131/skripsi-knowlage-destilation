@@ -1,0 +1,851 @@
+{
+  "status": "complete",
+  "meaning": "All 52 selected frames saved and reviewed by bhre; annotation convention was clarified after review. This is a procedural completion marker, not proof of independent labeling or error-free ground truth.",
+  "created_at_utc": "2026-11-12T09:31:36.022470+00:00",
+  "frozen_plan_sha256": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83",
+  "selection_manifest_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+  "snapshot_manifest_sha256": "447dd8479a1729f4f9814a649530df475dcf97af918e341ec9987244f67efce6",
+  "addendum_04_sha256": "b099bbad5279fe1c47bc57fe59c334c6b929f3f82e122568368833c0bd859c26",
+  "addendum_05_sha256": "96cda8dbb646617af5aaac0bdb8ec0a94bfb7cd2714930de24a4e44e7c3303bc",
+  "reviewer": "bhre",
+  "limitations": [
+    "Hybrid preview seen during setup",
+    "assistant provided feedback on visible boxes after review had begun",
+    "goal lower region and robot body convention clarified after annotation",
+    "goal upper box boundary has no fixed landmark"
+  ],
+  "samples": [
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000001.jpg",
+        "sha256": "828654526416cd5b530a6087cd7f5628c59b9e5772fbf5049ec117297ae19c98"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000001.txt",
+        "sha256": "dd0bf9f86bebc18838630357e877a0b091345fb8c0adb89cc5b980e87215b439"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000015.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000002.jpg",
+        "sha256": "7ae2d99147b5cd188d1b4a0e58b3ceef94a22edaf67d43c5500ee3cc27e46b4f"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000002.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000003.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000003.jpg",
+        "sha256": "adbfa8714575b1a24fe5643bbc2abb6d8c9b9070fb7eddce3cae558a6cc6a0e5"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000003.txt",
+        "sha256": "f411fe2de0b432f11c0b97713053ee7150237d48390f59eb02efe78bcbc0ef80"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000025.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000004.jpg",
+        "sha256": "38a316f39bb5548102f1980280514f402ef62fa90feed84cfe77c4ad9102d3f2"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000004.txt",
+        "sha256": "680d23f74d7d7bc576af07d949b611666c87bd2eeac61596289954ef39153e77"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000061.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000005.jpg",
+        "sha256": "431d84b1ebb3fd9f612937f00c86585e87d502015dcaab88a8e8041639963738"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000005.txt",
+        "sha256": "0157274efd4a262aa31218e68badeeff1eabeadee637ca4b1729dcb4f531031b"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000002.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000006.jpg",
+        "sha256": "baad188da77958ab304fee743d1eade160c64c1e83626d288414343fbef17b56"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000006.txt",
+        "sha256": "ecfd1947c465c30e414c624fee25d1ea903cfdca0979393101c653cd68283b4f"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000065.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000007.jpg",
+        "sha256": "b1c9ed69c9dfc8d6ba2630d3b81c9be1aa480b8444f3a6c4e763245c0e8ab7d1"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000007.txt",
+        "sha256": "8db909d52e0bc274b249a13d432ea7882403aac6c4552f1a8484485b09d3f7eb"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000070.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000008.jpg",
+        "sha256": "f95cc660fb63135527291f5198f8bfa7f715d0943f12194f7fb8c14b47d69124"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000008.txt",
+        "sha256": "2d2b8b6562c50bbc270d406fed9ab604b370061a0afbae3918d558dcd30cea9c"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000043.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000009.jpg",
+        "sha256": "e33fd4b58a58d4b126aa5d64d8e33b9c699c66db70b39effd6cb81c476aba1ac"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000009.txt",
+        "sha256": "73065333ab1c0a194f8e3dea4066957d37bf39e044004a2d87c94b5624bf7319"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000040.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000010.jpg",
+        "sha256": "82230c4b8db71d40bc411633e61b5a1b53e0d8db007f8a744af1e739b47dfda3"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000010.txt",
+        "sha256": "32b9d17e558d22022fc15dbf423ebec8c0073583c31bf4629e980f5a81ac26be"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000068.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000011.jpg",
+        "sha256": "8b5bf111f080b61e9f223243ac333ade063808f5d8018b03d6a5846bd9eed5ff"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000011.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000011.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000012.jpg",
+        "sha256": "088a9f10da68c1ebb09ecdf98550a9fcc5e0e4f36f61d07cfc2b97179cbdbde7"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000012.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000022.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000013.jpg",
+        "sha256": "059d37271772de58be146e9011f92e300f429f8e52ec5f566831c4252695ad02"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000013.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000028.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000014.jpg",
+        "sha256": "58c9892e209c245202fbe46b11ed28054b5b2e1039eee0347bba1de620c92683"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000014.txt",
+        "sha256": "04df1ad62258a970b1c7afc45208c90f7af89c994078bb37fb4c7d1240a3fd32"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000023.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000015.jpg",
+        "sha256": "93638ec803358eb97738dcc24de465b6e5a5a8fcab7473baa4527a94a03b560a"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000015.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000026.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000016.jpg",
+        "sha256": "c6a199e915a14db43520b06b3b2419d1b750a880e3c27323a6bb013f9a09878c"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000016.txt",
+        "sha256": "973063fc77df1d298c5a5c37bfb874d5857e9402a1121010536aaa4200bff11a"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000019.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000017.jpg",
+        "sha256": "3a80ec4a5d1c63d5606652d5d6a2271edcc31e74ff2186a48cad29d816665a28"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000017.txt",
+        "sha256": "8b2020fcdcccf67d8fa0a0888856fd62dafb9ab5a76105eed4673550997b73d4"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000049.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000018.jpg",
+        "sha256": "e0c78db82512d29d1e16ff81be66566d13bcb82924d7c771e0fb8ee6ed595605"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000018.txt",
+        "sha256": "f98bfab52726bebb5a1cd8d5b9e216cd7a728268077218125db8ed646591cee0"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000008.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000019.jpg",
+        "sha256": "9e2ee04c4b051cadb5f7d80d062f7f3699fdaea8d9602b6512e70d9cd58938d8"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000019.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000014.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000020.jpg",
+        "sha256": "aed07f8cfaa3d178480eaf08a9165dd5187a06a3608a3c5e966374c43204aa55"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000020.txt",
+        "sha256": "8cd19969e7657b2af83a9e1ed406cf46b3795d0de1d7a7869d566d0d1e8a4c36"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000078.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000021.jpg",
+        "sha256": "984ed0a6b85862c5506d1785c62d87c550fdefb222de3044084782b8b38e8768"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000021.txt",
+        "sha256": "b88f015e745b7b6acc311c9212062efd2bf018e4362318a5f2e0224b954e784c"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000022.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000022.jpg",
+        "sha256": "fd30f7a893dab6039946645037065ee5168f2c34d48728783a84b7af2902cc69"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000022.txt",
+        "sha256": "74fde04314df439745e0bcca9a8dac89978eae85d25c083fc6c1f80527336d7f"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000016.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000023.jpg",
+        "sha256": "37e31f38c7b49606a9d872dbf229bd5b87e10b375387277227736bc1da452e64"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000023.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000007.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000024.jpg",
+        "sha256": "1df9655c815d98343295f2b083c223d295a70bc3eb3f34f991567c7818736c55"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000024.txt",
+        "sha256": "b04e9b61b8034e2eecf1af3728ff03c9f2efa908cd6c21bd39efb30a03a72462"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000035.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000025.jpg",
+        "sha256": "23f42e450454328336d4c5a603dc726d3dcda69f858c5ea1471c93f9cfb79818"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000025.txt",
+        "sha256": "9c1c495549e4e4a8acf5cba5d5ec6490d03af06daea981feb2fed4a230087b9c"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000011.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000026.jpg",
+        "sha256": "1a819390a413ff62794f8464075488be33956a5166d839167738903d677f8f5f"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000026.txt",
+        "sha256": "3d16f846646aca2921c1f2c40391e899b650cb47178edf935ebf0f5b7ad4e536"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000032.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000027.jpg",
+        "sha256": "c3b3f8dad2b822fec027a1dc21cb6d65091282168660ea728f0757c61069a28c"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000027.txt",
+        "sha256": "970a1723cd0e53e50d7f6bb5c212911767e953cca7cc4ce93bed384308dacafa"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000030.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000028.jpg",
+        "sha256": "d9c87de4dfc16fabf291a368e09fed6441ce4de378ae3aab9138d7ba60fc70dd"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000028.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000027.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000029.jpg",
+        "sha256": "5c7feaddf6aaf32c6ca7ca8937247854b0b7f0a592e47f8a7289ca19f1071751"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000029.txt",
+        "sha256": "cbe5b959c750d308a2c792d6634a69e453d69eddd0fb179ea0b2862d8bbe6429"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000027.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000030.jpg",
+        "sha256": "ff27b4919e06985057451f4ad7483c8f33f2957fd947afe2c1f7e3f89ec247e6"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000030.txt",
+        "sha256": "2987f0ddd4ab1c8d1ba420262f07110d4fef83c8792e47b98a59acdf0fdecb3a"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000094.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000031.jpg",
+        "sha256": "f52c4c4055da554d07be13d96d421d57d67b2241f3de6da56b3c8e710d9930a2"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000031.txt",
+        "sha256": "17c7b907692a21187f0cad87d65fbae75596533963803da95ac3e5c16621ccaa"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000045.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000032.jpg",
+        "sha256": "f8896e97908efc06a57d8b22f87bba4be6f79ebeda6ff61f113506151274316c"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000032.txt",
+        "sha256": "f4d8b8c9e63d1feedab24c245b9f4c173b324c4730f856570b6f88a522810d29"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000039.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000033.jpg",
+        "sha256": "d1d7fde3ca298e3134d8aaf403947031a211f4bd76c39cbda3187b986c414184"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000033.txt",
+        "sha256": "a411a521480b1e8e1541b10b45298c498e622f221fc0ad45101d1e53a208329a"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000046.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000034.jpg",
+        "sha256": "7d7badfc1c8776a562bb53617609fd006068f233729db11a419795e35e6dc763"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000034.txt",
+        "sha256": "51150dca72ce76dd74b000c51d939de53096c7564a1d7fabc51789e5d07b9ceb"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000007.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000035.jpg",
+        "sha256": "102f40e78eb2125b6521b1d6b449633c453f4b8782aaedc8b7b04f90638e85a6"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000035.txt",
+        "sha256": "944824d04c6a01919faac4f8dcf2ff3c0a1735633a01befbacbe175be9c273be"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000049.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000036.jpg",
+        "sha256": "2191a38f66a7c79eed4107b562b87def61d4d9f055355cf03c6c7cd64ac19b85"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000036.txt",
+        "sha256": "a8a3ce0698fc39c04a4a2a757e6f62b4233a3324052e3fc717c0d6c807831097"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000041.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000037.jpg",
+        "sha256": "96cdd55f35fc083b9bfac33ca320908414fa948651e229d890e47a261e72d0f5"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000037.txt",
+        "sha256": "18f1bb5ae88c6af41a07625f420000e5e688a4f0a22e9a73923bfdf005ea9a24"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_01",
+      "original_image": "frame_000021.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000038.jpg",
+        "sha256": "acf20a8cf33aca0a03154fc1cd3103e2fc7269e513720f2d87e039504f5c7f24"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000038.txt",
+        "sha256": "b5ea345d7c87fbae23d254113cea436b58df852c9b1f1db3b9bc3d63f2a2b951"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000013.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000039.jpg",
+        "sha256": "5d989ec617ca24622ab1132e8571ca54fe3305700fe1d915cdbeaea077957485"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000039.txt",
+        "sha256": "d4c59531718db94fccc8d6e80c7230576794028e8ade27810143fdecb2a55b6d"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000018.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000040.jpg",
+        "sha256": "32b2be9c85a9fe2d08b73dc73163b3cbe6fc19c49a639469cc717a5605534c36"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000040.txt",
+        "sha256": "45d3e9d2aa0ec9d04f12157a5295984691e9e4e62b575e45125860a8ee6ebe10"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000004.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000041.jpg",
+        "sha256": "6aeca91371dc85ab4a0ec1d5e884172e8d64011090fa99167fe4b9561da88234"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000041.txt",
+        "sha256": "3fc71f6f68c5dadd03baf6490925bdae44442f785e736486e6cc3fdca7999cc2"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000004.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000042.jpg",
+        "sha256": "72fdd59ca58acfe188f1e983d1a447c50910a0248badc102f7b35cbdccc0d0c0"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000042.txt",
+        "sha256": "2c9cbb6397d12f096cd2a0b12037add09609abc4e1cca23ec3568ef2dd6279a5"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_objek_ulang_02",
+      "original_image": "frame_000046.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000043.jpg",
+        "sha256": "507cf1cc2d8e72d5dc415013c0902a0f5858ae743dc0732a0e1af999f3860a61"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000043.txt",
+        "sha256": "dab15f00953e5835713535866abd3be0bf25cfc02ee7bebd62e72bd297cd84aa"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000098.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000044.jpg",
+        "sha256": "7dec8968c18939dbc446b185785093b7321f249edc16069216c7c6109c833da5"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000044.txt",
+        "sha256": "6a7a24cf994e3e5f8701f7c26857202c3fa3056dd324392d1faea96182536ee5"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000027.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000045.jpg",
+        "sha256": "7aa15bfae186a0435ff300270854a9c8767eeb5327470d7934b4f9a697a42573"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000045.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000014.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000046.jpg",
+        "sha256": "c3987dc5b62efbf6415cfbc354d21d0d154bac8ad8469decd19623866d5734df"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000046.txt",
+        "sha256": "f2d159d6d386fc5198dba951227988fd8c100a494262eba0c3c782197e032a1d"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000056.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000047.jpg",
+        "sha256": "82a1e6991a51aa877db4a2db8962d697e46abcea1ef45a9eaa60b56d91536244"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000047.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000003.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000048.jpg",
+        "sha256": "cca9ad42722383cdff1d75d54619f28c3e3277e60450f434e12a48011182b6fe"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000048.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_negatif_01",
+      "original_image": "frame_000018.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000049.jpg",
+        "sha256": "8d03bcd5c85c662a67ef4afbedf9680b493ac0335eaa2e38056051d569d797de"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000049.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_walk_negatif_01",
+      "original_image": "frame_000020.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000050.jpg",
+        "sha256": "700bb9dca20ea3734a53a91d667af0ee208bfa8fac9dcadec8509a52ac5b5918"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000050.txt",
+        "sha256": "d3721deffc5ae3304b5c724d34b3062465ff8393e88df78d1f033bd2e708e0c9"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000012.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000051.jpg",
+        "sha256": "4ca620e531298a89b2b640333401177c84d28e333bcc2cb316b6d4d0714105bb"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000051.txt",
+        "sha256": "a4b0be826130240ed7502b24008a8bf3bb7315e5ba77cd6afad5d83197d216b9"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000064.jpg"
+    },
+    {
+      "image": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/images/frame_000052.jpg",
+        "sha256": "1aa091aea547219b89e439859a8b00fca8b9d774c7b5f29bb1b8a3eed332d327"
+      },
+      "label": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/frame_000052.txt",
+        "sha256": "fb8bf02e5d5c049d176df59e53f7e4d8f028aaa50a8421bb2eedef718167e09c"
+      },
+      "review_log": {
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/labels_blind_snapshot_before_qa/review_log.jsonl",
+        "sha256": "09367941f0fa9cb94daa48484f4dc5ce7b5e12f8152cebbe12ac4d5d956c576f"
+      },
+      "original_session": "20261112_t43_idle_objek_ulang_01",
+      "original_image": "frame_000067.jpg"
+    }
+  ]
+}

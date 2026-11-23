@@ -1,0 +1,14 @@
+{
+  "session_id": "20261112_t43_idle_berobjek_02",
+  "condition": "servo_idle",
+  "image_topic": "/thesis/image_raw",
+  "started_at_utc": "2026-11-12T04:52:41.758217+00:00",
+  "ended_at_utc": "2026-11-12T04:54:03.622270+00:00",
+  "frame_count": 79,
+  "interval_sec": 1.0,
+  "max_frames": 79,
+  "duration_sec": 120.0,
+  "status": "max_frames_reached",
+  "images_dir": "images",
+  "frames_journal": "capture_frames.jsonl"
+}

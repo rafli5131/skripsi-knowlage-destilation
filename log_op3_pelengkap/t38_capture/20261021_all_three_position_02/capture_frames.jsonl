@@ -1,0 +1,10 @@
+{"image": "frame_000001.jpg", "captured_at_utc": "2026-10-21T10:46:46.691555+00:00", "ros_stamp_sec": 1792579606, "ros_stamp_nanosec": 651562000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000002.jpg", "captured_at_utc": "2026-10-21T10:46:47.898386+00:00", "ros_stamp_sec": 1792579607, "ros_stamp_nanosec": 855737000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000003.jpg", "captured_at_utc": "2026-10-21T10:46:48.959977+00:00", "ros_stamp_sec": 1792579608, "ros_stamp_nanosec": 923691000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000004.jpg", "captured_at_utc": "2026-10-21T10:46:49.999990+00:00", "ros_stamp_sec": 1792579609, "ros_stamp_nanosec": 959679000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000005.jpg", "captured_at_utc": "2026-10-21T10:46:51.100571+00:00", "ros_stamp_sec": 1792579611, "ros_stamp_nanosec": 59727000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000006.jpg", "captured_at_utc": "2026-10-21T10:46:52.168244+00:00", "ros_stamp_sec": 1792579612, "ros_stamp_nanosec": 131734000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000007.jpg", "captured_at_utc": "2026-10-21T10:46:53.235080+00:00", "ros_stamp_sec": 1792579613, "ros_stamp_nanosec": 199785000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000008.jpg", "captured_at_utc": "2026-10-21T10:46:54.239102+00:00", "ros_stamp_sec": 1792579614, "ros_stamp_nanosec": 203793000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000009.jpg", "captured_at_utc": "2026-10-21T10:46:55.241074+00:00", "ros_stamp_sec": 1792579615, "ros_stamp_nanosec": 203866000, "frame_id": "camera", "width": 640, "height": 480}
+{"image": "frame_000010.jpg", "captured_at_utc": "2026-10-21T10:46:56.245324+00:00", "ros_stamp_sec": 1792579616, "ros_stamp_nanosec": 207883000, "frame_id": "camera", "width": 640, "height": 480}

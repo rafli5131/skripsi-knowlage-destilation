@@ -1,0 +1,15 @@
+{
+  "session_id": "20261021_ball_moving_candidate_01",
+  "status": "curated_candidate_not_continuous_capture",
+  "condition": "unknown",
+  "image_topic": "/thesis/image_raw",
+  "frame_count": 40,
+  "images_dir": "images",
+  "curation_manifest": "curation_manifest.json",
+  "source_sessions": [
+    "20261021_ball_moving_01",
+    "20261021_ball_moving_replacement_01"
+  ],
+  "sequence_continuity": false,
+  "note": "Compatibility metadata for the unchanged prelabel script; this folder is a 32+8 curated still-image set, not an original camera capture."
+}

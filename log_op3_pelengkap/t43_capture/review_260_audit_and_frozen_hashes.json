@@ -1,0 +1,1136 @@
+{
+  "created_at_utc": "2026-11-12T09:45:35.407295+00:00",
+  "capture_manifest_sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+  "blind_completion_sha256": "83f59a13d8f82fb2af5f6fd67acb9486b9ca38f8741b015b695e7c43e33df8fa",
+  "reviewer": "bhre",
+  "total_frames": 260,
+  "sessions": {
+    "20261112_t43_idle_objek_ulang_01": {
+      "role": "diam_berobjek",
+      "images": 100,
+      "review_log_entries": 102,
+      "review_log_sha256": "00ff51782fd8d3a35bb19e37de181031819170ca3db9d870fb14b8bf2308da0d",
+      "empty_labels": 0,
+      "class_boxes": {
+        "ball": 100,
+        "robot": 100,
+        "gawang": 100
+      }
+    },
+    "20261112_t43_walk_objek_ulang_01": {
+      "role": "jalan_berobjek_1",
+      "images": 50,
+      "review_log_entries": 53,
+      "review_log_sha256": "f7f5901c039e11c29f796173878ff03efba3eb68f377cd893ab428406fa9ac30",
+      "empty_labels": 0,
+      "class_boxes": {
+        "ball": 50,
+        "robot": 50,
+        "gawang": 50
+      }
+    },
+    "20261112_t43_walk_objek_ulang_02": {
+      "role": "jalan_berobjek_2",
+      "images": 50,
+      "review_log_entries": 52,
+      "review_log_sha256": "da597bdec30159ab0d24df75574168f6693df78455fe3c62937d1d8f9cde7ab9",
+      "empty_labels": 0,
+      "class_boxes": {
+        "ball": 50,
+        "robot": 50,
+        "gawang": 50
+      }
+    },
+    "20261112_t43_idle_negatif_01": {
+      "role": "diam_kosong",
+      "images": 30,
+      "review_log_entries": 30,
+      "review_log_sha256": "87232cf10777d7b81361add57f9b1a9f8738157eaea375581601b2cc1d61067f",
+      "empty_labels": 30,
+      "class_boxes": {}
+    },
+    "20261112_t43_walk_negatif_01": {
+      "role": "jalan_kosong",
+      "images": 30,
+      "review_log_entries": 30,
+      "review_log_sha256": "d09a71384df16d2bba87806c0bf3c2589d89606f4f45750c45f63a7fe3b9936d",
+      "empty_labels": 30,
+      "class_boxes": {}
+    }
+  },
+  "agreement_iou_threshold": 0.5,
+  "agreement": {
+    "ball": {
+      "blind": 40,
+      "reviewed": 40,
+      "matched": 40,
+      "mean_matched_iou": 0.7346765815792823,
+      "fraction_blind_matched": 1.0,
+      "fraction_reviewed_matched": 1.0
+    },
+    "gawang": {
+      "blind": 40,
+      "reviewed": 40,
+      "matched": 40,
+      "mean_matched_iou": 0.7665079884048208,
+      "fraction_blind_matched": 1.0,
+      "fraction_reviewed_matched": 1.0
+    },
+    "robot": {
+      "blind": 40,
+      "reviewed": 40,
+      "matched": 40,
+      "mean_matched_iou": 0.8471837782474783,
+      "fraction_blind_matched": 1.0,
+      "fraction_reviewed_matched": 1.0
+    }
+  },
+  "limitations": [
+    "Same reviewer for both passes, not inter-rater agreement",
+    "Hybrid preview seen earlier; model union prelabels and feedback can bias review",
+    "Goal lower region and robot body convention clarified after initial annotation; goal cutoff lacks fixed landmark",
+    "Agreement at IoU 0.5 is not proof of accurate labels or high-IoU agreement"
+  ],
+  "frames": {
+    "20261112_t43_idle_objek_ulang_01/frame_000001.jpg": {
+      "image_sha256": "f8936aeaca4c92e5760f93129de8a90fc435c1b5b4d3ce46a3e71a36fccc59ca",
+      "reviewed_label_sha256": "2745ca2558abf90824f4e582fd5a5e45c52eaf4d1ccac942364025d83c130426"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000002.jpg": {
+      "image_sha256": "ad6f935fb5c290d4ddd4748474112286d154c3cdb6171251a8d4317bd49baa89",
+      "reviewed_label_sha256": "96442b242d95d24d94a98b50081d39ab5128016d09503846aa32b2e3378d3e8a"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000003.jpg": {
+      "image_sha256": "0095a8b8b97ab60b2e337ec894181fa908c974678630863c22d2c5e8539cd1a7",
+      "reviewed_label_sha256": "fa8eb6cd0a95aca19bce1b0e7411a83c582179c414ebeaad523eb4e659ddbc8f"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000004.jpg": {
+      "image_sha256": "32b2be9c85a9fe2d08b73dc73163b3cbe6fc19c49a639469cc717a5605534c36",
+      "reviewed_label_sha256": "f69e8dff15d1b2de2f3717e414073783c401f725806b0122810ac8d4aff125c4"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000005.jpg": {
+      "image_sha256": "15dee5c2df3c7fc54d6fc4f4ee08b4cc8254cb629a436b949cfa8c39e7d416f0",
+      "reviewed_label_sha256": "6399ae8427ea5bbffbf69b22e69c15512de836e11430943db1d30a7bec8999b5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000006.jpg": {
+      "image_sha256": "8cb5312885c1158383598a727986c9d7406dadd5c52ef3a5a82609ebc25001ab",
+      "reviewed_label_sha256": "d8553af9648e0958b0663c6b251d448a69c16cb8125eab5101ecfb9477598bdf"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000007.jpg": {
+      "image_sha256": "1b5e6187e0f4b8830310f58b4c6e745e3a19cf4cb2dacbf01eea3859c9ef09ff",
+      "reviewed_label_sha256": "5dec19dba15c218e88f2eabb92cc679ee9f59e33085296ea028734c5dd20b090"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000008.jpg": {
+      "image_sha256": "540dc0d70d48c667aa5693a4bd5b6c0c3f817a0c40bf0812964ab88bdccab8aa",
+      "reviewed_label_sha256": "f6f8237422b2f22d9200a7efe34fef579759ae84f72b6ae5e354766a4d1d5b15"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000009.jpg": {
+      "image_sha256": "145a94429eafc2aa86ef24ed35cb15654935e98300cff9e36b1ad2018410b576",
+      "reviewed_label_sha256": "b96c46848eac53969f037bea41b4b86913ec64919c0458127e3d38bebef5cf87"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000010.jpg": {
+      "image_sha256": "bd7bb3f5494cc9c799ec92517e04cbf76d0f81857226847585ac0649dc9e501a",
+      "reviewed_label_sha256": "5dec19dba15c218e88f2eabb92cc679ee9f59e33085296ea028734c5dd20b090"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000011.jpg": {
+      "image_sha256": "ef349b7daab4ba814179f9656a54f524fca40834bd50a47f6c88fd65c4b26ea8",
+      "reviewed_label_sha256": "155f958a6504a8c3d937e340aa1319874b74a4b4037255d9550a4108acbd79e3"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000012.jpg": {
+      "image_sha256": "700bb9dca20ea3734a53a91d667af0ee208bfa8fac9dcadec8509a52ac5b5918",
+      "reviewed_label_sha256": "a1323d2c5c7531d13e58a51689624b3327866a8b6a66ad1edf9416dc1d9d3fc5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000013.jpg": {
+      "image_sha256": "968686c9200fbf3e3107b22c29a8ef43971fcc2c32503b682cd0a28781d489c9",
+      "reviewed_label_sha256": "a891073edf1d56554d6d519ced9d4a8244ad103a7eae5793724408b008e5141a"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000014.jpg": {
+      "image_sha256": "6adca71a6afae4bd49c550459a929a2ae765f8aed1f833687fd816393d7e14df",
+      "reviewed_label_sha256": "1d38f2df53fcfe19a4ae7539568e85b4bc709ac0765b63a7c36e6e7833d23c3d"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000015.jpg": {
+      "image_sha256": "828654526416cd5b530a6087cd7f5628c59b9e5772fbf5049ec117297ae19c98",
+      "reviewed_label_sha256": "7e01c43f54fc620ec3a5cc72a58121db88567cb8b88eab11db5c68af5fe442d8"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000016.jpg": {
+      "image_sha256": "739409d5d16efbd98cb9d308c2d6ce108e5a9e761da1f437e7e0ca58448a8a8b",
+      "reviewed_label_sha256": "6457de7ae88b7e6ff531cc18d783e791cf548307752ee5fbdf4790b65f9d50ea"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000017.jpg": {
+      "image_sha256": "68d7526cb431bf6dae9f3de0dbc6786a3aee7678d07c2e938b2a36d0dc5b7c1a",
+      "reviewed_label_sha256": "11fed136aa9ca5f712b6ecb05b5dd7564d763287643329f6fecf919d9eaafaa6"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000018.jpg": {
+      "image_sha256": "aad1d640160a705de6d63001baa7015ce1f81c93c0649f21697bc65649692565",
+      "reviewed_label_sha256": "1c022ec5272b58d19a39fcc55dabed6e322289603063defe349ae9ec38ffca08"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000019.jpg": {
+      "image_sha256": "183800ebb9985ac0afbb5d965a99946646fca2cd60b8d54bd0433c0bea4c6362",
+      "reviewed_label_sha256": "72bc5db4ba5f823e4d10ddc26491ebe20d1309a8aa20e453b43677b81377e490"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000020.jpg": {
+      "image_sha256": "30fce4e1b7a1988f18d9e010b98b74795e68c9205464dcf35730044c3962d28b",
+      "reviewed_label_sha256": "48ea3fc151b1e6a8ad136f4bb2f9a5f1f8b9fec80eee563569d69d0b13c291ba"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000021.jpg": {
+      "image_sha256": "653ae68b0146a0203a962c69d58948a1be83d589f8b60216b5173f66dbb7c136",
+      "reviewed_label_sha256": "1510e86a27d0959f6cf32ddbfb8e980dba25e45d54f3302572f7f555c8eadbca"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000022.jpg": {
+      "image_sha256": "c1fd1ab546caccaf434c5d1e802484649d604181dbb5f96d75b19f9fd47855a1",
+      "reviewed_label_sha256": "7ca5d04ec1b3d535fd64f3e8208cce73abf691b7ddf92272a5e8ab68bd71b469"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000023.jpg": {
+      "image_sha256": "58c9892e209c245202fbe46b11ed28054b5b2e1039eee0347bba1de620c92683",
+      "reviewed_label_sha256": "b2c33135a843f56982d63feb51c92083a8813a2d027ca9cd32e33fd4bfe1366c"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000024.jpg": {
+      "image_sha256": "1e356fa7cfcf4710c31371de9d6b46ecb3203abdc93a4355da2aa1e489c76909",
+      "reviewed_label_sha256": "73512d27c929b19790b5e819ea5260de91924cf9ddb53b89b67e27e048514db5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000025.jpg": {
+      "image_sha256": "692928ba55d494aac4120082c9cc9bbd3b3395ed7993ad03347b3b0afaefe38d",
+      "reviewed_label_sha256": "7baed950c4a220cd8900e1dc2556c81ad4b78ca7ff94d988e3b6387d95ee83d7"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000026.jpg": {
+      "image_sha256": "dee5bf03661317abbb2ee5bc528e98fbd0b95d50d25127837278100592f1026c",
+      "reviewed_label_sha256": "ffa76062a3242829903da1b23144cd947d470c1e318a4c96755550e2a780b8a0"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000027.jpg": {
+      "image_sha256": "7dec8968c18939dbc446b185785093b7321f249edc16069216c7c6109c833da5",
+      "reviewed_label_sha256": "845f1951b1e3f38ad7777bdf41bf40e306304fa20daca7d33f3fe911b84e01df"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000028.jpg": {
+      "image_sha256": "c5bfc83e702adabc6e806c591f19dfe32baa34e39d30fce67185ad768a92d285",
+      "reviewed_label_sha256": "2c3ba36e14ca2468116ebbce62c06c1560e3f5239d3da4abd89a3beaa1b87311"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000029.jpg": {
+      "image_sha256": "11ffa56f0449ff5ba60c97111aa201e64e6dd681dc313a17576f651c6e260757",
+      "reviewed_label_sha256": "f16b233b3c2b42032009cc0a5239acc6418440c18de19593920c8eab298246de"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000030.jpg": {
+      "image_sha256": "c3b3f8dad2b822fec027a1dc21cb6d65091282168660ea728f0757c61069a28c",
+      "reviewed_label_sha256": "efecbc92dad799f9aad8116362efd5cd282bca5298ef0fa2d968eb47e66bdb00"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000031.jpg": {
+      "image_sha256": "b3e2a5eebc86bd71a94ef6966fa48f3642b139a8fb4cdb74840ae6520cf70658",
+      "reviewed_label_sha256": "d2e318c2dcca657fe79e0d79064d708d654f2131aa4cfdfbaec3241e49f52537"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000032.jpg": {
+      "image_sha256": "1a819390a413ff62794f8464075488be33956a5166d839167738903d677f8f5f",
+      "reviewed_label_sha256": "a1323d2c5c7531d13e58a51689624b3327866a8b6a66ad1edf9416dc1d9d3fc5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000033.jpg": {
+      "image_sha256": "143842291d3925059ae615c82d0e2942dd0b6e0dd99be568a531e3eb74e4e77c",
+      "reviewed_label_sha256": "02670905ae0a5e84c843f48ce0cdde3cd8799777fbc2ecb3ae11165a68562554"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000034.jpg": {
+      "image_sha256": "3c9377a6b7ec1c1a26e47b98f95360b70a5031cdec592cc2ac2a65152f4c7571",
+      "reviewed_label_sha256": "c048a9536b26464fb0c8e17afc83fce4e73100dbc598f4f09dbb2d7964b7d2e6"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000035.jpg": {
+      "image_sha256": "bd4008f16b63b378e5b71759c555b6766944e227694fe270da4c2c15664b0063",
+      "reviewed_label_sha256": "e64469af6cae504220b60d218fafa6726d0f7cabcbbdc91a327dfd792494c94e"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000036.jpg": {
+      "image_sha256": "c2c10d7bb6d1c6afa3c1580f57a8fdec23dfe67af421bfa27ab83d35267d14d5",
+      "reviewed_label_sha256": "95f5b2d3cfb00fed07eb84aa16714552b177cae7520965705c1922d2d08e6422"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000037.jpg": {
+      "image_sha256": "a723c8956b207a729d6732ff78c531f6590d216a2c56fdc462bc51c91b2be5a0",
+      "reviewed_label_sha256": "8084484c31d36c97c281b541b29e47b76e46ff044579562dc20027ed4037383b"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000038.jpg": {
+      "image_sha256": "90b691be1d1e78c46a3e701aeac3eee7058271982275af6199dea7e5e3f585d4",
+      "reviewed_label_sha256": "5a531b467e2b4a0b6efa628a7261ad2642f7ccf4a82bcc92410b9b6ec0758d8d"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000039.jpg": {
+      "image_sha256": "f8896e97908efc06a57d8b22f87bba4be6f79ebeda6ff61f113506151274316c",
+      "reviewed_label_sha256": "4d7faf072a83e3693668ae5f8b2ea844025d8c08a79dd256fe9b4101551a1f52"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000040.jpg": {
+      "image_sha256": "23c7843ee676a5f5b0bbb05e5e184455a07046d9a4fe2655353dbb1464864936",
+      "reviewed_label_sha256": "800d7175dadffb2092288a7873cebef91268ed74d2629bdf3519ef299d944069"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000041.jpg": {
+      "image_sha256": "c1bd477249d35521bfa30961ba782913f0336cd45cc30917bc011401e0710bd9",
+      "reviewed_label_sha256": "0729bf5fa215b67407fd3de3a2498203220d17fdefb789bae43d64862de26c30"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000042.jpg": {
+      "image_sha256": "841c98c6b2a6ba02cb65879c73cdae89337bac5144e5404b9dba4e8448459174",
+      "reviewed_label_sha256": "6b9b1de853422c476447cbb72ffccc6c4b972513178fdb71a56f2f4d3a3ee850"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000043.jpg": {
+      "image_sha256": "bb3c00e9e75598281ae96b0b9901978ebf43ffe3d9f7560db5eceff1b4b622df",
+      "reviewed_label_sha256": "6b9b1de853422c476447cbb72ffccc6c4b972513178fdb71a56f2f4d3a3ee850"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000044.jpg": {
+      "image_sha256": "13c9d6bd3cfcc3818354049e05af5de3ec0780479b2d7c26ae766261d23b7510",
+      "reviewed_label_sha256": "eb58d6c0a767d0f225cea0a6992e8b7a4ba88e5548ff1162a8b519c167b40e95"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000045.jpg": {
+      "image_sha256": "f01ca60611cde4c1d7f8ecc113e45f390d2a5bb193b28c378902cc386ae0ceb0",
+      "reviewed_label_sha256": "845f1951b1e3f38ad7777bdf41bf40e306304fa20daca7d33f3fe911b84e01df"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000046.jpg": {
+      "image_sha256": "d1d7fde3ca298e3134d8aaf403947031a211f4bd76c39cbda3187b986c414184",
+      "reviewed_label_sha256": "b1cfb49e76221484c43d5d69a46460cf9a3f5cb50e13502024579aa739dbbd71"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000047.jpg": {
+      "image_sha256": "b4c0e18d22ee61f498ba2691f843cc3365ced14d7c8a957d0d02709b42b59a6a",
+      "reviewed_label_sha256": "e647b411ed310e029fb0f987a2e9f33ac0cc77f7d7b5eacb5016157ae87b565f"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000048.jpg": {
+      "image_sha256": "acc30d972fddcf7161552dc7fdfc874287e4adcc371a345f40eb268cc01aaa0f",
+      "reviewed_label_sha256": "a1323d2c5c7531d13e58a51689624b3327866a8b6a66ad1edf9416dc1d9d3fc5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000049.jpg": {
+      "image_sha256": "102f40e78eb2125b6521b1d6b449633c453f4b8782aaedc8b7b04f90638e85a6",
+      "reviewed_label_sha256": "add2acb2c14bc6e95254949adaf76c02eece7c2b46eac634a3300f44f53716ae"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000050.jpg": {
+      "image_sha256": "901d5dbbeca88f26d9fb4372da9e26cb63aab4e8317aa55901b68121aab14fd7",
+      "reviewed_label_sha256": "91b0b7f21adadc4c9e949b2e555eef6b95da170b26271a8ce415d7835b20a627"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000051.jpg": {
+      "image_sha256": "edc114d84b50a517796e1fc00449b332a78194955d6c2b2743dda72deeb8bbbd",
+      "reviewed_label_sha256": "b196c14b33f70239b73e35f4f0c50599606480f5e48fac6ae07ba4f77f006e52"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000052.jpg": {
+      "image_sha256": "fcdd103b0b9d488797d62b6a1d9e1a4ba49873e29a0ce7882c4dfeff2c31e55a",
+      "reviewed_label_sha256": "fa8eb6cd0a95aca19bce1b0e7411a83c582179c414ebeaad523eb4e659ddbc8f"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000053.jpg": {
+      "image_sha256": "e10b4f9f77db85e8d51ffcd55b9a179a22a1cc889f04206e3638886ce6dcb662",
+      "reviewed_label_sha256": "d23c4b01a34879832e6e533e5cb91711a2c67d23482ee46cbfea90f9c7329196"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000054.jpg": {
+      "image_sha256": "9290184fd4aeb46ca272a0eb7f8020e69fc940f20452d956f0ba8801a4dd4142",
+      "reviewed_label_sha256": "a1a5fd059c7f624b0212d86de601857652346115d3bd6452ab59eb486673a2c0"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000055.jpg": {
+      "image_sha256": "0cd1c1d6324cbcb8574a2ed17a7b6cf41728530af24c87788031871c681061b7",
+      "reviewed_label_sha256": "56196ef8398123eaf1c076fcb15eadd997c41c532a357756f990d172e80a9096"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000056.jpg": {
+      "image_sha256": "c3987dc5b62efbf6415cfbc354d21d0d154bac8ad8469decd19623866d5734df",
+      "reviewed_label_sha256": "ae67e66b3790814653a57d6f2b2895708c3328f13c81f0fa42f20dac91f861da"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000057.jpg": {
+      "image_sha256": "65cb58fbee997e37d11c37c2a4b0b73c1f46119a1fc655046e0edcd98cb7338b",
+      "reviewed_label_sha256": "ef42f5815caa7655ab9685cdd24002bb9142c00f1edf3f24b6442417a8838b1f"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000058.jpg": {
+      "image_sha256": "d84936b5461f772bde3164fdb1b5f901d3752b6674c37e06931eb487fd84c1bb",
+      "reviewed_label_sha256": "4b987d156273397dc82abd4d254fc690835ad2b4ec8482cf19518eaedfbc310a"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000059.jpg": {
+      "image_sha256": "59295f646fad9bf73d15663cf398c9781e39cd75c1c4fbe6cbd1a0e3e4813b0c",
+      "reviewed_label_sha256": "99c810af5beedb1de9c2f80215d7c6e6d847e049dc1bd8eb958acfacf86e877b"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000060.jpg": {
+      "image_sha256": "43e757dee3d9bfc4f9944bcdcd708f5e51a1bce7dfc88367f70e07eaff6dcc3e",
+      "reviewed_label_sha256": "ae3d28b8cf348581cf0669bfbd3a9785729c33007b1533f3c83f5a31f109e41a"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000061.jpg": {
+      "image_sha256": "38a316f39bb5548102f1980280514f402ef62fa90feed84cfe77c4ad9102d3f2",
+      "reviewed_label_sha256": "cdfd37abee2b38403b03369548a625fcd0e2bffb457d4de2f7b0fa0757d12b28"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000062.jpg": {
+      "image_sha256": "9c3a712b25dd3e0e739937b5625073257449b05c8e296432971926005c14dfe0",
+      "reviewed_label_sha256": "18c5ee21570ed18fc7cec29909ae06b47d43f3a0be48a984f7044aaca0e0aed1"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000063.jpg": {
+      "image_sha256": "381c1db8c11e8ae613c0aa55d518cb6a94e5166d75c7ce63ca82ab16623e9b55",
+      "reviewed_label_sha256": "03db4303155264f37182ca809aebac177ddcc9850545dc17d75bcba9bd46bbb6"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000064.jpg": {
+      "image_sha256": "4ca620e531298a89b2b640333401177c84d28e333bcc2cb316b6d4d0714105bb",
+      "reviewed_label_sha256": "5ae213dc07395a59fc1d8035c5fb499b143c97ca0cc8c645ecd57ac5a2cb1073"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000065.jpg": {
+      "image_sha256": "baad188da77958ab304fee743d1eade160c64c1e83626d288414343fbef17b56",
+      "reviewed_label_sha256": "2f09ef2e0fe8c4bfbfc22878e719a0b765caf30a3b2cd8aa82ad5aefa1602a08"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000066.jpg": {
+      "image_sha256": "5e184d7e8ba27a58591eb6fce7fca623944461a5de6b8af8420547281e59e386",
+      "reviewed_label_sha256": "4273d7161f55b781bb6e8598baed09e69cc3232e328e699adfcfd6561e25b985"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000067.jpg": {
+      "image_sha256": "1aa091aea547219b89e439859a8b00fca8b9d774c7b5f29bb1b8a3eed332d327",
+      "reviewed_label_sha256": "b1cfb49e76221484c43d5d69a46460cf9a3f5cb50e13502024579aa739dbbd71"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000068.jpg": {
+      "image_sha256": "82230c4b8db71d40bc411633e61b5a1b53e0d8db007f8a744af1e739b47dfda3",
+      "reviewed_label_sha256": "1dc1aaefbdec40ae6b8ec09188b3b6dcf1aa50515f9d78b87fa29558f1cad1ec"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000069.jpg": {
+      "image_sha256": "db32e8887653475136242f3e71b275fbdfa1a7f2c7067c94e774247d9df618d2",
+      "reviewed_label_sha256": "ad130d10e3eadec90c2cc4c9035ae9a0d97281a7ed84fc6ae4c4613ab461604f"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000070.jpg": {
+      "image_sha256": "b1c9ed69c9dfc8d6ba2630d3b81c9be1aa480b8444f3a6c4e763245c0e8ab7d1",
+      "reviewed_label_sha256": "3c4e15029331e502358b3f8f0bb375ade0b8349ebd701f4075bc8619732f7820"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000071.jpg": {
+      "image_sha256": "05a3c0bdb899b46115e6fbb4e04073e57653826bb4ed527e272f4c9ff1650ce4",
+      "reviewed_label_sha256": "8acdaa262a6ab58bbe3b2d8eb818d1c1b203fc6fbee1d714a436842e697dee67"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000072.jpg": {
+      "image_sha256": "e8b276f774e6a4f3a4eaf06b1159d76a66733f1bc8dd8816a334a1f2888c0339",
+      "reviewed_label_sha256": "b42a9c58983415bdda73b7a22d83b65887447e36cc9c2b1d118a5844a30650c8"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000073.jpg": {
+      "image_sha256": "2720ad9b0b2923db9104882d2de84b8d69d02fc10cd59e8207d7430732af0576",
+      "reviewed_label_sha256": "a1a5fd059c7f624b0212d86de601857652346115d3bd6452ab59eb486673a2c0"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000074.jpg": {
+      "image_sha256": "c005af8a8e8a8a65f38cc442da4c9faf6a6dbcc6272b59981e02887b2e9e2f9d",
+      "reviewed_label_sha256": "31a3fa691f60f271c8d8a8551d68fc376cc2a1c6f5f25af86ddde040c2002d92"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000075.jpg": {
+      "image_sha256": "b12bbb3408afcade0d9cff1c8ff304af6cca428d9968063c5b1d99a8c8a20691",
+      "reviewed_label_sha256": "8dafe073c36d98e2d2f2e27172f256b19b33b34694130418ea4ff43ffcc916ca"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000076.jpg": {
+      "image_sha256": "fd4b8ba4f1c80bdbac40a25199ec12a4d5f04220806cb9c654a3554d63178e26",
+      "reviewed_label_sha256": "2f6c182242e09dae46f719404b0a4437ef11296669e0460187a3dc0855c617e8"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000077.jpg": {
+      "image_sha256": "db4d6c4106c69433533bffa265305be18718c624065060a083418664cca87abf",
+      "reviewed_label_sha256": "25ea2fd08650104f672331a405d861e743dd39db4e2dde6436066bb2fa7ab5e5"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000078.jpg": {
+      "image_sha256": "aed07f8cfaa3d178480eaf08a9165dd5187a06a3608a3c5e966374c43204aa55",
+      "reviewed_label_sha256": "b1cfb49e76221484c43d5d69a46460cf9a3f5cb50e13502024579aa739dbbd71"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000079.jpg": {
+      "image_sha256": "50e4ab9b4eb30eee3e4a513ef6b1365ac04c977f645c402713c88135e230874c",
+      "reviewed_label_sha256": "4d7faf072a83e3693668ae5f8b2ea844025d8c08a79dd256fe9b4101551a1f52"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000080.jpg": {
+      "image_sha256": "e8aa7f21967036c731a94080f618c6aa283413fa24cbd1ee23dce62f60351c02",
+      "reviewed_label_sha256": "14af4435b869fbff21ca45fa845c899dafe94536e5c82d5ec4b1046c279374d2"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000081.jpg": {
+      "image_sha256": "af31832a111f5248636b2be84f452156f42f6ee68048fb3553f649844b31a52c",
+      "reviewed_label_sha256": "e4375a7755131c85f8d3ce9ab82c29426df2de52f71be57dd6e5174a87a6b53b"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000082.jpg": {
+      "image_sha256": "dfcda77152f95bfad897dc077bb13f04cfbc24cab7e64c7ba930634f70a0ff98",
+      "reviewed_label_sha256": "b1cfb49e76221484c43d5d69a46460cf9a3f5cb50e13502024579aa739dbbd71"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000083.jpg": {
+      "image_sha256": "56adf4d66145025d64a04d08ffd9905baad88ae2e3c1ee05390adb148350882f",
+      "reviewed_label_sha256": "a24f45f17c49bf0895e8a088f4a94abaca92f36c5bcaf16a9e31a8c44c4f9873"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000084.jpg": {
+      "image_sha256": "15239e58d257d6967e29564cbf7a1c7f5b2d854eac7e5b1890f67fcc3bc5c178",
+      "reviewed_label_sha256": "0b0890c6fcdbbac8b6fb73e9813fcf18473168e78ab644746b661ed5f0db6c63"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000085.jpg": {
+      "image_sha256": "5b010ad1075575061e1eee94db3fc9a478fbeec088b4b4aa338cae89e5122080",
+      "reviewed_label_sha256": "c006e70a6b1babd9a012ae640f70fa69866be55fa12060e4c7b6ee6c902904ad"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000086.jpg": {
+      "image_sha256": "8d26322389eb63ff85fc4a6b025ca54ffb06f418808050dc9afc70b39d820cb7",
+      "reviewed_label_sha256": "bc8a79c8017ecaafc4e044a53c1ab2365bd700f0a1c6dbc14c65e9dffdcc85a3"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000087.jpg": {
+      "image_sha256": "c4861661e28ef83e911fd134a7529296f8454f3f277d52a4d6af2d18ac599114",
+      "reviewed_label_sha256": "0867738e44dac6a834689391777054e570045beea249d493406564c2c1b75c52"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000088.jpg": {
+      "image_sha256": "6ea60279b2603a38799823bfa0bfd6f611ae3349a6dc0881d9f100c3942d26dd",
+      "reviewed_label_sha256": "0bf9bccdd2cf81f1d96f81618c6c1ad53f006ae569becc10d94c25e335949ea6"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000089.jpg": {
+      "image_sha256": "3a6c89a8fd04e822b3580b3d38817e64188121e97265ec8db5b346fcecd3b860",
+      "reviewed_label_sha256": "bdc1ed31f67f3793081b02122324ef9bee513e5e3d9a4ba95f4714d5f36c9fc7"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000090.jpg": {
+      "image_sha256": "749b1a092b27efa02323cc30cd12381f7b675a097e0c0bda892984eff6ae3cc9",
+      "reviewed_label_sha256": "c17a4986849f3b7368798ad4280acce5e6c41ea1a98dccda4ce40126dd7d302d"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000091.jpg": {
+      "image_sha256": "930aeffc35a1188cc4aa0e935f3cf2a84e145bb96a350d8455363020088f222d",
+      "reviewed_label_sha256": "9d20bdb237bddb083bcc497ddfcdfec5e842493ab1a39018d1dc66158bacb16a"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000092.jpg": {
+      "image_sha256": "afb2893007c90ccb758267fa846018363fa9ee1d1c667a8dba6efeb2f144ce5d",
+      "reviewed_label_sha256": "75439054786b48dcb10a530d93963bde9c368910335a559047d1547ddaa13a7c"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000093.jpg": {
+      "image_sha256": "50404f059d83374a14191b8ab4d5abd6070ea4d6fb358f3a393b08b8b6f167f4",
+      "reviewed_label_sha256": "30dbfc8aad75c1d006a3cbb648a03e55f999c70aa4612cf03ebe5af56c848649"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000094.jpg": {
+      "image_sha256": "ff27b4919e06985057451f4ad7483c8f33f2957fd947afe2c1f7e3f89ec247e6",
+      "reviewed_label_sha256": "d81cf7671a019c0d6234fb5ef94903d597bfc167c5427b7fb94a0298914940a7"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000095.jpg": {
+      "image_sha256": "b2b8846ad216e5795fb992305d8143565aed94e99cb977852f310a5bfa4eb1d2",
+      "reviewed_label_sha256": "621c8a1f82094ee0bef2d750b317dd1def7c8b40a226c0c041169168c10f1bdd"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000096.jpg": {
+      "image_sha256": "1c504e69fa05fa44b114ac26014504906d3ed197a7c590bac1f77ad87d589420",
+      "reviewed_label_sha256": "b1cfb49e76221484c43d5d69a46460cf9a3f5cb50e13502024579aa739dbbd71"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000097.jpg": {
+      "image_sha256": "b6324592b7407a0756d76895a562a55a0d1ac548b7e1bc3b0d30e6b9fdcbae7a",
+      "reviewed_label_sha256": "7e3e611a32ac2ee4dc75628da42f41ff7710b35e4572af18f64a9771cae9af74"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000098.jpg": {
+      "image_sha256": "507cf1cc2d8e72d5dc415013c0902a0f5858ae743dc0732a0e1af999f3860a61",
+      "reviewed_label_sha256": "0f92e83ec2b87bdef54224d4cf9f9894c48dc286b5c2952d8c6cb83edf0f33d1"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000099.jpg": {
+      "image_sha256": "22a143a60585a4a4d5599c2f3f5a9abefbaa403542d4d548165343957fc24d7e",
+      "reviewed_label_sha256": "cd11219ee27c4d9285d45ed8f8d302c779b1632cb3fa1b6922e1bb8520862c80"
+    },
+    "20261112_t43_idle_objek_ulang_01/frame_000100.jpg": {
+      "image_sha256": "1fc925c49d23152c93e26bca77389a042d6a62b5fddeb837d52171b4cb051f73",
+      "reviewed_label_sha256": "6d4b83f7562a90f0a406971f6ead87dfda7ef11bc18ad8dcc72b2597882a9fb6"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000001.jpg": {
+      "image_sha256": "630db6343b9a2ea48dc994393169ae20431b6e5882e8c8feb6e575f3262bbed0",
+      "reviewed_label_sha256": "305479398e592992da6be073e444c612dbf9a38bb21822e0c5e5ae2ff92848ce"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000002.jpg": {
+      "image_sha256": "431d84b1ebb3fd9f612937f00c86585e87d502015dcaab88a8e8041639963738",
+      "reviewed_label_sha256": "c6ed77cafa185e47c42a26115ce2958a94d4259e2ea4ff9ce3d2e1d6c5777dee"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000003.jpg": {
+      "image_sha256": "72b67fa4c49a5bb64d57bc1288ac9c61efedd082fd5d7e600c48cb1200eaf2c4",
+      "reviewed_label_sha256": "f1ba2fea87465a1f19a94a4f1c225595f1817180f97ff66eedb91c4f9208fef1"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000004.jpg": {
+      "image_sha256": "e274faa12ab1b9038c1ab212a8e5cf6e78b1ac93855274f053b910bd8ff6bc65",
+      "reviewed_label_sha256": "0dedf85809cc1a674d50dc9f17d4949e6efbb257b3db4c938e5a034a10b19313"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000005.jpg": {
+      "image_sha256": "1bf5697961160fac318eed1e9954ae81fd8d78bc336ed7e36327763bb28d43d2",
+      "reviewed_label_sha256": "ee2fe85dc1d7b62f65370be1c3795d35f4100eb4e78d91beb95909e67b3c9e27"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000006.jpg": {
+      "image_sha256": "d4e8f05dcb72fee6258498bd745fbf41a945c47047ef6c3af198e0c00a8c1610",
+      "reviewed_label_sha256": "e4ef2e63ebe4d37ea49e34e5301780f30e794c84b0a85e22be9754b1c50b7d39"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000007.jpg": {
+      "image_sha256": "7d7badfc1c8776a562bb53617609fd006068f233729db11a419795e35e6dc763",
+      "reviewed_label_sha256": "b99e259624c38eb73fe1b89952b059b95981f8661cf1264bf664dea5646b12cb"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000008.jpg": {
+      "image_sha256": "e0c78db82512d29d1e16ff81be66566d13bcb82924d7c771e0fb8ee6ed595605",
+      "reviewed_label_sha256": "65fa11cd7aa4e2a6b5af2b471e9ad5748efd54a2d0a68f22d3d1c7e2e86ae910"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000009.jpg": {
+      "image_sha256": "980547e2b7dbcf2d5ac6b3682ec3070d44c74fd888e4a894b904e00c304f32dc",
+      "reviewed_label_sha256": "6b792581f110894c2c3ed7e000c836bd045fd556804c504a2a0be7b449272a7e"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000010.jpg": {
+      "image_sha256": "f5a18514e5777d26c5c38f58327847fddbce8eb2285e962dcf075f6a45f0133b",
+      "reviewed_label_sha256": "f0370a89c337b813251085a9fb7353d9eb8fbf7310b3ee498131e18a064ffe43"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000011.jpg": {
+      "image_sha256": "91d04f3e07b168914496b9823913ce63de1ceaf887662eb79b737f59d2c2d872",
+      "reviewed_label_sha256": "47ed2bafb9e325d9adf71140c446d33f833e18600686614f77a08f728c37db4e"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000012.jpg": {
+      "image_sha256": "c7966307a655c407be64456bd091f040d187ed81a0d5949db0d7ac202fd3db6c",
+      "reviewed_label_sha256": "016607256bed4dc5ac412c2ebf78144a7dd33757e53739f5155529475b0fe74d"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000013.jpg": {
+      "image_sha256": "30676c6e7d7590f54fd4191ee8f11a791a9f0d9c3b8159b8109c62cbcbd45ebf",
+      "reviewed_label_sha256": "b6e8a87e4104b8d9cce97dc565d92716972f828caf91a0b2b8b6462e953bc211"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000014.jpg": {
+      "image_sha256": "a02fbac3c51162d7296386e036c69afe38b4108a9df67439cf7403f59b9cc370",
+      "reviewed_label_sha256": "bdb5a2d794c8419ab70e2f4be2a8e4820a4ec38b7cb2dc363823917f8efdce7a"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000015.jpg": {
+      "image_sha256": "063deda70def2eac113d2d6e73eb891bc9a12c13fc8fb64436ba7dd98d5b4d7f",
+      "reviewed_label_sha256": "bc8281a64a96d49abe8ff84d215a4a9cd6d67700cd5c636612d705df795a0700"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000016.jpg": {
+      "image_sha256": "fd30f7a893dab6039946645037065ee5168f2c34d48728783a84b7af2902cc69",
+      "reviewed_label_sha256": "bb5ff40056c2d4725c831f0458db5d55152e7dedeca53ae5f31722c333b3d395"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000017.jpg": {
+      "image_sha256": "174e6254764f4840a3d868a1111c0933186bf006508c952f4bd7554b91457888",
+      "reviewed_label_sha256": "02787073a09943c9c554e6bb81e565a5c5c17c0e24629f9987d2f7b978cb7cdb"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000018.jpg": {
+      "image_sha256": "8c56faf9eef472349b8a3888583f8a0a7841b0bab0bc662182ec01e0b498a46a",
+      "reviewed_label_sha256": "0c0fc6ba16f93acb105161cb4602a10f99929f18247ce719c3e0a9d8af53dede"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000019.jpg": {
+      "image_sha256": "714710d2e3ef2198fb46e31e6d6f4a63a5c7de065c0dc0d00cc7991cdb92865e",
+      "reviewed_label_sha256": "3540a159c7bf22db02a30adfc69654cb8f65fc3dda7e39efb1fc6443a89eeb97"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000020.jpg": {
+      "image_sha256": "37918bf92ca457306221238c9fb715e15cebfc785346d185c70632b031b5f99d",
+      "reviewed_label_sha256": "c126ad08cd20dce710764c9d8e7b1ae54b0650e3aac8206bd44a26c94072ff7b"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000021.jpg": {
+      "image_sha256": "96cdd55f35fc083b9bfac33ca320908414fa948651e229d890e47a261e72d0f5",
+      "reviewed_label_sha256": "e3bab01488abe397864129d6537a1a9d508688b913d3f109ff9c0048ffa4b0ce"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000022.jpg": {
+      "image_sha256": "984ed0a6b85862c5506d1785c62d87c550fdefb222de3044084782b8b38e8768",
+      "reviewed_label_sha256": "783c6a9701431040bd197931696bdf79eeaec2022309bafa6caf53cb9822f40d"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000023.jpg": {
+      "image_sha256": "757001a8c7ae6e898b19b838545e3c758dfdd2073b120a19f3d7a891d9db5756",
+      "reviewed_label_sha256": "2e87474c69a709578a232d92b8e7c405dc3a358265cb492a51f3d00346112336"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000024.jpg": {
+      "image_sha256": "c04d4f901c830ebaabf85c92b7f5fc125bc41c1c8d5d708dd1f20c82f630893c",
+      "reviewed_label_sha256": "619a8be365f51a9842fee9e817f4989d14e2d64291fe04c23ac1ea1b93ef0800"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000025.jpg": {
+      "image_sha256": "2c84cb2a63b2053c51c03fbc888333f2aa0f68a5f92f8703c7823d8048f42eba",
+      "reviewed_label_sha256": "83f6396039cb66fd1dff2227f3e4e61b8492f43fea7b7498aa246d7eb866331c"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000026.jpg": {
+      "image_sha256": "ebe60919d9548861083428acc274f1cca9e99040e16d235b20e232b656d21f10",
+      "reviewed_label_sha256": "510419f1e70a3b77a3bcd6b22d54d720a500a5e933b4c2c29c4b391d0567373c"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000027.jpg": {
+      "image_sha256": "90d9c8030145987035762570de7a7d5985139f138931de9457a14a2fcb31e63b",
+      "reviewed_label_sha256": "fa2ca16b941999319fe56f7a12d7b52e1c3b70c5f5e208d81c419884cfa24ec8"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000028.jpg": {
+      "image_sha256": "41dc61c274395ff8a284ee530e16244c7e898400faae611f2ce6150d6c2b63e1",
+      "reviewed_label_sha256": "cc7e60cc7f773908f7738d5c7d039384cbecfc28ca8e512447984f241071dfb9"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000029.jpg": {
+      "image_sha256": "737403f36cc4f123a2f2eb3c807474ead4e2522237347fb01c66ac15fb70271a",
+      "reviewed_label_sha256": "20c32be763e9283afa431a34c90603f73c72dac40157be6fb4aad0ed0738e379"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000030.jpg": {
+      "image_sha256": "ca63e816bcb4cca8cdabce8a22c8d15b08c1b69bc8b2a38bbd8e3db427ed1419",
+      "reviewed_label_sha256": "4886e643700bd5a1179b3e07d09a9f066482e9ca1fbc7330dc14f55c9d2172b6"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000031.jpg": {
+      "image_sha256": "48cfb081970068b950210ab84b53f5cc6d8afe06a162cb460a4ca05b452cda25",
+      "reviewed_label_sha256": "c2d2e72f9746560d86372acdca0910ee19d48f45e9beef4123e74cf451a5c828"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000032.jpg": {
+      "image_sha256": "1bdb905a6672b70fb7604a2cbde5f2b444c17f58f669820a5c85ef9d695e7adf",
+      "reviewed_label_sha256": "f92375c547b99b0fc7765c3c4cdfc88e40ff4794515fd47c711b005edb725230"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000033.jpg": {
+      "image_sha256": "0a5db42e9dfcf121e458dfb67ba0a282ea1c47b5e8d89444d59ca2976646787b",
+      "reviewed_label_sha256": "ae3a2bbe1c155607dbf2233651d6f54160c5d9c9009bcbc305bdc83d25701d61"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000034.jpg": {
+      "image_sha256": "d33ad753dea0f2a4678181d7acda5004206effd65a52a1001a3e499c484819e0",
+      "reviewed_label_sha256": "0c72c87ec09e69bca9cc9687b5c7017b277b272d7df18ed798b6e72e0f5d8122"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000035.jpg": {
+      "image_sha256": "1df9655c815d98343295f2b083c223d295a70bc3eb3f34f991567c7818736c55",
+      "reviewed_label_sha256": "2f219d15a1cff038da00d75b010273e62b6b5a6d70489f907d4c745c6cc73877"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000036.jpg": {
+      "image_sha256": "a09ee372ddc4c80608a6ab391697f9fffd14b3a3063d7ad11d8f395ae932a895",
+      "reviewed_label_sha256": "3673c1577317b3375b7f526e6a383fc559a822ef5299373e999c1598fde8104b"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000037.jpg": {
+      "image_sha256": "2cb5c6d7ae45d57c67a93819fd3414469fbe88f4e4c3abda84da29d31eab48d8",
+      "reviewed_label_sha256": "9979bb6bcd9acc24c9a513fb4c279a9b40b33c8d0d6bfe56e8b7cdeec5aa8a72"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000038.jpg": {
+      "image_sha256": "fa75e72abf1354b77bdf01cd9e02ce1a01c001b48f11a669478db09c142140d3",
+      "reviewed_label_sha256": "a392b9f2ed2e4170536f2f15daad7928adf27ffad46f8fe564be064f8c8b8f27"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000039.jpg": {
+      "image_sha256": "53ad026a4790926c5718e0422a6a420b2ee213f9619dd3721b5e7de7226b9528",
+      "reviewed_label_sha256": "154a91e13e229c6b49e6f654f088f326b3d93028b110a262d5285e7eea91afb2"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000040.jpg": {
+      "image_sha256": "e33fd4b58a58d4b126aa5d64d8e33b9c699c66db70b39effd6cb81c476aba1ac",
+      "reviewed_label_sha256": "2a19ddc7f0df3af5f481257a9e6788bed88febfac0b9904ad7abf4e3963e3943"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000041.jpg": {
+      "image_sha256": "62d289ac2f135f00b8f6dc6e466eb95f545a38e442a47be21db77c5290501bd5",
+      "reviewed_label_sha256": "7d66e23110bb0b057e160a6229e94f0e18e5c7bd3857cfd67b8a7f9ea29a4d83"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000042.jpg": {
+      "image_sha256": "511378ae790520793e3e9a54782f0573d4f502bed91b9ecd4a16d638b127b066",
+      "reviewed_label_sha256": "744183bd1ab7eea9789e346e80db646cb58a010a6963e1011d28d110dfaa6d7d"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000043.jpg": {
+      "image_sha256": "f95cc660fb63135527291f5198f8bfa7f715d0943f12194f7fb8c14b47d69124",
+      "reviewed_label_sha256": "a3542dfc8b8965005d6ba69d7ef50bbfde7a32435520ef7014da2e990967d6a5"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000044.jpg": {
+      "image_sha256": "99665b259cf301760e1c2d322cfad180411fefe9d8d236b62f2085e5813f1542",
+      "reviewed_label_sha256": "b73dcd7e7c67c9470f2628a2966e332f36e23f16bd02e5e7d5e425f798d83078"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000045.jpg": {
+      "image_sha256": "f52c4c4055da554d07be13d96d421d57d67b2241f3de6da56b3c8e710d9930a2",
+      "reviewed_label_sha256": "375456648ea2a27314ae950fc0525f8e61c123f0c484f273f6612ad7b59c62f9"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000046.jpg": {
+      "image_sha256": "865ef3a3590db79551c2138f0a0fefe2c6dca17528e67469500f6e8f667baf2c",
+      "reviewed_label_sha256": "8407bc81ecaa1df87fe7232369532e6734a89490fed8164668db8bcbe967e8c0"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000047.jpg": {
+      "image_sha256": "8373f94eb18b982829c51b8da7b61a655980ab6562a41cead8608de60c210eb3",
+      "reviewed_label_sha256": "79f99ab3359e00a53b107a95070d44dfae6921c2d0526198c6c77a415e62b199"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000048.jpg": {
+      "image_sha256": "fee16dc2dbd8190f0221b1da2403e41f5d5d2b7d446191cda89e51de78979266",
+      "reviewed_label_sha256": "2df0f2f1aea888e008be3593efe4e8ad5233a0952d9e15a87f832825d9628916"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000049.jpg": {
+      "image_sha256": "b5bb011e893b6e34e5c8e110eb6d679d288295fc9ba499db8a1e5a5440dfc685",
+      "reviewed_label_sha256": "8b14a2d3a7e0882f57367bda44f1ebd23620ab25b7f51c6d6ae0da10f44d000d"
+    },
+    "20261112_t43_walk_objek_ulang_01/frame_000050.jpg": {
+      "image_sha256": "e03da3dc29a908b4d94c893854a653919947de2810562c309237c5fe26d4e8af",
+      "reviewed_label_sha256": "84237334f85ffb31b8f72a6983505b4a1e0da9e397aa207a2934b8745b8b9411"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000001.jpg": {
+      "image_sha256": "7ee6b6756684ad01d17813051eec220debbb48221814b540b3b4710fc861e208",
+      "reviewed_label_sha256": "1bd299a69881baee20e18b48fa82ae20de35b3858473ec011cc160c1bd82073e"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000002.jpg": {
+      "image_sha256": "cc8da56ba0dd1caf0aca63b256501c9f11092c815c2a11e79ef4e1d067c6a1a9",
+      "reviewed_label_sha256": "763815e7135981d1b1cb83edf56c84ea3a15844952e757695a3ca5e6649eddb1"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000003.jpg": {
+      "image_sha256": "ab2144e6ee390c29c27363e38973a55b52ec940812ab8aeb8ab6046dfd8e0759",
+      "reviewed_label_sha256": "29580a709dd1ff0b9c0a909a44ab4c15927bec86bea3d08aca529a2b9d8f8e24"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000004.jpg": {
+      "image_sha256": "6aeca91371dc85ab4a0ec1d5e884172e8d64011090fa99167fe4b9561da88234",
+      "reviewed_label_sha256": "4b5e8a821fca5ceadbdf01ea4d8e2031841bdc920972d1cb6dc2d41fded69f1f"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000005.jpg": {
+      "image_sha256": "b2f418e7f75f5f420e6e3c5463871efb26d21d6e830645d2982a3cdbfc25f2d6",
+      "reviewed_label_sha256": "d5b9fdceecca8d6094c1c671d28c62f1debc52d6b0209fb5da9868809b7d3857"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000006.jpg": {
+      "image_sha256": "4ab6f6c1ab7da1a8b6160604288ab04c362a33fab56dd0915a6cf199eca70e9a",
+      "reviewed_label_sha256": "48baad3328d62f698f75df3d2b14e331fcd86829b8384b269d03ed54c5bbc81d"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000007.jpg": {
+      "image_sha256": "a518862b0733af65083187c5407ad05028761742b06a33a09235d0b990872c0e",
+      "reviewed_label_sha256": "52104c837ae5a16b6fb59c3c81f7caaa1858ebe3e617d92ab7d9adc3a0462984"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000008.jpg": {
+      "image_sha256": "579f776ce1ce57b10dd7d585cac91bb29fbd51d950cf714ac9b51423292240e0",
+      "reviewed_label_sha256": "a6fbc2c2cdf482999d6c1bb369ab096b3ca6d4b715cbc41828281dde5693ee21"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000009.jpg": {
+      "image_sha256": "50fa6f2eb7b2c07202900f5dc8f11267dd12532edf66ed277da179ffbf5bc3de",
+      "reviewed_label_sha256": "e02ab5961a6ab3acb941ae5261ecd1f34d77cb17b198df191943c184e141899b"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000010.jpg": {
+      "image_sha256": "a29bc24169ea2ec3cc2cf2c5b208d1d99697588795ca259abb34eaef3fc6d5e1",
+      "reviewed_label_sha256": "1a8e121962f778630efcb04e53b96453110b7224b4ebe1371cef3249f83b06ba"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000011.jpg": {
+      "image_sha256": "23f42e450454328336d4c5a603dc726d3dcda69f858c5ea1471c93f9cfb79818",
+      "reviewed_label_sha256": "aa7e7f62eec6ba70cebe36865d16b82096815d6a9b0b4a92161c6b4f8023a85b"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000012.jpg": {
+      "image_sha256": "aae5c36a7a47029373054970de1df79ba7dff79b0ff798362db05a424ba0ef14",
+      "reviewed_label_sha256": "c920b117132196432c45425b7abc92b8a4a8a267825be48f324cf73fa4dde5ca"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000013.jpg": {
+      "image_sha256": "acf20a8cf33aca0a03154fc1cd3103e2fc7269e513720f2d87e039504f5c7f24",
+      "reviewed_label_sha256": "c70c5b57e5473fca1295a1655b81b50e248aac6c73c970e1dea64aac0b20a0d1"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000014.jpg": {
+      "image_sha256": "39205586de2f34f6d59a968d733db8291319e12e1e4b51f7b0879bb9cc5984ab",
+      "reviewed_label_sha256": "3b65e49ea7a38376ebaf9f0668b707122ceab181b6ced0b69e7390539351e24a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000015.jpg": {
+      "image_sha256": "adf0103ba72bded7b6980e0c9d7b851c53eee808ab897e72801e590dd4b49482",
+      "reviewed_label_sha256": "98092f08836a6b03e1c3b32b1ae18dcc69829ee9ba287de45d079409219fcde6"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000016.jpg": {
+      "image_sha256": "d4522cd962dacdce1dc1e9b7d0dfedd6e07b9592ee18f66539dc919fae2adfb4",
+      "reviewed_label_sha256": "ba5b92a885a3188c7eb42ab86462ed00c190f7865c4b70ceface44fad95fdc7a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000017.jpg": {
+      "image_sha256": "21e1b9e7bd6d02939be18da908a556f67a59b261c8970123fd644e6307dea0ec",
+      "reviewed_label_sha256": "77a099797ff1879bcb990835902411947a66cb240d8dc596e48dd0331280e853"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000018.jpg": {
+      "image_sha256": "5d989ec617ca24622ab1132e8571ca54fe3305700fe1d915cdbeaea077957485",
+      "reviewed_label_sha256": "c55afe877befc9a59f4f5e2df2659207309f27e6434a84cd594a11808d66a22f"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000019.jpg": {
+      "image_sha256": "c6a199e915a14db43520b06b3b2419d1b750a880e3c27323a6bb013f9a09878c",
+      "reviewed_label_sha256": "5083d17067714d190a5197b6443d97155b8ed02b8f5331b735eacdf004436184"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000020.jpg": {
+      "image_sha256": "34e8a16c2f9caccff1047acab595daf50ac4d0fd621268edcb851f71872d44c8",
+      "reviewed_label_sha256": "a4065baa622b8d5320dc6ccbb6f5ad7fc5b799756afbab8eeba6875bea7d9bfd"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000021.jpg": {
+      "image_sha256": "c907dfc15a07742694ffa70a8dc86b91cd99e36ad7cf6ffccd6b38696c5817fa",
+      "reviewed_label_sha256": "f7ace7576c963c4c2eb6f60f5daa9ab54c2a282fefa8dce781b22a818441e4cb"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000022.jpg": {
+      "image_sha256": "641f3d82e62ff6037485779b3661e53c53aa35c576f0a7e22e4cd3fe70257a2d",
+      "reviewed_label_sha256": "3cbca8cd1afbe52a5ae64b2ac79efdd4f6b4374cde2bff5d3051138ffd43a6c6"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000023.jpg": {
+      "image_sha256": "e28d75853f54b69fee0df01b6f3b6807b50b4b457a13411a24452632959f11cd",
+      "reviewed_label_sha256": "9496c6c0981f4a79da2211b1fa4220f341c315e69110072a6c1428a4e21b474a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000024.jpg": {
+      "image_sha256": "83a3f3e84fa965b63bd555bc84f18bec59e3f2aca3e05529ecf88c110b297d3c",
+      "reviewed_label_sha256": "cd4ec87a9d19c268521d5706b119629a27a937c114076d8d60443864a88ec01c"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000025.jpg": {
+      "image_sha256": "adbfa8714575b1a24fe5643bbc2abb6d8c9b9070fb7eddce3cae558a6cc6a0e5",
+      "reviewed_label_sha256": "5966742529a242b45dd97be36b5627f193001b10e72f05170bdb70524c50eee1"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000026.jpg": {
+      "image_sha256": "7cf8004ef04f5bc599771b890f1ad41b088df3ab242ae0364bfe5fde8989744f",
+      "reviewed_label_sha256": "4e0684f5157c9e084d8ce538dd88531878e5ddd6c4e0f7f6bc7576143e7aaaff"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000027.jpg": {
+      "image_sha256": "5c7feaddf6aaf32c6ca7ca8937247854b0b7f0a592e47f8a7289ca19f1071751",
+      "reviewed_label_sha256": "334f5250eb177cc9581c9aefc6c1486152e1d2decc8d2feaeeba38b813446de5"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000028.jpg": {
+      "image_sha256": "91120d8cfdc3e889a5e28b3ae59ab4e37096a4f91f8dda945bb6781f82119d22",
+      "reviewed_label_sha256": "a8c809e8f32a28e2633941861fb4e5433b1bd7f5c2bc790c70db0a169e3099b2"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000029.jpg": {
+      "image_sha256": "704c7d08dbe76477111fbb6cd37ce2bf418b51accb5198dd0f41efdea4c3d1bf",
+      "reviewed_label_sha256": "4c386829cbec4ea927a5046bffa9a9334ebcd49c78ee1063c27b73c9982623c6"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000030.jpg": {
+      "image_sha256": "38750925fca0a73a66c570c90b0d73e6278c0fe37d1d9e20f230d160fe214399",
+      "reviewed_label_sha256": "037fd22bc12f94cc937fdc9440192224bd1cebcbce0f07285938282596dcbb33"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000031.jpg": {
+      "image_sha256": "88acaa0bbd4dab26480dbc4d02828f0f937d83412fb9219078d08ee3535b3257",
+      "reviewed_label_sha256": "1b59090eda783307f32eb134512902ee6211ffbc7290e4450a22fba8d95f884a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000032.jpg": {
+      "image_sha256": "fa06e9b390da9a4f3651253f7cc968de9ec7ef04bda8aa54ce53972f309234d2",
+      "reviewed_label_sha256": "77a099797ff1879bcb990835902411947a66cb240d8dc596e48dd0331280e853"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000033.jpg": {
+      "image_sha256": "e1b01174e55b3b2d0ec2b1703dbd6abc3151eaad817263d05d8206ef91a19742",
+      "reviewed_label_sha256": "417a14f6968352906994de3f74bc4f506aa499d65c7a2d387cb2195887429330"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000034.jpg": {
+      "image_sha256": "83863e0c574f445f8e4b83a7f9126ce4feb7d9f266b828e39c3646400d599765",
+      "reviewed_label_sha256": "db356595a3dd11392c405aca6ff2a9bb8d9f0b34069f5784650c876f6e499b97"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000035.jpg": {
+      "image_sha256": "8490f8b7b71319ffac98aa0e33c8a32852732f3bba7db059de691884c1c255c0",
+      "reviewed_label_sha256": "75f5c114af0d120c52ccd8669933a32d226010dd70a2662274c9b11274e7642d"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000036.jpg": {
+      "image_sha256": "72f0bb607e88635c925ed46ccfa4977c8e37c169701907ee3106749fb8673434",
+      "reviewed_label_sha256": "25fcfa8bee3f32cff78b80da6d26111123338aee92058073a15e4fd21fce4e6d"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000037.jpg": {
+      "image_sha256": "fddee06e698e794d9f7f4f735f3191b2e970875bced564575d773fa2575baaa2",
+      "reviewed_label_sha256": "5d7ce9090e455ca504107dd83b2d1356f7f45afb7152a4b76a7852b5195697cd"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000038.jpg": {
+      "image_sha256": "21358cd668a7b166147b823901e3cbb566d45c64cd4e6d08ca75501a9bd66eb7",
+      "reviewed_label_sha256": "f41e972d1fe8ba84ad23a546e19db3e11032c491482bb8b4ce898ace3ab0f07a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000039.jpg": {
+      "image_sha256": "7e15d613567f5b696af9e57aec36dabfde623f1ed62ab2d7d30679aefc094ad9",
+      "reviewed_label_sha256": "64111e9f1271fd8de0a9b08920caacd584a46a9a30e0cced2d6a3eb4be7dd443"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000040.jpg": {
+      "image_sha256": "e3a7026aab2f62586fbb4a16f2c8deeafd4607c80bcc48440e109c024fcfaf8d",
+      "reviewed_label_sha256": "3212938430df82685052ddff7d5405e458d03b09616e5e0d314498617f3bd9b7"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000041.jpg": {
+      "image_sha256": "2191a38f66a7c79eed4107b562b87def61d4d9f055355cf03c6c7cd64ac19b85",
+      "reviewed_label_sha256": "86e57dcfba1152e333f0ec83d9c53411d2fd1e0702555f1fa68a337ee8316d6f"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000042.jpg": {
+      "image_sha256": "d51482c7f7be8006f639f1820dc083acc2e65e9d2edcabc6a91620c8f96a495b",
+      "reviewed_label_sha256": "5fa5ee947a6d1b3c0d261687d1b9d7540fc32f60230561e6c4c051343362d3bf"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000043.jpg": {
+      "image_sha256": "adb192f3a8a4402a89436383d8f9cd5c1913d009603433d0326c195483b25e29",
+      "reviewed_label_sha256": "0270bada5c1b7764597ad9f706e3fff38ddabcca7ca8a8190d5393ec30815a02"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000044.jpg": {
+      "image_sha256": "8b23a0b5296b341707fcf3aadb213ed72544a02a4d433a4f8664e7b92fd888dd",
+      "reviewed_label_sha256": "a75c16008f4b3a4ded1a03df81627b3c6f8fa52d525d03c5fc6eb4aed2ed5a79"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000045.jpg": {
+      "image_sha256": "955b07d019f22621e3a2b3d4664dff200a256a4fdafd9893f9ea7c8f992464ee",
+      "reviewed_label_sha256": "c2ba52afa0769dc1773c1b05146a60293040f4cd3d5fc8c3f34949990c128ca2"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000046.jpg": {
+      "image_sha256": "72fdd59ca58acfe188f1e983d1a447c50910a0248badc102f7b35cbdccc0d0c0",
+      "reviewed_label_sha256": "3d8cae858b2f79e157b90b099b6bf1641fdb07fab426ab34d8e9f22553643de6"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000047.jpg": {
+      "image_sha256": "4fdb593bc04c8a78ec48cafe2aec0466a7cfe47710ca29e30a32e8a2f3c1497e",
+      "reviewed_label_sha256": "238b7ad90822edab3fb1698a9c42ddbb836239ad0f9462d804048d226deabcbd"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000048.jpg": {
+      "image_sha256": "cebcf5f76a0f7987edeea4fc63dc0760c507e573c5026805a8a7f8f3684274fc",
+      "reviewed_label_sha256": "593ba6dc04dfeb768ed475cc7361d1f61925b6814a56f14437b5fcb97423a63a"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000049.jpg": {
+      "image_sha256": "3a80ec4a5d1c63d5606652d5d6a2271edcc31e74ff2186a48cad29d816665a28",
+      "reviewed_label_sha256": "335e29373e79b20a5c7d2c49f49055487d67a72787485fb407e3be7940e9d6d0"
+    },
+    "20261112_t43_walk_objek_ulang_02/frame_000050.jpg": {
+      "image_sha256": "5dc587d0a0438f084ae719bfa67c04566cbbc28843c432b1d18f311e9261a6a0",
+      "reviewed_label_sha256": "c3069e7d26a40d3729cd19f3fad3bfd2954e09cbc84b28bc7de29d7924fa8c5b"
+    },
+    "20261112_t43_idle_negatif_01/frame_000001.jpg": {
+      "image_sha256": "545be701008520fe9557d2ee0c311a300b92f2fc03aa28fc28acd7e5ed66d5d6",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000002.jpg": {
+      "image_sha256": "acb6b4275ecf57656967ff76ce84717231b62a49837318ff8c00b5a5d0a75761",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000003.jpg": {
+      "image_sha256": "82a1e6991a51aa877db4a2db8962d697e46abcea1ef45a9eaa60b56d91536244",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000004.jpg": {
+      "image_sha256": "07a9c4632fdf73cc2b0640548075489f6d68a9c7ba9fc40a6d1831aad669fac2",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000005.jpg": {
+      "image_sha256": "fa27242ffc78c4c3277aab2fb837fe7eba6435180d9d3fd897d65a90cd1f4527",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000006.jpg": {
+      "image_sha256": "9e863e3d25447a7b0294818083279934edc56e0dc96a7920211516e5e004c739",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000007.jpg": {
+      "image_sha256": "37e31f38c7b49606a9d872dbf229bd5b87e10b375387277227736bc1da452e64",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000008.jpg": {
+      "image_sha256": "6b444aca21bde2ccff628d396095350a7de898a5eb79f3036b7d9fcd68334249",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000009.jpg": {
+      "image_sha256": "ae3bff72b9fe93edccef7afee1fb02b357f69e8214bcc61bd6d2ab82ab9c5e32",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000010.jpg": {
+      "image_sha256": "4aecb252ed8a87fe21696c1465975bdf9bdbcc665c93d5c23e3e07139ea426af",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000011.jpg": {
+      "image_sha256": "8e4fd1325e439c7892dbd73e16c6826ed026c8cf6a1cb128701dffb2a19db16f",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000012.jpg": {
+      "image_sha256": "4ba59e2ad97a1a82b7243649773f08ca11ac19bf51335155f02e975f26657b5d",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000013.jpg": {
+      "image_sha256": "c77959a61fbd8b55606700f8e004a7fc785023b4bded1f79169468bcc63e5246",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000014.jpg": {
+      "image_sha256": "7aa15bfae186a0435ff300270854a9c8767eeb5327470d7934b4f9a697a42573",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000015.jpg": {
+      "image_sha256": "4a82ff8d956a3b8d0f02063eff091ad44dd5223de91b6bc8e1c4e3a65c67324b",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000016.jpg": {
+      "image_sha256": "83c749a23f5724ce61d4527deba35094ae668335b11977d7d57af51384f902b6",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000017.jpg": {
+      "image_sha256": "521044584f32a8340f64dfc60f803ca2c69afe9e9a0b60e08053ca4a421f38c1",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000018.jpg": {
+      "image_sha256": "cca9ad42722383cdff1d75d54619f28c3e3277e60450f434e12a48011182b6fe",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000019.jpg": {
+      "image_sha256": "d06e546510f492370875ec0f21ab734c4d1ebb30973dbd7d9027a794bf357099",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000020.jpg": {
+      "image_sha256": "e1cbc8f6dc61be039fbd2370a452b8fc65665c6b748c5e70557ad26837edc7b4",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000021.jpg": {
+      "image_sha256": "08583430a4371b3b112cfd320ba9435d3dfa2e188a74707cf43f16b2f1e72d98",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000022.jpg": {
+      "image_sha256": "088a9f10da68c1ebb09ecdf98550a9fcc5e0e4f36f61d07cfc2b97179cbdbde7",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000023.jpg": {
+      "image_sha256": "15d246c6f10514288d93d599ee3571bb772d112602589ef99dd95c018065d21f",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000024.jpg": {
+      "image_sha256": "3ac28625ebec1f003ebd4798b90e6baf63f52e474bf69eae3ce4e54963566ba0",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000025.jpg": {
+      "image_sha256": "9cc144513b7c6458fa5d40ce469b236a8474b4d99738f0573a32dcf15a22e99f",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000026.jpg": {
+      "image_sha256": "7942f7dc31860e89723b05e2fb28be2e9acc0e77bf8f7fe86d96477d7a938bdf",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000027.jpg": {
+      "image_sha256": "d9c87de4dfc16fabf291a368e09fed6441ce4de378ae3aab9138d7ba60fc70dd",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000028.jpg": {
+      "image_sha256": "32600004a32db178a186b41b650fd25d4608447516dcafd3dca931a71fb8be12",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000029.jpg": {
+      "image_sha256": "76b70c78573dccb375752232ae0267319ab25e78b648dfcba6dbb6d3312892b6",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_idle_negatif_01/frame_000030.jpg": {
+      "image_sha256": "5c7444ea93e78d77ad99ad4309b09b859d5739eadd1721e1d2d5df4dec36a4ce",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000001.jpg": {
+      "image_sha256": "5de9263058b55bc36b15095a736ac8ab6cd15b56e9958e138496902a90636516",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000002.jpg": {
+      "image_sha256": "55210ed1d6a6ff5bb99af32f0cedf4d2d83d83ec7394f471c6f512f77a508ae1",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000003.jpg": {
+      "image_sha256": "7ae2d99147b5cd188d1b4a0e58b3ceef94a22edaf67d43c5500ee3cc27e46b4f",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000004.jpg": {
+      "image_sha256": "c3537b5cf1c12fed1e8c6e3684d4dba74f8babeeb9f573339b5325a62fec9d50",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000005.jpg": {
+      "image_sha256": "0646bc29a05fc6adf2701f3dd90909d3867322037691d83ac3701ec9f6de3a42",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000006.jpg": {
+      "image_sha256": "d27a2fb79c0955bfead7a13d7733e672a1aee0c55873177b10357e91188b3a53",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000007.jpg": {
+      "image_sha256": "b9b1490e14f9ca5d330ea634455f36fb007633655e5430e8c66215170fe33841",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000008.jpg": {
+      "image_sha256": "d177b622a82778f6bf82f58238e2eb6e0e0d6294dafc1dfb7befa12ae3909c8d",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000009.jpg": {
+      "image_sha256": "698fc61bec872746adad7b7f21c076a85006dc24e82a99e6a9d13fc321c5e3b9",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000010.jpg": {
+      "image_sha256": "dffe4a3ac38b80f818a024124f0203c89b2728128d6fe0b76d2b580b4022d028",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000011.jpg": {
+      "image_sha256": "8b5bf111f080b61e9f223243ac333ade063808f5d8018b03d6a5846bd9eed5ff",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000012.jpg": {
+      "image_sha256": "a54fef9216098fb991395cf64094d4ab84cfbd933193dac9ae54e89a9a5b3bc8",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000013.jpg": {
+      "image_sha256": "dbdebf6c5328afbe5ebe8a5bc03a80d1e69e8c7b43bacc69c678327bdd9de38d",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000014.jpg": {
+      "image_sha256": "9e2ee04c4b051cadb5f7d80d062f7f3699fdaea8d9602b6512e70d9cd58938d8",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000015.jpg": {
+      "image_sha256": "e8d5f420b260fe23a1d95a1b7a4350a8d06a085e5325f729af283597853f9b6c",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000016.jpg": {
+      "image_sha256": "bc9a47d89c6598a2fd02e0e4ff4b8a005af2745bcf7934743e23cd4a1cea2767",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000017.jpg": {
+      "image_sha256": "eb1487c8d2df1bd1ba334b3ef084b7a15f9dc199e3b966594dcc277783704d71",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000018.jpg": {
+      "image_sha256": "03c3f3e9641799fb000163650f3d1c72d3fb1fae51005d935c2b6e1ec7cdf9bb",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000019.jpg": {
+      "image_sha256": "5035b8aa80ae0a2821ede350184210b7fff4121569fb1d86c227d44bc5fbf5d1",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000020.jpg": {
+      "image_sha256": "8d03bcd5c85c662a67ef4afbedf9680b493ac0335eaa2e38056051d569d797de",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000021.jpg": {
+      "image_sha256": "f6f75d2aef831c6474e85da166bb73fda1f911a03ba24fa97d61cbdc58eb7ebf",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000022.jpg": {
+      "image_sha256": "f14dafbc53d151cb175a9f0e628b18a2235c522e825ef6e4a75198e517636181",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000023.jpg": {
+      "image_sha256": "02eec733706d91e9e169f99a2c2afcd262d14a327a08cb4f88bb222ecd2f1b7e",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000024.jpg": {
+      "image_sha256": "cdccc84028d6d605d5547ad74f1927ddc75146941d1f656c8fc6be06440ecf8b",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000025.jpg": {
+      "image_sha256": "7c14414ac9322b307565d7ee99066490f495da4f208b205f8e692404dd6202b7",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000026.jpg": {
+      "image_sha256": "93638ec803358eb97738dcc24de465b6e5a5a8fcab7473baa4527a94a03b560a",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000027.jpg": {
+      "image_sha256": "7eb8efc6be2206fb9adace25c196caadb1ff1f55ce567216039a7a8312f4e538",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000028.jpg": {
+      "image_sha256": "059d37271772de58be146e9011f92e300f429f8e52ec5f566831c4252695ad02",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000029.jpg": {
+      "image_sha256": "8c8a362c35e3a8edc568fffd2abb7b50810b0a5749ae190b39b7ee1aba1771ce",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "20261112_t43_walk_negatif_01/frame_000030.jpg": {
+      "image_sha256": "400b20976dbb90fcff983b7c66f5af4bdb7887cdab380363fbfa0a8cb51a6ee1",
+      "reviewed_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

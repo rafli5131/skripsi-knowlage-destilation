@@ -1,0 +1,14 @@
+{
+  "session_id": "20261112_t43_idle_negatif_01",
+  "condition": "servo_idle",
+  "image_topic": "/thesis/image_raw",
+  "started_at_utc": "2026-11-12T05:28:36.082090+00:00",
+  "ended_at_utc": "2026-11-12T05:29:07.544408+00:00",
+  "frame_count": 30,
+  "interval_sec": 1.0,
+  "max_frames": 30,
+  "duration_sec": 55.0,
+  "status": "max_frames_reached",
+  "images_dir": "images",
+  "frames_journal": "capture_frames.jsonl"
+}

@@ -1,0 +1,3040 @@
+{
+  "dibuat_utc": "2026-11-23T02:20:32+00:00",
+  "hostname": "humanoid-NUC12WSHi5",
+  "python": "3.12.3",
+  "repo": "/home/humanoid/bre_skripsi",
+  "skrip": "/tmp/op3_log_pelengkap_20261123T021748Z/salin_metadata.py",
+  "skrip_sha256": "c03fd6d339c8b7ac62d879caf31f7eeb92dccb87cf0b23f05c33e922764b6212",
+  "t38": {
+    "input_manifest": {
+      "path": "/home/humanoid/bre_skripsi/runs/op3_multi_session_eval/20261105_empat_model_primary260_v1/input_manifest.json",
+      "sha256": "1ae146962a2bee7cde147e37e8c2b38f0866a2371b7ea3bb9069cdff3442bb88",
+      "created_at_utc": "2026-11-05T10:19:11.244468+00:00",
+      "status": "exploratory_op3_multi_session_evaluation"
+    },
+    "sesi": {
+      "20261021_robot_ball_01": {
+        "session_id": "20261021_robot_ball_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/capture_frames.jsonl",
+            "sha256": "d01076354727d2b2d1f8b52be414a7363f31b1407f59c19812339140859a58b2",
+            "bytes": 7879,
+            "salinan_sha256": "d01076354727d2b2d1f8b52be414a7363f31b1407f59c19812339140859a58b2"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_01/capture_manifest.json",
+            "sha256": "8c239351ff7b8af2613e30bc7c800217d19a92d7adaf0277c79a34fca880882d",
+            "bytes": 412,
+            "salinan_sha256": "8c239351ff7b8af2613e30bc7c800217d19a92d7adaf0277c79a34fca880882d"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "43af53a3d1c4bf1a83ce328f99209400b6226e423e70642c0aac8a09ab7fdbeb",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "4b4ef2667ab5b656525427cb10374bd184931212eb5c4031bdf476f1c391c5d6",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "387d246195661f6bd30ec0dfcd16ccaabf04bbda2ff4355a0f4c6eb890ff577b",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 80,
+        "jumlah_gambar_tidak_disalin": 42,
+        "capture_manifest": {
+          "session_id": "20261021_robot_ball_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T07:24:49.465772+00:00",
+          "ended_at_utc": "2026-10-21T07:25:41.483731+00:00",
+          "frame_count": 40,
+          "interval_sec": 1.0,
+          "max_frames": 40,
+          "duration_sec": 160.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "8c239351ff7b8af2613e30bc7c800217d19a92d7adaf0277c79a34fca880882d",
+        "capture_frames_sha256": "d01076354727d2b2d1f8b52be414a7363f31b1407f59c19812339140859a58b2",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T07:24:49.647571+00:00",
+          "frame_000002.jpg": "2026-10-21T07:24:50.732981+00:00",
+          "frame_000003.jpg": "2026-10-21T07:24:52.336094+00:00",
+          "frame_000004.jpg": "2026-10-21T07:24:53.335450+00:00",
+          "frame_000005.jpg": "2026-10-21T07:24:54.340666+00:00",
+          "frame_000006.jpg": "2026-10-21T07:24:55.376273+00:00",
+          "frame_000007.jpg": "2026-10-21T07:24:56.512751+00:00",
+          "frame_000008.jpg": "2026-10-21T07:24:57.649036+00:00",
+          "frame_000009.jpg": "2026-10-21T07:24:58.684227+00:00",
+          "frame_000010.jpg": "2026-10-21T07:24:59.684568+00:00",
+          "frame_000011.jpg": "2026-10-21T07:25:00.724485+00:00",
+          "frame_000012.jpg": "2026-10-21T07:25:01.725822+00:00",
+          "frame_000013.jpg": "2026-10-21T07:25:02.761432+00:00",
+          "frame_000014.jpg": "2026-10-21T07:25:06.640688+00:00",
+          "frame_000015.jpg": "2026-10-21T07:25:08.073120+00:00",
+          "frame_000016.jpg": "2026-10-21T07:25:09.351007+00:00",
+          "frame_000017.jpg": "2026-10-21T07:25:10.411238+00:00",
+          "frame_000018.jpg": "2026-10-21T07:25:12.849225+00:00",
+          "frame_000019.jpg": "2026-10-21T07:25:17.500779+00:00",
+          "frame_000020.jpg": "2026-10-21T07:25:18.500898+00:00",
+          "frame_000021.jpg": "2026-10-21T07:25:19.806667+00:00",
+          "frame_000022.jpg": "2026-10-21T07:25:20.804656+00:00",
+          "frame_000023.jpg": "2026-10-21T07:25:21.837762+00:00",
+          "frame_000024.jpg": "2026-10-21T07:25:22.874282+00:00",
+          "frame_000025.jpg": "2026-10-21T07:25:23.944610+00:00",
+          "frame_000026.jpg": "2026-10-21T07:25:25.152252+00:00",
+          "frame_000027.jpg": "2026-10-21T07:25:26.181413+00:00",
+          "frame_000028.jpg": "2026-10-21T07:25:27.181489+00:00",
+          "frame_000029.jpg": "2026-10-21T07:25:28.185790+00:00",
+          "frame_000030.jpg": "2026-10-21T07:25:29.221918+00:00",
+          "frame_000031.jpg": "2026-10-21T07:25:30.357380+00:00",
+          "frame_000032.jpg": "2026-10-21T07:25:31.395576+00:00",
+          "frame_000033.jpg": "2026-10-21T07:25:32.432046+00:00",
+          "frame_000034.jpg": "2026-10-21T07:25:33.462157+00:00",
+          "frame_000035.jpg": "2026-10-21T07:25:34.465334+00:00",
+          "frame_000036.jpg": "2026-10-21T07:25:36.615594+00:00",
+          "frame_000037.jpg": "2026-10-21T07:25:37.642361+00:00",
+          "frame_000038.jpg": "2026-10-21T07:25:38.742200+00:00",
+          "frame_000039.jpg": "2026-10-21T07:25:40.422533+00:00",
+          "frame_000040.jpg": "2026-10-21T07:25:41.482458+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 40,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg"
+        ]
+      },
+      "20261021_robot_gawang_01": {
+        "session_id": "20261021_robot_gawang_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/capture_frames.jsonl",
+            "sha256": "5c7f16ddb13d10beb28f9e9f56ecd5e810a35b204df98010776ffc697f5f719f",
+            "bytes": 7879,
+            "salinan_sha256": "5c7f16ddb13d10beb28f9e9f56ecd5e810a35b204df98010776ffc697f5f719f"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_gawang_01/capture_manifest.json",
+            "sha256": "74569a408fc17728e433e527b435b9446616290b3f8fe23f2e9fc1f4bd034fbd",
+            "bytes": 414,
+            "salinan_sha256": "74569a408fc17728e433e527b435b9446616290b3f8fe23f2e9fc1f4bd034fbd"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "705e4d887fe9e7a926533f230df71ba11cfe72a725379828526905bf57d569c0",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "556c7635b7c4293519f5d351d82077ebd3b41b75e650d62d85526992c30f2f52",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "b6b3f02fd548567c754e1bfa8434d91b36a6119357379b2788181aa587bc935b",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 80,
+        "jumlah_gambar_tidak_disalin": 42,
+        "capture_manifest": {
+          "session_id": "20261021_robot_gawang_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T07:33:59.630928+00:00",
+          "ended_at_utc": "2026-10-21T07:34:53.692381+00:00",
+          "frame_count": 40,
+          "interval_sec": 1.0,
+          "max_frames": 40,
+          "duration_sec": 160.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "74569a408fc17728e433e527b435b9446616290b3f8fe23f2e9fc1f4bd034fbd",
+        "capture_frames_sha256": "5c7f16ddb13d10beb28f9e9f56ecd5e810a35b204df98010776ffc697f5f719f",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T07:33:59.821843+00:00",
+          "frame_000002.jpg": "2026-10-21T07:34:00.822534+00:00",
+          "frame_000003.jpg": "2026-10-21T07:34:02.365890+00:00",
+          "frame_000004.jpg": "2026-10-21T07:34:04.663017+00:00",
+          "frame_000005.jpg": "2026-10-21T07:34:05.774555+00:00",
+          "frame_000006.jpg": "2026-10-21T07:34:06.810087+00:00",
+          "frame_000007.jpg": "2026-10-21T07:34:07.841795+00:00",
+          "frame_000008.jpg": "2026-10-21T07:34:08.838650+00:00",
+          "frame_000009.jpg": "2026-10-21T07:34:09.873436+00:00",
+          "frame_000010.jpg": "2026-10-21T07:34:11.554994+00:00",
+          "frame_000011.jpg": "2026-10-21T07:34:13.290843+00:00",
+          "frame_000012.jpg": "2026-10-21T07:34:14.351311+00:00",
+          "frame_000013.jpg": "2026-10-21T07:34:15.355939+00:00",
+          "frame_000014.jpg": "2026-10-21T07:34:16.390595+00:00",
+          "frame_000015.jpg": "2026-10-21T07:34:17.597760+00:00",
+          "frame_000016.jpg": "2026-10-21T07:34:18.630422+00:00",
+          "frame_000017.jpg": "2026-10-21T07:34:19.631353+00:00",
+          "frame_000018.jpg": "2026-10-21T07:34:21.879310+00:00",
+          "frame_000019.jpg": "2026-10-21T07:34:23.770429+00:00",
+          "frame_000020.jpg": "2026-10-21T07:34:24.842884+00:00",
+          "frame_000021.jpg": "2026-10-21T07:34:25.879671+00:00",
+          "frame_000022.jpg": "2026-10-21T07:34:26.921851+00:00",
+          "frame_000023.jpg": "2026-10-21T07:34:27.947877+00:00",
+          "frame_000024.jpg": "2026-10-21T07:34:30.855444+00:00",
+          "frame_000025.jpg": "2026-10-21T07:34:31.959701+00:00",
+          "frame_000026.jpg": "2026-10-21T07:34:32.962881+00:00",
+          "frame_000027.jpg": "2026-10-21T07:34:33.966766+00:00",
+          "frame_000028.jpg": "2026-10-21T07:34:34.970469+00:00",
+          "frame_000029.jpg": "2026-10-21T07:34:36.004666+00:00",
+          "frame_000030.jpg": "2026-10-21T07:34:37.271249+00:00",
+          "frame_000031.jpg": "2026-10-21T07:34:38.276896+00:00",
+          "frame_000032.jpg": "2026-10-21T07:34:39.286103+00:00",
+          "frame_000033.jpg": "2026-10-21T07:34:40.311587+00:00",
+          "frame_000034.jpg": "2026-10-21T07:34:43.028032+00:00",
+          "frame_000035.jpg": "2026-10-21T07:34:44.052273+00:00",
+          "frame_000036.jpg": "2026-10-21T07:34:47.934116+00:00",
+          "frame_000037.jpg": "2026-10-21T07:34:49.723418+00:00",
+          "frame_000038.jpg": "2026-10-21T07:34:51.431931+00:00",
+          "frame_000039.jpg": "2026-10-21T07:34:52.559345+00:00",
+          "frame_000040.jpg": "2026-10-21T07:34:53.691491+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 40,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg"
+        ]
+      },
+      "20261021_robot_ball_moving_01": {
+        "session_id": "20261021_robot_ball_moving_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/capture_frames.jsonl",
+            "sha256": "ae5ed759900d57f347dc4a8db5a592b3825f48645ffa15414076ffaad221359d",
+            "bytes": 7876,
+            "salinan_sha256": "ae5ed759900d57f347dc4a8db5a592b3825f48645ffa15414076ffaad221359d"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_robot_ball_moving_01/capture_manifest.json",
+            "sha256": "77904fc9e2a9fe7b25ecdb4833389a6c46c601c09ebeb264e29958ff34586584",
+            "bytes": 419,
+            "salinan_sha256": "77904fc9e2a9fe7b25ecdb4833389a6c46c601c09ebeb264e29958ff34586584"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "47abb9e9b4ee92a655ab0d6c15e437750f0eb0430f5d706c0d6785d05e31e286",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "87092a873d54490bd9daadb502a905accb7a3f03a9040a749c8838aef53e42f7",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "7e619d710d0d76cf91b4fff87d6f1d37a955b136bcd3730c0f11a5d38a60670a",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 80,
+        "jumlah_gambar_tidak_disalin": 42,
+        "capture_manifest": {
+          "session_id": "20261021_robot_ball_moving_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:31:04.560190+00:00",
+          "ended_at_utc": "2026-10-21T10:31:45.424114+00:00",
+          "frame_count": 40,
+          "interval_sec": 1.0,
+          "max_frames": 40,
+          "duration_sec": 160.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "77904fc9e2a9fe7b25ecdb4833389a6c46c601c09ebeb264e29958ff34586584",
+        "capture_frames_sha256": "ae5ed759900d57f347dc4a8db5a592b3825f48645ffa15414076ffaad221359d",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:31:04.769397+00:00",
+          "frame_000002.jpg": "2026-10-21T10:31:05.817811+00:00",
+          "frame_000003.jpg": "2026-10-21T10:31:06.818132+00:00",
+          "frame_000004.jpg": "2026-10-21T10:31:07.870246+00:00",
+          "frame_000005.jpg": "2026-10-21T10:31:08.922039+00:00",
+          "frame_000006.jpg": "2026-10-21T10:31:09.974692+00:00",
+          "frame_000007.jpg": "2026-10-21T10:31:11.026629+00:00",
+          "frame_000008.jpg": "2026-10-21T10:31:12.126256+00:00",
+          "frame_000009.jpg": "2026-10-21T10:31:13.226115+00:00",
+          "frame_000010.jpg": "2026-10-21T10:31:14.230457+00:00",
+          "frame_000011.jpg": "2026-10-21T10:31:15.281426+00:00",
+          "frame_000012.jpg": "2026-10-21T10:31:16.281435+00:00",
+          "frame_000013.jpg": "2026-10-21T10:31:17.381747+00:00",
+          "frame_000014.jpg": "2026-10-21T10:31:18.389502+00:00",
+          "frame_000015.jpg": "2026-10-21T10:31:19.438069+00:00",
+          "frame_000016.jpg": "2026-10-21T10:31:20.438153+00:00",
+          "frame_000017.jpg": "2026-10-21T10:31:21.443554+00:00",
+          "frame_000018.jpg": "2026-10-21T10:31:22.490378+00:00",
+          "frame_000019.jpg": "2026-10-21T10:31:23.493500+00:00",
+          "frame_000020.jpg": "2026-10-21T10:31:24.552028+00:00",
+          "frame_000021.jpg": "2026-10-21T10:31:25.548249+00:00",
+          "frame_000022.jpg": "2026-10-21T10:31:26.598361+00:00",
+          "frame_000023.jpg": "2026-10-21T10:31:27.697098+00:00",
+          "frame_000024.jpg": "2026-10-21T10:31:28.803922+00:00",
+          "frame_000025.jpg": "2026-10-21T10:31:29.850103+00:00",
+          "frame_000026.jpg": "2026-10-21T10:31:30.902344+00:00",
+          "frame_000027.jpg": "2026-10-21T10:31:31.908837+00:00",
+          "frame_000028.jpg": "2026-10-21T10:31:32.906188+00:00",
+          "frame_000029.jpg": "2026-10-21T10:31:33.958910+00:00",
+          "frame_000030.jpg": "2026-10-21T10:31:35.009799+00:00",
+          "frame_000031.jpg": "2026-10-21T10:31:36.057700+00:00",
+          "frame_000032.jpg": "2026-10-21T10:31:37.064929+00:00",
+          "frame_000033.jpg": "2026-10-21T10:31:38.114593+00:00",
+          "frame_000034.jpg": "2026-10-21T10:31:39.166294+00:00",
+          "frame_000035.jpg": "2026-10-21T10:31:40.218745+00:00",
+          "frame_000036.jpg": "2026-10-21T10:31:41.264975+00:00",
+          "frame_000037.jpg": "2026-10-21T10:31:42.270386+00:00",
+          "frame_000038.jpg": "2026-10-21T10:31:43.271753+00:00",
+          "frame_000039.jpg": "2026-10-21T10:31:44.325669+00:00",
+          "frame_000040.jpg": "2026-10-21T10:31:45.422795+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 40,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg"
+        ]
+      },
+      "20261021_ball_moving_candidate_01": {
+        "session_id": "20261021_ball_moving_candidate_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/capture_manifest.json",
+            "sha256": "17148058edf55d104dd90fe7f94f84eafee2de853b6c8688d111e95e4eef6aad",
+            "bytes": 555,
+            "salinan_sha256": "17148058edf55d104dd90fe7f94f84eafee2de853b6c8688d111e95e4eef6aad"
+          },
+          {
+            "berkas": "curation_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_candidate_01/curation_manifest.json",
+            "sha256": "0cc71725d5685537be3951bbee33466c72d4f1a09e9b8839f502ad2658e8237b",
+            "bytes": 10281,
+            "salinan_sha256": "0cc71725d5685537be3951bbee33466c72d4f1a09e9b8839f502ad2658e8237b"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "6bdb4479c9c5dfc795779c2554dc1eb1bb127887fd351c0308c9e42951e9e751",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "15781c27661a4de47b0998ee9f737f3d7f28e832b93f84fe40853caa56fd54c4",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "8a2ac3d4a07b10fcdb0031c8d8baa29715bec0e558f00cb62bbce4d9fd8bf0d5",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 80,
+        "jumlah_gambar_tidak_disalin": 42,
+        "capture_manifest": {
+          "session_id": "20261021_ball_moving_candidate_01",
+          "status": "curated_candidate_not_continuous_capture",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "frame_count": 40,
+          "images_dir": "images",
+          "curation_manifest": "curation_manifest.json",
+          "source_sessions": [
+            "20261021_ball_moving_01",
+            "20261021_ball_moving_replacement_01"
+          ],
+          "sequence_continuity": false,
+          "note": "Compatibility metadata for the unchanged prelabel script; this folder is a 32+8 curated still-image set, not an original camera capture."
+        },
+        "capture_manifest_sha256": "17148058edf55d104dd90fe7f94f84eafee2de853b6c8688d111e95e4eef6aad",
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 40,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg"
+        ]
+      },
+      "20261021_all_three_position_01": {
+        "session_id": "20261021_all_three_position_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/capture_frames.jsonl",
+            "sha256": "951711811f5ad1a6a6fb5a71225dc163bb1d11b2360177fb2957da44d4b1e5fe",
+            "bytes": 1970,
+            "salinan_sha256": "951711811f5ad1a6a6fb5a71225dc163bb1d11b2360177fb2957da44d4b1e5fe"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_01/capture_manifest.json",
+            "sha256": "0a7636ba6d431fd07e729ef6ad435da762b7ead8b131349c0381ef1ba8b32987",
+            "bytes": 419,
+            "salinan_sha256": "0a7636ba6d431fd07e729ef6ad435da762b7ead8b131349c0381ef1ba8b32987"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "983338db4b55e819182034d8a8dd28fddba1da588c8c71e08f3e5a5b5203797f",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "8adf7baffd12857c3302638e0a5c02a7c00cd2dc67cfab376a07923e2d6421a3",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "40bcc89dc8675e5d57d231a9e11978cae9ca0c69fc1796129a6b6ab6a66e321c",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 20,
+        "jumlah_gambar_tidak_disalin": 11,
+        "capture_manifest": {
+          "session_id": "20261021_all_three_position_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:45:26.701031+00:00",
+          "ended_at_utc": "2026-10-21T10:45:36.986629+00:00",
+          "frame_count": 10,
+          "interval_sec": 1.0,
+          "max_frames": 10,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "0a7636ba6d431fd07e729ef6ad435da762b7ead8b131349c0381ef1ba8b32987",
+        "capture_frames_sha256": "951711811f5ad1a6a6fb5a71225dc163bb1d11b2360177fb2957da44d4b1e5fe",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:45:26.933439+00:00",
+          "frame_000002.jpg": "2026-10-21T10:45:27.962230+00:00",
+          "frame_000003.jpg": "2026-10-21T10:45:29.831231+00:00",
+          "frame_000004.jpg": "2026-10-21T10:45:30.862518+00:00",
+          "frame_000005.jpg": "2026-10-21T10:45:31.865126+00:00",
+          "frame_000006.jpg": "2026-10-21T10:45:32.933834+00:00",
+          "frame_000007.jpg": "2026-10-21T10:45:33.937787+00:00",
+          "frame_000008.jpg": "2026-10-21T10:45:34.939960+00:00",
+          "frame_000009.jpg": "2026-10-21T10:45:35.973688+00:00",
+          "frame_000010.jpg": "2026-10-21T10:45:36.985705+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 10,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg"
+        ]
+      },
+      "20261021_all_three_position_02": {
+        "session_id": "20261021_all_three_position_02",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/capture_frames.jsonl",
+            "sha256": "c5b1a56d2f3b77461f86f84eee180f85230113dfba287032b5475988c920a2b9",
+            "bytes": 1969,
+            "salinan_sha256": "c5b1a56d2f3b77461f86f84eee180f85230113dfba287032b5475988c920a2b9"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_02/capture_manifest.json",
+            "sha256": "9256ee7d82aa4ecefd83f16b96c9a6f4e8b63c8f401e9d5eca2f2322b719cfcf",
+            "bytes": 419,
+            "salinan_sha256": "9256ee7d82aa4ecefd83f16b96c9a6f4e8b63c8f401e9d5eca2f2322b719cfcf"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "1b9a293bb562cd3aca98a208bb8861b7ad413d531da9a51084bac21ddb0206bc",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "765e83a409cb701b998f4b470d7cb1436d57ad5209a53166ef69b2f25160a9d1",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "58d100cd54a9656f861af814826822015033d59ceec27b28f910a27d22ec7447",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 20,
+        "jumlah_gambar_tidak_disalin": 11,
+        "capture_manifest": {
+          "session_id": "20261021_all_three_position_02",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:46:45.560511+00:00",
+          "ended_at_utc": "2026-10-21T10:46:56.246259+00:00",
+          "frame_count": 10,
+          "interval_sec": 1.0,
+          "max_frames": 10,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "9256ee7d82aa4ecefd83f16b96c9a6f4e8b63c8f401e9d5eca2f2322b719cfcf",
+        "capture_frames_sha256": "c5b1a56d2f3b77461f86f84eee180f85230113dfba287032b5475988c920a2b9",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:46:46.691555+00:00",
+          "frame_000002.jpg": "2026-10-21T10:46:47.898386+00:00",
+          "frame_000003.jpg": "2026-10-21T10:46:48.959977+00:00",
+          "frame_000004.jpg": "2026-10-21T10:46:49.999990+00:00",
+          "frame_000005.jpg": "2026-10-21T10:46:51.100571+00:00",
+          "frame_000006.jpg": "2026-10-21T10:46:52.168244+00:00",
+          "frame_000007.jpg": "2026-10-21T10:46:53.235080+00:00",
+          "frame_000008.jpg": "2026-10-21T10:46:54.239102+00:00",
+          "frame_000009.jpg": "2026-10-21T10:46:55.241074+00:00",
+          "frame_000010.jpg": "2026-10-21T10:46:56.245324+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 10,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg"
+        ]
+      },
+      "20261021_all_three_position_03": {
+        "session_id": "20261021_all_three_position_03",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/capture_frames.jsonl",
+            "sha256": "d761c5a4929d315bdddd5c4c770fee26a8646c60bd9e22b59917341066cf0481",
+            "bytes": 1969,
+            "salinan_sha256": "d761c5a4929d315bdddd5c4c770fee26a8646c60bd9e22b59917341066cf0481"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_03/capture_manifest.json",
+            "sha256": "547ad79891bc59b533393d2d20451c27ae1f1bb467d00ca043406ab1d215f87d",
+            "bytes": 419,
+            "salinan_sha256": "547ad79891bc59b533393d2d20451c27ae1f1bb467d00ca043406ab1d215f87d"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "44b3ce23fd9f27c43b84d31133bc097dc5096982eb660e3776f6321bd8891500",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "6a1aecbcad67401cd393be5d378ce0495a76c916a4df4cceddb557a200e57362",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "89327b0d082911335ed23e7c5f5848186229248ee73d023a8cce762adf97adce",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 20,
+        "jumlah_gambar_tidak_disalin": 11,
+        "capture_manifest": {
+          "session_id": "20261021_all_three_position_03",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:48:08.084187+00:00",
+          "ended_at_utc": "2026-10-21T10:48:22.084240+00:00",
+          "frame_count": 10,
+          "interval_sec": 1.0,
+          "max_frames": 10,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "547ad79891bc59b533393d2d20451c27ae1f1bb467d00ca043406ab1d215f87d",
+        "capture_frames_sha256": "d761c5a4929d315bdddd5c4c770fee26a8646c60bd9e22b59917341066cf0481",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:48:10.659280+00:00",
+          "frame_000002.jpg": "2026-10-21T10:48:11.682494+00:00",
+          "frame_000003.jpg": "2026-10-21T10:48:12.723786+00:00",
+          "frame_000004.jpg": "2026-10-21T10:48:13.784989+00:00",
+          "frame_000005.jpg": "2026-10-21T10:48:14.790555+00:00",
+          "frame_000006.jpg": "2026-10-21T10:48:16.665474+00:00",
+          "frame_000007.jpg": "2026-10-21T10:48:18.635951+00:00",
+          "frame_000008.jpg": "2026-10-21T10:48:19.769386+00:00",
+          "frame_000009.jpg": "2026-10-21T10:48:20.944103+00:00",
+          "frame_000010.jpg": "2026-10-21T10:48:22.082419+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 10,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg"
+        ]
+      },
+      "20261021_all_three_position_04": {
+        "session_id": "20261021_all_three_position_04",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/capture_frames.jsonl",
+            "sha256": "d74d232b7f69c66e4df6426328cfc757f7caae3772383d21cda4c54090da5884",
+            "bytes": 1970,
+            "salinan_sha256": "d74d232b7f69c66e4df6426328cfc757f7caae3772383d21cda4c54090da5884"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_04/capture_manifest.json",
+            "sha256": "d5f202c33771787780439dd76677086c6d63e534e1cc23f42a9f9f75b4bb18dd",
+            "bytes": 419,
+            "salinan_sha256": "d5f202c33771787780439dd76677086c6d63e534e1cc23f42a9f9f75b4bb18dd"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "1617de96cd80e5bd3b1e538a50aed9319280643f52e6a800de0e14bf3aa10b1f",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "3b94bc0a858492aff1f77de889b9a6f01e3d1eaf9e384e0dc252e317d64d3706",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "3b1c3d1cd6820cd07a55e8e91573b10326040155ba1c9b200d769edba0fdcc99",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 20,
+        "jumlah_gambar_tidak_disalin": 11,
+        "capture_manifest": {
+          "session_id": "20261021_all_three_position_04",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:49:19.254887+00:00",
+          "ended_at_utc": "2026-10-21T10:49:28.668787+00:00",
+          "frame_count": 10,
+          "interval_sec": 1.0,
+          "max_frames": 10,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "d5f202c33771787780439dd76677086c6d63e534e1cc23f42a9f9f75b4bb18dd",
+        "capture_frames_sha256": "d74d232b7f69c66e4df6426328cfc757f7caae3772383d21cda4c54090da5884",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:49:19.416671+00:00",
+          "frame_000002.jpg": "2026-10-21T10:49:20.449816+00:00",
+          "frame_000003.jpg": "2026-10-21T10:49:21.449146+00:00",
+          "frame_000004.jpg": "2026-10-21T10:49:22.485435+00:00",
+          "frame_000005.jpg": "2026-10-21T10:49:23.492189+00:00",
+          "frame_000006.jpg": "2026-10-21T10:49:24.557720+00:00",
+          "frame_000007.jpg": "2026-10-21T10:49:25.592139+00:00",
+          "frame_000008.jpg": "2026-10-21T10:49:26.628680+00:00",
+          "frame_000009.jpg": "2026-10-21T10:49:27.630259+00:00",
+          "frame_000010.jpg": "2026-10-21T10:49:28.667024+00:00"
+        },
+        "peran_t38": "primary",
+        "jumlah_frame_t38": 10,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg"
+        ]
+      },
+      "20261021_negative_candidate_01": {
+        "session_id": "20261021_negative_candidate_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/capture_manifest.json",
+            "sha256": "34d9973015615da0c0be1debba78381e396aecc8e248c304a50fa7a8eb25b68a",
+            "bytes": 540,
+            "salinan_sha256": "34d9973015615da0c0be1debba78381e396aecc8e248c304a50fa7a8eb25b68a"
+          },
+          {
+            "berkas": "curation_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_negative_candidate_01/curation_manifest.json",
+            "sha256": "80709e296917fc0c81898a1f45b837eda1683fab9fd3be32fe9266f240b05015",
+            "bytes": 14301,
+            "salinan_sha256": "80709e296917fc0c81898a1f45b837eda1683fab9fd3be32fe9266f240b05015"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "a8de0697197bd98a9d9b5f514317da83a1718f1386b5baf336f50edc5b29d6ad",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "9056710ec81c1e39b1ad3191b7825b473dc2e7e4f31f0f1839257a03c4fd0c7b",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "f9594209f66d027f3b47ea6721710104fc6683aa54280ae61763a4fb66e40443",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 120,
+        "jumlah_gambar_tidak_disalin": 62,
+        "capture_manifest": {
+          "session_id": "20261021_negative_candidate_01",
+          "status": "curated_candidate_not_continuous_capture",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "frame_count": 60,
+          "images_dir": "images",
+          "curation_manifest": "curation_manifest.json",
+          "source_sessions": [
+            "20261021_empty_01",
+            "20261021_empty_replacement_01"
+          ],
+          "sequence_continuity": false,
+          "note": "Compatibility metadata for the unchanged prelabel script; this folder is a 52+8 curated still-image set, not an original camera capture."
+        },
+        "capture_manifest_sha256": "34d9973015615da0c0be1debba78381e396aecc8e248c304a50fa7a8eb25b68a",
+        "peran_t38": "negative",
+        "jumlah_frame_t38": 60,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg",
+          "frame_000041.jpg",
+          "frame_000042.jpg",
+          "frame_000043.jpg",
+          "frame_000044.jpg",
+          "frame_000045.jpg",
+          "frame_000046.jpg",
+          "frame_000047.jpg",
+          "frame_000048.jpg",
+          "frame_000049.jpg",
+          "frame_000050.jpg",
+          "frame_000051.jpg",
+          "frame_000052.jpg",
+          "frame_000053.jpg",
+          "frame_000054.jpg",
+          "frame_000055.jpg",
+          "frame_000056.jpg",
+          "frame_000057.jpg",
+          "frame_000058.jpg",
+          "frame_000059.jpg",
+          "frame_000060.jpg"
+        ]
+      },
+      "20261021_gawang_ball_01": {
+        "session_id": "20261021_gawang_ball_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/capture_frames.jsonl",
+            "sha256": "71e37a2d61873a5f5058b471f547035f3f82553b966efb007b9c70dbe050b9d6",
+            "bytes": 7876,
+            "salinan_sha256": "71e37a2d61873a5f5058b471f547035f3f82553b966efb007b9c70dbe050b9d6"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_gawang_ball_01/capture_manifest.json",
+            "sha256": "6680b6b4d6c2f9ea1a008c55baa695a27690e093e7a8a3245cc0c702f4f65f82",
+            "bytes": 413,
+            "salinan_sha256": "6680b6b4d6c2f9ea1a008c55baa695a27690e093e7a8a3245cc0c702f4f65f82"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "audit_kotak_gawang_20261021.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "1e93efa4ccae2a8273615751aaef3eb19c6e281de5fb421aaef97ac579150ead",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "d931a558eea669a67603e8cfd61921c1627cab39eb11b39f16cde496a900261d",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "8d5978343696db43e7b2a20142acad06d27f524141548c74af1614145159d1e8",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 80,
+        "jumlah_gambar_tidak_disalin": 43,
+        "capture_manifest": {
+          "session_id": "20261021_gawang_ball_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T07:38:49.465252+00:00",
+          "ended_at_utc": "2026-10-21T07:39:36.942133+00:00",
+          "frame_count": 40,
+          "interval_sec": 1.0,
+          "max_frames": 40,
+          "duration_sec": 160.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "6680b6b4d6c2f9ea1a008c55baa695a27690e093e7a8a3245cc0c702f4f65f82",
+        "capture_frames_sha256": "71e37a2d61873a5f5058b471f547035f3f82553b966efb007b9c70dbe050b9d6",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T07:38:51.805251+00:00",
+          "frame_000002.jpg": "2026-10-21T07:38:53.074234+00:00",
+          "frame_000003.jpg": "2026-10-21T07:38:54.108865+00:00",
+          "frame_000004.jpg": "2026-10-21T07:38:55.109250+00:00",
+          "frame_000005.jpg": "2026-10-21T07:38:56.180239+00:00",
+          "frame_000006.jpg": "2026-10-21T07:38:57.552516+00:00",
+          "frame_000007.jpg": "2026-10-21T07:38:58.620108+00:00",
+          "frame_000008.jpg": "2026-10-21T07:38:59.620214+00:00",
+          "frame_000009.jpg": "2026-10-21T07:39:01.166806+00:00",
+          "frame_000010.jpg": "2026-10-21T07:39:02.190234+00:00",
+          "frame_000011.jpg": "2026-10-21T07:39:03.194280+00:00",
+          "frame_000012.jpg": "2026-10-21T07:39:04.198392+00:00",
+          "frame_000013.jpg": "2026-10-21T07:39:05.237404+00:00",
+          "frame_000014.jpg": "2026-10-21T07:39:06.577911+00:00",
+          "frame_000015.jpg": "2026-10-21T07:39:07.710654+00:00",
+          "frame_000016.jpg": "2026-10-21T07:39:08.746999+00:00",
+          "frame_000017.jpg": "2026-10-21T07:39:09.842565+00:00",
+          "frame_000018.jpg": "2026-10-21T07:39:10.846876+00:00",
+          "frame_000019.jpg": "2026-10-21T07:39:11.882114+00:00",
+          "frame_000020.jpg": "2026-10-21T07:39:12.919987+00:00",
+          "frame_000021.jpg": "2026-10-21T07:39:13.923078+00:00",
+          "frame_000022.jpg": "2026-10-21T07:39:14.986561+00:00",
+          "frame_000023.jpg": "2026-10-21T07:39:16.022672+00:00",
+          "frame_000024.jpg": "2026-10-21T07:39:17.095150+00:00",
+          "frame_000025.jpg": "2026-10-21T07:39:18.193798+00:00",
+          "frame_000026.jpg": "2026-10-21T07:39:20.508918+00:00",
+          "frame_000027.jpg": "2026-10-21T07:39:21.637662+00:00",
+          "frame_000028.jpg": "2026-10-21T07:39:22.705748+00:00",
+          "frame_000029.jpg": "2026-10-21T07:39:25.286287+00:00",
+          "frame_000030.jpg": "2026-10-21T07:39:26.314864+00:00",
+          "frame_000031.jpg": "2026-10-21T07:39:27.589300+00:00",
+          "frame_000032.jpg": "2026-10-21T07:39:28.686982+00:00",
+          "frame_000033.jpg": "2026-10-21T07:39:29.822642+00:00",
+          "frame_000034.jpg": "2026-10-21T07:39:30.890397+00:00",
+          "frame_000035.jpg": "2026-10-21T07:39:31.893551+00:00",
+          "frame_000036.jpg": "2026-10-21T07:39:32.896167+00:00",
+          "frame_000037.jpg": "2026-10-21T07:39:33.898591+00:00",
+          "frame_000038.jpg": "2026-10-21T07:39:34.933735+00:00",
+          "frame_000039.jpg": "2026-10-21T07:39:35.936708+00:00",
+          "frame_000040.jpg": "2026-10-21T07:39:36.940983+00:00"
+        },
+        "peran_t38": "partial",
+        "jumlah_frame_t38": 40,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg"
+        ]
+      },
+      "20261021_all_three_position_05": {
+        "session_id": "20261021_all_three_position_05",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/capture_frames.jsonl",
+            "sha256": "5b017fd4de052839960be07b71f89cb55c779c1dce41eb22e7ddcb6cd4ad1999",
+            "bytes": 1970,
+            "salinan_sha256": "5b017fd4de052839960be07b71f89cb55c779c1dce41eb22e7ddcb6cd4ad1999"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_all_three_position_05/capture_manifest.json",
+            "sha256": "bac107b70b9711be93a0dd5e07b7eb8a4cd8119a8a7791d2b653cbbf6bf300a2",
+            "bytes": 419,
+            "salinan_sha256": "bac107b70b9711be93a0dd5e07b7eb8a4cd8119a8a7791d2b653cbbf6bf300a2"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "b484320c7e2ea9a765dfaa710d85c2f6987e6ce55dbd36b9616a7226f919dc71",
+            "alasan": [
+              "kunci koordinat 'xywhn'",
+              "kunci prediksi 'predictions'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "bf78230c2a2fd763c51d7d9a7ca41c847f8bca3422e6651e1f345a81c52a1d86",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "3c2cfa770ae3bb68ea793ef5f198658326627d6b3ca31dbe28221f38a982a29f",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 20,
+        "jumlah_gambar_tidak_disalin": 11,
+        "capture_manifest": {
+          "session_id": "20261021_all_three_position_05",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:53:52.562589+00:00",
+          "ended_at_utc": "2026-10-21T10:54:07.576710+00:00",
+          "frame_count": 10,
+          "interval_sec": 1.0,
+          "max_frames": 10,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "bac107b70b9711be93a0dd5e07b7eb8a4cd8119a8a7791d2b653cbbf6bf300a2",
+        "capture_frames_sha256": "5b017fd4de052839960be07b71f89cb55c779c1dce41eb22e7ddcb6cd4ad1999",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:53:52.743011+00:00",
+          "frame_000002.jpg": "2026-10-21T10:53:54.382360+00:00",
+          "frame_000003.jpg": "2026-10-21T10:53:56.483912+00:00",
+          "frame_000004.jpg": "2026-10-21T10:53:58.254628+00:00",
+          "frame_000005.jpg": "2026-10-21T10:54:01.425714+00:00",
+          "frame_000006.jpg": "2026-10-21T10:54:02.465712+00:00",
+          "frame_000007.jpg": "2026-10-21T10:54:04.239040+00:00",
+          "frame_000008.jpg": "2026-10-21T10:54:05.539104+00:00",
+          "frame_000009.jpg": "2026-10-21T10:54:06.574284+00:00",
+          "frame_000010.jpg": "2026-10-21T10:54:07.575993+00:00"
+        },
+        "peran_t38": "partial",
+        "jumlah_frame_t38": 10,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg"
+        ]
+      },
+      "20261021_ball_moving_01": {
+        "session_id": "20261021_ball_moving_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_01/capture_frames.jsonl",
+            "sha256": "dc0f5f0576eca2bf58f3159006a9fedb60c4b71619c7a92dadf7c13a37f33619",
+            "bytes": 7875,
+            "salinan_sha256": "dc0f5f0576eca2bf58f3159006a9fedb60c4b71619c7a92dadf7c13a37f33619"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_01/capture_manifest.json",
+            "sha256": "ff6ae5f901af6d937c740592cd3fa21b4e69564c93ebc18e2451c59a3c234d52",
+            "bytes": 413,
+            "salinan_sha256": "ff6ae5f901af6d937c740592cd3fa21b4e69564c93ebc18e2451c59a3c234d52"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet_1.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          },
+          {
+            "berkas": "contact_sheet_2.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 42,
+        "capture_manifest": {
+          "session_id": "20261021_ball_moving_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:36:51.198301+00:00",
+          "ended_at_utc": "2026-10-21T10:37:48.275037+00:00",
+          "frame_count": 40,
+          "interval_sec": 1.0,
+          "max_frames": 40,
+          "duration_sec": 160.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "ff6ae5f901af6d937c740592cd3fa21b4e69564c93ebc18e2451c59a3c234d52",
+        "capture_frames_sha256": "dc0f5f0576eca2bf58f3159006a9fedb60c4b71619c7a92dadf7c13a37f33619",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:36:52.710226+00:00",
+          "frame_000002.jpg": "2026-10-21T10:36:53.703114+00:00",
+          "frame_000003.jpg": "2026-10-21T10:36:54.702577+00:00",
+          "frame_000004.jpg": "2026-10-21T10:36:55.769043+00:00",
+          "frame_000005.jpg": "2026-10-21T10:36:56.806203+00:00",
+          "frame_000006.jpg": "2026-10-21T10:36:57.810518+00:00",
+          "frame_000007.jpg": "2026-10-21T10:36:58.846911+00:00",
+          "frame_000008.jpg": "2026-10-21T10:36:59.882846+00:00",
+          "frame_000009.jpg": "2026-10-21T10:37:02.026118+00:00",
+          "frame_000010.jpg": "2026-10-21T10:37:03.566012+00:00",
+          "frame_000011.jpg": "2026-10-21T10:37:05.695425+00:00",
+          "frame_000012.jpg": "2026-10-21T10:37:08.235455+00:00",
+          "frame_000013.jpg": "2026-10-21T10:37:09.306625+00:00",
+          "frame_000014.jpg": "2026-10-21T10:37:10.339553+00:00",
+          "frame_000015.jpg": "2026-10-21T10:37:13.118239+00:00",
+          "frame_000016.jpg": "2026-10-21T10:37:14.149268+00:00",
+          "frame_000017.jpg": "2026-10-21T10:37:15.217330+00:00",
+          "frame_000018.jpg": "2026-10-21T10:37:18.325207+00:00",
+          "frame_000019.jpg": "2026-10-21T10:37:19.331335+00:00",
+          "frame_000020.jpg": "2026-10-21T10:37:20.397616+00:00",
+          "frame_000021.jpg": "2026-10-21T10:37:21.435138+00:00",
+          "frame_000022.jpg": "2026-10-21T10:37:22.541381+00:00",
+          "frame_000023.jpg": "2026-10-21T10:37:24.047335+00:00",
+          "frame_000024.jpg": "2026-10-21T10:37:25.075282+00:00",
+          "frame_000025.jpg": "2026-10-21T10:37:26.146052+00:00",
+          "frame_000026.jpg": "2026-10-21T10:37:27.180025+00:00",
+          "frame_000027.jpg": "2026-10-21T10:37:28.182864+00:00",
+          "frame_000028.jpg": "2026-10-21T10:37:30.829978+00:00",
+          "frame_000029.jpg": "2026-10-21T10:37:31.901430+00:00",
+          "frame_000030.jpg": "2026-10-21T10:37:32.933323+00:00",
+          "frame_000031.jpg": "2026-10-21T10:37:33.934043+00:00",
+          "frame_000032.jpg": "2026-10-21T10:37:36.143352+00:00",
+          "frame_000033.jpg": "2026-10-21T10:37:38.317223+00:00",
+          "frame_000034.jpg": "2026-10-21T10:37:39.409048+00:00",
+          "frame_000035.jpg": "2026-10-21T10:37:40.446144+00:00",
+          "frame_000036.jpg": "2026-10-21T10:37:41.550363+00:00",
+          "frame_000037.jpg": "2026-10-21T10:37:42.556963+00:00",
+          "frame_000038.jpg": "2026-10-21T10:37:44.499270+00:00",
+          "frame_000039.jpg": "2026-10-21T10:37:46.627690+00:00",
+          "frame_000040.jpg": "2026-10-21T10:37:48.274140+00:00"
+        },
+        "peran_t38": "sumber_kurasi:20261021_ball_moving_candidate_01",
+        "jumlah_frame_t38": 0,
+        "frame_dipakai": []
+      },
+      "20261021_ball_moving_replacement_01": {
+        "session_id": "20261021_ball_moving_replacement_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_replacement_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_replacement_01/capture_frames.jsonl",
+            "sha256": "0c0d71cc58d36fc029103309bd314436e1b5060719694b3564b9f5e37554c999",
+            "bytes": 2363,
+            "salinan_sha256": "0c0d71cc58d36fc029103309bd314436e1b5060719694b3564b9f5e37554c999"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_ball_moving_replacement_01/capture_manifest.json",
+            "sha256": "2574d62c742dd8467316a66ec14407b03cc1041a3a9fc90527ca85b674fda024",
+            "bytes": 424,
+            "salinan_sha256": "2574d62c742dd8467316a66ec14407b03cc1041a3a9fc90527ca85b674fda024"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "contact_sheet.jpg",
+            "alasan": "bukan metadata teks (gambar atau lainnya)"
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 13,
+        "capture_manifest": {
+          "session_id": "20261021_ball_moving_replacement_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T10:38:58.478921+00:00",
+          "ended_at_utc": "2026-10-21T10:39:16.610252+00:00",
+          "frame_count": 12,
+          "interval_sec": 1.0,
+          "max_frames": 12,
+          "duration_sec": 60.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "2574d62c742dd8467316a66ec14407b03cc1041a3a9fc90527ca85b674fda024",
+        "capture_frames_sha256": "0c0d71cc58d36fc029103309bd314436e1b5060719694b3564b9f5e37554c999",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T10:38:59.111483+00:00",
+          "frame_000002.jpg": "2026-10-21T10:39:01.850066+00:00",
+          "frame_000003.jpg": "2026-10-21T10:39:02.941389+00:00",
+          "frame_000004.jpg": "2026-10-21T10:39:03.951663+00:00",
+          "frame_000005.jpg": "2026-10-21T10:39:06.461721+00:00",
+          "frame_000006.jpg": "2026-10-21T10:39:08.532925+00:00",
+          "frame_000007.jpg": "2026-10-21T10:39:09.593321+00:00",
+          "frame_000008.jpg": "2026-10-21T10:39:10.662362+00:00",
+          "frame_000009.jpg": "2026-10-21T10:39:11.661380+00:00",
+          "frame_000010.jpg": "2026-10-21T10:39:12.664493+00:00",
+          "frame_000011.jpg": "2026-10-21T10:39:15.582008+00:00",
+          "frame_000012.jpg": "2026-10-21T10:39:16.609475+00:00"
+        },
+        "peran_t38": "sumber_kurasi:20261021_ball_moving_candidate_01",
+        "jumlah_frame_t38": 0,
+        "frame_dipakai": []
+      },
+      "20261021_empty_01": {
+        "session_id": "20261021_empty_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_01/capture_frames.jsonl",
+            "sha256": "329880eee03c5cec2fd5e91bcddc4f587fc1f37672b754f54f78f686cc3dcc2c",
+            "bytes": 11813,
+            "salinan_sha256": "329880eee03c5cec2fd5e91bcddc4f587fc1f37672b754f54f78f686cc3dcc2c"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_01/capture_manifest.json",
+            "sha256": "1c2e83f2c526ff9744c4f450752ebc4b3e7dd9b8616364347e268ee8dcff6db2",
+            "bytes": 407,
+            "salinan_sha256": "1c2e83f2c526ff9744c4f450752ebc4b3e7dd9b8616364347e268ee8dcff6db2"
+          }
+        ],
+        "tidak_disalin": [],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 60,
+        "capture_manifest": {
+          "session_id": "20261021_empty_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T07:09:46.297877+00:00",
+          "ended_at_utc": "2026-10-21T07:12:08.099471+00:00",
+          "frame_count": 60,
+          "interval_sec": 1.0,
+          "max_frames": 60,
+          "duration_sec": 180.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "1c2e83f2c526ff9744c4f450752ebc4b3e7dd9b8616364347e268ee8dcff6db2",
+        "capture_frames_sha256": "329880eee03c5cec2fd5e91bcddc4f587fc1f37672b754f54f78f686cc3dcc2c",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T07:09:49.087043+00:00",
+          "frame_000002.jpg": "2026-10-21T07:09:50.229866+00:00",
+          "frame_000003.jpg": "2026-10-21T07:09:51.237327+00:00",
+          "frame_000004.jpg": "2026-10-21T07:09:54.587715+00:00",
+          "frame_000005.jpg": "2026-10-21T07:09:56.386720+00:00",
+          "frame_000006.jpg": "2026-10-21T07:09:57.594952+00:00",
+          "frame_000007.jpg": "2026-10-21T07:09:58.696811+00:00",
+          "frame_000008.jpg": "2026-10-21T07:10:00.251171+00:00",
+          "frame_000009.jpg": "2026-10-21T07:10:01.846409+00:00",
+          "frame_000010.jpg": "2026-10-21T07:10:03.900687+00:00",
+          "frame_000011.jpg": "2026-10-21T07:10:06.900975+00:00",
+          "frame_000012.jpg": "2026-10-21T07:10:08.913847+00:00",
+          "frame_000013.jpg": "2026-10-21T07:10:09.914327+00:00",
+          "frame_000014.jpg": "2026-10-21T07:10:12.067479+00:00",
+          "frame_000015.jpg": "2026-10-21T07:10:17.125718+00:00",
+          "frame_000016.jpg": "2026-10-21T07:10:18.824480+00:00",
+          "frame_000017.jpg": "2026-10-21T07:10:25.384878+00:00",
+          "frame_000018.jpg": "2026-10-21T07:10:27.387167+00:00",
+          "frame_000019.jpg": "2026-10-21T07:10:29.041788+00:00",
+          "frame_000020.jpg": "2026-10-21T07:10:30.888712+00:00",
+          "frame_000021.jpg": "2026-10-21T07:10:39.153457+00:00",
+          "frame_000022.jpg": "2026-10-21T07:10:42.105335+00:00",
+          "frame_000023.jpg": "2026-10-21T07:10:47.159595+00:00",
+          "frame_000024.jpg": "2026-10-21T07:10:48.516542+00:00",
+          "frame_000025.jpg": "2026-10-21T07:10:51.522794+00:00",
+          "frame_000026.jpg": "2026-10-21T07:10:54.174450+00:00",
+          "frame_000027.jpg": "2026-10-21T07:10:56.878617+00:00",
+          "frame_000028.jpg": "2026-10-21T07:11:04.161651+00:00",
+          "frame_000029.jpg": "2026-10-21T07:11:07.833408+00:00",
+          "frame_000030.jpg": "2026-10-21T07:11:12.638107+00:00",
+          "frame_000031.jpg": "2026-10-21T07:11:14.573291+00:00",
+          "frame_000032.jpg": "2026-10-21T07:11:16.777791+00:00",
+          "frame_000033.jpg": "2026-10-21T07:11:19.947960+00:00",
+          "frame_000034.jpg": "2026-10-21T07:11:22.744676+00:00",
+          "frame_000035.jpg": "2026-10-21T07:11:23.788044+00:00",
+          "frame_000036.jpg": "2026-10-21T07:11:27.497276+00:00",
+          "frame_000037.jpg": "2026-10-21T07:11:29.582987+00:00",
+          "frame_000038.jpg": "2026-10-21T07:11:30.791454+00:00",
+          "frame_000039.jpg": "2026-10-21T07:11:32.449197+00:00",
+          "frame_000040.jpg": "2026-10-21T07:11:33.522173+00:00",
+          "frame_000041.jpg": "2026-10-21T07:11:35.757565+00:00",
+          "frame_000042.jpg": "2026-10-21T07:11:37.001448+00:00",
+          "frame_000043.jpg": "2026-10-21T07:11:39.071449+00:00",
+          "frame_000044.jpg": "2026-10-21T07:11:41.009863+00:00",
+          "frame_000045.jpg": "2026-10-21T07:11:42.247724+00:00",
+          "frame_000046.jpg": "2026-10-21T07:11:44.185182+00:00",
+          "frame_000047.jpg": "2026-10-21T07:11:45.224168+00:00",
+          "frame_000048.jpg": "2026-10-21T07:11:47.350242+00:00",
+          "frame_000049.jpg": "2026-10-21T07:11:49.322638+00:00",
+          "frame_000050.jpg": "2026-10-21T07:11:51.803652+00:00",
+          "frame_000051.jpg": "2026-10-21T07:11:52.830939+00:00",
+          "frame_000052.jpg": "2026-10-21T07:11:55.546922+00:00",
+          "frame_000053.jpg": "2026-10-21T07:11:56.575569+00:00",
+          "frame_000054.jpg": "2026-10-21T07:11:58.350929+00:00",
+          "frame_000055.jpg": "2026-10-21T07:11:59.354403+00:00",
+          "frame_000056.jpg": "2026-10-21T07:12:00.382700+00:00",
+          "frame_000057.jpg": "2026-10-21T07:12:03.867098+00:00",
+          "frame_000058.jpg": "2026-10-21T07:12:04.895203+00:00",
+          "frame_000059.jpg": "2026-10-21T07:12:07.097425+00:00",
+          "frame_000060.jpg": "2026-10-21T07:12:08.098621+00:00"
+        },
+        "peran_t38": "sumber_kurasi:20261021_negative_candidate_01",
+        "jumlah_frame_t38": 0,
+        "frame_dipakai": []
+      },
+      "20261021_empty_replacement_01": {
+        "session_id": "20261021_empty_replacement_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_replacement_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_replacement_01/capture_frames.jsonl",
+            "sha256": "04ab4e857ee489dd69bf046a31695a82beb4aa519728a763deb0912eae5be084",
+            "bytes": 2363,
+            "salinan_sha256": "04ab4e857ee489dd69bf046a31695a82beb4aa519728a763deb0912eae5be084"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261021_empty_replacement_01/capture_manifest.json",
+            "sha256": "7b3120fafc72ac3cce78d26bcef0a9f5648b0d9f3c6d8576216cf4d7f1700cda",
+            "bytes": 418,
+            "salinan_sha256": "7b3120fafc72ac3cce78d26bcef0a9f5648b0d9f3c6d8576216cf4d7f1700cda"
+          }
+        ],
+        "tidak_disalin": [],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 12,
+        "capture_manifest": {
+          "session_id": "20261021_empty_replacement_01",
+          "condition": "unknown",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-10-21T07:14:08.970900+00:00",
+          "ended_at_utc": "2026-10-21T07:14:38.638139+00:00",
+          "frame_count": 12,
+          "interval_sec": 1.0,
+          "max_frames": 12,
+          "duration_sec": 90.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "7b3120fafc72ac3cce78d26bcef0a9f5648b0d9f3c6d8576216cf4d7f1700cda",
+        "capture_frames_sha256": "04ab4e857ee489dd69bf046a31695a82beb4aa519728a763deb0912eae5be084",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-10-21T07:14:09.399217+00:00",
+          "frame_000002.jpg": "2026-10-21T07:14:10.743491+00:00",
+          "frame_000003.jpg": "2026-10-21T07:14:13.196856+00:00",
+          "frame_000004.jpg": "2026-10-21T07:14:15.305621+00:00",
+          "frame_000005.jpg": "2026-10-21T07:14:17.559853+00:00",
+          "frame_000006.jpg": "2026-10-21T07:14:25.967240+00:00",
+          "frame_000007.jpg": "2026-10-21T07:14:27.115904+00:00",
+          "frame_000008.jpg": "2026-10-21T07:14:29.374799+00:00",
+          "frame_000009.jpg": "2026-10-21T07:14:31.528800+00:00",
+          "frame_000010.jpg": "2026-10-21T07:14:35.180001+00:00",
+          "frame_000011.jpg": "2026-10-21T07:14:36.580739+00:00",
+          "frame_000012.jpg": "2026-10-21T07:14:38.636986+00:00"
+        },
+        "peran_t38": "sumber_kurasi:20261021_negative_candidate_01",
+        "jumlah_frame_t38": 0,
+        "frame_dipakai": []
+      }
+    }
+  },
+  "t43": {
+    "berkas_eksperimen": {
+      "disalin": [
+        {
+          "berkas": "addendum_01_idle_goal_partial.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/addendum_01_idle_goal_partial.json",
+          "sha256": "e52c2c24ea8c644fed0f7cfee7891d34a8bdaeb4f15cac049af7b15719da6c0b",
+          "bytes": 1066,
+          "salinan_sha256": "e52c2c24ea8c644fed0f7cfee7891d34a8bdaeb4f15cac049af7b15719da6c0b"
+        },
+        {
+          "berkas": "addendum_02_retake_idle_and_partial_goal.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/addendum_02_retake_idle_and_partial_goal.json",
+          "sha256": "6d881244a87d77b13612d39d5fa63dc1e3cca0281ef38a70226195488116415d",
+          "bytes": 1223,
+          "salinan_sha256": "6d881244a87d77b13612d39d5fa63dc1e3cca0281ef38a70226195488116415d"
+        },
+        {
+          "berkas": "addendum_03_restart_walking.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/addendum_03_restart_walking.json",
+          "sha256": "bb0275da58e934bf600dae55d67a0a84dca02d4ba3a9ea3e4f78fb0d5c460874",
+          "bytes": 720,
+          "salinan_sha256": "bb0275da58e934bf600dae55d67a0a84dca02d4ba3a9ea3e4f78fb0d5c460874"
+        },
+        {
+          "berkas": "addendum_04_goal_lower_region.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/addendum_04_goal_lower_region.json",
+          "sha256": "b099bbad5279fe1c47bc57fe59c334c6b929f3f82e122568368833c0bd859c26",
+          "bytes": 996,
+          "salinan_sha256": "b099bbad5279fe1c47bc57fe59c334c6b929f3f82e122568368833c0bd859c26"
+        },
+        {
+          "berkas": "addendum_05_robot_body_box.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/addendum_05_robot_body_box.json",
+          "sha256": "96cda8dbb646617af5aaac0bdb8ec0a94bfb7cd2714930de24a4e44e7c3303bc",
+          "bytes": 728,
+          "salinan_sha256": "96cda8dbb646617af5aaac0bdb8ec0a94bfb7cd2714930de24a4e44e7c3303bc"
+        },
+        {
+          "berkas": "blind_review_52/selection_manifest.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_52/selection_manifest.json",
+          "sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f",
+          "bytes": 13911,
+          "salinan_sha256": "bad89d9ffaf3f5148cad515259bf83716c816662455066132efb8f6e368ae90f"
+        },
+        {
+          "berkas": "blind_review_completion.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/blind_review_completion.json",
+          "sha256": "83f59a13d8f82fb2af5f6fd67acb9486b9ca38f8741b015b695e7c43e33df8fa",
+          "bytes": 47941,
+          "salinan_sha256": "83f59a13d8f82fb2af5f6fd67acb9486b9ca38f8741b015b695e7c43e33df8fa"
+        },
+        {
+          "berkas": "capture_260_manifest.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/capture_260_manifest.json",
+          "sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449",
+          "bytes": 29331,
+          "salinan_sha256": "ff8b95036da911e86c54a60eded3acf1c9b4acf233a63b245b068380de4ae449"
+        },
+        {
+          "berkas": "idle_object_active_retake_manifest.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/idle_object_active_retake_manifest.json",
+          "sha256": "946363a98c6a4492b2c5d89fa2dad579dce95a83be1f027ca23b6d96f5e1ab11",
+          "bytes": 10197,
+          "salinan_sha256": "946363a98c6a4492b2c5d89fa2dad579dce95a83be1f027ca23b6d96f5e1ab11"
+        },
+        {
+          "berkas": "idle_object_capture_manifest.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/idle_object_capture_manifest.json",
+          "sha256": "672592a1279c2d1efc5ea6dc41179117e937c5b1f68544c337e020a98fe30112",
+          "bytes": 10938,
+          "salinan_sha256": "672592a1279c2d1efc5ea6dc41179117e937c5b1f68544c337e020a98fe30112"
+        },
+        {
+          "berkas": "review_260_audit_and_frozen_hashes.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/review_260_audit_and_frozen_hashes.json",
+          "sha256": "c8db6e38482763448e8a74ea11e6c36fe3db4bf71f83f1ee6e72e9a6f2d81543",
+          "bytes": 68774,
+          "salinan_sha256": "c8db6e38482763448e8a74ea11e6c36fe3db4bf71f83f1ee6e72e9a6f2d81543"
+        },
+        {
+          "berkas": "walk_object_active_retake_manifest.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/walk_object_active_retake_manifest.json",
+          "sha256": "d8b2ea35e44ca356c071f50f0fb5beb9f07c20199deef45a513c41e8b5b81231",
+          "bytes": 12070,
+          "salinan_sha256": "d8b2ea35e44ca356c071f50f0fb5beb9f07c20199deef45a513c41e8b5b81231"
+        },
+        {
+          "berkas": "walk_object_part1_integrity.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/walk_object_part1_integrity.json",
+          "sha256": "4ebb1f457305921f5ecc187bc14ba2011799250ab6cd9c286ef710fb2461a46c",
+          "bytes": 5439,
+          "salinan_sha256": "4ebb1f457305921f5ecc187bc14ba2011799250ab6cd9c286ef710fb2461a46c"
+        },
+        {
+          "berkas": "walk_object_retake_part1_integrity.json",
+          "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/experiments/t43_20261112/walk_object_retake_part1_integrity.json",
+          "sha256": "8f6858ff90e54c9c3bd51b8be5913904abdfb30b1fc050f79f798674ba53330f",
+          "bytes": 5727,
+          "salinan_sha256": "8f6858ff90e54c9c3bd51b8be5913904abdfb30b1fc050f79f798674ba53330f"
+        }
+      ],
+      "tidak_disalin": [
+        {
+          "berkas": "frozen_plan.json",
+          "sha256": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83",
+          "alasan": [
+            "sudah ada di Git"
+          ]
+        },
+        {
+          "berkas": "walk_capture_guard_v1.py",
+          "sha256": "1886305990d7ca0e504064c13b67eeeb8389d19bad692351e458b1e59a08821c",
+          "alasan": [
+            "bukan metadata (kode atau berkas lain)"
+          ]
+        }
+      ]
+    },
+    "capture_260_created_utc": "2026-11-12T05:32:05.767787+00:00",
+    "sesi": {
+      "20261112_t43_idle_objek_ulang_01": {
+        "session_id": "20261112_t43_idle_objek_ulang_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_objek_ulang_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_objek_ulang_01/capture_frames.jsonl",
+            "sha256": "4193f6a9f7f56f60251d154fe2291d60d6714f88272052a5fedc97398970a9f7",
+            "bytes": 20191,
+            "salinan_sha256": "4193f6a9f7f56f60251d154fe2291d60d6714f88272052a5fedc97398970a9f7"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_objek_ulang_01/capture_manifest.json",
+            "sha256": "98fb0a0c6868f91390b802581f22804f9cbb2ec15c2e0dae192a7765d5b6f67f",
+            "bytes": 427,
+            "salinan_sha256": "98fb0a0c6868f91390b802581f22804f9cbb2ec15c2e0dae192a7765d5b6f67f"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "c59c86fa9b0203441a7320416ca5fc2e91a1cc0e18a361c7bd6f074b25c1b56a",
+            "alasan": [
+              "kunci koordinat 'xyxy'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "64d175235d2e137eebb11b4054464dbda46f9a65e497088ca1690834da30803c",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "00ff51782fd8d3a35bb19e37de181031819170ca3db9d870fb14b8bf2308da0d",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 200,
+        "jumlah_gambar_tidak_disalin": 100,
+        "capture_manifest": {
+          "session_id": "20261112_t43_idle_objek_ulang_01",
+          "condition": "servo_idle",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:16:16.453716+00:00",
+          "ended_at_utc": "2026-11-12T05:17:58.467799+00:00",
+          "frame_count": 100,
+          "interval_sec": 1.0,
+          "max_frames": 100,
+          "duration_sec": 150.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "98fb0a0c6868f91390b802581f22804f9cbb2ec15c2e0dae192a7765d5b6f67f",
+        "capture_frames_sha256": "4193f6a9f7f56f60251d154fe2291d60d6714f88272052a5fedc97398970a9f7",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:16:17.802098+00:00",
+          "frame_000002.jpg": "2026-11-12T05:16:18.802879+00:00",
+          "frame_000003.jpg": "2026-11-12T05:16:19.833232+00:00",
+          "frame_000004.jpg": "2026-11-12T05:16:20.837430+00:00",
+          "frame_000005.jpg": "2026-11-12T05:16:21.841887+00:00",
+          "frame_000006.jpg": "2026-11-12T05:16:22.876955+00:00",
+          "frame_000007.jpg": "2026-11-12T05:16:23.877711+00:00",
+          "frame_000008.jpg": "2026-11-12T05:16:24.887826+00:00",
+          "frame_000009.jpg": "2026-11-12T05:16:25.918549+00:00",
+          "frame_000010.jpg": "2026-11-12T05:16:26.917771+00:00",
+          "frame_000011.jpg": "2026-11-12T05:16:27.921829+00:00",
+          "frame_000012.jpg": "2026-11-12T05:16:28.958698+00:00",
+          "frame_000013.jpg": "2026-11-12T05:16:29.994408+00:00",
+          "frame_000014.jpg": "2026-11-12T05:16:31.029620+00:00",
+          "frame_000015.jpg": "2026-11-12T05:16:32.061887+00:00",
+          "frame_000016.jpg": "2026-11-12T05:16:33.065941+00:00",
+          "frame_000017.jpg": "2026-11-12T05:16:34.069832+00:00",
+          "frame_000018.jpg": "2026-11-12T05:16:35.105819+00:00",
+          "frame_000019.jpg": "2026-11-12T05:16:36.176691+00:00",
+          "frame_000020.jpg": "2026-11-12T05:16:37.245956+00:00",
+          "frame_000021.jpg": "2026-11-12T05:16:38.248152+00:00",
+          "frame_000022.jpg": "2026-11-12T05:16:39.283108+00:00",
+          "frame_000023.jpg": "2026-11-12T05:16:40.283651+00:00",
+          "frame_000024.jpg": "2026-11-12T05:16:41.287097+00:00",
+          "frame_000025.jpg": "2026-11-12T05:16:42.286915+00:00",
+          "frame_000026.jpg": "2026-11-12T05:16:43.290903+00:00",
+          "frame_000027.jpg": "2026-11-12T05:16:44.327586+00:00",
+          "frame_000028.jpg": "2026-11-12T05:16:45.368819+00:00",
+          "frame_000029.jpg": "2026-11-12T05:16:46.398384+00:00",
+          "frame_000030.jpg": "2026-11-12T05:16:47.437089+00:00",
+          "frame_000031.jpg": "2026-11-12T05:16:48.470680+00:00",
+          "frame_000032.jpg": "2026-11-12T05:16:49.470978+00:00",
+          "frame_000033.jpg": "2026-11-12T05:16:50.475237+00:00",
+          "frame_000034.jpg": "2026-11-12T05:16:51.512121+00:00",
+          "frame_000035.jpg": "2026-11-12T05:16:52.513436+00:00",
+          "frame_000036.jpg": "2026-11-12T05:16:53.515021+00:00",
+          "frame_000037.jpg": "2026-11-12T05:16:54.516153+00:00",
+          "frame_000038.jpg": "2026-11-12T05:16:55.520152+00:00",
+          "frame_000039.jpg": "2026-11-12T05:16:56.520373+00:00",
+          "frame_000040.jpg": "2026-11-12T05:16:57.524675+00:00",
+          "frame_000041.jpg": "2026-11-12T05:16:58.534022+00:00",
+          "frame_000042.jpg": "2026-11-12T05:16:59.560810+00:00",
+          "frame_000043.jpg": "2026-11-12T05:17:00.669138+00:00",
+          "frame_000044.jpg": "2026-11-12T05:17:01.700406+00:00",
+          "frame_000045.jpg": "2026-11-12T05:17:02.708139+00:00",
+          "frame_000046.jpg": "2026-11-12T05:17:03.808041+00:00",
+          "frame_000047.jpg": "2026-11-12T05:17:04.809124+00:00",
+          "frame_000048.jpg": "2026-11-12T05:17:05.809051+00:00",
+          "frame_000049.jpg": "2026-11-12T05:17:06.813094+00:00",
+          "frame_000050.jpg": "2026-11-12T05:17:07.817715+00:00",
+          "frame_000051.jpg": "2026-11-12T05:17:08.817451+00:00",
+          "frame_000052.jpg": "2026-11-12T05:17:09.820087+00:00",
+          "frame_000053.jpg": "2026-11-12T05:17:10.856570+00:00",
+          "frame_000054.jpg": "2026-11-12T05:17:11.893186+00:00",
+          "frame_000055.jpg": "2026-11-12T05:17:12.925494+00:00",
+          "frame_000056.jpg": "2026-11-12T05:17:13.929389+00:00",
+          "frame_000057.jpg": "2026-11-12T05:17:14.933562+00:00",
+          "frame_000058.jpg": "2026-11-12T05:17:15.969588+00:00",
+          "frame_000059.jpg": "2026-11-12T05:17:17.001312+00:00",
+          "frame_000060.jpg": "2026-11-12T05:17:18.005171+00:00",
+          "frame_000061.jpg": "2026-11-12T05:17:19.010070+00:00",
+          "frame_000062.jpg": "2026-11-12T05:17:20.009724+00:00",
+          "frame_000063.jpg": "2026-11-12T05:17:21.012581+00:00",
+          "frame_000064.jpg": "2026-11-12T05:17:22.016638+00:00",
+          "frame_000065.jpg": "2026-11-12T05:17:23.017933+00:00",
+          "frame_000066.jpg": "2026-11-12T05:17:24.018103+00:00",
+          "frame_000067.jpg": "2026-11-12T05:17:25.021119+00:00",
+          "frame_000068.jpg": "2026-11-12T05:17:26.060915+00:00",
+          "frame_000069.jpg": "2026-11-12T05:17:27.061879+00:00",
+          "frame_000070.jpg": "2026-11-12T05:17:28.062162+00:00",
+          "frame_000071.jpg": "2026-11-12T05:17:29.065508+00:00",
+          "frame_000072.jpg": "2026-11-12T05:17:30.102217+00:00",
+          "frame_000073.jpg": "2026-11-12T05:17:31.138368+00:00",
+          "frame_000074.jpg": "2026-11-12T05:17:32.139026+00:00",
+          "frame_000075.jpg": "2026-11-12T05:17:33.141797+00:00",
+          "frame_000076.jpg": "2026-11-12T05:17:34.143473+00:00",
+          "frame_000077.jpg": "2026-11-12T05:17:35.146630+00:00",
+          "frame_000078.jpg": "2026-11-12T05:17:36.146360+00:00",
+          "frame_000079.jpg": "2026-11-12T05:17:37.150826+00:00",
+          "frame_000080.jpg": "2026-11-12T05:17:38.154777+00:00",
+          "frame_000081.jpg": "2026-11-12T05:17:39.189317+00:00",
+          "frame_000082.jpg": "2026-11-12T05:17:40.190609+00:00",
+          "frame_000083.jpg": "2026-11-12T05:17:41.194251+00:00",
+          "frame_000084.jpg": "2026-11-12T05:17:42.230292+00:00",
+          "frame_000085.jpg": "2026-11-12T05:17:43.267484+00:00",
+          "frame_000086.jpg": "2026-11-12T05:17:44.272473+00:00",
+          "frame_000087.jpg": "2026-11-12T05:17:45.271391+00:00",
+          "frame_000088.jpg": "2026-11-12T05:17:46.306302+00:00",
+          "frame_000089.jpg": "2026-11-12T05:17:47.306535+00:00",
+          "frame_000090.jpg": "2026-11-12T05:17:48.380075+00:00",
+          "frame_000091.jpg": "2026-11-12T05:17:49.379747+00:00",
+          "frame_000092.jpg": "2026-11-12T05:17:50.418097+00:00",
+          "frame_000093.jpg": "2026-11-12T05:17:51.423932+00:00",
+          "frame_000094.jpg": "2026-11-12T05:17:52.451827+00:00",
+          "frame_000095.jpg": "2026-11-12T05:17:53.455432+00:00",
+          "frame_000096.jpg": "2026-11-12T05:17:54.461501+00:00",
+          "frame_000097.jpg": "2026-11-12T05:17:55.459792+00:00",
+          "frame_000098.jpg": "2026-11-12T05:17:56.462582+00:00",
+          "frame_000099.jpg": "2026-11-12T05:17:57.462874+00:00",
+          "frame_000100.jpg": "2026-11-12T05:17:58.466788+00:00"
+        },
+        "peran_t43": "diam_berobjek",
+        "jumlah_frame_t43": 100,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg",
+          "frame_000041.jpg",
+          "frame_000042.jpg",
+          "frame_000043.jpg",
+          "frame_000044.jpg",
+          "frame_000045.jpg",
+          "frame_000046.jpg",
+          "frame_000047.jpg",
+          "frame_000048.jpg",
+          "frame_000049.jpg",
+          "frame_000050.jpg",
+          "frame_000051.jpg",
+          "frame_000052.jpg",
+          "frame_000053.jpg",
+          "frame_000054.jpg",
+          "frame_000055.jpg",
+          "frame_000056.jpg",
+          "frame_000057.jpg",
+          "frame_000058.jpg",
+          "frame_000059.jpg",
+          "frame_000060.jpg",
+          "frame_000061.jpg",
+          "frame_000062.jpg",
+          "frame_000063.jpg",
+          "frame_000064.jpg",
+          "frame_000065.jpg",
+          "frame_000066.jpg",
+          "frame_000067.jpg",
+          "frame_000068.jpg",
+          "frame_000069.jpg",
+          "frame_000070.jpg",
+          "frame_000071.jpg",
+          "frame_000072.jpg",
+          "frame_000073.jpg",
+          "frame_000074.jpg",
+          "frame_000075.jpg",
+          "frame_000076.jpg",
+          "frame_000077.jpg",
+          "frame_000078.jpg",
+          "frame_000079.jpg",
+          "frame_000080.jpg",
+          "frame_000081.jpg",
+          "frame_000082.jpg",
+          "frame_000083.jpg",
+          "frame_000084.jpg",
+          "frame_000085.jpg",
+          "frame_000086.jpg",
+          "frame_000087.jpg",
+          "frame_000088.jpg",
+          "frame_000089.jpg",
+          "frame_000090.jpg",
+          "frame_000091.jpg",
+          "frame_000092.jpg",
+          "frame_000093.jpg",
+          "frame_000094.jpg",
+          "frame_000095.jpg",
+          "frame_000096.jpg",
+          "frame_000097.jpg",
+          "frame_000098.jpg",
+          "frame_000099.jpg",
+          "frame_000100.jpg"
+        ],
+        "capture_manifest_sha256_menurut_t43": "98fb0a0c6868f91390b802581f22804f9cbb2ec15c2e0dae192a7765d5b6f67f",
+        "capture_log_sha256_menurut_t43": "4193f6a9f7f56f60251d154fe2291d60d6714f88272052a5fedc97398970a9f7"
+      },
+      "20261112_t43_walk_objek_ulang_01": {
+        "session_id": "20261112_t43_walk_objek_ulang_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_01/capture_frames.jsonl",
+            "sha256": "db20fa08e4db1a3c74aaaf48b972ba183aff673bfce300bf4fa57c096fa3a345",
+            "bytes": 10099,
+            "salinan_sha256": "db20fa08e4db1a3c74aaaf48b972ba183aff673bfce300bf4fa57c096fa3a345"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_01/capture_manifest.json",
+            "sha256": "29ebe2a7ec33fdca3b98ee13b3c00ee99497928a91747304902b3eb0a8bae464",
+            "bytes": 421,
+            "salinan_sha256": "29ebe2a7ec33fdca3b98ee13b3c00ee99497928a91747304902b3eb0a8bae464"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "1d1efb6482467a6cec2691b4974ea1b2903d37e6e62bb0457737c8898f354c20",
+            "alasan": [
+              "kunci koordinat 'xyxy'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "306781531cb128cca0ecd80a27d3a7121db641c6608ea91b752fdbb3e5b63b46",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "f7f5901c039e11c29f796173878ff03efba3eb68f377cd893ab428406fa9ac30",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 100,
+        "jumlah_gambar_tidak_disalin": 50,
+        "capture_manifest": {
+          "session_id": "20261112_t43_walk_objek_ulang_01",
+          "condition": "walking",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:23:27.049509+00:00",
+          "ended_at_utc": "2026-11-12T05:24:19.266569+00:00",
+          "frame_count": 50,
+          "interval_sec": 1.0,
+          "max_frames": 50,
+          "duration_sec": 80.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "29ebe2a7ec33fdca3b98ee13b3c00ee99497928a91747304902b3eb0a8bae464",
+        "capture_frames_sha256": "db20fa08e4db1a3c74aaaf48b972ba183aff673bfce300bf4fa57c096fa3a345",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:23:29.453495+00:00",
+          "frame_000002.jpg": "2026-11-12T05:23:30.485491+00:00",
+          "frame_000003.jpg": "2026-11-12T05:23:31.485752+00:00",
+          "frame_000004.jpg": "2026-11-12T05:23:32.490744+00:00",
+          "frame_000005.jpg": "2026-11-12T05:23:33.596534+00:00",
+          "frame_000006.jpg": "2026-11-12T05:23:34.628990+00:00",
+          "frame_000007.jpg": "2026-11-12T05:23:35.630060+00:00",
+          "frame_000008.jpg": "2026-11-12T05:23:36.632964+00:00",
+          "frame_000009.jpg": "2026-11-12T05:23:37.633656+00:00",
+          "frame_000010.jpg": "2026-11-12T05:23:38.639546+00:00",
+          "frame_000011.jpg": "2026-11-12T05:23:39.674068+00:00",
+          "frame_000012.jpg": "2026-11-12T05:23:40.674533+00:00",
+          "frame_000013.jpg": "2026-11-12T05:23:41.677463+00:00",
+          "frame_000014.jpg": "2026-11-12T05:23:42.714809+00:00",
+          "frame_000015.jpg": "2026-11-12T05:23:43.713820+00:00",
+          "frame_000016.jpg": "2026-11-12T05:23:44.718897+00:00",
+          "frame_000017.jpg": "2026-11-12T05:23:45.757344+00:00",
+          "frame_000018.jpg": "2026-11-12T05:23:46.790079+00:00",
+          "frame_000019.jpg": "2026-11-12T05:23:47.790543+00:00",
+          "frame_000020.jpg": "2026-11-12T05:23:48.863286+00:00",
+          "frame_000021.jpg": "2026-11-12T05:23:49.898427+00:00",
+          "frame_000022.jpg": "2026-11-12T05:23:50.898811+00:00",
+          "frame_000023.jpg": "2026-11-12T05:23:51.902920+00:00",
+          "frame_000024.jpg": "2026-11-12T05:23:52.939602+00:00",
+          "frame_000025.jpg": "2026-11-12T05:23:53.975515+00:00",
+          "frame_000026.jpg": "2026-11-12T05:23:55.011311+00:00",
+          "frame_000027.jpg": "2026-11-12T05:23:56.011654+00:00",
+          "frame_000028.jpg": "2026-11-12T05:23:57.015527+00:00",
+          "frame_000029.jpg": "2026-11-12T05:23:58.015325+00:00",
+          "frame_000030.jpg": "2026-11-12T05:23:59.019963+00:00",
+          "frame_000031.jpg": "2026-11-12T05:24:00.024968+00:00",
+          "frame_000032.jpg": "2026-11-12T05:24:01.024354+00:00",
+          "frame_000033.jpg": "2026-11-12T05:24:02.132832+00:00",
+          "frame_000034.jpg": "2026-11-12T05:24:03.166302+00:00",
+          "frame_000035.jpg": "2026-11-12T05:24:04.164299+00:00",
+          "frame_000036.jpg": "2026-11-12T05:24:05.167377+00:00",
+          "frame_000037.jpg": "2026-11-12T05:24:06.173441+00:00",
+          "frame_000038.jpg": "2026-11-12T05:24:07.172886+00:00",
+          "frame_000039.jpg": "2026-11-12T05:24:08.207884+00:00",
+          "frame_000040.jpg": "2026-11-12T05:24:09.209041+00:00",
+          "frame_000041.jpg": "2026-11-12T05:24:10.211646+00:00",
+          "frame_000042.jpg": "2026-11-12T05:24:11.216040+00:00",
+          "frame_000043.jpg": "2026-11-12T05:24:12.217064+00:00",
+          "frame_000044.jpg": "2026-11-12T05:24:13.220558+00:00",
+          "frame_000045.jpg": "2026-11-12T05:24:14.221823+00:00",
+          "frame_000046.jpg": "2026-11-12T05:24:15.224605+00:00",
+          "frame_000047.jpg": "2026-11-12T05:24:16.224472+00:00",
+          "frame_000048.jpg": "2026-11-12T05:24:17.230167+00:00",
+          "frame_000049.jpg": "2026-11-12T05:24:18.264265+00:00",
+          "frame_000050.jpg": "2026-11-12T05:24:19.265674+00:00"
+        },
+        "peran_t43": "jalan_berobjek_1",
+        "jumlah_frame_t43": 50,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg",
+          "frame_000041.jpg",
+          "frame_000042.jpg",
+          "frame_000043.jpg",
+          "frame_000044.jpg",
+          "frame_000045.jpg",
+          "frame_000046.jpg",
+          "frame_000047.jpg",
+          "frame_000048.jpg",
+          "frame_000049.jpg",
+          "frame_000050.jpg"
+        ],
+        "capture_manifest_sha256_menurut_t43": "29ebe2a7ec33fdca3b98ee13b3c00ee99497928a91747304902b3eb0a8bae464",
+        "capture_log_sha256_menurut_t43": "db20fa08e4db1a3c74aaaf48b972ba183aff673bfce300bf4fa57c096fa3a345"
+      },
+      "20261112_t43_walk_objek_ulang_02": {
+        "session_id": "20261112_t43_walk_objek_ulang_02",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_02",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_02/capture_frames.jsonl",
+            "sha256": "734f704592ff59295b51a3785a3b8cf437312805dbe9a3eb6ac2086b3bae82b9",
+            "bytes": 10093,
+            "salinan_sha256": "734f704592ff59295b51a3785a3b8cf437312805dbe9a3eb6ac2086b3bae82b9"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_ulang_02/capture_manifest.json",
+            "sha256": "2affe3ac3487ff4c5cb7bae9896a5fefd9d1100086523dea4ca5aa6c64c812cd",
+            "bytes": 421,
+            "salinan_sha256": "2affe3ac3487ff4c5cb7bae9896a5fefd9d1100086523dea4ca5aa6c64c812cd"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "bb255d8e3e0e137bda86f0410668abfb0b7a7d534a8fc1c55797d75bcf751ee9",
+            "alasan": [
+              "kunci koordinat 'xyxy'"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "80b598172230c29e7af9b8fa424c6ad24adb9ee3f78d49eadbc727f0bf012553",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "da597bdec30159ab0d24df75574168f6693df78455fe3c62937d1d8f9cde7ab9",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 100,
+        "jumlah_gambar_tidak_disalin": 50,
+        "capture_manifest": {
+          "session_id": "20261112_t43_walk_objek_ulang_02",
+          "condition": "walking",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:26:35.494345+00:00",
+          "ended_at_utc": "2026-11-12T05:27:25.579454+00:00",
+          "frame_count": 50,
+          "interval_sec": 1.0,
+          "max_frames": 50,
+          "duration_sec": 80.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "2affe3ac3487ff4c5cb7bae9896a5fefd9d1100086523dea4ca5aa6c64c812cd",
+        "capture_frames_sha256": "734f704592ff59295b51a3785a3b8cf437312805dbe9a3eb6ac2086b3bae82b9",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:26:35.661262+00:00",
+          "frame_000002.jpg": "2026-11-12T05:26:36.661854+00:00",
+          "frame_000003.jpg": "2026-11-12T05:26:37.698202+00:00",
+          "frame_000004.jpg": "2026-11-12T05:26:38.697977+00:00",
+          "frame_000005.jpg": "2026-11-12T05:26:39.703549+00:00",
+          "frame_000006.jpg": "2026-11-12T05:26:40.738801+00:00",
+          "frame_000007.jpg": "2026-11-12T05:26:41.773414+00:00",
+          "frame_000008.jpg": "2026-11-12T05:26:42.773372+00:00",
+          "frame_000009.jpg": "2026-11-12T05:26:43.777914+00:00",
+          "frame_000010.jpg": "2026-11-12T05:26:44.813647+00:00",
+          "frame_000011.jpg": "2026-11-12T05:26:45.814409+00:00",
+          "frame_000012.jpg": "2026-11-12T05:26:46.818641+00:00",
+          "frame_000013.jpg": "2026-11-12T05:26:47.885294+00:00",
+          "frame_000014.jpg": "2026-11-12T05:26:48.890416+00:00",
+          "frame_000015.jpg": "2026-11-12T05:26:49.890582+00:00",
+          "frame_000016.jpg": "2026-11-12T05:26:50.894827+00:00",
+          "frame_000017.jpg": "2026-11-12T05:26:51.965901+00:00",
+          "frame_000018.jpg": "2026-11-12T05:26:52.999603+00:00",
+          "frame_000019.jpg": "2026-11-12T05:26:54.005884+00:00",
+          "frame_000020.jpg": "2026-11-12T05:26:55.035367+00:00",
+          "frame_000021.jpg": "2026-11-12T05:26:56.038852+00:00",
+          "frame_000022.jpg": "2026-11-12T05:26:57.043028+00:00",
+          "frame_000023.jpg": "2026-11-12T05:26:58.079865+00:00",
+          "frame_000024.jpg": "2026-11-12T05:26:59.347728+00:00",
+          "frame_000025.jpg": "2026-11-12T05:27:00.352884+00:00",
+          "frame_000026.jpg": "2026-11-12T05:27:01.383823+00:00",
+          "frame_000027.jpg": "2026-11-12T05:27:02.388138+00:00",
+          "frame_000028.jpg": "2026-11-12T05:27:03.388132+00:00",
+          "frame_000029.jpg": "2026-11-12T05:27:04.392738+00:00",
+          "frame_000030.jpg": "2026-11-12T05:27:05.397355+00:00",
+          "frame_000031.jpg": "2026-11-12T05:27:06.432889+00:00",
+          "frame_000032.jpg": "2026-11-12T05:27:07.464670+00:00",
+          "frame_000033.jpg": "2026-11-12T05:27:08.468072+00:00",
+          "frame_000034.jpg": "2026-11-12T05:27:09.472674+00:00",
+          "frame_000035.jpg": "2026-11-12T05:27:10.472536+00:00",
+          "frame_000036.jpg": "2026-11-12T05:27:11.477181+00:00",
+          "frame_000037.jpg": "2026-11-12T05:27:12.513830+00:00",
+          "frame_000038.jpg": "2026-11-12T05:27:13.547895+00:00",
+          "frame_000039.jpg": "2026-11-12T05:27:14.549410+00:00",
+          "frame_000040.jpg": "2026-11-12T05:27:15.553302+00:00",
+          "frame_000041.jpg": "2026-11-12T05:27:16.553218+00:00",
+          "frame_000042.jpg": "2026-11-12T05:27:17.556503+00:00",
+          "frame_000043.jpg": "2026-11-12T05:27:18.557623+00:00",
+          "frame_000044.jpg": "2026-11-12T05:27:19.561603+00:00",
+          "frame_000045.jpg": "2026-11-12T05:27:20.565363+00:00",
+          "frame_000046.jpg": "2026-11-12T05:27:21.566016+00:00",
+          "frame_000047.jpg": "2026-11-12T05:27:22.569796+00:00",
+          "frame_000048.jpg": "2026-11-12T05:27:23.570109+00:00",
+          "frame_000049.jpg": "2026-11-12T05:27:24.574162+00:00",
+          "frame_000050.jpg": "2026-11-12T05:27:25.578441+00:00"
+        },
+        "peran_t43": "jalan_berobjek_2",
+        "jumlah_frame_t43": 50,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg",
+          "frame_000031.jpg",
+          "frame_000032.jpg",
+          "frame_000033.jpg",
+          "frame_000034.jpg",
+          "frame_000035.jpg",
+          "frame_000036.jpg",
+          "frame_000037.jpg",
+          "frame_000038.jpg",
+          "frame_000039.jpg",
+          "frame_000040.jpg",
+          "frame_000041.jpg",
+          "frame_000042.jpg",
+          "frame_000043.jpg",
+          "frame_000044.jpg",
+          "frame_000045.jpg",
+          "frame_000046.jpg",
+          "frame_000047.jpg",
+          "frame_000048.jpg",
+          "frame_000049.jpg",
+          "frame_000050.jpg"
+        ],
+        "capture_manifest_sha256_menurut_t43": "2affe3ac3487ff4c5cb7bae9896a5fefd9d1100086523dea4ca5aa6c64c812cd",
+        "capture_log_sha256_menurut_t43": "734f704592ff59295b51a3785a3b8cf437312805dbe9a3eb6ac2086b3bae82b9"
+      },
+      "20261112_t43_idle_negatif_01": {
+        "session_id": "20261112_t43_idle_negatif_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_negatif_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_negatif_01/capture_frames.jsonl",
+            "sha256": "5c3d7d25609c8e26d84ce7adea1a3251e7efff4dfaf9aac7882cd7100d00a925",
+            "bytes": 6058,
+            "salinan_sha256": "5c3d7d25609c8e26d84ce7adea1a3251e7efff4dfaf9aac7882cd7100d00a925"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_negatif_01/capture_manifest.json",
+            "sha256": "3d19cca2c4d72d8b912e3fac1e0fe0357f6bbd06711c47ab710efb481b60f2c9",
+            "bytes": 420,
+            "salinan_sha256": "3d19cca2c4d72d8b912e3fac1e0fe0357f6bbd06711c47ab710efb481b60f2c9"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "725d1329c637a89c59431440187e0c8137518cfe34dd6df2a44bf58c834d250c",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "7de6b7601ebadfc969c43490be2ebb50e371e741876d6c44483554d60fbd87e1",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "87232cf10777d7b81361add57f9b1a9f8738157eaea375581601b2cc1d61067f",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 60,
+        "jumlah_gambar_tidak_disalin": 30,
+        "capture_manifest": {
+          "session_id": "20261112_t43_idle_negatif_01",
+          "condition": "servo_idle",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:28:36.082090+00:00",
+          "ended_at_utc": "2026-11-12T05:29:07.544408+00:00",
+          "frame_count": 30,
+          "interval_sec": 1.0,
+          "max_frames": 30,
+          "duration_sec": 55.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "3d19cca2c4d72d8b912e3fac1e0fe0357f6bbd06711c47ab710efb481b60f2c9",
+        "capture_frames_sha256": "5c3d7d25609c8e26d84ce7adea1a3251e7efff4dfaf9aac7882cd7100d00a925",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:28:36.923175+00:00",
+          "frame_000002.jpg": "2026-11-12T05:28:38.128577+00:00",
+          "frame_000003.jpg": "2026-11-12T05:28:39.171605+00:00",
+          "frame_000004.jpg": "2026-11-12T05:28:40.216193+00:00",
+          "frame_000005.jpg": "2026-11-12T05:28:41.216780+00:00",
+          "frame_000006.jpg": "2026-11-12T05:28:42.216113+00:00",
+          "frame_000007.jpg": "2026-11-12T05:28:43.219376+00:00",
+          "frame_000008.jpg": "2026-11-12T05:28:44.260867+00:00",
+          "frame_000009.jpg": "2026-11-12T05:28:45.431911+00:00",
+          "frame_000010.jpg": "2026-11-12T05:28:46.476760+00:00",
+          "frame_000011.jpg": "2026-11-12T05:28:47.515842+00:00",
+          "frame_000012.jpg": "2026-11-12T05:28:48.516164+00:00",
+          "frame_000013.jpg": "2026-11-12T05:28:49.522895+00:00",
+          "frame_000014.jpg": "2026-11-12T05:28:50.564306+00:00",
+          "frame_000015.jpg": "2026-11-12T05:28:51.691400+00:00",
+          "frame_000016.jpg": "2026-11-12T05:28:52.694548+00:00",
+          "frame_000017.jpg": "2026-11-12T05:28:53.694919+00:00",
+          "frame_000018.jpg": "2026-11-12T05:28:54.824052+00:00",
+          "frame_000019.jpg": "2026-11-12T05:28:55.946283+00:00",
+          "frame_000020.jpg": "2026-11-12T05:28:56.951198+00:00",
+          "frame_000021.jpg": "2026-11-12T05:28:57.990492+00:00",
+          "frame_000022.jpg": "2026-11-12T05:28:59.034006+00:00",
+          "frame_000023.jpg": "2026-11-12T05:29:00.082236+00:00",
+          "frame_000024.jpg": "2026-11-12T05:29:01.414259+00:00",
+          "frame_000025.jpg": "2026-11-12T05:29:02.413761+00:00",
+          "frame_000026.jpg": "2026-11-12T05:29:03.417241+00:00",
+          "frame_000027.jpg": "2026-11-12T05:29:04.457638+00:00",
+          "frame_000028.jpg": "2026-11-12T05:29:05.466159+00:00",
+          "frame_000029.jpg": "2026-11-12T05:29:06.505054+00:00",
+          "frame_000030.jpg": "2026-11-12T05:29:07.543691+00:00"
+        },
+        "peran_t43": "diam_kosong",
+        "jumlah_frame_t43": 30,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg"
+        ],
+        "capture_manifest_sha256_menurut_t43": "3d19cca2c4d72d8b912e3fac1e0fe0357f6bbd06711c47ab710efb481b60f2c9",
+        "capture_log_sha256_menurut_t43": "5c3d7d25609c8e26d84ce7adea1a3251e7efff4dfaf9aac7882cd7100d00a925"
+      },
+      "20261112_t43_walk_negatif_01": {
+        "session_id": "20261112_t43_walk_negatif_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_negatif_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_negatif_01/capture_frames.jsonl",
+            "sha256": "b59fd3e9bceea329f864d6769ab719ce3fb6698c518e2e3f7715011a05c3edb4",
+            "bytes": 6055,
+            "salinan_sha256": "b59fd3e9bceea329f864d6769ab719ce3fb6698c518e2e3f7715011a05c3edb4"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_negatif_01/capture_manifest.json",
+            "sha256": "87327687586421f42bed9c35924320028637cf715ca8f4f683a981b299670036",
+            "bytes": 417,
+            "salinan_sha256": "87327687586421f42bed9c35924320028637cf715ca8f4f683a981b299670036"
+          }
+        ],
+        "tidak_disalin": [
+          {
+            "berkas": "labels_auto/predictions.jsonl",
+            "sha256": "e85ac5c4c0465e45d445fd79ce3802a61dd66d4a6b1267d9e752f3c07f44ab62",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_auto/prelabel_manifest.json",
+            "sha256": "0354dc04e19fe418fdfb949110bda52f8bec56204a5d8738ed5a58418e498fe3",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          },
+          {
+            "berkas": "labels_reviewed/review_log.jsonl",
+            "sha256": "d09a71384df16d2bba87806c0bf3c2589d89606f4f45750c45f63a7fe3b9936d",
+            "alasan": [
+              "berada di folder label; tidak disalin"
+            ]
+          }
+        ],
+        "jumlah_label_txt_tidak_disalin": 60,
+        "jumlah_gambar_tidak_disalin": 30,
+        "capture_manifest": {
+          "session_id": "20261112_t43_walk_negatif_01",
+          "condition": "walking",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:30:09.625323+00:00",
+          "ended_at_utc": "2026-11-12T05:30:41.744174+00:00",
+          "frame_count": 30,
+          "interval_sec": 1.0,
+          "max_frames": 30,
+          "duration_sec": 80.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "87327687586421f42bed9c35924320028637cf715ca8f4f683a981b299670036",
+        "capture_frames_sha256": "b59fd3e9bceea329f864d6769ab719ce3fb6698c518e2e3f7715011a05c3edb4",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:30:11.109995+00:00",
+          "frame_000002.jpg": "2026-11-12T05:30:12.110460+00:00",
+          "frame_000003.jpg": "2026-11-12T05:30:13.404805+00:00",
+          "frame_000004.jpg": "2026-11-12T05:30:14.404964+00:00",
+          "frame_000005.jpg": "2026-11-12T05:30:15.405983+00:00",
+          "frame_000006.jpg": "2026-11-12T05:30:16.409019+00:00",
+          "frame_000007.jpg": "2026-11-12T05:30:17.450023+00:00",
+          "frame_000008.jpg": "2026-11-12T05:30:18.498933+00:00",
+          "frame_000009.jpg": "2026-11-12T05:30:19.540438+00:00",
+          "frame_000010.jpg": "2026-11-12T05:30:20.836011+00:00",
+          "frame_000011.jpg": "2026-11-12T05:30:21.875408+00:00",
+          "frame_000012.jpg": "2026-11-12T05:30:22.916372+00:00",
+          "frame_000013.jpg": "2026-11-12T05:30:23.964749+00:00",
+          "frame_000014.jpg": "2026-11-12T05:30:24.968669+00:00",
+          "frame_000015.jpg": "2026-11-12T05:30:25.970109+00:00",
+          "frame_000016.jpg": "2026-11-12T05:30:26.968053+00:00",
+          "frame_000017.jpg": "2026-11-12T05:30:28.019007+00:00",
+          "frame_000018.jpg": "2026-11-12T05:30:29.051442+00:00",
+          "frame_000019.jpg": "2026-11-12T05:30:30.056903+00:00",
+          "frame_000020.jpg": "2026-11-12T05:30:31.099210+00:00",
+          "frame_000021.jpg": "2026-11-12T05:30:32.144288+00:00",
+          "frame_000022.jpg": "2026-11-12T05:30:33.186497+00:00",
+          "frame_000023.jpg": "2026-11-12T05:30:34.187875+00:00",
+          "frame_000024.jpg": "2026-11-12T05:30:35.231553+00:00",
+          "frame_000025.jpg": "2026-11-12T05:30:36.315958+00:00",
+          "frame_000026.jpg": "2026-11-12T05:30:37.322531+00:00",
+          "frame_000027.jpg": "2026-11-12T05:30:38.322643+00:00",
+          "frame_000028.jpg": "2026-11-12T05:30:39.366572+00:00",
+          "frame_000029.jpg": "2026-11-12T05:30:40.700961+00:00",
+          "frame_000030.jpg": "2026-11-12T05:30:41.742995+00:00"
+        },
+        "peran_t43": "jalan_kosong",
+        "jumlah_frame_t43": 30,
+        "frame_dipakai": [
+          "frame_000001.jpg",
+          "frame_000002.jpg",
+          "frame_000003.jpg",
+          "frame_000004.jpg",
+          "frame_000005.jpg",
+          "frame_000006.jpg",
+          "frame_000007.jpg",
+          "frame_000008.jpg",
+          "frame_000009.jpg",
+          "frame_000010.jpg",
+          "frame_000011.jpg",
+          "frame_000012.jpg",
+          "frame_000013.jpg",
+          "frame_000014.jpg",
+          "frame_000015.jpg",
+          "frame_000016.jpg",
+          "frame_000017.jpg",
+          "frame_000018.jpg",
+          "frame_000019.jpg",
+          "frame_000020.jpg",
+          "frame_000021.jpg",
+          "frame_000022.jpg",
+          "frame_000023.jpg",
+          "frame_000024.jpg",
+          "frame_000025.jpg",
+          "frame_000026.jpg",
+          "frame_000027.jpg",
+          "frame_000028.jpg",
+          "frame_000029.jpg",
+          "frame_000030.jpg"
+        ],
+        "capture_manifest_sha256_menurut_t43": "87327687586421f42bed9c35924320028637cf715ca8f4f683a981b299670036",
+        "capture_log_sha256_menurut_t43": "b59fd3e9bceea329f864d6769ab719ce3fb6698c518e2e3f7715011a05c3edb4"
+      },
+      "20261112_t43_idle_berobjek_01": {
+        "session_id": "20261112_t43_idle_berobjek_01",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_01",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_01/capture_frames.jsonl",
+            "sha256": "7fa34e150664b272d00c864bec6f051cc46da3cc6d16e54f1ed87cccb3659934",
+            "bytes": 4241,
+            "salinan_sha256": "7fa34e150664b272d00c864bec6f051cc46da3cc6d16e54f1ed87cccb3659934"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_01/capture_manifest.json",
+            "sha256": "a0d4f538bb1d8ffd069da69155460077a60805fa9b4460d39d2341679177add9",
+            "bytes": 416,
+            "salinan_sha256": "a0d4f538bb1d8ffd069da69155460077a60805fa9b4460d39d2341679177add9"
+          },
+          {
+            "berkas": "t43_integrity_partial_pause.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_01/t43_integrity_partial_pause.json",
+            "sha256": "fe44c81c18d5126768feed46c7c8f55e26bb306f477fc9bb2ff99d435f4060db",
+            "bytes": 2880,
+            "salinan_sha256": "fe44c81c18d5126768feed46c7c8f55e26bb306f477fc9bb2ff99d435f4060db"
+          }
+        ],
+        "tidak_disalin": [],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 21,
+        "capture_manifest": {
+          "session_id": "20261112_t43_idle_berobjek_01",
+          "condition": "servo_idle",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T04:51:06.938625+00:00",
+          "ended_at_utc": "2026-11-12T04:51:29.702369+00:00",
+          "frame_count": 21,
+          "interval_sec": 1.0,
+          "max_frames": 100,
+          "duration_sec": 150.0,
+          "status": "interrupted",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "a0d4f538bb1d8ffd069da69155460077a60805fa9b4460d39d2341679177add9",
+        "capture_frames_sha256": "7fa34e150664b272d00c864bec6f051cc46da3cc6d16e54f1ed87cccb3659934",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T04:51:07.126616+00:00",
+          "frame_000002.jpg": "2026-11-12T04:51:08.219712+00:00",
+          "frame_000003.jpg": "2026-11-12T04:51:09.254652+00:00",
+          "frame_000004.jpg": "2026-11-12T04:51:10.254757+00:00",
+          "frame_000005.jpg": "2026-11-12T04:51:11.261210+00:00",
+          "frame_000006.jpg": "2026-11-12T04:51:12.461484+00:00",
+          "frame_000007.jpg": "2026-11-12T04:51:13.600209+00:00",
+          "frame_000008.jpg": "2026-11-12T04:51:14.666165+00:00",
+          "frame_000009.jpg": "2026-11-12T04:51:15.765546+00:00",
+          "frame_000010.jpg": "2026-11-12T04:51:16.807573+00:00",
+          "frame_000011.jpg": "2026-11-12T04:51:17.838355+00:00",
+          "frame_000012.jpg": "2026-11-12T04:51:18.842553+00:00",
+          "frame_000013.jpg": "2026-11-12T04:51:19.919261+00:00",
+          "frame_000014.jpg": "2026-11-12T04:51:21.449781+00:00",
+          "frame_000015.jpg": "2026-11-12T04:51:22.450892+00:00",
+          "frame_000016.jpg": "2026-11-12T04:51:23.486268+00:00",
+          "frame_000017.jpg": "2026-11-12T04:51:24.486154+00:00",
+          "frame_000018.jpg": "2026-11-12T04:51:25.523003+00:00",
+          "frame_000019.jpg": "2026-11-12T04:51:26.525331+00:00",
+          "frame_000020.jpg": "2026-11-12T04:51:27.526031+00:00",
+          "frame_000021.jpg": "2026-11-12T04:51:28.532887+00:00"
+        },
+        "peran_t43": "dikecualikan_diarsipkan",
+        "jumlah_frame_t43": 0,
+        "frame_dipakai": []
+      },
+      "20261112_t43_idle_berobjek_02": {
+        "session_id": "20261112_t43_idle_berobjek_02",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_02",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_02/capture_frames.jsonl",
+            "sha256": "bfb9bb3ee98f4205e21e60aaa10414038666e932ae8411614b2e517e8eaa4b49",
+            "bytes": 15953,
+            "salinan_sha256": "bfb9bb3ee98f4205e21e60aaa10414038666e932ae8411614b2e517e8eaa4b49"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_idle_berobjek_02/capture_manifest.json",
+            "sha256": "f1b3a26ca85e2968eaab63e60316f0e80c21b0d9aab8481fd620bf6047a9b34b",
+            "bytes": 422,
+            "salinan_sha256": "f1b3a26ca85e2968eaab63e60316f0e80c21b0d9aab8481fd620bf6047a9b34b"
+          }
+        ],
+        "tidak_disalin": [],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 79,
+        "capture_manifest": {
+          "session_id": "20261112_t43_idle_berobjek_02",
+          "condition": "servo_idle",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T04:52:41.758217+00:00",
+          "ended_at_utc": "2026-11-12T04:54:03.622270+00:00",
+          "frame_count": 79,
+          "interval_sec": 1.0,
+          "max_frames": 79,
+          "duration_sec": 120.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "f1b3a26ca85e2968eaab63e60316f0e80c21b0d9aab8481fd620bf6047a9b34b",
+        "capture_frames_sha256": "bfb9bb3ee98f4205e21e60aaa10414038666e932ae8411614b2e517e8eaa4b49",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T04:52:41.930315+00:00",
+          "frame_000002.jpg": "2026-11-12T04:52:42.930811+00:00",
+          "frame_000003.jpg": "2026-11-12T04:52:43.965724+00:00",
+          "frame_000004.jpg": "2026-11-12T04:52:45.138030+00:00",
+          "frame_000005.jpg": "2026-11-12T04:52:46.176000+00:00",
+          "frame_000006.jpg": "2026-11-12T04:52:47.310377+00:00",
+          "frame_000007.jpg": "2026-11-12T04:52:48.445965+00:00",
+          "frame_000008.jpg": "2026-11-12T04:52:49.581498+00:00",
+          "frame_000009.jpg": "2026-11-12T04:52:50.614724+00:00",
+          "frame_000010.jpg": "2026-11-12T04:52:51.650575+00:00",
+          "frame_000011.jpg": "2026-11-12T04:52:52.753590+00:00",
+          "frame_000012.jpg": "2026-11-12T04:52:53.753693+00:00",
+          "frame_000013.jpg": "2026-11-12T04:52:54.789455+00:00",
+          "frame_000014.jpg": "2026-11-12T04:52:55.790816+00:00",
+          "frame_000015.jpg": "2026-11-12T04:52:56.792701+00:00",
+          "frame_000016.jpg": "2026-11-12T04:52:57.793125+00:00",
+          "frame_000017.jpg": "2026-11-12T04:52:58.797740+00:00",
+          "frame_000018.jpg": "2026-11-12T04:52:59.800755+00:00",
+          "frame_000019.jpg": "2026-11-12T04:53:00.833616+00:00",
+          "frame_000020.jpg": "2026-11-12T04:53:01.837402+00:00",
+          "frame_000021.jpg": "2026-11-12T04:53:02.841635+00:00",
+          "frame_000022.jpg": "2026-11-12T04:53:03.877557+00:00",
+          "frame_000023.jpg": "2026-11-12T04:53:04.876695+00:00",
+          "frame_000024.jpg": "2026-11-12T04:53:06.486766+00:00",
+          "frame_000025.jpg": "2026-11-12T04:53:07.485882+00:00",
+          "frame_000026.jpg": "2026-11-12T04:53:08.891133+00:00",
+          "frame_000027.jpg": "2026-11-12T04:53:09.924893+00:00",
+          "frame_000028.jpg": "2026-11-12T04:53:10.925169+00:00",
+          "frame_000029.jpg": "2026-11-12T04:53:11.929704+00:00",
+          "frame_000030.jpg": "2026-11-12T04:53:12.929965+00:00",
+          "frame_000031.jpg": "2026-11-12T04:53:13.936265+00:00",
+          "frame_000032.jpg": "2026-11-12T04:53:15.006893+00:00",
+          "frame_000033.jpg": "2026-11-12T04:53:16.018734+00:00",
+          "frame_000034.jpg": "2026-11-12T04:53:17.048888+00:00",
+          "frame_000035.jpg": "2026-11-12T04:53:18.192331+00:00",
+          "frame_000036.jpg": "2026-11-12T04:53:19.193750+00:00",
+          "frame_000037.jpg": "2026-11-12T04:53:20.201437+00:00",
+          "frame_000038.jpg": "2026-11-12T04:53:21.204975+00:00",
+          "frame_000039.jpg": "2026-11-12T04:53:22.783293+00:00",
+          "frame_000040.jpg": "2026-11-12T04:53:23.782043+00:00",
+          "frame_000041.jpg": "2026-11-12T04:53:24.788299+00:00",
+          "frame_000042.jpg": "2026-11-12T04:53:25.790583+00:00",
+          "frame_000043.jpg": "2026-11-12T04:53:26.799831+00:00",
+          "frame_000044.jpg": "2026-11-12T04:53:27.803676+00:00",
+          "frame_000045.jpg": "2026-11-12T04:53:28.910594+00:00",
+          "frame_000046.jpg": "2026-11-12T04:53:29.913669+00:00",
+          "frame_000047.jpg": "2026-11-12T04:53:30.915331+00:00",
+          "frame_000048.jpg": "2026-11-12T04:53:31.921908+00:00",
+          "frame_000049.jpg": "2026-11-12T04:53:32.927107+00:00",
+          "frame_000050.jpg": "2026-11-12T04:53:33.930007+00:00",
+          "frame_000051.jpg": "2026-11-12T04:53:34.936210+00:00",
+          "frame_000052.jpg": "2026-11-12T04:53:35.937190+00:00",
+          "frame_000053.jpg": "2026-11-12T04:53:36.943599+00:00",
+          "frame_000054.jpg": "2026-11-12T04:53:37.945792+00:00",
+          "frame_000055.jpg": "2026-11-12T04:53:38.989114+00:00",
+          "frame_000056.jpg": "2026-11-12T04:53:39.992425+00:00",
+          "frame_000057.jpg": "2026-11-12T04:53:40.992657+00:00",
+          "frame_000058.jpg": "2026-11-12T04:53:41.998584+00:00",
+          "frame_000059.jpg": "2026-11-12T04:53:43.008044+00:00",
+          "frame_000060.jpg": "2026-11-12T04:53:44.006591+00:00",
+          "frame_000061.jpg": "2026-11-12T04:53:45.012435+00:00",
+          "frame_000062.jpg": "2026-11-12T04:53:46.082304+00:00",
+          "frame_000063.jpg": "2026-11-12T04:53:47.088211+00:00",
+          "frame_000064.jpg": "2026-11-12T04:53:48.089977+00:00",
+          "frame_000065.jpg": "2026-11-12T04:53:49.161837+00:00",
+          "frame_000066.jpg": "2026-11-12T04:53:50.165538+00:00",
+          "frame_000067.jpg": "2026-11-12T04:53:51.167480+00:00",
+          "frame_000068.jpg": "2026-11-12T04:53:52.175585+00:00",
+          "frame_000069.jpg": "2026-11-12T04:53:53.178608+00:00",
+          "frame_000070.jpg": "2026-11-12T04:53:54.252241+00:00",
+          "frame_000071.jpg": "2026-11-12T04:53:55.286326+00:00",
+          "frame_000072.jpg": "2026-11-12T04:53:56.287873+00:00",
+          "frame_000073.jpg": "2026-11-12T04:53:57.293372+00:00",
+          "frame_000074.jpg": "2026-11-12T04:53:58.297884+00:00",
+          "frame_000075.jpg": "2026-11-12T04:53:59.300196+00:00",
+          "frame_000076.jpg": "2026-11-12T04:54:00.474901+00:00",
+          "frame_000077.jpg": "2026-11-12T04:54:01.475009+00:00",
+          "frame_000078.jpg": "2026-11-12T04:54:02.622264+00:00",
+          "frame_000079.jpg": "2026-11-12T04:54:03.621304+00:00"
+        },
+        "peran_t43": "dikecualikan_diarsipkan",
+        "jumlah_frame_t43": 0,
+        "frame_dipakai": []
+      },
+      "20261112_t43_walk_objek_02": {
+        "session_id": "20261112_t43_walk_objek_02",
+        "path": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_02",
+        "ada": true,
+        "disalin": [
+          {
+            "berkas": "capture_frames.jsonl",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_02/capture_frames.jsonl",
+            "sha256": "61d04e5a560af82b7e48a44c937cda89282010fe533f618caf971965ac288a6d",
+            "bytes": 10093,
+            "salinan_sha256": "61d04e5a560af82b7e48a44c937cda89282010fe533f618caf971965ac288a6d"
+          },
+          {
+            "berkas": "capture_manifest.json",
+            "sumber": "/home/humanoid/bre_skripsi/data/op3_camera_eval/sessions/20261112_t43_walk_objek_02/capture_manifest.json",
+            "sha256": "a56ae3e924224c6e3c0435fada73c32288d5917f2f77a54dffa8818ef31f52ed",
+            "bytes": 415,
+            "salinan_sha256": "a56ae3e924224c6e3c0435fada73c32288d5917f2f77a54dffa8818ef31f52ed"
+          }
+        ],
+        "tidak_disalin": [],
+        "jumlah_label_txt_tidak_disalin": 0,
+        "jumlah_gambar_tidak_disalin": 50,
+        "capture_manifest": {
+          "session_id": "20261112_t43_walk_objek_02",
+          "condition": "walking",
+          "image_topic": "/thesis/image_raw",
+          "started_at_utc": "2026-11-12T05:20:16.761385+00:00",
+          "ended_at_utc": "2026-11-12T05:21:07.751216+00:00",
+          "frame_count": 50,
+          "interval_sec": 1.0,
+          "max_frames": 50,
+          "duration_sec": 80.0,
+          "status": "max_frames_reached",
+          "images_dir": "images",
+          "frames_journal": "capture_frames.jsonl"
+        },
+        "capture_manifest_sha256": "a56ae3e924224c6e3c0435fada73c32288d5917f2f77a54dffa8818ef31f52ed",
+        "capture_frames_sha256": "61d04e5a560af82b7e48a44c937cda89282010fe533f618caf971965ac288a6d",
+        "capture_frames": {
+          "frame_000001.jpg": "2026-11-12T05:20:17.496477+00:00",
+          "frame_000002.jpg": "2026-11-12T05:20:18.497291+00:00",
+          "frame_000003.jpg": "2026-11-12T05:20:19.497693+00:00",
+          "frame_000004.jpg": "2026-11-12T05:20:20.501531+00:00",
+          "frame_000005.jpg": "2026-11-12T05:20:21.506323+00:00",
+          "frame_000006.jpg": "2026-11-12T05:20:22.546322+00:00",
+          "frame_000007.jpg": "2026-11-12T05:20:23.574087+00:00",
+          "frame_000008.jpg": "2026-11-12T05:20:24.577158+00:00",
+          "frame_000009.jpg": "2026-11-12T05:20:25.581525+00:00",
+          "frame_000010.jpg": "2026-11-12T05:20:26.618066+00:00",
+          "frame_000011.jpg": "2026-11-12T05:20:27.618314+00:00",
+          "frame_000012.jpg": "2026-11-12T05:20:28.621945+00:00",
+          "frame_000013.jpg": "2026-11-12T05:20:29.690271+00:00",
+          "frame_000014.jpg": "2026-11-12T05:20:30.694905+00:00",
+          "frame_000015.jpg": "2026-11-12T05:20:31.726075+00:00",
+          "frame_000016.jpg": "2026-11-12T05:20:32.731109+00:00",
+          "frame_000017.jpg": "2026-11-12T05:20:33.738714+00:00",
+          "frame_000018.jpg": "2026-11-12T05:20:34.766974+00:00",
+          "frame_000019.jpg": "2026-11-12T05:20:35.771012+00:00",
+          "frame_000020.jpg": "2026-11-12T05:20:36.774554+00:00",
+          "frame_000021.jpg": "2026-11-12T05:20:37.774838+00:00",
+          "frame_000022.jpg": "2026-11-12T05:20:38.779720+00:00",
+          "frame_000023.jpg": "2026-11-12T05:20:39.815260+00:00",
+          "frame_000024.jpg": "2026-11-12T05:20:40.823613+00:00",
+          "frame_000025.jpg": "2026-11-12T05:20:41.820012+00:00",
+          "frame_000026.jpg": "2026-11-12T05:20:42.855475+00:00",
+          "frame_000027.jpg": "2026-11-12T05:20:43.891809+00:00",
+          "frame_000028.jpg": "2026-11-12T05:20:44.896133+00:00",
+          "frame_000029.jpg": "2026-11-12T05:20:45.896033+00:00",
+          "frame_000030.jpg": "2026-11-12T05:20:46.932349+00:00",
+          "frame_000031.jpg": "2026-11-12T05:20:47.971492+00:00",
+          "frame_000032.jpg": "2026-11-12T05:20:49.004777+00:00",
+          "frame_000033.jpg": "2026-11-12T05:20:50.040807+00:00",
+          "frame_000034.jpg": "2026-11-12T05:20:51.040701+00:00",
+          "frame_000035.jpg": "2026-11-12T05:20:52.043795+00:00",
+          "frame_000036.jpg": "2026-11-12T05:20:53.080005+00:00",
+          "frame_000037.jpg": "2026-11-12T05:20:54.153967+00:00",
+          "frame_000038.jpg": "2026-11-12T05:20:55.518853+00:00",
+          "frame_000039.jpg": "2026-11-12T05:20:56.590360+00:00",
+          "frame_000040.jpg": "2026-11-12T05:20:57.624943+00:00",
+          "frame_000041.jpg": "2026-11-12T05:20:58.624998+00:00",
+          "frame_000042.jpg": "2026-11-12T05:20:59.628640+00:00",
+          "frame_000043.jpg": "2026-11-12T05:21:00.664213+00:00",
+          "frame_000044.jpg": "2026-11-12T05:21:01.664323+00:00",
+          "frame_000045.jpg": "2026-11-12T05:21:02.668481+00:00",
+          "frame_000046.jpg": "2026-11-12T05:21:03.704367+00:00",
+          "frame_000047.jpg": "2026-11-12T05:21:04.705306+00:00",
+          "frame_000048.jpg": "2026-11-12T05:21:05.744042+00:00",
+          "frame_000049.jpg": "2026-11-12T05:21:06.745770+00:00",
+          "frame_000050.jpg": "2026-11-12T05:21:07.749663+00:00"
+        },
+        "peran_t43": "dikecualikan_diarsipkan",
+        "jumlah_frame_t43": 0,
+        "frame_dipakai": []
+      }
+    }
+  },
+  "teacher": {
+    "folder": {
+      "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32": {
+        "ada": true,
+        "berkas": [
+          {
+            "nama": "args.yaml",
+            "bytes": 1812,
+            "sha256": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d",
+            "mtime_utc": "2026-09-23T13:14:43.986585+00:00"
+          },
+          {
+            "nama": "best.pt",
+            "bytes": 5481875,
+            "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+            "mtime_utc": "2026-09-30T14:41:57.306473+00:00"
+          },
+          {
+            "nama": "last.pt",
+            "bytes": 5481875,
+            "sha256": "0aff6208662e34a890169c3aea224767b6cd1b1757c329a20e3b3a129b619a94",
+            "mtime_utc": "2026-09-30T14:41:57.310473+00:00"
+          },
+          {
+            "nama": "manifest.json",
+            "bytes": 923,
+            "sha256": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+            "mtime_utc": "2026-09-23T13:14:43.986585+00:00"
+          },
+          {
+            "nama": "results.csv",
+            "bytes": 12687,
+            "sha256": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e",
+            "mtime_utc": "2026-09-23T13:14:43.987586+00:00"
+          }
+        ]
+      },
+      "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/.cache/hardware_models/fp32_pytorch": {
+        "ada": true,
+        "berkas": [
+          {
+            "nama": "best.pt",
+            "bytes": 5481875,
+            "sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+            "mtime_utc": "2026-09-23T14:14:07.600525+00:00"
+          }
+        ]
+      }
+    },
+    "disalin": [
+      {
+        "berkas": "manifest.json",
+        "sumber": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/manifest.json",
+        "sha256": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f",
+        "bytes": 923,
+        "salinan_sha256": "197b14253bb73806cb17481bf4092c378752059cbc8f67d64ab07d8e0002af5f"
+      },
+      {
+        "berkas": "args.yaml",
+        "sumber": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/args.yaml",
+        "sha256": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d",
+        "bytes": 1812,
+        "salinan_sha256": "472b966655851f72f0d213d6aba7348b4c059326cd2870864f46a172a6c6b22d"
+      },
+      {
+        "berkas": "results.csv",
+        "sumber": "/home/humanoid/ros2_jazzy/skripsi-yolo11-op3/artifacts/checkpoints/fp32/results.csv",
+        "sha256": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e",
+        "bytes": 12687,
+        "salinan_sha256": "52fc98458a396bdc0a9fdee41baa191c82339e7c1bd34b53affc3b33a85f5f8e"
+      }
+    ]
+  }
+}

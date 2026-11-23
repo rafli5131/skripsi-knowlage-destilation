@@ -1,0 +1,1051 @@
+{
+  "dibuat_utc": "2026-11-23T02:18:01+00:00",
+  "mulai_utc": "2026-11-23T02:18:01+00:00",
+  "hostname": "humanoid-NUC12WSHi5",
+  "python": "3.12.3",
+  "repo": "/home/humanoid/bre_skripsi",
+  "skrip": "/tmp/op3_log_pelengkap_20261123T021748Z/ekstrak_jendela.py",
+  "skrip_sha256": "41f8e2cddf79f778b0b74b345eb235daff5a118d318af03844bcf96750d015bc",
+  "masukan_runs_sha256": "41767a97ed4271256d8119e5d0380c00b28ed3e5814c92821a61738ba631dc46",
+  "toleransi": 1e-06,
+  "ringkasan": {
+    "diekstrak": 15
+  },
+  "runs": [
+    {
+      "run_id": "20261103_eq_sup1337_idle_u1_ulang2",
+      "t36": {
+        "window_start_utc": "2026-11-03T06:17:51.329579+00:00",
+        "window_end_utc": "2026-11-03T06:18:51.329579+00:00",
+        "frames": "719",
+        "error_frames": "0",
+        "latency_mean_ms": "74.48116733101944",
+        "fps": "11.999279708975687",
+        "raw_csv_sha256": "3f0c34e22ffca1a8425028b77a93a7fe2454d9911343543ce9545e2ef8918dbf",
+        "metadata_sha256": "c17da1cd09919a58bad1d4000d54c3d004872b26f4c30372b0a38708cb1ab043"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u1_ulang2.csv",
+          "sha256": "3f0c34e22ffca1a8425028b77a93a7fe2454d9911343543ce9545e2ef8918dbf",
+          "bytes": 242239
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u1_ulang2.json",
+          "sha256": "c17da1cd09919a58bad1d4000d54c3d004872b26f4c30372b0a38708cb1ab043",
+          "bytes": 2474
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u1_ulang2_detections.csv",
+          "sha256": "1ed20a3d52be3b6ae263a96ed39dd33fc5a6d9eed0de32ac75e683bd7e6cfa84",
+          "bytes": 455595
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_idle_u1_ulang2/jendela_runtime.csv",
+          "sha256": "f3231642aa671cadd373d31b4225ba3a90435946ad55d355180c057eddefa501",
+          "baris": 719
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_idle_u1_ulang2/jendela_deteksi.csv",
+          "sha256": "230fff88677e405c975e422f7d874f8717b51a208f195d5371afcc44462b4baf",
+          "baris": 2157
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 719,
+          "jendela": 719,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 74.48116733101944,
+          "jendela": 74.48116733101944,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 11.999279708975687,
+          "jendela": 11.999279708975687,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_sup1337_idle_u2",
+      "t36": {
+        "window_start_utc": "2026-11-03T06:03:01.172516+00:00",
+        "window_end_utc": "2026-11-03T06:04:01.172516+00:00",
+        "frames": "749",
+        "error_frames": "0",
+        "latency_mean_ms": "69.39117610013412",
+        "fps": "12.472744427146942",
+        "raw_csv_sha256": "3554cb79135238b53c6e2500938b1746a0fa94a37eeae2102fa13b82e7123355",
+        "metadata_sha256": "0bddb63e7f599e30684af959df1a2ae7bcb0342d5990a90020ee0550f3fb6f39"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u2.csv",
+          "sha256": "3554cb79135238b53c6e2500938b1746a0fa94a37eeae2102fa13b82e7123355",
+          "bytes": 238288
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u2.json",
+          "sha256": "0bddb63e7f599e30684af959df1a2ae7bcb0342d5990a90020ee0550f3fb6f39",
+          "bytes": 2453
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u2_detections.csv",
+          "sha256": "48884e8e223dbc99425d77ec60e9a547571fe966e20703f78a1eadd9af889d57",
+          "bytes": 440475
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_idle_u2/jendela_runtime.csv",
+          "sha256": "dbfac49434f9cc063f317db4dd3b6d04fe71a99ab588758c17919ce8a9678b67",
+          "baris": 749
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_idle_u2/jendela_deteksi.csv",
+          "sha256": "b7fed633b0b0e08629a7eb803860b9a2080800cf9c509286c0654ee2faafead8",
+          "baris": 2247
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 749,
+          "jendela": 749,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 69.39117610013412,
+          "jendela": 69.39117610013412,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.472744427146942,
+          "jendela": 12.472744427146942,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_sup1337_idle_u3_ulang1",
+      "t36": {
+        "window_start_utc": "2026-11-03T06:14:19.439397+00:00",
+        "window_end_utc": "2026-11-03T06:15:19.439397+00:00",
+        "frames": "717",
+        "error_frames": "0",
+        "latency_mean_ms": "75.48087937518672",
+        "fps": "11.939461261825965",
+        "raw_csv_sha256": "0fa8303df0b549154e0316a26b31cf4a330f0f1e21cfd24b333e1d660accc5e9",
+        "metadata_sha256": "e55a79ce2e5373004e2ca26c4e6ae34f1485e2c7434d0c3906b618d4fec6b8a9"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u3_ulang1.csv",
+          "sha256": "0fa8303df0b549154e0316a26b31cf4a330f0f1e21cfd24b333e1d660accc5e9",
+          "bytes": 235897
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u3_ulang1.json",
+          "sha256": "e55a79ce2e5373004e2ca26c4e6ae34f1485e2c7434d0c3906b618d4fec6b8a9",
+          "bytes": 2474
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_idle_u3_ulang1_detections.csv",
+          "sha256": "0d187b7bbf296128b7c1956f57ba9013e9670f3f73661e57b6ef0bdbfd7f78e1",
+          "bytes": 443705
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_idle_u3_ulang1/jendela_runtime.csv",
+          "sha256": "d7dc709ec0637d9a631af965a16ac356c5f8423aeb2a219e0805c81a09cc6b88",
+          "baris": 717
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_idle_u3_ulang1/jendela_deteksi.csv",
+          "sha256": "4ffc8dc155256d7627c0be0e2550ad6aa2d80c0a9f59693343620f52b5e8d352",
+          "baris": 2151
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 717,
+          "jendela": 717,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 75.48087937518672,
+          "jendela": 75.48087937518672,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 11.939461261825965,
+          "jendela": 11.939461261825965,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_idle_u1",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:03:35.961247+00:00",
+        "window_end_utc": "2026-11-03T10:04:35.961247+00:00",
+        "frames": "728",
+        "error_frames": "0",
+        "latency_mean_ms": "72.90294629119371",
+        "fps": "12.128589069722203",
+        "raw_csv_sha256": "60271665d53603711561a0fd1d61d30bac2581cae0baee2d6bc45cacedc80d41",
+        "metadata_sha256": "e03af36f8f23b2299f9053ec1d2cef5cd5207e666f85d3f8c7b98009b9101cb3"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u1.csv",
+          "sha256": "60271665d53603711561a0fd1d61d30bac2581cae0baee2d6bc45cacedc80d41",
+          "bytes": 232141
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u1.json",
+          "sha256": "e03af36f8f23b2299f9053ec1d2cef5cd5207e666f85d3f8c7b98009b9101cb3",
+          "bytes": 2395
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u1_detections.csv",
+          "sha256": "f44a3479007af5519aaaef561f92ab0316e018fbc275078fe94612665ce3db44",
+          "bytes": 420051
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_idle_u1/jendela_runtime.csv",
+          "sha256": "f09e3be9b019e9981a704b6884576b7449977e2afd4931a33be94cf44f5e4abe",
+          "baris": 728
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_idle_u1/jendela_deteksi.csv",
+          "sha256": "56183aac313da9742373b0d516158ecd0f632d413f08d7b97240c09e91c4f7d4",
+          "baris": 2184
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 728,
+          "jendela": 728,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 72.90294629119371,
+          "jendela": 72.90294629119371,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.128589069722203,
+          "jendela": 12.128589069722203,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_idle_u2",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:07:09.381845+00:00",
+        "window_end_utc": "2026-11-03T10:08:09.381845+00:00",
+        "frames": "721",
+        "error_frames": "0",
+        "latency_mean_ms": "74.59680196394217",
+        "fps": "12.03910642876077",
+        "raw_csv_sha256": "95421be3aaecaefc18839a6ccd693c908f1849a0a8be534a82a47391a8169cc0",
+        "metadata_sha256": "782e2d2eb0e5d0d530519ff9831a53a481058050b716b15dcd4fd42fccd56e6f"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u2.csv",
+          "sha256": "95421be3aaecaefc18839a6ccd693c908f1849a0a8be534a82a47391a8169cc0",
+          "bytes": 231644
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u2.json",
+          "sha256": "782e2d2eb0e5d0d530519ff9831a53a481058050b716b15dcd4fd42fccd56e6f",
+          "bytes": 2396
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u2_detections.csv",
+          "sha256": "3c56c3961cdb60bdc2b5647c2a714cf60ab5825e761d60201417a70b2964a207",
+          "bytes": 418817
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_idle_u2/jendela_runtime.csv",
+          "sha256": "1a0f583a30bf8df7d4f0745dc2270686b9dd2b86ddd5d4dfbdc5f58263606600",
+          "baris": 721
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_idle_u2/jendela_deteksi.csv",
+          "sha256": "9016651ab85c95290b65e8e2be69c24f7c025be73f06e9e6d65febfa01532440",
+          "baris": 2163
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 721,
+          "jendela": 721,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 74.59680196394217,
+          "jendela": 74.59680196394217,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.03910642876077,
+          "jendela": 12.03910642876077,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_idle_u3",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:10:47.322034+00:00",
+        "window_end_utc": "2026-11-03T10:11:47.322034+00:00",
+        "frames": "723",
+        "error_frames": "0",
+        "latency_mean_ms": "74.78131680081196",
+        "fps": "12.045953276283232",
+        "raw_csv_sha256": "e569a059ab0360abaadd87bdc8f244e78cf16b2fb4ca17bdadc41541e9d8bda5",
+        "metadata_sha256": "b1577d8bc8d602a69c0501c74f6578a5b0ab7e360dc7d884331f3f1bcd905f2f"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u3.csv",
+          "sha256": "e569a059ab0360abaadd87bdc8f244e78cf16b2fb4ca17bdadc41541e9d8bda5",
+          "bytes": 231610
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u3.json",
+          "sha256": "b1577d8bc8d602a69c0501c74f6578a5b0ab7e360dc7d884331f3f1bcd905f2f",
+          "bytes": 2395
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_idle_u3_detections.csv",
+          "sha256": "d930198e858c4fb6207a058a4aad295bb0bb870267b7df0ac6f7ff78b99d32f6",
+          "bytes": 428359
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_idle_u3/jendela_runtime.csv",
+          "sha256": "82709053a4d7d90ee43489b37f94a7cbbf6052c517ef1904d35f2f78950f2475",
+          "baris": 723
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_idle_u3/jendela_deteksi.csv",
+          "sha256": "07770c0c3b2457bd72eedb7d975fc84d976c36089c54af44debce7993f2dbf46",
+          "baris": 2230
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 723,
+          "jendela": 723,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 74.78131680081196,
+          "jendela": 74.78131680081196,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.045953276283232,
+          "jendela": 12.045953276283232,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_hybrid1337_walk_u1",
+      "t36": {
+        "window_start_utc": "2026-11-03T05:00:45.821221+00:00",
+        "window_end_utc": "2026-11-03T05:01:45.821221+00:00",
+        "frames": "772",
+        "error_frames": "0",
+        "latency_mean_ms": "68.36783258031392",
+        "fps": "12.87078266728591",
+        "raw_csv_sha256": "c7951b858f45d5f93adaecbd8e25b162afa4d7361fce1d61cb868609b11986c5",
+        "metadata_sha256": "52cd845437c2445bf874a0b7676b0f85e9192890019221eae944b78e92c56ba4"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u1.csv",
+          "sha256": "c7951b858f45d5f93adaecbd8e25b162afa4d7361fce1d61cb868609b11986c5",
+          "bytes": 243152
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u1.json",
+          "sha256": "52cd845437c2445bf874a0b7676b0f85e9192890019221eae944b78e92c56ba4",
+          "bytes": 2455
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u1_detections.csv",
+          "sha256": "c8c344d0d8005be8e753c83376dab46a3156174d5fefc5036c9a3b3e4ac599ea",
+          "bytes": 444578
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_hybrid1337_walk_u1/jendela_runtime.csv",
+          "sha256": "683dcd1b25b583dca8565dab40b5d8f9d8e3a445aa6439340755d069a16730ac",
+          "baris": 772
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_hybrid1337_walk_u1/jendela_deteksi.csv",
+          "sha256": "a8f3ac847c25d140638dc3265732ce15aee3a65ba997bce19a2c163e68de47b0",
+          "baris": 2265
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 772,
+          "jendela": 772,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 68.36783258031392,
+          "jendela": 68.3678325803139,
+          "selisih": -1.4210854715202004e-14,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.87078266728591,
+          "jendela": 12.87078266728591,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_hybrid1337_walk_u2",
+      "t36": {
+        "window_start_utc": "2026-11-03T05:08:09.794711+00:00",
+        "window_end_utc": "2026-11-03T05:09:09.794711+00:00",
+        "frames": "758",
+        "error_frames": "0",
+        "latency_mean_ms": "71.71832757520384",
+        "fps": "12.6369875745359",
+        "raw_csv_sha256": "1441407fb7e8ff293dcea51d55edd92c75b9d60f001d42b86e1f82346ac82d4a",
+        "metadata_sha256": "d0736a4d3fb6f09f677f0677be3f3416e72a795ef48f0d238aec02b142052bff"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u2.csv",
+          "sha256": "1441407fb7e8ff293dcea51d55edd92c75b9d60f001d42b86e1f82346ac82d4a",
+          "bytes": 241395
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u2.json",
+          "sha256": "d0736a4d3fb6f09f677f0677be3f3416e72a795ef48f0d238aec02b142052bff",
+          "bytes": 2455
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u2_detections.csv",
+          "sha256": "264dc2d9b1872941ab767729117c64749629810d5a3998f2049d99e982674329",
+          "bytes": 447608
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_hybrid1337_walk_u2/jendela_runtime.csv",
+          "sha256": "a278212d8a0af70fbc1c2f733b4bb670889c291b90d2a502bc13358b6eda32b1",
+          "baris": 758
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_hybrid1337_walk_u2/jendela_deteksi.csv",
+          "sha256": "9c60af990248290ecb3f4ce661e5c24b1ec0b12334004785dad045350ddffbe2",
+          "baris": 2261
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 758,
+          "jendela": 758,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 71.71832757520384,
+          "jendela": 71.71832757520384,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.6369875745359,
+          "jendela": 12.6369875745359,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_hybrid1337_walk_u3",
+      "t36": {
+        "window_start_utc": "2026-11-03T05:11:54.970358+00:00",
+        "window_end_utc": "2026-11-03T05:12:54.970358+00:00",
+        "frames": "726",
+        "error_frames": "0",
+        "latency_mean_ms": "74.32063693388794",
+        "fps": "12.123105403177782",
+        "raw_csv_sha256": "1ee5b5259e19e62739214190e9244452f78d1b4c5f9a3059d69576e11d720fa3",
+        "metadata_sha256": "a8d6a9f1cf108deb599669e88c9c4e8cae441b81fdd19e502c11b7943da666ce"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u3.csv",
+          "sha256": "1ee5b5259e19e62739214190e9244452f78d1b4c5f9a3059d69576e11d720fa3",
+          "bytes": 232383
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u3.json",
+          "sha256": "a8d6a9f1cf108deb599669e88c9c4e8cae441b81fdd19e502c11b7943da666ce",
+          "bytes": 2455
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_hybrid1337_walk_u3_detections.csv",
+          "sha256": "9bb5a69fd10f6dd84d15d75df944dba84d375c81c7a0cebc4574a653003d0067",
+          "bytes": 431539
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_hybrid1337_walk_u3/jendela_runtime.csv",
+          "sha256": "c916e35797d065060ec78d09d1c7d2425ffc959c44e1947af9dc6f98530083c6",
+          "baris": 726
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_hybrid1337_walk_u3/jendela_deteksi.csv",
+          "sha256": "a5187b7dd51650213d17f1533adc97a509c6221ce0f9de10d6a0718141246d3f",
+          "baris": 2169
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 726,
+          "jendela": 726,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 74.32063693388794,
+          "jendela": 74.32063693388795,
+          "selisih": 1.4210854715202004e-14,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.123105403177782,
+          "jendela": 12.123105403177782,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_sup1337_walk_u1",
+      "t36": {
+        "window_start_utc": "2026-11-03T09:47:50.322989+00:00",
+        "window_end_utc": "2026-11-03T09:48:50.322989+00:00",
+        "frames": "742",
+        "error_frames": "0",
+        "latency_mean_ms": "71.6453200350199",
+        "fps": "12.362915744126484",
+        "raw_csv_sha256": "0b10a23d4a0ae00f8543372be1e10a530f11a7de0d3892d45c3682fbfa968e0f",
+        "metadata_sha256": "bcca43270cc525aaf590b5d9e233fc53d1fd887e8cfa5832179a03a86941c138"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u1.csv",
+          "sha256": "0b10a23d4a0ae00f8543372be1e10a530f11a7de0d3892d45c3682fbfa968e0f",
+          "bytes": 236651
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u1.json",
+          "sha256": "bcca43270cc525aaf590b5d9e233fc53d1fd887e8cfa5832179a03a86941c138",
+          "bytes": 2450
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u1_detections.csv",
+          "sha256": "2b724ed3e291956b4d61ba4394dc84de8632de79c2e4a187de97913c65c536b4",
+          "bytes": 439898
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_walk_u1/jendela_runtime.csv",
+          "sha256": "2ed56f53451808b62483703dc277859b84119bd0d69aacb836696845b0bea468",
+          "baris": 742
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_walk_u1/jendela_deteksi.csv",
+          "sha256": "d1b849f566b1bfc7df4087e4cc3178e52bda2026590a465784bea744ee771263",
+          "baris": 2225
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 742,
+          "jendela": 742,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 71.6453200350199,
+          "jendela": 71.6453200350199,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.362915744126484,
+          "jendela": 12.362915744126484,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_sup1337_walk_u2",
+      "t36": {
+        "window_start_utc": "2026-11-03T09:53:20.579224+00:00",
+        "window_end_utc": "2026-11-03T09:54:20.579224+00:00",
+        "frames": "794",
+        "error_frames": "0",
+        "latency_mean_ms": "67.77259546351176",
+        "fps": "13.230626741963004",
+        "raw_csv_sha256": "8faf96a339258cb2942c8ed2954ae142cc461b16173e4221b1a963ece0ad05e6",
+        "metadata_sha256": "5951b3742bc563975b08cacc6bb77517c269cff544dda1f64e83f8b8051667b3"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u2.csv",
+          "sha256": "8faf96a339258cb2942c8ed2954ae142cc461b16173e4221b1a963ece0ad05e6",
+          "bytes": 246250
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u2.json",
+          "sha256": "5951b3742bc563975b08cacc6bb77517c269cff544dda1f64e83f8b8051667b3",
+          "bytes": 2451
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u2_detections.csv",
+          "sha256": "be3b84c00c830eb14dec61d4cbe909f664dddda641eb1889e39df49d8ad169f9",
+          "bytes": 457968
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_walk_u2/jendela_runtime.csv",
+          "sha256": "0f735c3da20f12ded2dcf230d802bc004a3c826ace97a01fab9992274b9f42a5",
+          "baris": 794
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_walk_u2/jendela_deteksi.csv",
+          "sha256": "4ec622021ae383228ed6780118277a145236d5868d304ad04ebb44bf4b68b2d5",
+          "baris": 2382
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 794,
+          "jendela": 794,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 67.77259546351176,
+          "jendela": 67.77259546351176,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 13.230626741963004,
+          "jendela": 13.230626741963004,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_sup1337_walk_u3",
+      "t36": {
+        "window_start_utc": "2026-11-03T09:57:01.756064+00:00",
+        "window_end_utc": "2026-11-03T09:58:01.756064+00:00",
+        "frames": "739",
+        "error_frames": "0",
+        "latency_mean_ms": "72.9924617685805",
+        "fps": "12.312133813075016",
+        "raw_csv_sha256": "fe31338bd89737ccda327c2d9516928187126ad73c3198a80b3507c573078de1",
+        "metadata_sha256": "6467bbb205fde262586c101f1b529614322b5f57a566b12954f31ead5eaf834e"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u3.csv",
+          "sha256": "fe31338bd89737ccda327c2d9516928187126ad73c3198a80b3507c573078de1",
+          "bytes": 235220
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u3.json",
+          "sha256": "6467bbb205fde262586c101f1b529614322b5f57a566b12954f31ead5eaf834e",
+          "bytes": 2450
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_sup1337_walk_u3_detections.csv",
+          "sha256": "53b338422e32cef2f9b93490828f7a505fb7ffda0d9553fcc6fbcefc99282bee",
+          "bytes": 434937
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_sup1337_walk_u3/jendela_runtime.csv",
+          "sha256": "62a6a9c88a7135bcf7c784a501201d0477bcb2e359b34cd054f2296215f56efe",
+          "baris": 739
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_sup1337_walk_u3/jendela_deteksi.csv",
+          "sha256": "cfc51d4d690b74be09841010eb2de4165b3ba17698dec4585999b71fb389a82c",
+          "baris": 2201
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 739,
+          "jendela": 739,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 72.9924617685805,
+          "jendela": 72.9924617685805,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.312133813075016,
+          "jendela": 12.312133813075016,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_walk_u1",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:19:07.002808+00:00",
+        "window_end_utc": "2026-11-03T10:20:07.002808+00:00",
+        "frames": "725",
+        "error_frames": "0",
+        "latency_mean_ms": "74.74582787716042",
+        "fps": "12.09869291503718",
+        "raw_csv_sha256": "e89636d179f10a11cd0dec3594f8fe5a71af7ce93b22c5df10b488e29f9ac2d4",
+        "metadata_sha256": "735163ab3c01ea2d3cc85e6c054419951e420a064429d67e8b612b5eedee9e79"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u1.csv",
+          "sha256": "e89636d179f10a11cd0dec3594f8fe5a71af7ce93b22c5df10b488e29f9ac2d4",
+          "bytes": 228599
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u1.json",
+          "sha256": "735163ab3c01ea2d3cc85e6c054419951e420a064429d67e8b612b5eedee9e79",
+          "bytes": 2392
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u1_detections.csv",
+          "sha256": "908c74e9eb56532bd2c772d7055d7550c9ef758fdf6adae526e744d427685da3",
+          "bytes": 418795
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_walk_u1/jendela_runtime.csv",
+          "sha256": "798354d535400f576b0b1d0221d2303caed2fd1359684acbbde0eba88f6ef287",
+          "baris": 725
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_walk_u1/jendela_deteksi.csv",
+          "sha256": "84eff59b167b1196912575791a2426834280f82337d99239e7a7ffba6b09f65a",
+          "baris": 2175
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 725,
+          "jendela": 725,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 74.74582787716042,
+          "jendela": 74.74582787716042,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.09869291503718,
+          "jendela": 12.09869291503718,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_walk_u2",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:22:46.619020+00:00",
+        "window_end_utc": "2026-11-03T10:23:46.619020+00:00",
+        "frames": "731",
+        "error_frames": "0",
+        "latency_mean_ms": "73.39308851036084",
+        "fps": "12.16561069165863",
+        "raw_csv_sha256": "fc6d95e40cd5084c1a502640cf19e911994320f9cc20492e390a6923ffb41546",
+        "metadata_sha256": "ecfdef854e7998d02fa2e6e3ca79dce3ff72e5f8e13545c74f33c2b27a642e76"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u2.csv",
+          "sha256": "fc6d95e40cd5084c1a502640cf19e911994320f9cc20492e390a6923ffb41546",
+          "bytes": 229295
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u2.json",
+          "sha256": "ecfdef854e7998d02fa2e6e3ca79dce3ff72e5f8e13545c74f33c2b27a642e76",
+          "bytes": 2393
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u2_detections.csv",
+          "sha256": "95239bf8df74221682632d6d4ccade55fa4e6edd6793af96426321df51cf75d9",
+          "bytes": 419670
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_walk_u2/jendela_runtime.csv",
+          "sha256": "0a8ebb839dd2c766dafe5346702af6f63bfc7aabf7440ae13e608685ab548f8a",
+          "baris": 731
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_walk_u2/jendela_deteksi.csv",
+          "sha256": "a2bf4610d1fc23d3104b1eaa56601c4c548d5baa38526ab103c665889ed88cd3",
+          "baris": 2193
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 731,
+          "jendela": 731,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 73.39308851036084,
+          "jendela": 73.39308851036084,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.16561069165863,
+          "jendela": 12.16561069165863,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    },
+    {
+      "run_id": "20261103_eq_kd42_walk_u3_ulang1",
+      "t36": {
+        "window_start_utc": "2026-11-03T10:31:39.579130+00:00",
+        "window_end_utc": "2026-11-03T10:32:39.579130+00:00",
+        "frames": "742",
+        "error_frames": "0",
+        "latency_mean_ms": "69.81573479928228",
+        "fps": "12.376877834186015",
+        "raw_csv_sha256": "61f2e7faa85f3f58c69bfe8db577630eccdc746275c22cd214edc78e477184a6",
+        "metadata_sha256": "13f8eaec79ca2718275a86008f5339f7ffa8ea218494275755897bba6f8e786f"
+      },
+      "sumber": {
+        "log_mentah": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u3_ulang1.csv",
+          "sha256": "61f2e7faa85f3f58c69bfe8db577630eccdc746275c22cd214edc78e477184a6",
+          "bytes": 240454
+        },
+        "metadata": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u3_ulang1.json",
+          "sha256": "13f8eaec79ca2718275a86008f5339f7ffa8ea218494275755897bba6f8e786f",
+          "bytes": 2413
+        },
+        "log_deteksi": {
+          "path": "/home/humanoid/bre_skripsi/runs/op3_pytorch/20261103_eq_kd42_walk_u3_ulang1_detections.csv",
+          "sha256": "301e4369acb28d5f61804b6a441f7a8cae45547c73bed35cc3fa805baff07a18",
+          "bytes": 447994
+        }
+      },
+      "keluaran": {
+        "jendela_runtime": {
+          "path": "20261103_eq_kd42_walk_u3_ulang1/jendela_runtime.csv",
+          "sha256": "7f6c6b899b2aba813e649d34ac5833785783aeb225e617c7c561fdc780fb0921",
+          "baris": 742
+        },
+        "jendela_deteksi": {
+          "path": "20261103_eq_kd42_walk_u3_ulang1/jendela_deteksi.csv",
+          "sha256": "66a649b2697753af2a95892883010da28506bb396296a7f56e0a7a6152be4b83",
+          "baris": 2226
+        }
+      },
+      "pemeriksaan": {
+        "hash_log_mentah_cocok": true,
+        "hash_metadata_cocok": true,
+        "jumlah_baris": {
+          "t36": 742,
+          "jendela": 742,
+          "lulus": true
+        },
+        "jumlah_error": {
+          "t36": 0,
+          "jendela": 0,
+          "lulus": true
+        },
+        "rerata_end_to_end_ms": {
+          "t36": 69.81573479928228,
+          "jendela": 69.81573479928228,
+          "selisih": 0.0,
+          "lulus": true
+        },
+        "fps": {
+          "t36": 12.376877834186015,
+          "jendela": 12.376877834186015,
+          "selisih": 0.0,
+          "lulus": true
+        }
+      },
+      "status": "diekstrak"
+    }
+  ]
+}

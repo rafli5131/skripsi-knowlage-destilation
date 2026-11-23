@@ -1,0 +1,14 @@
+{
+  "session_id": "20261021_all_three_position_05",
+  "condition": "unknown",
+  "image_topic": "/thesis/image_raw",
+  "started_at_utc": "2026-10-21T10:53:52.562589+00:00",
+  "ended_at_utc": "2026-10-21T10:54:07.576710+00:00",
+  "frame_count": 10,
+  "interval_sec": 1.0,
+  "max_frames": 10,
+  "duration_sec": 60.0,
+  "status": "max_frames_reached",
+  "images_dir": "images",
+  "frames_journal": "capture_frames.jsonl"
+}

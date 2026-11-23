@@ -1,0 +1,14 @@
+{
+  "session_id": "20261112_t43_walk_objek_ulang_01",
+  "condition": "walking",
+  "image_topic": "/thesis/image_raw",
+  "started_at_utc": "2026-11-12T05:23:27.049509+00:00",
+  "ended_at_utc": "2026-11-12T05:24:19.266569+00:00",
+  "frame_count": 50,
+  "interval_sec": 1.0,
+  "max_frames": 50,
+  "duration_sec": 80.0,
+  "status": "max_frames_reached",
+  "images_dir": "images",
+  "frames_journal": "capture_frames.jsonl"
+}

@@ -1,8 +1,8 @@
 {
-  "dibuat_utc": "2026-11-23T02:00:43+00:00",
+  "dibuat_utc": "2026-11-23T02:27:42+00:00",
   "skrip": "scripts/build_bukti_kebutuhan.py",
   "skrip_sha256": "43bd4ae9c064cea1ad3cb2720f449992a67b3feb773982e939e0f3e1740479d1",
-  "commit_repo": "4a9f34453bee6b8f6746aec1c989517c284643d2",
+  "commit_repo": "a4bc9b23306a4d58db86fa649f4e588662ebbf44",
   "kriteria": "retrospektif dari indikator Bab 4; daftar KF/KNF disetujui pembimbing (D18)",
   "status": {
     "KF-01": "Lulus",
@@ -84,6 +84,21 @@
     "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_berjalan_u1_sesudah.png": "d6ae0f020919613d09a34ae206148b994f420dbf551178579a617a6688df2b1c",
     "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png": "4259bb4cd353b594fbe5bee4aca7108217850867d4f6095156e7056d5624d201",
     "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png": "985306d8cbb12f495c089a97bbcf4f9b2457ff852451e5239efdd1e729091cf0",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u1/jendela_runtime.csv": "683dcd1b25b583dca8565dab40b5d8f9d8e3a445aa6439340755d069a16730ac",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u2/jendela_runtime.csv": "a278212d8a0af70fbc1c2f733b4bb670889c291b90d2a502bc13358b6eda32b1",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u3/jendela_runtime.csv": "c916e35797d065060ec78d09d1c7d2425ffc959c44e1947af9dc6f98530083c6",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u1/jendela_runtime.csv": "f09e3be9b019e9981a704b6884576b7449977e2afd4931a33be94cf44f5e4abe",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u2/jendela_runtime.csv": "1a0f583a30bf8df7d4f0745dc2270686b9dd2b86ddd5d4dfbdc5f58263606600",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u3/jendela_runtime.csv": "82709053a4d7d90ee43489b37f94a7cbbf6052c517ef1904d35f2f78950f2475",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u1/jendela_runtime.csv": "798354d535400f576b0b1d0221d2303caed2fd1359684acbbde0eba88f6ef287",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u2/jendela_runtime.csv": "0a8ebb839dd2c766dafe5346702af6f63bfc7aabf7440ae13e608685ab548f8a",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u3_ulang1/jendela_runtime.csv": "7f6c6b899b2aba813e649d34ac5833785783aeb225e617c7c561fdc780fb0921",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u1_ulang2/jendela_runtime.csv": "f3231642aa671cadd373d31b4225ba3a90435946ad55d355180c057eddefa501",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u2/jendela_runtime.csv": "dbfac49434f9cc063f317db4dd3b6d04fe71a99ab588758c17919ce8a9678b67",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u3_ulang1/jendela_runtime.csv": "d7dc709ec0637d9a631af965a16ac356c5f8423aeb2a219e0805c81a09cc6b88",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u1/jendela_runtime.csv": "2ed56f53451808b62483703dc277859b84119bd0d69aacb836696845b0bea468",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u2/jendela_runtime.csv": "0f735c3da20f12ded2dcf230d802bc004a3c826ace97a01fab9992274b9f42a5",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u3/jendela_runtime.csv": "62a6a9c88a7135bcf7c784a501201d0477bcb2e359b34cd054f2296215f56efe",
     "runs/op3_single_path_eval/20261116_runtime_01/runtime_stages_manifest.json": "bd72b388ad30b7357b209d768b47d4c44c969fe65dde3a2c3c003da70ee07a9a",
     "scripts/op3_pytorch_detector.py": "8aa61b239cda0bdcdf17f88dac9aabd5ed99ebe6044fcd78d7d259faa26f2250"
   },
@@ -133,11 +148,11 @@
       "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_lintasan_bola_id.png"
     },
     "KF-04_log_runtime/README.md": {
-      "sha256": "13603dbd09108a7b5d038aeecf01b19a1861e3bab85e63b33ad940f9cc671f8a",
+      "sha256": "e27104194cf8845c29f67d8698acf2bfa87a810ddbf8d936f26b5edc1419dbc4",
       "jenis": "dibangkitkan"
     },
     "KF-04_log_runtime/bukti_kolom_log_jendela_repo.csv": {
-      "sha256": "e4c2f62061b456bb252c3e79a1c93d205ddb3fb394b47690cde32b066436f908",
+      "sha256": "9275a151845407cb764139290fd7903c5d0b24ffa6b5c9348aaadb7dbe8421d0",
       "jenis": "dibangkitkan"
     },
     "KF-04_log_runtime/bukti_log_mentah_24_run_T45.csv": {
@@ -187,11 +202,11 @@
       "sumber": "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png"
     },
     "README.md": {
-      "sha256": "793becdc2698e3945b7377fbd1ec319edcbc58e044a07342ea8dfe1e194f0a3a",
+      "sha256": "a289297ec4ad0ae4013ddd9faf2be890b4a5a2abfee9a226683f82d628ebd999",
       "jenis": "dibangkitkan"
     },
     "kasus_uji_kf_knf.csv": {
-      "sha256": "2888c1349c8a42b728be4588340617a352bbd69010a8ef05dabb2c3a05f2cd03",
+      "sha256": "15b12990033cb282184476c0124b7576097d56f710298e6c9be918e754cd2775",
       "jenis": "dibangkitkan"
     }
   }

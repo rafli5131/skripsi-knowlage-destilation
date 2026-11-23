@@ -1,0 +1,13 @@
+{
+  "created_at_utc": "2026-11-12T04:52:41.017537+00:00",
+  "original_plan_sha256": "b592c5ae583a2403d49101071844632ed195e11632c60211e752bb1227db8e83",
+  "prior_session_integrity_sha256": "fe44c81c18d5126768feed46c7c8f55e26bb306f477fc9bb2ff99d435f4060db",
+  "decision": "Operator approved including partially visible goal as eligible for primary idle-object frames; goal boxes still require human review.",
+  "scope": "idle-object portion only; criteria for other conditions remain unchanged unless separately amended",
+  "reason": "Goal visible partially in camera; physical setup as chosen by operator",
+  "timing": "Amendment after 21 raw frames were captured and first raw frame observed, before resumed capture; hybrid preview was visible to operator. This was not fixed before first acquisition.",
+  "original_21": "Retain all as candidate primary or partial; eligibility finalized after human review; no automatic exclusion based on predictions.",
+  "resumed_target": 79,
+  "classes_and_metrics_unchanged": true,
+  "approved_by": "operator in conversation"
+}

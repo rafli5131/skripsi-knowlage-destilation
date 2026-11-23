@@ -1,0 +1,14 @@
+{
+  "session_id": "20261112_t43_idle_objek_ulang_01",
+  "condition": "servo_idle",
+  "image_topic": "/thesis/image_raw",
+  "started_at_utc": "2026-11-12T05:16:16.453716+00:00",
+  "ended_at_utc": "2026-11-12T05:17:58.467799+00:00",
+  "frame_count": 100,
+  "interval_sec": 1.0,
+  "max_frames": 100,
+  "duration_sec": 150.0,
+  "status": "max_frames_reached",
+  "images_dir": "images",
+  "frames_journal": "capture_frames.jsonl"
+}

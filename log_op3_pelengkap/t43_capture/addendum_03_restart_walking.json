@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-11-12T05:22:28.974575+00:00",
+  "decision": "Operator requested restarting walking-object set from frame 1 after the first 50-frame run.",
+  "archived_session": "20261112_t43_walk_objek_02",
+  "archived_integrity_sha256": "4ebb1f457305921f5ecc187bc14ba2011799250ab6cd9c286ef710fb2461a46c",
+  "reason": "Operator request; no per-frame model accuracy evaluation or label review was performed.",
+  "handling": "Retain original frames and guard logs; exclude that run from active primary set. New 100 frames will be captured in two 50-frame walking sessions.",
+  "goal_rule": "Goal partially visible as specified by addendum 02; review all labels manually.",
+  "operator_ready_confirmed": true
+}

@@ -1,0 +1,271 @@
+{
+  "session_id": "20261021_ball_moving_candidate_01",
+  "status": "candidate_pending_human_review",
+  "condition": "unknown",
+  "description": "40 candidate ball-visible frames; original capture and replacement sources preserved",
+  "created_at_utc": "2026-10-21T10:40:07.393370+00:00",
+  "frame_count": 40,
+  "sequence_continuity": false,
+  "intended_use": "single-frame detection review; use original capture for temporal tracking",
+  "excluded_from_original": {
+    "frames": [
+      "frame_000010.jpg",
+      "frame_000011.jpg",
+      "frame_000021.jpg",
+      "frame_000022.jpg",
+      "frame_000023.jpg",
+      "frame_000038.jpg",
+      "frame_000039.jpg",
+      "frame_000040.jpg"
+    ],
+    "reason": "Ball fully outside camera field of view on full-resolution inspection"
+  },
+  "replacement_frames_not_selected": [
+    "frame_000002.jpg",
+    "frame_000006.jpg",
+    "frame_000007.jpg",
+    "frame_000010.jpg"
+  ],
+  "frames": [
+    {
+      "image": "frame_000001.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000001.jpg",
+      "source_sha256": "d73d678c4c1770f0a039405e365d65fda6004b723e082b2273ac936af84b2078"
+    },
+    {
+      "image": "frame_000002.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000002.jpg",
+      "source_sha256": "6cc7c6dd2af86e06db076c7f4e4512917e38df90a16cc2fc2d98f9c77a6afc86"
+    },
+    {
+      "image": "frame_000003.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000003.jpg",
+      "source_sha256": "397e3d4c1406f07ffd2f22eda8b4f12e2cdfadc3be8d0270303e070262871bb5"
+    },
+    {
+      "image": "frame_000004.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000004.jpg",
+      "source_sha256": "fa76bb90c150609d7e25fb1308dd15ddff5177e08f3efbf3d6b0c1889c4a22c6"
+    },
+    {
+      "image": "frame_000005.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000005.jpg",
+      "source_sha256": "7da600e4a72e2b1ea904f0e295bd367716514215d3a713db438271486dca11c5"
+    },
+    {
+      "image": "frame_000006.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000006.jpg",
+      "source_sha256": "0e9ca42af88600abc703f7f063b5064ea3755711c983a4072375dfd6a574a468"
+    },
+    {
+      "image": "frame_000007.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000007.jpg",
+      "source_sha256": "7420ed97aafd159ac2786f2b19ddc79d4810ac241554aedaa73382b42428f050"
+    },
+    {
+      "image": "frame_000008.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000008.jpg",
+      "source_sha256": "64711c1d771b7334a5dad40441d5ddba0dfd30ecde5d662ec3ee828a24db1204"
+    },
+    {
+      "image": "frame_000009.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000009.jpg",
+      "source_sha256": "d955f090cdf82ab59d8d76752fe5078962afba57a6180d543586350f0041ec77"
+    },
+    {
+      "image": "frame_000010.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000012.jpg",
+      "source_sha256": "ee718ec597f642747b0e0b4066d14e616b8f92520541aabcd37068116eabe1f2"
+    },
+    {
+      "image": "frame_000011.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000013.jpg",
+      "source_sha256": "43436e44464fdc298071902223cac75b816e431a84ef4b11ae4a3eca5a0f91d7"
+    },
+    {
+      "image": "frame_000012.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000014.jpg",
+      "source_sha256": "b3798d3e0521339aa890df11bf67bc44b6e970acbc2f773ec97a83843b622e1b"
+    },
+    {
+      "image": "frame_000013.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000015.jpg",
+      "source_sha256": "2140f44f199cd5d587e3a756acf18d23139aa36dd9e7459594fa9bd68b576965"
+    },
+    {
+      "image": "frame_000014.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000016.jpg",
+      "source_sha256": "54dc4fb4b4b845822fa9283a3f99aa2170dab47b23a6b58bfcf4776bb86be8f0"
+    },
+    {
+      "image": "frame_000015.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000017.jpg",
+      "source_sha256": "4fd3335be60179928a67418eb214da67010f73f16dea7f3a4cb4a4704114f00d"
+    },
+    {
+      "image": "frame_000016.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000018.jpg",
+      "source_sha256": "b33407436f47963ef4342487dab204a8da52a99981d2fea03c70e2c19e5a41f7"
+    },
+    {
+      "image": "frame_000017.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000019.jpg",
+      "source_sha256": "02bc5a61b238dbb0e094f1be3076f4e9d0a81f42e7a805604c254adc1daf04bf"
+    },
+    {
+      "image": "frame_000018.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000020.jpg",
+      "source_sha256": "f2db4d7a56b3dc08194da581993905c3663a2ba3b98a5ed47799aea42e9628c8"
+    },
+    {
+      "image": "frame_000019.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000024.jpg",
+      "source_sha256": "9fda9fd8dab754f6c9c1ff162389ad6f637a759f4bec215b88b9634274e30dc4"
+    },
+    {
+      "image": "frame_000020.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000025.jpg",
+      "source_sha256": "3c46da55d622f71a2715b67cb4eb53bb62d720827c8019673459a9240671901e"
+    },
+    {
+      "image": "frame_000021.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000026.jpg",
+      "source_sha256": "ae0ee389485703ac2c8ca06dc39268e926f5f0fe92791b0f7adb885695278d70"
+    },
+    {
+      "image": "frame_000022.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000027.jpg",
+      "source_sha256": "fb665cd5ffe68951f65a4157e1f9a739b4b2f401ea6274b33ddc1648bc34ff41"
+    },
+    {
+      "image": "frame_000023.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000028.jpg",
+      "source_sha256": "20e78c4427cf12ff6fcc2f7b7cabcb95e27af2fc78aba12b2fe92c24d10b6b20"
+    },
+    {
+      "image": "frame_000024.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000029.jpg",
+      "source_sha256": "4134a8e2d4d7a9cfa54d64cf8e6fd5c79ef108216fdb2ebcee2a5a0ad062d89a"
+    },
+    {
+      "image": "frame_000025.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000030.jpg",
+      "source_sha256": "4fcce969ac060c5f36af790341e5f2e1ff6b6b86a655ad49cb4d0e9d0f4c0456"
+    },
+    {
+      "image": "frame_000026.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000031.jpg",
+      "source_sha256": "0871114bb44b64aca30259b8a34222fe1743cb0fc76c61c38ced0ee715b6fd21"
+    },
+    {
+      "image": "frame_000027.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000032.jpg",
+      "source_sha256": "d4047ef0911378d35c9a1345a99eeb50744c4dc0a94bc996c44269d9b48ee8c4"
+    },
+    {
+      "image": "frame_000028.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000033.jpg",
+      "source_sha256": "55c67554dc89f4bf52a5d38c5f1e469251603d6925e15263730b470dbf818b4d"
+    },
+    {
+      "image": "frame_000029.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000034.jpg",
+      "source_sha256": "dff15c0af18132c4c12489d1d109fb755e85f7b58fcc425a07acfae26a03aefd"
+    },
+    {
+      "image": "frame_000030.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000035.jpg",
+      "source_sha256": "ac1d684751a9e35b0e7dbd87692375bd099625a03fa67efd1e6d1f9d00664b56"
+    },
+    {
+      "image": "frame_000031.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000036.jpg",
+      "source_sha256": "16819642da86cefca1e1c5fcc39198f74e7eb08d7099243ad936246c46765747"
+    },
+    {
+      "image": "frame_000032.jpg",
+      "source_session": "20261021_ball_moving_01",
+      "source_image": "frame_000037.jpg",
+      "source_sha256": "d44e50b22b6edc77746776b06e649491718ab11bff2babe7dbf29cceaaf574e2"
+    },
+    {
+      "image": "frame_000033.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000001.jpg",
+      "source_sha256": "1ea9f3222c7ec67cb980303120e934bbe87dfd2cba27ab10ba68f02c5c15baa0"
+    },
+    {
+      "image": "frame_000034.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000003.jpg",
+      "source_sha256": "6bc244677114ac5d5e633dcaa0e2aa1030f902bca0f396d1ab9fb1c37960b18c"
+    },
+    {
+      "image": "frame_000035.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000004.jpg",
+      "source_sha256": "8e98776d221ce4c93920fe4afaa38ace4afcddf6bea3bc4a0ee128721508825c"
+    },
+    {
+      "image": "frame_000036.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000005.jpg",
+      "source_sha256": "3edf90c9678591b9ef1b4ecf495321bbf9e22d27e5d05c2d7832fbc3a1cd390b"
+    },
+    {
+      "image": "frame_000037.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000008.jpg",
+      "source_sha256": "95c960bfce5818a2b780708d3f576ba6307d767f82fac7ac6d7254b03698a898"
+    },
+    {
+      "image": "frame_000038.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000009.jpg",
+      "source_sha256": "ec3c895410d2e5484da61651755d7ef695d07dc08cb47d80494a72762d7e7ff3"
+    },
+    {
+      "image": "frame_000039.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000011.jpg",
+      "source_sha256": "e7011d2b03b67d86ef118ea186c2f8d112f1839d04a5ccbb957bab2dba0fce8c"
+    },
+    {
+      "image": "frame_000040.jpg",
+      "source_session": "20261021_ball_moving_replacement_01",
+      "source_image": "frame_000012.jpg",
+      "source_sha256": "0389542240fe32770493ed424b05ed60cee2163a8d26e29275ba8e0a6da28375"
+    }
+  ]
+}

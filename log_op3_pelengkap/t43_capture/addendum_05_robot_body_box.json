@@ -1,0 +1,9 @@
+{
+  "created_at_utc": "2026-11-12T09:31:36.010222+00:00",
+  "decision": "Operator confirmed the current bounding box around the robot body is the intended robot label and the dark upper part should not be added.",
+  "scope": "T43 label convention; apply consistently during subsequent human review",
+  "timing": "Clarification after initial 52 manual annotations, before model prelabel and evaluation",
+  "limitation": "This body-only robot convention and lower-region goal convention must be described; comparability with T38 and official dataset annotations is not established.",
+  "operator_authorization": "conversation",
+  "previous_addendum_04_sha256": "b099bbad5279fe1c47bc57fe59c334c6b929f3f82e122568368833c0bd859c26"
+}
