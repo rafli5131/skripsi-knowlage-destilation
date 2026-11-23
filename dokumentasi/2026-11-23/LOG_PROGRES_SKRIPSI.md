@@ -12,3 +12,13 @@
 - **Berkas yang tidak ditemukan:** tidak ada. `SHA256SUMS.txt` teacher memang tidak ada di robot.
 - **Berkas yang sengaja tidak disalin:** gambar, label, contact sheet, `predictions.jsonl`, `prelabel_manifest.json`, `review_log.jsonl`, bobot `.pt`, dan kode.
 - **Direktori sementara di robot:** sudah dihapus.
+
+## Pindah ke laptop Ubuntu
+
+[Prompt pindah laptop](../../prompt/PROMPT_PINDAH_LAPTOP_UBUNTU_DAN_UJI_2026-11-23.md) dijalankan di laptop Ubuntu 24.04.5 (Python 3.12.3) dengan venv `~/.venvs/skripsi-uji` di luar repositori. Rincian ada di [laporan uji](LAPORAN_UJI_LAPTOP_UBUNTU.md).
+
+- **Tes:** 40 lulus, 0 gagal, 0 galat (`--ignore=tests/test_kd_hybrid.py`). Keempat masalah Windows (dua galat `fcntl` pada tes T42 dan dua kegagalan pemisah path pada `test_server_paths.py`) lulus di Linux. Tes tidak diubah.
+- **Syarat lingkungan:** `PYTHONPATH` ROS 2 Jazzy di shell laptop membuat pytest memuat plugin `launch_testing` yang gagal karena modul `lark` tidak ada. Pytest harus dijalankan dengan `env -u PYTHONPATH`.
+- **`test_kd_hybrid.py`:** tidak dijalankan karena bobot teacher tidak ada pada path yang dirujuk tes; lebih tepat di server lab.
+- **Skrip build:** keluaran `jejak_waktu/` dan `bukti_kebutuhan/` identik dengan yang di-commit kecuali PNG garis waktu (versi matplotlib), baris commit pembangkit di README, dan manifest yang mencatat keduanya.
+- **Koreksi log 13 November:** "TP gawang hanya turun 3 sampai 13 dibanding jalur prediksi pada ambang TEST" diperiksa terhadap hasil 13 November dan benar.
