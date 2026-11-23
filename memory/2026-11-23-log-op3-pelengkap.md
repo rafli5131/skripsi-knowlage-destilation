@@ -8,3 +8,5 @@ Prompt `PROMPT_PELENGKAP_LOG_OP3_2026-11-23.md` dijalankan dari laptop lewat SSH
 - **Build ulang:** `jejak_waktu/` dan `bukti_kebutuhan/` dibangkitkan ulang dengan log ini.
 - **Tes di laptop Windows:** 4 kegagalan tes terkait platform (`fcntl` dan pemisah path) dan tidak menyangkut skrip build.
 - **Batas yang tetap berlaku:** gambar, label, prediksi, bobot, dan log mentah penuh tidak masuk Git.
+
+Log pendukung KF/KNF (log jendela 24 run, sesi pelacakan percobaan 27, manifest T45) disalin ke `bukti_kebutuhan/log/` oleh `scripts/build_bukti_kebutuhan.py`; indeks sumber dan hash di `bukti_kebutuhan/log/indeks_log.csv`.

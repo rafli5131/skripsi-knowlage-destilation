@@ -1,8 +1,8 @@
 {
-  "dibuat_utc": "2026-11-23T02:27:42+00:00",
+  "dibuat_utc": "2026-11-23T08:22:12+00:00",
   "skrip": "scripts/build_bukti_kebutuhan.py",
-  "skrip_sha256": "43bd4ae9c064cea1ad3cb2720f449992a67b3feb773982e939e0f3e1740479d1",
-  "commit_repo": "a4bc9b23306a4d58db86fa649f4e588662ebbf44",
+  "skrip_sha256": "280874b569e980f3d34b79ff41431560496d5ff9dc9d6ceaaef629d4b98e04c6",
+  "commit_repo": "b5ef9dfdeeace9efb72c671305d7c117bbf6e2da",
   "kriteria": "retrospektif dari indikator Bab 4; daftar KF/KNF disetujui pembimbing (D18)",
   "status": {
     "KF-01": "Lulus",
@@ -19,33 +19,43 @@
     "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_deteksi.csv": "04dac58f72d1a6651d585f65174e47668657ed50775216b31059fff64dbc4b50",
     "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_runtime.csv": "4c263ecd3ddaa294e947d39b84938a7959a933d88c1d0d6762b5c5b96c856efd",
     "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/summary_metrics.json": "d7e0b99d35eee5630a2dab3a378f0f5be8f964e25ff9410a24ccfb0b40e99f23",
+    "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/tabel_deteksi.csv": "ca66ba2fbf27ff1c6bc8aa37db67c11958647a2dc7c86b3f67d0974174328334",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/jendela_deteksi.csv": "78323d9a92e778df5b2edc514aae4492fe9057ce17b0dffe6157eaa04166f648",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/jendela_runtime.csv": "6afc0e71e0abe55d2bc047e57e020dc700bcb6f99021c66fdee555a6d20200e2",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/summary_metrics.json": "97d09a896f584230cd3cec94f0f599d03307c10b08e1af961cd49713147decd4",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/tabel_deteksi.csv": "250c6913075a3bc14dd408a7e6a827decda775602c3e5d5fd497b0a271aed19f",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/jendela_deteksi.csv": "529bce167aff6e3e263371bc6da990968bcc6015bcd4b31264d3752a026be38c",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/jendela_runtime.csv": "63905a15e99d3d176e3ad6df770587df287e8c7ca60c3968d142fa439999a7e9",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/summary_metrics.json": "41189b3ccaaf1b48eabb5ad837a3153c3518c8e86acd18ccf3d0d193b6efe9f6",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/tabel_deteksi.csv": "4aefa85f205738fc7dc5c5fbbf1152441144afa431488faa4e7883730f38271c",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/jendela_deteksi.csv": "8ed707267b7439cdb229b9307e3e56a2180ad1d41e6b8ca4cc7e3c5e12f9be65",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/jendela_runtime.csv": "1ed88e5d243c2e686d0ba8dfddb9884bc2212b9fde9e2b90c07424d1f073d3a5",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/summary_metrics.json": "33012ef36e52a49de58f419af2526370b5994feea0679a3eb1791a0c912ece31",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/tabel_deteksi.csv": "e1c30e06003e9ab922b94028dadf20d523d82f7fafd4764858b0f13fc4b98cf8",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/jendela_deteksi.csv": "b9ffe2eeafc14a9e67c0552845bd5566cdfebe40df00f843aa4bf492e8edf40b",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/jendela_runtime.csv": "86ac5cc57dd48bc44238ffb411f6b436e46e2a127fcdba9ef282f348cd5976d5",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/summary_metrics.json": "1f4c375f042ac182e2d76c10d4ec5f5ed3dbd76b7d85174a247da519732fc2f0",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/tabel_deteksi.csv": "9df93dc8269b8fd86bef1c2383ee2cc57871cefb696892f611e2346ee421871d",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/jendela_deteksi.csv": "a2fbf1e391563391693d57682bd9e0152f01d302f104e20ff50961c2f35d969d",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/jendela_runtime.csv": "4986fa489c3955b43b5a73571ce0230e22455e61f57a07fdc8c353053a4b0d5e",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/summary_metrics.json": "b8521f01e90dbc92a8ca46defdd31b3c9caadc98ad2b409ee713dddf70afd0da",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/tabel_deteksi.csv": "5b57cc75856d657f6c72e38616e671d333ab8ab0b280d2fa626b78a69a0ba81f",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/jendela_deteksi.csv": "5402ec6a27a2bf1413c6991efbbf15e1ebcdc645f5ccdf503bfbcc1185181bfe",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/jendela_runtime.csv": "ca286435d7e562945c2d39a3c778f2cd368691dce934c9852e5229310ca2f99d",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/summary_metrics.json": "d80f26016487111b5df7026819f48d929dbb6634174d3bb0876c7766f4d29ed8",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/tabel_deteksi.csv": "97c34570d44680ed04fd758783052cb7566dd139eecb3e1829c8ee06e75dd6b0",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/frame_deteksi_sesudah_jendela.png": "226adb9b4aa546a5d9c24f550d31d26c7b0c05553fc7a7e4e9c335b96b599ecf",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/grafik_keluaran_kelas_id.png": "3b8be7cb02ebefdee75d54159ea5fd6f79db5680f365b1f06a585deaf56402cb",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/jendela_deteksi.csv": "40b6df6ec86b7ae8e254697c2c703936c019e1f7417b581730f26d7caf4ce602",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/jendela_runtime.csv": "580d4ad8a515aba9fc6d4090b7278bf5d46853d0a5d9f873c98634597c1c23c2",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/preview_sebelum_run.png": "2e591a940fd7a716042915d23ee52ad13b6bbfdb3cfe6308d8e3011a234e2a6e",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/summary_metrics.json": "cea3dcd1991e9b6a443b6f54ba3862fa1f9f35378649cccdd5c161461f6a1e85",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/tabel_deteksi.csv": "5ce804fcf82f79cc8709179b9534f609e163c7a8d7c2fcbb087fcd9a7e1f9ff8",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/jendela_deteksi.csv": "847855d196295a248d215b6cbfcee9a95ff44fa715834cd1a6d07950ef58ad6a",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/jendela_runtime.csv": "51df79571c29026a9169615074e72949ce9db08205608fa7ef1446b49e6c33cb",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/summary_metrics.json": "cbea8e7ee46a8523536c691541375fc520faa5a504644739144701acaf03e07c",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/tabel_deteksi.csv": "5ed1cadf4794aca2c746cc8c0a170f11531f9e154863261cbbe1e4f9538e816a",
+    "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/jendela_deteksi.csv": "9b39f360acd04be469e374fea2cb13135b05f2d87060b7073b826ba6f1423928",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/jendela_runtime.csv": "6aa3eb1c4afa6dba265b376e61cd9ebd815585656a012c0e180e113ab879b740",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/summary_metrics.json": "6bd5a944e8a9ba4668bfaa8cb2f78d402f6595b0867f18f1f643c15de7fcfd83",
     "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/tabel_deteksi.csv": "36db01787667b17ad2324a136292e252020b43d2db7123d1343767e6123f68e2",
@@ -84,27 +94,42 @@
     "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/supervised_berjalan_u1_sesudah.png": "d6ae0f020919613d09a34ae206148b994f420dbf551178579a617a6688df2b1c",
     "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png": "4259bb4cd353b594fbe5bee4aca7108217850867d4f6095156e7056d5624d201",
     "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png": "985306d8cbb12f495c089a97bbcf4f9b2457ff852451e5239efdd1e729091cf0",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u1/jendela_deteksi.csv": "a8f3ac847c25d140638dc3265732ce15aee3a65ba997bce19a2c163e68de47b0",
     "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u1/jendela_runtime.csv": "683dcd1b25b583dca8565dab40b5d8f9d8e3a445aa6439340755d069a16730ac",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u2/jendela_deteksi.csv": "9c60af990248290ecb3f4ce661e5c24b1ec0b12334004785dad045350ddffbe2",
     "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u2/jendela_runtime.csv": "a278212d8a0af70fbc1c2f733b4bb670889c291b90d2a502bc13358b6eda32b1",
+    "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u3/jendela_deteksi.csv": "a5187b7dd51650213d17f1533adc97a509c6221ce0f9de10d6a0718141246d3f",
     "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u3/jendela_runtime.csv": "c916e35797d065060ec78d09d1c7d2425ffc959c44e1947af9dc6f98530083c6",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u1/jendela_deteksi.csv": "56183aac313da9742373b0d516158ecd0f632d413f08d7b97240c09e91c4f7d4",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u1/jendela_runtime.csv": "f09e3be9b019e9981a704b6884576b7449977e2afd4931a33be94cf44f5e4abe",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u2/jendela_deteksi.csv": "9016651ab85c95290b65e8e2be69c24f7c025be73f06e9e6d65febfa01532440",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u2/jendela_runtime.csv": "1a0f583a30bf8df7d4f0745dc2270686b9dd2b86ddd5d4dfbdc5f58263606600",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u3/jendela_deteksi.csv": "07770c0c3b2457bd72eedb7d975fc84d976c36089c54af44debce7993f2dbf46",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u3/jendela_runtime.csv": "82709053a4d7d90ee43489b37f94a7cbbf6052c517ef1904d35f2f78950f2475",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u1/jendela_deteksi.csv": "84eff59b167b1196912575791a2426834280f82337d99239e7a7ffba6b09f65a",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u1/jendela_runtime.csv": "798354d535400f576b0b1d0221d2303caed2fd1359684acbbde0eba88f6ef287",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u2/jendela_deteksi.csv": "a2bf4610d1fc23d3104b1eaa56601c4c548d5baa38526ab103c665889ed88cd3",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u2/jendela_runtime.csv": "0a8ebb839dd2c766dafe5346702af6f63bfc7aabf7440ae13e608685ab548f8a",
+    "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u3_ulang1/jendela_deteksi.csv": "66a649b2697753af2a95892883010da28506bb396296a7f56e0a7a6152be4b83",
     "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u3_ulang1/jendela_runtime.csv": "7f6c6b899b2aba813e649d34ac5833785783aeb225e617c7c561fdc780fb0921",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u1_ulang2/jendela_deteksi.csv": "230fff88677e405c975e422f7d874f8717b51a208f195d5371afcc44462b4baf",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u1_ulang2/jendela_runtime.csv": "f3231642aa671cadd373d31b4225ba3a90435946ad55d355180c057eddefa501",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u2/jendela_deteksi.csv": "b7fed633b0b0e08629a7eb803860b9a2080800cf9c509286c0654ee2faafead8",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u2/jendela_runtime.csv": "dbfac49434f9cc063f317db4dd3b6d04fe71a99ab588758c17919ce8a9678b67",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u3_ulang1/jendela_deteksi.csv": "4ffc8dc155256d7627c0be0e2550ad6aa2d80c0a9f59693343620f52b5e8d352",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u3_ulang1/jendela_runtime.csv": "d7dc709ec0637d9a631af965a16ac356c5f8423aeb2a219e0805c81a09cc6b88",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u1/jendela_deteksi.csv": "d1b849f566b1bfc7df4087e4cc3178e52bda2026590a465784bea744ee771263",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u1/jendela_runtime.csv": "2ed56f53451808b62483703dc277859b84119bd0d69aacb836696845b0bea468",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u2/jendela_deteksi.csv": "4ec622021ae383228ed6780118277a145236d5868d304ad04ebb44bf4b68b2d5",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u2/jendela_runtime.csv": "0f735c3da20f12ded2dcf230d802bc004a3c826ace97a01fab9992274b9f42a5",
+    "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u3/jendela_deteksi.csv": "cfc51d4d690b74be09841010eb2de4165b3ba17698dec4585999b71fb389a82c",
     "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u3/jendela_runtime.csv": "62a6a9c88a7135bcf7c784a501201d0477bcb2e359b34cd054f2296215f56efe",
     "runs/op3_single_path_eval/20261116_runtime_01/runtime_stages_manifest.json": "bd72b388ad30b7357b209d768b47d4c44c969fe65dde3a2c3c003da70ee07a9a",
     "scripts/op3_pytorch_detector.py": "8aa61b239cda0bdcdf17f88dac9aabd5ed99ebe6044fcd78d7d259faa26f2250"
   },
   "keluaran": {
     "KF-01_menerima_citra/README.md": {
-      "sha256": "585af5ed99ed4114567b82ce8b7dae9b15f0addbc2d112fe7d786a5ccbfdb570",
+      "sha256": "723812ae5b30f83f855e34298e9b81f254c093939baefacdd8fc8c7ac834ce8c",
       "jenis": "dibangkitkan"
     },
     "KF-01_menerima_citra/bukti_frame_dan_error_24_run.csv": {
@@ -112,7 +137,7 @@
       "jenis": "dibangkitkan"
     },
     "KF-02_deteksi_tiga_kelas/README.md": {
-      "sha256": "f1737dd8021298c9ca7c7071b599c8deeaeb91c8f234c6378b3d720ce1cb27bc",
+      "sha256": "ca08a321c8f4940d805313568280e123a556f7ff001317ec4ce731991711180f",
       "jenis": "dibangkitkan"
     },
     "KF-02_deteksi_tiga_kelas/bukti_cakupan_kelas_24_run.csv": {
@@ -130,7 +155,7 @@
       "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/grafik_keluaran_kelas_id.png"
     },
     "KF-03_id_pelacakan/README.md": {
-      "sha256": "7aec9958369a60a0a2da9950af2fce43e9bf0ee9cde02e6f3f2c6b0c87ea1d10",
+      "sha256": "fa7b9c2dfe4e9941f684c02fbb4617bf5e6bbe4e43855b96310289c6a25977ec",
       "jenis": "dibangkitkan"
     },
     "KF-03_id_pelacakan/bukti_id_bola_per_frame.csv": {
@@ -148,7 +173,7 @@
       "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/grafik_lintasan_bola_id.png"
     },
     "KF-04_log_runtime/README.md": {
-      "sha256": "e27104194cf8845c29f67d8698acf2bfa87a810ddbf8d936f26b5edc1419dbc4",
+      "sha256": "d00baf62b0a0175e26198fb718fcce6145378d2980e41525b71b0c9a7f39d53d",
       "jenis": "dibangkitkan"
     },
     "KF-04_log_runtime/bukti_kolom_log_jendela_repo.csv": {
@@ -160,7 +185,7 @@
       "jenis": "dibangkitkan"
     },
     "KF-05_preview/README.md": {
-      "sha256": "7b95695fb72e84178fd9a09014a4d7baa85b1a2bdebcc037dd84ef0d6ecae3d2",
+      "sha256": "4ff7e4760faab20209b9e969ff3fdad5a4df83a75a1c93d00381e3e90ceed60f",
       "jenis": "dibangkitkan"
     },
     "KF-05_preview/preview_hybrid_berjalan.png": {
@@ -189,7 +214,7 @@
       "sumber": "dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png"
     },
     "KNF-01_laju_pemrosesan/README.md": {
-      "sha256": "4910e875cff48d580c5b356bcdfbf5c3f9aa25f59c34aabd169e0decf41434cd",
+      "sha256": "a2d26a37d611c16a06f2ef32b61478f3852d73730bf3fd6d5bc403546aee3480",
       "jenis": "dibangkitkan"
     },
     "KNF-01_laju_pemrosesan/bukti_fps_24_run.csv": {
@@ -202,12 +227,525 @@
       "sumber": "dokumentasi/model/gabungan/garis_runtime_op3_empat_model_id.png"
     },
     "README.md": {
-      "sha256": "a289297ec4ad0ae4013ddd9faf2be890b4a5a2abfee9a226683f82d628ebd999",
+      "sha256": "1a75a03f83fc44198f31e50697606c0006bfa04df967043fcddf144594311400",
       "jenis": "dibangkitkan"
     },
     "kasus_uji_kf_knf.csv": {
       "sha256": "15b12990033cb282184476c0124b7576097d56f710298e6c9be918e754cd2775",
       "jenis": "dibangkitkan"
+    },
+    "log/README.md": {
+      "sha256": "f5c135df753eaf2c7d9dc25b578dcb305fa714a07dd39d80b708ce0e1047b05a",
+      "jenis": "dibangkitkan"
+    },
+    "log/cek_log_mentah_T45/runtime_stages_manifest.json": {
+      "sha256": "bd72b388ad30b7357b209d768b47d4c44c969fe65dde3a2c3c003da70ee07a9a",
+      "jenis": "salinan",
+      "sumber": "runs/op3_single_path_eval/20261116_runtime_01/runtime_stages_manifest.json"
+    },
+    "log/indeks_log.csv": {
+      "sha256": "0065a813f4a1f2a5a051debed4fca9e64698ec45d6b6f41a9fc95dc26f624c41",
+      "jenis": "dibangkitkan"
+    },
+    "log/pelacakan_percobaan_27/jendela_deteksi.csv": {
+      "sha256": "04dac58f72d1a6651d585f65174e47668657ed50775216b31059fff64dbc4b50",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_deteksi.csv"
+    },
+    "log/pelacakan_percobaan_27/jendela_runtime.csv": {
+      "sha256": "4c263ecd3ddaa294e947d39b84938a7959a933d88c1d0d6762b5c5b96c856efd",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/jendela_runtime.csv"
+    },
+    "log/pelacakan_percobaan_27/summary_metrics.json": {
+      "sha256": "d7e0b99d35eee5630a2dab3a378f0f5be8f964e25ff9410a24ccfb0b40e99f23",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/summary_metrics.json"
+    },
+    "log/pelacakan_percobaan_27/tabel_deteksi.csv": {
+      "sha256": "ca66ba2fbf27ff1c6bc8aa37db67c11958647a2dc7c86b3f67d0974174328334",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-10-23/percobaan-27-uji-ulang-kd-hybrid/03-tracking/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u1/jendela_deteksi.csv": {
+      "sha256": "40b6df6ec86b7ae8e254697c2c703936c019e1f7417b581730f26d7caf4ce602",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u1/jendela_runtime.csv": {
+      "sha256": "580d4ad8a515aba9fc6d4090b7278bf5d46853d0a5d9f873c98634597c1c23c2",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u1/summary_metrics.json": {
+      "sha256": "cea3dcd1991e9b6a443b6f54ba3862fa1f9f35378649cccdd5c161461f6a1e85",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u1/tabel_deteksi.csv": {
+      "sha256": "5ce804fcf82f79cc8709179b9534f609e163c7a8d7c2fcbb087fcd9a7e1f9ff8",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u2/jendela_deteksi.csv": {
+      "sha256": "847855d196295a248d215b6cbfcee9a95ff44fa715834cd1a6d07950ef58ad6a",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u2/jendela_runtime.csv": {
+      "sha256": "51df79571c29026a9169615074e72949ce9db08205608fa7ef1446b49e6c33cb",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u2/summary_metrics.json": {
+      "sha256": "cbea8e7ee46a8523536c691541375fc520faa5a504644739144701acaf03e07c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u2/tabel_deteksi.csv": {
+      "sha256": "5ed1cadf4794aca2c746cc8c0a170f11531f9e154863261cbbe1e4f9538e816a",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u3/jendela_deteksi.csv": {
+      "sha256": "9b39f360acd04be469e374fea2cb13135b05f2d87060b7073b826ba6f1423928",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u3/jendela_runtime.csv": {
+      "sha256": "6aa3eb1c4afa6dba265b376e61cd9ebd815585656a012c0e180e113ab879b740",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u3/summary_metrics.json": {
+      "sha256": "6bd5a944e8a9ba4668bfaa8cb2f78d402f6595b0867f18f1f643c15de7fcfd83",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_hybrid1337_idle_u3/tabel_deteksi.csv": {
+      "sha256": "36db01787667b17ad2324a136292e252020b43d2db7123d1343767e6123f68e2",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/02-kd-hybrid/idle-u3/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u1/jendela_deteksi.csv": {
+      "sha256": "78323d9a92e778df5b2edc514aae4492fe9057ce17b0dffe6157eaa04166f648",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u1/jendela_runtime.csv": {
+      "sha256": "6afc0e71e0abe55d2bc047e57e020dc700bcb6f99021c66fdee555a6d20200e2",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u1/summary_metrics.json": {
+      "sha256": "97d09a896f584230cd3cec94f0f599d03307c10b08e1af961cd49713147decd4",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u1/tabel_deteksi.csv": {
+      "sha256": "250c6913075a3bc14dd408a7e6a827decda775602c3e5d5fd497b0a271aed19f",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u2/jendela_deteksi.csv": {
+      "sha256": "529bce167aff6e3e263371bc6da990968bcc6015bcd4b31264d3752a026be38c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u2/jendela_runtime.csv": {
+      "sha256": "63905a15e99d3d176e3ad6df770587df287e8c7ca60c3968d142fa439999a7e9",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u2/summary_metrics.json": {
+      "sha256": "41189b3ccaaf1b48eabb5ad837a3153c3518c8e86acd18ccf3d0d193b6efe9f6",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u2/tabel_deteksi.csv": {
+      "sha256": "4aefa85f205738fc7dc5c5fbbf1152441144afa431488faa4e7883730f38271c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u3/jendela_deteksi.csv": {
+      "sha256": "8ed707267b7439cdb229b9307e3e56a2180ad1d41e6b8ca4cc7e3c5e12f9be65",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u3/jendela_runtime.csv": {
+      "sha256": "1ed88e5d243c2e686d0ba8dfddb9884bc2212b9fde9e2b90c07424d1f073d3a5",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u3/summary_metrics.json": {
+      "sha256": "33012ef36e52a49de58f419af2526370b5994feea0679a3eb1791a0c912ece31",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_idle_u3/tabel_deteksi.csv": {
+      "sha256": "e1c30e06003e9ab922b94028dadf20d523d82f7fafd4764858b0f13fc4b98cf8",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/idle-u3/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u2/jendela_deteksi.csv": {
+      "sha256": "a2fbf1e391563391693d57682bd9e0152f01d302f104e20ff50961c2f35d969d",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u2/jendela_runtime.csv": {
+      "sha256": "4986fa489c3955b43b5a73571ce0230e22455e61f57a07fdc8c353053a4b0d5e",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u2/summary_metrics.json": {
+      "sha256": "b8521f01e90dbc92a8ca46defdd31b3c9caadc98ad2b409ee713dddf70afd0da",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u2/tabel_deteksi.csv": {
+      "sha256": "5b57cc75856d657f6c72e38616e671d333ab8ab0b280d2fa626b78a69a0ba81f",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u3/jendela_deteksi.csv": {
+      "sha256": "5402ec6a27a2bf1413c6991efbbf15e1ebcdc645f5ccdf503bfbcc1185181bfe",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u3/jendela_runtime.csv": {
+      "sha256": "ca286435d7e562945c2d39a3c778f2cd368691dce934c9852e5229310ca2f99d",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u3/summary_metrics.json": {
+      "sha256": "d80f26016487111b5df7026819f48d929dbb6634174d3bb0876c7766f4d29ed8",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_retest_u3/tabel_deteksi.csv": {
+      "sha256": "97c34570d44680ed04fd758783052cb7566dd139eecb3e1829c8ee06e75dd6b0",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u3/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_u3/jendela_deteksi.csv": {
+      "sha256": "b9ffe2eeafc14a9e67c0552845bd5566cdfebe40df00f843aa4bf492e8edf40b",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_u3/jendela_runtime.csv": {
+      "sha256": "86ac5cc57dd48bc44238ffb411f6b436e46e2a127fcdba9ef282f348cd5976d5",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_u3/summary_metrics.json": {
+      "sha256": "1f4c375f042ac182e2d76c10d4ec5f5ed3dbd76b7d85174a247da519732fc2f0",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261102_eq_teacher_walk_u3/tabel_deteksi.csv": {
+      "sha256": "9df93dc8269b8fd86bef1c2383ee2cc57871cefb696892f611e2346ee421871d",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-02/percobaan-30-uji-live-setara-empat-model/01-teacher/walk-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u1/jendela_deteksi.csv": {
+      "sha256": "a8f3ac847c25d140638dc3265732ce15aee3a65ba997bce19a2c163e68de47b0",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u1/jendela_runtime.csv": {
+      "sha256": "683dcd1b25b583dca8565dab40b5d8f9d8e3a445aa6439340755d069a16730ac",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u1/summary_metrics.json": {
+      "sha256": "c99570f5ce5984b6828797eef7721b3c14ce2f21bae38e2a081ae85ba57f1f52",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u1/tabel_deteksi.csv": {
+      "sha256": "5425820c187d57e8fcdca3b1b986c406dc4e596ec06bec18f00de1f0c587e989",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u2/jendela_deteksi.csv": {
+      "sha256": "9c60af990248290ecb3f4ce661e5c24b1ec0b12334004785dad045350ddffbe2",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u2/jendela_runtime.csv": {
+      "sha256": "a278212d8a0af70fbc1c2f733b4bb670889c291b90d2a502bc13358b6eda32b1",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u2/summary_metrics.json": {
+      "sha256": "f739b80254ee241c74730ccf7059bf5030f55328e9159b0bbf0ee5d23aee1db2",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u2/tabel_deteksi.csv": {
+      "sha256": "61459174a737ed5b2b6a38d05f549a111cf27db3cfeba64fae8d98964cbc04ed",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u3/jendela_deteksi.csv": {
+      "sha256": "a5187b7dd51650213d17f1533adc97a509c6221ce0f9de10d6a0718141246d3f",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u3/jendela_runtime.csv": {
+      "sha256": "c916e35797d065060ec78d09d1c7d2425ffc959c44e1947af9dc6f98530083c6",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_hybrid1337_walk_u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u3/summary_metrics.json": {
+      "sha256": "42b44a600d35c840ea9c6df1104cde05ad9519ef0b06b488d4876f2d54665b34",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_hybrid1337_walk_u3/tabel_deteksi.csv": {
+      "sha256": "b52dc9b48f7c021093f60ba521229e760edf2822ca8cbf49e961600f9d05a6f8",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u3/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u1/jendela_deteksi.csv": {
+      "sha256": "56183aac313da9742373b0d516158ecd0f632d413f08d7b97240c09e91c4f7d4",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u1/jendela_runtime.csv": {
+      "sha256": "f09e3be9b019e9981a704b6884576b7449977e2afd4931a33be94cf44f5e4abe",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u1/summary_metrics.json": {
+      "sha256": "b9328f76e285c320077e1207f165fa831ac3ae72ad700b1c4567a2f292e0c34b",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u1/tabel_deteksi.csv": {
+      "sha256": "634933690e433b8d123d150f1ca72850f3d1e399c3a406c1f3ac6b3e1209e25e",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u2/jendela_deteksi.csv": {
+      "sha256": "9016651ab85c95290b65e8e2be69c24f7c025be73f06e9e6d65febfa01532440",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u2/jendela_runtime.csv": {
+      "sha256": "1a0f583a30bf8df7d4f0745dc2270686b9dd2b86ddd5d4dfbdc5f58263606600",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u2/summary_metrics.json": {
+      "sha256": "beff1cbe47f1996c8a8be2068d9dcd9e05f7f9ff972d6d0b084804c09b3beb78",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u2/tabel_deteksi.csv": {
+      "sha256": "49ef78362d4b3ac4eea169836f218cf52338e3957ba2ffb1263c7284036f060d",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u3/jendela_deteksi.csv": {
+      "sha256": "07770c0c3b2457bd72eedb7d975fc84d976c36089c54af44debce7993f2dbf46",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u3/jendela_runtime.csv": {
+      "sha256": "82709053a4d7d90ee43489b37f94a7cbbf6052c517ef1904d35f2f78950f2475",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_idle_u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u3/summary_metrics.json": {
+      "sha256": "4ef06add1d407bb730af1bd94a4452554bd2e7e816c49b8a448ffafc949cf684",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_idle_u3/tabel_deteksi.csv": {
+      "sha256": "40f1f7f7bbdfb80be756df143590586db217de260de9ce112805aafcfa36b9b5",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-34-kd-murni-idle-3-ulangan/04-kd-murni/idle-u3/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u1/jendela_deteksi.csv": {
+      "sha256": "84eff59b167b1196912575791a2426834280f82337d99239e7a7ffba6b09f65a",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u1/jendela_runtime.csv": {
+      "sha256": "798354d535400f576b0b1d0221d2303caed2fd1359684acbbde0eba88f6ef287",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u1/summary_metrics.json": {
+      "sha256": "e17c7bd2aeafc51aa10226b52c022fd62d20263aa370b47a2bc30ec2d11b2438",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u1/tabel_deteksi.csv": {
+      "sha256": "3fca8da3b95cb50cdeeaf4af98d77272474687dc54123c92d1acd84d197f574c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u2/jendela_deteksi.csv": {
+      "sha256": "a2bf4610d1fc23d3104b1eaa56601c4c548d5baa38526ab103c665889ed88cd3",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u2/jendela_runtime.csv": {
+      "sha256": "0a8ebb839dd2c766dafe5346702af6f63bfc7aabf7440ae13e608685ab548f8a",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u2/summary_metrics.json": {
+      "sha256": "8c338ed35e00a8601b054faec55149ac964795bd8c16a8c1ab6de33088ad2622",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u2/tabel_deteksi.csv": {
+      "sha256": "f6cb8d64c842cd772ebccef25598781dcb035df4cac0c4dc8443454c113b41f6",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u3_ulang1/jendela_deteksi.csv": {
+      "sha256": "66a649b2697753af2a95892883010da28506bb396296a7f56e0a7a6152be4b83",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u3_ulang1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u3_ulang1/jendela_runtime.csv": {
+      "sha256": "7f6c6b899b2aba813e649d34ac5833785783aeb225e617c7c561fdc780fb0921",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_kd42_walk_u3_ulang1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u3_ulang1/summary_metrics.json": {
+      "sha256": "102f603a0c51732700c83e82f61fcbc9775a95408a899ab1fd0fab832bdbf03f",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_kd42_walk_u3_ulang1/tabel_deteksi.csv": {
+      "sha256": "5521b644017298514a93e8d3fda4cc73c112b13335443781598e643fe4ee43de",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u3-ulang1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u1_ulang2/jendela_deteksi.csv": {
+      "sha256": "230fff88677e405c975e422f7d874f8717b51a208f195d5371afcc44462b4baf",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u1_ulang2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u1_ulang2/jendela_runtime.csv": {
+      "sha256": "f3231642aa671cadd373d31b4225ba3a90435946ad55d355180c057eddefa501",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u1_ulang2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u1_ulang2/summary_metrics.json": {
+      "sha256": "18b53344a477550dde03526fdccd493943efe98671e88b01a23465e4465d1911",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u1-ulang2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u1_ulang2/tabel_deteksi.csv": {
+      "sha256": "131cb1d041d0d45d96d8e02ca84955bf3b550209608ffed1ae818296f6ece513",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u1-ulang2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u2/jendela_deteksi.csv": {
+      "sha256": "b7fed633b0b0e08629a7eb803860b9a2080800cf9c509286c0654ee2faafead8",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u2/jendela_runtime.csv": {
+      "sha256": "dbfac49434f9cc063f317db4dd3b6d04fe71a99ab588758c17919ce8a9678b67",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u2/summary_metrics.json": {
+      "sha256": "44ba00d6a5aa5637baff7fa21b468b2f8e608b11f8ab4567b4cd3af012902b78",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u2/tabel_deteksi.csv": {
+      "sha256": "fd6e20ed6ebdd8b09b93023b2ef5844799484d6c3f5dc53acfa4969421577ade",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u3_ulang1/jendela_deteksi.csv": {
+      "sha256": "4ffc8dc155256d7627c0be0e2550ad6aa2d80c0a9f59693343620f52b5e8d352",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u3_ulang1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u3_ulang1/jendela_runtime.csv": {
+      "sha256": "d7dc709ec0637d9a631af965a16ac356c5f8423aeb2a219e0805c81a09cc6b88",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_idle_u3_ulang1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u3_ulang1/summary_metrics.json": {
+      "sha256": "2062d0d2ae1956183a834671822fa412546dcabdc6ee1c6f195e9f2673177dbb",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u3-ulang1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_idle_u3_ulang1/tabel_deteksi.csv": {
+      "sha256": "40692f32ed9049c092edb5b90cf0ae074b9df8fca6b6b33ec54b7a31ab73ee7f",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-32-supervised-idle-3-ulangan/03-supervised/idle-u3-ulang1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u1/jendela_deteksi.csv": {
+      "sha256": "d1b849f566b1bfc7df4087e4cc3178e52bda2026590a465784bea744ee771263",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u1/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u1/jendela_runtime.csv": {
+      "sha256": "2ed56f53451808b62483703dc277859b84119bd0d69aacb836696845b0bea468",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u1/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u1/summary_metrics.json": {
+      "sha256": "3ad3c59adbe0f95eb19bd8c6bdc28ca10f94e3ac433bd24116a509d48f3e65b7",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u1/tabel_deteksi.csv": {
+      "sha256": "9eb26ebef293e234b6c6a2503f310520619fd9d0b718c0133ff42653ba4b082c",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u2/jendela_deteksi.csv": {
+      "sha256": "4ec622021ae383228ed6780118277a145236d5868d304ad04ebb44bf4b68b2d5",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u2/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u2/jendela_runtime.csv": {
+      "sha256": "0f735c3da20f12ded2dcf230d802bc004a3c826ace97a01fab9992274b9f42a5",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u2/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u2/summary_metrics.json": {
+      "sha256": "6fc6466ed81633b2733dfd97ab8ecb2b2f38b61b2b5852dbf0687ef020eac08f",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u2/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u2/tabel_deteksi.csv": {
+      "sha256": "4f43796f71ccd8ba17cb95e1768939301d171dc3642ec1ff0677f977128bc8ab",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u2/tabel_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u3/jendela_deteksi.csv": {
+      "sha256": "cfc51d4d690b74be09841010eb2de4165b3ba17698dec4585999b71fb389a82c",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u3/jendela_deteksi.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u3/jendela_runtime.csv": {
+      "sha256": "62a6a9c88a7135bcf7c784a501201d0477bcb2e359b34cd054f2296215f56efe",
+      "jenis": "salinan",
+      "sumber": "log_op3_pelengkap/live_24_run/20261103_eq_sup1337_walk_u3/jendela_runtime.csv"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u3/summary_metrics.json": {
+      "sha256": "d71ae41def322f25e957c9d7b05701253d36eef36026866a195b19b788fee459",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u3/summary_metrics.json"
+    },
+    "log/run_live_24/20261103_eq_sup1337_walk_u3/tabel_deteksi.csv": {
+      "sha256": "f7e110ceba71429e157df05bd23a2075cfb3b5de00a53388211a04b617fc2765",
+      "jenis": "salinan",
+      "sumber": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u3/tabel_deteksi.csv"
     }
   }
 }

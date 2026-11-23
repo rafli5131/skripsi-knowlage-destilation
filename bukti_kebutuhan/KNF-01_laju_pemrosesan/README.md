@@ -27,3 +27,5 @@ dapat turun di bawah 8 tanpa membatalkan kriteria. Rerata per model pada
 T37 (terendah teacher 9,87 FPS saat berjalan) adalah besaran lain dan tidak dipakai sebagai
 penilaian KNF-01. Run dikumpulkan lintas hari, sehingga selisih antarmodel tidak ditafsirkan
 sebagai efek metode.
+
+**Log pendukung** di [`../log/`](../log/README.md): `run_live_24/<run_id>/jendela_runtime.csv` (`capture_stamp_ns` untuk menghitung FPS) dan `summary_metrics.json`.

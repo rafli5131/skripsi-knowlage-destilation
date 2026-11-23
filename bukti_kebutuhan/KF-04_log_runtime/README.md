@@ -25,3 +25,5 @@ penggunaan CPU, RSS, dan status error.
 [T45](../../analisis_performa/tabel/T45_rincian_latensi_dan_cpu_op3.md)).
 
 **Batas:** log jendela 24 run tersedia di repositori; sebagian diekstrak kemudian dari log mentah OP3 ke `log_op3_pelengkap/` setelah hash log mentah dicocokkan dengan T36.
+
+**Log pendukung** di [`../log/`](../log/README.md): `run_live_24/<run_id>/jendela_runtime.csv` (24 log per frame) dan `cek_log_mentah_T45/runtime_stages_manifest.json`.

@@ -22,3 +22,5 @@ setiap run).
 **Batas:** kemunculan kotak tidak sama dengan deteksi yang benar. Ketepatan terhadap label acuan
 dinilai pada TEST (T05/T30), T38, T43, dan T44. Adegan ini sama untuk semua run, sehingga cakupan
 tinggi di sini tidak menggambarkan kinerja pada adegan lain.
+
+**Log pendukung** di [`../log/`](../log/README.md): `run_live_24/<run_id>/jendela_deteksi.csv` (setiap kotak beserta kelas, confidence, dan koordinat) dan `tabel_deteksi.csv`.

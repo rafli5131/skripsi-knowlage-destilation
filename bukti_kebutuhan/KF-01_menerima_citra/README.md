@@ -21,3 +21,5 @@ tanpa error. Rincian: [`bukti_frame_dan_error_24_run.csv`](bukti_frame_dan_error
 **Batas:** bukti ini menunjukkan frame yang sampai ke node diproses tanpa kesalahan. Frame yang
 mungkin hilang sebelum sampai ke node tidak dihitung; jeda penerimaan maksimum tercatat pada
 kolom `max_receive_gap_s` T36.
+
+**Log pendukung** di [`../log/`](../log/README.md): `run_live_24/<run_id>/summary_metrics.json` (jumlah frame dan error per run) dan `jendela_runtime.csv` (kolom `error` per frame).

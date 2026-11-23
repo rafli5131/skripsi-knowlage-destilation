@@ -1,0 +1,29 @@
+{
+  "run_id": "20261103_eq_sup1337_walk_u1",
+  "condition": "walking",
+  "window_start_utc": "2026-11-03T09:47:50.322989+00:00",
+  "window_end_utc": "2026-11-03T09:48:50.322989+00:00",
+  "frames_window": 742,
+  "error_frames": 0,
+  "latency_mean_ms": 71.6453200350199,
+  "latency_median_ms": 56.89630400047463,
+  "latency_p95_ms": 161.8414702505106,
+  "fps": 12.362915744126484,
+  "cpu_percent": 1296.41320754717,
+  "rss_mib": 361.62511581873315,
+  "head_max_delta_rad": 0.0015339807861328159,
+  "body_max_delta_rad": 0.4496759386663409,
+  "gait_start_ack_utc": "2026-11-03T09:47:48.322989+00:00",
+  "gait_guard_status": "completed",
+  "mid_gait_samples_source": "dokumentasi/2026-11-03/percobaan-33-supervised-berjalan-3-ulangan/03-supervised/walk-u1/head_guard_samples.csv",
+  "mid_gait_sample_times_utc": {
+    "mid1": "2026-11-03T09:48:08.144940+00:00",
+    "mid2": "2026-11-03T09:48:28.304061+00:00"
+  },
+  "status": "lulus_cek_otomatis",
+  "reasons": [],
+  "source_csv": "runs/op3_pytorch/20261103_eq_sup1337_walk_u1.csv",
+  "slot_key": "sup1337_walk_u1",
+  "display_repetition": 1,
+  "source_run_id": "20261103_eq_sup1337_walk_u1"
+}

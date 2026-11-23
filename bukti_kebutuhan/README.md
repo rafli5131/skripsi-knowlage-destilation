@@ -36,6 +36,7 @@ Tabel lengkap dengan kolom prosedur dan masukan: [`kasus_uji_kf_knf.csv`](kasus_
 | `KF-04_log_runtime/` | Pemeriksaan kolom log jendela di repositori dan kecocokan 24 log mentah dengan T36 |
 | `KF-05_preview/` | Tangkapan preview beranotasi dari empat model |
 | `KNF-01_laju_pemrosesan/` | FPS efektif 24 run terhadap batas 8 FPS, grafik runtime |
+| `log/` | Salinan log per frame 24 run live, log sesi pelacakan, dan manifest pemeriksaan log mentah, dengan [indeks sumber dan hash](log/indeks_log.csv) |
 
 Setiap folder memuat README dengan prosedur, hasil, sumber, dan batas tafsir.
 [`manifest_bukti_sha256.json`](manifest_bukti_sha256.json) mencatat SHA-256 setiap berkas
@@ -59,4 +60,4 @@ dokumentasi percobaan; sumber aslinya tidak diubah.
 python3 scripts/build_bukti_kebutuhan.py --replace
 ```
 
-Dibangkitkan dari commit `a4bc9b23306a`.
+Dibangkitkan dari commit `b5ef9dfdeeac`.

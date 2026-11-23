@@ -30,3 +30,5 @@ Cuplikan video 10 detik (supervised, percobaan 22) tersedia di
 **Batas:** tangkapan tunggal tidak membuktikan preview bebas macet sepanjang setiap run.
 Tangkapan sesudah jendela pada kondisi berjalan juga tidak membuktikan robot sedang melangkah
 pada gambar tersebut.
+
+**Log pendukung** di [`../log/`](../log/README.md): tangkapan preview di folder ini; log deteksi pada frame yang sama ada di `run_live_24/`.

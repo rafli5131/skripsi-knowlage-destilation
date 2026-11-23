@@ -1,0 +1,29 @@
+{
+  "run_id": "20261103_eq_kd42_walk_u2",
+  "condition": "walking",
+  "window_start_utc": "2026-11-03T10:22:46.619020+00:00",
+  "window_end_utc": "2026-11-03T10:23:46.619020+00:00",
+  "frames_window": 731,
+  "error_frames": 0,
+  "latency_mean_ms": 73.39308851036084,
+  "latency_median_ms": 58.36935000115773,
+  "latency_p95_ms": 162.34606799844187,
+  "fps": 12.16561069165863,
+  "cpu_percent": 1296.5569083447333,
+  "rss_mib": 355.6889962380301,
+  "head_max_delta_rad": 0.0015339807861328159,
+  "body_max_delta_rad": 0.4586602550537109,
+  "gait_start_ack_utc": "2026-11-03T10:22:44.619020+00:00",
+  "gait_guard_status": "completed",
+  "mid_gait_samples_source": "dokumentasi/2026-11-03/percobaan-35-kd-murni-berjalan-3-ulangan/04-kd-murni/walk-u2/head_guard_samples.csv",
+  "mid_gait_sample_times_utc": {
+    "mid1": "2026-11-03T10:23:04.344217+00:00",
+    "mid2": "2026-11-03T10:23:24.502889+00:00"
+  },
+  "status": "lulus_cek_otomatis",
+  "reasons": [],
+  "source_csv": "runs/op3_pytorch/20261103_eq_kd42_walk_u2.csv",
+  "slot_key": "kd42_walk_u2",
+  "display_repetition": 2,
+  "source_run_id": "20261103_eq_kd42_walk_u2"
+}

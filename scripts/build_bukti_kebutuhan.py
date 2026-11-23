@@ -316,6 +316,91 @@ def build_knf01(w: Writer, runs: list[dict]) -> dict:
             "by_model": {k: (min(v), max(v)) for k, v in by_model.items()}}
 
 
+LOG_RUN_FILES = ("jendela_runtime.csv", "jendela_deteksi.csv", "summary_metrics.json", "tabel_deteksi.csv")
+LOG_DIR = "log"
+LOG_PAKAI = {
+    "jendela_runtime.csv": "KF-01, KF-04, KNF-01",
+    "jendela_deteksi.csv": "KF-02",
+    "summary_metrics.json": "KF-01, KNF-01",
+    "tabel_deteksi.csv": "KF-02",
+}
+
+
+def collect_logs(w: "Writer", runs: list[dict]) -> dict:
+    """Salin log yang menjadi dasar setiap kasus uji ke ``log/`` tanpa mengubah sumbernya."""
+    rows = []
+    for run in runs:
+        for name in LOG_RUN_FILES:
+            source = run["folder"] / name
+            if not source.exists() and name.startswith("jendela_"):
+                source = PELENGKAP / run["run_id"] / name
+            if not source.exists():
+                rows.append([run["run_id"], MODEL_LABEL[run["model"]], KONDISI[run["condition"]], run["ulangan"],
+                             name, "", "", "tidak tersedia"])
+                continue
+            w.source(source)
+            target = f"{LOG_DIR}/run_live_24/{run['run_id']}/{name}"
+            w.copy(rel(source), target)
+            rows.append([run["run_id"], MODEL_LABEL[run["model"]], KONDISI[run["condition"]], run["ulangan"],
+                         name, rel(source), w.outputs[target]["sha256"], LOG_PAKAI[name]])
+    for name in LOG_RUN_FILES:
+        source = P27 / name
+        if source.exists():
+            w.source(source)
+            target = f"{LOG_DIR}/pelacakan_percobaan_27/{name}"
+            w.copy(rel(source), target)
+            rows.append(["20261023_kd_hybrid_tracking_moving_ball_01", "KD Hybrid seed 1337", "bola bergerak", "",
+                         name, rel(source), w.outputs[target]["sha256"], "KF-03"])
+    w.source(T45_MANIFEST)
+    target = f"{LOG_DIR}/cek_log_mentah_T45/runtime_stages_manifest.json"
+    w.copy(rel(T45_MANIFEST), target)
+    rows.append(["24 run", "", "", "", T45_MANIFEST.name, rel(T45_MANIFEST), w.outputs[target]["sha256"], "KF-04"])
+    w.table(f"{LOG_DIR}/indeks_log.csv",
+            ["run_id", "model", "kondisi", "ulangan", "berkas", "sumber_asli", "sha256", "dipakai_untuk"], rows)
+    copied = sum(1 for r in rows if r[5])
+    w.text(f"{LOG_DIR}/README.md", f"""# Log pendukung bukti kebutuhan
+
+Folder ini mengumpulkan salinan log yang menjadi dasar kasus uji KF-01 sampai KF-05 dan KNF-01. Semua berkas
+adalah salinan identik dari dokumentasi percobaan dan `log_op3_pelengkap/`; berkas aslinya tetap di tempat semula
+dan tidak diubah. Daftar lengkap beserta sumber asli dan SHA-256 ada di [`indeks_log.csv`](indeks_log.csv)
+({copied} berkas).
+
+| Folder | Isi | Dipakai untuk |
+|---|---|---|
+| `run_live_24/<run_id>/` | Untuk 24 run live: `jendela_runtime.csv` (satu baris per frame: timestamp, durasi tiap tahap, CPU, RSS, error), `jendela_deteksi.csv` (satu baris per kotak: kelas, ID, confidence, koordinat), `summary_metrics.json`, dan `tabel_deteksi.csv` | KF-01, KF-02, KF-04, KNF-01 |
+| `pelacakan_percobaan_27/` | Log jendela, ringkasan, dan tabel deteksi sesi bola bergerak | KF-03 |
+| `cek_log_mentah_T45/` | Manifest pemeriksaan ulang 24 log mentah di OP3 terhadap T36 | KF-04 |
+
+Log jendela berisi frame di dalam jendela ukur 60 detik, sama dengan yang dipakai T36. Log mentah penuh (termasuk
+pemanasan) dan gambar kamera tetap di OP3.
+""")
+    return {"files": copied}
+
+
+LOG_SECTION = {
+    "KF-01_menerima_citra": "`run_live_24/<run_id>/summary_metrics.json` (jumlah frame dan error per run) dan `jendela_runtime.csv` (kolom `error` per frame)",
+    "KF-02_deteksi_tiga_kelas": "`run_live_24/<run_id>/jendela_deteksi.csv` (setiap kotak beserta kelas, confidence, dan koordinat) dan `tabel_deteksi.csv`",
+    "KF-03_id_pelacakan": "`pelacakan_percobaan_27/jendela_deteksi.csv` (ID setiap kotak per frame) dan `jendela_runtime.csv`",
+    "KF-04_log_runtime": "`run_live_24/<run_id>/jendela_runtime.csv` (24 log per frame) dan `cek_log_mentah_T45/runtime_stages_manifest.json`",
+    "KF-05_preview": "tangkapan preview di folder ini; log deteksi pada frame yang sama ada di `run_live_24/`",
+    "KNF-01_laju_pemrosesan": "`run_live_24/<run_id>/jendela_runtime.csv` (`capture_stamp_ns` untuk menghitung FPS) dan `summary_metrics.json`",
+}
+
+
+def append_log_sections(w: "Writer") -> None:
+    for folder, text in LOG_SECTION.items():
+        path = w.out / folder / "README.md"
+        content = path.read_text(encoding="utf-8").rstrip("\n")
+        content += f"\n\n**Log pendukung** di [`../log/`](../log/README.md): {text}.\n"
+        w.text(f"{folder}/README.md", content)
+    path = w.out / "README.md"
+    content = path.read_text(encoding="utf-8")
+    anchor = "| `KNF-01_laju_pemrosesan/` |"
+    line = next(l for l in content.split("\n") if l.startswith(anchor))
+    content = content.replace(line, line + "\n| `log/` | Salinan log per frame 24 run live, log sesi pelacakan, dan manifest pemeriksaan log mentah, dengan [indeks sumber dan hash](log/indeks_log.csv) |")
+    w.text("README.md", content)
+
+
 def readmes(w: Writer, kf01, kf02, kf03, kf04, knf01, commit: str) -> list[list]:
     cases = [
         ["UJ-KF-01", "KF-01", "Menerima citra kamera OP3",
@@ -637,8 +722,10 @@ def main() -> int:
         for source, name in items:
             w.source(ROOT / source)
             w.copy(source, f"{folder}/{name}")
+    collect_logs(w, runs)
     commit = git_commit()
     cases = readmes(w, kf01, kf02, kf03, kf04, knf01, commit)
+    append_log_sections(w)
     manifest = {
         "dibuat_utc": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
         "skrip": rel(Path(__file__)),

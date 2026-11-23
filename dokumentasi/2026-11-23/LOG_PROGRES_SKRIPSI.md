@@ -55,3 +55,7 @@ Dokumen lepas di akar repositori dipindah supaya akar hanya berisi `README.md`, 
 | `audit_teacher_t42_LTOW7Xw5.json` | `analisis_performa/lab_server/audit_teacher_t42_LTOW7Xw5.json` |
 
 `analisis_performa/lab_server/manifest.json` masih mencatat `AUDIT_DATASET_SKRIPSI.md` dan `PROTOKOL_EKSPERIMEN_SKRIPSI.md` dengan path lama di akar; manifest itu catatan historis dan tidak diubah. Prompt lama yang menyebut nama berkas sebagai teks biasa (bukan tautan) juga dibiarkan. Bagian progres README utama diringkas menjadi satu paragraf status, dan riwayat progres 12 sampai 23 November dipindah ke bagian yang dapat dibuka-tutup.
+
+## Log pendukung di folder bukti kebutuhan
+
+Log yang menjadi dasar kasus uji KF/KNF kini juga dikumpulkan di [`bukti_kebutuhan/log/`](../../bukti_kebutuhan/log/README.md) sebagai salinan identik: `jendela_runtime.csv`, `jendela_deteksi.csv`, `summary_metrics.json`, dan `tabel_deteksi.csv` untuk 24 run live, log sesi pelacakan percobaan 27, serta manifest pemeriksaan log mentah T45. Indeks sumber asli dan SHA-256 ada di `bukti_kebutuhan/log/indeks_log.csv`. Berkas asli tetap di tempat semula. Salinan ini dibangkitkan oleh `scripts/build_bukti_kebutuhan.py` dan menambah sekitar 13 MB.

@@ -31,3 +31,5 @@ ganda atau deteksi palsu sesaat. Gawang memakai dua ID selama sesi (lihat dokume
 
 **Batas:** satu sesi sekitar 30 detik dengan satu model dan satu objek bergerak. Tidak ada label
 acuan identitas, sehingga hasil ini tidak mengukur metrik pelacakan seperti MOTA atau IDF1.
+
+**Log pendukung** di [`../log/`](../log/README.md): `pelacakan_percobaan_27/jendela_deteksi.csv` (ID setiap kotak per frame) dan `jendela_runtime.csv`.

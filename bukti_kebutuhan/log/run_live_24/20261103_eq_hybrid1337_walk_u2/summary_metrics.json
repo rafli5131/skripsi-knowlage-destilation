@@ -1,0 +1,29 @@
+{
+  "run_id": "20261103_eq_hybrid1337_walk_u2",
+  "condition": "walking",
+  "window_start_utc": "2026-11-03T05:08:09.794711+00:00",
+  "window_end_utc": "2026-11-03T05:09:09.794711+00:00",
+  "frames_window": 758,
+  "error_frames": 0,
+  "latency_mean_ms": 71.71832757520384,
+  "latency_median_ms": 59.52261449999696,
+  "latency_p95_ms": 160.7382738000979,
+  "fps": 12.6369875745359,
+  "cpu_percent": 1307.5065963060686,
+  "rss_mib": 354.03022963390504,
+  "head_max_delta_rad": 0.0015339807861328159,
+  "body_max_delta_rad": 0.42051606551050313,
+  "gait_start_ack_utc": "2026-11-03T05:08:07.794711+00:00",
+  "gait_guard_status": "completed",
+  "mid_gait_samples_source": "dokumentasi/2026-11-03/percobaan-31-kd-hybrid-berjalan-3-ulangan/02-kd-hybrid/walk-u2/head_guard_samples.csv",
+  "mid_gait_sample_times_utc": {
+    "mid1": "2026-11-03T05:08:27.709271+00:00",
+    "mid2": "2026-11-03T05:08:47.865076+00:00"
+  },
+  "status": "lulus_cek_otomatis",
+  "reasons": [],
+  "source_csv": "runs/op3_pytorch/20261103_eq_hybrid1337_walk_u2.csv",
+  "slot_key": "hybrid1337_walk_u2",
+  "display_repetition": 2,
+  "source_run_id": "20261103_eq_hybrid1337_walk_u2"
+}
