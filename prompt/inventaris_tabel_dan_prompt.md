@@ -8,7 +8,7 @@
 
 > Prompt terbaru: [audit celah skripsi](PROMPT_AUDIT_CELAH_SKRIPSI_KD_OP3_2026-11-09.md) dan [perbaikan Bab I–III serta penyelesaian draf](PROMPT_PERBAIKAN_BAB_1-3_DAN_LANJUTAN_SKRIPSI_KD_OP3_2026-11-09.md).
 
-> Pembaruan 9 November 2026: [T42 server2](../analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai untuk dua teacher dan enam student; status T42 sebelumnya di bawah adalah historis. Lihat [audit teacher](../audit_teacher_t42_LTOW7Xw5.json).
+> Pembaruan 9 November 2026: [T42 server2](../analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) selesai untuk dua teacher dan enam student; status T42 sebelumnya di bawah adalah historis. Lihat [audit teacher](../analisis_performa/lab_server/audit_teacher_t42_LTOW7Xw5.json).
 
 > Pembaruan 5 November 2026: [T38 empat model pada 260 frame OP3](../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) selesai secara offline. Catatan yang menyebut T38 belum dijalankan di bawah adalah status historis.
 
@@ -74,8 +74,8 @@ Tabel bernomor tetap tersimpan berpasangan sebagai CSV dan Markdown di [`analisi
 | [Monitor dan rekam OP3 bersamaan](PROMPT_MONITOR_DAN_REKAM_KAMERA_OP3_BERSAMAAN.md) | Deteksi/ID live di jendela sambil merekam frame mentah dari topic kamera yang sama | Pra-label setelah capture; log sesi gabungan bukan benchmark |
 | [Kumpul frame dan label kamera OP3](PROMPT_KUMPUL_FRAME_DAN_LABEL_OP3.md) | Pengambilan frame mentah dan pra-label otomatis untuk ditinjau manusia | Gambar dan label draf di `data/op3_camera_eval/sessions/<session_id>/`; mAP menunggu label final |
 | [Perbaikan kode dan analisis performa](PROMPT_PERBAIKAN_KODE_DAN_ANALISIS_PERFORMA.md) | Peta fase riset, aturan protokol, dan titik henti | Baca keputusan terkunci di [`docs/DECISIONS.md`](../docs/DECISIONS.md) |
-| [Implementasi robot OP3](PROMPT_IMPLEMENTASI_ROBOT_OP3.md) | Rancangan awal node inferensi PyTorch pada OP3 | Runtime terkini ada di [`OP3_PYTORCH_RUNTIME.md`](../OP3_PYTORCH_RUNTIME.md) |
-| [Penyusunan laporan skripsi](PROMPT_PENYUSUNAN_LAPORAN_SKRIPSI.md) | Menyusun naskah dari protokol, tabel, dan bukti | Draf hasil ada di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](../DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) |
+| [Implementasi robot OP3](PROMPT_IMPLEMENTASI_ROBOT_OP3.md) | Rancangan awal node inferensi PyTorch pada OP3 | Runtime terkini ada di [`OP3_PYTORCH_RUNTIME.md`](../docs/OP3_PYTORCH_RUNTIME.md) |
+| [Penyusunan laporan skripsi](PROMPT_PENYUSUNAN_LAPORAN_SKRIPSI.md) | Menyusun naskah dari protokol, tabel, dan bukti | Draf hasil ada di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](../laporan/arsip/DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) |
 
 ## Aturan penggunaan hasil
 

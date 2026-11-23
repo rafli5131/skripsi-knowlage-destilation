@@ -6,6 +6,11 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 
 ## Progres dan langkah berikutnya
 
+**Status 23 November 2026.** Semua eksperimen untuk RM1 sampai RM5 sudah selesai, dan tidak ada pekerjaan yang tersisa di robot atau server. Bukti yang dipakai naskah terkumpul di tiga folder: [`bukti_kebutuhan/`](bukti_kebutuhan/README.md) untuk uji KF/KNF, [`jejak_waktu/`](jejak_waktu/README.md) untuk waktu training, evaluasi, dan run live, serta [`log_op3_pelengkap/`](log_op3_pelengkap/README.md) dan [`log_lab_server_pelengkap/`](log_lab_server_pelengkap/README.md) untuk log mentah pendukung. Sisa pekerjaan ada di laptop: keputusan jalur angka utama T38/T43 dan penyajian CPU (RM5) bersama pembimbing, konfirmasi status KF-03, dan penulisan naskah tujuh bab.
+
+<details>
+<summary>Riwayat progres 12 sampai 23 November 2026</summary>
+
 Per 23 November 2026, laptop kerja dipindah ke Ubuntu 24.04. Dengan `env -u PYTHONPATH`, seluruh tes selain `test_kd_hybrid.py` lulus (40/40), termasuk empat tes yang gagal di Windows; lihat [laporan uji laptop Ubuntu](dokumentasi/2026-11-23/LAPORAN_UJI_LAPTOP_UBUNTU.md).
 
 Per 23 November 2026, [log pelengkap OP3](log_op3_pelengkap/README.md) sudah diambil dari robot lewat SSH, dengan robot hanya dibaca. Log jendela 15 run live diekstrak dengan hash cocok terhadap T36; ekstraksi ulang 9 run lama identik dengan berkas di repositori. Metadata capture T38/T43 dan catatan training teacher juga disalin. [Jejak waktu](jejak_waktu/README.md) dan [bukti kebutuhan](bukti_kebutuhan/README.md) dibangkitkan ulang dengan log tersebut; `timestamp` teacher ditempatkan sebagai waktu mulai training. Lihat [log 23 November](dokumentasi/2026-11-23/LOG_PROGRES_SKRIPSI.md).
@@ -17,6 +22,8 @@ Per 16 November 2026, [T44 jalur tunggal OP3](analisis_performa/tabel/T44_jalur_
 Per 13 November 2026, [verifikasi jalur inferensi TEST](analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) selesai untuk sembilan student (D23). Pada ambang yang sama, angka `model.predict` dan angka TEST resmi (`model.val`) berselisih paling besar 0,0035 untuk rerata mAP50–95 kelompok dan 0,0024 untuk F1, dan urutan mAP50–95 tidak berubah. Pada ambang runtime 0,25/0,45, F1 semua model naik 0,02 sampai 0,07, dan F1 Hybrid serta Supervised setara (0,9334 dan 0,9337). T05/T30 tidak diubah. Lihat [log 13 November](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) dan [catatan keputusan](docs/DECISIONS.md) (D18 sampai D23).
 
 Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) beserta [uji sensitivitasnya](dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md), dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah selesai. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah. Lihat [log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
+
+</details>
 
 | No | Tempat | Pekerjaan | Prompt atau rujukan |
 |---|---|---|---|
@@ -71,7 +78,7 @@ Kamera OP3 → topik gambar ROS 2 → model deteksi → kotak dan kelas objek
                                             └── catatan hasil dan runtime
 ```
 
-Model berjalan pada komputer onboard robot. Deteksi menghasilkan keluaran visual dan data performa; gerakan robot diatur melalui prosedur robot yang terpisah. Petunjuk runtime dan konfigurasi tersedia di [OP3 PyTorch Runtime](OP3_PYTORCH_RUNTIME.md).
+Model berjalan pada komputer onboard robot. Deteksi menghasilkan keluaran visual dan data performa; gerakan robot diatur melalui prosedur robot yang terpisah. Petunjuk runtime dan konfigurasi tersedia di [OP3 PyTorch Runtime](docs/OP3_PYTORCH_RUNTIME.md).
 
 ## Ringkasan hasil
 
@@ -118,7 +125,7 @@ CPU dan RAM yang disajikan pada T36/T37 adalah penggunaan **proses detektor**; R
 
 ### 4. Ablasi tambahan dan waktu training
 
-[T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) membandingkan dua teacher yang dilatih ulang dan enam student pada **VAL**. Teacher YOLO11n dan YOLO11s mencapai mAP50–95 0,7760 dan 0,7843, sedangkan student masing-masing 0,7482 ± 0,0003 dan 0,7473 ± 0,0003; teacher yang lebih besar tidak menaikkan student. Hasilnya tidak mengganti teacher utama atau checkpoint OP3. [Audit teacher di server](audit_teacher_t42_LTOW7Xw5.json) mencatat pemeriksaan yang dilakukan.
+[T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) membandingkan dua teacher yang dilatih ulang dan enam student pada **VAL**. Teacher YOLO11n dan YOLO11s mencapai mAP50–95 0,7760 dan 0,7843, sedangkan student masing-masing 0,7482 ± 0,0003 dan 0,7473 ± 0,0003; teacher yang lebih besar tidak menaikkan student. Hasilnya tidak mengganti teacher utama atau checkpoint OP3. [Audit teacher di server](analisis_performa/lab_server/audit_teacher_t42_LTOW7Xw5.json) mencatat pemeriksaan yang dilakukan.
 
 [T35](analisis_performa/tabel/T35_waktu_training_dan_pengujian.md) memisahkan durasi training, durasi satu sesi TEST multi-model, dan benchmark inferensi. Durasi sesi TEST bukan waktu per checkpoint; benchmark server L40 bukan FPS robot OP3.
 
@@ -149,39 +156,36 @@ Video tersebut sudah ditautkan dari [halaman model Supervised](dokumentasi/model
 
 ```text
 skripsi-knowlage-destilation/
-├── README.md                  Gambaran, hasil, media dan peta repositori
-├── dokumentasi/
-│   ├── model/
-│   │   ├── teacher_yolo11n/   Hasil dan confusion matrix teacher
-│   │   ├── kd_hybrid/         Hasil dan confusion matrix KD Hybrid
-│   │   ├── supervised/        Hasil dan confusion matrix Supervised
-│   │   ├── kd_murni/          Hasil dan confusion matrix KD Murni
-│   │   └── gabungan/          Matriks empat model dan CSV gabungan
-│   ├── 2026-10-19 ... 11-12/  Dokumentasi percobaan berdasarkan tanggal
-│   └── INDEKS.md              Daftar percobaan dan laporan
+├── README.md, agent.md        Gambaran repositori dan aturan kerja
+├── laporan/
+│   ├── draf-7-bab/            Draf terkini Bab 1 sampai 7
+│   ├── DRAF_PROPOSAL_BAB_I-III.md  Draf proposal
+│   ├── draf-bab-iv-v/         Draf hasil terdahulu
+│   └── arsip/                 Kerangka, abstrak, dan draf tahap Pure KD
+├── bukti_kebutuhan/           Bukti uji KF-01 sampai KF-05 dan KNF-01
+├── jejak_waktu/               Kronologi training, evaluasi, dan run live
+├── log_op3_pelengkap/         Log jendela 24 run, metadata capture, catatan training teacher
+├── log_lab_server_pelengkap/  Log mentah server lab (T42, verifikasi teacher)
 ├── analisis_performa/
-│   ├── tabel/                 Tabel hasil bernomor dan CSV sumber
+│   ├── tabel/                 Tabel hasil bernomor (T01 sampai T45) dan CSV
 │   ├── grafik/                Grafik analisis tambahan
-│   └── lab_server/            Analisis eksperimen pada server
-├── ros2_packages/             Package robot dan alat analisis yang terpisah
-├── scripts/                   Script training, evaluasi, audit dan visualisasi
-├── configs/                   Konfigurasi dataset, model dan eksperimen
-├── models/                    Arsitektur student dan bobot yang disediakan
-├── artifacts/                 Fingerprint, manifest dan ringkasan hasil
-├── data/                      Dataset dan sesi lokal, sebagian tidak masuk Git
-├── runs/                      Output eksperimen, sebagian hanya lokal
-├── laporan/draf-7-bab/        Draf terkini Bab 1–7
-├── laporan/draf-bab-iv-v/     Draf terdahulu dan arsip hasil/pembahasan
-├── prompt/                    Prompt audit, proposal, laporan dan robot
-├── memory/                    Catatan progres dan keputusan bertanggal
-├── docs/                      Protokol, keputusan, tutorial dan audit
-├── datasheet/                 Metadata dataset dan model
-├── requirements/              Spesifikasi dependency
-├── tests/                     Tes otomatis script umum
-└── environment/, log/         Informasi environment dan log lokal/generated
+│   └── lab_server/            Analisis dan verifikasi di server lab
+├── dokumentasi/
+│   ├── model/                 Hasil dan grafik per model serta gabungan
+│   ├── 2026-10-19 ... 11-23/  Dokumentasi percobaan menurut tanggal
+│   └── INDEKS.md              Daftar percobaan dan laporan
+├── docs/                      Keputusan (DECISIONS.md), protokol, audit dataset, runtime OP3, tutorial
+│   └── arsip/                 Catatan teknis yang sudah tidak dipakai
+├── prompt/                    Prompt sesi robot, server, dan penulisan
+├── memory/                    Catatan status bertanggal
+├── scripts/, ros2_packages/   Kode training, evaluasi, analisis, dan package robot
+├── configs/, models/          Konfigurasi dan arsitektur student
+├── artifacts/, runs/, data/   Manifest dan keluaran eksperimen; sebagian hanya lokal
+├── environment/, requirements/, datasheet/  Lingkungan, dependency, dan metadata dataset
+└── tests/                     Tes otomatis
 ```
 
-Folder percobaan lama tetap pada lokasi semula supaya sumber dan tautannya tidak rusak. GitHub berisi tabel dan media yang dikurasi; **sebagian** data mentah kamera, label, telemetry, log, checkpoint privat dan environment hanya tersedia pada mesin tempat eksperimen dilakukan. Periksa ketersediaannya sebelum mereproduksi hasil.
+Folder percobaan lama tetap pada lokasi semula supaya sumber dan tautannya tidak rusak. Pada 23 November 2026, dokumen lepas di akar repositori dipindah ke `docs/` dan `laporan/` dengan tautan yang diperbarui; daftar pemindahannya ada di [log 23 November](dokumentasi/2026-11-23/LOG_PROGRES_SKRIPSI.md#perapian-folder). GitHub berisi tabel dan media yang dikurasi; **sebagian** data mentah kamera, label, telemetry, log, checkpoint privat dan environment hanya tersedia pada mesin tempat eksperimen dilakukan. Periksa ketersediaannya sebelum mereproduksi hasil.
 
 ## Menjalankan analisis ulang
 
@@ -192,7 +196,7 @@ PYTHONPATH=ros2_packages/op3_camera_eval:ros2_packages/op3_multi_session_eval:ro
   .venv-op3-pytorch/bin/python -m op3_confusion_matrix --output /tmp/confusion_matrix_op3_baru
 ```
 
-Folder tujuan harus belum ada. Penjelasan input dan metode ada di [README package confusion matrix](ros2_packages/op3_confusion_matrix/README.md). Pengaturan runtime robot dan environment training yang sebenarnya dapat berbeda antar-mesin; lihat [runtime OP3](OP3_PYTORCH_RUNTIME.md) dan [provenance environment](environment/README.md).
+Folder tujuan harus belum ada. Penjelasan input dan metode ada di [README package confusion matrix](ros2_packages/op3_confusion_matrix/README.md). Pengaturan runtime robot dan environment training yang sebenarnya dapat berbeda antar-mesin; lihat [runtime OP3](docs/OP3_PYTORCH_RUNTIME.md) dan [provenance environment](environment/README.md).
 
 ## Batas interpretasi
 
@@ -236,7 +240,7 @@ The native PyTorch/Ultralytics ROS 2 camera node for the KD student is
 [`scripts/op3_pytorch_detector.py`](scripts/op3_pytorch_detector.py). It reads
 an operator-selected image topic and publishes detections without controlling
 the robot. Runtime setup, parameters, and logging are documented in
-[`OP3_PYTORCH_RUNTIME.md`](OP3_PYTORCH_RUNTIME.md). A CPU camera-inference
+[`OP3_PYTORCH_RUNTIME.md`](docs/OP3_PYTORCH_RUNTIME.md). A CPU camera-inference
 session and its performance charts are documented in
 [`dokumentasi/README.md`](dokumentasi/README.md), including one annotated
 camera frame and its detection metadata.
@@ -266,7 +270,7 @@ three seeds. Pure KD reduced checkpoint parameters by 68.71%, checkpoint size
 by 65.20%, and GFLOPs by 62.64% versus the teacher. Mean median latency was
 25.01 ms for KD versus 25.72 ms for the teacher on the historical NVIDIA L40 benchmark.
 
-Use [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md)
+Use [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](laporan/arsip/DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md)
 for the current Indonesian results/discussion draft and
 [`artifacts/thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/)
 for the hash-registered tables. The corrected tables use checkpoint parameter
@@ -374,22 +378,22 @@ env -u PYTHONPATH /mnt/nas-hpg9/rafli5131/rafli/advance_vision/.venv/bin/python 
 
 The source split inventory, label counts, provenance gaps, and possible
 cross-split scene overlap are summarized in
-[`AUDIT_DATASET_SKRIPSI.md`](AUDIT_DATASET_SKRIPSI.md). Exact image/label SHA-256
+[`AUDIT_DATASET_SKRIPSI.md`](docs/AUDIT_DATASET_SKRIPSI.md). Exact image/label SHA-256
 records are in
 [`artifacts/advance_vision_dataset_fingerprint.json`](artifacts/advance_vision_dataset_fingerprint.json).
 The thesis scope and work stages are in
-[`PLANNING_SKRIPSI.md`](PLANNING_SKRIPSI.md); the frozen seed, loss, metric,
+[`PLANNING_SKRIPSI.md`](laporan/arsip/PLANNING_SKRIPSI.md); the frozen seed, loss, metric,
 checkpoint-selection, and TEST gates are in
-[`PROTOKOL_EKSPERIMEN_SKRIPSI.md`](PROTOKOL_EKSPERIMEN_SKRIPSI.md).
+[`PROTOKOL_EKSPERIMEN_SKRIPSI.md`](docs/PROTOKOL_EKSPERIMEN_SKRIPSI.md).
 The Indonesian and English abstract drafts using the locked final results are
-in [`DRAF_ABSTRAK_SKRIPSI.md`](DRAF_ABSTRAK_SKRIPSI.md).
+in [`DRAF_ABSTRAK_SKRIPSI.md`](laporan/arsip/DRAF_ABSTRAK_SKRIPSI.md).
 The initial proposal draft for Chapters I–III is in
-[`DRAF_PROPOSAL_BAB_I-III.md`](DRAF_PROPOSAL_BAB_I-III.md), and the chapter map
-is in [`KERANGKA_BAB_SKRIPSI.md`](KERANGKA_BAB_SKRIPSI.md).
+[`DRAF_PROPOSAL_BAB_I-III.md`](laporan/DRAF_PROPOSAL_BAB_I-III.md), and the chapter map
+is in [`KERANGKA_BAB_SKRIPSI.md`](laporan/arsip/KERANGKA_BAB_SKRIPSI.md).
 Dataset metadata copies and their source hashes are in [`datasheet/`](datasheet/README.md), and the initial academic bibliography is in [`REFERENSI_SKRIPSI.bib`](REFERENSI_SKRIPSI.bib).
 The bounded literature audit distinguishing direct teacher-only objectives from
 hybrid and pseudo-label objectives is in
-[`TINJAUAN_PUSTAKA_KD_DETEKSI.md`](TINJAUAN_PUSTAKA_KD_DETEKSI.md); it is not a
+[`TINJAUAN_PUSTAKA_KD_DETEKSI.md`](docs/TINJAUAN_PUSTAKA_KD_DETEKSI.md); it is not a
 systematic review and does not support a “first pure KD” novelty claim.
 To compare checkpoint inference speed using the same in-memory VAL image, use
 `scripts/benchmark_inference.py`; its report labels the result as a server

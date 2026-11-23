@@ -39,4 +39,4 @@ Pencarian terarah dilakukan pada halaman primer CVF Open Access, PMLR, AAAI OJS,
 
 ## Rujukan primer tambahan
 
-Informasi bibliografi CanKD dan FD-CanKD ditambahkan ke [`REFERENSI_SKRIPSI.bib`](REFERENSI_SKRIPSI.bib). Untuk CanKD, versi WACV 2026 menjadi sitasi venue; halaman HTML arXiv dipakai untuk memeriksa Persamaan 8. FD-CanKD disitasi sebagai arXiv v1, bukan sebagai publikasi peer-reviewed yang statusnya telah dipastikan.
+Informasi bibliografi CanKD dan FD-CanKD ditambahkan ke [`REFERENSI_SKRIPSI.bib`](../REFERENSI_SKRIPSI.bib). Untuk CanKD, versi WACV 2026 menjadi sitasi venue; halaman HTML arXiv dipakai untuk memeriksa Persamaan 8. FD-CanKD disitasi sebagai arXiv v1, bukan sebagai publikasi peer-reviewed yang statusnya telah dipastikan.

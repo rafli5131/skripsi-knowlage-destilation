@@ -14,7 +14,7 @@ Teacher utama adalah YOLO11n FP32; student YOLO11 t kustom memiliki 810.649 para
 
 ## 3.3 Prosedur eksperimen
 
-Student dilatih dengan anggaran maksimal 100 epoch berdasarkan konfigurasi dan catatan run. Hybrid full menggunakan loss deteksi berlabel dan distilasi, sedangkan KD murni tidak memakai label TRAIN dalam loss student. Rincian konfigurasi dan pengecualian provenance dijelaskan pada [proposal sumber](../../DRAF_PROPOSAL_BAB_I-III.md), [registry model](../../configs/model_registry.yaml), dan manifest eksperimen.
+Student dilatih dengan anggaran maksimal 100 epoch berdasarkan konfigurasi dan catatan run. Hybrid full menggunakan loss deteksi berlabel dan distilasi, sedangkan KD murni tidak memakai label TRAIN dalam loss student. Rincian konfigurasi dan pengecualian provenance dijelaskan pada [proposal sumber](../DRAF_PROPOSAL_BAB_I-III.md), [registry model](../../configs/model_registry.yaml), dan manifest eksperimen.
 
 Akurasi TEST dilaporkan sebagai rerata tiga seed untuk student dan satu checkpoint teacher. Pengaturan evaluasi mencakup input 640, confidence floor AP 0,001, NMS IoU 0,7, serta precision/recall/F1 pada confidence >0,25 dan pencocokan IoU ≥0,5. F1 utama adalah harmonic mean precision dan recall makro. Sumber: [T05](../../analisis_performa/tabel/T05_akurasi_test_keseluruhan.md) dan [T30](../../analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md).
 

@@ -34,3 +34,24 @@ Hasil sesi pelengkap log diperiksa ulang secara terpisah di Linux:
 - Tidak ditemukan kata sandi, token, kunci, atau alamat IP pada berkas yang masuk sejak commit `a4bc9b2`.
 - `jejak_waktu/` dan `bukti_kebutuhan/` dapat dibangkitkan ulang dengan hasil CSV yang identik; 40 tes lulus.
 - Pernyataan lama bahwa waktu training teacher tidak tersedia diperbarui di `agent.md`, T35, dan Bab 6 §6.5.
+
+## Perapian folder
+
+Dokumen lepas di akar repositori dipindah supaya akar hanya berisi `README.md`, `AGENTS.md`, `agent.md`, `REFERENSI_SKRIPSI.bib`, dan `requirements-op3-pytorch.txt`. Tautan relatif di 33 dokumen aktif diperbarui; jumlah tautan rusak tidak bertambah (tautan rusak yang tersisa menunjuk berkas lokal robot atau server yang sengaja tidak masuk Git). Isi berkas yang dipindah tidak diubah selain tautannya.
+
+| Lokasi lama | Lokasi baru |
+|---|---|
+| `OP3_PYTORCH_RUNTIME.md` | `docs/OP3_PYTORCH_RUNTIME.md` |
+| `PROTOKOL_EKSPERIMEN_SKRIPSI.md` | `docs/PROTOKOL_EKSPERIMEN_SKRIPSI.md` |
+| `AUDIT_DATASET_SKRIPSI.md` | `docs/AUDIT_DATASET_SKRIPSI.md` |
+| `TINJAUAN_PUSTAKA_KD_DETEKSI.md` | `docs/TINJAUAN_PUSTAKA_KD_DETEKSI.md` |
+| `Discuss/KEKURANGAN_PROTOKOL_SEBELUM_UJI_ROBOT_2026-10-31.md` | `docs/KEKURANGAN_PROTOKOL_SEBELUM_UJI_ROBOT_2026-10-31.md` |
+| `OP3_OPENVINO_PRECHECK.md` | `docs/arsip/OP3_OPENVINO_PRECHECK.md` |
+| `DRAF_PROPOSAL_BAB_I-III.md` | `laporan/DRAF_PROPOSAL_BAB_I-III.md` |
+| `DRAF_ABSTRAK_SKRIPSI.md` | `laporan/arsip/DRAF_ABSTRAK_SKRIPSI.md` |
+| `DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md` | `laporan/arsip/DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md` |
+| `KERANGKA_BAB_SKRIPSI.md` | `laporan/arsip/KERANGKA_BAB_SKRIPSI.md` |
+| `PLANNING_SKRIPSI.md` | `laporan/arsip/PLANNING_SKRIPSI.md` |
+| `audit_teacher_t42_LTOW7Xw5.json` | `analisis_performa/lab_server/audit_teacher_t42_LTOW7Xw5.json` |
+
+`analisis_performa/lab_server/manifest.json` masih mencatat `AUDIT_DATASET_SKRIPSI.md` dan `PROTOKOL_EKSPERIMEN_SKRIPSI.md` dengan path lama di akar; manifest itu catatan historis dan tidak diubah. Prompt lama yang menyebut nama berkas sebagai teks biasa (bukan tautan) juga dibiarkan. Bagian progres README utama diringkas menjadi satu paragraf status, dan riwayat progres 12 sampai 23 November dipindah ke bagian yang dapat dibuka-tutup.

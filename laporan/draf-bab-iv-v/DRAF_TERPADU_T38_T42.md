@@ -8,7 +8,7 @@
 
 ### 4.1 Implementasi sistem
 
-Sistem deteksi objek berbasis ROS 2 pada ROBOTIS OP3 menerima citra kamera dan menjalankan model deteksi untuk kelas bola, gawang, dan robot. Model pembanding terdiri atas teacher YOLO11n dan student YOLO11 skala t kustom dengan 810.649 parameter; student dilatih secara supervised, KD murni, dan KD Hybrid full. KD murni teacher-only berbeda dari Hybrid full, yang menggabungkan loss deteksi berlabel dengan distilasi fitur, kotak dan kelas. Implementasi, pengaturan perangkat, dan bukti uji perlu dijelaskan dengan merujuk [dokumentasi runtime](../../OP3_PYTORCH_RUNTIME.md) dan [audit uji robot](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md). Pengujian ini menilai keluaran deteksi dan kinerja runtime sesuai tujuan penelitian.
+Sistem deteksi objek berbasis ROS 2 pada ROBOTIS OP3 menerima citra kamera dan menjalankan model deteksi untuk kelas bola, gawang, dan robot. Model pembanding terdiri atas teacher YOLO11n dan student YOLO11 skala t kustom dengan 810.649 parameter; student dilatih secara supervised, KD murni, dan KD Hybrid full. KD murni teacher-only berbeda dari Hybrid full, yang menggabungkan loss deteksi berlabel dengan distilasi fitur, kotak dan kelas. Implementasi, pengaturan perangkat, dan bukti uji perlu dijelaskan dengan merujuk [dokumentasi runtime](../../docs/OP3_PYTORCH_RUNTIME.md) dan [audit uji robot](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md). Pengujian ini menilai keluaran deteksi dan kinerja runtime sesuai tujuan penelitian.
 
 ### 4.2 Hasil akurasi pada TEST
 

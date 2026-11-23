@@ -8,7 +8,7 @@ Kamera OP3 → topik citra ROS 2 → node deteksi PyTorch → topik deteksi
                                                └── log frame dan performa
 ```
 
-Citra diterima sebagai `sensor_msgs/Image`, diproses dengan input 640 dan checkpoint yang dipilih, lalu hasil diterbitkan sebagai `vision_msgs/Detection2DArray`. Preview adalah keluaran beranotasi yang dapat ditampilkan melalui SSH-X; proses ini terpisah dari pengendalian motor. Rincian topik, parameter, pemeriksaan kelas, dan registry berada pada [dokumentasi runtime](../../OP3_PYTORCH_RUNTIME.md).
+Citra diterima sebagai `sensor_msgs/Image`, diproses dengan input 640 dan checkpoint yang dipilih, lalu hasil diterbitkan sebagai `vision_msgs/Detection2DArray`. Preview adalah keluaran beranotasi yang dapat ditampilkan melalui SSH-X; proses ini terpisah dari pengendalian motor. Rincian topik, parameter, pemeriksaan kelas, dan registry berada pada [dokumentasi runtime](../../docs/OP3_PYTORCH_RUNTIME.md).
 
 ## 5.2 Implementasi model
 

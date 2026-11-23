@@ -26,7 +26,7 @@ Penelitian bertujuan merancang dan menguji sistem deteksi ROS 2; membandingkan m
 
 Kelas yang digunakan adalah `ball`, `gawang`, dan `robot`. Objek target untuk lingkup deteksi skripsi ditempatkan statis, sedangkan robot diuji dalam kondisi diam dan berjalan. T38 merupakan evaluasi retrospektif pendukung yang juga memuat frame dari sesi objek bergerak; seluruh T38 tidak boleh disebut set khusus objek statis. Pelacakan objek dan kontrol servo kepala tidak menjadi tujuan wajib skripsi.
 
-Dataset resmi menggunakan split gambar TRAIN, VAL dan TEST; kesamaan sumber/adegan antar-split belum dapat disingkirkan. TEST telah dipakai pada eksperimen sebelumnya. Provenance dataset teacher utama tidak lengkap. Pengujian runtime bersifat deskriptif dan dilakukan lintas hari. Ruang lingkup detail dan sumber rumusan masalah tersedia pada [konfirmasi rumusan](../../docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md), [audit dataset](../../AUDIT_DATASET_SKRIPSI.md), dan [audit runtime](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md).
+Dataset resmi menggunakan split gambar TRAIN, VAL dan TEST; kesamaan sumber/adegan antar-split belum dapat disingkirkan. TEST telah dipakai pada eksperimen sebelumnya. Provenance dataset teacher utama tidak lengkap. Pengujian runtime bersifat deskriptif dan dilakukan lintas hari. Ruang lingkup detail dan sumber rumusan masalah tersedia pada [konfirmasi rumusan](../../docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md), [audit dataset](../../docs/AUDIT_DATASET_SKRIPSI.md), dan [audit runtime](../../dokumentasi/2026-11-03/percobaan-36-audit-runtime-24-run/README_ID.md).
 
 ## 1.5 Sistematika
 

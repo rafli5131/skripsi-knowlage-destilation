@@ -12,9 +12,9 @@ Kebutuhan fungsional menyatakan fungsi atau perilaku masukan dan keluaran yang h
 
 | ID | Kebutuhan | Indikator pemeriksaan | Sumber implementasi/bukti |
 |---|---|---|---|
-| KF-01 | Menerima citra kamera OP3 | Frame masuk diproses dan kesalahan frame dicatat | [Runtime](../../OP3_PYTORCH_RUNTIME.md), [T36](../../analisis_performa/tabel/T36_runtime_live_setara_per_run.md), [bukti KF-01](../../bukti_kebutuhan/KF-01_menerima_citra/README.md) |
+| KF-01 | Menerima citra kamera OP3 | Frame masuk diproses dan kesalahan frame dicatat | [Runtime](../../docs/OP3_PYTORCH_RUNTIME.md), [T36](../../analisis_performa/tabel/T36_runtime_live_setara_per_run.md), [bukti KF-01](../../bukti_kebutuhan/KF-01_menerima_citra/README.md) |
 | KF-02 | Mendeteksi bola, gawang, dan robot | Keluaran memuat kelas dan kotak; ketepatan terhadap acuan dinilai terpisah | [T38](../../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md), log deteksi, [bukti KF-02](../../bukti_kebutuhan/KF-02_deteksi_tiga_kelas/README.md) |
-| KF-03 | Menyediakan ID pelacakan pada mode tambahan | ID tersedia dan kestabilan diuji pada objek bergerak | [Runtime](../../OP3_PYTORCH_RUNTIME.md), [bukti KF-03](../../bukti_kebutuhan/KF-03_id_pelacakan/README.md); bukan tujuan wajib penelitian |
+| KF-03 | Menyediakan ID pelacakan pada mode tambahan | ID tersedia dan kestabilan diuji pada objek bergerak | [Runtime](../../docs/OP3_PYTORCH_RUNTIME.md), [bukti KF-03](../../bukti_kebutuhan/KF-03_id_pelacakan/README.md); bukan tujuan wajib penelitian |
 | KF-04 | Mencatat runtime per frame | Timestamp, durasi, CPU, RSS, dan error tersedia pada CSV | [T36](../../analisis_performa/tabel/T36_runtime_live_setara_per_run.md), log per frame, [bukti KF-04](../../bukti_kebutuhan/KF-04_log_runtime/README.md) |
 | KF-05 | Menampilkan preview deteksi | Kotak dan kelas tampak pada contoh preview | [Contoh media](../../dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md), [bukti KF-05](../../bukti_kebutuhan/KF-05_preview/README.md) |
 

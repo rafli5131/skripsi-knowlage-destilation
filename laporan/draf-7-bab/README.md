@@ -1,6 +1,6 @@
 # Draf skripsi tujuh bab
 
-Draf kerja berdasarkan struktur D17 dan bukti penelitian yang tersedia. Naskah lama tetap disimpan di [folder Bab IV–V](../draf-bab-iv-v/README.md) dan [proposal Bab I–III](../../DRAF_PROPOSAL_BAB_I-III.md). Draf ini belum merupakan naskah akhir atau persetujuan pembimbing atas teksnya.
+Draf kerja berdasarkan struktur D17 dan bukti penelitian yang tersedia. Naskah lama tetap disimpan di [folder Bab IV–V](../draf-bab-iv-v/README.md) dan [proposal Bab I–III](../DRAF_PROPOSAL_BAB_I-III.md). Draf ini belum merupakan naskah akhir atau persetujuan pembimbing atas teksnya.
 
 | Bab | Dokumen | Isi |
 |---|---|---|

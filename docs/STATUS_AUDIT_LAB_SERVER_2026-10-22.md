@@ -29,7 +29,7 @@ Pemeriksaan label lulus: setiap gambar memiliki pasangan label, tidak ada label 
 
 Kesamaan nama dasar dihitung dengan menghapus suffix Roboflow `.rf.<hash>`. Hitungan tersebut menunjukkan nama sumber yang berulang, bukan jumlah duplikat persis. Pemeriksaan RGB atas pasangan nama dasar yang sama sebelumnya tidak menemukan berkas identik. Bukti yang tersedia tidak cukup untuk mengelompokkan seluruh gambar berdasarkan video/sesi/adegan. Karena itu hasil split saat ini hanya mendukung klaim evaluasi pada split resmi level-gambar; jangan klaim bahwa TEST berasal dari adegan baru.
 
-Rincian, riwayat penggunaan TEST, dan rekomendasi protokol tercatat di [`AUDIT_DATASET_SKRIPSI.md`](../AUDIT_DATASET_SKRIPSI.md). Dataset fingerprint tersimpan di `artifacts/advance_vision_dataset_fingerprint.json`.
+Rincian, riwayat penggunaan TEST, dan rekomendasi protokol tercatat di [`AUDIT_DATASET_SKRIPSI.md`](AUDIT_DATASET_SKRIPSI.md). Dataset fingerprint tersimpan di `artifacts/advance_vision_dataset_fingerprint.json`.
 
 ## Provenance teacher
 

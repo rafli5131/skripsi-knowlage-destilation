@@ -8,7 +8,7 @@
 
 > **13 November 2026:** [Verifikasi jalur inferensi TEST](lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) membandingkan T05/T30 (`model.val`) dengan `model.predict` pada ambang TEST dan ambang runtime untuk sembilan student (D23). Teacher menyusul. Rencana T44 (jalur tunggal T38/T43) dan T45 (rincian latensi dan CPU OP3) ada di [prompt sesi OP3](../prompt/PROMPT_SESI_OP3_OFFLINE_JALUR_TUNGGAL_DAN_RUNTIME_2026-11-13.md).
 
-> **9 November 2026:** [T42 ablasi teacher](tabel/T42_ablasi_teacher_yolo11s_val.md) pada server2 selesai untuk dua teacher dan enam student; [audit teacher](../audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 sebelumnya di bawah bersifat historis.
+> **9 November 2026:** [T42 ablasi teacher](tabel/T42_ablasi_teacher_yolo11s_val.md) pada server2 selesai untuk dua teacher dan enam student; [audit teacher](lab_server/audit_teacher_t42_LTOW7Xw5.json) tersedia. Status T42 sebelumnya di bawah bersifat historis.
 
 > **5 November 2026:** [T38 empat model](tabel/T38_akurasi_op3_empat_model_260.md) telah selesai pada 260 frame OP3 yang sama. Hasil ini retrospektif dan eksploratif; [dokumentasi dan grafik](../dokumentasi/2026-11-05/percobaan-37-evaluasi-t38-empat-model/README_ID.md) mencatat batasnya. Status T38 belum ada di bawah merupakan snapshot historis.
 
@@ -73,8 +73,8 @@ Pembaruan: 2026-11-03. T28–T29 merangkum VAL KD Hybrid full, T30–T31 memuat 
 | T39 | Diagnosis awal KD jalur tengah pada VAL tiga seed: ambang F1, FP, histogram confidence, serta audit head/loss satu batch. Penyaringan dan konfirmasi selesai pada T40/T41. | [CSV](tabel/T39_diagnosis_objektif_kd.csv) · [Markdown](tabel/T39_diagnosis_objektif_kd.md) · [Histogram TP/FP](tabel/T39_histogram_confidence_tp_fp.csv) · [Laporan](lab_server/HASIL_DIAGNOSIS_KD_JALUR_TENGAH_2026-10-23.md) |
 | T40 | Penyaringan `hybrid_v2` S1–S8 pada VAL seed 42 selesai. Konfirmasi tiga seed selesai pada T41; S2 tidak mengganti Hybrid full. | [CSV lengkap](tabel/T40_penyaringan_hybrid_v2_val_s1_s8.csv) · [Markdown lengkap](tabel/T40_penyaringan_hybrid_v2_val_s1_s8.md) · [Tahap S1–S3](tabel/T40_penyaringan_hybrid_v2_val.md) |
 | T41 | Konfirmasi `hybrid_v2` S2 pada VAL tiga seed selesai. S2 tidak memenuhi syarat penggantian; Hybrid full tetap model KD utama. | [CSV](tabel/T41_konfirmasi_hybrid_v2_val.csv) · [Markdown](tabel/T41_konfirmasi_hybrid_v2_val.md) · [Laporan](lab_server/HASIL_KD_HYBRID_V2_2026-10-24.md) |
-| T42 | Ablasi dua teacher dan enam student pada VAL server2; audit teacher dilaporkan lulus. | [CSV](tabel/T42_ablasi_teacher_yolo11s_val.csv) · [Markdown](tabel/T42_ablasi_teacher_yolo11s_val.md) · [Audit server](../audit_teacher_t42_LTOW7Xw5.json) |
+| T42 | Ablasi dua teacher dan enam student pada VAL server2; audit teacher dilaporkan lulus. | [CSV](tabel/T42_ablasi_teacher_yolo11s_val.csv) · [Markdown](tabel/T42_ablasi_teacher_yolo11s_val.md) · [Audit server](lab_server/audit_teacher_t42_LTOW7Xw5.json) |
 
-T42 server2 selesai untuk dua teacher dan enam student pada VAL; lihat [tabel](tabel/T42_ablasi_teacher_yolo11s_val.md), [status](../runs/kd_teacher_ablation/server2/t42_status.jsonl), dan [hasil audit teacher](../audit_teacher_t42_LTOW7Xw5.json). Ini eksperimen terpisah dan tidak mengganti model OP3.
+T42 server2 selesai untuk dua teacher dan enam student pada VAL; lihat [tabel](tabel/T42_ablasi_teacher_yolo11s_val.md), [status](../runs/kd_teacher_ablation/server2/t42_status.jsonl), dan [hasil audit teacher](lab_server/audit_teacher_t42_LTOW7Xw5.json). Ini eksperimen terpisah dan tidak mengganti model OP3.
 
 - [T44 — jalur tunggal OP3](tabel/T44_jalur_tunggal_op3_t38_t43.md) dan [T45 — rincian latensi dan CPU](tabel/T45_rincian_latensi_dan_cpu_op3.md).

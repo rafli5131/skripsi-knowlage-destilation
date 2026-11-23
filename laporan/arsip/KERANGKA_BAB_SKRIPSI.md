@@ -1,9 +1,9 @@
-> **Historis.** Kerangka ini berasal dari tahap Pure KD dan memuat pertanyaan penelitian lama. Sejak 11 November 2026 naskah memakai struktur tujuh bab (D17 di [`docs/DECISIONS.md`](docs/DECISIONS.md)) dan lima rumusan masalah di [`docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md`](docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md); model KD utama adalah Hybrid full.
+> **Historis.** Kerangka ini berasal dari tahap Pure KD dan memuat pertanyaan penelitian lama. Sejak 11 November 2026 naskah memakai struktur tujuh bab (D17 di [`docs/DECISIONS.md`](../../docs/DECISIONS.md)) dan lima rumusan masalah di [`docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md`](../../docs/KONFIRMASI_RUMUSAN_MASALAH_2026-10-22.md); model KD utama adalah Hybrid full.
 
 # Kerangka Bab Skripsi
 
 **Judul kerja:** *Kompresi Model YOLO untuk Deteksi Objek Advance Vision Menggunakan Pure Teacher-Only Knowledge Distillation*  
-Kerangka ini mengikuti eksperimen dan batas klaim yang sudah ditetapkan. Draf abstrak tersedia di [`DRAF_ABSTRAK_SKRIPSI.md`](DRAF_ABSTRAK_SKRIPSI.md), draf proposal Bab I–III di [`DRAF_PROPOSAL_BAB_I-III.md`](DRAF_PROPOSAL_BAB_I-III.md), dan draf hasil serta simpulan Bab IV–V berbasis TEST terkunci di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md). Format akhir perlu disesuaikan dengan pedoman prodi dan arahan pembimbing.
+Kerangka ini mengikuti eksperimen dan batas klaim yang sudah ditetapkan. Draf abstrak tersedia di [`DRAF_ABSTRAK_SKRIPSI.md`](DRAF_ABSTRAK_SKRIPSI.md), draf proposal Bab I–III di [`DRAF_PROPOSAL_BAB_I-III.md`](../DRAF_PROPOSAL_BAB_I-III.md), dan draf hasil serta simpulan Bab IV–V berbasis TEST terkunci di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md). Format akhir perlu disesuaikan dengan pedoman prodi dan arahan pembimbing.
 
 ## Benang merah penelitian
 
@@ -31,7 +31,7 @@ Pertanyaan penelitian yang dijawab:
 3. Knowledge distillation: teacher/student, target lunak, temperatur, distilasi fitur, dan distilasi keluaran untuk deteksi.
 4. Fungsi objektif penelitian: peniruan fitur P3/P4/P5, keluaran box, dan keluaran kelas; jelaskan secara eksplisit bahwa objective KD tidak memakai label ground-truth.
 5. Kompresi dan biaya inferensi: parameter, ukuran checkpoint, FLOPs, latensi, throughput, serta keterbatasan masing-masing ukuran sebagai proksi deployment.
-6. Penelitian terkait: bandingkan tugas, dataset, arsitektur, target distilasi, penggunaan data berlabel, baseline, dan metrik. Bedakan objective teacher-only seperti DIODE, training pseudo-label teacher seperti Banitalebi-Dehkordi, serta metode hibrida. Bahas metode mutakhir CanKD (WACV 2026) dan FD-CanKD (arXiv 2026) yang tetap memakai loss tugas deteksi. Audit terarah tersedia di [`TINJAUAN_PUSTAKA_KD_DETEKSI.md`](TINJAUAN_PUSTAKA_KD_DETEKSI.md), tetapi bukan systematic review. Posisikan studi sebagai evaluasi terapan, bukan metode KD baru; jangan membuat klaim novelty yang belum didukung telaah sistematis.
+6. Penelitian terkait: bandingkan tugas, dataset, arsitektur, target distilasi, penggunaan data berlabel, baseline, dan metrik. Bedakan objective teacher-only seperti DIODE, training pseudo-label teacher seperti Banitalebi-Dehkordi, serta metode hibrida. Bahas metode mutakhir CanKD (WACV 2026) dan FD-CanKD (arXiv 2026) yang tetap memakai loss tugas deteksi. Audit terarah tersedia di [`TINJAUAN_PUSTAKA_KD_DETEKSI.md`](../../docs/TINJAUAN_PUSTAKA_KD_DETEKSI.md), tetapi bukan systematic review. Posisikan studi sebagai evaluasi terapan, bukan metode KD baru; jangan membuat klaim novelty yang belum didukung telaah sistematis.
 7. Kerangka pemikiran dan hipotesis kerja: bandingkan mAP50–95 pure KD dengan supervised pada arsitektur student sama; perlakukan tiga pasangan seed sebagai eksploratif. Bandingkan biaya student KD terhadap teacher secara terpisah. Jangan menyatakan keunggulan ukuran/latensi KD atas supervised yang berarsitektur sama atau memakai hipotesis sebagai hasil.
 
 ## Bab III — Metodologi Penelitian
@@ -58,7 +58,7 @@ Pertanyaan penelitian yang dijawab:
 
 ## Bab IV — Hasil dan Pembahasan
 
-Gunakan draf hasil terkunci di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) dan tabel terverifikasi di [`artifacts/thesis_analysis_final_corrected/`](artifacts/thesis_analysis_final_corrected/). Jangan menyalin angka pilot atau tabel awal sebelum audit hitungan parameter sebagai hasil utama.
+Gunakan draf hasil terkunci di [`DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md`](DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md) dan tabel terverifikasi di [`artifacts/thesis_analysis_final_corrected/`](../../artifacts/thesis_analysis_final_corrected/). Jangan menyalin angka pilot atau tabel awal sebelum audit hitungan parameter sebagai hasil utama.
 
 1. Hasil audit data dan keterbatasan provenance teacher.
 2. Ringkasan training dan pemilihan checkpoint VAL untuk setiap seed.

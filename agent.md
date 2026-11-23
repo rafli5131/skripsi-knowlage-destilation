@@ -54,9 +54,9 @@
 
 - Status dan rujukan terbaru: file tanggal terbaru di [`memory/`](memory/).
 - Model/checkpoint/hash: [`configs/model_registry.yaml`](configs/model_registry.yaml) dan manifest masing-masing run.
-- Data/split/provenance: [`AUDIT_DATASET_SKRIPSI.md`](AUDIT_DATASET_SKRIPSI.md), fingerprint di `artifacts/advance_vision_dataset_fingerprint.json`.
+- Data/split/provenance: [`AUDIT_DATASET_SKRIPSI.md`](docs/AUDIT_DATASET_SKRIPSI.md), fingerprint di `artifacts/advance_vision_dataset_fingerprint.json`.
 - Hasil tabel: [`analisis_performa/INDEKS.md`](analisis_performa/INDEKS.md) dan [`analisis_performa/lab_server/README.md`](analisis_performa/lab_server/README.md).
-- Runtime robot dan instruksi sesi: [`OP3_PYTORCH_RUNTIME.md`](OP3_PYTORCH_RUNTIME.md), `prompt/PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3_V2.md`, serta README package yang terkait.
+- Runtime robot dan instruksi sesi: [`OP3_PYTORCH_RUNTIME.md`](docs/OP3_PYTORCH_RUNTIME.md), `prompt/PROMPT_PERCOBAAN_KD_HYBRID_DI_ROBOT_OP3_V2.md`, serta README package yang terkait.
 - Audit server terakhir: [`docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md`](docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md).
 - Environment dan perangkat server: [`environment/README.md`](environment/README.md), termasuk spesifikasi perangkat 16 November 2026.
 

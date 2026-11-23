@@ -26,4 +26,4 @@ ROS 2 menyediakan komunikasi topik untuk menghubungkan penerbit citra kamera den
 
 ## 2.6 Penelitian terkait
 
-Bandingkan penelitian KD deteksi berdasarkan teacher/student, data, loss berlabel, jenis distilasi, metrik dan perangkat uji. Jangan menyebut suatu objective teacher-only hanya karena salah satu komponen loss distilasinya tidak memakai label. Bahan yang telah dihimpun tersedia di [tinjauan pustaka](../../TINJAUAN_PUSTAKA_KD_DETEKSI.md), [proposal terdahulu](../../DRAF_PROPOSAL_BAB_I-III.md), dan [bibliografi](../../REFERENSI_SKRIPSI.bib). Setiap sitasi masih perlu dicocokkan dengan sumber primer.
+Bandingkan penelitian KD deteksi berdasarkan teacher/student, data, loss berlabel, jenis distilasi, metrik dan perangkat uji. Jangan menyebut suatu objective teacher-only hanya karena salah satu komponen loss distilasinya tidak memakai label. Bahan yang telah dihimpun tersedia di [tinjauan pustaka](../../docs/TINJAUAN_PUSTAKA_KD_DETEKSI.md), [proposal terdahulu](../DRAF_PROPOSAL_BAB_I-III.md), dan [bibliografi](../../REFERENSI_SKRIPSI.bib). Setiap sitasi masih perlu dicocokkan dengan sumber primer.

@@ -1,6 +1,6 @@
 # Audit teacher T42 di server lab
 
-**Status:** hasil audit server [tersedia dalam JSON](../../audit_teacher_t42_LTOW7Xw5.json), dibawa oleh commit `04d697c`. Keluaran skrip menunjukkan `complete: true`, `issues: []`, sembilan pemeriksaan untuk masing-masing teacher dan empat pemeriksaan lintas-teacher semuanya lulus. Skrip dijalankan pengguna di server; manifest dan bobot privatnya tetap berada di server dan tidak diverifikasi ulang secara langsung dari robot.
+**Status:** hasil audit server [tersedia dalam JSON](../../analisis_performa/lab_server/audit_teacher_t42_LTOW7Xw5.json), dibawa oleh commit `04d697c`. Keluaran skrip menunjukkan `complete: true`, `issues: []`, sembilan pemeriksaan untuk masing-masing teacher dan empat pemeriksaan lintas-teacher semuanya lulus. Skrip dijalankan pengguna di server; manifest dan bobot privatnya tetap berada di server dan tidak diverifikasi ulang secara langsung dari robot.
 
 Teacher YOLO11n memiliki 2.590.425 parameter, hash checkpoint `8e5416a393fd4f310d0f398a7308a43149cb856f2f88d6f563a8296b9cf02968` dan durasi training tercatat 3.538,12 detik. Teacher YOLO11s memiliki 9.428.953 parameter, hash `fc9ec7a8bcb11f16ddf01233211aa037e41c8e5df58ea7b2adf696d04fe7f4f4` dan durasi 4.976,11 detik. Audit memeriksa hash manifest, checkpoint, bobot pralatih, fingerprint dan YAML yang tercatat, juga kesesuaian konfigurasi, versi dan identitas VAL. Audit tidak menghitung ulang seluruh byte dataset maupun memverifikasi ulang secara independen bahwa proses training mengikuti seluruh catatan manifest.
 

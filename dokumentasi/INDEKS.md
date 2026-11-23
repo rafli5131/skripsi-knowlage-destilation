@@ -98,6 +98,6 @@ Versi GitHub memuat laporan, tabel, grafik analisis, dan metadata hasil yang dik
 
 - [Audit kelengkapan dokumentasi skripsi](AUDIT_KELENGKAPAN_SKRIPSI_2026-10-22.md)
 - [Indeks seluruh tabel analisis performa](../analisis_performa/INDEKS.md)
-- [Draf Proposal Bab I–III](../DRAF_PROPOSAL_BAB_I-III.md)
-- [Draf Bab IV–V hasil dan pembahasan](../DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md)
-- [Draf abstrak](../DRAF_ABSTRAK_SKRIPSI.md)
+- [Draf Proposal Bab I–III](../laporan/DRAF_PROPOSAL_BAB_I-III.md)
+- [Draf Bab IV–V hasil dan pembahasan](../laporan/arsip/DRAF_BAB_IV-V_HASIL_DAN_PEMBAHASAN.md)
+- [Draf abstrak](../laporan/arsip/DRAF_ABSTRAK_SKRIPSI.md)
