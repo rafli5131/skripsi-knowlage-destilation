@@ -1,0 +1,118 @@
+{
+  "dibuat_utc": "2026-11-23T07:52:00+00:00",
+  "commit_repositori_laptop": "430cbfc1cfda00b19e53d33dd42b4003d77f2e67",
+  "server": "labkc-l40-debian (akun dindarosyidah)",
+  "cara": "scp dari server; SHA-256 dihitung di server dan dicocokkan di laptop (22/22 sama)",
+  "berkas": {
+    "t42_server2/logs/build_t42.log": {
+      "sha256": "7000cfd0d9740e631a6d50d6ef2ff0a9597366591bb407e70fbf8c4a41392b51",
+      "bytes": 123,
+      "sumber_server": "server2/logs/build_t42.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11n_seed1337.log": {
+      "sha256": "0ac0d34163fd204b16d914e543d7340b8ac1cfea2ce744b0fddf2dfed99c57e6",
+      "bytes": 12998,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11n_seed1337.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11n_seed2025.log": {
+      "sha256": "19aedb3ae75cfc50f506c221dea009d59586ccee66c7e426d2629ad8c6281ff6",
+      "bytes": 12987,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11n_seed2025.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11n_seed42.log": {
+      "sha256": "94ab6bbcc5f8c444e92c4a81d8ddf6343b95a2d1a2cde0aa27d9558ac0d6240f",
+      "bytes": 12998,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11n_seed42.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11s_seed1337.log": {
+      "sha256": "d5a1aa84312e1407e7705e110703d4e05ba658a2ffa7d0f627f0235f48a16b7e",
+      "bytes": 12983,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11s_seed1337.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11s_seed2025.log": {
+      "sha256": "41125861217682aec3111529b496f5d58874d2c02aebc7eaba9044e3ca04137e",
+      "bytes": 12988,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11s_seed2025.log"
+    },
+    "t42_server2/logs/eval_student_teacher_yolo11s_seed42.log": {
+      "sha256": "62348d1df72fe0d79a1ab979d20e0e45299c35d2ca58f1be1c0de4c6777478e0",
+      "bytes": 12991,
+      "sumber_server": "server2/logs/eval_student_teacher_yolo11s_seed42.log"
+    },
+    "t42_server2/logs/eval_teacher_yolo11n_seed42.log": {
+      "sha256": "14e3f91e93e9461ba7c59ba95fa793dd8c55a6980c8aad47219e3ab9334fdca9",
+      "bytes": 5543,
+      "sumber_server": "server2/logs/eval_teacher_yolo11n_seed42.log"
+    },
+    "t42_server2/logs/eval_teacher_yolo11n_seed42_retry1.log": {
+      "sha256": "10caa3ffdfca626cedf86918fb51f7960a41f62d1f7b1c30e5ae060d2b318229",
+      "bytes": 12888,
+      "sumber_server": "server2/logs/eval_teacher_yolo11n_seed42_retry1.log"
+    },
+    "t42_server2/logs/eval_teacher_yolo11s_seed42.log": {
+      "sha256": "0553c0f95d8847b54ea19a26d154e53147c75be739b8e7019daa52f27501a19e",
+      "bytes": 12829,
+      "sumber_server": "server2/logs/eval_teacher_yolo11s_seed42.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11n_seed1337.log": {
+      "sha256": "fa5ca80fd53c13d0ca4afffcf7cbf22ed0e7fa32043204cc3eeeea57146f469c",
+      "bytes": 4457819,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11n_seed1337.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11n_seed2025.log": {
+      "sha256": "c882f1223e3229da3e3c9e79a35eea17c89e4d9124bc59656acb39c4b3efd391",
+      "bytes": 4166663,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11n_seed2025.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11n_seed42.log": {
+      "sha256": "e5f53a9a0a8cbff28fd1fdaef2f1655390e028a0a8484a5cbfce1ae83547313c",
+      "bytes": 4226128,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11n_seed42.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11s_seed1337.log": {
+      "sha256": "569c766df7a6298269ffd96057b749eff7873eb437d81b347fa4543624a30ba5",
+      "bytes": 4237211,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11s_seed1337.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11s_seed2025.log": {
+      "sha256": "0eea46a8c26350cc494c68ec71c9ee03640d9bce36ab8d85983388afda5a8329",
+      "bytes": 4171236,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11s_seed2025.log"
+    },
+    "t42_server2/logs/train_student_teacher_yolo11s_seed42.log": {
+      "sha256": "877aab0ccaf26b181d60a556141bb51be68fc9ba8a378df72c47a61a6610d1b6",
+      "bytes": 4358669,
+      "sumber_server": "server2/logs/train_student_teacher_yolo11s_seed42.log"
+    },
+    "t42_server2/logs/train_teacher_yolo11n_seed42.log": {
+      "sha256": "db14a04877561cf51882ea1a5b3366834502ae2f1e34e631497fa4f56c2eb5d2",
+      "bytes": 3110329,
+      "sumber_server": "server2/logs/train_teacher_yolo11n_seed42.log"
+    },
+    "t42_server2/logs/train_teacher_yolo11s_seed42.log": {
+      "sha256": "a3582b659669c4825501ef74aa93937c6db31757d19a8e17f4fc2b459db8713d",
+      "bytes": 4953938,
+      "sumber_server": "server2/logs/train_teacher_yolo11s_seed42.log"
+    },
+    "t42_server2/run_server2_20261105T044951Z.log": {
+      "sha256": "c5f21f83d613bc4679e08aad8cec9922cf93714697b21950771985ab13e14326",
+      "bytes": 1014,
+      "sumber_server": "run_server2_20261105T044951Z.log"
+    },
+    "t42_server2/run_server2_continue_20261105T064704Z.log": {
+      "sha256": "c8b75ed6dafe615c282da44d80f70d6ba304d5a76b2fbedff48bfbe1f9a99f5e",
+      "bytes": 217,
+      "sumber_server": "run_server2_continue_20261105T064704Z.log"
+    },
+    "verifikasi_teacher_20261116/jalankan_verifikasi_teacher.sh": {
+      "sha256": "4d5496926bed5f6bea2b048ddf27498168831b93d569501fa435973076b3fa9f",
+      "bytes": 507,
+      "sumber_server": "/tmp/jalankan_verifikasi_teacher.sh"
+    },
+    "verifikasi_teacher_20261116/verifikasi_teacher.log": {
+      "sha256": "d62087b4afcbf54b64d4ac97676edb52180eee398759f9117a5903069c0b04f5",
+      "bytes": 2145,
+      "sumber_server": "/tmp/verifikasi_teacher.log"
+    }
+  }
+}

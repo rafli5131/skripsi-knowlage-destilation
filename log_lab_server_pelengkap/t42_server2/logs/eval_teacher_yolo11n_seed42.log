@@ -1,0 +1,28 @@
+val: Fast image access ✅ (ping: 0.0±0.0 ms, read: 100.3±138.8 MB/s, size: 37.0 KB)
+[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 88 images, 0 backgrounds, 0 corrupt: 7% ╸─────────── 88/1213 250.1it/s 0.1s<4.5s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 196 images, 0 backgrounds, 0 corrupt: 16% ━╸────────── 196/1213 494.3it/s 0.2s<2.1s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 300 images, 0 backgrounds, 0 corrupt: 24% ━━╸───────── 300/1213 646.9it/s 0.3s<1.4s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 401 images, 0 backgrounds, 0 corrupt: 33% ━━━╸──────── 401/1213 749.4it/s 0.4s<1.1s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 499 images, 1 backgrounds, 0 corrupt: 41% ━━━━╸─────── 499/1213 815.9it/s 0.5s<0.9s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 598 images, 1 backgrounds, 0 corrupt: 49% ━━━━━╸────── 598/1213 867.2it/s 0.6s<0.7s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 690 images, 1 backgrounds, 0 corrupt: 56% ━━━━━━╸───── 690/1213 861.4it/s 0.7s<0.6s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 789 images, 1 backgrounds, 0 corrupt: 65% ━━━━━━━╸──── 789/1213 899.8it/s 0.8s<0.5s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 882 images, 1 backgrounds, 0 corrupt: 72% ━━━━━━━━╸─── 882/1213 904.5it/s 0.9s<0.4s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 979 images, 1 backgrounds, 0 corrupt: 80% ━━━━━━━━━╸── 979/1213 917.3it/s 1.0s<0.3s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 1079 images, 2 backgrounds, 0 corrupt: 88% ━━━━━━━━━━╸─ 1079/1213 941.8it/s 1.1s<0.1s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 1180 images, 2 backgrounds, 0 corrupt: 97% ━━━━━━━━━━━╸ 1180/1213 958.0it/s 1.2s<0.0s[Kval: Scanning /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels... 1213 images, 2 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 1213/1213 966.6it/s 1.3s
+val: New cache created: /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/val_ablation/teacher_yolo11s_t42_server2/.val_labels.cache
+Ultralytics 8.4.130 🚀 Python-3.11.2 torch-2.4.1+cu121 CPU (AMD EPYC 7413 24-Core Processor)
+YOLO11n summary (fused): 101 layers, 2,582,737 parameters, 0 gradients, 6.4 GFLOPs
+Traceback (most recent call last):
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/evaluate_t42_val.py", line 50, in <module>
+    main()
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/evaluate_t42_val.py", line 44, in main
+    print(base.evaluate(args.label, images, expected_images, fingerprint, 8, torch.device("cpu"), output_dir))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/evaluate_val_ablation.py", line 140, in evaluate
+    validator(model=model)
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/.venv-train/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/.venv-train/lib/python3.11/site-packages/ultralytics/engine/validator.py", line 226, in __call__
+    self.data = check_det_dataset(self.args.data, split=self.args.split)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/.venv-train/lib/python3.11/site-packages/ultralytics/data/utils.py", line 613, in check_det_dataset
+    if not x.exists() and data[k].startswith("../"):
+           ^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1236, in exists
+    self.stat()
+  File "/usr/lib/python3.11/pathlib.py", line 1014, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/mnt/nas-hpg9/rafli5131/rafli/advance_vision/data/raw/advance_vision_human/train/images'

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/run_t42_teacher_ablation.py", line 186, in <module>
+    main()
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/run_t42_teacher_ablation.py", line 169, in main
+    evaluate(label, run_dir / "weights/best.pt", run_dir / "manifest.json")
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/run_t42_teacher_ablation.py", line 120, in evaluate
+    run_step(f"eval_{label}", [PYTHON, str(ROOT / "scripts/evaluate_t42_val.py"),
+  File "/mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/scripts/run_t42_teacher_ablation.py", line 113, in run_step
+    raise RuntimeError(f"T42 step failed ({code}): {name}; inspect {log}")
+RuntimeError: T42 step failed (1): eval_teacher_yolo11n_seed42; inspect /mnt/nas-hpg9/dindarosyidah/skripsi/skripsi-knowlage-destilation/runs/kd_teacher_ablation/server2/logs/eval_teacher_yolo11n_seed42.log
