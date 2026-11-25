@@ -1,6 +1,6 @@
 # Naskah skripsi tujuh bab
 
-Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v22** (25 November 2026, 115 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
+Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v23** (25 November 2026, 116 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
 
 **Judul:** Implementasi *Knowledge Distillation* untuk Deteksi Objek pada Robot Humanoid ROBOTIS OP3
 **Struktur:** tujuh bab implementatif-pengembangan (D17), mengikuti Panduan Skripsi FILKOM v3.0.
@@ -15,7 +15,7 @@ Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v22** (25 Nov
 | [Bab 5 Perancangan dan Implementasi](BAB_5_PERANCANGAN_IMPLEMENTASI.md) | Rancangan dan implementasi perangkat keras, model *student*, pelatihan KD, *node* deteksi ROS 2, dan *logging* |
 | [Bab 6 Pengujian](BAB_6_PENGUJIAN_DAN_PEMBAHASAN.md) | Pengujian fungsional, lalu satu subbab per rumusan masalah, pengujian tambahan, dan evaluasi keseluruhan |
 | [Bab 7 Penutup](BAB_7_PENUTUP.md) | Empat butir kesimpulan yang menjawab rumusan masalah dan lima saran |
-| [Daftar Referensi](DAFTAR_REFERENSI.md) | 66 entri, format seragam Harvard-Anglia adaptasi FILKOM |
+| [Daftar Referensi](DAFTAR_REFERENSI.md) | 67 entri, format seragam Harvard-Anglia adaptasi FILKOM |
 | [Lampiran](LAMPIRAN.md) | A konfigurasi pelatihan, B rincian himpunan data, C hasil *runtime* 24 *run*, D akurasi TEST setiap *seed* |
 
 ## Rumusan masalah dan letak jawabannya
@@ -75,4 +75,4 @@ Skrip menimpa berkas bab di folder ini. Salin dulu versi lama ke `laporan/arsip/
 
 - Draf ringkas 12 sampai 23 November: [`laporan/arsip/draf-7-bab-2026-11-23/`](../arsip/draf-7-bab-2026-11-23/README.md).
 - Draf Bab IV-V dan proposal Bab I-III: [`laporan/draf-bab-iv-v/`](../draf-bab-iv-v/README.md) dan [`laporan/DRAF_PROPOSAL_BAB_I-III.md`](../DRAF_PROPOSAL_BAB_I-III.md).
-- Riwayat suntingan naskah v1 sampai v22: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).
+- Riwayat suntingan naskah v1 sampai v23: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).

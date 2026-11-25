@@ -1,6 +1,6 @@
 # BAB 3 METODOLOGI PENELITIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v23 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 3.1 Tipe Penelitian
 
@@ -41,6 +41,10 @@ Data lain dikumpulkan dari tiga sumber. Pertama, *log* pelatihan dan evaluasi se
 ### 3.2.5 Teknik Analisis Data
 
 Analisis data bersifat deskriptif. Untuk akurasi, model *supervised*, KD murni, dan varian KD hibrida terpilih masing-masing dilatih dengan tiga *seed*, yaitu 42, 1337, dan 2025. Hasilnya dilaporkan per *seed* serta sebagai rata-rata dan simpangan baku antar-*seed*. Cara ini dipakai karena hasil pelatihan jaringan saraf bervariasi menurut sumber keacakannya, termasuk inisialisasi parameter dan pilihan *seed* (Bouthillier, et al., 2021; Picard, 2021). Pengaruh KD dinyatakan sebagai selisih berpasangan antara model hasil KD dan model *supervised* pada *seed* yang sama. Pada citra kamera OP3, setiap model diwakili oleh satu *checkpoint* yang juga dipakai pada pengujian *runtime*, sehingga hasilnya dilaporkan per model dan per kondisi.
+
+Ketiga *seed* hanya berbeda pada nilai awal pembangkit bilangan acak. Arsitektur *student*, data TRAIN, VAL, dan TEST, resep pelatihan, serta objektif setiap varian sama pada ketiga *seed*. Karena *student* dilatih tanpa bobot *pretrained*, perbedaan *seed* menghasilkan bobot awal, urutan data, dan augmentasi acak yang berbeda, sehingga setiap *seed* menghasilkan *checkpoint* yang berbeda walaupun resepnya sama (Bouthillier, et al., 2021, p. 3; Ultralytics, n.d.b). Angka 42, 1337, dan 2025 hanya menjadi label ketiga ulangan pelatihan dan tidak menunjukkan urutan mutu model.
+
+Peran ketiga *seed* dalam alur penelitian berbeda. *Seed* 42 dipakai lebih dahulu untuk menyaring varian KD hibrida pada VAL (Tabel 6.2) dan tercantum pada berkas konfigurasi (Kode Program 5.2). *Seed* 1337 dan 2025 menjadi ulangan bagi varian terpilih dan pembandingnya. Di antara ketiga *seed* KD hibrida penuh, *seed* 1337 memberi mAP50-95 VAL tertinggi sehingga *checkpoint*-nya dibawa ke OP3 bersama *supervised* *seed* 1337 dan KD murni *seed* 42 (Subbab 6.2.2). Nilai setiap *seed* pada TEST disajikan pada Tabel D.1 di Lampiran D.
 
 Untuk *runtime*, setiap pasangan model dan kondisi diukur dalam tiga ulangan. Nilai yang dilaporkan per ulangan adalah rata-rata, median, dan persentil ke-95 (P95) latensi, FPS efektif, penggunaan CPU, dan RSS, lalu diringkas sebagai rata-rata dan simpangan baku antarulangan. Dengan tiga *seed* dan tiga ulangan, penelitian ini tidak memakai uji hipotesis statistik. Perbedaan antarmodel dibahas dari besar selisih dan konsistensinya pada setiap *seed* atau ulangan. Sebaran dilaporkan sebagai nilai setiap ulangan dan setiap *seed* (Lampiran C dan Lampiran D) beserta simpangan bakunya. Selang kepercayaan tidak dilaporkan karena jumlah *seed* dan ulangan hanya tiga.
 

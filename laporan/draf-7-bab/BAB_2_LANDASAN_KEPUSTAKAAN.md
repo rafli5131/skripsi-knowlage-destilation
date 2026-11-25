@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v23 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -69,7 +69,7 @@ Spesifikasi produsen OP3 mencakup tinggi sekitar 510 mm, bobot sekitar 3,5 kg,
 
 YOLO merumuskan deteksi objek sebagai masalah regresi kotak pembatas yang terpisah secara spasial beserta probabilitas kelasnya. Citra dibagi menjadi *grid* $S \times S$, dan satu jaringan memprediksi kotak pembatas serta probabilitas kelas secara langsung dari citra utuh (Redmon, et al., 2016).
 
-YOLO11 tersusun atas tiga komponen. *Backbone* mengubah citra menjadi peta fitur multiskala, *neck* menggabungkan dan memperkuat fitur antarskala, dan *head* menghasilkan prediksi (Khanam dan Hussain, 2024). Blok C3k2 menggantikan blok C2f pada versi sebelumnya, blok SPPF dipertahankan, dan blok C2PSA ditambahkan (Khanam dan Hussain, 2024). Ultralytics menyediakan beberapa skala YOLO11; skala terkecil, YOLO11n, berukuran 2,6 juta parameter dan 6,5 miliar operasi titik mengambang (*floating point operations*, FLOPs) pada masukan 640 piksel (Ultralytics, n.d.c). Pada konfigurasi model penelitian ini, *head* Detect menerima fitur dari tiga skala. Gambar 2.2 memperlihatkan susunan umum arsitektur tersebut.
+YOLO11 tersusun atas tiga komponen. *Backbone* mengubah citra menjadi peta fitur multiskala, *neck* menggabungkan dan memperkuat fitur antarskala, dan *head* menghasilkan prediksi (Khanam dan Hussain, 2024). Blok C3k2 menggantikan blok C2f pada versi sebelumnya, blok SPPF dipertahankan, dan blok C2PSA ditambahkan (Khanam dan Hussain, 2024). Ultralytics menyediakan beberapa skala YOLO11; skala terkecil, YOLO11n, berukuran 2,6 juta parameter dan 6,5 miliar operasi titik mengambang (*floating point operations*, FLOPs) pada masukan 640 piksel (Ultralytics, n.d.d). Pada konfigurasi model penelitian ini, *head* Detect menerima fitur dari tiga skala. Gambar 2.2 memperlihatkan susunan umum arsitektur tersebut.
 
 **Gambar 2.2** Susunan umum arsitektur YOLO11
 
@@ -265,7 +265,7 @@ IoU hanya dihitung antara kotak prediksi dan kotak kebenaran dari kelas yang sam
 
 Nilai *confidence* tidak selalu sebanding dengan peluang suatu prediksi benar. Guo, et al. (2017, pp. 1321-1322) mendapati bahwa jaringan saraf modern cenderung terlalu yakin, sehingga keyakinan prediksinya perlu dikalibrasi sebelum ditafsirkan sebagai peluang. Akibatnya, satu ambang *confidence* yang sama dapat meloloskan proporsi deteksi yang berbeda pada model yang berbeda. Karena itu, penelitian ini melaporkan AP, yang dihitung pada seluruh ambang *confidence*, bersama *precision* dan *recall* pada satu ambang tetap.
 
-*Precision* dan *recall* dihitung dengan Persamaan 2.10 dan Persamaan 2.11 (Padilla, et al., 2021), sedangkan F1 adalah rata-rata harmonik keduanya, seperti pada Persamaan 2.12 (Ultralytics, n.d.b).
+*Precision* dan *recall* dihitung dengan Persamaan 2.10 dan Persamaan 2.11 (Padilla, et al., 2021), sedangkan F1 adalah rata-rata harmonik keduanya, seperti pada Persamaan 2.12 (Ultralytics, n.d.c).
 
 > $P = \frac{TP}{TP + FP}$ (2.10)
 >
@@ -301,7 +301,7 @@ Setiap suku penjumlahan adalah luas persegi panjang dengan lebar selisih dua nil
 
 Jumlah Riemann pada Persamaan 2.13 dapat dihitung dengan interpolasi $N$ titik atau interpolasi semua titik. Interpolasi $N$ titik memakai nilai *recall* acuan yang berjarak sama pada selang 0 sampai 1, misalnya 101 titik pada kompetisi COCO dan 11 titik yang semula dipakai PASCAL VOC. Interpolasi semua titik memakai setiap nilai *recall* yang dihasilkan oleh seluruh ambang *confidence*, dan metode ini kemudian dipakai PASCAL VOC. Apa pun metode interpolasinya, AP dihitung untuk setiap kelas secara terpisah (Padilla, et al., 2021).
 
-Nilai mAP adalah rata-rata AP atas $C$ kelas, seperti pada Persamaan 2.14 (Padilla, et al., 2021). mAP50 memakai ambang IoU 0,50, sedangkan mAP50‑95 merata-ratakan mAP pada ambang IoU 0,50 sampai 0,95 dengan selang 0,05. AP pada rentang ambang tersebut merupakan metrik utama himpunan data COCO (Lin, et al., 2014; COCO, n.d.; Ultralytics, n.d.b).
+Nilai mAP adalah rata-rata AP atas $C$ kelas, seperti pada Persamaan 2.14 (Padilla, et al., 2021). mAP50 memakai ambang IoU 0,50, sedangkan mAP50‑95 merata-ratakan mAP pada ambang IoU 0,50 sampai 0,95 dengan selang 0,05. AP pada rentang ambang tersebut merupakan metrik utama himpunan data COCO (Lin, et al., 2014; COCO, n.d.; Ultralytics, n.d.c).
 
 > $mAP = \frac{1}{C}\sum_{i = 1}^{C}{AP}_{i}$ (2.14)
 
@@ -333,4 +333,6 @@ Keterangan:
 
 ### 2.2.9 Variasi Antar-*Seed* dan Reproduksibilitas
 
-Pelatihan dan inferensi dalam penelitian ini memakai PyTorch, pustaka pembelajaran mendalam dengan gaya pemrograman imperatif (Paszke, et al., 2019). Hasil pelatihan jaringan saraf bervariasi menurut sumber keacakannya. Bouthillier, et al. (2021) menunjukkan bahwa variasi akibat pengambilan sampel data, inisialisasi parameter, dan pilihan hiperparameter dapat mengubah kesimpulan *benchmark*, dan Picard (2021) mengukur pengaruh pilihan *seed* acak terhadap hasil arsitektur visi komputer. Dokumentasi PyTorch versi 2.14 juga menyatakan bahwa hasil yang sepenuhnya dapat diulang tidak dijamin lintas versi PyTorch, *commit*, atau perangkat yang berbeda (PyTorch, 2026). Karena itu, model *supervised*, KD murni, dan varian KD hibrida terpilih dalam penelitian ini dilatih dengan tiga *seed* dan dilaporkan dengan rata-rata serta simpangan baku (Subbab 3.2.5).
+Pelatihan dan inferensi dalam penelitian ini memakai PyTorch, pustaka pembelajaran mendalam dengan gaya pemrograman imperatif (Paszke, et al., 2019). Banyak langkah dalam pelatihan jaringan saraf memakai bilangan acak yang dihasilkan oleh pembangkit bilangan acak semu. *Seed* adalah nilai awal yang diberikan kepada pembangkit tersebut. Dengan *seed* yang sama, pembangkit menghasilkan deret bilangan yang sama sehingga langkah yang bergantung pada bilangan acak dapat diulang. PyTorch menyediakan fungsi manual_seed untuk menetapkan *seed* pada CPU dan GPU, sedangkan pustaka yang memiliki pembangkit sendiri, seperti NumPy, perlu diberi *seed* secara terpisah (PyTorch, 2026). Pada Ultralytics, argumen *seed* menetapkan *seed* pelatihan agar hasilnya dapat diulang pada konfigurasi yang sama, argumen *deterministic* memaksa pemakaian algoritme deterministik, dan pelatihan dengan argumen *pretrained* bernilai *false* dimulai dari bobot yang diinisialisasi secara acak (Ultralytics, n.d.b).
+
+Hasil pelatihan jaringan saraf bervariasi menurut sumber keacakannya. Bouthillier, et al. (2021, pp. 1-3) menunjukkan bahwa variasi akibat pengambilan sampel data, inisialisasi parameter, dan pilihan hiperparameter dapat mengubah kesimpulan *benchmark*. Sumber variasi pada prosedur pelatihan dikelompokkan menjadi pengambilan sampel data, augmentasi data, inisialisasi model, *dropout*, dan urutan kunjungan data pada *stochastic gradient descent*. Picard (2021, pp. 1-2) memperlakukan variasi hasil antar-*seed* sebagai akumulasi seluruh faktor acak yang bergantung pada *seed*. Hasilnya menunjukkan bahwa walaupun variansnya tidak terlalu besar, *seed* yang menghasilkan nilai jauh di atas atau jauh di bawah rata-rata mudah ditemukan. Dokumentasi PyTorch versi 2.14 juga menyatakan bahwa hasil yang sepenuhnya dapat diulang tidak dijamin lintas versi PyTorch, *commit*, atau perangkat yang berbeda (PyTorch, 2026). Karena itu, model *supervised*, KD murni, dan varian KD hibrida terpilih dalam penelitian ini dilatih dengan tiga *seed* dan dilaporkan dengan rata-rata serta simpangan baku (Subbab 3.2.5).

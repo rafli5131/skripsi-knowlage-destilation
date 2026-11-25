@@ -1,6 +1,6 @@
 # DAFTAR REFERENSI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v23 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Addufairi, M.A.N. dan Setyawan, G.E., 2026. Deteksi objek manusia pada robot humanoid menggunakan YOLOv11. *Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer*, \[online\] 10(1). Tersedia di: \<https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/15887\> \[Diakses 1 September 2026\].
 
@@ -122,9 +122,11 @@ Stanton, S., Izmailov, P., Kirichenko, P., Alemi, A.A. dan Wilson, A.G., 2021. D
 
 Ultralytics, n.d.a. *Knowledge distillation*. \[online\] Tersedia di: \<https://docs.ultralytics.com/guides/knowledge-distillation\> \[Diakses 1 September 2026\].
 
-Ultralytics, n.d.b. *Performance metrics deep dive*. \[online\] Tersedia di: \<https://docs.ultralytics.com/guides/yolo-performance-metrics\> \[Diakses 1 September 2026\].
+Ultralytics, n.d.b. *Model training with Ultralytics YOLO*. \[online\] Tersedia di: \<https://docs.ultralytics.com/modes/train\> \[Diakses 25 November 2026\].
 
-Ultralytics, n.d.c. *Ultralytics YOLO11*. \[online\] Tersedia di: \<https://docs.ultralytics.com/models/yolo11\> \[Diakses 1 September 2026\].
+Ultralytics, n.d.c. *Performance metrics deep dive*. \[online\] Tersedia di: \<https://docs.ultralytics.com/guides/yolo-performance-metrics\> \[Diakses 1 September 2026\].
+
+Ultralytics, n.d.d. *Ultralytics YOLO11*. \[online\] Tersedia di: \<https://docs.ultralytics.com/models/yolo11\> \[Diakses 1 September 2026\].
 
 Wang, T., Yuan, L., Zhang, X. dan Feng, J., 2019. Distilling object detectors with fine-grained feature imitation. Dalam: *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*. Long Beach, Amerika Serikat, 16-20 Juni 2019. s.l.: IEEE. pp.4933-4942.
 
