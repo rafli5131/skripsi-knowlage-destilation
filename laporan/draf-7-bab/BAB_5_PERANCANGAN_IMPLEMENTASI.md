@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v26 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -46,7 +46,7 @@ Konfigurasi perangkat keras saat pengujian disajikan pada Gambar 5.6. Kamera ter
 
 #### 5.1.1.3 Tata Letak Pengujian
 
-Pada kondisi berjalan, badan OP3 ditopang tatakan robot sehingga kaki dapat menjalankan *gait* di tempat tanpa menanggung seluruh berat badan. Rancangan ini mengurangi beban *servo* selama pengujian berulang dan menjaga posisi kamera terhadap objek uji tetap sama di antara *run*. Bola, gawang, dan robot lain ditempatkan statis pada posisi bertanda di depan kamera. Tata letak tersebut ditunjukkan pada Gambar 5.7. Gambar ini merupakan ilustrasi tampak atas yang tidak berskala, dengan susunan objek mengikuti dokumentasi pengujian pada Gambar 5.16. Kamera diarahkan ke salah satu tiang gawang sehingga tiang tersebut berada di tengah medan pandang dan gawang hanya terlihat sebagian. Bola berada di sisi kiri medan pandang, sedangkan robot lain berada di sisi kanan.
+Pada kondisi berjalan, badan OP3 ditopang tatakan robot sehingga kaki dapat menjalankan *gait* di tempat tanpa menanggung seluruh berat badan. Rancangan ini mengurangi beban *servo* selama pengujian berulang dan menjaga posisi kamera terhadap objek uji tetap sama di antara *run*. Bola, gawang, dan robot lain ditempatkan statis pada posisi bertanda di depan kamera. Tata letak tersebut ditunjukkan pada Gambar 5.7. Gambar ini merupakan ilustrasi tampak atas yang tidak berskala, dengan susunan objek mengikuti dokumentasi pengujian pada Gambar 5.16. Kamera diarahkan ke tiang kiri gawang sehingga tiang tersebut berada di tengah medan pandang dan gawang hanya terlihat sebagian. Bola berada di sisi kiri medan pandang, sedangkan robot lain berada di sisi kanan.
 
 **Gambar 5.7** Tata letak pengujian pada robot
 
