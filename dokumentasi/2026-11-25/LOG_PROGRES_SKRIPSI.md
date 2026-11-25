@@ -51,11 +51,11 @@ Naskah skripsi tujuh bab sudah sampai versi **v21** (25 November 2026, 115 halam
 
 ## Perapian repositori 25 November
 
-- **[README utama](../../README.md):** status diperbarui ke naskah v20 dan ditambah bagian naskah skripsi. Riwayat progres 12 sampai 23 November tetap tersimpan di bagian yang dapat dibuka-tutup. Tabel langkah berikutnya disesuaikan dengan pekerjaan yang tersisa, dan struktur folder ditambah `laporan/alat/` serta arsip draf.
+- **[README utama](../../README.md):** status diperbarui ke naskah v20 (lalu v21 pada commit berikutnya) dan ditambah bagian naskah skripsi beserta tabel rumusan masalah dan hasil singkatnya. Riwayat progres 12 sampai 23 November tetap tersimpan di bagian yang dapat dibuka-tutup. Tabel langkah berikutnya disesuaikan dengan pekerjaan yang tersisa, dan struktur folder ditambah `laporan/alat/` serta arsip draf.
 - **[`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md):** draf ringkas 12 sampai 23 November disalin utuh ke [`laporan/arsip/draf-7-bab-2026-11-23/`](../../laporan/arsip/draf-7-bab-2026-11-23/README.md). Sesudahnya, isi folder diganti dengan salinan Markdown naskah v20 (Bab 1-7, halaman awal, daftar referensi, dan lampiran). Nama berkas bab tetap sama, jadi tautan lama tidak putus.
 - **Data pribadi:** karena repositori ini publik, `HALAMAN_AWAL.md` tidak memuat nama, NIM, NIK, email, atau nama pihak di prakata. Lembar pengesahan, pernyataan orisinalitas, dan prakata hanya diringkas isinya, sedangkan abstrak, *abstract*, dan daftar istilah disalin utuh. Skrip konversi menerapkan aturan yang sama.
 - **[`laporan/alat/konversi_naskah_ke_markdown.py`](../../laporan/alat/konversi_naskah_ke_markdown.py):** skrip baru untuk membuat ulang salinan Markdown dari DOCX.
-- **[`laporan/draf-bab-iv-v/README.md`](../../laporan/draf-bab-iv-v/README.md):** diberi catatan arah ke naskah v20.
+- **[`laporan/draf-bab-iv-v/README.md`](../../laporan/draf-bab-iv-v/README.md):** diberi catatan arah ke naskah terbaru (v20, lalu v21).
 - **[`docs/DECISIONS.md`](../../docs/DECISIONS.md):** ditambah D25 (empat rumusan masalah), D26 (format Daftar Referensi), dan D27 (spesifikasi baterai unit penelitian).
 - **[Memory 25 November](../../memory/2026-11-25-naskah-skripsi-v20.md), [indeks dokumentasi](../INDEKS.md), dan [`agent.md`](../../agent.md):** diperbarui.
 - **Tidak diubah:** folder `Claude outputs/` (belum dilacak Git) dan folder `Paper\_to_delete\` di luar repositori.
