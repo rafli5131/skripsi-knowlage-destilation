@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v25** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v26** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v25 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v25) |
+| Naskah DOCX dan PDF v1 sampai v26 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v26) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v25 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v25.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v25) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v26 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v26.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v26) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -33,8 +33,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v25** (25 November 2026, 116 halam
 | v23 | 25 Nov | Pengertian *seed* ditambahkan di Subbab 2.2.9 (nilai awal pembangkit bilangan acak semu, cara PyTorch dan Ultralytics menetapkannya, sumber variasi menurut Bouthillier, et al. dan Picard). Subbab 3.2.5 ditambah penjelasan perbedaan *seed* 42, 1337, dan 2025 (hanya nilai awal acak yang berbeda; bobot awal, urutan data, dan augmentasi ikut berbeda) serta peran setiap *seed*. Referensi baru Ultralytics, n.d.b (*Model training with Ultralytics YOLO*); sumber Ultralytics lama bergeser ke n.d.c dan n.d.d. Jumlah referensi 67, halaman 116. |
 | v24 | 25 Nov | Alasan *supervised* *seed* 1337 ditulis: KD hibrida *seed* 1337 dan KD murni *seed* 42 dipilih dari mAP50-95 VAL tertinggi, sedangkan *supervised* memakai *seed* 1337 agar berpasangan dengan KD hibrida (mAP50-95 VAL *supervised*: 0,7189, 0,7179, 0,7255 untuk *seed* 42, 1337, 2025). Subbab 3.2.5, 5.1.2.2, dan langkah 2 Subbab 6.2.2 disesuaikan. |
 | v25 | 25 Nov | Hasil cek KBBI VI Daring diterapkan: "port" menjadi "porta" (4 kali), "variansnya" menjadi "variansinya", "skala kustom" dan "berskala kustom" menjadi "skala khusus" dan "berskala khusus". Nama lembaga diseragamkan menjadi ROBOTIIK di manfaat penelitian dan tabel pemangku kepentingan Bab 4. Halaman tetap 116. |
+| v26 | 25 Nov | Gambar 5.7 digambar ulang atas permintaan penulis. Gawang dibuat besar, dan sumbu medan pandang kamera mengarah ke salah satu tiang sehingga gawang terlihat sebagian dengan tiang tersebut di tengah. Bola berada di sisi kiri dan robot lain di sisi kanan, sesuai foto 3 November (Gambar 5.16). Subbab 5.1.1.3 ditambah dua kalimat yang menjelaskan susunan tersebut. |
 
-## Isi pokok naskah v25
+## Isi pokok naskah v26
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
@@ -43,7 +44,7 @@ Naskah skripsi tujuh bab sudah sampai versi **v25** (25 November 2026, 116 halam
 - **KF-03:** Tabel 6.1 menulis status "Lulus dengan catatan". Menurut laporan Bhre, pembimbing menyetujuinya secara lisan pada 25 November 2026, bersama keempat rumusan masalah (D25).
 - **Catu daya:** spesifikasi bawaan OP3 adalah LiPo tiga sel 11,1 V 3.300 mAh (ROBOTIS, n.d.a). Unit penelitian memakai LiPo empat sel 14,8 V 2.200 mAh sesuai label baterai. Baterai tidak dipakai selama pengujian.
 - **Gambar dokumentasi:** foto berasal dari `E:\Kuliah\Thesis\Dokumentasi\Dokumentasi\Dokumentasi\`. Gambar 5.16 dari `IMG_20261103_172715.jpg`. Gambar 4.3 dan 5.12 dari berkas PNG berlatar putih yang dikirim penulis. Ada perbedaan tulisan tali tatakan ("JAKARTA ROBOT" pada PNG, "JAKARTA HOBBY" pada foto kamera); atas keputusan penulis, PNG tetap dipakai karena yang dimaksud adalah stand robot.
-- **Posisi objek uji:** foto 22 Oktober, 2 November, dan 3 November menunjukkan susunan objek yang berbeda. Penulis menyatakan foto-foto itu dipakai untuk mengecek deteksi. Naskah tetap menyebut objek ditempatkan statis pada posisi bertanda, dan denah Gambar 5.7 mengikuti susunan 3 November.
+- **Posisi objek uji:** foto 22 Oktober, 2 November, dan 3 November menunjukkan susunan objek yang berbeda. Penulis menyatakan foto-foto itu dipakai untuk mengecek deteksi. Naskah tetap menyebut objek ditempatkan statis pada posisi bertanda, dan denah Gambar 5.7 mengikuti susunan 3 November (sejak v26: gawang besar, satu tiang di tengah medan pandang, bola di kiri, robot lain di kanan).
 
 ## Yang masih terbuka
 

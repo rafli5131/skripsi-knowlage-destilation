@@ -1,6 +1,6 @@
 # BAB 4 REKAYASA KEBUTUHAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v25 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v26 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi acuan perancangan pada Bab 5 dan pengujian pada Bab 6. Kebutuhan disusun dari rumusan masalah, keterbatasan komputer *onboard* OP3, dan antarmuka ROS 2 yang dipakai robot.
 
