@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v23 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v24 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -70,7 +70,7 @@ Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok p
 
 Varian lain memakai sebagian blok pada Gambar 5.8. *Supervised* hanya memakai *loss* deteksi berlabel, KD murni memakai *loss* KD murni tanpa *loss* berlabel, dan KD hibrida fitur memakai *loss* berlabel dengan distilasi fitur bawaan Ultralytics, seperti pada Tabel 3.3.
 
-Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gambar 5.9. *Student* YOLO11 skala t diinisialisasi acak, dan seluruh varian *student* dilatih dengan resep yang sama. Varian, *seed*, dan *checkpoint* dipilih hanya pada VAL dengan aturan seleksi yang ditetapkan sebelum pelatihan. Berkas konfigurasi data untuk pelatihan tidak memuat entri TEST, sehingga TEST tidak dapat terbaca selama pelatihan. Sidik jari SHA-256 setiap citra dan label diperiksa sebelum pelatihan dan sebelum evaluasi agar himpunan data yang dipakai dapat dipastikan sama.
+Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gambar 5.9. *Student* YOLO11 skala t diinisialisasi acak, dan seluruh varian *student* dilatih dengan resep yang sama. Varian, *seed*, dan *checkpoint* hasil KD dipilih hanya pada VAL dengan aturan seleksi yang ditetapkan sebelum pelatihan, sedangkan *checkpoint* *supervised* mengikuti *seed* KD hibrida terpilih. Berkas konfigurasi data untuk pelatihan tidak memuat entri TEST, sehingga TEST tidak dapat terbaca selama pelatihan. Sidik jari SHA-256 setiap citra dan label diperiksa sebelum pelatihan dan sebelum evaluasi agar himpunan data yang dipakai dapat dipastikan sama.
 
 **Gambar 5.9** Diagram alir pelatihan dan seleksi model
 

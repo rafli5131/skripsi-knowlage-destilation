@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v23** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v24** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v23 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v23) |
+| Naskah DOCX dan PDF v1 sampai v24 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v24) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v23 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v23.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v23) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v24 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v24.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v24) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -31,8 +31,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v23** (25 November 2026, 116 halam
 | v21 | 25 Nov | Rumusan masalah disempurnakan (D25): rumusan 1 menyebut *student* KD hibrida, rumusan 3 dan 4 mencakup ketiga model (KD hibrida, *supervised*, *teacher*), dan kata "efisiensi" serta "secara penuh" dihapus. Batasan butir 3 mendefinisikan skala t sebagai skala kustom (810.649 parameter, bukan skala resmi YOLO11 n, s, m, l, x). Batasan butir 4 baru menegaskan KD hibrida sebagai model hasil KD dan KD murni sebagai pembanding tambahan. Ikut disesuaikan: tujuan, latar belakang, Subbab 3.2.5, Tabel 3.4, tujuan Subbab 6.2 sampai 6.5, Subbab 6.7, serta kesimpulan Bab 7 butir 3 dan 4 (angka *supervised* ditambahkan). |
 | v22 | 25 Nov | Pemeriksaan menyeluruh format, struktur, dan kebahasaan. Bagian yang masih menyebut "model hasil KD" sebagai pembanding disesuaikan dengan rumusan v21 (KD hibrida, *supervised*, dan *teacher* sebagai pembanding utama). Daftar Istilah ditambah CNN, IDF1, INT8, MOTA, ONNX, PTQ, dan QAT (56 entri) dan tabelnya boleh berlanjut ke halaman berikutnya. Istilah asing yang belum miring dirapikan (*servo*, *loss*, *head*, *sigmoid*, *track*, *predict*, *log*), "VOC" menjadi "PASCAL VOC", TTL ditulis kepanjangannya, sitasi halaman memakai spasi ("p. 564"), spasi ganda dihapus, dan Gambar 5.16 diperkecil agar tidak menyisakan halaman kosong. |
 | v23 | 25 Nov | Pengertian *seed* ditambahkan di Subbab 2.2.9 (nilai awal pembangkit bilangan acak semu, cara PyTorch dan Ultralytics menetapkannya, sumber variasi menurut Bouthillier, et al. dan Picard). Subbab 3.2.5 ditambah penjelasan perbedaan *seed* 42, 1337, dan 2025 (hanya nilai awal acak yang berbeda; bobot awal, urutan data, dan augmentasi ikut berbeda) serta peran setiap *seed*. Referensi baru Ultralytics, n.d.b (*Model training with Ultralytics YOLO*); sumber Ultralytics lama bergeser ke n.d.c dan n.d.d. Jumlah referensi 67, halaman 116. |
+| v24 | 25 Nov | Alasan *supervised* *seed* 1337 ditulis: KD hibrida *seed* 1337 dan KD murni *seed* 42 dipilih dari mAP50-95 VAL tertinggi, sedangkan *supervised* memakai *seed* 1337 agar berpasangan dengan KD hibrida (mAP50-95 VAL *supervised*: 0,7189, 0,7179, 0,7255 untuk *seed* 42, 1337, 2025). Subbab 3.2.5, 5.1.2.2, dan langkah 2 Subbab 6.2.2 disesuaikan. |
 
-## Isi pokok naskah v23
+## Isi pokok naskah v24
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
@@ -50,8 +51,7 @@ Naskah skripsi tujuh bab sudah sampai versi **v23** (25 November 2026, 116 halam
 3. `[PERLU DICEK]` di Subbab 5.2.1.2: kesamaan unit pada foto rangkaian elektronika (Brilliant, 2024) dengan unit penelitian.
 4. Persetujuan pembimbing atas empat rumusan masalah (D25) dan status KF-03.
 5. Pemeriksaan istilah di `CEK_KBBI.md`.
-6. Alasan *checkpoint* *supervised* yang dibawa ke OP3 memakai *seed* 1337 (repositori mencatatnya sebagai kontrol berpasangan KD hibrida *seed* 1337) belum ditulis di naskah; menunggu konfirmasi penulis.
-7. Keseragaman penulisan nama lembaga: "ROBOTIIK" di prakata, sedangkan "Robotiik" di manfaat penelitian dan tabel pemangku kepentingan Bab 4.
+6. Keseragaman penulisan nama lembaga: "ROBOTIIK" di prakata, sedangkan "Robotiik" di manfaat penelitian dan tabel pemangku kepentingan Bab 4.
 
 ## Perapian repositori 25 November
 
@@ -76,3 +76,7 @@ Naskah diperiksa ulang dari halaman sampul sampai lampiran. Hasil pemeriksaan ot
 ## Pembaruan v23 (25 November)
 
 Atas permintaan penulis, naskah kini menjelaskan apa itu *seed* dan apa beda ketiga *seed*. Rinciannya ada pada baris v23 di atas dan di `CATATAN_SUNTING_v23.md`. Isi penjelasan bersumber dari Bouthillier, et al. (2021), Picard (2021), dokumentasi PyTorch, dan dokumentasi pelatihan Ultralytics. Fakta dari repositori ikut menjadi dasar, yaitu `args.yaml` run KD hibrida *seed* 1337 (`seed: 1337`, `deterministic: true`, `pretrained: false`). Salinan Markdown dibuat ulang dari v23, tetap tanpa data pribadi.
+
+## Pembaruan v24 (25 November)
+
+Alasan *checkpoint* *supervised* *seed* 1337 dicek di repositori, lalu ditulis di naskah. Repositori tidak memuat kalimat "dipilih karena". Dasarnya adalah protokol pembandingan berpasangan per *seed* ([`docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md`](../../docs/PROTOKOL_TEST_KD_HYBRID_2026-10-22.md)), rencana evaluasi OP3 untuk Hybrid *seed* 1337 dan *supervised* *seed* 1337 pada frame yang sama ([`docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md`](../../docs/STATUS_AUDIT_LAB_SERVER_2026-10-22.md)), dan nilai VAL per *seed* ([hasil multi-*seed* VAL](../../analisis_performa/lab_server/HASIL_KD_HYBRID_MULTI_SEED_VAL_2026-10-22.md)). Menurut nilai VAL tersebut, *supervised* *seed* 1337 bukan *seed* *supervised* terbaik. Rinciannya ada di `CATATAN_SUNTING_v24.md`.

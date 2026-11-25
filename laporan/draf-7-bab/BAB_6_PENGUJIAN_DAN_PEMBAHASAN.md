@@ -1,6 +1,6 @@
 # BAB 6 PENGUJIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v23 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v24 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menyajikan pengujian dengan urutan mengikuti rumusan masalah. Subbab 6.1 memuat pengujian fungsional yang memastikan sistem berjalan sesuai kebutuhan sebelum hasil lainnya dianalisis. Subbab 6.2 sampai Subbab 6.5 menjawab rumusan masalah nomor 1 sampai 4 secara berurutan, yaitu akurasi berdasarkan mAP, *precision*, *recall*, dan *F1-score*, latensi dan FPS, serta penggunaan CPU dan RAM. Subbab 6.6 memuat pengujian tambahan, dan Subbab 6.7 mengevaluasi hasil terhadap setiap rumusan masalah. Setiap pengujian diuraikan dalam empat bagian, yaitu tujuan, prosedur, hasil, dan analisis hasil pengujian.
 
@@ -59,7 +59,7 @@ Langkah pengujian adalah sebagai berikut.
 
 1.  Menyaring varian KD pada VAL dengan *seed* 42, lalu mengulang varian terpilih dan pembandingnya dengan *seed* 1337 dan 2025.
 
-2.  Memilih *seed* yang dibawa ke OP3 berdasarkan mAP50-95 tertinggi pada VAL, sebelum TEST dievaluasi.
+2.  Memilih *seed* KD hibrida dan KD murni yang dibawa ke OP3 berdasarkan mAP50-95 tertinggi pada VAL, sebelum TEST dievaluasi. *Supervised* memakai *seed* yang sama dengan KD hibrida agar keduanya berpasangan.
 
 3.  Memverifikasi sidik jari SHA-256 592 citra dan label TEST, lalu mengevaluasi sembilan *checkpoint* *student* dan *teacher* dengan *confidence floor* 0,001 dan NMS IoU 0,7.
 
