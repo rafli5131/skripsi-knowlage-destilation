@@ -1,6 +1,6 @@
 # BAB 1 PENDAHULUAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v24 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v25 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 1.1 Latar Belakang
 
@@ -18,7 +18,7 @@ Hasil KD pada keluarga YOLO beragam. Pada deteksi gulma, *channel-wise knowledge
 
 Sepanjang penelusuran penulis, penelitian KD pada keluarga YOLO tersebut dievaluasi pada domain di luar sepak bola robot (Billy, 2019; Zaini, 2024; Saltık, et al., 2025; Jung dan Nam, 2025; Arik dan Ağgül, 2026; Sharma, et al., 2026), sedangkan penelitian deteksi objek pada OP3 belum memakai KD (Adipratama, 2026; Lau dan Pottier, 2026). Belum ditemukan penelitian yang mengevaluasi model YOLO11 hasil KD pada komputer yang terpasang di tubuh OP3 (komputer *onboard*) dan hanya mengandalkan CPU dengan *Robot Operating System 2* (ROS 2), baik dari sisi akurasi maupun dari sisi latensi dan penggunaan sumber daya saat robot diam dan berjalan. Celah ini relevan karena versi OP3 tahun 2025 dikembangkan untuk ROS 2 (ROBOTIS, n.d.a).
 
-Berdasarkan celah tersebut, penelitian ini mengimplementasikan sistem deteksi objek berbasis ROS 2 yang menjalankan *student* YOLO11 hasil KD dari *teacher* YOLO11n pada komputer *onboard* ROBOTIS OP3. *Student* memakai skala kustom yang lebih kecil daripada YOLO11n, yang dalam penelitian ini disebut skala t. Model hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised*, yaitu hanya dengan label himpunan data tanpa bimbingan *teacher*, agar pengaruh KD terpisah dari pengaruh ukuran model, serta dengan *teacher* sebagai acuan. Perbandingan mencakup akurasi pada himpunan data dan pada citra kamera OP3, latensi, FPS, serta penggunaan CPU dan RAM. Pengujian pada robot dilakukan saat robot diam dan berjalan.
+Berdasarkan celah tersebut, penelitian ini mengimplementasikan sistem deteksi objek berbasis ROS 2 yang menjalankan *student* YOLO11 hasil KD dari *teacher* YOLO11n pada komputer *onboard* ROBOTIS OP3. *Student* memakai skala khusus yang lebih kecil daripada YOLO11n, yang dalam penelitian ini disebut skala t. Model hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised*, yaitu hanya dengan label himpunan data tanpa bimbingan *teacher*, agar pengaruh KD terpisah dari pengaruh ukuran model, serta dengan *teacher* sebagai acuan. Perbandingan mencakup akurasi pada himpunan data dan pada citra kamera OP3, latensi, FPS, serta penggunaan CPU dan RAM. Pengujian pada robot dilakukan saat robot diam dan berjalan.
 
 ## 1.2 Rumusan Masalah
 
@@ -46,7 +46,7 @@ Untuk menjawab rumusan masalah tersebut, penelitian ini mengimplementasikan sist
 
 ## 1.4 Manfaat
 
-Bagi tim Robotiik Divisi Humanoid, penelitian ini diharapkan menghasilkan sistem deteksi bola, gawang, dan robot berbasis ROS 2 yang dapat dijalankan pada komputer *onboard* OP3, beserta data akurasi, latensi, FPS, serta penggunaan CPU dan RAM yang dapat dipakai sebagai dasar pemilihan model.
+Bagi tim ROBOTIIK Divisi Humanoid, penelitian ini diharapkan menghasilkan sistem deteksi bola, gawang, dan robot berbasis ROS 2 yang dapat dijalankan pada komputer *onboard* OP3, beserta data akurasi, latensi, FPS, serta penggunaan CPU dan RAM yang dapat dipakai sebagai dasar pemilihan model.
 
 Bagi penelitian KD pada sistem tertanam (*embedded system*), penelitian ini diharapkan memberi gambaran tentang pengaruh KD terhadap *student* berukuran kecil pada robot yang hanya mengandalkan CPU. Pembanding berupa *student* berarsitektur sama yang dilatih secara *supervised* memisahkan pengaruh KD dari pengaruh ukuran model, sedangkan prosedur pelatihan dan pengujian yang terdokumentasi dapat dipakai ulang untuk menilai metode lain.
 
@@ -58,7 +58,7 @@ Ruang lingkup penelitian ini dibatasi sebagai berikut.
 
 2.  Himpunan data yang digunakan adalah himpunan data Roboflow advance_vision_human versi 1 (Humanoid-Atom, 2026) dengan pembagian bagian latih, validasi, dan uji bawaan himpunan data tersebut.
 
-3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan. *Student* adalah YOLO11 berskala kustom dengan faktor kedalaman 0,50 dan faktor lebar 0,125 (810.649 parameter sebelum fusi Conv-BN), yang dalam penelitian ini disebut skala t. Skala ini bukan salah satu skala resmi YOLO11, yaitu n, s, m, l, dan x (Ultralytics, n.d.d), sehingga *student* berbeda dari YOLO11n standar.
+3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan. *Student* adalah YOLO11 berskala khusus dengan faktor kedalaman 0,50 dan faktor lebar 0,125 (810.649 parameter sebelum fusi Conv-BN), yang dalam penelitian ini disebut skala t. Skala ini bukan salah satu skala resmi YOLO11, yaitu n, s, m, l, dan x (Ultralytics, n.d.d), sehingga *student* berbeda dari YOLO11n standar.
 
 4.  Model hasil KD yang dimaksud pada rumusan masalah adalah *student* KD hibrida penuh. *Student* KD murni disertakan sebagai pembanding tambahan, sehingga ketiga model yang dibandingkan adalah KD hibrida, *supervised*, dan *teacher* YOLO11n.
 

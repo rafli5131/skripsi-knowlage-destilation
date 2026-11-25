@@ -1,6 +1,6 @@
 # DAFTAR REFERENSI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v24 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v25 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Addufairi, M.A.N. dan Setyawan, G.E., 2026. Deteksi objek manusia pada robot humanoid menggunakan YOLOv11. *Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer*, \[online\] 10(1). Tersedia di: \<https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/15887\> \[Diakses 1 September 2026\].
 

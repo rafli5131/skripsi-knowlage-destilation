@@ -1,6 +1,6 @@
 # Naskah skripsi tujuh bab
 
-Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v24** (25 November 2026, 116 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
+Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v25** (25 November 2026, 116 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
 
 **Judul:** Implementasi *Knowledge Distillation* untuk Deteksi Objek pada Robot Humanoid ROBOTIS OP3
 **Struktur:** tujuh bab implementatif-pengembangan (D17), mengikuti Panduan Skripsi FILKOM v3.0.
@@ -27,7 +27,7 @@ Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v24** (25 Nov
 | 3 | Rata-rata latensi dan FPS ketiga model pada komputer *onboard* OP3 saat robot diam dan berjalan | Subbab 6.4 | Bab 7 butir 3 |
 | 4 | Penggunaan CPU dan RAM ketiga model pada komputer *onboard* OP3 | Subbab 6.5 | Bab 7 butir 4 |
 
-"Ketiga model" adalah KD hibrida penuh, *supervised*, dan *teacher* YOLO11n; KD murni disertakan sebagai pembanding tambahan (Batasan Masalah butir 4). Istilah "skala t" didefinisikan pada Batasan Masalah butir 3 sebagai skala kustom (kedalaman 0,50, lebar 0,125, 810.649 parameter), bukan skala resmi YOLO11.
+"Ketiga model" adalah KD hibrida penuh, *supervised*, dan *teacher* YOLO11n; KD murni disertakan sebagai pembanding tambahan (Batasan Masalah butir 4). Istilah "skala t" didefinisikan pada Batasan Masalah butir 3 sebagai skala khusus (kedalaman 0,50, lebar 0,125, 810.649 parameter), bukan skala resmi YOLO11.
 
 Rumusan masalah implementasi sistem (rumusan nomor 1 pada draf 12 November) dihapus pada naskah v9. Status implementasi kini dibahas di Subbab 6.1 dan di paragraf pembuka kesimpulan. Rumusan disempurnakan pada naskah v21 (menyebut KD hibrida dan ketiga model). Persetujuan pembimbing atas empat rumusan ini belum tercatat; lihat D25 di [`docs/DECISIONS.md`](../../docs/DECISIONS.md).
 
@@ -58,7 +58,6 @@ Naskah tidak memakai kode percobaan internal. Tabel berikut menghubungkan istila
 - Tanggal ujian dan tanggal tanda tangan (tiga tempat).
 - Tujuh isian `[DIISI PENULIS]` di prakata.
 - Penanda `[PERLU DICEK]` di Subbab 5.2.1.2: kesamaan unit OP3 pada foto rangkaian elektronika (Gambar 5.13 sampai 5.15, dari Brilliant, 2024) dengan unit penelitian.
-- Persetujuan pembimbing atas empat rumusan masalah dan status KF-03 "Lulus dengan catatan".
 
 ## Cara memperbarui salinan ini
 
@@ -75,4 +74,4 @@ Skrip menimpa berkas bab di folder ini. Salin dulu versi lama ke `laporan/arsip/
 
 - Draf ringkas 12 sampai 23 November: [`laporan/arsip/draf-7-bab-2026-11-23/`](../arsip/draf-7-bab-2026-11-23/README.md).
 - Draf Bab IV-V dan proposal Bab I-III: [`laporan/draf-bab-iv-v/`](../draf-bab-iv-v/README.md) dan [`laporan/DRAF_PROPOSAL_BAB_I-III.md`](../DRAF_PROPOSAL_BAB_I-III.md).
-- Riwayat suntingan naskah v1 sampai v24: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).
+- Riwayat suntingan naskah v1 sampai v25: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).

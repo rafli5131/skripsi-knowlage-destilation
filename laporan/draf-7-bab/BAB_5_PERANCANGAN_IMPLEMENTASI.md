@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v24 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v25 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -118,7 +118,7 @@ Tubuh robot dipakai dalam konfigurasi bawaan OP3 tanpa perubahan mekanik. Kamera
 
 Rangkaian elektronika mengikuti susunan bawaan OP3, yaitu komputer *onboard*, U2D2, OpenCR, aktuator, dan kamera seperti pada Gambar 5.4 dan Gambar 5.6. Penelitian ini tidak menambah sensor atau papan elektronika baru. Susunan rangkaian elektronika OP3 dari sisi depan, belakang, dan atas disajikan pada Gambar 5.13 sampai Gambar 5.15 \[PERLU DICEK: kesamaan unit pada foto dengan unit OP3 yang dipakai, karena komputer *onboard* unit penelitian tercatat sebagai NUC12WSHi5\].
 
-Pada sisi depan, U2D2 terhubung ke komputer *onboard*, dan tampak tombol daya serta port USB komputer *onboard* (Gambar 5.13). Pada sisi belakang tampak sakelar OpenCR, port USB, Ethernet, HDMI, kipas, serta *power jack* OpenCR dan komputer *onboard* (Gambar 5.14). Kedua *power jack* inilah yang menerima adaptor 12 V dan 19 V selama pengujian. Pada sisi atas tampak OpenCR beserta port *servo*, sakelar, sambungan baterai, dan U2D2 yang terhubung melalui kabel RS-485 (Gambar 5.15) (Brilliant, 2024).
+Pada sisi depan, U2D2 terhubung ke komputer *onboard*, dan tampak tombol daya serta porta USB komputer *onboard* (Gambar 5.13). Pada sisi belakang tampak sakelar OpenCR, porta USB, Ethernet, HDMI, kipas, serta *power jack* OpenCR dan komputer *onboard* (Gambar 5.14). Kedua *power jack* inilah yang menerima adaptor 12 V dan 19 V selama pengujian. Pada sisi atas tampak OpenCR beserta porta *servo*, sakelar, sambungan baterai, dan U2D2 yang terhubung melalui kabel RS-485 (Gambar 5.15) (Brilliant, 2024).
 
 **Gambar 5.13** Rangkaian elektronika tampak depan
 
