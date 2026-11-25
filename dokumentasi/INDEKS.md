@@ -1,6 +1,6 @@
 # Indeks dokumentasi percobaan OP3
 
-> **25 November 2026:** [Log progres](2026-11-25/LOG_PROGRES_SKRIPSI.md) · [naskah skripsi v21 dalam Markdown](../laporan/draf-7-bab/README.md) (Bab 1-7, halaman awal, daftar referensi, lampiran) · keputusan D25 sampai D27 di [`DECISIONS.md`](../docs/DECISIONS.md). Tidak ada percobaan baru.
+> **25 November 2026:** [Log progres](2026-11-25/LOG_PROGRES_SKRIPSI.md) · [naskah skripsi v22 dalam Markdown](../laporan/draf-7-bab/README.md) (Bab 1-7, halaman awal, daftar referensi, lampiran) · keputusan D25 sampai D27 di [`DECISIONS.md`](../docs/DECISIONS.md). Tidak ada percobaan baru.
 
 > **23 November 2026:** [Log progres](2026-11-23/LOG_PROGRES_SKRIPSI.md) · [log pelengkap OP3](../log_op3_pelengkap/README.md) (log jendela 15 run, metadata capture T38/T43, catatan training teacher) · [laporan sesi](../log_op3_pelengkap/LAPORAN_SESI.md) · [laporan uji laptop Ubuntu](2026-11-23/LAPORAN_UJI_LAPTOP_UBUNTU.md) (40 tes lulus dengan `env -u PYTHONPATH`).
 

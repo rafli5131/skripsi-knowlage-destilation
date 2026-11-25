@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -64,11 +64,11 @@ Perangkat lunak terdiri atas lima rancangan, yaitu model *student*, pelatihan KD
 
 #### 5.1.2.2 Perancangan Pelatihan KD
 
-Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui proyektor, lalu dibandingkan dengan fitur *teacher* memakai loss L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui loss kotak (Persamaan 2.5) dan loss kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi loss KD murni (Persamaan 2.7), lalu ditambah loss deteksi berlabel sehingga menjadi loss KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan proyektor, sedangkan bobot *teacher* tidak berubah.
+Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui proyektor, lalu dibandingkan dengan fitur *teacher* memakai *loss* L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui *loss* kotak (Persamaan 2.5) dan *loss* kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi *loss* KD murni (Persamaan 2.7), lalu ditambah *loss* deteksi berlabel sehingga menjadi *loss* KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan proyektor, sedangkan bobot *teacher* tidak berubah.
 
 **Gambar 5.8** Diagram blok satu langkah pelatihan KD hibrida penuh
 
-Varian lain memakai sebagian blok pada Gambar 5.8. *Supervised* hanya memakai loss deteksi berlabel, KD murni memakai loss KD murni tanpa loss berlabel, dan KD hibrida fitur memakai loss berlabel dengan distilasi fitur bawaan Ultralytics, seperti pada Tabel 3.3.
+Varian lain memakai sebagian blok pada Gambar 5.8. *Supervised* hanya memakai *loss* deteksi berlabel, KD murni memakai *loss* KD murni tanpa *loss* berlabel, dan KD hibrida fitur memakai *loss* berlabel dengan distilasi fitur bawaan Ultralytics, seperti pada Tabel 3.3.
 
 Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gambar 5.9. *Student* YOLO11 skala t diinisialisasi acak, dan seluruh varian *student* dilatih dengan resep yang sama. Varian, *seed*, dan *checkpoint* dipilih hanya pada VAL dengan aturan seleksi yang ditetapkan sebelum pelatihan. Berkas konfigurasi data untuk pelatihan tidak memuat entri TEST, sehingga TEST tidak dapat terbaca selama pelatihan. Sidik jari SHA-256 setiap citra dan label diperiksa sebelum pelatihan dan sebelum evaluasi agar himpunan data yang dipakai dapat dipastikan sama.
 
@@ -299,7 +299,7 @@ Baris 2 sampai 4 memilih skala t dengan faktor kedalaman 0,50, faktor lebar 0,12
 
 Baris 6 sampai 17 mendefinisikan *backbone*. Setiap baris berisi indeks masukan, jumlah pengulangan, jenis modul, dan argumen modul. Lapisan Conv dengan langkah 2 menurunkan resolusi, sedangkan SPPF dan C2PSA berada di ujung *backbone*.
 
-Baris 19 sampai 31 berada pada bagian head berkas YAML dan berfungsi sebagai *neck*. Bagian ini menaikkan resolusi dengan nn.Upsample, lalu menggabungkan fitur dari *backbone* melalui Concat.
+Baris 19 sampai 31 berada pada bagian *head* berkas YAML dan berfungsi sebagai *neck*. Bagian ini menaikkan resolusi dengan nn.Upsample, lalu menggabungkan fitur dari *backbone* melalui Concat.
 
 Baris 32 menempatkan *head* Detect pada lapisan 16, 19, dan 22, yaitu keluaran P3, P4, dan P5. Ketiga lapisan ini juga menjadi titik pengambilan fitur untuk distilasi.
 
@@ -426,7 +426,7 @@ Objektif KD diimplementasikan dalam skrip train_kd.py sebagai pengganti metode *
 
 Baris 1 sampai 7 memilih mode hybrid_full dan menetapkan bobot fitur, kotak, dan kelas sebesar 1,0 serta temperatur 2,0 sesuai Persamaan 2.8.
 
-Baris 9 sampai 24 berisi resep pelatihan yang sama untuk semua varian *student*, yaitu 100 *epoch*, *batch* 16, ukuran masukan 640, *optimizer* AdamW, dan tanpa bobot *pretrained*. Pelatihan memakai FP32 karena amp bernilai false. Berkas ini memuat *seed* 42; *run* dengan *seed* lain memakai resep yang sama dengan nilai *seed* yang berbeda.
+Baris 9 sampai 24 berisi resep pelatihan yang sama untuk semua varian *student*, yaitu 100 *epoch*, *batch* 16, ukuran masukan 640, *optimizer* AdamW, dan tanpa bobot *pretrained*. Pelatihan memakai FP32 karena AMP dimatikan. Berkas ini memuat *seed* 42; *run* dengan *seed* lain memakai resep yang sama dengan nilai *seed* yang berbeda.
 
 **Kode Program 5.3** Fungsi *loss* KD hibrida penuh
 
@@ -697,7 +697,7 @@ Baris 1 sampai 3 mendefinisikan fungsi *loss*. Saat model tidak dalam mode pelat
 
 Baris 5 sampai 10 mengosongkan penyimpan fitur, menjalankan *teacher* tanpa perhitungan gradien, menjalankan *student*, lalu menghitung *loss* deteksi berlabel bawaan Ultralytics.
 
-Baris 12 sampai 24 mengambil keluaran *head* kedua model, merata-ratakan skor kelas *teacher* dari dua cabang *head*, lalu membaginya menurut skala P3, P4, dan P5. Skor maksimum setelah sigmoid pada setiap posisi menjadi bobot titik menurut Persamaan 2.3.
+Baris 12 sampai 24 mengambil keluaran *head* kedua model, merata-ratakan skor kelas *teacher* dari dua cabang *head*, lalu membaginya menurut skala P3, P4, dan P5. Skor maksimum setelah *sigmoid* pada setiap posisi menjadi bobot titik menurut Persamaan 2.3.
 
 Baris 26 sampai 32 menghitung *loss* fitur pada ketiga skala. Fitur *student* diproyeksikan ke jumlah kanal *teacher* oleh proyektor, lalu dibandingkan dengan fitur *teacher* menggunakan bobot titik (Persamaan 2.4).
 
@@ -972,7 +972,7 @@ Inti *callback* yang dijalankan untuk setiap *frame* disajikan pada Kode Program
 </tbody>
 </table>
 
-Baris 1 memilih fungsi track bila pelacakan aktif dan fungsi predict bila tidak aktif.
+Baris 1 memilih fungsi *track* bila pelacakan aktif dan fungsi *predict* bila tidak aktif.
 
 Baris 2 sampai 8 menyusun argumen inferensi, yaitu ukuran masukan 640, *batch* 1, CPU, ambang *confidence* dan IoU *runtime*, serta berkas konfigurasi BoT-SORT dengan status pelacak yang dipertahankan antar-*frame*.
 

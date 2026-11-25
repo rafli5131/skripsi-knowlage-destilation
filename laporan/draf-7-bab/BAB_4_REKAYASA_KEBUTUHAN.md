@@ -1,6 +1,6 @@
 # BAB 4 REKAYASA KEBUTUHAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi acuan perancangan pada Bab 5 dan pengujian pada Bab 6. Kebutuhan disusun dari rumusan masalah, keterbatasan komputer *onboard* OP3, dan antarmuka ROS 2 yang dipakai robot.
 
@@ -132,7 +132,7 @@ Sumber: Intel Corporation (n.d.)
 
 #### 4.5.1.3 OpenCR 1.0
 
-OpenCR 1.0 adalah subpengendali yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui port DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya dipakai op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui TTL atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
+OpenCR 1.0 adalah subpengendali yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui port DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya dipakai op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui antarmuka TTL (*transistor-transistor logic*) atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
 
 **Tabel 4.7** Spesifikasi OpenCR 1.0
 
@@ -146,7 +146,7 @@ OpenCR 1.0 adalah subpengendali yang meneruskan perintah sendi dari komputer *on
 
 Sumber: ROBOTIS (n.d.c)
 
-#### 4.5.1.4 Servo DYNAMIXEL XM430-W350-R
+#### 4.5.1.4 *Servo* DYNAMIXEL XM430-W350-R
 
 OP3 memakai 20 aktuator DYNAMIXEL XM430-W350-R dengan spesifikasi pada Tabel 4.8 (ROBOTIS, n.d.b). Akhiran R menunjukkan antarmuka RS-485. Aktuator kepala, yaitu ID 19 dan 20 pada Gambar 4.1, menentukan arah kamera, sehingga resolusi *encoder* juga menentukan kepekaan pemeriksaan posisi kepala pada pengujian kondisi berjalan: dengan 4.096 pulsa per putaran, batas pergeseran dua *count* setara dengan sekitar 0,18 derajat.
 

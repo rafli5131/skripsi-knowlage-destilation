@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -10,7 +10,7 @@ Subbab ini merangkum penelitian terdahulu yang paling dekat dengan penelitian in
 
 Penelitian KD pada keluarga YOLO berbeda dalam pasangan *teacher* dan *student*, sinyal yang didistilasi, dan perangkat pengujian. Saltık, et al. (2025) mendistilasi YOLO11x ke YOLO11n untuk deteksi gulma dengan CWD dan *masked generative distillation* (MGD), lalu menguji *student* pada NVIDIA Jetson Orin Nano dan Raspberry Pi 5. Jung dan Nam (2025) memakai YOLOv11-M sebagai *teacher* serta YOLOv11-S dan YOLOv11-N sebagai *student*, dengan gabungan *mean squared error* (MSE) untuk keselarasan spasial dan divergensi Kullback-Leibler (KL) untuk distribusi per kanal pada peta fitur. Arik dan Ağgül (2026) membandingkan KD dengan *pseudo-labeling* untuk *student* YOLOv11-N dari *teacher* YOLOv11-L; hasil terbaiknya, mAP50 0,81 yang mendekati *teacher* (0,84), diperoleh dengan *pseudo-labeling*.
 
-Penelitian lain memadukan KD dengan teknik kompresi atau memakai *student* dari keluarga arsitektur yang berbeda. Sabaghian, Keyvanrad, dan Moghadami (2025) memangkas kanal YOLOv8m lalu memulihkan akurasinya dengan CWD dari model asal, sehingga parameter turun dari 25,85 juta menjadi 6,85 juta, *average precision* (AP) pada ambang IoU 0,50, atau AP50, berkurang 2,7%, dan laju naik dari 26 menjadi 45 FPS pada GPU NVIDIA GeForce GTX 1080. Sharma, et al. (2026) memakai *teacher* YOLOv8-L dan *student* berbasis MobileNetV3-Large dengan tiga sinyal distilasi, lalu menjalankannya pada NVIDIA Jetson Nano. *Student* tersebut mencapai mAP50‑95, yaitu rata-rata mAP pada ambang IoU 0,50 sampai 0,95, sebesar 38,6. Di Indonesia, Billy (2019) menaikkan mAP detektor YOLO dengan *feature extractor* MobileNet pada himpunan data VOC dari 0,3850 menjadi 0,4215 melalui KD, serta memakai *batchnorm fusion* untuk menaikkan laju dari 8,3 menjadi 16,66 FPS pada laptop dengan CPU i7. Zaini (2024) menerapkan KD pada YOLOv5 untuk 25 kelas rambu lalu lintas dengan mAP50 sebesar 0,953.
+Penelitian lain memadukan KD dengan teknik kompresi atau memakai *student* dari keluarga arsitektur yang berbeda. Sabaghian, Keyvanrad, dan Moghadami (2025) memangkas kanal YOLOv8m lalu memulihkan akurasinya dengan CWD dari model asal, sehingga parameter turun dari 25,85 juta menjadi 6,85 juta, *average precision* (AP) pada ambang IoU 0,50, atau AP50, berkurang 2,7%, dan laju naik dari 26 menjadi 45 FPS pada GPU NVIDIA GeForce GTX 1080. Sharma, et al. (2026) memakai *teacher* YOLOv8-L dan *student* berbasis MobileNetV3-Large dengan tiga sinyal distilasi, lalu menjalankannya pada NVIDIA Jetson Nano. *Student* tersebut mencapai mAP50‑95, yaitu rata-rata mAP pada ambang IoU 0,50 sampai 0,95, sebesar 38,6. Di Indonesia, Billy (2019) menaikkan mAP detektor YOLO dengan *feature extractor* MobileNet pada himpunan data PASCAL VOC dari 0,3850 menjadi 0,4215 melalui KD, serta memakai *batchnorm fusion* untuk menaikkan laju dari 8,3 menjadi 16,66 FPS pada laptop dengan CPU i7. Zaini (2024) menerapkan KD pada YOLOv5 untuk 25 kelas rambu lalu lintas dengan mAP50 sebesar 0,953.
 
 Ringkasan ketujuh penelitian tersebut disajikan pada Tabel 2.1. Pengujian kecepatan dilakukan pada GPU, perangkat NVIDIA Jetson, Raspberry Pi, atau laptop, dan tidak satu pun dari ketujuh penelitian ini menguji model hasil KD pada robot humanoid sepak bola.
 
@@ -119,13 +119,13 @@ Keterangan:
 
 Gou, et al. (2021) mengelompokkan pengetahuan yang dipindahkan menjadi tiga jenis. Pengetahuan berbasis respons berasal dari keluaran lapisan akhir *teacher*, pengetahuan berbasis fitur berasal dari representasi lapisan tengah, dan pengetahuan berbasis relasi berasal dari hubungan antarlapisan atau antarsampel data.
 
-Ukuran *teacher* tidak selalu sebanding dengan mutu *student*. Cho dan Hariharan (2019) mendapati bahwa model yang lebih besar sering kali bukan *teacher* yang lebih baik, karena kapasitas yang tidak sepadan membuat *student* kecil tidak mampu meniru *teacher* besar. Mirzadeh, et al. (2020) memakai *teacher assistant* untuk menjembatani kesenjangan antara *teacher* dan *student*, sedangkan Huang, et al. (2022, p.33716) mendapati bahwa pencocokan persis prediksi dengan divergensi KL dapat mengganggu pelatihan bila *teacher* jauh lebih kuat, lalu menggantinya dengan *loss* berbasis korelasi. Temuan ini menjadi dasar uji ablasi *teacher* yang lebih besar pada Subbab 3.3.4.
+Ukuran *teacher* tidak selalu sebanding dengan mutu *student*. Cho dan Hariharan (2019) mendapati bahwa model yang lebih besar sering kali bukan *teacher* yang lebih baik, karena kapasitas yang tidak sepadan membuat *student* kecil tidak mampu meniru *teacher* besar. Mirzadeh, et al. (2020) memakai *teacher assistant* untuk menjembatani kesenjangan antara *teacher* dan *student*, sedangkan Huang, et al. (2022, p. 33716) mendapati bahwa pencocokan persis prediksi dengan divergensi KL dapat mengganggu pelatihan bila *teacher* jauh lebih kuat, lalu menggantinya dengan *loss* berbasis korelasi. Temuan ini menjadi dasar uji ablasi *teacher* yang lebih besar pada Subbab 3.3.4.
 
-Keberhasilan KD juga tidak berarti *student* benar-benar meniru *teacher*. Stanton, et al. (2021, p.6906) menunjukkan bahwa KD dapat memperbaiki generalisasi *student*, tetapi sebaran prediksi *student* sering tetap berbeda cukup jauh dari sebaran prediksi *teacher*, bahkan ketika kapasitas *student* memadai. Karena itu, mutu *student* hasil KD pada penelitian ini dinilai dari metrik deteksi terhadap label, bukan dari kemiripannya dengan *teacher*.
+Keberhasilan KD juga tidak berarti *student* benar-benar meniru *teacher*. Stanton, et al. (2021, p. 6906) menunjukkan bahwa KD dapat memperbaiki generalisasi *student*, tetapi sebaran prediksi *student* sering tetap berbeda cukup jauh dari sebaran prediksi *teacher*, bahkan ketika kapasitas *student* memadai. Karena itu, mutu *student* hasil KD pada penelitian ini dinilai dari metrik deteksi terhadap label, bukan dari kemiripannya dengan *teacher*.
 
 ### 2.2.4 KD pada Detektor Objek
 
-Distilasi fitur memindahkan representasi lapisan tengah. FitNets memakai representasi tengah *teacher* sebagai *hint* dan menambahkan lapisan regresi pada lapisan *student* yang dipandu agar keluarannya sebanding dengan *hint* tersebut (Romero, et al., 2015). Chen, et al. (2017, p.743) menerapkan gagasan ini pada detektor objek dengan *hint learning* dan lapisan adaptasi, serta *cross-entropy* berbobot untuk menangani ketidakseimbangan antara kelas latar dan objek. Wang, et al. (2019) membatasi imitasi fitur pada daerah di sekitar *anchor* objek melalui *imitation mask*, sedangkan Shu, et al. (2021) menormalkan peta aktivasi setiap kanal menjadi peta probabilitas lunak lalu meminimalkan divergensi KL antara *teacher* dan *student*.
+Distilasi fitur memindahkan representasi lapisan tengah. FitNets memakai representasi tengah *teacher* sebagai *hint* dan menambahkan lapisan regresi pada lapisan *student* yang dipandu agar keluarannya sebanding dengan *hint* tersebut (Romero, et al., 2015). Chen, et al. (2017, p. 743) menerapkan gagasan ini pada detektor objek dengan *hint learning* dan lapisan adaptasi, serta *cross-entropy* berbobot untuk menangani ketidakseimbangan antara kelas latar dan objek. Wang, et al. (2019) membatasi imitasi fitur pada daerah di sekitar *anchor* objek melalui *imitation mask*, sedangkan Shu, et al. (2021) menormalkan peta aktivasi setiap kanal menjadi peta probabilitas lunak lalu meminimalkan divergensi KL antara *teacher* dan *student*.
 
 Distilasi respons pada detektor padat perlu memperhatikan cara klasifikasinya. Detektor padat memakai fungsi *sigmoid* untuk setiap kelas, sehingga distilasi berbasis *softmax* mengabaikan skor absolut setiap kelas; karena itu, Yang, et al. (2023) memakai BCE untuk mendistilasi setiap peta klasifikasi biner hasil *sigmoid*. Untuk lokalisasi, Zheng, et al. (2022) mengubah kotak pembatas menjadi distribusi probabilitas lalu mendistilasi distribusi tepi kotak dari *teacher* ke *student*.
 
@@ -171,7 +171,7 @@ Keterangan:
 
 Selisih fitur dikuadratkan agar selisih positif dan negatif sama-sama menambah *loss*, sedangkan penyebut menormalkan hasilnya terhadap jumlah kanal dan total bobot.
 
-*Loss* kotak adalah rata-rata Smooth L1, *loss* regresi kotak yang lazim pada detektor (Chen, et al., 2017, p.746; Li, et al., 2020), antara keluaran kotak *student* dan *teacher* (Persamaan 2.5).
+*Loss* kotak adalah rata-rata Smooth L1, *loss* regresi kotak yang lazim pada detektor (Chen, et al., 2017, p. 746; Li, et al., 2020), antara keluaran kotak *student* dan *teacher* (Persamaan 2.5).
 
 > $L_{\text{kotak}} = \frac{1}{N}\sum_{n = 1}^{N}{\mathcal{l}_{\text{SL1}}\left( b_{s,n} - b_{t,n} \right)}$ (2.5)
 
@@ -227,7 +227,7 @@ Keterangan:
 >
 > $L_{\text{det}}$ : *loss* deteksi berlabel bawaan Ultralytics, yang membandingkan prediksi dengan label himpunan data melalui *loss* kotak, *loss* kelas, dan DFL (Lampiran A)
 
-Penerapan ketiga suku distilasi tersebut dan loss berlabel pada penelitian ini digambarkan dalam diagram blok pada Gambar 5.8 di Subbab 5.1.2.2.
+Penerapan ketiga suku distilasi tersebut dan *loss* berlabel pada penelitian ini digambarkan dalam diagram blok pada Gambar 5.8 di Subbab 5.1.2.2.
 
 ### 2.2.5 Robot Operating System 2
 
@@ -263,7 +263,7 @@ Keterangan:
 
 IoU hanya dihitung antara kotak prediksi dan kotak kebenaran dari kelas yang sama. Ambang IoU yang mendekati 1 lebih ketat karena menuntut kotak yang hampir tepat, dan ambang yang paling sering dipakai adalah 50% dan 75%. *Precision* dan *recall* juga bergantung pada ambang *confidence*, karena hanya deteksi dengan *confidence* lebih besar daripada ambang tersebut yang dihitung sebagai deteksi positif (Padilla, et al., 2021).
 
-Nilai *confidence* tidak selalu sebanding dengan peluang suatu prediksi benar. Guo, et al. (2017, pp.1321-1322) mendapati bahwa jaringan saraf modern cenderung terlalu yakin, sehingga keyakinan prediksinya perlu dikalibrasi sebelum ditafsirkan sebagai peluang. Akibatnya, satu ambang *confidence* yang sama dapat meloloskan proporsi deteksi yang berbeda pada model yang berbeda. Karena itu, penelitian ini melaporkan AP, yang dihitung pada seluruh ambang *confidence*, bersama *precision* dan *recall* pada satu ambang tetap.
+Nilai *confidence* tidak selalu sebanding dengan peluang suatu prediksi benar. Guo, et al. (2017, pp. 1321-1322) mendapati bahwa jaringan saraf modern cenderung terlalu yakin, sehingga keyakinan prediksinya perlu dikalibrasi sebelum ditafsirkan sebagai peluang. Akibatnya, satu ambang *confidence* yang sama dapat meloloskan proporsi deteksi yang berbeda pada model yang berbeda. Karena itu, penelitian ini melaporkan AP, yang dihitung pada seluruh ambang *confidence*, bersama *precision* dan *recall* pada satu ambang tetap.
 
 *Precision* dan *recall* dihitung dengan Persamaan 2.10 dan Persamaan 2.11 (Padilla, et al., 2021), sedangkan F1 adalah rata-rata harmonik keduanya, seperti pada Persamaan 2.12 (Ultralytics, n.d.b).
 

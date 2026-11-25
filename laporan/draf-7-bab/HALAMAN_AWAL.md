@@ -1,6 +1,6 @@
 # HALAMAN AWAL
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 > Data pribadi (nama, NIM, NIK, email, dan nama pihak dalam prakata) sengaja tidak dicantumkan di repositori publik. Bagian pengesahan, pernyataan, dan prakata hanya diringkas isinya; teks lengkapnya ada di naskah DOCX/PDF.
 
@@ -42,6 +42,7 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 | BCE                        | *Binary cross-entropy*, *loss* untuk keputusan ada atau tidaknya satu kelas      |
 | BoT-SORT                   | Algoritme pelacakan objek yang dipakai *node* deteksi untuk memberi ID           |
 | *Checkpoint*               | Berkas bobot model hasil pelatihan                                               |
+| CNN                        | *Convolutional neural network*, jaringan saraf konvolusional                     |
 | *Confidence*               | Skor keyakinan model terhadap satu deteksi                                       |
 | CPU                        | *Central processing unit*                                                        |
 | CSV                        | *Comma-separated values*, format berkas teks berbentuk tabel                     |
@@ -58,6 +59,8 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 | GMC                        | *Global motion compensation*, kompensasi gerak kamera pada pelacak               |
 | GPU                        | *Graphics processing unit*                                                       |
 | ID                         | Nomor identitas objek yang diberikan pelacak                                     |
+| IDF1                       | *ID F1 score*, metrik pelacakan yang menilai konsistensi identitas objek         |
+| INT8                       | Bilangan bulat 8 bit                                                             |
 | IoU                        | *Intersection over union*, rasio irisan dan gabungan dua kotak                   |
 | KD                         | *Knowledge distillation*                                                         |
 | KD hibrida                 | KD yang menggabungkan *loss* berlabel dengan distilasi fitur, kotak, dan kelas   |
@@ -69,9 +72,13 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 | mAP                        | *Mean average precision*, rata-rata AP seluruh kelas                             |
 | mAP50                      | mAP pada ambang IoU 0,50                                                         |
 | mAP50-95                   | Rata-rata mAP pada ambang IoU 0,50 sampai 0,95                                   |
+| MOTA                       | *Multiple object tracking accuracy*, metrik akurasi pelacakan banyak objek       |
 | NMS                        | *Non-maximum suppression*, penghapusan kotak yang tumpang tindih                 |
+| ONNX                       | *Open Neural Network Exchange*, format pertukaran model jaringan saraf           |
 | OP3                        | ROBOTIS OP3, robot humanoid yang dipakai dalam penelitian ini                    |
 | P95                        | Persentil ke-95                                                                  |
+| PTQ                        | *Post-training quantization*, kuantisasi sesudah pelatihan                       |
+| QAT                        | *Quantization-aware training*, pelatihan yang memperhitungkan kuantisasi         |
 | QoS                        | *Quality of Service*, pengaturan cara pesan ROS 2 dikirim                        |
 | *Replay*                   | Pemutaran ulang *frame* terekam secara *offline*                                 |
 | ROS 2                      | *Robot Operating System 2*                                                       |

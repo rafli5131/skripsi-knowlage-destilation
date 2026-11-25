@@ -1,6 +1,6 @@
 # BAB 3 METODOLOGI PENELITIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v22 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 3.1 Tipe Penelitian
 
@@ -10,7 +10,7 @@ Tipe ini dipilih karena penelitian membuat artefak yang utuh melalui tahap anali
 
 ## 3.2 Strategi dan Rancangan Penelitian
 
-Strategi penelitian ini adalah pembuatan artefak yang disertai eksperimen pembandingan model. Artefak berupa alur pelatihan KD dan sistem deteksi berbasis ROS 2 pada OP3, sedangkan eksperimen membandingkan model hasil KD dengan model berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher*. Subbab ini menguraikan metode penelitian, subjek, lokasi, teknik pengumpulan data, teknik analisis data, dan peralatan pendukung.
+Strategi penelitian ini adalah pembuatan artefak yang disertai eksperimen pembandingan model. Artefak berupa alur pelatihan KD dan sistem deteksi berbasis ROS 2 pada OP3, sedangkan eksperimen membandingkan KD hibrida dengan model berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher*. Subbab ini menguraikan metode penelitian, subjek, lokasi, teknik pengumpulan data, teknik analisis data, dan peralatan pendukung.
 
 ### 3.2.1 Metode Penelitian
 
@@ -55,7 +55,7 @@ Perangkat keras dibagi menurut tempat penggunaannya. Server laboratorium dipakai
 | Server laboratorium (mesin virtual KVM) | AMD EPYC 7413 dengan 80 CPU virtual, RAM 283 GiB, tiga GPU NVIDIA L40 46.068 MiB, *driver* NVIDIA 535.261.03 (CUDA 12.2 menurut *driver*), Debian 12                              | Pelatihan dan evaluasi model, ablasi ukuran *teacher*, dan pemeriksaan jalur evaluasi TEST |
 | Robot ROBOTIS OP3                       | Komputer *onboard* Intel NUC12WSHi5 dengan Intel Core i5-1240P (12 inti fisik dan 16 *thread* logis), RAM 7,33 GiB, Ubuntu 24.04.5 LTS; subpengendali OpenCR diakses melalui U2D2 | Menjalankan *node* deteksi dan *gait*                                                      |
 | Kamera Logitech C920                    | Resolusi 640 × 480 piksel, format YUYV, laju yang diminta 30 FPS                                                                                                                  | Sumber citra *live* pada robot                                                             |
-| Tatakan robot                           | Penopang badan OP3                                                                                                                                                                | Menopang robot selama *gait* di tempat untuk mengurangi beban servo                        |
+| Tatakan robot                           | Penopang badan OP3                                                                                                                                                                | Menopang robot selama *gait* di tempat untuk mengurangi beban *servo*                      |
 | Laptop ASUS TUF Gaming A14 FA401WV      | AMD Ryzen AI 9 HX 370 (12 inti, 24 *thread*), RAM 32 GB, NVIDIA GeForce RTX 4060 Laptop GPU, Windows 11                                                                           | Akses SSH ke OP3, penampil *preview* deteksi, dan penulisan laporan                        |
 
 Perangkat lunak tersusun berlapis. Pada OP3, Ubuntu menjadi sistem operasi dan ROS 2 Jazzy menjadi dasar komunikasi antar-*node*. *Node* deteksi ditulis dengan Python dan menjalankan model melalui PyTorch dan Ultralytics, termasuk pelacak BoT-SORT yang tersedia di Ultralytics. OpenCV dan cv_bridge mengubah citra kamera menjadi masukan model, vision_msgs dipakai untuk pesan hasil deteksi, dan psutil mengukur penggunaan CPU serta RSS proses detektor. *Gait* pada kondisi berjalan dijalankan oleh op3_manager dari ROBOTIS. Label *frame* kamera OP3 ditinjau dan diperbaiki dengan op3_label_reviewer, yaitu alat peninjau yang menampilkan *frame* beserta kotak label awal, lalu menyimpan label hasil tinjauan dan nama peninjaunya. Pada server, pelatihan dan evaluasi berjalan pada Debian dengan Python, PyTorch, dan Ultralytics. Versi setiap perangkat lunak disajikan pada Tabel 3.2. Versi dicatat karena hasil yang sepenuhnya dapat diulang tidak dijamin lintas versi PyTorch atau perangkat yang berbeda (PyTorch, 2026).
@@ -109,7 +109,7 @@ Implementasi pelatihan dilakukan pada server laboratorium memakai Ultralytics. S
 
 Model hasil KD dan *seed* yang dijalankan di robot dipilih hanya berdasarkan hasil pada VAL, dengan aturan seleksi yang ditetapkan sebelum pelatihan. TEST tidak dipakai untuk memilih varian, *checkpoint*, *seed*, maupun ambang, dan hanya dipakai untuk evaluasi akhir. Perbaikan objektif KD hibrida diuji pada delapan konfigurasi dengan *seed* 42, lalu konfigurasi terbaik dikonfirmasi dengan tiga *seed*; konfigurasi itu hanya menggantikan model hasil KD apabila memenuhi aturan seleksi di VAL. Sebagai pengujian tambahan, *student* juga dilatih dengan *teacher* YOLO11s dan dievaluasi di VAL saja untuk melihat pengaruh ukuran *teacher* yang dibahas pada Subbab 2.2.3. Hasil pengujian tambahan ini tidak menggantikan *teacher* utama.
 
-Implementasi pada robot dilakukan dengan menjalankan model sebagai berkas .pt PyTorch FP32 pada CPU komputer *onboard* di dalam sebuah *node* ROS 2. *Node* tersebut menerima citra dari *topic* kamera, menjalankan deteksi dan pelacakan BoT-SORT, menerbitkan hasil deteksi, serta mencatat log *runtime* per *frame*. Rancangan rinci *node* disajikan pada Bab 5.
+Implementasi pada robot dilakukan dengan menjalankan model sebagai berkas .pt PyTorch FP32 pada CPU komputer *onboard* di dalam sebuah *node* ROS 2. *Node* tersebut menerima citra dari *topic* kamera, menjalankan deteksi dan pelacakan BoT-SORT, menerbitkan hasil deteksi, serta mencatat *log* *runtime* per *frame*. Rancangan rinci *node* disajikan pada Bab 5.
 
 ### 3.3.5 Pengujian
 
@@ -119,7 +119,7 @@ Pengujian akurasi dilakukan pada TEST dan pada citra kamera OP3. Pada TEST, keti
 
 Pengujian *runtime* dan pengujian akurasi pada citra kamera OP3 dilakukan pada dua kondisi robot. Pada kondisi diam, seluruh *servo* menyala tanpa *gait*. Pada kondisi berjalan, robot menjalankan *gait* di tempat dengan badan ditopang tatakan robot untuk mengurangi beban *servo*, sehingga robot tidak berpindah tempat; perintah mulai dan berhenti *gait* dikirim oleh skrip pengujian ke modul jalan op3_manager. Pada kedua kondisi, *servo* kepala menyala tetapi tidak menerima perintah posisi agar arah kamera tetap.
 
-Pengujian *runtime* dilakukan secara *live* di OP3. Model hasil KD dan *teacher* menjadi pembanding utama, sedangkan model *supervised* dan KD murni menjadi pembanding pelengkap. Setiap model diuji pada kedua kondisi dengan adegan berisi bola, gawang, serta robot pada posisi bertanda.
+Pengujian *runtime* dilakukan secara *live* di OP3. KD hibrida, *supervised*, dan *teacher* menjadi pembanding utama, sedangkan KD murni menjadi pembanding pelengkap. Setiap model diuji pada kedua kondisi dengan adegan berisi bola, gawang, serta robot pada posisi bertanda.
 
 Seluruh *run* memakai pengaturan yang sama: inferensi FP32 pada CPU dengan masukan 640, *confidence* 0,25, NMS IoU 0,45, pelacakan BoT-SORT, empat *thread* intra-op dan dua *thread* inter-op yang ditetapkan saat inisialisasi *node*, 30 *frame* *warm-up* yang tidak dianalisis, jendela ukur 60 detik, serta *preview* deteksi yang ditampilkan lewat SSH pada laptop. Setiap model diuji tiga kali pada setiap kondisi, sehingga terdapat 24 *run* aktif. Rencana awal menggilir urutan model pada setiap putaran dengan jeda minimal 120 detik. Pada pelaksanaannya, *run* dikelompokkan per model dalam blok selama 2 dan 3 November 2026, dan set *teacher* pada kondisi berjalan direkam ulang setelah objek ditata kembali; penyimpangan ini dilaporkan sebagai keterbatasan pada Bab 6. Sebuah *run* dinyatakan sah bila jendela ukurnya penuh, *frame* galat tidak lebih dari 1%, simpangan *servo* kepala tidak lebih dari 2 *count*, dan gerak sendi sesuai kondisi yang diuji. *Run* yang gagal kriteria diganti, dan *run* yang diganti tetap diarsipkan.
 
