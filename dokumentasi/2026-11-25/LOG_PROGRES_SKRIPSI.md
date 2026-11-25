@@ -1,18 +1,18 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v20** (24 November 2026, 115 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v21** (25 November 2026, 115 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v20 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16) |
+| Naskah DOCX dan PDF v1 sampai v21 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v20 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v20.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah v20 | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v21 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v21.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v21) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
-## Riwayat naskah 13 sampai 24 November
+## Riwayat naskah 13 sampai 25 November
 
 | Versi | Tanggal | Perubahan utama |
 |---|---|---|
@@ -28,10 +28,11 @@ Naskah skripsi tujuh bab sudah sampai versi **v20** (24 November 2026, 115 halam
 | v16 | 24 Nov | Barry, et al. (2019) diganti ke IVCNZ 2019 dan Meneghetti, et al. (2021) ke *Journal of Intelligent & Robotic Systems*. Gholami, et al. (2021) tetap pracetak arXiv. |
 | v17 | 24 Nov | Tanda tangan prakata memakai nama lengkap penulis. Blok tanda tangan dibuat muat di satu halaman. |
 | v18 sampai v20 | 24 Nov | Gambar 5.7 berupa denah simulasi tampak atas yang diberi catatan "ilustrasi, tidak berskala". Gambar 5.16, 4.3, dan 5.12 memakai foto dokumentasi. Spesifikasi baterai unit penelitian dicatat sesuai label (D27). |
+| v21 | 25 Nov | Rumusan masalah disempurnakan (D25): rumusan 1 menyebut *student* KD hibrida, rumusan 3 dan 4 mencakup ketiga model (KD hibrida, *supervised*, *teacher*), dan kata "efisiensi" serta "secara penuh" dihapus. Batasan butir 3 mendefinisikan skala t sebagai skala kustom (810.649 parameter, bukan skala resmi YOLO11 n, s, m, l, x). Batasan butir 4 baru menegaskan KD hibrida sebagai model hasil KD dan KD murni sebagai pembanding tambahan. Ikut disesuaikan: tujuan, latar belakang, Subbab 3.2.5, Tabel 3.4, tujuan Subbab 6.2 sampai 6.5, Subbab 6.7, serta kesimpulan Bab 7 butir 3 dan 4 (angka *supervised* ditambahkan). |
 
-## Isi pokok naskah v20
+## Isi pokok naskah v21
 
-- **Rumusan masalah:** (1) mAP, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
+- **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
 - **Jalur evaluasi:** Bab 6 menyajikan kedua jalur evaluasi, yaitu validator dan prediksi, untuk TEST (Tabel 6.6 dan 6.13) dan kamera OP3 (Tabel 6.9). Bab 7 butir 1 dan 2 menyebut angka jalur prediksi untuk kamera OP3, karena jalur ini sama dengan *runtime* robot. Saran nomor 2 meminta jalur ini ditetapkan sebagai jalur utama sejak awal. Keputusan jalur angka utama bersama pembimbing (yang tercatat terbuka sejak 21 November) belum dikonfirmasi.
 - **CPU (RM4):** disajikan sebagai CPU proses detektor dan RSS (Tabel 6.20), ditambah *replay offline* T45 (Tabel 6.21). Kesimpulannya, CPU dan RSS tidak membedakan efisiensi model secara jelas.
@@ -52,9 +53,14 @@ Naskah skripsi tujuh bab sudah sampai versi **v20** (24 November 2026, 115 halam
 
 - **[README utama](../../README.md):** status diperbarui ke naskah v20 dan ditambah bagian naskah skripsi. Riwayat progres 12 sampai 23 November tetap tersimpan di bagian yang dapat dibuka-tutup. Tabel langkah berikutnya disesuaikan dengan pekerjaan yang tersisa, dan struktur folder ditambah `laporan/alat/` serta arsip draf.
 - **[`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md):** draf ringkas 12 sampai 23 November disalin utuh ke [`laporan/arsip/draf-7-bab-2026-11-23/`](../../laporan/arsip/draf-7-bab-2026-11-23/README.md). Sesudahnya, isi folder diganti dengan salinan Markdown naskah v20 (Bab 1-7, halaman awal, daftar referensi, dan lampiran). Nama berkas bab tetap sama, jadi tautan lama tidak putus.
+- **Data pribadi:** karena repositori ini publik, `HALAMAN_AWAL.md` tidak memuat nama, NIM, NIK, email, atau nama pihak di prakata. Lembar pengesahan, pernyataan orisinalitas, dan prakata hanya diringkas isinya, sedangkan abstrak, *abstract*, dan daftar istilah disalin utuh. Skrip konversi menerapkan aturan yang sama.
 - **[`laporan/alat/konversi_naskah_ke_markdown.py`](../../laporan/alat/konversi_naskah_ke_markdown.py):** skrip baru untuk membuat ulang salinan Markdown dari DOCX.
 - **[`laporan/draf-bab-iv-v/README.md`](../../laporan/draf-bab-iv-v/README.md):** diberi catatan arah ke naskah v20.
 - **[`docs/DECISIONS.md`](../../docs/DECISIONS.md):** ditambah D25 (empat rumusan masalah), D26 (format Daftar Referensi), dan D27 (spesifikasi baterai unit penelitian).
 - **[Memory 25 November](../../memory/2026-11-25-naskah-skripsi-v20.md), [indeks dokumentasi](../INDEKS.md), dan [`agent.md`](../../agent.md):** diperbarui.
 - **Tidak diubah:** folder `Claude outputs/` (belum dilacak Git) dan folder `Paper\_to_delete\` di luar repositori.
 - **Git:** belum ada commit.
+
+## Pembaruan v21 (25 November)
+
+Rumusan masalah disempurnakan seperti baris v21 di atas. Salinan Markdown di `laporan/draf-7-bab/` dibuat ulang dari v21, dan README, D25, memory, serta `agent.md` disesuaikan. Ringkasan prakata di `HALAMAN_AWAL.md` kini dibuat oleh skrip konversi dengan rincian pihak menurut perannya, tetap tanpa nama.

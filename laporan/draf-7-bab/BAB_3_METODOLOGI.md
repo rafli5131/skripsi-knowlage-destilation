@@ -1,6 +1,6 @@
 # BAB 3 METODOLOGI PENELITIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 3.1 Tipe Penelitian
 
@@ -133,15 +133,15 @@ Set Kamera 2 direkam pada 12 November 2026 setelah model, ambang, dan protokol d
 
 ### 3.3.6 Analisis dan Penarikan Kesimpulan
 
-Hasil pengujian dianalisis dengan memetakan setiap rumusan masalah ke pengujian dan metriknya, seperti pada Tabel 3.4. Untuk rumusan masalah nomor 1 dan 2, model hasil KD dibandingkan dengan model *supervised* untuk melihat pengaruh KD dan dengan *teacher* untuk melihat sisa selisih terhadap model yang lebih besar. Perbandingan dilakukan pada TEST dan pada citra kamera OP3 untuk setiap kondisi robot. Untuk rumusan masalah nomor 3 dan 4, model hasil KD dibandingkan dengan *teacher* pada setiap kondisi, beserta perubahan dari kondisi diam ke kondisi berjalan. Pengujian fungsional tidak dipetakan ke rumusan masalah, tetapi dipakai untuk memastikan sistem berjalan sesuai kebutuhan sebelum pengujian akurasi dan *runtime*.
+Hasil pengujian dianalisis dengan memetakan setiap rumusan masalah ke pengujian dan metriknya, seperti pada Tabel 3.4. Untuk rumusan masalah nomor 1 dan 2, KD hibrida dibandingkan dengan model *supervised* untuk melihat pengaruh KD dan dengan *teacher* untuk melihat sisa selisih terhadap model yang lebih besar. Perbandingan dilakukan pada TEST dan pada citra kamera OP3 untuk setiap kondisi robot. Untuk rumusan masalah nomor 3 dan 4, ketiga model dibandingkan pada setiap kondisi, beserta perubahan dari kondisi diam ke kondisi berjalan; perbandingan dengan *supervised* memisahkan pengaruh KD dari pengaruh ukuran *student*. Pengujian fungsional tidak dipetakan ke rumusan masalah, tetapi dipakai untuk memastikan sistem berjalan sesuai kebutuhan sebelum pengujian akurasi dan *runtime*.
 
 **Tabel 3.4** Pemetaan rumusan masalah ke pengujian dan metrik
 
-| **Rumusan masalah** | **Pengujian**                                                             | **Metrik**                        | **Model yang dibandingkan**           |
-|---------------------|---------------------------------------------------------------------------|-----------------------------------|---------------------------------------|
-| Nomor 1             | Akurasi berdasarkan mAP pada TEST dan citra kamera OP3 (Subbab 6.2)       | mAP50 dan mAP50‑95                | Hasil KD, *supervised*, dan *teacher* |
-| Nomor 2             | *Precision*, *recall*, dan F1 pada TEST dan citra kamera OP3 (Subbab 6.3) | *Precision*, *recall*, dan F1     | Hasil KD, *supervised*, dan *teacher* |
-| Nomor 3             | Latensi dan FPS pada *runtime live* (Subbab 6.4)                          | Rata-rata latensi dan FPS efektif | Hasil KD dan *teacher*                |
-| Nomor 4             | Penggunaan CPU dan RAM pada *runtime live* (Subbab 6.5)                   | Penggunaan CPU dan RSS            | Hasil KD dan *teacher*                |
+| **Rumusan masalah** | **Pengujian**                                                             | **Metrik**                        | **Model yang dibandingkan**                                                   |
+|---------------------|---------------------------------------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------|
+| Nomor 1             | Akurasi berdasarkan mAP pada TEST dan citra kamera OP3 (Subbab 6.2)       | mAP50 dan mAP50‑95                | KD hibrida, *supervised*, dan *teacher*; KD murni sebagai pembanding tambahan |
+| Nomor 2             | *Precision*, *recall*, dan F1 pada TEST dan citra kamera OP3 (Subbab 6.3) | *Precision*, *recall*, dan F1     | KD hibrida, *supervised*, dan *teacher*; KD murni sebagai pembanding tambahan |
+| Nomor 3             | Latensi dan FPS pada *runtime live* (Subbab 6.4)                          | Rata-rata latensi dan FPS efektif | KD hibrida, *supervised*, dan *teacher*; KD murni sebagai pembanding tambahan |
+| Nomor 4             | Penggunaan CPU dan RAM pada *runtime live* (Subbab 6.5)                   | Penggunaan CPU dan RSS            | KD hibrida, *supervised*, dan *teacher*; KD murni sebagai pembanding tambahan |
 
 Kesimpulan ditarik untuk menjawab setiap rumusan masalah berdasarkan hasil tersebut. Kesimpulan juga menyebut batas yang berasal dari jumlah *seed*, jumlah ulangan, kemiripan sumber antarbagian himpunan data, dan cara pengambilan set *frame* kamera OP3.

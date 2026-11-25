@@ -1,6 +1,6 @@
 # BAB 6 PENGUJIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menyajikan pengujian dengan urutan mengikuti rumusan masalah. Subbab 6.1 memuat pengujian fungsional yang memastikan sistem berjalan sesuai kebutuhan sebelum hasil lainnya dianalisis. Subbab 6.2 sampai Subbab 6.5 menjawab rumusan masalah nomor 1 sampai 4 secara berurutan, yaitu akurasi berdasarkan mAP, *precision*, *recall*, dan *F1-score*, latensi dan FPS, serta penggunaan CPU dan RAM. Subbab 6.6 memuat pengujian tambahan, dan Subbab 6.7 mengevaluasi hasil terhadap setiap rumusan masalah. Setiap pengujian diuraikan dalam empat bagian, yaitu tujuan, prosedur, hasil, dan analisis hasil pengujian.
 
@@ -51,7 +51,7 @@ Bukti KF-05 berupa tangkapan pada waktu tertentu, sehingga tidak membuktikan bah
 
 ### 6.2.1 Tujuan Pengujian
 
-Pengujian ini menjawab rumusan masalah nomor 1, yaitu tingkat akurasi berdasarkan nilai mAP model YOLO11 skala t hasil KD dibandingkan dengan *student* *supervised* berarsitektur sama dan dengan *teacher* YOLO11n. Akurasi diukur dengan mAP50 dan mAP50-95 pada TEST serta pada citra kamera OP3.
+Pengujian ini menjawab rumusan masalah nomor 1, yaitu tingkat akurasi berdasarkan nilai mAP model *student* hasil KD hibrida dibandingkan dengan *student* *supervised* berarsitektur sama dan dengan *teacher* YOLO11n. Akurasi diukur dengan mAP50 dan mAP50-95 pada TEST serta pada citra kamera OP3.
 
 ### 6.2.2 Prosedur Pengujian
 
@@ -199,7 +199,7 @@ Kedua set kamera berasal dari satu lingkungan laboratorium dengan *frame* beruru
 
 ### 6.3.1 Tujuan Pengujian
 
-Pengujian ini menjawab rumusan masalah nomor 2, yaitu kinerja model hasil KD, *student* *supervised*, dan *teacher* YOLO11n jika ditinjau dari nilai *precision*, *recall*, dan *F1-score* pada TEST dan pada citra kamera OP3.
+Pengujian ini menjawab rumusan masalah nomor 2, yaitu kinerja *student* KD hibrida, *student* *supervised*, dan *teacher* YOLO11n jika ditinjau dari nilai *precision*, *recall*, dan *F1-score* pada TEST dan pada citra kamera OP3.
 
 ### 6.3.2 Prosedur Pengujian
 
@@ -340,7 +340,7 @@ Pada citra kamera OP3, F1 model bergantung pada jenis kesalahan yang dominan di 
 
 ### 6.4.1 Tujuan Pengujian
 
-Pengujian ini menjawab rumusan masalah nomor 3, yaitu rata-rata latensi dan FPS yang dicapai model hasil KD dan *teacher* YOLO11n saat beroperasi secara *real-time* pada kondisi robot diam dan berjalan. *Supervised* dan KD murni diukur sebagai pembanding pelengkap.
+Pengujian ini menjawab rumusan masalah nomor 3, yaitu rata-rata latensi dan FPS ketiga model, yaitu KD hibrida, *supervised*, dan *teacher* YOLO11n, saat beroperasi secara *real-time* pada komputer *onboard* OP3 dalam kondisi robot diam dan berjalan. KD murni diukur sebagai pembanding pelengkap.
 
 ### 6.4.2 Prosedur Pengujian
 
@@ -425,7 +425,7 @@ Hasil ini bersifat deskriptif. Urutan *run* berbentuk blok lintas hari, suhu dan
 
 ### 6.5.1 Tujuan Pengujian
 
-Pengujian ini menjawab rumusan masalah nomor 4, yaitu tingkat efisiensi penggunaan CPU dan RAM model hasil KD dan *teacher* YOLO11n saat dijalankan secara penuh pada komputer *onboard* robot. RAM diukur sebagai RSS proses *node* deteksi.
+Pengujian ini menjawab rumusan masalah nomor 4, yaitu penggunaan CPU dan RAM ketiga model, yaitu KD hibrida, *supervised*, dan *teacher* YOLO11n, pada komputer *onboard* OP3. RAM diukur sebagai RSS proses *node* deteksi. KD murni diukur sebagai pembanding pelengkap.
 
 ### 6.5.2 Prosedur Pengujian
 
@@ -519,6 +519,6 @@ Sistem deteksi berbasis ROS 2 berhasil berjalan pada komputer *onboard* OP3, dan
 
 Untuk rumusan masalah nomor 1, KD hibrida penuh lebih baik daripada *supervised* pada mAP50-95 TEST dan konsisten pada ketiga pasangan *seed*, tetapi keunggulan itu tidak berpindah begitu saja ke kamera OP3. Untuk rumusan masalah nomor 2, KD hibrida tidak unggul pada *precision*, *recall*, dan F1; pada ambang *runtime*, F1-nya setara dengan *supervised*. Model yang dipilih dari VAL dan TEST karena itu belum tentu menjadi model terbaik pada adegan robot, dan pemilihan model untuk pemakaian di robot memerlukan evaluasi pada citra kamera robot itu sendiri.
 
-Untuk rumusan masalah nomor 3, KD hibrida lebih cepat daripada *teacher* pada kedua kondisi robot, dan seluruh model memenuhi KNF-01. Untuk rumusan masalah nomor 4, CPU dan RSS proses tidak membedakan model secara jelas, karena penggunaan CPU didominasi pelacakan dan OpenBLAS. Keuntungan *runtime* yang terukur berasal dari ukuran *student* dibanding *teacher*; KD menentukan mutu deteksi, bukan kecepatan.
+Untuk rumusan masalah nomor 3, KD hibrida dan *supervised* lebih cepat daripada *teacher* pada kedua kondisi robot, latensi kedua *student* berdekatan dengan urutan yang berganti antarkondisi, dan seluruh model memenuhi KNF-01. Untuk rumusan masalah nomor 4, CPU dan RSS proses tidak membedakan model secara jelas, karena penggunaan CPU didominasi pelacakan dan OpenBLAS. Keuntungan *runtime* yang terukur berasal dari ukuran *student* dibanding *teacher*; KD menentukan mutu deteksi, bukan kecepatan.
 
 Beberapa ancaman terhadap validitas membatasi kesimpulan. TEST pernah dibuka sebelum KD hibrida dirancang, nama sumber yang sama ditemukan di lebih dari satu bagian himpunan data (Tabel B.2), dan asal-usul himpunan data pelatihan *teacher* utama tidak terdokumentasi lengkap. Set kamera OP3 berasal dari satu lingkungan dengan label yang dibantu prediksi model. Pengukuran *runtime* dilakukan dalam blok lintas hari. Jumlah *seed* dan ulangan yang masing-masing tiga hanya mendukung analisis deskriptif (Bouthillier, et al., 2021).

@@ -1,6 +1,6 @@
 # Naskah skripsi tujuh bab
 
-Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v20** (24 November 2026, 115 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
+Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v21** (25 November 2026, 115 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
 
 **Judul:** Implementasi *Knowledge Distillation* untuk Deteksi Objek pada Robot Humanoid ROBOTIS OP3
 **Struktur:** tujuh bab implementatif-pengembangan (D17), mengikuti Panduan Skripsi FILKOM v3.0.
@@ -22,12 +22,14 @@ Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v20** (24 Nov
 
 | No | Rumusan masalah | Pengujian | Kesimpulan |
 |---|---|---|---|
-| 1 | Akurasi berdasarkan mAP model KD dibandingkan *supervised* berarsitektur sama dan *teacher* YOLO11n | Subbab 6.2 | Bab 7 butir 1 |
+| 1 | Akurasi berdasarkan mAP *student* KD hibrida dibandingkan *student* *supervised* berarsitektur sama dan *teacher* YOLO11n | Subbab 6.2 | Bab 7 butir 1 |
 | 2 | *Precision*, *recall*, dan *F1-score* ketiga model | Subbab 6.3 | Bab 7 butir 2 |
-| 3 | Rata-rata latensi dan FPS model KD dan *teacher* saat robot diam dan berjalan | Subbab 6.4 | Bab 7 butir 3 |
-| 4 | Efisiensi penggunaan CPU dan RAM model KD dan *teacher* pada komputer *onboard* | Subbab 6.5 | Bab 7 butir 4 |
+| 3 | Rata-rata latensi dan FPS ketiga model pada komputer *onboard* OP3 saat robot diam dan berjalan | Subbab 6.4 | Bab 7 butir 3 |
+| 4 | Penggunaan CPU dan RAM ketiga model pada komputer *onboard* OP3 | Subbab 6.5 | Bab 7 butir 4 |
 
-Rumusan masalah implementasi sistem (rumusan nomor 1 pada draf 12 November) dihapus pada naskah v9. Status implementasi kini dibahas di Subbab 6.1 dan di paragraf pembuka kesimpulan. Persetujuan pembimbing atas empat rumusan ini belum tercatat; lihat D25 di [`docs/DECISIONS.md`](../../docs/DECISIONS.md).
+"Ketiga model" adalah KD hibrida penuh, *supervised*, dan *teacher* YOLO11n; KD murni disertakan sebagai pembanding tambahan (Batasan Masalah butir 4). Istilah "skala t" didefinisikan pada Batasan Masalah butir 3 sebagai skala kustom (kedalaman 0,50, lebar 0,125, 810.649 parameter), bukan skala resmi YOLO11.
+
+Rumusan masalah implementasi sistem (rumusan nomor 1 pada draf 12 November) dihapus pada naskah v9. Status implementasi kini dibahas di Subbab 6.1 dan di paragraf pembuka kesimpulan. Rumusan disempurnakan pada naskah v21 (menyebut KD hibrida dan ketiga model). Persetujuan pembimbing atas empat rumusan ini belum tercatat; lihat D25 di [`docs/DECISIONS.md`](../../docs/DECISIONS.md).
 
 ## Padanan istilah naskah dan kode repositori
 
@@ -73,4 +75,4 @@ Skrip menimpa berkas bab di folder ini. Salin dulu versi lama ke `laporan/arsip/
 
 - Draf ringkas 12 sampai 23 November: [`laporan/arsip/draf-7-bab-2026-11-23/`](../arsip/draf-7-bab-2026-11-23/README.md).
 - Draf Bab IV-V dan proposal Bab I-III: [`laporan/draf-bab-iv-v/`](../draf-bab-iv-v/README.md) dan [`laporan/DRAF_PROPOSAL_BAB_I-III.md`](../DRAF_PROPOSAL_BAB_I-III.md).
-- Riwayat suntingan naskah v1 sampai v20: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).
+- Riwayat suntingan naskah v1 sampai v21: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).

@@ -1,6 +1,6 @@
 # HALAMAN AWAL
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 > Data pribadi (nama, NIM, NIK, email, dan nama pihak dalam prakata) sengaja tidak dicantumkan di repositori publik. Bagian pengesahan, pernyataan, dan prakata hanya diringkas isinya; teks lengkapnya ada di naskah DOCX/PDF.
 
@@ -10,20 +10,17 @@
 
 - Skripsi diajukan untuk memenuhi sebagian persyaratan memperoleh gelar Sarjana Teknik, Program Studi Teknik Komputer, Departemen Teknik Informatika, Fakultas Ilmu Komputer, Universitas Brawijaya, Malang, 2026.
 - Disetujui oleh dosen pembimbing tunggal dan diketahui oleh Ketua Departemen Teknik Informatika.
-- Tanggal ujian masih diisi penulis.
 
 ## Pernyataan Orisinalitas (ringkasan)
 
 - Penulis menyatakan naskah tidak memuat karya ilmiah orang lain yang pernah diajukan untuk gelar akademik, kecuali yang dikutip dan disebut dalam Daftar Referensi.
 - Penulis bersedia skripsi digugurkan dan gelar dibatalkan bila terbukti ada unsur plagiasi.
-- Tanggal tanda tangan masih diisi penulis.
 
 ## Prakata (ringkasan)
 
 - Ucapan syukur dan penjelasan bahwa skripsi disusun untuk memenuhi persyaratan gelar Sarjana Teknik.
-- Ucapan terima kasih kepada sebelas pihak: Tuhan Yang Maha Esa, orang tua dan keluarga, dosen pembimbing tunggal, Ketua Departemen Teknik Informatika, Ketua Program Studi Teknik Komputer, dosen penasihat akademik, Kepala Laboratorium Robotika dan Embedded System, dosen dan staf FILKOM, teman sesama bimbingan, lembaga ROBOTIIK FILKOM dan tim robot humanoid yang menyediakan OP3, serta pengelola server laboratorium.
+- Ucapan terima kasih kepada pihak yang membantu menurut perannya: Tuhan Yang Maha Esa, orang tua dan keluarga, dosen pembimbing tunggal, Ketua Departemen Teknik Informatika, Ketua Program Studi Teknik Komputer, dosen penasihat akademik, Kepala Laboratorium Robotika dan Embedded System, dosen dan staf FILKOM, teman sesama bimbingan, lembaga ROBOTIIK FILKOM dan tim robot humanoid yang menyediakan OP3, serta pengelola server laboratorium. Nama pihak tidak disalin.
 - Penutup berisi harapan atas kritik dan saran dari dosen penguji dan pembaca.
-- Tujuh isian nama dan tanggal masih diisi penulis.
 
 ## Abstrak
 

@@ -1,6 +1,6 @@
 # BAB 1 PENDAHULUAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 1.1 Latar Belakang
 
@@ -18,31 +18,31 @@ Hasil KD pada keluarga YOLO beragam. Pada deteksi gulma, *channel-wise knowledge
 
 Sepanjang penelusuran penulis, penelitian KD pada keluarga YOLO tersebut dievaluasi pada domain di luar sepak bola robot (Billy, 2019; Zaini, 2024; Saltık, et al., 2025; Jung dan Nam, 2025; Arik dan Ağgül, 2026; Sharma, et al., 2026), sedangkan penelitian deteksi objek pada OP3 belum memakai KD (Adipratama, 2026; Lau dan Pottier, 2026). Belum ditemukan penelitian yang mengevaluasi model YOLO11 hasil KD pada komputer yang terpasang di tubuh OP3 (komputer *onboard*) dan hanya mengandalkan CPU dengan *Robot Operating System 2* (ROS 2), baik dari sisi akurasi maupun dari sisi latensi dan penggunaan sumber daya saat robot diam dan berjalan. Celah ini relevan karena versi OP3 tahun 2025 dikembangkan untuk ROS 2 (ROBOTIS, n.d.a).
 
-Berdasarkan celah tersebut, penelitian ini mengimplementasikan sistem deteksi objek berbasis ROS 2 yang menjalankan *student* YOLO11 skala t hasil KD dari *teacher* YOLO11n pada komputer *onboard* ROBOTIS OP3. Model hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised*, yaitu hanya dengan label himpunan data tanpa bimbingan *teacher*, agar pengaruh KD terpisah dari pengaruh ukuran model, serta dengan *teacher* sebagai acuan. Perbandingan mencakup akurasi pada himpunan data dan pada citra kamera OP3, latensi, FPS, serta penggunaan CPU dan RAM. Pengujian pada robot dilakukan saat robot diam dan berjalan.
+Berdasarkan celah tersebut, penelitian ini mengimplementasikan sistem deteksi objek berbasis ROS 2 yang menjalankan *student* YOLO11 hasil KD dari *teacher* YOLO11n pada komputer *onboard* ROBOTIS OP3. *Student* memakai skala kustom yang lebih kecil daripada YOLO11n, yang dalam penelitian ini disebut skala t. Model hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised*, yaitu hanya dengan label himpunan data tanpa bimbingan *teacher*, agar pengaruh KD terpisah dari pengaruh ukuran model, serta dengan *teacher* sebagai acuan. Perbandingan mencakup akurasi pada himpunan data dan pada citra kamera OP3, latensi, FPS, serta penggunaan CPU dan RAM. Pengujian pada robot dilakukan saat robot diam dan berjalan.
 
 ## 1.2 Rumusan Masalah
 
 Berdasarkan latar belakang tersebut, rumusan masalah penelitian ini adalah sebagai berikut.
 
-1.  Bagaimana tingkat akurasi, berdasarkan nilai mAP, model YOLO11 skala t hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher* YOLO11n?
+1.  Bagaimana tingkat akurasi, berdasarkan nilai mAP, model *student* hasil KD hibrida dibandingkan dengan *student* berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher* YOLO11n?
 
 2.  Bagaimana kinerja ketiga model tersebut jika ditinjau dari nilai *precision*, *recall*, dan *F1-score*?
 
-3.  Berapa rata-rata latensi dan FPS yang dicapai model hasil KD dan *teacher* YOLO11n saat beroperasi secara *real-time* pada kondisi robot diam dan berjalan?
+3.  Berapa rata-rata latensi dan FPS ketiga model tersebut saat beroperasi secara *real-time* pada komputer *onboard* OP3 dalam kondisi robot diam dan berjalan?
 
-4.  Bagaimana tingkat efisiensi penggunaan CPU dan RAM model hasil KD dan *teacher* YOLO11n saat dijalankan secara penuh pada komputer *onboard* robot?
+4.  Bagaimana penggunaan CPU dan RAM ketiga model tersebut pada komputer *onboard* OP3?
 
 ## 1.3 Tujuan
 
 Untuk menjawab rumusan masalah tersebut, penelitian ini mengimplementasikan sistem deteksi objek berbasis ROS 2 yang menjalankan model YOLO11 skala t hasil KD pada robot humanoid ROBOTIS OP3. Tujuan penelitian ini adalah sebagai berikut.
 
-1.  Mengetahui tingkat akurasi berdasarkan nilai mAP model YOLO11 skala t hasil KD dibandingkan dengan model berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher* YOLO11n.
+1.  Mengetahui tingkat akurasi berdasarkan nilai mAP model *student* hasil KD hibrida dibandingkan dengan *student* berarsitektur sama yang dilatih secara *supervised* dan dengan *teacher* YOLO11n.
 
 2.  Mengetahui kinerja ketiga model tersebut berdasarkan nilai *precision*, *recall*, dan *F1-score*.
 
-3.  Mengukur rata-rata latensi dan FPS model hasil KD dan *teacher* YOLO11n saat beroperasi secara *real-time* pada kondisi robot diam dan berjalan.
+3.  Mengukur rata-rata latensi dan FPS ketiga model tersebut saat beroperasi secara *real-time* pada komputer *onboard* OP3 dalam kondisi robot diam dan berjalan.
 
-4.  Mengukur tingkat efisiensi penggunaan CPU dan RAM model hasil KD dan *teacher* YOLO11n saat dijalankan secara penuh pada komputer *onboard* robot.
+4.  Mengukur penggunaan CPU dan RAM ketiga model tersebut pada komputer *onboard* OP3.
 
 ## 1.4 Manfaat
 
@@ -58,23 +58,25 @@ Ruang lingkup penelitian ini dibatasi sebagai berikut.
 
 2.  Himpunan data yang digunakan adalah himpunan data Roboflow advance_vision_human versi 1 (Humanoid-Atom, 2026) dengan pembagian bagian latih, validasi, dan uji bawaan himpunan data tersebut.
 
-3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan, sedangkan *student* adalah YOLO11 skala t dengan faktor kedalaman 0,50 dan faktor lebar 0,125, yang berbeda dari YOLO11n standar.
+3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan. *Student* adalah YOLO11 berskala kustom dengan faktor kedalaman 0,50 dan faktor lebar 0,125 (810.649 parameter sebelum fusi Conv-BN), yang dalam penelitian ini disebut skala t. Skala ini bukan salah satu skala resmi YOLO11, yaitu n, s, m, l, dan x (Ultralytics, n.d.c), sehingga *student* berbeda dari YOLO11n standar.
 
-4.  Seluruh model dijalankan sebagai berkas .pt PyTorch dengan presisi titik mengambang 32 bit (FP32). Konversi ke ONNX atau OpenVINO serta kuantisasi, termasuk representasi bilangan bulat 8 bit (INT8), PTQ, dan QAT, tidak termasuk dalam penelitian ini.
+4.  Model hasil KD yang dimaksud pada rumusan masalah adalah *student* KD hibrida penuh. *Student* KD murni disertakan sebagai pembanding tambahan, sehingga ketiga model yang dibandingkan adalah KD hibrida, *supervised*, dan *teacher* YOLO11n.
 
-5.  Pelatihan model dilakukan di server laboratorium yang memakai GPU, sedangkan komputer *onboard* robot hanya menjalankan inferensi.
+5.  Seluruh model dijalankan sebagai berkas .pt PyTorch dengan presisi titik mengambang 32 bit (FP32). Konversi ke ONNX atau OpenVINO serta kuantisasi, termasuk representasi bilangan bulat 8 bit (INT8), PTQ, dan QAT, tidak termasuk dalam penelitian ini.
 
-6.  Unit ROBOTIS OP3 yang digunakan memakai komputer *onboard* Intel NUC dengan prosesor Intel Core i5-1240P (12 inti fisik dan 16 *thread* logis) dan kamera Logitech C920, berbeda dari spesifikasi produsen yang mencantumkan Intel Core i3 (ROBOTIS, n.d.a). Inferensi dijalankan pada CPU tanpa akselerator.
+6.  Pelatihan model dilakukan di server laboratorium yang memakai GPU, sedangkan komputer *onboard* robot hanya menjalankan inferensi.
 
-7.  Perangkat lunak robot memakai ROS 2 Jazzy pada sistem operasi Ubuntu 24.04.
+7.  Unit ROBOTIS OP3 yang digunakan memakai komputer *onboard* Intel NUC dengan prosesor Intel Core i5-1240P (12 inti fisik dan 16 *thread* logis) dan kamera Logitech C920, berbeda dari spesifikasi produsen yang mencantumkan Intel Core i3 (ROBOTIS, n.d.a). Inferensi dijalankan pada CPU tanpa akselerator.
 
-8.  Kondisi robot yang diuji adalah diam dan berjalan. Definisi operasional kedua kondisi dijelaskan pada Bab 3.
+8.  Perangkat lunak robot memakai ROS 2 Jazzy pada sistem operasi Ubuntu 24.04.
 
-9.  Ukuran sisi masukan model (imgsz) adalah 640 piksel. Pada jalur prediksi, *frame* kamera 640 × 480 piksel diubah dengan *letterbox* menjadi tensor 480 × 640 piksel.
+9.  Kondisi robot yang diuji adalah diam dan berjalan. Definisi operasional kedua kondisi dijelaskan pada Bab 3.
 
-10. Objek uji pada pengujian *runtime* ditempatkan statis. Pelacakan objek dijalankan pada *node* deteksi, tetapi akurasi pelacakan tidak termasuk tujuan penelitian.
+10. Ukuran sisi masukan model (imgsz) adalah 640 piksel. Pada jalur prediksi, *frame* kamera 640 × 480 piksel diubah dengan *letterbox* menjadi tensor 480 × 640 piksel.
 
-11. Pengujian akurasi pada citra kamera OP3 dilakukan secara *offline* pada set *frame* dari lingkungan laboratorium yang sama, sehingga hasilnya tidak mewakili generalisasi lintas adegan.
+11. Objek uji pada pengujian *runtime* ditempatkan statis. Pelacakan objek dijalankan pada *node* deteksi, tetapi akurasi pelacakan tidak termasuk tujuan penelitian.
+
+12. Pengujian akurasi pada citra kamera OP3 dilakukan secara *offline* pada set *frame* dari lingkungan laboratorium yang sama, sehingga hasilnya tidak mewakili generalisasi lintas adegan.
 
 ## 1.6 Sistematika Pembahasan
 

@@ -1,6 +1,6 @@
 # BAB 7 PENUTUP
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v21 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 7.1 Kesimpulan
 
@@ -10,9 +10,9 @@ Sistem deteksi objek berbasis ROS 2 Jazzy yang menjalankan *student* YOLO11 skal
 
 2.  Pada TEST, F1 KD hibrida penuh 0,9071, *supervised* 0,9121, dan *teacher* 0,9290 pada jalur validator; pada ambang *runtime* F1 KD hibrida dan *supervised* setara (0,9334 dan 0,9337), sedikit di bawah *teacher* (0,9354). *Precision* KD hibrida lebih rendah 0,0090 daripada *supervised* dengan *recall* yang sama. Pada Set Kamera 1, F1 KD hibrida 0,6146 berada di bawah *supervised* (0,6626) dan *teacher* (0,7651) karena deteksi palsu pada 21 dari 60 *frame* tanpa objek, sedangkan pada Set Kamera 2 F1 KD hibrida tertinggi (0,9950), tetapi turun menjadi 0,6711 pada konvensi rangka gawang utuh.
 
-3.  Latensi rata-rata KD hibrida 64,70 ms dengan 13,60 FPS saat diam dan 71,47 ms dengan 12,54 FPS saat berjalan, sedangkan *teacher* 96,24 ms dengan 9,88 FPS saat diam dan 95,85 ms dengan 9,87 FPS saat berjalan. Median latensi KD hibrida 50,46 dan 59,18 ms dibanding 77,76 dan 77,03 ms pada *teacher*, sedangkan P95 KD hibrida sekitar 20 ms di bawah *teacher*. Semua model melampaui 8 FPS.
+3.  Latensi rata-rata KD hibrida 64,70 ms dengan 13,60 FPS saat diam dan 71,47 ms dengan 12,54 FPS saat berjalan, sedangkan *teacher* 96,24 ms dengan 9,88 FPS saat diam dan 95,85 ms dengan 9,87 FPS saat berjalan. Median latensi KD hibrida 50,46 dan 59,18 ms dibanding 77,76 dan 77,03 ms pada *teacher*, sedangkan P95 KD hibrida sekitar 20 ms di bawah *teacher*. *Supervised* mencapai 73,12 ms dengan 12,14 FPS saat diam dan 70,80 ms dengan 12,64 FPS saat berjalan, sehingga kecepatan kedua *student* berdekatan dan urutannya berganti antarkondisi. Keunggulan kecepatan terhadap *teacher* karena itu berasal dari ukuran *student*, bukan dari KD. Semua model melampaui 8 FPS.
 
-4.  Penggunaan CPU proses KD hibrida dan *teacher* sekitar 1.300% satu CPU logis (81 sampai 84% dari 16 CPU logis) pada kedua kondisi, dan RSS KD hibrida 356 sampai 359 MiB dibanding 371 sampai 372 MiB pada *teacher*. Pada pengukuran ini, CPU dan RSS tidak membedakan efisiensi model secara jelas. *Replay offline* menunjukkan bahwa kombinasi pelacakan dan OpenBLAS menjadi faktor besar penggunaan CPU, tetapi jumlah *thread* pada *run* asli tidak terekam.
+4.  Penggunaan CPU proses ketiga model sekitar 1.300% satu CPU logis (81 sampai 84% dari 16 CPU logis) pada kedua kondisi. RSS KD hibrida dan *supervised* sama-sama 356 sampai 359 MiB, dibanding 371 sampai 372 MiB pada *teacher*. Pada pengukuran ini, CPU dan RSS tidak membedakan efisiensi model secara jelas. *Replay offline* menunjukkan bahwa kombinasi pelacakan dan OpenBLAS menjadi faktor besar penggunaan CPU, tetapi jumlah *thread* pada *run* asli tidak terekam.
 
 ## 7.2 Saran
 
