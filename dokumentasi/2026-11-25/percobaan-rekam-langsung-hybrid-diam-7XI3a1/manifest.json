@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-25",
+  "purpose": "Uji coba perekaman langsung keluaran deteksi, bukan rekaman desktop atau benchmark",
+  "model": "KD Hybrid full seed 1337",
+  "checkpoint": "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "topic": "/thesis/image_raw",
+  "condition": "diam menurut operator; status torque tidak diverifikasi",
+  "video": "preview_deteksi_langsung.mp4",
+  "video_sha256": "54e60312304cdd89750f4e0cdbe198edbc2e3383e043da47f3f57421ac9b73c1",
+  "recording_stats": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-25T20:44:45+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.016,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 11,
+    "first_processed_frame_sequence": 1,
+    "last_processed_frame_sequence": 134,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "resolution": "640x480",
+  "preview_threads": 4,
+  "preview_refresh_limit_fps": 5,
+  "notes": [
+    "Satu proses inferensi dan perekam memakai frame beranotasi yang sama.",
+    "Video 10 fps dengan frame berulang bukan berarti model memproses 10 frame baru setiap detik.",
+    "Frame screenshot menampilkan ball, gawang parsial, robot; tidak mengaudit semua frame."
+  ]
+}

@@ -95,3 +95,11 @@ Alasan *checkpoint* *supervised* *seed* 1337 dicek di repositori, lalu ditulis d
 ## Pembaruan v28 (25 November)
 
 Istilah Inggris kini dipakai, bercetak miring, untuk konsep yang padanan Indonesianya terdengar janggal (rincian pada baris v28 di atas dan `CATATAN_SUNTING_v28.md`). Penamaan di repositori, misalnya "jalur `model.val`" dan "jalur `model.predict`" pada D23, tidak diubah. Di naskah, keduanya kini disebut *validator path* dan *predict path*.
+
+## Dokumentasi preview dan video OP3 (25 November, malam)
+
+- Dibuat preview SSH-X dua mode dengan grafik, pilihan empat model, serta perekam langsung keluaran deteksi dalam package baru [`op3_fullscreen_preview`](../../ros2_packages/op3_fullscreen_preview/README.md). Promptnya ada di [`PROMPT_PREVIEW_DETEKSI_REKAM_LAYAR_SSH_X_OP3_2026-11-25.md`](../../prompt/PROMPT_PREVIEW_DETEKSI_REKAM_LAYAR_SSH_X_OP3_2026-11-25.md).
+- Video KD Hybrid 10 detik dalam kondisi [diam](percobaan-rekam-langsung-hybrid-diam-7XI3a1/README.md) dan [gait](video-hybrid-berjalan-siap-CzQtsf/README.md) direkam langsung dari preview beranotasi. Keduanya 640×480, 10 fps sebagai format video, dengan masing-masing 11 dan 10 frame berulang. Rekaman ini bukan benchmark dan tidak membuktikan akurasi.
+- Percobaan [rekam layar melalui SSH-X](percobaan-rekam-preview-kd-hybrid-diam-3eJGGJ/README.md) mengalami keterbatasan laju; hasil dan percobaan gagal dipertahankan dengan label yang jelas.
+- [Persiapan gait](persiapan-jalan-hybrid-terhenti-8MJIk8/README.md) sempat terhenti saat pengaman lama terpicu pada sekitar dua count. Guard baru memakai konversi count XM430 dan mempertahankan batas dua count; perhitungan diuji sintetis. Pada rekaman gait 10 detik perubahan pembacaan kepala maksimum dua count dan stop mendapat ack.
+- Pada [gait untuk perekaman manual laptop](gait-rekam-manual-fnkbDy/README.md), pengaman menghentikan gait setelah 19,7 detik karena pembacaan kepala mencapai tiga count. Video laptop tidak tersedia atau diverifikasi di robot. Semua status perangkat tersebut adalah snapshot sesi, bukan asumsi kesiapan saat berikutnya.

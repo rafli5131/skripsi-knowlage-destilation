@@ -1,0 +1,125 @@
+{
+  "purpose": "Dokumentasi rekaman layar preview deteksi; bukan benchmark atau evaluasi akurasi",
+  "recorded_start_local": "2026-11-25T20:36:37+07:00",
+  "condition": "diam menurut operator; status torque/servo tidak diverifikasi",
+  "model": "KD Hybrid full seed 1337",
+  "checkpoint": "runs/kd_hybrid/yolo11_tiny_hybrid_full_seed1337/weights/best.pt",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "camera_topic": "/thesis/image_raw",
+  "camera_resolution": "640x480",
+  "ui": "op3_fullscreen_preview, mode kamera saja, PyTorch threads 4, batas pembaruan preview 5 Hz",
+  "capture": "ffmpeg x11grab window 0x800006 via SSH-X, target 3 fps, timestamps variabel",
+  "derived_crop": "640x480 pada (230,44), diskalakan ke 1280x960; tidak menambah detail sumber",
+  "limitations": [
+    "Laju aktual rendah akibat SSH-X; bukan rekaman gerak yang mulus.",
+    "Keberadaan ketiga kelas diamati pada frame awal, tengah, akhir; tidak diaudit setiap frame.",
+    "Tidak ada pengukuran mAP atau evaluasi benchmark dari rekaman ini."
+  ],
+  "files": [
+    {
+      "file": "rekaman_preview_kamera_optimasi.mp4",
+      "bytes": 9601372,
+      "sha256": "8521b17167d79503d9b6937532b5787721aeeb1d7e47715777d170ee654854b3",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1100,
+            "height": 720,
+            "avg_frame_rate": "53/20",
+            "duration": "60.000000",
+            "nb_frames": "159"
+          }
+        ],
+        "format": {
+          "duration": "60.000000"
+        }
+      }
+    },
+    {
+      "file": "rekaman_preview_saja_1280x960.mp4",
+      "bytes": 6881288,
+      "sha256": "72ce5d3698f71fccf3363da4a1bb94e9aa1d9a023f42fb7d8846b452ab044b4b",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 960,
+            "avg_frame_rate": "53/20",
+            "duration": "60.000000",
+            "nb_frames": "159"
+          }
+        ],
+        "format": {
+          "duration": "60.000000"
+        }
+      }
+    },
+    {
+      "file": "klip_preview_saja_10_detik.mp4",
+      "bytes": 993717,
+      "sha256": "eb7fb42fabc523ac98adc1b61fc08c391d6c3dca958b2fbe276942093aba7155",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 960,
+            "avg_frame_rate": "3/1",
+            "duration": "10.000000",
+            "nb_frames": "30"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "file": "screenshot_preview_saja.png",
+      "bytes": 1542341,
+      "sha256": "00d39c8980d8dfb8af7245d4c7b4a90f61533a01b9fa196dcd4d56eb91a5195b"
+    },
+    {
+      "file": "rekaman_preview.mp4",
+      "bytes": 1259787,
+      "sha256": "9ed0261fec0e5c07a5b6cc4bed608d4e1dd11cb3e31ebe818cbe7feaf7dc9159",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1100,
+            "height": 720,
+            "avg_frame_rate": "10/1",
+            "duration": "60.000000",
+            "nb_frames": "600"
+          }
+        ],
+        "format": {
+          "duration": "60.000000"
+        }
+      }
+    },
+    {
+      "file": "rekaman_preview_kamera_ulang.mp4",
+      "bytes": 489777,
+      "sha256": "326f64e22a5f12f3b93ef96ed578d998b1119d319b701fa845b7cfc2c498b94a",
+      "ffprobe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1100,
+            "height": 720,
+            "avg_frame_rate": "4/39",
+            "duration": "58.500000",
+            "nb_frames": "6"
+          }
+        ],
+        "format": {
+          "duration": "58.500000"
+        }
+      }
+    }
+  ]
+}

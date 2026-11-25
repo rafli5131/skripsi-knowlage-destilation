@@ -1,0 +1,3 @@
+# Pengaman gait untuk perekaman manual
+
+Package ini memakai pengaman count kepala bersama `op3_walk_video_guard`; tidak memerintah posisi kepala atau merekam video. Operator harus siap mendampingi, preview harus hidup, dan hanya jalankan setelah operator menyetujui gait. Guard memeriksa modul, telemetry dan kamera, lalu menghentikan gait pada durasi yang diminta (maksimum 63 detik), bila kepala melewati dua count, atau bila telemetry, kamera, atau preview terputus. Laporan dan sampel telemetry disimpan di folder baru. Stop software dan batas encoder tidak menjamin robot atau kamera sepenuhnya tidak bergerak.

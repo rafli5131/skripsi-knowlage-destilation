@@ -1,0 +1,103 @@
+{
+  "description": "Video preview beranotasi KD Hybrid saat gait; bukan screen record desktop atau benchmark",
+  "model": "KD Hybrid full seed 1337",
+  "checkpoint_sha256": "cd6bcb8bd9316930a14f4f1c5f6ee408e8dd64dddb52fb3c1e8773cde310b363",
+  "topic": "/thesis/image_raw",
+  "condition": "gait melangkah di tempat; area dan kesiapan dikonfirmasi operator",
+  "gait": {
+    "started_utc": "2026-11-25T14:10:24.221134+00:00",
+    "limit_counts": 2,
+    "preview_pid": 14821,
+    "record_dir": "/home/humanoid/bre_skripsi/dokumentasi/2026-11-25/video-hybrid-berjalan-siap-CzQtsf/video",
+    "head_commanded": false,
+    "gait_start_sent": true,
+    "modules_before": {
+      "head_pan": "none",
+      "head_tilt": "none",
+      "l_hip_yaw": "walking_module",
+      "l_hip_roll": "walking_module",
+      "l_hip_pitch": "walking_module",
+      "l_knee": "walking_module",
+      "l_ank_pitch": "walking_module",
+      "l_ank_roll": "walking_module",
+      "r_hip_yaw": "walking_module",
+      "r_hip_roll": "walking_module",
+      "r_hip_pitch": "walking_module",
+      "r_knee": "walking_module",
+      "r_ank_pitch": "walking_module",
+      "r_ank_roll": "walking_module"
+    },
+    "gait_start_command_utc": "2026-11-25T14:10:24.482659+00:00",
+    "gait_start_ack_utc": "2026-11-25T14:10:24.488570+00:00",
+    "record_trigger_utc": "2026-11-25T14:10:24.488617+00:00",
+    "recording_stats": {
+      "status": "completed",
+      "error": null,
+      "start_local": "2026-11-25T21:10:24+07:00",
+      "requested_duration_seconds": 10.0,
+      "elapsed_seconds_including_finalize": 10.018,
+      "encoded_frames": 100,
+      "configured_fps": 10.0,
+      "nominal_video_seconds": 10.0,
+      "repeated_previous_inference_frame": 10,
+      "first_processed_frame_sequence": 1940,
+      "last_processed_frame_sequence": 2062,
+      "type": "annotated_preview_output_not_desktop_screen_record"
+    },
+    "status": "completed",
+    "stop_command_utc": "2026-11-25T14:10:34.590915+00:00",
+    "stop_ack_utc": "2026-11-25T14:10:34.592816+00:00",
+    "max_head_delta_counts": 2,
+    "head_violation": false,
+    "finished_utc": "2026-11-25T14:10:34.592850+00:00"
+  },
+  "recording": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-25T21:10:24+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.018,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 10,
+    "first_processed_frame_sequence": 1940,
+    "last_processed_frame_sequence": 2062,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "post_stop": {
+    "samples": 313,
+    "head_last_count": {
+      "head_pan": 2191,
+      "head_tilt": 1793
+    },
+    "head_range_counts": {
+      "head_pan": 2,
+      "head_tilt": 1
+    },
+    "leg_range_rad": {
+      "l_hip_yaw": 0.00153,
+      "l_hip_roll": 0.00153,
+      "l_hip_pitch": 0.00153,
+      "l_knee": 0.00307,
+      "l_ank_pitch": 0.00153,
+      "l_ank_roll": 0.00153,
+      "r_hip_yaw": 0.00153,
+      "r_hip_roll": 0.00153,
+      "r_hip_pitch": 0.00153,
+      "r_knee": 0.00153,
+      "r_ank_pitch": 0.00153,
+      "r_ank_roll": 0.00153
+    },
+    "status": "read_only_completed"
+  },
+  "leg_sample_ranges_rad": {
+    "l_hip_pitch_rad": 0.2807,
+    "l_knee_rad": 0.6108,
+    "r_hip_pitch_rad": 0.2701,
+    "r_knee_rad": 0.5844
+  },
+  "video_sha256": "8b3b73cc72c7a2e0046f77b0466899f387f278f9f809d1a4e581c4c7a30d59d0",
+  "video_resolution": "640x480",
+  "evidence": "ball, gawang parsial, robot tampak pada screenshot 2, 5, dan 8 detik; tidak semua frame diaudit"
+}
