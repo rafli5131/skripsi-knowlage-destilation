@@ -713,18 +713,18 @@ Baris 61 memasang fungsi ini sebagai metode *loss* DistillationModel sebelum pel
 
 **Tabel 5.2** Parameter *node* deteksi pada pengujian
 
-| **Parameter**                            | **Nilai**                       | **Kegunaan**                       |
-|------------------------------------------|---------------------------------|------------------------------------|
-| model_variant                            | teacher, hybrid, supervised, kd | Memilih *checkpoint* terdaftar     |
-| input_topic                              | /thesis/image_raw               | *Topic* citra kamera               |
-| imgsz                                    | 640                             | Ukuran sisi masukan model          |
-| confidence_threshold                     | 0,25                            | Ambang *confidence* *runtime*      |
-| iou_threshold                            | 0,45                            | Ambang IoU NMS *runtime*           |
-| enable_tracking, tracker_config          | true, botsort.yaml              | Asosiasi ID BoT-SORT               |
-| torch_num_threads, torch_interop_threads | 4, 2                            | Jumlah *thread* PyTorch            |
-| warmup_frames, duration_s                | 30, 60                          | *Warm-up* dan *measurement window* |
-| publish_debug_image                      | true                            | Menerbitkan *preview* beranotasi   |
-| experiment_condition                     | servo_idle atau walking         | Label kondisi dari operator        |
+| **Parameter**                            | **Nilai**                       | **Kegunaan**                             |
+|------------------------------------------|---------------------------------|------------------------------------------|
+| model_variant                            | teacher, hybrid, supervised, kd | Memilih *checkpoint* terdaftar           |
+| input_topic                              | /thesis/image_raw               | *Topic* citra kamera                     |
+| imgsz                                    | 640                             | Ukuran sisi masukan model                |
+| confidence_threshold                     | 0,25                            | Ambang *confidence* *runtime*            |
+| iou_threshold                            | 0,45                            | Ambang IoU NMS *runtime*                 |
+| enable_tracking, tracker_config          | true, botsort.yaml              | Asosiasi ID BoT-SORT                     |
+| torch_num_threads, torch_interop_threads | 4, 2                            | Jumlah *thread* PyTorch                  |
+| warmup_frames, duration_s                | 30, 60                          | *Warm-up* dan *measurement window*       |
+| publish_debug_image                      | true                            | Melakukan *publish* *preview* beranotasi |
+| experiment_condition                     | servo_idle atau walking         | Label kondisi dari operator              |
 
 Pemuatan model saat *node* dimulai disajikan pada Kode Program 5.4. Bagian ini dijalankan sekali setelah keberadaan *checkpoint* dan pemetaan kelas pada berkas konfigurasi data diperiksa.
 

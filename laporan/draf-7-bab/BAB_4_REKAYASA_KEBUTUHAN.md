@@ -23,7 +23,7 @@ Pemangku kepentingan (*stakeholder*) adalah pihak yang memanfaatkan atau berkepe
 | Tim ROBOTIIK Divisi Humanoid | Pemangku kepentingan           | Memakai hasil deteksi bola, gawang, dan robot serta data kinerja sebagai dasar pemilihan model untuk OP3                                                |
 | Peneliti                     | Pemangku kepentingan dan aktor | Melatih model, bertindak sebagai operator saat pengujian, dan menganalisis hasil                                                                        |
 | Operator robot               | Aktor                          | Menata objek uji, menyalakan robot dan kamera, menjalankan *node* deteksi dengan parameter yang ditetapkan, serta menetapkan kondisi diam atau berjalan |
-| *Node* kamera USB            | Aktor (sistem eksternal)       | Menerbitkan citra kamera Logitech C920 pada *topic* ROS 2                                                                                               |
+| *Node* kamera USB            | Aktor (sistem eksternal)       | Melakukan *publish* citra kamera Logitech C920 pada *topic* ROS 2                                                                                       |
 | op3_manager                  | Aktor (sistem eksternal)       | Menjalankan *gait* pada kondisi berjalan                                                                                                                |
 | Penampil *preview*           | Aktor (sistem eksternal)       | Menampilkan citra beranotasi di laptop melalui SSH                                                                                                      |
 
