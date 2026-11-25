@@ -1,6 +1,6 @@
 # LAMPIRAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v29 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v30 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## LAMPIRAN A KONFIGURASI PELATIHAN
 
@@ -102,14 +102,14 @@ Lampiran ini memuat hasil setiap *run* pengujian *runtime* pada Subbab 6.4 dan S
 
 <table>
 <colgroup>
-<col style="width: 13%" />
+<col style="width: 12%" />
 <col style="width: 10%" />
-<col style="width: 11%" />
+<col style="width: 14%" />
 <col style="width: 10%" />
 <col style="width: 10%" />
 <col style="width: 9%" />
 <col style="width: 10%" />
-<col style="width: 12%" />
+<col style="width: 11%" />
 <col style="width: 10%" />
 </colgroup>
 <thead>

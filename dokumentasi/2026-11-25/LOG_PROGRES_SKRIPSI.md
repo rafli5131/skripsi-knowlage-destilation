@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v29** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v30** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v29 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v29) |
+| Naskah DOCX dan PDF v1 sampai v30 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v30) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v29 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v29.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v29) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v30 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v30.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v30) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -37,8 +37,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v29** (25 November 2026, 116 halam
 | v27 | 25 Nov | Gambar 5.7 dicerminkan atas permintaan penulis. Tiang yang berada di tengah medan pandang kini tiang kiri gawang, dan badan gawang memanjang ke kanan. Bola tetap di kiri dan robot lain tetap di kanan. Subbab 5.1.1.3 menyebut "tiang kiri gawang". |
 | v28 | 25 Nov | Atas permintaan penulis, padanan Indonesia yang janggal diganti istilah Inggris bercetak miring: matriks kebingungan menjadi *confusion matrix*, galat menjadi *error* (*error frame*, *error bar*), porta menjadi *port*, menerbitkan/berlangganan menjadi *publish*/*subscribe*, kotak kebenaran menjadi kotak *ground truth*, sapuan menjadi *sweep*, subpengendali menjadi *sub-controller*, cap waktu menjadi *timestamp*, jendela ukur menjadi *measurement window*, titik prediksi menjadi *anchor point*, jalur validator/prediksi menjadi *validator path*/*predict path*, proyektor menjadi *projector*, perangkat tepi menjadi *edge device*, fusi Conv-BN menjadi *Conv-BN fusion*, deteksi palsu menjadi *false detection*, ulangan menjadi *repetition*, dan keyakinan menjadi *confidence*. Daftar Istilah ditambah 15 entri (71 entri), dan label empat grafik disesuaikan. Halaman tetap 116. |
 | v29 | 25 Nov | Daftar Istilah dan Singkatan dipindah dari halaman awal ke Lampiran E (Tabel E.1, 71 entri), atas permintaan penulis. Halaman awal berkurang dua halaman; jumlah halaman PDF tetap 116. Skrip konversi Markdown disesuaikan agar mengenali Lampiran E. |
+| v30 | 25 Nov | Tabel C.1 (hasil *runtime* setiap *run*, Lampiran C, halaman 98): lebar kolom dan margin sel diatur ulang agar judul kolom *Repetition* tidak terpotong. Isi tabel tetap 24 baris (4 model x 2 kondisi x 3 *repetition*); jumlah halaman PDF tetap 116. |
 
-## Isi pokok naskah v29
+## Isi pokok naskah v30
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
