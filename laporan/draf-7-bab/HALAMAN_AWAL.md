@@ -1,6 +1,6 @@
 # HALAMAN AWAL
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v29 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 > Data pribadi (nama, NIM, NIK, email, dan nama pihak dalam prakata) sengaja tidak dicantumkan di repositori publik. Bagian pengesahan, pernyataan, dan prakata hanya diringkas isinya; teks lengkapnya ada di naskah DOCX/PDF.
 
@@ -33,78 +33,3 @@ Kata kunci: *knowledge distillation*, deteksi objek, YOLO11, robot humanoid, ROB
 The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so its detector for the ball, goal, and robots must be lightweight without losing much accuracy. This study aims to implement knowledge distillation (KD) to train a YOLO11 student with about one third of the parameters of a YOLO11n teacher, and to deploy it as a ROS 2 node on the OP3. Hybrid KD, which combines the labelled loss with feature, box, and class distillation, is compared with a supervised student of the same architecture, a pure KD student, and the teacher. The three student variants are trained with three random seeds and selected on the validation set only, then tested on the test set, on two sets of OP3 camera frames, and in 24 live runs with the robot idle and walking. On the test set, hybrid KD reaches an mAP50-95, an accuracy measure that also rewards precise boxes, of 0.7469, higher than the supervised student on all three seed pairs and equal to 95.8% of the teacher. The F1 score, combining precision and recall, is equal for both students at the thresholds used on the robot. On OP3 camera frames this advantage is not consistent, because hybrid KD produces false detections on one third of the empty frames in the first set. On the robot, the mean latency of hybrid KD is 64.70 ms when idle and 71.47 ms when walking, against about 96 ms for the teacher, at 13.60 and 12.54 FPS against about 9.9 FPS. All models meet the 8 FPS requirement, and CPU and memory usage barely differ. Hybrid KD therefore improves student accuracy on the dataset, but this gain is not yet consistent on the robot camera frames. The speed advantage over the teacher comes from the smaller student, not from KD.
 
 *Keywords: knowledge distillation, object detection, YOLO11, humanoid robot, ROBOTIS OP3, ROS 2*
-
-## Daftar Istilah dan Singkatan
-
-| **Istilah atau singkatan** | **Keterangan**                                                                                |
-|----------------------------|-----------------------------------------------------------------------------------------------|
-| *Anchor point*             | Setiap posisi pada peta keluaran detektor tempat model membuat prediksi                       |
-| AP                         | *Average precision*, luas di bawah kurva *precision*-*recall* untuk satu kelas                |
-| BCE                        | *Binary cross-entropy*, *loss* untuk keputusan ada atau tidaknya satu kelas                   |
-| BoT-SORT                   | Algoritme pelacakan objek yang dipakai *node* deteksi untuk memberi ID                        |
-| *Checkpoint*               | Berkas bobot model hasil pelatihan                                                            |
-| CNN                        | *Convolutional neural network*, jaringan saraf konvolusional                                  |
-| *Confidence*               | Skor keyakinan model terhadap satu deteksi                                                    |
-| *Confusion matrix*         | Tabel yang memasangkan kelas label dengan kelas prediksi model                                |
-| CPU                        | *Central processing unit*                                                                     |
-| CSV                        | *Comma-separated values*, format berkas teks berbentuk tabel                                  |
-| DDS                        | *Data Distribution Service*, standar komunikasi yang mendasari ROS 2                          |
-| DFL                        | *Distribution focal loss*, *loss* regresi kotak berbentuk distribusi pada YOLO11              |
-| *Edge device*              | Perangkat berdaya komputasi terbatas tempat model dijalankan secara lokal                     |
-| *Epoch*                    | Satu putaran pelatihan atas seluruh data latih                                                |
-| *Error bar*                | Garis pada grafik yang menunjukkan sebaran nilai, di sini simpangan baku                      |
-| *Error frame*              | *Frame* yang gagal diproses oleh *node* deteksi                                               |
-| F1                         | *F1-score*, rata-rata harmonik *precision* dan *recall*                                       |
-| FN                         | *False negative*, objek berlabel yang tidak terdeteksi                                        |
-| FP                         | *False positive*, deteksi yang tidak memiliki pasangan label                                  |
-| FP32                       | Bilangan titik mengambang 32 bit                                                              |
-| FPS                        | *Frame per second*, jumlah *frame* yang diproses setiap detik                                 |
-| *Frame*                    | Satu citra dari aliran kamera                                                                 |
-| GFLOPs                     | Miliar operasi titik mengambang untuk satu kali inferensi                                     |
-| GMC                        | *Global motion compensation*, kompensasi gerak kamera pada pelacak                            |
-| GPU                        | *Graphics processing unit*                                                                    |
-| *Ground truth*             | Kotak dan kelas acuan dari label himpunan data                                                |
-| ID                         | Nomor identitas objek yang diberikan pelacak                                                  |
-| IDF1                       | *ID F1 score*, metrik pelacakan yang menilai konsistensi identitas objek                      |
-| INT8                       | Bilangan bulat 8 bit                                                                          |
-| IoU                        | *Intersection over union*, rasio irisan dan gabungan dua kotak                                |
-| KD                         | *Knowledge distillation*                                                                      |
-| KD hibrida                 | KD yang menggabungkan *loss* berlabel dengan distilasi fitur, kotak, dan kelas                |
-| KD murni                   | KD yang hanya memakai keluaran *teacher* tanpa *loss* berlabel                                |
-| KF                         | Kebutuhan fungsional                                                                          |
-| KL                         | Kullback-Leibler, ukuran perbedaan dua distribusi peluang                                     |
-| KNF                        | Kebutuhan nonfungsional                                                                       |
-| *Letterbox*                | Penskalaan citra dengan rasio tetap dan penambahan *padding*                                  |
-| mAP                        | *Mean average precision*, rata-rata AP seluruh kelas                                          |
-| mAP50                      | mAP pada ambang IoU 0,50                                                                      |
-| mAP50-95                   | Rata-rata mAP pada ambang IoU 0,50 sampai 0,95                                                |
-| *Measurement window*       | Rentang waktu pengukuran *runtime* setelah *warm-up*                                          |
-| MOTA                       | *Multiple object tracking accuracy*, metrik akurasi pelacakan banyak objek                    |
-| NMS                        | *Non-maximum suppression*, penghapusan kotak yang tumpang tindih                              |
-| ONNX                       | *Open Neural Network Exchange*, format pertukaran model jaringan saraf                        |
-| OP3                        | ROBOTIS OP3, robot humanoid yang dipakai dalam penelitian ini                                 |
-| P95                        | Persentil ke-95                                                                               |
-| *Predict path*             | Jalur evaluasi melalui fungsi *predict* Ultralytics, sama dengan jalur *runtime* robot        |
-| *Projector*                | Lapisan yang menyamakan jumlah kanal fitur *student* dengan fitur *teacher*                   |
-| PTQ                        | *Post-training quantization*, kuantisasi sesudah pelatihan                                    |
-| *Publish*                  | Mengirim pesan ROS 2 ke suatu *topic*                                                         |
-| QAT                        | *Quantization-aware training*, pelatihan yang memperhitungkan kuantisasi                      |
-| QoS                        | *Quality of Service*, pengaturan cara pesan ROS 2 dikirim                                     |
-| *Repetition*               | Pengulangan *run* dengan model dan kondisi yang sama                                          |
-| *Replay*                   | Pemutaran ulang *frame* terekam secara *offline*                                              |
-| ROS 2                      | *Robot Operating System 2*                                                                    |
-| RSS                        | *Resident set size*, memori fisik yang dipakai proses                                         |
-| *Run*                      | Satu kali pengujian *runtime* selama *measurement window*                                     |
-| SD                         | Simpangan baku                                                                                |
-| *Seed*                     | Nilai awal pembangkit bilangan acak semu yang menentukan deret bilangan acak selama pelatihan |
-| SHA-256                    | Fungsi *hash* 256 bit yang dipakai sebagai sidik jari berkas                                  |
-| SSH                        | *Secure Shell*                                                                                |
-| *Student*                  | Model kecil yang dilatih                                                                      |
-| *Sub-controller*           | Pengendali tingkat bawah yang meneruskan perintah ke *servo*, yaitu OpenCR                    |
-| *Subscribe*                | Menerima pesan ROS 2 dari suatu *topic*                                                       |
-| *Teacher*                  | Model besar yang menjadi acuan dalam KD                                                       |
-| TEST, TRAIN, VAL           | Bagian uji, latih, dan validasi himpunan data                                                 |
-| *Timestamp*                | Catatan waktu saat suatu *frame* diambil atau diproses                                        |
-| TP                         | *True positive*, deteksi yang cocok dengan label                                              |
-| *Validator path*           | Jalur evaluasi melalui fungsi *val* Ultralytics                                               |
-| YOLO                       | *You Only Look Once*, keluarga detektor objek satu tahap                                      |

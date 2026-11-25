@@ -71,16 +71,17 @@ a, b = h1[7], h1[8]
 assert "DAFTAR REFERENSI" in L[a]
 (out / "DAFTAR_REFERENSI.md").write_text("# DAFTAR REFERENSI\n\n" + KEPALA.format(v=versi) + bersih(L[a + 1:b]), encoding="utf-8")
 
-# Lampiran A-D
+# Lampiran A dan seterusnya (sejak naskah v29, Lampiran E berisi Daftar Istilah dan Singkatan)
 bagian = []
 for k, i in enumerate(h1[8:]):
     j = h1[8 + k + 1] if 8 + k + 1 < len(h1) else len(L)
-    huruf = "ABCD"[k]
+    huruf = "ABCDEFGHIJ"[k]
     judul = L[i][2:].strip()
     bagian.append(f"# LAMPIRAN {huruf} {judul}\n\n" + bersih(nomori(L[i + 1:j], huruf)))
 (out / "LAMPIRAN.md").write_text("# LAMPIRAN\n\n" + KEPALA.format(v=versi) + "\n".join(b.replace("# LAMPIRAN", "## LAMPIRAN", 1).replace("\n## ", "\n### ").replace("\n### LAMPIRAN", "\n## LAMPIRAN") for b in bagian), encoding="utf-8")
 
-# Halaman awal: abstrak, abstract, dan daftar istilah utuh; pengesahan, pernyataan, dan prakata hanya diringkas.
+# Halaman awal: abstrak dan abstract utuh; pengesahan, pernyataan, dan prakata hanya diringkas.
+# Daftar istilah ada di halaman awal hanya pada naskah sebelum v29; sejak v29 daftar itu menjadi Lampiran E.
 # Data pribadi (nama, NIM, NIK, email, nama pihak di prakata) sengaja tidak disalin karena repositori ini publik.
 awal = L[: h1[0]]
 
@@ -93,7 +94,8 @@ def blok(nama, akhir):
 
 abs_id = blok("ABSTRAK", lambda l: l.strip() == "ABSTRACT")[2:]        # buang baris nama penulis dan pembimbing
 abs_en = blok("ABSTRACT", lambda l: "DAFTAR ISI" in l)[2:]
-istilah = "\n\n".join(blok("DAFTAR ISTILAH DAN SINGKATAN", lambda l: False))
+ada_istilah = any(l.strip().endswith("DAFTAR ISTILAH DAN SINGKATAN") for l in awal)
+istilah = "\n\n".join(blok("DAFTAR ISTILAH DAN SINGKATAN", lambda l: False)) if ada_istilah else ""
 judul = [l for l in awal if l.startswith("IMPLEMENTASI ")][0]
 teks = ("# HALAMAN AWAL\n\n" + KEPALA.format(v=versi)
         + "> Data pribadi (nama, NIM, NIK, email, dan nama pihak dalam prakata) sengaja tidak dicantumkan di repositori "
@@ -116,7 +118,7 @@ teks = ("# HALAMAN AWAL\n\n" + KEPALA.format(v=versi)
           "laboratorium. Nama pihak tidak disalin.\n"
           "- Penutup berisi harapan atas kritik dan saran dari dosen penguji dan pembaca.\n\n"
         + "## Abstrak\n\n" + "\n\n".join(abs_id) + "\n\n"
-        + "## Abstract\n\n" + "\n\n".join(abs_en) + "\n\n"
-        + "## Daftar Istilah dan Singkatan\n\n" + istilah + "\n")
+        + "## Abstract\n\n" + "\n\n".join(abs_en) + "\n"
+        + ("\n## Daftar Istilah dan Singkatan\n\n" + istilah + "\n" if ada_istilah else ""))
 (out / "HALAMAN_AWAL.md").write_text(teks, encoding="utf-8")
 print("selesai")

@@ -1,6 +1,6 @@
 # LAMPIRAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v29 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## LAMPIRAN A KONFIGURASI PELATIHAN
 
@@ -417,3 +417,82 @@ Lampiran ini memuat akurasi setiap *checkpoint* pada 592 citra TEST yang diringk
 | KD murni          | 42         | 0,9481    | 0,6744       | 0,7451          | 0,9613       | 0,8395 |
 | KD murni          | 1337       | 0,9403    | 0,6531       | 0,7404          | 0,9632       | 0,8372 |
 | KD murni          | 2025       | 0,9455    | 0,6616       | 0,7787          | 0,9648       | 0,8618 |
+
+## LAMPIRAN E DAFTAR ISTILAH DAN SINGKATAN
+
+Lampiran ini memuat istilah dan singkatan yang dipakai dalam naskah beserta keterangannya, diurutkan menurut abjad.
+
+Tabel E.1 Daftar istilah dan singkatan
+
+| **Istilah atau singkatan** | **Keterangan**                                                                                |
+|----------------------------|-----------------------------------------------------------------------------------------------|
+| *Anchor point*             | Setiap posisi pada peta keluaran detektor tempat model membuat prediksi                       |
+| AP                         | *Average precision*, luas di bawah kurva *precision*-*recall* untuk satu kelas                |
+| BCE                        | *Binary cross-entropy*, *loss* untuk keputusan ada atau tidaknya satu kelas                   |
+| BoT-SORT                   | Algoritme pelacakan objek yang dipakai *node* deteksi untuk memberi ID                        |
+| *Checkpoint*               | Berkas bobot model hasil pelatihan                                                            |
+| CNN                        | *Convolutional neural network*, jaringan saraf konvolusional                                  |
+| *Confidence*               | Skor keyakinan model terhadap satu deteksi                                                    |
+| *Confusion matrix*         | Tabel yang memasangkan kelas label dengan kelas prediksi model                                |
+| CPU                        | *Central processing unit*                                                                     |
+| CSV                        | *Comma-separated values*, format berkas teks berbentuk tabel                                  |
+| DDS                        | *Data Distribution Service*, standar komunikasi yang mendasari ROS 2                          |
+| DFL                        | *Distribution focal loss*, *loss* regresi kotak berbentuk distribusi pada YOLO11              |
+| *Edge device*              | Perangkat berdaya komputasi terbatas tempat model dijalankan secara lokal                     |
+| *Epoch*                    | Satu putaran pelatihan atas seluruh data latih                                                |
+| *Error bar*                | Garis pada grafik yang menunjukkan sebaran nilai, di sini simpangan baku                      |
+| *Error frame*              | *Frame* yang gagal diproses oleh *node* deteksi                                               |
+| F1                         | *F1-score*, rata-rata harmonik *precision* dan *recall*                                       |
+| FN                         | *False negative*, objek berlabel yang tidak terdeteksi                                        |
+| FP                         | *False positive*, deteksi yang tidak memiliki pasangan label                                  |
+| FP32                       | Bilangan titik mengambang 32 bit                                                              |
+| FPS                        | *Frame per second*, jumlah *frame* yang diproses setiap detik                                 |
+| *Frame*                    | Satu citra dari aliran kamera                                                                 |
+| GFLOPs                     | Miliar operasi titik mengambang untuk satu kali inferensi                                     |
+| GMC                        | *Global motion compensation*, kompensasi gerak kamera pada pelacak                            |
+| GPU                        | *Graphics processing unit*                                                                    |
+| *Ground truth*             | Kotak dan kelas acuan dari label himpunan data                                                |
+| ID                         | Nomor identitas objek yang diberikan pelacak                                                  |
+| IDF1                       | *ID F1 score*, metrik pelacakan yang menilai konsistensi identitas objek                      |
+| INT8                       | Bilangan bulat 8 bit                                                                          |
+| IoU                        | *Intersection over union*, rasio irisan dan gabungan dua kotak                                |
+| KD                         | *Knowledge distillation*                                                                      |
+| KD hibrida                 | KD yang menggabungkan *loss* berlabel dengan distilasi fitur, kotak, dan kelas                |
+| KD murni                   | KD yang hanya memakai keluaran *teacher* tanpa *loss* berlabel                                |
+| KF                         | Kebutuhan fungsional                                                                          |
+| KL                         | Kullback-Leibler, ukuran perbedaan dua distribusi peluang                                     |
+| KNF                        | Kebutuhan nonfungsional                                                                       |
+| *Letterbox*                | Penskalaan citra dengan rasio tetap dan penambahan *padding*                                  |
+| mAP                        | *Mean average precision*, rata-rata AP seluruh kelas                                          |
+| mAP50                      | mAP pada ambang IoU 0,50                                                                      |
+| mAP50-95                   | Rata-rata mAP pada ambang IoU 0,50 sampai 0,95                                                |
+| *Measurement window*       | Rentang waktu pengukuran *runtime* setelah *warm-up*                                          |
+| MOTA                       | *Multiple object tracking accuracy*, metrik akurasi pelacakan banyak objek                    |
+| NMS                        | *Non-maximum suppression*, penghapusan kotak yang tumpang tindih                              |
+| ONNX                       | *Open Neural Network Exchange*, format pertukaran model jaringan saraf                        |
+| OP3                        | ROBOTIS OP3, robot humanoid yang dipakai dalam penelitian ini                                 |
+| P95                        | Persentil ke-95                                                                               |
+| *Predict path*             | Jalur evaluasi melalui fungsi *predict* Ultralytics, sama dengan jalur *runtime* robot        |
+| *Projector*                | Lapisan yang menyamakan jumlah kanal fitur *student* dengan fitur *teacher*                   |
+| PTQ                        | *Post-training quantization*, kuantisasi sesudah pelatihan                                    |
+| *Publish*                  | Mengirim pesan ROS 2 ke suatu *topic*                                                         |
+| QAT                        | *Quantization-aware training*, pelatihan yang memperhitungkan kuantisasi                      |
+| QoS                        | *Quality of Service*, pengaturan cara pesan ROS 2 dikirim                                     |
+| *Repetition*               | Pengulangan *run* dengan model dan kondisi yang sama                                          |
+| *Replay*                   | Pemutaran ulang *frame* terekam secara *offline*                                              |
+| ROS 2                      | *Robot Operating System 2*                                                                    |
+| RSS                        | *Resident set size*, memori fisik yang dipakai proses                                         |
+| *Run*                      | Satu kali pengujian *runtime* selama *measurement window*                                     |
+| SD                         | Simpangan baku                                                                                |
+| *Seed*                     | Nilai awal pembangkit bilangan acak semu yang menentukan deret bilangan acak selama pelatihan |
+| SHA-256                    | Fungsi *hash* 256 bit yang dipakai sebagai sidik jari berkas                                  |
+| SSH                        | *Secure Shell*                                                                                |
+| *Student*                  | Model kecil yang dilatih                                                                      |
+| *Sub-controller*           | Pengendali tingkat bawah yang meneruskan perintah ke *servo*, yaitu OpenCR                    |
+| *Subscribe*                | Menerima pesan ROS 2 dari suatu *topic*                                                       |
+| *Teacher*                  | Model besar yang menjadi acuan dalam KD                                                       |
+| TEST, TRAIN, VAL           | Bagian uji, latih, dan validasi himpunan data                                                 |
+| *Timestamp*                | Catatan waktu saat suatu *frame* diambil atau diproses                                        |
+| TP                         | *True positive*, deteksi yang cocok dengan label                                              |
+| *Validator path*           | Jalur evaluasi melalui fungsi *val* Ultralytics                                               |
+| YOLO                       | *You Only Look Once*, keluarga detektor objek satu tahap                                      |
