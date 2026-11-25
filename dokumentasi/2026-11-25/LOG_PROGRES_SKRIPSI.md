@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v27** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v28** (25 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v27 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v27) |
+| Naskah DOCX dan PDF v1 sampai v28 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v28) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v27 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v27.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v27) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v28 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v28.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v28) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -35,8 +35,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v27** (25 November 2026, 116 halam
 | v25 | 25 Nov | Hasil cek KBBI VI Daring diterapkan: "port" menjadi "porta" (4 kali), "variansnya" menjadi "variansinya", "skala kustom" dan "berskala kustom" menjadi "skala khusus" dan "berskala khusus". Nama lembaga diseragamkan menjadi ROBOTIIK di manfaat penelitian dan tabel pemangku kepentingan Bab 4. Halaman tetap 116. |
 | v26 | 25 Nov | Gambar 5.7 digambar ulang atas permintaan penulis. Gawang dibuat besar, dan sumbu medan pandang kamera mengarah ke salah satu tiang sehingga gawang terlihat sebagian dengan tiang tersebut di tengah. Bola berada di sisi kiri dan robot lain di sisi kanan, sesuai foto 3 November (Gambar 5.16). Subbab 5.1.1.3 ditambah dua kalimat yang menjelaskan susunan tersebut. |
 | v27 | 25 Nov | Gambar 5.7 dicerminkan atas permintaan penulis. Tiang yang berada di tengah medan pandang kini tiang kiri gawang, dan badan gawang memanjang ke kanan. Bola tetap di kiri dan robot lain tetap di kanan. Subbab 5.1.1.3 menyebut "tiang kiri gawang". |
+| v28 | 25 Nov | Atas permintaan penulis, padanan Indonesia yang janggal diganti istilah Inggris bercetak miring: matriks kebingungan menjadi *confusion matrix*, galat menjadi *error* (*error frame*, *error bar*), porta menjadi *port*, menerbitkan/berlangganan menjadi *publish*/*subscribe*, kotak kebenaran menjadi kotak *ground truth*, sapuan menjadi *sweep*, subpengendali menjadi *sub-controller*, cap waktu menjadi *timestamp*, jendela ukur menjadi *measurement window*, titik prediksi menjadi *anchor point*, jalur validator/prediksi menjadi *validator path*/*predict path*, proyektor menjadi *projector*, perangkat tepi menjadi *edge device*, fusi Conv-BN menjadi *Conv-BN fusion*, deteksi palsu menjadi *false detection*, ulangan menjadi *repetition*, dan keyakinan menjadi *confidence*. Daftar Istilah ditambah 15 entri (71 entri), dan label empat grafik disesuaikan. Halaman tetap 116. |
 
-## Isi pokok naskah v27
+## Isi pokok naskah v28
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
@@ -88,3 +89,7 @@ Alasan *checkpoint* *supervised* *seed* 1337 dicek di repositori, lalu ditulis d
 
 - **Pemeriksaan KBBI.** Seluruh kata tegak di naskah (1.472 kata unik) dicocokkan dengan teks KBBI IV. Kata yang tidak ditemukan dicek di KBBI VI Daring. Ada empat perbaikan: port menjadi porta, variansnya menjadi variansinya, kustom menjadi khusus, dan Robotiik menjadi ROBOTIIK. "humanoid", "konvolusional", dan "hiperparameter" tidak ada di KBBI VI, tetapi atas keputusan penulis tetap dipakai. Rinciannya ada di `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md`.
 - **Persetujuan pembimbing.** Bhre melaporkan persetujuan lisan atas empat rumusan masalah dan KF-03 pada 25 November 2026 (D25).
+
+## Pembaruan v28 (25 November)
+
+Istilah Inggris kini dipakai, bercetak miring, untuk konsep yang padanan Indonesianya terdengar janggal (rincian pada baris v28 di atas dan `CATATAN_SUNTING_v28.md`). Penamaan di repositori, misalnya "jalur `model.val`" dan "jalur `model.predict`" pada D23, tidak diubah. Di naskah, keduanya kini disebut *validator path* dan *predict path*.

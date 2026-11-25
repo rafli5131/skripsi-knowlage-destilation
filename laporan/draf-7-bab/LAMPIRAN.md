@@ -1,6 +1,6 @@
 # LAMPIRAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## LAMPIRAN A KONFIGURASI PELATIHAN
 
@@ -96,7 +96,7 @@ Nama sumber diperoleh dengan membuang akhiran .rf.\<hash\> dari nama berkas Robo
 
 ## LAMPIRAN C HASIL *RUNTIME* SETIAP *RUN*
 
-Lampiran ini memuat hasil setiap *run* pengujian *runtime* pada Subbab 6.4 dan Subbab 6.5. Latensi dihitung dari seluruh *frame* dalam jendela ukur setelah *warm-up*, FPS efektif menurut Persamaan 2.15, CPU sebagai persentase satu CPU logis, dan RSS sebagai rata-rata selama jendela ukur.
+Lampiran ini memuat hasil setiap *run* pengujian *runtime* pada Subbab 6.4 dan Subbab 6.5. Latensi dihitung dari seluruh *frame* dalam *measurement window* setelah *warm-up*, FPS efektif menurut Persamaan 2.15, CPU sebagai persentase satu CPU logis, dan RSS sebagai rata-rata selama *measurement window*.
 
 **Tabel C.1** Hasil *runtime* setiap *run*
 
@@ -116,7 +116,7 @@ Lampiran ini memuat hasil setiap *run* pengujian *runtime* pada Subbab 6.4 dan S
 <tr class="header">
 <th><strong>Model</strong></th>
 <th><strong>Kondisi</strong></th>
-<th><strong>Ulangan</strong></th>
+<th><em><strong>Repetition</strong></em></th>
 <th><p><strong>Latensi</strong></p>
 <p><strong>rata-rata</strong></p>
 <p><strong>(ms)</strong></p></th>
@@ -401,7 +401,7 @@ Lampiran ini memuat hasil setiap *run* pengujian *runtime* pada Subbab 6.4 dan S
 
 ## LAMPIRAN D AKURASI SETIAP *SEED* PADA TEST
 
-Lampiran ini memuat akurasi setiap *checkpoint* pada 592 citra TEST yang diringkas pada Tabel 6.3 dan Tabel 6.10. *Teacher* diwakili satu *checkpoint*. *Precision*, *recall*, dan F1 dihitung pada *confidence* \> 0,25 dan IoU 0,50 lewat jalur validator.
+Lampiran ini memuat akurasi setiap *checkpoint* pada 592 citra TEST yang diringkas pada Tabel 6.3 dan Tabel 6.10. *Teacher* diwakili satu *checkpoint*. *Precision*, *recall*, dan F1 dihitung pada *confidence* \> 0,25 dan IoU 0,50 lewat *validator path*.
 
 **Tabel D.1** Akurasi setiap *seed* pada TEST
 

@@ -1,6 +1,6 @@
 # BAB 1 PENDAHULUAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 1.1 Latar Belakang
 
@@ -10,7 +10,7 @@ Keluarga detektor YOLO (*You Only Look Once*) banyak dipilih untuk menjawab tunt
 
 Kemampuan komputasi di tubuh robot menjadi batas yang menentukan. Spesifikasi produsen ROBOTIS OP3 mencantumkan komputer Intel NUC dengan prosesor Intel Core i3 *dual core*, *random access memory* (RAM) 8 GB, dan kamera Logitech C920 (ROBOTIS, n.d.a). Sejumlah penelitian pada perangkat sejenis menjalankan detektor sepenuhnya pada *central processing unit* (CPU). Setyawan, et al. (2026) menguji deteksi bola seluruhnya pada Intel NUC dengan *Robot Operating System* (ROS) tanpa akselerasi *graphics processing unit* (GPU), sedangkan Meneghetti, et al. (2021) mencatat bahwa implementasi resmi YOLO tidak cocok untuk inferensi pada CPU. Lau dan Pottier (2026) membangun sistem visi berbasis YOLOv9 pada OP3 yang dioptimalkan untuk inferensi CPU dan memperoleh 4 sampai 8 FPS. Angka itu dicapai setelah model dikonversi ke ONNX dan OpenVINO serta dikuantisasi. Bahkan tanpa objek yang terdeteksi, laju YOLOv9-T hanya sekitar 8 FPS, lalu turun menjadi 5,92 sampai 6,22 FPS pada uji statis dan 4,41 sampai 6,68 FPS pada uji dinamis (Lau dan Pottier, 2026). Adipratama (2026) juga mengukur penggunaan CPU dan memori sistem deteksi pada OP3, baik saat robot diam maupun saat berjalan.
 
-Saltık, et al. (2025) menyebut adanya tarik-menarik antara kapasitas model dan kecepatan inferensi, karena akurasi detektor cenderung turun ketika model dipangkas atau dikuantisasi agar dapat berjalan pada perangkat tepi. Kuantisasi mengubah bobot dan aktivasi dari bilangan titik mengambang 32 bit menjadi representasi bit yang lebih rendah, sehingga inferensi dapat dijalankan dengan aritmetika bilangan bulat (Jacob, et al., 2018, p. 2705). Representasi empat bit atau kurang berpotensi menekan kebutuhan memori dan latensi (Gholami, et al., 2021), dan algoritmenya terbagi menjadi *post-training quantization* (PTQ) dan *quantization-aware training* (QAT) (Nagel, et al., 2021). Penelitian ini menempuh jalur lain yang tidak mengubah representasi bobot maupun *runtime* model, yaitu melatih model yang lebih kecil dengan bimbingan model yang lebih besar.
+Saltık, et al. (2025) menyebut adanya tarik-menarik antara kapasitas model dan kecepatan inferensi, karena akurasi detektor cenderung turun ketika model dipangkas atau dikuantisasi agar dapat berjalan pada *edge device*. Kuantisasi mengubah bobot dan aktivasi dari bilangan titik mengambang 32 bit menjadi representasi bit yang lebih rendah, sehingga inferensi dapat dijalankan dengan aritmetika bilangan bulat (Jacob, et al., 2018, p. 2705). Representasi empat bit atau kurang berpotensi menekan kebutuhan memori dan latensi (Gholami, et al., 2021), dan algoritmenya terbagi menjadi *post-training quantization* (PTQ) dan *quantization-aware training* (QAT) (Nagel, et al., 2021). Penelitian ini menempuh jalur lain yang tidak mengubah representasi bobot maupun *runtime* model, yaitu melatih model yang lebih kecil dengan bimbingan model yang lebih besar.
 
 Cara melatih tersebut dikenal sebagai *knowledge distillation* (KD). Hinton, Vinyals, dan Dean (2015) memakai probabilitas kelas yang dihasilkan model besar sebagai target lunak (*soft target*) untuk melatih model kecil. Gou, et al. (2021) menempatkan KD sebagai salah satu jenis kompresi dan percepatan model dalam kerangka *teacher-student*, yaitu model besar sebagai *teacher* membimbing model kecil sebagai *student*. Karena yang diubah hanya cara pelatihan, arsitektur *student* tetap dan biaya inferensinya tidak bertambah (Arik dan Ağgül, 2026; Ultralytics, n.d.a). Penerapan KD pada deteksi objek bahkan telah dirangkum dalam survei tersendiri, dari detektor berbasis CNN sampai *Transformer* (Shehzadi, et al., 2026).
 
@@ -58,7 +58,7 @@ Ruang lingkup penelitian ini dibatasi sebagai berikut.
 
 2.  Himpunan data yang digunakan adalah himpunan data Roboflow advance_vision_human versi 1 (Humanoid-Atom, 2026) dengan pembagian bagian latih, validasi, dan uji bawaan himpunan data tersebut.
 
-3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan. *Student* adalah YOLO11 berskala khusus dengan faktor kedalaman 0,50 dan faktor lebar 0,125 (810.649 parameter sebelum fusi Conv-BN), yang dalam penelitian ini disebut skala t. Skala ini bukan salah satu skala resmi YOLO11, yaitu n, s, m, l, dan x (Ultralytics, n.d.d), sehingga *student* berbeda dari YOLO11n standar.
+3.  *Teacher* yang digunakan adalah YOLO11n yang telah dilatih sebelumnya lalu dibekukan. *Student* adalah YOLO11 berskala khusus dengan faktor kedalaman 0,50 dan faktor lebar 0,125 (810.649 parameter sebelum *Conv-BN fusion*), yang dalam penelitian ini disebut skala t. Skala ini bukan salah satu skala resmi YOLO11, yaitu n, s, m, l, dan x (Ultralytics, n.d.d), sehingga *student* berbeda dari YOLO11n standar.
 
 4.  Model hasil KD yang dimaksud pada rumusan masalah adalah *student* KD hibrida penuh. *Student* KD murni disertakan sebagai pembanding tambahan, sehingga ketiga model yang dibandingkan adalah KD hibrida, *supervised*, dan *teacher* YOLO11n.
 
@@ -72,7 +72,7 @@ Ruang lingkup penelitian ini dibatasi sebagai berikut.
 
 9.  Kondisi robot yang diuji adalah diam dan berjalan. Definisi operasional kedua kondisi dijelaskan pada Bab 3.
 
-10. Ukuran sisi masukan model (imgsz) adalah 640 piksel. Pada jalur prediksi, *frame* kamera 640 × 480 piksel diubah dengan *letterbox* menjadi tensor 480 × 640 piksel.
+10. Ukuran sisi masukan model (imgsz) adalah 640 piksel. Pada *predict path*, *frame* kamera 640 × 480 piksel diubah dengan *letterbox* menjadi tensor 480 × 640 piksel.
 
 11. Objek uji pada pengujian *runtime* ditempatkan statis. Pelacakan objek dijalankan pada *node* deteksi, tetapi akurasi pelacakan tidak termasuk tujuan penelitian.
 

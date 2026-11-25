@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -40,7 +40,7 @@ Sumber: Brilliant (2024)
 
 Sumber: Brilliant (2024)
 
-Konfigurasi perangkat keras saat pengujian disajikan pada Gambar 5.6. Kamera terhubung ke komputer *onboard* melalui USB dan menjadi satu-satunya sensor yang dipakai *node* deteksi. Komputer *onboard* mengirim perintah sendi ke subpengendali OpenCR, yang kemudian menggerakkan 20 aktuator DYNAMIXEL XM430-W350-R melalui bus RS-485 (ROBOTIS, n.d.a; ROBOTIS, n.d.c). Komputer *onboard* terhubung ke OpenCR melalui U2D2, pengubah USB untuk bus DYNAMIXEL (ROBOTIS, n.d.d). Selama pengujian, OpenCR dicatu adaptor 12 V dan komputer *onboard* dicatu adaptor 19 V, sedangkan baterai LiPo tidak dipakai. Laptop terhubung ke komputer *onboard* dan ke server melalui SSH, sedangkan model berpindah dari server ke robot sebagai berkas.
+Konfigurasi perangkat keras saat pengujian disajikan pada Gambar 5.6. Kamera terhubung ke komputer *onboard* melalui USB dan menjadi satu-satunya sensor yang dipakai *node* deteksi. Komputer *onboard* mengirim perintah sendi ke *sub-controller* OpenCR, yang kemudian menggerakkan 20 aktuator DYNAMIXEL XM430-W350-R melalui bus RS-485 (ROBOTIS, n.d.a; ROBOTIS, n.d.c). Komputer *onboard* terhubung ke OpenCR melalui U2D2, pengubah USB untuk bus DYNAMIXEL (ROBOTIS, n.d.d). Selama pengujian, OpenCR dicatu adaptor 12 V dan komputer *onboard* dicatu adaptor 19 V, sedangkan baterai LiPo tidak dipakai. Laptop terhubung ke komputer *onboard* dan ke server melalui SSH, sedangkan model berpindah dari server ke robot sebagai berkas.
 
 **Gambar 5.6** Konfigurasi perangkat keras saat pengujian
 
@@ -60,11 +60,11 @@ Perangkat lunak terdiri atas lima rancangan, yaitu model *student*, pelatihan KD
 
 #### 5.1.2.1 Perancangan Model *Student*
 
-*Student* dirancang dengan topologi yang sama dengan *teacher* YOLO11n, yaitu *backbone*, *neck*, dan *head* Detect pada tiga skala keluaran P3, P4, dan P5. Perbedaannya hanya pada faktor lebar: lebar kanal *student* separuh lebar *teacher*, sedangkan kedalamannya sama. Karena topologinya sama, setiap peta fitur *student* memiliki pasangan pada *teacher* dengan resolusi spasial yang sama, sehingga distilasi fitur hanya membutuhkan proyektor kanal dan tidak membutuhkan penyelarasan resolusi.
+*Student* dirancang dengan topologi yang sama dengan *teacher* YOLO11n, yaitu *backbone*, *neck*, dan *head* Detect pada tiga skala keluaran P3, P4, dan P5. Perbedaannya hanya pada faktor lebar: lebar kanal *student* separuh lebar *teacher*, sedangkan kedalamannya sama. Karena topologinya sama, setiap peta fitur *student* memiliki pasangan pada *teacher* dengan resolusi spasial yang sama, sehingga distilasi fitur hanya membutuhkan *channel projector* dan tidak membutuhkan penyelarasan resolusi.
 
 #### 5.1.2.2 Perancangan Pelatihan KD
 
-Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui proyektor, lalu dibandingkan dengan fitur *teacher* memakai *loss* L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui *loss* kotak (Persamaan 2.5) dan *loss* kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi *loss* KD murni (Persamaan 2.7), lalu ditambah *loss* deteksi berlabel sehingga menjadi *loss* KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan proyektor, sedangkan bobot *teacher* tidak berubah.
+Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui *projector*, lalu dibandingkan dengan fitur *teacher* memakai *loss* L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui *loss* kotak (Persamaan 2.5) dan *loss* kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi *loss* KD murni (Persamaan 2.7), lalu ditambah *loss* deteksi berlabel sehingga menjadi *loss* KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan *projector*, sedangkan bobot *teacher* tidak berubah.
 
 **Gambar 5.8** Diagram blok satu langkah pelatihan KD hibrida penuh
 
@@ -76,13 +76,13 @@ Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gamba
 
 #### 5.1.2.3 Perancangan *Node* Deteksi
 
-*Node* deteksi dirancang sebagai satu proses Python yang menerima citra, menjalankan model, menerbitkan hasil, dan mencatat *log*, dengan alur pada Gambar 5.10. Saat mulai, *node* memeriksa SHA-256 *checkpoint* terhadap daftar model tepercaya (*model registry*) dan memastikan urutan kelas tetap 0 untuk bola, 1 untuk gawang, dan 2 untuk robot. Setiap *callback* memproses satu *frame*: citra diubah ke format OpenCV, diproses Ultralytics dengan *letterbox* 640, NMS, dan asosiasi BoT-SORT, lalu hasilnya diterbitkan dan dicatat. *Frame* awal sebanyak jumlah *warm-up* ditandai dan tidak dihitung dalam FPS efektif.
+*Node* deteksi dirancang sebagai satu proses Python yang menerima citra, menjalankan model, melakukan *publish* hasil, dan mencatat *log*, dengan alur pada Gambar 5.10. Saat mulai, *node* memeriksa SHA-256 *checkpoint* terhadap daftar model tepercaya (*model registry*) dan memastikan urutan kelas tetap 0 untuk bola, 1 untuk gawang, dan 2 untuk robot. Setiap *callback* memproses satu *frame*: citra diubah ke format OpenCV, diproses Ultralytics dengan *letterbox* 640, NMS, dan asosiasi BoT-SORT, lalu hasilnya di-*publish* dan dicatat. *Frame* awal sebanyak jumlah *warm-up* ditandai dan tidak dihitung dalam FPS efektif.
 
 **Gambar 5.10** Diagram alir *node* deteksi
 
 #### 5.1.2.4 Perancangan Komunikasi ROS 2
 
-Komunikasi antarkomponen memakai *topic* ROS 2 seperti pada Gambar 5.11. *Node* kamera menerbitkan citra pada /thesis/image_raw, *node* deteksi menerbitkan hasil pada /vision/detections dan *preview* pada /vision/debug_image, sedangkan skrip pengujian kondisi berjalan mengirim perintah mulai dan berhenti ke /robotis/walking/command. *Node* deteksi berlangganan citra dengan QoS *best-effort*, *keep-last* berkedalaman 1, dan *callback* serial. Pengaturan ini sesuai untuk data sensor yang cepat digantikan data baru (Macenski, et al., 2022): bila inferensi tertinggal, *frame* lama dilewati alih-alih ditumpuk.
+Komunikasi antarkomponen memakai *topic* ROS 2 seperti pada Gambar 5.11. *Node* kamera melakukan *publish* citra pada /thesis/image_raw, *node* deteksi melakukan *publish* hasil pada /vision/detections dan *preview* pada /vision/debug_image, sedangkan skrip pengujian kondisi berjalan mengirim perintah mulai dan berhenti ke /robotis/walking/command. *Node* deteksi melakukan *subscribe* citra dengan QoS *best-effort*, *keep-last* dengan *depth* 1, dan *callback* serial. Pengaturan ini sesuai untuk data sensor yang cepat digantikan data baru (Macenski, et al., 2022): bila inferensi tertinggal, *frame* lama dilewati alih-alih ditumpuk.
 
 **Gambar 5.11** Komunikasi *topic* ROS 2 pada sistem
 
@@ -94,13 +94,13 @@ Setiap peluncuran *node* menghasilkan berkas *metadata* JSON dan berkas CSV per 
 
 | **Kolom**                                                 | **Isi**                                              |
 |-----------------------------------------------------------|------------------------------------------------------|
-| capture_stamp_ns, receive_time_utc                        | Cap waktu kamera dan waktu penerimaan *frame*        |
+| capture_stamp_ns, receive_time_utc                        | *Timestamp* kamera dan waktu penerimaan *frame*      |
 | width, height                                             | Ukuran citra masukan                                 |
 | preprocess_ms, inference_ms, postprocess_ms               | Waktu tiga tahap menurut Results.speed Ultralytics   |
 | end_to_end_ms                                             | Durasi keseluruhan *callback*                        |
 | process_cpu_percent, process_rss_bytes                    | Penggunaan CPU dan RSS proses detektor               |
 | detection_count, tracked_count, n_ball, n_gawang, n_robot | Jumlah deteksi, deteksi ber-ID, dan jumlah per kelas |
-| is_warmup, error                                          | Penanda *frame* *warm-up* dan pesan galat            |
+| is_warmup, error                                          | Penanda *frame* *warm-up* dan *error message*        |
 
 ## 5.2 Implementasi Sistem
 
@@ -118,7 +118,7 @@ Tubuh robot dipakai dalam konfigurasi bawaan OP3 tanpa perubahan mekanik. Kamera
 
 Rangkaian elektronika mengikuti susunan bawaan OP3, yaitu komputer *onboard*, U2D2, OpenCR, aktuator, dan kamera seperti pada Gambar 5.4 dan Gambar 5.6. Penelitian ini tidak menambah sensor atau papan elektronika baru. Susunan rangkaian elektronika OP3 dari sisi depan, belakang, dan atas disajikan pada Gambar 5.13 sampai Gambar 5.15 \[PERLU DICEK: kesamaan unit pada foto dengan unit OP3 yang dipakai, karena komputer *onboard* unit penelitian tercatat sebagai NUC12WSHi5\].
 
-Pada sisi depan, U2D2 terhubung ke komputer *onboard*, dan tampak tombol daya serta porta USB komputer *onboard* (Gambar 5.13). Pada sisi belakang tampak sakelar OpenCR, porta USB, Ethernet, HDMI, kipas, serta *power jack* OpenCR dan komputer *onboard* (Gambar 5.14). Kedua *power jack* inilah yang menerima adaptor 12 V dan 19 V selama pengujian. Pada sisi atas tampak OpenCR beserta porta *servo*, sakelar, sambungan baterai, dan U2D2 yang terhubung melalui kabel RS-485 (Gambar 5.15) (Brilliant, 2024).
+Pada sisi depan, U2D2 terhubung ke komputer *onboard*, dan tampak tombol daya serta *port* USB komputer *onboard* (Gambar 5.13). Pada sisi belakang tampak sakelar OpenCR, *port* USB, Ethernet, HDMI, kipas, serta *power jack* OpenCR dan komputer *onboard* (Gambar 5.14). Kedua *power jack* inilah yang menerima adaptor 12 V dan 19 V selama pengujian. Pada sisi atas tampak OpenCR beserta *port* *servo*, sakelar, sambungan baterai, dan U2D2 yang terhubung melalui kabel RS-485 (Gambar 5.15) (Brilliant, 2024).
 
 **Gambar 5.13** Rangkaian elektronika tampak depan
 
@@ -142,7 +142,7 @@ Selama pengujian kondisi berjalan, badan robot diletakkan pada tatakan dan objek
 
 #### 5.2.2.1 Implementasi Model *Student*
 
-*Student* didefinisikan dalam berkas YAML Ultralytics pada Kode Program 5.1. Hasilnya adalah model berparameter 810.649 sebelum fusi Conv-BN dengan 2,43 GFLOPs pada masukan 640, dibandingkan dengan 2.590.425 parameter dan 6,50 GFLOPs pada *teacher*. Ukuran *checkpoint* *student* sekitar 1,82 MiB, sedangkan *teacher* 5.481.875 bait.
+*Student* didefinisikan dalam berkas YAML Ultralytics pada Kode Program 5.1. Hasilnya adalah model berparameter 810.649 sebelum *Conv-BN fusion* dengan 2,43 GFLOPs pada masukan 640, dibandingkan dengan 2.590.425 parameter dan 6,50 GFLOPs pada *teacher*. Ukuran *checkpoint* *student* sekitar 1,82 MiB, sedangkan *teacher* 5.481.875 bait.
 
 **Kode Program 5.1** Konfigurasi model *student*
 
@@ -699,7 +699,7 @@ Baris 5 sampai 10 mengosongkan penyimpan fitur, menjalankan *teacher* tanpa perh
 
 Baris 12 sampai 24 mengambil keluaran *head* kedua model, merata-ratakan skor kelas *teacher* dari dua cabang *head*, lalu membaginya menurut skala P3, P4, dan P5. Skor maksimum setelah *sigmoid* pada setiap posisi menjadi bobot titik menurut Persamaan 2.3.
 
-Baris 26 sampai 32 menghitung *loss* fitur pada ketiga skala. Fitur *student* diproyeksikan ke jumlah kanal *teacher* oleh proyektor, lalu dibandingkan dengan fitur *teacher* menggunakan bobot titik (Persamaan 2.4).
+Baris 26 sampai 32 menghitung *loss* fitur pada ketiga skala. Fitur *student* diproyeksikan ke jumlah kanal *teacher* oleh *projector*, lalu dibandingkan dengan fitur *teacher* menggunakan bobot titik (Persamaan 2.4).
 
 Baris 34 sampai 52 menghitung *loss* kotak dengan Smooth L1 (Persamaan 2.5) dan *loss* kelas dengan BCE bertemperatur yang dikalikan kuadrat temperatur (Persamaan 2.6) untuk setiap cabang *head*. Keluaran *teacher* dilepas dari graf gradien sehingga hanya *student* yang diperbarui. Baris 36, 37, 45, dan 46 menghentikan pelatihan bila bentuk keluaran kedua model berbeda.
 
@@ -709,22 +709,22 @@ Baris 61 memasang fungsi ini sebagai metode *loss* DistillationModel sebelum pel
 
 #### 5.2.2.3 Implementasi *Node* Deteksi
 
-*Node* deteksi diimplementasikan dalam skrip op3_pytorch_detector.py dan dijalankan dengan interpreter Python 3.12 yang dapat mengimpor modul ROS 2 Jazzy sekaligus PyTorch dan Ultralytics. Parameter yang dipakai pada pengujian disajikan pada Tabel 5.2. Ambang *runtime* 0,25 dan 0,45 merupakan parameter eksplisit dan berbeda dari ambang evaluasi *offline* (*confidence floor* 0,001 dan NMS 0,7). *Node* hanya menerima citra dan menerbitkan hasil; tidak ada antarmuka ke *servo* atau modul gerak.
+*Node* deteksi diimplementasikan dalam skrip op3_pytorch_detector.py dan dijalankan dengan interpreter Python 3.12 yang dapat mengimpor modul ROS 2 Jazzy sekaligus PyTorch dan Ultralytics. Parameter yang dipakai pada pengujian disajikan pada Tabel 5.2. Ambang *runtime* 0,25 dan 0,45 merupakan parameter eksplisit dan berbeda dari ambang evaluasi *offline* (*confidence floor* 0,001 dan NMS 0,7). *Node* hanya menerima citra dan melakukan *publish* hasil; tidak ada antarmuka ke *servo* atau modul gerak.
 
 **Tabel 5.2** Parameter *node* deteksi pada pengujian
 
-| **Parameter**                            | **Nilai**                       | **Kegunaan**                     |
-|------------------------------------------|---------------------------------|----------------------------------|
-| model_variant                            | teacher, hybrid, supervised, kd | Memilih *checkpoint* terdaftar   |
-| input_topic                              | /thesis/image_raw               | *Topic* citra kamera             |
-| imgsz                                    | 640                             | Ukuran sisi masukan model        |
-| confidence_threshold                     | 0,25                            | Ambang *confidence* *runtime*    |
-| iou_threshold                            | 0,45                            | Ambang IoU NMS *runtime*         |
-| enable_tracking, tracker_config          | true, botsort.yaml              | Asosiasi ID BoT-SORT             |
-| torch_num_threads, torch_interop_threads | 4, 2                            | Jumlah *thread* PyTorch          |
-| warmup_frames, duration_s                | 30, 60                          | *Warm-up* dan jendela ukur       |
-| publish_debug_image                      | true                            | Menerbitkan *preview* beranotasi |
-| experiment_condition                     | servo_idle atau walking         | Label kondisi dari operator      |
+| **Parameter**                            | **Nilai**                       | **Kegunaan**                       |
+|------------------------------------------|---------------------------------|------------------------------------|
+| model_variant                            | teacher, hybrid, supervised, kd | Memilih *checkpoint* terdaftar     |
+| input_topic                              | /thesis/image_raw               | *Topic* citra kamera               |
+| imgsz                                    | 640                             | Ukuran sisi masukan model          |
+| confidence_threshold                     | 0,25                            | Ambang *confidence* *runtime*      |
+| iou_threshold                            | 0,45                            | Ambang IoU NMS *runtime*           |
+| enable_tracking, tracker_config          | true, botsort.yaml              | Asosiasi ID BoT-SORT               |
+| torch_num_threads, torch_interop_threads | 4, 2                            | Jumlah *thread* PyTorch            |
+| warmup_frames, duration_s                | 30, 60                          | *Warm-up* dan *measurement window* |
+| publish_debug_image                      | true                            | Menerbitkan *preview* beranotasi   |
+| experiment_condition                     | servo_idle atau walking         | Label kondisi dari operator        |
 
 Pemuatan model saat *node* dimulai disajikan pada Kode Program 5.4. Bagian ini dijalankan sekali setelah keberadaan *checkpoint* dan pemetaan kelas pada berkas konfigurasi data diperiksa.
 
@@ -978,11 +978,11 @@ Baris 2 sampai 8 menyusun argumen inferensi, yaitu ukuran masukan 640, *batch* 1
 
 Baris 9 sampai 11 menjalankan inferensi dan mengambil waktu tahap *preprocess*, inferensi, dan *postprocess* dari Results.speed untuk dicatat pada *log*.
 
-Baris 12 sampai 17 menyiapkan pesan Detection2DArray dengan *header* yang sama dengan citra masukan, sehingga cap waktu deteksi dapat dicocokkan dengan cap waktu kamera.
+Baris 12 sampai 17 menyiapkan pesan Detection2DArray dengan *header* yang sama dengan citra masukan, sehingga *timestamp* deteksi dapat dicocokkan dengan *timestamp* kamera.
 
 Baris 18 sampai 35 mengubah setiap kotak prediksi dari koordinat sudut menjadi titik pusat dan ukuran, lalu mengisi ID kelas, nama kelas, *confidence*, dan ID pelacakan ke dalam pesan Detection2D.
 
-Setelah seluruh kotak diproses, pesan hasil diterbitkan pada /vision/detections. Bila publish_debug_image aktif, citra beranotasi dari result.plot() diterbitkan pada /vision/debug_image. *Callback* kemudian menulis satu baris CSV per *frame* sesuai kolom pada Tabel 5.1.
+Setelah seluruh kotak diproses, pesan hasil di-*publish* pada /vision/detections. Bila publish_debug_image aktif, citra beranotasi dari result.plot() di-*publish* pada /vision/debug_image. *Callback* kemudian menulis satu baris CSV per *frame* sesuai kolom pada Tabel 5.1.
 
 #### 5.2.2.4 Implementasi Pendukung Pengujian
 

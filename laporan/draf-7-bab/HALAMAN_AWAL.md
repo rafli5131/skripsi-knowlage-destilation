@@ -1,6 +1,6 @@
 # HALAMAN AWAL
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 > Data pribadi (nama, NIM, NIK, email, dan nama pihak dalam prakata) sengaja tidak dicantumkan di repositori publik. Bagian pengesahan, pernyataan, dan prakata hanya diringkas isinya; teks lengkapnya ada di naskah DOCX/PDF.
 
@@ -24,7 +24,7 @@
 
 ## Abstrak
 
-Robot humanoid ROBOTIS OP3 menjalankan seluruh pemrosesan citra pada CPU komputer *onboard*, sehingga detektor objek untuk bola, gawang, dan robot harus ringan tanpa kehilangan banyak akurasi. Model yang lebih kecil dapat berjalan lebih cepat, tetapi akurasinya dapat turun bila hanya dilatih dengan label. Penelitian ini bertujuan mengimplementasikan *knowledge distillation* (KD) untuk melatih *student* YOLO11 yang jumlah parameternya sekitar sepertiga *teacher* YOLO11n, lalu menjalankannya sebagai *node* ROS 2 pada komputer *onboard* OP3. KD hibrida, yang menggabungkan *loss* berlabel dengan distilasi fitur, kotak, dan kelas, dibandingkan dengan *student* berarsitektur sama yang dilatih secara *supervised*, *student* hasil KD murni, dan *teacher*. Ketiga varian *student* dilatih dengan tiga nilai awal acak (*seed*) dan dipilih hanya berdasarkan himpunan validasi, kemudian diuji pada himpunan uji, pada dua set citra kamera OP3, serta pada 24 *run* pengujian langsung saat robot diam dan berjalan. Pada himpunan uji, KD hibrida mencapai mAP50-95, yaitu ukuran ketepatan deteksi dan letak kotak, sebesar 0,7469, lebih tinggi daripada *supervised* pada ketiga pasangan *seed* dan setara dengan 95,8% akurasi *teacher*. F1, yaitu gabungan *precision* dan *recall*, kedua *student* setara pada ambang yang dipakai di robot. Pada citra kamera OP3, keunggulan tersebut tidak konsisten karena KD hibrida menghasilkan deteksi palsu pada sepertiga *frame* tanpa objek di set citra pertama. Pada robot, latensi rata-rata KD hibrida 64,70 ms saat diam dan 71,47 ms saat berjalan, dibanding sekitar 96 ms pada *teacher*, dengan laju 13,60 dan 12,54 FPS dibanding sekitar 9,9 FPS. Seluruh model memenuhi kebutuhan minimal 8 FPS, sedangkan penggunaan CPU dan memori tidak membedakan model secara jelas. Dengan demikian, KD hibrida meningkatkan akurasi *student* pada himpunan data, tetapi peningkatan tersebut belum konsisten pada citra kamera robot. Kecepatan yang lebih tinggi daripada *teacher* berasal dari ukuran *student* yang lebih kecil, bukan dari KD.
+Robot humanoid ROBOTIS OP3 menjalankan seluruh pemrosesan citra pada CPU komputer *onboard*, sehingga detektor objek untuk bola, gawang, dan robot harus ringan tanpa kehilangan banyak akurasi. Model yang lebih kecil dapat berjalan lebih cepat, tetapi akurasinya dapat turun bila hanya dilatih dengan label. Penelitian ini bertujuan mengimplementasikan *knowledge distillation* (KD) untuk melatih *student* YOLO11 yang jumlah parameternya sekitar sepertiga *teacher* YOLO11n, lalu menjalankannya sebagai *node* ROS 2 pada komputer *onboard* OP3. KD hibrida, yang menggabungkan *loss* berlabel dengan distilasi fitur, kotak, dan kelas, dibandingkan dengan *student* berarsitektur sama yang dilatih secara *supervised*, *student* hasil KD murni, dan *teacher*. Ketiga varian *student* dilatih dengan tiga nilai awal acak (*seed*) dan dipilih hanya berdasarkan himpunan validasi, kemudian diuji pada himpunan uji, pada dua set citra kamera OP3, serta pada 24 *run* pengujian langsung saat robot diam dan berjalan. Pada himpunan uji, KD hibrida mencapai mAP50-95, yaitu ukuran ketepatan deteksi dan letak kotak, sebesar 0,7469, lebih tinggi daripada *supervised* pada ketiga pasangan *seed* dan setara dengan 95,8% akurasi *teacher*. F1, yaitu gabungan *precision* dan *recall*, kedua *student* setara pada ambang yang dipakai di robot. Pada citra kamera OP3, keunggulan tersebut tidak konsisten karena KD hibrida menghasilkan *false detection* pada sepertiga *frame* tanpa objek di set citra pertama. Pada robot, latensi rata-rata KD hibrida 64,70 ms saat diam dan 71,47 ms saat berjalan, dibanding sekitar 96 ms pada *teacher*, dengan laju 13,60 dan 12,54 FPS dibanding sekitar 9,9 FPS. Seluruh model memenuhi kebutuhan minimal 8 FPS, sedangkan penggunaan CPU dan memori tidak membedakan model secara jelas. Dengan demikian, KD hibrida meningkatkan akurasi *student* pada himpunan data, tetapi peningkatan tersebut belum konsisten pada citra kamera robot. Kecepatan yang lebih tinggi daripada *teacher* berasal dari ukuran *student* yang lebih kecil, bukan dari KD.
 
 Kata kunci: *knowledge distillation*, deteksi objek, YOLO11, robot humanoid, ROBOTIS OP3, ROS 2
 
@@ -38,17 +38,22 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 
 | **Istilah atau singkatan** | **Keterangan**                                                                                |
 |----------------------------|-----------------------------------------------------------------------------------------------|
+| *Anchor point*             | Setiap posisi pada peta keluaran detektor tempat model membuat prediksi                       |
 | AP                         | *Average precision*, luas di bawah kurva *precision*-*recall* untuk satu kelas                |
 | BCE                        | *Binary cross-entropy*, *loss* untuk keputusan ada atau tidaknya satu kelas                   |
 | BoT-SORT                   | Algoritme pelacakan objek yang dipakai *node* deteksi untuk memberi ID                        |
 | *Checkpoint*               | Berkas bobot model hasil pelatihan                                                            |
 | CNN                        | *Convolutional neural network*, jaringan saraf konvolusional                                  |
 | *Confidence*               | Skor keyakinan model terhadap satu deteksi                                                    |
+| *Confusion matrix*         | Tabel yang memasangkan kelas label dengan kelas prediksi model                                |
 | CPU                        | *Central processing unit*                                                                     |
 | CSV                        | *Comma-separated values*, format berkas teks berbentuk tabel                                  |
 | DDS                        | *Data Distribution Service*, standar komunikasi yang mendasari ROS 2                          |
 | DFL                        | *Distribution focal loss*, *loss* regresi kotak berbentuk distribusi pada YOLO11              |
+| *Edge device*              | Perangkat berdaya komputasi terbatas tempat model dijalankan secara lokal                     |
 | *Epoch*                    | Satu putaran pelatihan atas seluruh data latih                                                |
+| *Error bar*                | Garis pada grafik yang menunjukkan sebaran nilai, di sini simpangan baku                      |
+| *Error frame*              | *Frame* yang gagal diproses oleh *node* deteksi                                               |
 | F1                         | *F1-score*, rata-rata harmonik *precision* dan *recall*                                       |
 | FN                         | *False negative*, objek berlabel yang tidak terdeteksi                                        |
 | FP                         | *False positive*, deteksi yang tidak memiliki pasangan label                                  |
@@ -58,6 +63,7 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 | GFLOPs                     | Miliar operasi titik mengambang untuk satu kali inferensi                                     |
 | GMC                        | *Global motion compensation*, kompensasi gerak kamera pada pelacak                            |
 | GPU                        | *Graphics processing unit*                                                                    |
+| *Ground truth*             | Kotak dan kelas acuan dari label himpunan data                                                |
 | ID                         | Nomor identitas objek yang diberikan pelacak                                                  |
 | IDF1                       | *ID F1 score*, metrik pelacakan yang menilai konsistensi identitas objek                      |
 | INT8                       | Bilangan bulat 8 bit                                                                          |
@@ -72,24 +78,33 @@ The ROBOTIS OP3 humanoid robot runs all image processing on its onboard CPU, so 
 | mAP                        | *Mean average precision*, rata-rata AP seluruh kelas                                          |
 | mAP50                      | mAP pada ambang IoU 0,50                                                                      |
 | mAP50-95                   | Rata-rata mAP pada ambang IoU 0,50 sampai 0,95                                                |
+| *Measurement window*       | Rentang waktu pengukuran *runtime* setelah *warm-up*                                          |
 | MOTA                       | *Multiple object tracking accuracy*, metrik akurasi pelacakan banyak objek                    |
 | NMS                        | *Non-maximum suppression*, penghapusan kotak yang tumpang tindih                              |
 | ONNX                       | *Open Neural Network Exchange*, format pertukaran model jaringan saraf                        |
 | OP3                        | ROBOTIS OP3, robot humanoid yang dipakai dalam penelitian ini                                 |
 | P95                        | Persentil ke-95                                                                               |
+| *Predict path*             | Jalur evaluasi melalui fungsi *predict* Ultralytics, sama dengan jalur *runtime* robot        |
+| *Projector*                | Lapisan yang menyamakan jumlah kanal fitur *student* dengan fitur *teacher*                   |
 | PTQ                        | *Post-training quantization*, kuantisasi sesudah pelatihan                                    |
+| *Publish*                  | Mengirim pesan ROS 2 ke suatu *topic*                                                         |
 | QAT                        | *Quantization-aware training*, pelatihan yang memperhitungkan kuantisasi                      |
 | QoS                        | *Quality of Service*, pengaturan cara pesan ROS 2 dikirim                                     |
+| *Repetition*               | Pengulangan *run* dengan model dan kondisi yang sama                                          |
 | *Replay*                   | Pemutaran ulang *frame* terekam secara *offline*                                              |
 | ROS 2                      | *Robot Operating System 2*                                                                    |
 | RSS                        | *Resident set size*, memori fisik yang dipakai proses                                         |
-| *Run*                      | Satu kali pengujian *runtime* selama jendela ukur                                             |
+| *Run*                      | Satu kali pengujian *runtime* selama *measurement window*                                     |
 | SD                         | Simpangan baku                                                                                |
 | *Seed*                     | Nilai awal pembangkit bilangan acak semu yang menentukan deret bilangan acak selama pelatihan |
 | SHA-256                    | Fungsi *hash* 256 bit yang dipakai sebagai sidik jari berkas                                  |
 | SSH                        | *Secure Shell*                                                                                |
 | *Student*                  | Model kecil yang dilatih                                                                      |
+| *Sub-controller*           | Pengendali tingkat bawah yang meneruskan perintah ke *servo*, yaitu OpenCR                    |
+| *Subscribe*                | Menerima pesan ROS 2 dari suatu *topic*                                                       |
 | *Teacher*                  | Model besar yang menjadi acuan dalam KD                                                       |
 | TEST, TRAIN, VAL           | Bagian uji, latih, dan validasi himpunan data                                                 |
+| *Timestamp*                | Catatan waktu saat suatu *frame* diambil atau diproses                                        |
 | TP                         | *True positive*, deteksi yang cocok dengan label                                              |
+| *Validator path*           | Jalur evaluasi melalui fungsi *val* Ultralytics                                               |
 | YOLO                       | *You Only Look Once*, keluarga detektor objek satu tahap                                      |

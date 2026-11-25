@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -16,15 +16,15 @@ Ringkasan ketujuh penelitian tersebut disajikan pada Tabel 2.1. Pengujian kecepa
 
 **Tabel 2.1** Penelitian terdahulu tentang KD pada detektor objek
 
-| **Penelitian**                             | **Objek dan perangkat**                            | ***Teacher* ke *student***                                | **Metode KD**                                                   | **Metrik dan hasil pokok**                                                     | **Perbedaan dengan penelitian ini**              |
-|--------------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------|
-| Billy (2019)                               | Robot *service*; himpunan data VOC; laptop CPU i7  | *Student* YOLO dengan *feature extractor* MobileNet       | KD pada keluaran bertemperatur; *batchnorm fusion*              | mAP 0,3850 menjadi 0,4215; 8,3 menjadi 16,66 FPS                               | Bukan robot humanoid; YOLO generasi lama         |
-| Zaini (2024)                               | Rambu lalu lintas Indonesia, 25 kelas              | YOLOv5 (varian tidak tercantum pada berkas yang tersedia) | KD (rincian tidak tersedia pada berkas)                         | mAP50 0,953; inferensi 0,029 s                                                 | Domain rambu; tidak diuji pada robot             |
-| Sabaghian, Keyvanrad, dan Moghadami (2025) | Citra udara VisDrone; GPU GTX 1080                 | YOLOv8m asal ke YOLOv8m terpangkas                        | *Pruning* kanal dan CWD                                         | Parameter 25,85 juta menjadi 6,85 juta; AP50 berkurang 2,7%; 26 menjadi 45 FPS | KD sebagai pemulih *pruning*; GPU                |
-| Saltık, et al. (2025)                      | Gulma; Jetson Orin Nano dan Raspberry Pi 5         | YOLO11x ke YOLO11n                                        | CWD dan MGD                                                     | mAP50 0,838 menjadi 0,859                                                      | Domain pertanian; tanpa ROS 2                    |
-| Jung dan Nam (2025)                        | Deteksi jatuh pada CCTV                            | YOLOv11-M ke YOLOv11-S dan YOLOv11-N                      | Peta fitur dengan MSE dan KL per kanal                          | mAP naik; waktu proses turun 0,8 ms                                            | Domain pengawasan; bukan robot                   |
-| Arik dan Ağgül (2026)                      | Retakan struktur; Raspberry Pi 3B+ dan Jetson Nano | YOLOv11-L ke YOLOv11-N                                    | KD (label dan sinyal lunak *teacher*) dan *pseudo-labeling*     | Terbaik *pseudo-labeling*: mAP50 0,81 (*teacher* 0,84)                         | Uji perangkat tepi untuk model *pseudo-labeling* |
-| Sharma, et al. (2026)                      | MS-COCO dan VisDrone; Jetson Nano                  | YOLOv8-L ke MobileNetV3-Large                             | KL bertemperatur, afinitas kanal, dan *detection fidelity loss* | 38,6 mAP50‑95; 61 FPS (FP16)                                                   | *Student* beda keluarga; GPU                     |
+| **Penelitian**                             | **Objek dan perangkat**                            | ***Teacher* ke *student***                                | **Metode KD**                                                   | **Metrik dan hasil pokok**                                                     | **Perbedaan dengan penelitian ini**             |
+|--------------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-------------------------------------------------|
+| Billy (2019)                               | Robot *service*; himpunan data VOC; laptop CPU i7  | *Student* YOLO dengan *feature extractor* MobileNet       | KD pada keluaran bertemperatur; *batchnorm fusion*              | mAP 0,3850 menjadi 0,4215; 8,3 menjadi 16,66 FPS                               | Bukan robot humanoid; YOLO generasi lama        |
+| Zaini (2024)                               | Rambu lalu lintas Indonesia, 25 kelas              | YOLOv5 (varian tidak tercantum pada berkas yang tersedia) | KD (rincian tidak tersedia pada berkas)                         | mAP50 0,953; inferensi 0,029 s                                                 | Domain rambu; tidak diuji pada robot            |
+| Sabaghian, Keyvanrad, dan Moghadami (2025) | Citra udara VisDrone; GPU GTX 1080                 | YOLOv8m asal ke YOLOv8m terpangkas                        | *Pruning* kanal dan CWD                                         | Parameter 25,85 juta menjadi 6,85 juta; AP50 berkurang 2,7%; 26 menjadi 45 FPS | KD sebagai pemulih *pruning*; GPU               |
+| Saltık, et al. (2025)                      | Gulma; Jetson Orin Nano dan Raspberry Pi 5         | YOLO11x ke YOLO11n                                        | CWD dan MGD                                                     | mAP50 0,838 menjadi 0,859                                                      | Domain pertanian; tanpa ROS 2                   |
+| Jung dan Nam (2025)                        | Deteksi jatuh pada CCTV                            | YOLOv11-M ke YOLOv11-S dan YOLOv11-N                      | Peta fitur dengan MSE dan KL per kanal                          | mAP naik; waktu proses turun 0,8 ms                                            | Domain pengawasan; bukan robot                  |
+| Arik dan Ağgül (2026)                      | Retakan struktur; Raspberry Pi 3B+ dan Jetson Nano | YOLOv11-L ke YOLOv11-N                                    | KD (label dan sinyal lunak *teacher*) dan *pseudo-labeling*     | Terbaik *pseudo-labeling*: mAP50 0,81 (*teacher* 0,84)                         | Uji *edge device* untuk model *pseudo-labeling* |
+| Sharma, et al. (2026)                      | MS-COCO dan VisDrone; Jetson Nano                  | YOLOv8-L ke MobileNetV3-Large                             | KL bertemperatur, afinitas kanal, dan *detection fidelity loss* | 38,6 mAP50‑95; 61 FPS (FP16)                                                   | *Student* beda keluarga; GPU                    |
 
 ### 2.1.2 Penelitian Deteksi Objek pada Robot Humanoid
 
@@ -61,7 +61,7 @@ Subbab ini menguraikan teori yang mendasari penelitian, mulai dari robot yang di
 
 ROBOTIS OP3 adalah robot humanoid berukuran kecil buatan ROBOTIS dan merupakan penerus ROBOTIS OP (DARwIn-OP) serta ROBOTIS OP2 (ROBOTIS, n.d.a). DARwIn-OP sendiri dikembangkan sebagai robot humanoid terbuka dengan struktur modular berbasis jaringan dan arsitektur *personal computer* (PC) standar, sehingga sistemnya dapat dikembangkan, mudah dipelihara, memakai lingkungan pengembangan yang lazim, dan terjangkau harganya (Ha, Tamura, dan Asama, 2013).
 
-Spesifikasi produsen OP3 mencakup tinggi sekitar 510 mm, bobot sekitar 3,5 kg, dan 20 derajat kebebasan (*degree of freedom*, DOF) dengan aktuator XM430‑W350‑R. Pengendali utamanya adalah Intel NUC dengan prosesor Intel Core i3 *dual core* dan RAM 8 GB, subpengendalinya OpenCR, kameranya Logitech C920, dan sensornya meliputi giroskop, akselerometer, serta magnetometer tiga sumbu (ROBOTIS, n.d.a). Versi OP3 tahun 2025 dikembangkan untuk ROS 2 (ROBOTIS, n.d.a). Unit yang digunakan dalam penelitian ini memakai komputer *onboard* yang berbeda dari spesifikasi tersebut, seperti dijelaskan pada Subbab 1.5. Gambar 2.1 memperlihatkan robot OP3.
+Spesifikasi produsen OP3 mencakup tinggi sekitar 510 mm, bobot sekitar 3,5 kg, dan 20 derajat kebebasan (*degree of freedom*, DOF) dengan aktuator XM430‑W350‑R. Pengendali utamanya adalah Intel NUC dengan prosesor Intel Core i3 *dual core* dan RAM 8 GB, *sub-controller*-nya OpenCR, kameranya Logitech C920, dan sensornya meliputi giroskop, akselerometer, serta magnetometer tiga sumbu (ROBOTIS, n.d.a). Versi OP3 tahun 2025 dikembangkan untuk ROS 2 (ROBOTIS, n.d.a). Unit yang digunakan dalam penelitian ini memakai komputer *onboard* yang berbeda dari spesifikasi tersebut, seperti dijelaskan pada Subbab 1.5. Gambar 2.1 memperlihatkan robot OP3.
 
 **Gambar 2.1** Robot humanoid ROBOTIS OP3
 
@@ -129,19 +129,19 @@ Distilasi fitur memindahkan representasi lapisan tengah. FitNets memakai represe
 
 Distilasi respons pada detektor padat perlu memperhatikan cara klasifikasinya. Detektor padat memakai fungsi *sigmoid* untuk setiap kelas, sehingga distilasi berbasis *softmax* mengabaikan skor absolut setiap kelas; karena itu, Yang, et al. (2023) memakai BCE untuk mendistilasi setiap peta klasifikasi biner hasil *sigmoid*. Untuk lokalisasi, Zheng, et al. (2022) mengubah kotak pembatas menjadi distribusi probabilitas lalu mendistilasi distribusi tepi kotak dari *teacher* ke *student*.
 
-Ultralytics menyediakan KD bawaan melalui argumen distill_model untuk berkas *teacher* dan argumen dis untuk bobot *loss* distilasi dengan nilai bawaan 6,0. Fitur *student* diselaraskan ke jumlah kanal *teacher* oleh proyektor berupa dua konvolusi 1 × 1 dengan *rectified linear unit* (ReLU), lalu dibandingkan memakai *loss* L2 yang dibobot keyakinan kelas *teacher* (Ultralytics, n.d.a).
+Ultralytics menyediakan KD bawaan melalui argumen distill_model untuk berkas *teacher* dan argumen dis untuk bobot *loss* distilasi dengan nilai bawaan 6,0. Fitur *student* diselaraskan ke jumlah kanal *teacher* oleh *projector* berupa dua konvolusi 1 × 1 dengan *rectified linear unit* (ReLU), lalu dibandingkan memakai *loss* L2 yang dibobot *confidence* kelas *teacher* (Ultralytics, n.d.a).
 
-Penelitian ini memakai tiga suku distilasi. Bobot setiap titik prediksi $i$ diambil dari keyakinan kelas tertinggi *teacher* (Persamaan 2.3).
+Penelitian ini memakai tiga suku distilasi. Bobot setiap *anchor point* $i$ diambil dari *confidence* kelas tertinggi *teacher* (Persamaan 2.3).
 
 > $w_{i} = \max_{c}{\sigma\left( z_{t,i,c} \right)}$ (2.3)
 
 Keterangan:
 
-> $w_{i}$ : bobot titik prediksi ke-$i$; titik prediksi adalah setiap posisi pada peta keluaran tempat detektor menebak objek
+> $w_{i}$ : bobot *anchor point* ke-$i$; *anchor point* adalah setiap posisi pada peta keluaran tempat detektor menebak objek
 >
 > $z_{t,i,c}$ : *logit* kelas $c$ dari *teacher* pada titik $i$, yaitu rata-rata *logit* dua cabang *head* Detect
 >
-> $\sigma$ : fungsi *sigmoid*, yang mengubah *logit* menjadi nilai keyakinan 0 sampai 1
+> $\sigma$ : fungsi *sigmoid*, yang mengubah *logit* menjadi nilai *confidence* 0 sampai 1
 >
 > max : nilai terbesar di antara semua kelas $c$, yaitu bola, gawang, dan robot
 
@@ -199,7 +199,7 @@ Keterangan:
 >
 > $z_{t,m}$, $z_{s,m}$ : *logit* *teacher* dan *student* pada elemen skor ke-$m$
 >
-> $M$ : jumlah seluruh elemen skor kelas dari semua titik prediksi; nilai *loss* adalah rata-rata atas semua elemen tersebut
+> $M$ : jumlah seluruh elemen skor kelas dari semua *anchor point* ; nilai *loss* adalah rata-rata atas semua elemen tersebut
 >
 > $m$ : nomor elemen skor, dari 1 sampai $M$
 >
@@ -235,7 +235,7 @@ ROS 2 berbasis *Data Distribution Service* (DDS), yaitu standar terbuka untuk ko
 
 Pengaturan QoS menentukan cara pesan dikirim. Pada pengaturan *reliability*, mode *best-effort* mengirim pesan satu kali dan cocok untuk data yang cepat digantikan data baru, seperti data sensor, sedangkan mode *reliable* terus mengirim pesan sampai penerima mengonfirmasi penerimaannya. Pengaturan *durability* menentukan apakah pesan dilupakan setelah dikirim (*volatile*) atau disimpan untuk *subscriber* yang bergabung belakangan (*transient-local*). Pengaturan *history* mengatur perilaku saat jaringan tidak mampu mengimbangi aliran data; mode *keep-last* yang umum dipakai menyimpan antrean berukuran tetap dan menimpa data terlama (Macenski, et al., 2022).
 
-Cara *node* dijalankan juga memengaruhi kinerja komunikasi. Komunikasi antarproses paling fleksibel, tetapi menghasilkan latensi dan penggunaan CPU tertinggi. Komunikasi *intra-process* melewati tumpukan *middleware* dengan meneruskan *pointer* dari *publisher* ke *subscriber*, dan keuntungannya paling besar pada pesan berukuran sekitar 1 MB atau lebih yang umumnya berupa citra (Macenski, et al., 2022). Karena kamera dan *node* deteksi pada OP3 menerbitkan dan menerima citra melalui *topic*, pengaturan QoS dan cara *node* dijalankan ikut menentukan *frame* yang diproses ketika inferensi lebih lambat daripada laju kamera.
+Cara *node* dijalankan juga memengaruhi kinerja komunikasi. Komunikasi antarproses paling fleksibel, tetapi menghasilkan latensi dan penggunaan CPU tertinggi. Komunikasi *intra-process* melewati tumpukan *middleware* dengan meneruskan *pointer* dari *publisher* ke *subscriber*, dan keuntungannya paling besar pada pesan berukuran sekitar 1 MB atau lebih yang umumnya berupa citra (Macenski, et al., 2022). Karena kamera dan *node* deteksi pada OP3 melakukan *publish* dan menerima citra melalui *topic*, pengaturan QoS dan cara *node* dijalankan ikut menentukan *frame* yang diproses ketika inferensi lebih lambat daripada laju kamera.
 
 Latensi pada sistem ROS 2 multi-*node* dipengaruhi oleh lapisan ROS 2 dan *middleware* di antara publikasi pesan dan pemanggilan *callback* pada *subscriber* (Kronauer, et al., 2021). Karena itu, penelitian ini membedakan waktu pemrosesan model dari waktu yang dihabiskan sistem ROS 2.
 
@@ -245,7 +245,7 @@ Pelacakan objek menjaga identitas setiap objek antar-*frame*. BoT-SORT adalah pe
 
 ### 2.2.7 Metrik Akurasi Deteksi
 
-Setiap kotak hasil deteksi digolongkan sebagai *true positive* (TP) bila benar mendeteksi suatu kotak kebenaran, *false positive* (FP) bila mendeteksi objek yang tidak ada atau salah letak, dan *false negative* (FN) untuk kotak kebenaran yang tidak terdeteksi (Padilla, et al., 2021). Kebenaran letak ditentukan dengan IoU, yaitu perbandingan luas irisan dan luas gabungan kotak prediksi $B_{p}$ dan kotak kebenaran $B_{gt}$, seperti pada Persamaan 2.9 (Padilla, et al., 2021).
+Setiap kotak hasil deteksi digolongkan sebagai *true positive* (TP) bila benar mendeteksi suatu kotak *ground truth*, *false positive* (FP) bila mendeteksi objek yang tidak ada atau salah letak, dan *false negative* (FN) untuk kotak *ground truth* yang tidak terdeteksi (Padilla, et al., 2021). Kebenaran letak ditentukan dengan IoU, yaitu perbandingan luas irisan dan luas gabungan kotak prediksi $B_{p}$ dan kotak *ground truth* $B_{gt}$, seperti pada Persamaan 2.9 (Padilla, et al., 2021).
 
 > $IoU = \frac{\text{luas}\left( B_{p} \cap B_{gt} \right)}{\text{luas}\left( B_{p} \cup B_{gt} \right)}$ (2.9)
 
@@ -255,15 +255,15 @@ Keterangan:
 >
 > $B_{p}$ : kotak hasil prediksi model
 >
-> $B_{gt}$ : kotak kebenaran (*ground truth*) dari label
+> $B_{gt}$ :kotak *ground truth* dari label
 >
 > $\cap$, $\cup$ : irisan, yaitu daerah yang ditutupi kedua kotak sekaligus, dan gabungan, yaitu seluruh daerah yang ditutupi salah satu atau kedua kotak
 >
 > luas : luas daerah dalam satuan piksel persegi
 
-IoU hanya dihitung antara kotak prediksi dan kotak kebenaran dari kelas yang sama. Ambang IoU yang mendekati 1 lebih ketat karena menuntut kotak yang hampir tepat, dan ambang yang paling sering dipakai adalah 50% dan 75%. *Precision* dan *recall* juga bergantung pada ambang *confidence*, karena hanya deteksi dengan *confidence* lebih besar daripada ambang tersebut yang dihitung sebagai deteksi positif (Padilla, et al., 2021).
+IoU hanya dihitung antara kotak prediksi dan kotak *ground truth* dari kelas yang sama. Ambang IoU yang mendekati 1 lebih ketat karena menuntut kotak yang hampir tepat, dan ambang yang paling sering dipakai adalah 50% dan 75%. *Precision* dan *recall* juga bergantung pada ambang *confidence*, karena hanya deteksi dengan *confidence* lebih besar daripada ambang tersebut yang dihitung sebagai deteksi positif (Padilla, et al., 2021).
 
-Nilai *confidence* tidak selalu sebanding dengan peluang suatu prediksi benar. Guo, et al. (2017, pp. 1321-1322) mendapati bahwa jaringan saraf modern cenderung terlalu yakin, sehingga keyakinan prediksinya perlu dikalibrasi sebelum ditafsirkan sebagai peluang. Akibatnya, satu ambang *confidence* yang sama dapat meloloskan proporsi deteksi yang berbeda pada model yang berbeda. Karena itu, penelitian ini melaporkan AP, yang dihitung pada seluruh ambang *confidence*, bersama *precision* dan *recall* pada satu ambang tetap.
+Nilai *confidence* tidak selalu sebanding dengan peluang suatu prediksi benar. Guo, et al. (2017, pp. 1321-1322) mendapati bahwa jaringan saraf modern cenderung terlalu yakin, sehingga *confidence* prediksinya perlu dikalibrasi sebelum ditafsirkan sebagai peluang. Akibatnya, satu ambang *confidence* yang sama dapat meloloskan proporsi deteksi yang berbeda pada model yang berbeda. Karena itu, penelitian ini melaporkan AP, yang dihitung pada seluruh ambang *confidence*, bersama *precision* dan *recall* pada satu ambang tetap.
 
 *Precision* dan *recall* dihitung dengan Persamaan 2.10 dan Persamaan 2.11 (Padilla, et al., 2021), sedangkan F1 adalah rata-rata harmonik keduanya, seperti pada Persamaan 2.12 (Ultralytics, n.d.c).
 
@@ -317,7 +317,7 @@ Keterangan:
 
 Waktu eksekusi pada komputer bersifat nondeterministik. Hoefler dan Belli (2015) menganjurkan agar hasil nondeterministik dilaporkan beserta selang kepercayaannya, dan agar data tidak diasumsikan berdistribusi normal tanpa pemeriksaan diagnostik. MLPerf memakai latensi persentil ke-90 sebagai metrik skenario *single-stream* (Reddi, et al., 2020).
 
-Penelitian ini melaporkan rata-rata, median, dan persentil ke-95 latensi. Laju pemrosesan dinyatakan sebagai FPS efektif, yaitu jumlah selang antar-*frame* terproses dibagi rentang cap waktu kamera dalam jendela ukur (Persamaan 2.15). Penggunaan sumber daya dinyatakan dari penggunaan CPU dan memori proses detektor, dengan definisi operasional pada Bab 3.
+Penelitian ini melaporkan rata-rata, median, dan persentil ke-95 latensi. Laju pemrosesan dinyatakan sebagai FPS efektif, yaitu jumlah selang antar-*frame* terproses dibagi rentang *timestamp* kamera dalam *measurement window* (Persamaan 2.15). Penggunaan sumber daya dinyatakan dari penggunaan CPU dan memori proses detektor, dengan definisi operasional pada Bab 3.
 
 > $FPS_{\text{efektif}} = \frac{N - 1}{t_{N} - t_{1}}$ (2.15)
 
@@ -325,9 +325,9 @@ Keterangan:
 
 > $FPS_{\text{efektif}}$ : laju pemrosesan, dalam *frame* per detik
 >
-> $N$ : jumlah *frame* yang diproses dalam jendela ukur
+> $N$ : jumlah *frame* yang diproses dalam *measurement window*
 >
-> $t_{1}$, $t_{N}$ : cap waktu kamera, dalam detik, pada *frame* pertama dan *frame* terakhir
+> $t_{1}$, $t_{N}$ :*timestamp* kamera, dalam detik, pada *frame* pertama dan *frame* terakhir
 >
 > $N - 1$ : jumlah selang antara dua *frame* yang berurutan
 

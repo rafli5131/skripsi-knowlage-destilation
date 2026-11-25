@@ -1,6 +1,6 @@
 # BAB 4 REKAYASA KEBUTUHAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v27 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v28 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi acuan perancangan pada Bab 5 dan pengujian pada Bab 6. Kebutuhan disusun dari rumusan masalah, keterbatasan komputer *onboard* OP3, dan antarmuka ROS 2 yang dipakai robot.
 
@@ -35,10 +35,10 @@ Kebutuhan fungsional adalah kebutuhan yang berkaitan dengan perilaku sistem, yai
 
 | **Kode** | **Kebutuhan**                                                                              | **Indikator verifikasi**                                                                             |
 |----------|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| KF-01    | Sistem menerima citra kamera OP3 melalui *topic* ROS 2 dan memproses *frame* yang diterima | *Frame* masuk diproses dan *frame* galat tercatat pada *log*                                         |
+| KF-01    | Sistem menerima citra kamera OP3 melalui *topic* ROS 2 dan memproses *frame* yang diterima | *Frame* masuk diproses dan *error frame* tercatat pada *log*                                         |
 | KF-02    | Sistem mendeteksi bola, gawang, dan robot                                                  | Keluaran memuat kelas dan kotak pembatas; ketepatannya terhadap label dinilai pada pengujian akurasi |
 | KF-03    | Sistem menyediakan ID pelacakan pada mode pelacakan                                        | ID tersedia pada keluaran dan kestabilannya diperiksa pada objek bergerak                            |
-| KF-04    | Sistem mencatat data *runtime* setiap *frame*                                              | Cap waktu, durasi tahap, CPU, RSS, dan galat tersedia pada berkas CSV                                |
+| KF-04    | Sistem mencatat data *runtime* setiap *frame*                                              | *Timestamp*, durasi tahap, CPU, RSS, dan *error* tersedia pada berkas CSV                            |
 | KF-05    | Sistem menampilkan *preview* hasil deteksi                                                 | Kotak dan kelas tampak pada *preview*                                                                |
 
 ## 4.4 Spesifikasi Sistem
@@ -55,9 +55,9 @@ Selain KNF-01, sistem dirancang dengan spesifikasi berikut agar kebutuhan fungsi
 
 1.  Karena komputer *onboard* OP3 tidak memiliki GPU diskret, inferensi dijalankan pada CPU dalam presisi FP32. *Node* deteksi menetapkan 4 *thread* operasi dan 2 *thread* antaroperasi PyTorch saat inisialisasi dengan nilai yang sama untuk semua model.
 
-2.  Karena citra kamera cepat digantikan citra baru, *node* deteksi berlangganan citra dengan QoS *best-effort* dan *keep-last* berkedalaman 1, sehingga *frame* lama dilewati bila inferensi tertinggal.
+2.  Karena citra kamera cepat digantikan citra baru, *node* deteksi melakukan *subscribe* citra dengan QoS *best-effort* dan *keep-last* dengan *depth* 1, sehingga *frame* lama dilewati bila inferensi tertinggal.
 
-3.  Karena CPU yang sama juga menjalankan *gait*, *node* deteksi hanya membaca citra dan menerbitkan hasil, tanpa mengirim perintah ke *servo*.
+3.  Karena CPU yang sama juga menjalankan *gait*, *node* deteksi hanya membaca citra dan melakukan *publish* hasil, tanpa mengirim perintah ke *servo*.
 
 4.  Karena robot dioperasikan dari laptop, komputer *onboard* diakses melalui SSH dan *preview* ditampilkan di laptop tanpa pemrosesan deteksi di laptop.
 
@@ -78,7 +78,7 @@ Rangkuman kebutuhan perangkat keras disajikan pada Tabel 4.4. Setiap komponen ke
 | Robot ROBOTIS OP3                                       | Platform robot humanoid yang membawa kamera, komputer *onboard*, dan aktuator |
 | Komputer *onboard* Intel NUC dengan Intel Core i5-1240P | Menjalankan inferensi pada CPU sekaligus *gait* robot                         |
 | Antarmuka U2D2                                          | Menghubungkan komputer *onboard* dengan OpenCR pada bus DYNAMIXEL             |
-| Subpengendali OpenCR 1.0                                | Meneruskan perintah sendi ke aktuator                                         |
+| *Sub-controller* OpenCR 1.0                             | Meneruskan perintah sendi ke aktuator                                         |
 | 20 aktuator DYNAMIXEL XM430-W350-R                      | Menggerakkan sendi robot pada kondisi berjalan                                |
 | Kamera Logitech C920                                    | Sumber citra berukuran 640 × 480 piksel bagi *node* deteksi                   |
 | Baterai LiPo empat sel 14,8 V                           | Sumber daya robot saat beroperasi tanpa kabel; tidak dipakai selama pengujian |
@@ -89,7 +89,7 @@ Rangkuman kebutuhan perangkat keras disajikan pada Tabel 4.4. Setiap komponen ke
 
 #### 4.5.1.1 Robot ROBOTIS OP3
 
-ROBOTIS OP3 adalah robot humanoid dengan 20 derajat kebebasan yang digerakkan aktuator DYNAMIXEL XM430-W350-R, dengan komputer Intel NUC sebagai pengendali utama dan OpenCR sebagai subpengendali (ROBOTIS, n.d.a). Spesifikasi bawaan OP3 disajikan pada Tabel 4.5. Pengendali utama pada unit yang dipakai dalam penelitian ini berbeda dari spesifikasi bawaan, yaitu Intel NUC12WSHi5 dengan prosesor Intel Core i5-1240P. Seri ini terbaca dari nama host humanoid-NUC12WSHi5 pada *snapshot* sistem 22 Oktober 2026 (Tabel 3.1).
+ROBOTIS OP3 adalah robot humanoid dengan 20 derajat kebebasan yang digerakkan aktuator DYNAMIXEL XM430-W350-R, dengan komputer Intel NUC sebagai pengendali utama dan OpenCR sebagai *sub-controller* (ROBOTIS, n.d.a). Spesifikasi bawaan OP3 disajikan pada Tabel 4.5. Pengendali utama pada unit yang dipakai dalam penelitian ini berbeda dari spesifikasi bawaan, yaitu Intel NUC12WSHi5 dengan prosesor Intel Core i5-1240P. Seri ini terbaca dari nama host humanoid-NUC12WSHi5 pada *snapshot* sistem 22 Oktober 2026 (Tabel 3.1).
 
 **Tabel 4.5** Spesifikasi bawaan ROBOTIS OP3
 
@@ -100,7 +100,7 @@ ROBOTIS OP3 adalah robot humanoid dengan 20 derajat kebebasan yang digerakkan ak
 | Derajat kebebasan | 20                                                                              |
 | Aktuator          | DYNAMIXEL XM430-W350-R                                                          |
 | Pengendali utama  | Intel NUC dengan prosesor Intel Core i3 dua inti, RAM DDR4 8 GB, SSD M.2 250 GB |
-| Subpengendali     | OpenCR                                                                          |
+| *Sub-controller*  | OpenCR                                                                          |
 | Kamera            | Logitech C920 HD Pro Webcam                                                     |
 | Sensor            | Giroskop tiga sumbu, akselerometer tiga sumbu, dan magnetometer tiga sumbu      |
 | Baterai           | LiPo tiga sel 11,1 V 3.300 mAh                                                  |
@@ -132,7 +132,7 @@ Sumber: Intel Corporation (n.d.)
 
 #### 4.5.1.3 OpenCR 1.0
 
-OpenCR 1.0 adalah subpengendali yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui porta DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya dipakai op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui antarmuka TTL (*transistor-transistor logic*) atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
+OpenCR 1.0 adalah *sub-controller* yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui *port* DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya dipakai op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui antarmuka TTL (*transistor-transistor logic*) atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
 
 **Tabel 4.7** Spesifikasi OpenCR 1.0
 
@@ -168,7 +168,7 @@ Sumber: ROBOTIS (n.d.b)
 
 #### 4.5.1.5 Kamera Logitech C920
 
-Kamera Logitech C920 adalah kamera bawaan OP3 (ROBOTIS, n.d.a). Kamera ini mendukung resolusi 1920 × 1080 piksel pada 30 fps, memiliki fokus otomatis, dan bidang pandang diagonal 78 derajat (Logitech, n.d.). Pada penelitian ini, kamera diminta mengirim citra 640 × 480 piksel berformat YUYV pada 30 FPS, lalu *node* kamera menerbitkannya sebagai pesan ROS 2 berpengodean rgb8 pada /thesis/image_raw. Nilai 30 FPS adalah permintaan konfigurasi, bukan laju yang terukur. Citra kemudian disesuaikan ke sisi panjang 640 dengan *letterbox* tanpa mengubah rasio aspeknya. Bentuk kamera disajikan pada Gambar 4.2.
+Kamera Logitech C920 adalah kamera bawaan OP3 (ROBOTIS, n.d.a). Kamera ini mendukung resolusi 1920 × 1080 piksel pada 30 fps, memiliki fokus otomatis, dan bidang pandang diagonal 78 derajat (Logitech, n.d.). Pada penelitian ini, kamera diminta mengirim citra 640 × 480 piksel berformat YUYV pada 30 FPS, lalu *node* kamera melakukan *publish* citra tersebut sebagai pesan ROS 2 berpengodean rgb8 pada /thesis/image_raw. Nilai 30 FPS adalah permintaan konfigurasi, bukan laju yang terukur. Citra kemudian disesuaikan ke sisi panjang 640 dengan *letterbox* tanpa mengubah rasio aspeknya. Bentuk kamera disajikan pada Gambar 4.2.
 
 **Gambar 4.2** Kamera Logitech C920
 
