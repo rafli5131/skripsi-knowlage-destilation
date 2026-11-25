@@ -1,5 +1,7 @@
 # Indeks dokumentasi percobaan OP3
 
+> **25 November 2026:** [Log progres](2026-11-25/LOG_PROGRES_SKRIPSI.md) · [naskah skripsi v20 dalam Markdown](../laporan/draf-7-bab/README.md) (Bab 1-7, halaman awal, daftar referensi, lampiran) · keputusan D25 sampai D27 di [`DECISIONS.md`](../docs/DECISIONS.md). Tidak ada percobaan baru.
+
 > **23 November 2026:** [Log progres](2026-11-23/LOG_PROGRES_SKRIPSI.md) · [log pelengkap OP3](../log_op3_pelengkap/README.md) (log jendela 15 run, metadata capture T38/T43, catatan training teacher) · [laporan sesi](../log_op3_pelengkap/LAPORAN_SESI.md) · [laporan uji laptop Ubuntu](2026-11-23/LAPORAN_UJI_LAPTOP_UBUNTU.md) (40 tes lulus dengan `env -u PYTHONPATH`).
 
 > **21 November 2026:** [Log progres](2026-11-21/LOG_PROGRES_SKRIPSI.md) · [bukti uji KF/KNF](../bukti_kebutuhan/README.md) · [audit hash manifest](../analisis_performa/AUDIT_HASH_MANIFEST_20261121.md) · [jejak waktu](../jejak_waktu/README.md).

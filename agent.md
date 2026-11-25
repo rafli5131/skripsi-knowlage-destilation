@@ -38,6 +38,7 @@
 - Tidak boleh mengirim perintah servo, gait, atau motor dari pekerjaan deteksi/evaluasi. Operator menetapkan dan memverifikasi kondisi fisik. Bila kondisi tidak terverifikasi, catat `unknown`.
 - Frame auto-label adalah draf prediksi, bukan ground truth. Tinjau manusia semua frame, termasuk frame kosong, sebelum menghitung mAP/precision/recall/F1 kamera. Simpan data mentah, `labels_auto`, dan `labels_reviewed` terpisah.
 - Jangan mengunggah gambar, video, label, atau log robot tanpa instruksi khusus pengguna.
+- Naskah skripsi terbaru adalah `Skripsi_KD_OP3_v20` (24 November 2026), dengan DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Naskah memakai empat rumusan masalah (D25): mAP, P/R/F1, latensi/FPS, dan CPU/RAM. Sebutan "RM5" pada dokumen lama sekarang RM4. Di naskah, T38 disebut Set Kamera 1 dan T43 Set Kamera 2. Naskah tidak menyebut kode T-nn, nama orang, atau alat bantu AI, dan tidak membandingkan hasil dengan penelitian lain. Salinan Markdown ada di [`laporan/draf-7-bab/`](laporan/draf-7-bab/README.md).
 
 ## Environment dan reproduksibilitas
 
@@ -53,6 +54,7 @@
 ## Peta sumber kebenaran
 
 - Status dan rujukan terbaru: file tanggal terbaru di [`memory/`](memory/).
+- Naskah skripsi: DOCX/PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\` (sumber kebenaran), catatan sunting `CATATAN_SUNTING_vNN.md` di folder yang sama, dan salinan Markdown di [`laporan/draf-7-bab/`](laporan/draf-7-bab/README.md).
 - Model/checkpoint/hash: [`configs/model_registry.yaml`](configs/model_registry.yaml) dan manifest masing-masing run.
 - Data/split/provenance: [`AUDIT_DATASET_SKRIPSI.md`](docs/AUDIT_DATASET_SKRIPSI.md), fingerprint di `artifacts/advance_vision_dataset_fingerprint.json`.
 - Hasil tabel: [`analisis_performa/INDEKS.md`](analisis_performa/INDEKS.md) dan [`analisis_performa/lab_server/README.md`](analisis_performa/lab_server/README.md).

@@ -4,12 +4,45 @@ Repositori penelitian ini membandingkan model deteksi objek untuk kamera robot h
 
 Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakukan saat robot **diam** dan **berjalan**. Percobaan tracking yang pernah dilakukan adalah tambahan, bukan tujuan wajib penelitian.
 
-## Progres dan langkah berikutnya
+## Status terkini
 
-**Status 23 November 2026.** Semua eksperimen untuk RM1 sampai RM5 sudah selesai, dan tidak ada pekerjaan yang tersisa di robot atau server. Bukti yang dipakai naskah terkumpul di tiga folder: [`bukti_kebutuhan/`](bukti_kebutuhan/README.md) untuk uji KF/KNF, [`jejak_waktu/`](jejak_waktu/README.md) untuk waktu training, evaluasi, dan run live, serta [`log_op3_pelengkap/`](log_op3_pelengkap/README.md) dan [`log_lab_server_pelengkap/`](log_lab_server_pelengkap/README.md) untuk log mentah pendukung. Sisa pekerjaan ada di laptop: keputusan jalur angka utama T38/T43 dan penyajian CPU (RM5) bersama pembimbing, konfirmasi status KF-03, dan penulisan naskah tujuh bab.
+**Status 25 November 2026.** Semua eksperimen sudah selesai, dan tidak ada pekerjaan tersisa di robot maupun server. Naskah skripsi tujuh bab sudah sampai versi **v20** (24 November 2026, 115 halaman) dengan empat rumusan masalah, semua gambar terisi, dan Daftar Referensi berformat seragam Panduan Skripsi FILKOM v3.0. Pekerjaan yang tersisa hanya isian penulis dan konfirmasi pembimbing; lihat tabel di bawah dan [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).
+
+| No | Pelaku | Pekerjaan yang tersisa | Rujukan |
+|---|---|---|---|
+| 1 | Penulis | Isi tanggal ujian, dua tanggal tanda tangan, dan tujuh isian `[DIISI PENULIS]` di prakata | [Halaman awal](laporan/draf-7-bab/HALAMAN_AWAL.md) |
+| 2 | Penulis | Pastikan foto rangkaian elektronika Gambar 5.13 sampai 5.15 (Brilliant, 2024) berasal dari unit yang sama dengan unit penelitian, lalu hapus penanda `[PERLU DICEK]` | [Bab 5](laporan/draf-7-bab/BAB_5_PERANCANGAN_IMPLEMENTASI.md) |
+| 3 | Penulis dan pembimbing | Persetujuan empat rumusan masalah (D25), status KF-03 "Lulus dengan catatan", serta jalur angka utama kamera OP3 dan penyajian CPU di Bab 6 | [D25](docs/DECISIONS.md) · [Bab 6](laporan/draf-7-bab/BAB_6_PENGUJIAN_DAN_PEMBAHASAN.md) |
+| 4 | Penulis | Periksa istilah yang tercatat di `CEK_KBBI.md` | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
+| 5 | Penulis | Simpan salinan kedua bobot teacher utama dan enam bobot T42 di drive pribadi (salinan laptop sudah ada sejak 16 November, hash cocok) | [`model_registry.yaml`](configs/model_registry.yaml) |
+
+T43 dipisahkan dari T38 karena konvensi kotak berbeda, dan pra-labelnya memakai gabungan keempat model yang dievaluasi. Frame, label, dan log robot tetap lokal kecuali ada instruksi publikasi. Bobot teacher tidak masuk repo.
+
+## Naskah skripsi
+
+Naskah berjudul **Implementasi *Knowledge Distillation* untuk Deteksi Objek pada Robot Humanoid ROBOTIS OP3** dan memakai struktur tujuh bab (D17). Berkas yang diserahkan adalah DOCX dan PDF; folder `laporan/draf-7-bab/` menyimpan salinan teksnya untuk dibaca dan dicocokkan dengan bukti di repositori.
+
+| Yang dicari | Lokasi |
+|---|---|
+| Naskah DOCX dan PDF v1 sampai v20 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan perubahan setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` · [ringkasan v1 sampai v20](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md#riwayat-naskah-13-sampai-24-november) |
+| Salinan Markdown Bab 1-7, halaman awal, daftar referensi, dan lampiran | [`laporan/draf-7-bab/`](laporan/draf-7-bab/README.md) |
+| Padanan istilah naskah dan kode repositori (Set Kamera 1 = T38, Set Kamera 2 = T43, dan seterusnya) | [README draf](laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori) |
+| Sumber pembangun naskah (skrip, gambar, grafik) | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v20.zip` |
+
+| No | Rumusan masalah | Pengujian | Hasil singkat |
+|---|---|---|---|
+| 1 | Akurasi berdasarkan mAP | Subbab 6.2 | mAP50-95 TEST KD hibrida 0,7469, lebih tinggi 0,0244 daripada *supervised* pada ketiga pasangan *seed*; keunggulan ini tidak konsisten pada kamera OP3 |
+| 2 | *Precision*, *recall*, dan F1 | Subbab 6.3 | Pada ambang *runtime*, F1 TEST KD hibrida dan *supervised* setara (0,9334 dan 0,9337) |
+| 3 | Latensi dan FPS saat diam dan berjalan | Subbab 6.4 | KD hibrida 64,70 ms / 13,60 FPS (diam) dan 71,47 ms / 12,54 FPS (berjalan); *teacher* sekitar 96 ms / 9,9 FPS |
+| 4 | Penggunaan CPU dan RAM | Subbab 6.5 | CPU proses sekitar 1.300% pada semua model; RSS KD hibrida 356 sampai 359 MiB dibanding 371 sampai 372 MiB pada *teacher* |
 
 <details>
-<summary>Riwayat progres 12 sampai 23 November 2026</summary>
+<summary>Riwayat progres 12 sampai 25 November 2026</summary>
+
+Per 24 sampai 25 November 2026, naskah disunting dari v9 sampai v20 dan dokumentasi repositori disesuaikan dengan naskah tersebut: [salinan Markdown naskah](laporan/draf-7-bab/README.md), [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md), [memory 25 November](memory/2026-11-25-naskah-skripsi-v20.md), serta D25 sampai D27 di [catatan keputusan](docs/DECISIONS.md). Draf ringkas tujuh bab sebelumnya disimpan di [`laporan/arsip/draf-7-bab-2026-11-23/`](laporan/arsip/draf-7-bab-2026-11-23/README.md).
+
+Per 23 November 2026 (status saat itu): Semua eksperimen untuk RM1 sampai RM5 sudah selesai, dan tidak ada pekerjaan yang tersisa di robot atau server. Bukti yang dipakai naskah terkumpul di tiga folder: [`bukti_kebutuhan/`](bukti_kebutuhan/README.md) untuk uji KF/KNF, [`jejak_waktu/`](jejak_waktu/README.md) untuk waktu training, evaluasi, dan run live, serta [`log_op3_pelengkap/`](log_op3_pelengkap/README.md) dan [`log_lab_server_pelengkap/`](log_lab_server_pelengkap/README.md) untuk log mentah pendukung. Sisa pekerjaan ada di laptop: keputusan jalur angka utama T38/T43 dan penyajian CPU (RM5) bersama pembimbing, konfirmasi status KF-03, dan penulisan naskah tujuh bab.
 
 Per 23 November 2026, laptop kerja dipindah ke Ubuntu 24.04. Dengan `env -u PYTHONPATH`, seluruh tes selain `test_kd_hybrid.py` lulus (40/40), termasuk empat tes yang gagal di Windows; lihat [laporan uji laptop Ubuntu](dokumentasi/2026-11-23/LAPORAN_UJI_LAPTOP_UBUNTU.md).
 
@@ -23,7 +56,8 @@ Per 13 November 2026, [verifikasi jalur inferensi TEST](analisis_performa/lab_se
 
 Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru [T43](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) beserta [uji sensitivitasnya](dokumentasi/2026-11-12/percobaan-40-sensitivitas-t43/README_ID.md), dan [draf tujuh bab](laporan/draf-7-bab/README.md) sudah selesai. Audit menemukan 18 hash PNG akurasi historis tidak cocok dengan manifest awal; [grafik reproduksi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) memiliki manifest terpisah. Lihat [log 12 November](dokumentasi/2026-11-12/LOG_PROGRES_SKRIPSI.md).
 
-</details>
+
+Tabel langkah berikutnya per 23 November 2026:
 
 | No | Tempat | Pekerjaan | Prompt atau rujukan |
 |---|---|---|---|
@@ -32,25 +66,26 @@ Per 12 November 2026, grafik garis runtime dari 24 run, evaluasi set frame baru 
 | 3 | Laptop | Mengembangkan naskah tujuh bab (D17) dari proposal Bab 1–3 dan pola skripsi FILKOM. Uji KF/KNF sudah terkumpul (21 November); pilihan jalur angka utama T38/T43 dan cara penyajian CPU (RM5) masih menunggu keputusan Bhre dan pembimbing. | [Draf tujuh bab](laporan/draf-7-bab/README.md) · [Bukti KF/KNF](bukti_kebutuhan/README.md) · [Log 21 November](dokumentasi/2026-11-21/LOG_PROGRES_SKRIPSI.md) |
 | 4 | Laptop | Cadangan bobot teacher utama dan enam bobot T42 tersimpan di laptop sejak 16 November dengan hash cocok; salinan kedua di drive pribadi masih disarankan. | [`model_registry.yaml`](configs/model_registry.yaml) · [T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) |
 
-T43 dipisahkan dari T38 karena konvensi kotak berbeda, dan pra-labelnya memakai gabungan keempat model yang dievaluasi. Frame, label, dan log robot tetap lokal kecuali ada instruksi publikasi. Bobot teacher tidak masuk repo.
+</details>
 
 ## Mulai dari sini
 
 | Ingin melihat | Buka |
 |---|---|
+| Naskah skripsi dan pekerjaan yang tersisa | [Naskah skripsi](#naskah-skripsi) · [Status terkini](#status-terkini) |
 | Hasil, grafik dan dokumentasi setiap model | [Indeks empat model](dokumentasi/model/README.md) |
 | Confusion matrix empat model dalam satu gambar | [Jumlah kotak](dokumentasi/model/gabungan/confusion_matrix_empat_model_jumlah_id.png) · [Persentase](dokumentasi/model/gabungan/confusion_matrix_empat_model_persen_id.png) · [Cara membaca](dokumentasi/model/gabungan/README.md) |
 | Grafik akurasi, runtime dan training | [Indeks 30 grafik HD: Indonesia dan Inggris](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md) |
 | Contoh gambar dan video deteksi | [Empat screenshot dan video Supervised 10 detik](dokumentasi/2026-11-09/visualisasi-tambahan-empat-model/README.md#contoh-hasil-deteksi) · [Ringkasan di halaman ini](#contoh-hasil-kamera-dan-rekaman) |
 | Grafik garis akurasi per epoch dan sapuan confidence | [Per model dan gabungan](dokumentasi/model/README.md) · [Kurva mAP50–95 VAL tiga metode](dokumentasi/model/gabungan/kurva_map50_95_val_per_epoch_id.png) · [Versi dengan hash terverifikasi](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) |
-| Keputusan dan progres terbaru | [Log 23 November 2026](dokumentasi/2026-11-23/LOG_PROGRES_SKRIPSI.md) · [Log 21 November 2026](dokumentasi/2026-11-21/LOG_PROGRES_SKRIPSI.md) · [Log 16 November 2026](dokumentasi/2026-11-16/LOG_PROGRES_SKRIPSI.md) · [Log 13 November 2026](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D24](docs/DECISIONS.md) |
+| Keputusan dan progres terbaru | [Log 25 November 2026](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md) · [Log 23 November 2026](dokumentasi/2026-11-23/LOG_PROGRES_SKRIPSI.md) · [Log 21 November 2026](dokumentasi/2026-11-21/LOG_PROGRES_SKRIPSI.md) · [Log 16 November 2026](dokumentasi/2026-11-16/LOG_PROGRES_SKRIPSI.md) · [Log 13 November 2026](dokumentasi/2026-11-13/LOG_PROGRES_SKRIPSI.md) · [Catatan keputusan D1–D27](docs/DECISIONS.md) |
 | Verifikasi jalur `model.val` vs `model.predict` pada TEST | [Ringkasan student](analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) · [Ringkasan teacher](analisis_performa/lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) · [Skrip](scripts/verify_test_inference_path.py) · D23–D24 |
 | Bukti uji kebutuhan KF-01 sampai KF-05 dan KNF-01 | [Ringkasan kasus uji](bukti_kebutuhan/README.md) · [Skrip](scripts/build_bukti_kebutuhan.py) |
 | Audit hash manifest | [Ringkasan](analisis_performa/AUDIT_HASH_MANIFEST_20261121.md) · [Skrip](scripts/audit_manifest_hashes.py) |
 | Jejak waktu training, evaluasi, dan run live | [Kronologi dan garis waktu](jejak_waktu/README.md) · [Skrip](scripts/build_jejak_waktu.py) |
 | Log pelengkap dari OP3: log jendela 15 run, metadata capture T38/T43, catatan training teacher | [Ringkasan dan tabel](log_op3_pelengkap/README.md) · [Laporan sesi](log_op3_pelengkap/LAPORAN_SESI.md) · [Package](ros2_packages/op3_log_pelengkap/README.md) |
 | Spesifikasi server lab dan environment | [Provenance environment dan perangkat](environment/README.md) · [Keluaran perintah 16 November](environment/spesifikasi_server_20261116.txt) |
-| Draf skripsi tujuh bab | [Buka indeks Bab 1–7](laporan/draf-7-bab/README.md) |
+| Naskah skripsi v20 (salinan Markdown) | [Indeks Bab 1–7, halaman awal, referensi, dan lampiran](laporan/draf-7-bab/README.md) · [Draf ringkas 23 November (arsip)](laporan/arsip/draf-7-bab-2026-11-23/README.md) |
 | Evaluasi tambahan kamera T43 | [Tabel dan batas interpretasi](analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md) · [Grafik dan confusion matrix](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) |
 | Grafik akurasi hasil reproduksi | [Grafik ID/EN dan manifest baru](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) · [Audit gambar historis](dokumentasi/2026-11-12/AUDIT_GRAFIK_AKURASI.md) |
 | Grafik runtime per waktu | [Per model dan gabungan](dokumentasi/model/README.md) |
@@ -158,10 +193,11 @@ Video tersebut sudah ditautkan dari [halaman model Supervised](dokumentasi/model
 skripsi-knowlage-destilation/
 ├── README.md, agent.md        Gambaran repositori dan aturan kerja
 ├── laporan/
-│   ├── draf-7-bab/            Draf terkini Bab 1 sampai 7
+│   ├── draf-7-bab/            Salinan Markdown naskah v20: Bab 1-7, halaman awal, referensi, lampiran
+│   ├── alat/                  Skrip konversi naskah DOCX ke Markdown
 │   ├── DRAF_PROPOSAL_BAB_I-III.md  Draf proposal
 │   ├── draf-bab-iv-v/         Draf hasil terdahulu
-│   └── arsip/                 Kerangka, abstrak, dan draf tahap Pure KD
+│   └── arsip/                 Draf ringkas tujuh bab 23 November, kerangka, abstrak, draf tahap Pure KD
 ├── bukti_kebutuhan/           Bukti uji KF-01 sampai KF-05 dan KNF-01
 ├── jejak_waktu/               Kronologi training, evaluasi, dan run live
 ├── log_op3_pelengkap/         Log jendela 24 run, metadata capture, catatan training teacher
@@ -172,7 +208,7 @@ skripsi-knowlage-destilation/
 │   └── lab_server/            Analisis dan verifikasi di server lab
 ├── dokumentasi/
 │   ├── model/                 Hasil dan grafik per model serta gabungan
-│   ├── 2026-10-19 ... 11-23/  Dokumentasi percobaan menurut tanggal
+│   ├── 2026-10-19 ... 11-25/  Dokumentasi percobaan dan log menurut tanggal
 │   └── INDEKS.md              Daftar percobaan dan laporan
 ├── docs/                      Keputusan (DECISIONS.md), protokol, audit dataset, runtime OP3, tutorial
 │   └── arsip/                 Catatan teknis yang sudah tidak dipakai

@@ -1,13 +1,29 @@
 # BAB 7 PENUTUP
 
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v20 (24 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+
 ## 7.1 Kesimpulan
 
-1. Sistem deteksi tiga kelas berbasis ROS 2 telah diimplementasikan pada OP3 dan menghasilkan deteksi, preview, serta log runtime. Uji kotak hitam retrospektif menyatakan KF-01, KF-02, KF-04, dan KNF-01 lulus pada 24 run, KF-03 lulus dengan catatan pada satu sesi bola bergerak, dan KF-05 lulus untuk contoh preview yang tersedia. Kelancaran preview sepanjang setiap run tidak direkam lengkap.
-2. Pada 592 gambar TEST, mAP50–95 teacher adalah 0,7800; rerata Hybrid full, supervised, dan KD murni masing-masing 0,7469, 0,7225, dan 0,6630. TEST telah digunakan sebelumnya dan temuan dibatasi konteks split tersebut.
-3. Precision, recall, dan F1 tiap model telah dihitung. F1 Hybrid pada TEST sedikit lebih rendah daripada supervised meskipun mAP50–95-nya lebih tinggi. Pada T38, F1 utama dan rerata F1 per kelas harus dibedakan karena agregasinya berbeda.
-4. Dalam pengukuran OP3 deskriptif, latensi/FPS teacher dan Hybrid adalah 96,24 ms/9,88 FPS dan 64,70 ms/13,60 FPS saat diam; saat berjalan masing-masing 95,85 ms/9,87 FPS dan 71,47 ms/12,54 FPS.
-5. CPU proses dan RSS tersedia pada kedua kondisi. CPU berada pada kisaran sekitar 1.300% satu CPU logis (81 sampai 84% dari 16 CPU logis) untuk keempat model, sehingga persentase CPU tidak membedakan model. Uji ulang offline menunjukkan bahwa angka ini banyak dipengaruhi thread pustaka aljabar linear selama pelacakan, meskipun penyebab pada run historis belum terbukti; RSS merupakan memori proses detektor. Nilai ini tidak mengukur total konsumsi sistem robot.
+Sistem deteksi objek berbasis ROS 2 Jazzy yang menjalankan *student* YOLO11 skala t hasil KD sebagai berkas .pt FP32 pada CPU komputer *onboard* OP3 telah diimplementasikan. Sistem menerima citra kamera, menerbitkan hasil deteksi bola, gawang, dan robot, menampilkan *preview*, dan mencatat data *runtime* per *frame*. Seluruh kasus uji kebutuhan lulus dengan catatan pada pelacakan dan *preview*. Berdasarkan hasil pengujian, jawaban atas rumusan masalah adalah sebagai berikut.
+
+1.  Pada 592 citra TEST, rata-rata mAP50-95 KD hibrida penuh adalah 0,7469, lebih tinggi 0,0244 ± 0,0040 daripada *supervised* (0,7225) pada ketiga pasangan *seed* dan setara dengan 95,8% *teacher* YOLO11n (0,7800); mAP50 ketiganya berada pada 0,958 sampai 0,964. Pada citra kamera OP3, keunggulan tersebut tidak konsisten. Pada jalur prediksi yang dipakai robot, mAP50-95 KD hibrida pada Set Kamera 1 adalah 0,4307, di bawah *teacher* (0,5041) dan KD murni (0,4729), sedangkan pada Set Kamera 2 KD hibrida tertinggi (0,8900), tetapi keunggulannya bergantung pada konvensi kotak gawang. Urutan model pada kamera OP3 juga berubah antara jalur validator dan jalur prediksi.
+
+2.  Pada TEST, F1 KD hibrida penuh 0,9071, *supervised* 0,9121, dan *teacher* 0,9290 pada jalur validator; pada ambang *runtime* F1 KD hibrida dan *supervised* setara (0,9334 dan 0,9337), sedikit di bawah *teacher* (0,9354). *Precision* KD hibrida lebih rendah 0,0090 daripada *supervised* dengan *recall* yang sama. Pada Set Kamera 1, F1 KD hibrida 0,6146 berada di bawah *supervised* (0,6626) dan *teacher* (0,7651) karena deteksi palsu pada 21 dari 60 *frame* tanpa objek, sedangkan pada Set Kamera 2 F1 KD hibrida tertinggi (0,9950), tetapi turun menjadi 0,6711 pada konvensi rangka gawang utuh.
+
+3.  Latensi rata-rata KD hibrida 64,70 ms dengan 13,60 FPS saat diam dan 71,47 ms dengan 12,54 FPS saat berjalan, sedangkan *teacher* 96,24 ms dengan 9,88 FPS saat diam dan 95,85 ms dengan 9,87 FPS saat berjalan. Median latensi KD hibrida 50,46 dan 59,18 ms dibanding 77,76 dan 77,03 ms pada *teacher*, sedangkan P95 KD hibrida sekitar 20 ms di bawah *teacher*. Semua model melampaui 8 FPS.
+
+4.  Penggunaan CPU proses KD hibrida dan *teacher* sekitar 1.300% satu CPU logis (81 sampai 84% dari 16 CPU logis) pada kedua kondisi, dan RSS KD hibrida 356 sampai 359 MiB dibanding 371 sampai 372 MiB pada *teacher*. Pada pengukuran ini, CPU dan RSS tidak membedakan efisiensi model secara jelas. *Replay offline* menunjukkan bahwa kombinasi pelacakan dan OpenBLAS menjadi faktor besar penggunaan CPU, tetapi jumlah *thread* pada *run* asli tidak terekam.
 
 ## 7.2 Saran
 
-Pemeriksaan lanjutan dapat menggunakan anotasi independen pada adegan dan sesi baru, serta mengulang runtime dalam kondisi dan urutan yang lebih terkendali bila dibutuhkan klaim yang lebih kuat. Arsip checkpoint, konfigurasi, dan data mentah sebaiknya dicadangkan. Pembatasan thread OpenBLAS atau penonaktifan pelacakan pada mode deteksi statis dapat diuji untuk menurunkan beban CPU, karena uji ulang offline menunjukkan pengaruh besar kedua faktor tersebut. Pembahasan akhir perlu mempertahankan keterbatasan provenance teacher, split dataset, T38, dan uji runtime.
+Saran untuk penelitian berikutnya adalah sebagai berikut.
+
+1.  Mengevaluasi model pada set *frame* kamera OP3 baru dari beberapa adegan dan sesi, dengan label yang dibuat independen dari prediksi model, sebelum memilih model untuk pemakaian di robot.
+
+2.  Menetapkan jalur inferensi yang sama dengan *runtime* robot sebagai jalur evaluasi utama sejak awal, karena urutan model pada kamera OP3 berubah antarjalur.
+
+3.  Mengulang pengukuran *runtime* dengan urutan model yang digilir dalam satu hari, mencatat jumlah *thread* PyTorch dan OpenBLAS selama *run*, serta membatasi *thread* OpenBLAS agar beban model dapat dipisahkan dari beban pelacakan.
+
+4.  Menambahkan data pelatihan dari kamera OP3, terutama gawang parsial dan *frame* tanpa objek, untuk menekan deteksi palsu.
+
+5.  Mengukur kinerja pelacakan dengan label identitas acuan dan metrik seperti MOTA atau IDF1 pada beberapa objek bergerak bila sistem akan dipakai untuk perilaku yang bergantung pada ID objek.
