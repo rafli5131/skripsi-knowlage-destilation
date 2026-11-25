@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "error": null,
+  "start_local": "2026-11-25T21:26:07+07:00",
+  "requested_duration_seconds": 10.0,
+  "elapsed_seconds_including_finalize": 10.015,
+  "encoded_frames": 100,
+  "configured_fps": 10.0,
+  "nominal_video_seconds": 10.0,
+  "repeated_previous_inference_frame": 9,
+  "first_processed_frame_sequence": 1,
+  "last_processed_frame_sequence": 135,
+  "type": "annotated_preview_output_not_desktop_screen_record"
+}

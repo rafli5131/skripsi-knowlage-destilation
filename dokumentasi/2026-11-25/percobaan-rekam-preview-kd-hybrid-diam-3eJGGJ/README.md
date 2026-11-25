@@ -11,4 +11,4 @@ Direkam 25 November 2026 sekitar pukul 20.36 WIB. Operator menyatakan objek siap
 - `screenshot_preview_awal.png`, `screenshot_preview_optimasi.png`, `klip_preview_10_detik.mp4`: turunan percobaan dan rekaman jendela utuh.
 - `manifest.json`: hash, pengaturan dan informasi video dari ffprobe.
 
-Rekaman akhir tetap tersendat pada sekitar 2,65 fps karena keterbatasan perekaman jendela melalui SSH-X; angka ini bukan FPS inferensi model. Bola, gawang parsial, dan robot tampak terdeteksi pada frame awal, tengah, dan akhir yang diperiksa; seluruh frame tidak diaudit. Confidence bukan akurasi, dan rekaman ini bukan benchmark performa atau mAP. Semua berkas disimpan lokal dan tidak diunggah.
+Rekaman akhir tetap tersendat pada sekitar 2,65 fps karena keterbatasan perekaman jendela melalui SSH-X; angka ini bukan FPS inferensi model. Bola, gawang parsial, dan robot tampak terdeteksi pada frame awal, tengah, dan akhir yang diperiksa; seluruh frame tidak diaudit. Confidence bukan akurasi, dan rekaman ini bukan benchmark performa atau mAP. Berkas disertakan dalam repositori atas permintaan pengguna.

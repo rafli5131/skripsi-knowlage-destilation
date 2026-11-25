@@ -1,0 +1,31 @@
+{
+  "purpose": "Video dokumentasi deteksi Supervised; bukan benchmark atau rekaman desktop",
+  "model": "Supervised seed 1337",
+  "checkpoint": "runs/supervised/yolo11_tiny_supervised_seed1337/weights/best.pt",
+  "checkpoint_sha256": "d41046c384c9795b7724db726a99abbbd26217ffa53c77412d5cfcf34a16e041",
+  "topic": "/thesis/image_raw",
+  "condition": "diam berdasarkan rangkaian sesi; kondisi torque dan gait tidak diverifikasi ulang saat perekaman",
+  "video": "preview_deteksi_langsung.mp4",
+  "video_sha256": "6c22d73de7c806382755b7a98111486972f9fb038914db513419dd86dcb59490",
+  "resolution": "640x480",
+  "recorder": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-25T21:26:07+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.015,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 9,
+    "first_processed_frame_sequence": 1,
+    "last_processed_frame_sequence": 135,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "inspection": "Tiga kelas terlihat pada screenshot pada detik 2, 5, 8; bukan audit seluruh frame",
+  "limitations": [
+    "Robot dan gawang tampak terpotong pada tepi gambar",
+    "Teks confidence bola sebagian melewati latar label dan kurang jelas",
+    "Confidence bukan akurasi atau mAP"
+  ]
+}

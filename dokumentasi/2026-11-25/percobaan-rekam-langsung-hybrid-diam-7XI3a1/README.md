@@ -6,4 +6,4 @@ Pada 25 November 2026 pukul 20.44 WIB, operator mengonfirmasi mulai merekam dala
 
 Video terverifikasi 640×480, 10 detik, 100 frame pada 10 fps. Pencatat melaporkan 11 frame mengulang hasil inferensi sebelumnya; durasi hingga finalisasi 10,016 detik. FPS berkas tidak sama dengan FPS inferensi. Sebagai pembanding terbatas, perekaman jendela melalui SSH-X sebelumnya dalam kondisi lain mencapai rata-rata 2,65 fps; ini bukan benchmark setara.
 
-`recording_stats.json` memuat hitungan dan status, `manifest.json` menyimpan metadata dan hash, dan `ffmpeg.log` adalah log encoder. Video dan gambar tetap lokal. Confidence bukan akurasi; sesi ini tidak menghasilkan mAP atau metrik pengujian skripsi.
+`recording_stats.json` memuat hitungan dan status, `manifest.json` menyimpan metadata dan hash, dan `ffmpeg.log` adalah log encoder. Video dan gambar tersedia dalam repositori. Confidence bukan akurasi; sesi ini tidak menghasilkan mAP atau metrik pengujian skripsi.

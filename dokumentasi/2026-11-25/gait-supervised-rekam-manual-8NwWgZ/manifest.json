@@ -1,0 +1,72 @@
+{
+  "description": "Gait Supervised untuk rekaman manual operator di laptop",
+  "model": "Supervised seed 1337",
+  "condition": "gait, operator mendampingi",
+  "duration_seconds": 30.003,
+  "gait_guard": {
+    "start_utc": "2026-11-25T14:34:09.991602+00:00",
+    "duration_requested_sec": 30.0,
+    "limit_counts": 2,
+    "manual_laptop_recording": true,
+    "head_commanded": false,
+    "gait_start_sent": true,
+    "preview_pid": 17919,
+    "modules_before": {
+      "head_pan": "none",
+      "head_tilt": "none",
+      "l_hip_yaw": "walking_module",
+      "l_hip_roll": "walking_module",
+      "l_hip_pitch": "walking_module",
+      "l_knee": "walking_module",
+      "l_ank_pitch": "walking_module",
+      "l_ank_roll": "walking_module",
+      "r_hip_yaw": "walking_module",
+      "r_hip_roll": "walking_module",
+      "r_hip_pitch": "walking_module",
+      "r_knee": "walking_module",
+      "r_ank_pitch": "walking_module",
+      "r_ank_roll": "walking_module"
+    },
+    "gait_start_command_utc": "2026-11-25T14:34:12.255262+00:00",
+    "gait_start_ack_utc": "2026-11-25T14:34:12.256371+00:00",
+    "status": "completed",
+    "stop_command_utc": "2026-11-25T14:34:42.259060+00:00",
+    "stop_ack_utc": "2026-11-25T14:34:42.267505+00:00",
+    "max_head_delta_counts": 2,
+    "head_violation": false,
+    "finish_utc": "2026-11-25T14:34:42.267537+00:00"
+  },
+  "post_stop": {
+    "status": "read_only_completed",
+    "samples": 298,
+    "head_last_counts": {
+      "head_pan": 2191,
+      "head_tilt": 1792
+    },
+    "head_range_counts": {
+      "head_pan": 2,
+      "head_tilt": 1
+    },
+    "leg_range_rad": {
+      "l_hip_yaw": 0.00153,
+      "l_hip_roll": 0.00153,
+      "l_hip_pitch": 0.00153,
+      "l_knee": 0.00153,
+      "l_ank_pitch": 0.00153,
+      "l_ank_roll": 0.00153,
+      "r_hip_yaw": 0.00307,
+      "r_hip_roll": 0.00153,
+      "r_hip_pitch": 0.00153,
+      "r_knee": 0.00153,
+      "r_ank_pitch": 0.00153,
+      "r_ank_roll": 0.00153
+    }
+  },
+  "leg_range_rad_including_preflight": {
+    "l_hip_pitch_rad": 0.3099,
+    "l_knee_rad": 0.6584,
+    "r_hip_pitch_rad": 0.3116,
+    "r_knee_rad": 0.6673
+  },
+  "video": "Video manual berada di laptop operator dan belum tersedia atau diverifikasi di robot"
+}
