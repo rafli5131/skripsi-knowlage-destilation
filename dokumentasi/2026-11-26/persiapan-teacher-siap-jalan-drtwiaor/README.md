@@ -1,0 +1,7 @@
+# Persiapan servo untuk video Teacher kondisi diam
+
+Pada 26 November 2026 operator meminta servo aktif dan pose siap jalan sebelum rekaman diam; operator menegaskan badan dan kepala ditopang serta area kosong. Daya bus diaktifkan pada 12,6 V dan 20 servo terdeteksi, dengan torque awal mati dan hardware error 0. Manager dimulai tanpa pose awal otomatis atau reconnect otomatis. Manager mengirim torque-on saat inisialisasi; status torque setiap servo tidak dibaca ulang secara langsung karena manager memegang port.
+
+Posisi awal kepala ID 19/20 adalah 2020/1887 count. Setelah startup manager, 35 sampel awal menunjukkan posisi kepala sama dengan acuan dan modul kepala `none`. Pemetaan kaki selesai dengan status `mapped_inspection_required`. Saat bahu disiapkan, guard count menghentikan proses setelah maksimum perubahan pan dua dan tilt lima count; stop dikirim. Transisi pose mungkin tidak berhenti seketika. Pemetaan kaki dan bahu ke `walking_module` sudah terjadi. Pada pemeriksaan berikutnya, lima detik telemetry menunjukkan kepala terakhir 2021/1886 count, rentang pan/tilt masing-masing satu count, dan kaki relatif stabil. Operator lalu menyatakan robot stabil, arah kamera sesuai, dan menyetujui rekaman diam. Tidak ada perintah start gait.
+
+`daya_bus.json`, `pengaman_kaki.json`, `pengaman_bahu.json`, dan `manifest.json` menyimpan bukti persiapan. Guard bahu tetap berstatus gagal; pemeriksaan lanjutan dan konfirmasi operator dicatat terpisah, bukan mengubah hasil guard itu.

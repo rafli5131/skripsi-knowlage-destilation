@@ -1,0 +1,31 @@
+{
+  "purpose": "Dokumentasi keluaran preview KD Murni, bukan screen record desktop atau benchmark",
+  "model": "KD Murni seed 42",
+  "checkpoint": "models/weights/kd_student_best.pt",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "topic": "/thesis/image_raw",
+  "condition": "Operator mengonfirmasi pose stabil dan meminta servo nyala tanpa berjalan; status torque per servo tidak dibaca ulang saat manager menguasai bus",
+  "video": "preview_deteksi_langsung.mp4",
+  "video_sha256": "e46a0dc6e00cc075fca43c9d257f2033550404b8d350ce1dac108d2eb8ca399c",
+  "resolution": "640x480",
+  "recording": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-26T18:31:35+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.128,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 8,
+    "first_processed_frame_sequence": 1,
+    "last_processed_frame_sequence": 136,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "preparation": "../persiapan-kd-murni-siap-jalan-gb6cu55v/README.md",
+  "inspection": "ball, gawang parsial, robot terlihat terdeteksi pada cuplikan 2, 5, dan 8 detik; tidak semua frame diaudit",
+  "limitations": [
+    "Teks confidence bola sebagian melewati latar label dan kurang jelas",
+    "Confidence bukan akurasi atau mAP"
+  ]
+}

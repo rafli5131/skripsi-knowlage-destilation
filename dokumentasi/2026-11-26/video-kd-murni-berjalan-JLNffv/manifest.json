@@ -1,0 +1,90 @@
+{
+  "description": "Percobaan video KD Murni berjalan terhenti oleh pengaman; bukan benchmark",
+  "model": "KD Murni seed 42",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "condition": "Gait dimulai setelah konfirmasi operator dan dihentikan lebih awal",
+  "gait_start_ack_to_stop_command_seconds": 0.99,
+  "gait_guard": {
+    "started_utc": "2026-11-26T11:36:07.437031+00:00",
+    "limit_counts": 2,
+    "preview_pid": 8677,
+    "record_dir": "/home/humanoid/bre_skripsi/dokumentasi/2026-11-26/video-kd-murni-berjalan-JLNffv/video",
+    "head_commanded": false,
+    "gait_start_sent": true,
+    "modules_before": {
+      "head_pan": "none",
+      "head_tilt": "none",
+      "l_hip_yaw": "walking_module",
+      "l_hip_roll": "walking_module",
+      "l_hip_pitch": "walking_module",
+      "l_knee": "walking_module",
+      "l_ank_pitch": "walking_module",
+      "l_ank_roll": "walking_module",
+      "r_hip_yaw": "walking_module",
+      "r_hip_roll": "walking_module",
+      "r_hip_pitch": "walking_module",
+      "r_knee": "walking_module",
+      "r_ank_pitch": "walking_module",
+      "r_ank_roll": "walking_module"
+    },
+    "gait_start_command_utc": "2026-11-26T11:36:08.571145+00:00",
+    "gait_start_ack_utc": "2026-11-26T11:36:08.572442+00:00",
+    "record_trigger_utc": "2026-11-26T11:36:08.572481+00:00",
+    "status": "failed",
+    "error": "RuntimeError: Kepala melewati dua count; gait dihentikan",
+    "stop_command_utc": "2026-11-26T11:36:09.562281+00:00",
+    "stop_ack_utc": "2026-11-26T11:36:09.565046+00:00",
+    "max_head_delta_counts": 3,
+    "head_violation": true,
+    "finished_utc": "2026-11-26T11:36:09.565078+00:00"
+  },
+  "recording": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-26T18:36:08+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.016,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 9,
+    "first_processed_frame_sequence": 517,
+    "last_processed_frame_sequence": 645,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "post_stop": {
+    "status": "read_only_completed",
+    "samples": 304,
+    "head_last_counts": {
+      "head_pan": 2190,
+      "head_tilt": 1792
+    },
+    "head_range_counts": {
+      "head_pan": 1,
+      "head_tilt": 2
+    },
+    "leg_range_rad": {
+      "l_hip_yaw": 0.00153,
+      "l_hip_roll": 0.00307,
+      "l_hip_pitch": 0.00153,
+      "l_knee": 0.00153,
+      "l_ank_pitch": 0.0,
+      "l_ank_roll": 0.00153,
+      "r_hip_yaw": 0.00153,
+      "r_hip_roll": 0.00153,
+      "r_hip_pitch": 0.00153,
+      "r_knee": 0.00153,
+      "r_ank_pitch": 0.00153,
+      "r_ank_roll": 0.00153
+    }
+  },
+  "head_samples_count": 2,
+  "video_sha256": "ad42a4a16e08708ef6e655cba2197c95dc78ce5712b671f7e753fe576f524ed1",
+  "resolution": "640x480",
+  "valid_as_full_walking_video": false,
+  "notes": [
+    "Recorder berlangsung 10 detik sementara gait hanya sekitar satu detik",
+    "Dua cuplikan bukan audit seluruh video",
+    "Tidak ada perintah posisi kepala dari guard"
+  ]
+}

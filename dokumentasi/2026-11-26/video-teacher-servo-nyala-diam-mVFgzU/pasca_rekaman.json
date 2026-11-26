@@ -1,0 +1,35 @@
+{
+  "status": "read_only_completed",
+  "samples": 313,
+  "head_last_counts": {
+    "head_pan": 2021,
+    "head_tilt": 1886
+  },
+  "head_max_delta_from_initial": {
+    "head_pan": 1,
+    "head_tilt": 1
+  },
+  "head_range_counts": {
+    "head_pan": 1,
+    "head_tilt": 1
+  },
+  "leg_max_range_rad": 0.0030694603321934633,
+  "modules": {
+    "head_pan": "none",
+    "head_tilt": "none",
+    "l_hip_yaw": "walking_module",
+    "l_hip_roll": "walking_module",
+    "l_hip_pitch": "walking_module",
+    "l_knee": "walking_module",
+    "l_ank_pitch": "walking_module",
+    "l_ank_roll": "walking_module",
+    "r_hip_yaw": "walking_module",
+    "r_hip_roll": "walking_module",
+    "r_hip_pitch": "walking_module",
+    "r_knee": "walking_module",
+    "r_ank_pitch": "walking_module",
+    "r_ank_roll": "walking_module",
+    "l_sho_pitch": "walking_module",
+    "r_sho_pitch": "walking_module"
+  }
+}

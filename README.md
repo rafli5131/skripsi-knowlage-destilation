@@ -6,6 +6,8 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 
 ## Status terkini
 
+**Pembaruan dokumentasi 26 November 2026.** Video tambahan tersedia untuk KD Murni [diam](dokumentasi/2026-11-26/video-kd-murni-servo-nyala-diam-DEtVov/README.md) dan [berjalan](dokumentasi/2026-11-26/video-kd-murni-berjalan-ulang-UsAdhG/README.md), serta Teacher [diam](dokumentasi/2026-11-26/video-teacher-servo-nyala-diam-mVFgzU/README.md) dan [berjalan](dokumentasi/2026-11-26/video-teacher-berjalan-rI3JhV/README.md). Video Teacher berjalan memakai deteksi asli tanpa estimasi gawang; cuplikan awal tidak menampilkan kotak gawang. Rincian dan keterbatasan: [log 26 November](dokumentasi/2026-11-26/LOG_PROGRES_SKRIPSI.md). Ini dokumentasi tambahan, bukan benchmark.
+
 **Status 25 November 2026.** Eksperimen utama skripsi sudah selesai. Naskah skripsi tujuh bab sudah sampai versi **v30** (25 November 2026, 116 halaman) dengan empat rumusan masalah yang membandingkan KD hibrida, *supervised*, dan *teacher*, semua gambar terisi, dan Daftar Referensi berformat seragam Panduan Skripsi FILKOM v3.0. Pekerjaan naskah yang tersisa berupa isian penulis dan konfirmasi pembimbing; lihat tabel di bawah dan [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md). Video dokumentasi tambahan tersedia untuk KD Hybrid pada kondisi [diam](dokumentasi/2026-11-25/percobaan-rekam-langsung-hybrid-diam-7XI3a1/README.md) dan [gait](dokumentasi/2026-11-25/video-hybrid-berjalan-siap-CzQtsf/README.md), serta Supervised pada kondisi [diam](dokumentasi/2026-11-25/video-supervised-diam-5EaLDf/README.md) dan [gait](dokumentasi/2026-11-25/video-supervised-berjalan-J3VBar/README.md). Video-video ini bukan benchmark tambahan.
 
 | No | Pelaku | Pekerjaan yang tersisa | Rujukan |

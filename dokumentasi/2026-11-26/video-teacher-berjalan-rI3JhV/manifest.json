@@ -1,0 +1,41 @@
+{
+  "model": "Teacher YOLO11n FP32",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "confidence": 0.25,
+  "nms_iou": 0.45,
+  "input_size": 640,
+  "camera_topic": "/thesis/image_raw",
+  "head_torque_readback": "tidak tersedia melalui ROS; operator memastikan menahan setelah perintah torque-on",
+  "goal_estimation": "tidak aktif",
+  "recording": "annotated preview output, not desktop screen recording",
+  "files": {
+    "video/preview_deteksi_langsung.mp4": {
+      "sha256": "442ef8633722d7bf06aa33ac690009de7909171071dfb0287d65b0a9465fc0d5",
+      "bytes": 3803362
+    },
+    "video/recording_stats.json": {
+      "sha256": "e81caba8e2dcabc1e9df5da2029efbc8702c4c4ff26844f9fd0f13e704f7cd4a",
+      "bytes": 449
+    },
+    "guard/gait_guard.json": {
+      "sha256": "c8b9214f561d22ee988092c31df7e5015e82207e91aafe7351d543b1f3020b0e",
+      "bytes": 1690
+    },
+    "guard/head_samples.csv": {
+      "sha256": "406bb0d04b1babe7b5bf00256ee76ce27fdcd011f631db92f39a57528ac1d67d",
+      "bytes": 1946
+    },
+    "screenshot_awal.png": {
+      "sha256": "fa2d03966484985a6c3db4b0819a6e3f478f192e954b4c85fc97babea3769abe",
+      "bytes": 467657
+    },
+    "screenshot_tengah.png": {
+      "sha256": "0279d3109b1ce4db106a07193321b9a71e1984c849fd6d7b426745302e147892",
+      "bytes": 463923
+    },
+    "screenshot_akhir.png": {
+      "sha256": "c269b634cd2ab805f6de82b8c530712f1a0aa125a927da46835cdfbd8f23292b",
+      "bytes": 434292
+    }
+  }
+}

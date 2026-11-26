@@ -1,0 +1,24 @@
+{
+  "model_preview": "KD Murni seed 42",
+  "opencr_power": 1,
+  "head_before_start_counts": {
+    "19": 2191,
+    "20": 1792
+  },
+  "head_after_arm_last_counts": {
+    "19": 2191,
+    "20": 1792
+  },
+  "head_max_change_counts_from_initial": {
+    "19": 2,
+    "20": 1
+  },
+  "old_leg_guard": "tripped at actual two counts; stop sent; walking module mapping already occurred",
+  "arm_guard": "mapped_inspection_required; count-aware guard with limit two",
+  "head_modules": "none",
+  "legs_and_shoulder_modules": "walking_module",
+  "gait_start_sent": false,
+  "video_recording_started": false,
+  "torque_note": "Manager initialization commands torque on; per-servo post-start torque not independently read while manager owns bus",
+  "operator_pose_status": "confirmed visually by operator: pose siap dan kamera sesuai"
+}

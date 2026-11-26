@@ -1,0 +1,65 @@
+{
+  "purpose": "Dokumentasi video preview Teacher kondisi diam; bukan benchmark",
+  "model": "Teacher YOLO11n",
+  "checkpoint_sha256": "e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c",
+  "topic": "/thesis/image_raw",
+  "confidence_threshold": 0.25,
+  "iou_nms": 0.45,
+  "imgsz": 640,
+  "condition": "Operator menyetujui rekaman diam setelah pemeriksaan pose; tidak ada start gait",
+  "torque_note": "Manager sends torque-on at initialization; per-servo torque not independently read while bus held by manager",
+  "preview": "Deteksi Teacher dan overlay estimasi gawang dibedakan; confidence terakhir bukan prediksi saat ini",
+  "recording": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-26T20:48:07+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.033,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 12,
+    "first_processed_frame_sequence": 1,
+    "last_processed_frame_sequence": 102,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "post_recording": {
+    "status": "read_only_completed",
+    "samples": 313,
+    "head_last_counts": {
+      "head_pan": 2021,
+      "head_tilt": 1886
+    },
+    "head_max_delta_from_initial": {
+      "head_pan": 1,
+      "head_tilt": 1
+    },
+    "head_range_counts": {
+      "head_pan": 1,
+      "head_tilt": 1
+    },
+    "leg_max_range_rad": 0.0030694603321934633,
+    "modules": {
+      "head_pan": "none",
+      "head_tilt": "none",
+      "l_hip_yaw": "walking_module",
+      "l_hip_roll": "walking_module",
+      "l_hip_pitch": "walking_module",
+      "l_knee": "walking_module",
+      "l_ank_pitch": "walking_module",
+      "l_ank_roll": "walking_module",
+      "r_hip_yaw": "walking_module",
+      "r_hip_roll": "walking_module",
+      "r_hip_pitch": "walking_module",
+      "r_knee": "walking_module",
+      "r_ank_pitch": "walking_module",
+      "r_ank_roll": "walking_module",
+      "l_sho_pitch": "walking_module",
+      "r_sho_pitch": "walking_module"
+    }
+  },
+  "preparation": "../persiapan-teacher-siap-jalan-drtwiaor/README.md",
+  "video_sha256": "e713780ebc69f56b27075dad4fe81364bcd7b3a5843bf1c189d22f859a881ba0",
+  "resolution": "640x480",
+  "inspection": "Pada cuplikan 2, 5, 8 detik, ketiga objek ditandai deteksi aktual; seluruh frame belum diaudit"
+}

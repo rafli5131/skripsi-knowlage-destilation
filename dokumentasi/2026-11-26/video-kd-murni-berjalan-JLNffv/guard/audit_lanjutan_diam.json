@@ -1,0 +1,27 @@
+{
+  "type": "read_only",
+  "anchor_counts": {
+    "head_pan": 2191,
+    "head_tilt": 1792
+  },
+  "status": "completed",
+  "samples": 626,
+  "counts_min": {
+    "head_pan": 2190,
+    "head_tilt": 1792
+  },
+  "counts_max": {
+    "head_pan": 2191,
+    "head_tilt": 1793
+  },
+  "max_delta_from_anchor": {
+    "head_pan": 1,
+    "head_tilt": 1
+  },
+  "leg_max_range_rad": 0.003067961572265625,
+  "head_modules": {
+    "head_pan": "none",
+    "head_tilt": "none"
+  },
+  "legs_ready": true
+}

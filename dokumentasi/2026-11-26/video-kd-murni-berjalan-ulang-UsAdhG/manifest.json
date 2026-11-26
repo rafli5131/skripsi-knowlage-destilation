@@ -1,0 +1,108 @@
+{
+  "description": "Video deteksi KD Murni saat gait; bukan screen record desktop atau benchmark",
+  "model": "KD Murni seed 42",
+  "checkpoint_sha256": "2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3",
+  "topic": "/thesis/image_raw",
+  "condition": "gait melangkah di tempat; operator mengonfirmasi robot siap dan mendampingi",
+  "gait": {
+    "started_utc": "2026-11-26T11:39:58.002499+00:00",
+    "limit_counts": 2,
+    "preview_pid": 9389,
+    "record_dir": "/home/humanoid/bre_skripsi/dokumentasi/2026-11-26/video-kd-murni-berjalan-ulang-UsAdhG/video",
+    "head_commanded": false,
+    "gait_start_sent": true,
+    "modules_before": {
+      "head_pan": "none",
+      "head_tilt": "none",
+      "l_hip_yaw": "walking_module",
+      "l_hip_roll": "walking_module",
+      "l_hip_pitch": "walking_module",
+      "l_knee": "walking_module",
+      "l_ank_pitch": "walking_module",
+      "l_ank_roll": "walking_module",
+      "r_hip_yaw": "walking_module",
+      "r_hip_roll": "walking_module",
+      "r_hip_pitch": "walking_module",
+      "r_knee": "walking_module",
+      "r_ank_pitch": "walking_module",
+      "r_ank_roll": "walking_module"
+    },
+    "gait_start_command_utc": "2026-11-26T11:39:58.261636+00:00",
+    "gait_start_ack_utc": "2026-11-26T11:39:58.269857+00:00",
+    "record_trigger_utc": "2026-11-26T11:39:58.269972+00:00",
+    "recording_stats": {
+      "status": "completed",
+      "error": null,
+      "start_local": "2026-11-26T18:39:58+07:00",
+      "requested_duration_seconds": 10.0,
+      "elapsed_seconds_including_finalize": 10.015,
+      "encoded_frames": 100,
+      "configured_fps": 10.0,
+      "nominal_video_seconds": 10.0,
+      "repeated_previous_inference_frame": 6,
+      "first_processed_frame_sequence": 385,
+      "last_processed_frame_sequence": 521,
+      "type": "annotated_preview_output_not_desktop_screen_record"
+    },
+    "status": "completed",
+    "stop_command_utc": "2026-11-26T11:40:08.368898+00:00",
+    "stop_ack_utc": "2026-11-26T11:40:08.372446+00:00",
+    "max_head_delta_counts": 2,
+    "head_violation": false,
+    "finished_utc": "2026-11-26T11:40:08.372479+00:00"
+  },
+  "recording": {
+    "status": "completed",
+    "error": null,
+    "start_local": "2026-11-26T18:39:58+07:00",
+    "requested_duration_seconds": 10.0,
+    "elapsed_seconds_including_finalize": 10.015,
+    "encoded_frames": 100,
+    "configured_fps": 10.0,
+    "nominal_video_seconds": 10.0,
+    "repeated_previous_inference_frame": 6,
+    "first_processed_frame_sequence": 385,
+    "last_processed_frame_sequence": 521,
+    "type": "annotated_preview_output_not_desktop_screen_record"
+  },
+  "post_stop": {
+    "status": "read_only_completed",
+    "samples": 313,
+    "head_last_counts": {
+      "head_pan": 2190,
+      "head_tilt": 1792
+    },
+    "head_range_counts": {
+      "head_pan": 1,
+      "head_tilt": 1
+    },
+    "leg_range_rad": {
+      "l_hip_yaw": 0.00153,
+      "l_hip_roll": 0.00153,
+      "l_hip_pitch": 0.00153,
+      "l_knee": 0.00153,
+      "l_ank_pitch": 0.00153,
+      "l_ank_roll": 0.00153,
+      "r_hip_yaw": 0.00153,
+      "r_hip_roll": 0.00153,
+      "r_hip_pitch": 0.00153,
+      "r_knee": 0.00153,
+      "r_ank_pitch": 0.00153,
+      "r_ank_roll": 0.00153
+    }
+  },
+  "leg_sample_ranges_rad": {
+    "l_hip_pitch_rad": 0.2823,
+    "l_knee_rad": 0.6124,
+    "r_hip_pitch_rad": 0.2716,
+    "r_knee_rad": 0.5875
+  },
+  "video_sha256": "0651b8025328041f055b8e9da39b235afb585349f1938ec4ca848581686c103c",
+  "video_resolution": "640x480",
+  "previous_attempt": "../video-kd-murni-berjalan-JLNffv/README.md",
+  "inspection": "ball, gawang parsial, robot terlihat pada cuplikan 2, 5, dan 8 detik; bukan audit seluruh frame",
+  "limitations": [
+    "label confidence bola sebagian melewati latar label dan kurang jelas",
+    "confidence bukan akurasi atau mAP"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "model_preview": "Teacher YOLO11n",
+  "operator_support_and_clear_area": true,
+  "head_initial_counts": {
+    "19": 2020,
+    "20": 1887
+  },
+  "leg_guard_status": "mapped_inspection_required",
+  "shoulder_guard_status": "failed; max tilt change 5 counts; stop sent",
+  "post_stop_last_head_counts": {
+    "19": 2021,
+    "20": 1886
+  },
+  "post_stop_head_range_counts": {
+    "19": 1,
+    "20": 1
+  },
+  "head_modules": "none",
+  "legs_and_shoulders_modules": "walking_module",
+  "operator_confirmed_stable_and_camera": true,
+  "gait_start_sent": false,
+  "torque_note": "Manager sends torque-on at initialization; per-servo torque was not independently read after manager acquired bus"
+}

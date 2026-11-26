@@ -2,6 +2,11 @@
 
 Dokumentasi terindeks untuk checkpoint `teacher_fp32`. SHA-256 checkpoint: `e05b2b21f7faa68f65671f0aaae37ad962aa5e25c6b8b26853fd0b389d420b8c`. Sumber tabel dan run: [T38](../../../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) dan T36/T37. Tidak ada pengujian baru dalam pembuatan folder ini.
 
+## Video dokumentasi 26 November 2026
+
+- [Teacher diam](../../2026-11-26/video-teacher-servo-nyala-diam-mVFgzU/README.md) — memuat overlay estimasi gawang yang diberi label dan bukan deteksi model.
+- [Teacher berjalan](../../2026-11-26/video-teacher-berjalan-rI3JhV/README.md) — deteksi asli tanpa overlay estimasi; cuplikan awal tidak menampilkan kotak gawang. Video, statistik, cuplikan, dan data guard tersedia pada halaman masing-masing. Ini bukan benchmark.
+
 ## Akurasi dataset TEST
 
 Evaluasi pada 592 gambar dataset TEST, berbeda dari frame kamera OP3. Nilai teacher memakai satu checkpoint; tiga model student memakai **rerata tiga seed** (42, 1337, 2025), bukan hanya checkpoint OP3 yang menjadi judul halaman ini. F1 dihitung dari precision dan recall makro. Sumber: [T05](../../../analisis_performa/tabel/T05_akurasi_test_keseluruhan.md) dan [T30](../../../analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md).
@@ -47,7 +52,7 @@ Sumber dan rincian pengukuran waktu: [T35](../../../analisis_performa/tabel/T35_
 
 [Ringkasan ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_teacher_id.png) · [Overview EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/08_ringkasan_teacher_en.png) · [Garis waktu ID](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_teacher_id.png) · [Timeline EN](../../2026-11-09/visualisasi-tambahan-empat-model/grafik-final/09_garis_waktu_teacher_en.png) · [Screenshot contoh](../../2026-11-09/visualisasi-tambahan-empat-model/media/teacher_berjalan_u1_sesudah.png)
 
-Screenshot berasal dari frame sesudah jendela pengukuran berjalan, bukan bukti gerak dari gambar tunggal. Video, bila ada, adalah sesi Supervised lain dengan kondisi fisik `unknown`. [Indeks empat model](../README.md).
+Screenshot berasal dari frame sesudah jendela pengukuran berjalan, bukan bukti gerak dari gambar tunggal. Video Teacher tambahan tersedia pada bagian video di atas; video Supervised lama berasal dari sesi berbeda. [Indeks empat model](../README.md).
 
 ## Grafik garis kontinu (11 November 2026)
 

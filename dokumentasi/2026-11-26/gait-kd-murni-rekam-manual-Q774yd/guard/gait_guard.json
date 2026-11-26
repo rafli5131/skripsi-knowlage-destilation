@@ -1,0 +1,33 @@
+{
+  "start_utc": "2026-11-26T11:43:03.427984+00:00",
+  "duration_requested_sec": 30.0,
+  "limit_counts": 2,
+  "manual_laptop_recording": true,
+  "head_commanded": false,
+  "gait_start_sent": true,
+  "preview_pid": 9389,
+  "modules_before": {
+    "head_pan": "none",
+    "head_tilt": "none",
+    "l_hip_yaw": "walking_module",
+    "l_hip_roll": "walking_module",
+    "l_hip_pitch": "walking_module",
+    "l_knee": "walking_module",
+    "l_ank_pitch": "walking_module",
+    "l_ank_roll": "walking_module",
+    "r_hip_yaw": "walking_module",
+    "r_hip_roll": "walking_module",
+    "r_hip_pitch": "walking_module",
+    "r_knee": "walking_module",
+    "r_ank_pitch": "walking_module",
+    "r_ank_roll": "walking_module"
+  },
+  "gait_start_command_utc": "2026-11-26T11:43:06.621772+00:00",
+  "gait_start_ack_utc": "2026-11-26T11:43:06.628508+00:00",
+  "status": "completed",
+  "stop_command_utc": "2026-11-26T11:43:36.631447+00:00",
+  "stop_ack_utc": "2026-11-26T11:43:36.637035+00:00",
+  "max_head_delta_counts": 2,
+  "head_violation": false,
+  "finish_utc": "2026-11-26T11:43:36.637066+00:00"
+}

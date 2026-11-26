@@ -1,0 +1,9 @@
+{
+  "started_at_utc": "2026-11-26T13:44:59.034673+00:00",
+  "operation": "power_on",
+  "controller_model": 29696,
+  "power_before": 0,
+  "input_voltage_v": 12.6,
+  "power_after": 1,
+  "status": "completed"
+}

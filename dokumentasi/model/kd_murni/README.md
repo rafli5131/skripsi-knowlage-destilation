@@ -2,6 +2,11 @@
 
 Dokumentasi terindeks untuk checkpoint `kd_seed42`. SHA-256 checkpoint: `2da0c0e58a5c1884358fe814f8992cda19bb7b58f292edc15f53b9081b6129c3`. Sumber tabel dan run: [T38](../../../analisis_performa/tabel/T38_akurasi_op3_empat_model_260.md) dan T36/T37. Tidak ada pengujian baru dalam pembuatan folder ini.
 
+## Video dokumentasi 26 November 2026
+
+- [KD Murni diam](../../2026-11-26/video-kd-murni-servo-nyala-diam-DEtVov/README.md) dan [berjalan](../../2026-11-26/video-kd-murni-berjalan-ulang-UsAdhG/README.md).
+- [Percobaan berjalan pertama](../../2026-11-26/video-kd-murni-berjalan-JLNffv/README.md) terhenti oleh pengaman dan disimpan terpisah. Video adalah dokumentasi tambahan, bukan benchmark.
+
 ## Akurasi dataset TEST
 
 Evaluasi pada 592 gambar dataset TEST, berbeda dari frame kamera OP3. Nilai teacher memakai satu checkpoint; tiga model student memakai **rerata tiga seed** (42, 1337, 2025), bukan hanya checkpoint OP3 yang menjadi judul halaman ini. F1 dihitung dari precision dan recall makro. Sumber: [T05](../../../analisis_performa/tabel/T05_akurasi_test_keseluruhan.md) dan [T30](../../../analisis_performa/tabel/T30_kd_hybrid_test_berpasangan.md).
