@@ -1,6 +1,6 @@
 # DAFTAR REFERENSI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v30 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v31 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Addufairi, M.A.N. dan Setyawan, G.E., 2026. Deteksi objek manusia pada robot humanoid menggunakan YOLOv11. *Jurnal Pengembangan Teknologi Informasi dan Ilmu Komputer*, \[online\] 10(1). Tersedia di: \<https://j-ptiik.ub.ac.id/index.php/j-ptiik/article/view/15887\> \[Diakses 1 September 2026\].
 
@@ -106,9 +106,9 @@ ROBOTIS, n.d.d. *U2D2 e-Manual*. \[online\] Tersedia di: \<https://emanual.robot
 
 Romero, A., Ballas, N., Kahou, S.E., Chassang, A., Gatta, C. dan Bengio, Y., 2015. FitNets: hints for thin deep nets. Dalam: *3rd International Conference on Learning Representations (ICLR 2015)*. San Diego, Amerika Serikat, 7-9 Mei 2015. s.l.: s.n. Tersedia di: \<https://arxiv.org/abs/1412.6550\> \[Diakses 1 September 2026\].
 
-Sabaghian, M., Keyvanrad, M.A. dan Moghadami, S.M., 2025. *A novel compression framework for YOLOv8: achieving real-time aerial object detection on edge devices via structured pruning and channel-wise distillation*. \[pracetak\] arXiv:2509.12918v1. Tersedia di: \<https://arxiv.org/abs/2509.12918\> \[Diakses 1 September 2026\].
+Sabaghian, M., Keyvanrad, M.A. dan Moghadami, S.M., 2025. *A novel compression framework for YOLOv8: achieving real-time aerial object detection on edge devices via structured pruning and channel-wise distillation*. \[pracetak\] arXiv:2509.12918v3. Tersedia di: \<https://arxiv.org/abs/2509.12918v3\> \[Diakses 27 November 2026\].
 
-Saltık, A.O., Voigt, M., Modak, S., Beckworth, M. dan Stein, A., 2025. *Improving lightweight weed detection via knowledge distillation*. \[pracetak\] arXiv:2507.12344v1. Tersedia di: \<https://arxiv.org/abs/2507.12344\> \[Diakses 1 September 2026\].
+Saltık, A.O., Voigt, M., Modak, S., Beckworth, M. dan Stein, A., 2025. Improving lightweight weed detection via knowledge distillation. Dalam: *Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops*. Honolulu, Amerika Serikat, 19-20 Oktober 2025. s.l.: IEEE. pp.7219-7228.
 
 Setyawan, G.E., Widasari, E.R., Prasetio, B.H., Umar, Y.P. dan Adipratama, I.R., 2026. Augmented haar cascade classifier for real-time ball detection in humanoid robots under dynamic environments. *International Journal of Advances in Intelligent Informatics*, 12(1), pp.231-246.
 

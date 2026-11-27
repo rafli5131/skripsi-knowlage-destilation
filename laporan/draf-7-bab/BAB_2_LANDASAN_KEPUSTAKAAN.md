@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v30 (25 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v31 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -315,9 +315,9 @@ Keterangan:
 
 ### 2.2.8 Metrik Kinerja *Runtime*
 
-Waktu eksekusi pada komputer bersifat nondeterministik. Hoefler dan Belli (2015) menganjurkan agar hasil nondeterministik dilaporkan beserta selang kepercayaannya, dan agar data tidak diasumsikan berdistribusi normal tanpa pemeriksaan diagnostik. MLPerf memakai latensi persentil ke-90 sebagai metrik skenario *single-stream* (Reddi, et al., 2020).
+Waktu eksekusi pada komputer bersifat nondeterministik. Hoefler dan Belli (2015, pp. 4-5) menganjurkan agar hasil nondeterministik dilaporkan beserta selang kepercayaannya, dan agar data tidak diasumsikan berdistribusi normal tanpa pemeriksaan diagnostik. Ukuran nonparametrik seperti median dan persentil lain tidak mengandaikan bentuk distribusi tertentu, dan persentil selain median diperlukan untuk persoalan seperti latensi terburuk (Hoefler dan Belli, 2015, pp. 5-6). MLPerf memakai latensi persentil ke-90 sebagai metrik skenario *single-stream* (Reddi, et al., 2020).
 
-Penelitian ini melaporkan rata-rata, median, dan persentil ke-95 latensi. Laju pemrosesan dinyatakan sebagai FPS efektif, yaitu jumlah selang antar-*frame* terproses dibagi rentang *timestamp* kamera dalam *measurement window* (Persamaan 2.15). Penggunaan sumber daya dinyatakan dari penggunaan CPU dan memori proses detektor, dengan definisi operasional pada Bab 3.
+Penelitian ini melaporkan rata-rata, median, dan persentil ke-95 latensi; alasan pemilihannya dijelaskan pada Subbab 3.2.5. Laju pemrosesan dinyatakan sebagai FPS efektif, yaitu jumlah selang antar-*frame* terproses dibagi rentang *timestamp* kamera dalam *measurement window* (Persamaan 2.15). Penggunaan sumber daya dinyatakan dari penggunaan CPU dan memori proses detektor, dengan definisi operasional pada Bab 3.
 
 > $FPS_{\text{efektif}} = \frac{N - 1}{t_{N} - t_{1}}$ (2.15)
 
