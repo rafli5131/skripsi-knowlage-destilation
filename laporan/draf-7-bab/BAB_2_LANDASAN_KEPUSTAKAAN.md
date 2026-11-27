@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v34 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v35 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -69,7 +69,7 @@ Spesifikasi produsen OP3 mencakup tinggi sekitar 510 mm, bobot sekitar 3,5 kg,
 
 YOLO merumuskan deteksi objek sebagai masalah regresi kotak pembatas yang terpisah secara spasial beserta probabilitas kelasnya. Citra dibagi menjadi *grid* $S \times S$, dan satu jaringan memprediksi kotak pembatas serta probabilitas kelas secara langsung dari citra utuh (Redmon, et al., 2016).
 
-YOLO11 tersusun atas tiga komponen. *Backbone* mengubah citra menjadi peta fitur multiskala, *neck* menggabungkan dan memperkuat fitur antarskala, dan *head* menghasilkan prediksi (Khanam dan Hussain, 2024). Blok C3k2 menggantikan blok C2f pada versi sebelumnya, blok SPPF dipertahankan, dan blok C2PSA ditambahkan (Khanam dan Hussain, 2024). Ultralytics menyediakan beberapa skala YOLO11; skala terkecil, YOLO11n, berukuran 2,6 juta parameter dan 6,5 miliar operasi titik mengambang (*floating point operations*, FLOPs) pada masukan 640 piksel (Ultralytics, n.d.d). Pada konfigurasi model penelitian ini, *head* Detect menerima fitur dari tiga skala. Gambar 2.2 memperlihatkan susunan umum arsitektur tersebut.
+YOLO11 tersusun atas tiga komponen. *Backbone* mengubah citra menjadi peta fitur multiskala, *neck* menggabungkan dan memperkuat fitur antarskala, dan *head* menghasilkan prediksi (Khanam dan Hussain, 2024). Blok C3k2 menggantikan blok C2f pada versi sebelumnya, blok SPPF dipertahankan, dan blok C2PSA ditambahkan (Khanam dan Hussain, 2024). Ultralytics menyediakan beberapa skala YOLO11; skala terkecil, YOLO11n, berukuran 2,6 juta parameter dan 6,5 miliar *floating point operations* (FLOPs) pada masukan 640 piksel (Ultralytics, n.d.d). Pada konfigurasi model penelitian ini, *head* Detect menerima fitur dari tiga skala. Gambar 2.2 memperlihatkan susunan umum arsitektur tersebut.
 
 **Gambar 2.2** Susunan umum arsitektur YOLO11
 

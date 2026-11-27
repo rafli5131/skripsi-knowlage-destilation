@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v34** (27 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v35** (27 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v34 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v34) |
+| Naskah DOCX dan PDF v1 sampai v35 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v35) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v34 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v34.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v34) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v35 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v35.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v35) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -42,8 +42,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v34** (27 November 2026, 116 halam
 | v32 | 27 Nov | Pembimbing menyetujui *predict path* sebagai jalur utama akurasi citra kamera OP3 (D28). Subbab 3.3.5 ditambah satu kalimat penegasan; Subbab 6.2.4 ditambah kalimat bahwa arah dua perbandingan utama sama pada kedua jalur. Jumlah halaman tetap 116. |
 | v33 | 27 Nov | Kata "penerbitan" di Subbab 6.4.3 yang luput dari penggantian v28 disamakan menjadi "melakukan *publish*". Naskah diperiksa ulang: tidak menyebut penggunaan AI maupun persetujuan pembimbing. |
 | v34 | 27 Nov | Kata janggal diganti: resep pelatihan menjadi pengaturan pelatihan, tarik-menarik menjadi *trade-off*, sidik jari menjadi *hash*, bobot titik menjadi bobot *anchor point*, objektif menjadi fungsi objektif, target/sinyal lunak menjadi *soft target*, medan pandang menjadi *field of view*, lewat menjadi melalui, dibanding menjadi dibandingkan dengan, dibawa ke OP3 menjadi digunakan pada OP3. Sekitar sepertiga "memakai"/"dipakai" menjadi "menggunakan"/"digunakan". Jumlah halaman tetap 116. |
+| v35 | 27 Nov | "Titik mengambang" diganti *floating point* di enam tempat (Bab 1, Bab 2, Lampiran E); "operasi titik mengambang (*floating point operations*, FLOPs)" diringkas menjadi "*floating point operations* (FLOPs)". Jumlah halaman tetap 116. |
 
-## Isi pokok naskah v34
+## Isi pokok naskah v35
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
