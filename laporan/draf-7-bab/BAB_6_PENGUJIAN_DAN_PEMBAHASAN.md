@@ -1,6 +1,6 @@
 # BAB 6 PENGUJIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v32 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v33 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menyajikan pengujian dengan urutan mengikuti rumusan masalah. Subbab 6.1 memuat pengujian fungsional yang memastikan sistem berjalan sesuai kebutuhan sebelum hasil lainnya dianalisis. Subbab 6.2 sampai Subbab 6.5 menjawab rumusan masalah nomor 1 sampai 4 secara berurutan, yaitu akurasi berdasarkan mAP, *precision*, *recall*, dan *F1-score*, latensi dan FPS, serta penggunaan CPU dan RAM. Subbab 6.6 memuat pengujian tambahan, dan Subbab 6.7 mengevaluasi hasil terhadap setiap rumusan masalah. Setiap pengujian diuraikan dalam empat bagian, yaitu tujuan, prosedur, hasil, dan analisis hasil pengujian.
 
@@ -398,7 +398,7 @@ Perilaku latensi dan FPS selama *measurement window* disajikan pada Gambar 6.18.
 
 **Gambar 6.18** Latensi dan FPS efektif per selang 2 detik selama *measurement window* 60 detik
 
-Rincian latensi per tahap disajikan pada Tabel 6.19 dan Gambar 6.19, dihitung dari seluruh *frame* gabungan tiga *run* sehingga dapat berbeda sedikit dari rata-rata tiga rata-rata *run* pada Tabel 6.17. Kolom sisa dihitung per *frame* sebagai latensi *callback* keseluruhan dikurangi ketiga tahap yang dilaporkan Ultralytics. Sisa ini mencakup konversi pesan kamera, pemanggilan pelacak, pembentukan dan penerbitan hasil deteksi, penggambaran dan penerbitan *preview*, serta penulisan CSV deteksi, sehingga bukan waktu pelacak saja.
+Rincian latensi per tahap disajikan pada Tabel 6.19 dan Gambar 6.19, dihitung dari seluruh *frame* gabungan tiga *run* sehingga dapat berbeda sedikit dari rata-rata tiga rata-rata *run* pada Tabel 6.17. Kolom sisa dihitung per *frame* sebagai latensi *callback* keseluruhan dikurangi ketiga tahap yang dilaporkan Ultralytics. Sisa ini mencakup waktu untuk mengonversi pesan kamera, memanggil pelacak, membentuk dan melakukan *publish* hasil deteksi, menggambar dan melakukan *publish* *preview*, serta menulis CSV deteksi, sehingga bukan waktu pelacak saja.
 
 **Tabel 6.19** Rincian rata-rata latensi per tahap (ms)
 
