@@ -1,6 +1,6 @@
 # BAB 5 PERANCANGAN DAN IMPLEMENTASI
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v35 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v36 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjelaskan rancangan perangkat keras dan perangkat lunak yang memenuhi kebutuhan pada Bab 4, lalu implementasinya pada server laboratorium dan pada robot. Bagian perancangan disusun dari gambaran umum sistem, perangkat keras, lalu perangkat lunak. Bagian implementasi mengikuti urutan yang sama dan disertai potongan kode program yang paling menentukan perilaku sistem.
 
@@ -64,11 +64,11 @@ Perangkat lunak terdiri atas lima rancangan, yaitu model *student*, pelatihan KD
 
 #### 5.1.2.2 Perancangan Pelatihan KD
 
-Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui *projector*, lalu dibandingkan dengan fitur *teacher* menggunakan *loss* L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui *loss* kotak (Persamaan 2.5) dan *loss* kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi *loss* KD murni (Persamaan 2.7), lalu ditambah *loss* deteksi berlabel sehingga menjadi *loss* KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan *projector*, sedangkan bobot *teacher* tidak berubah.
+Mekanisme satu langkah pelatihan KD hibrida penuh disajikan dalam diagram blok pada Gambar 5.8. Setiap *batch* citra TRAIN diteruskan ke *teacher* dan *student*. *Teacher* YOLO11n FP32 dibekukan dan dijalankan tanpa perhitungan gradien, sehingga keluarannya hanya menjadi acuan. Fitur *neck* *student* pada skala P3, P4, dan P5 diproyeksikan ke jumlah kanal *teacher* melalui *projector*, lalu dibandingkan dengan fitur *teacher* memakai *loss* L2 berbobot (Persamaan 2.4). Bobot setiap titik diambil dari skor kelas *teacher* (Persamaan 2.3). Keluaran kotak dan *logit* kelas *student* dibandingkan dengan keluaran *teacher* melalui *loss* kotak (Persamaan 2.5) dan *loss* kelas bertemperatur (Persamaan 2.6). Ketiga suku dijumlahkan menjadi *loss* KD murni (Persamaan 2.7), lalu ditambah *loss* deteksi berlabel sehingga menjadi *loss* KD hibrida (Persamaan 2.8). Propagasi balik memperbarui bobot *student* dan *projector*, sedangkan bobot *teacher* tidak berubah.
 
 **Gambar 5.8** Diagram blok satu langkah pelatihan KD hibrida penuh
 
-Varian lain memakai sebagian blok pada Gambar 5.8. *Supervised* hanya memakai *loss* deteksi berlabel, KD murni menggunakan *loss* KD murni tanpa *loss* berlabel, dan KD hibrida fitur memakai *loss* berlabel dengan distilasi fitur bawaan Ultralytics, seperti pada Tabel 3.3.
+Varian lain memakai sebagian blok pada Gambar 5.8. *Supervised* hanya menggunakan *loss* deteksi berlabel, KD murni memakai *loss* KD murni tanpa *loss* berlabel, dan KD hibrida fitur memakai *loss* berlabel dengan distilasi fitur bawaan Ultralytics, seperti pada Tabel 3.3.
 
 Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gambar 5.9. *Student* YOLO11 skala t diinisialisasi acak, dan seluruh varian *student* dilatih dengan pengaturan yang sama. Varian, *seed*, dan *checkpoint* hasil KD dipilih hanya pada VAL dengan aturan seleksi yang ditetapkan sebelum pelatihan, sedangkan *checkpoint* *supervised* mengikuti *seed* KD hibrida terpilih. Berkas konfigurasi data untuk pelatihan tidak memuat entri TEST, sehingga TEST tidak dapat terbaca selama pelatihan. Sidik jari SHA-256 setiap citra dan label diperiksa sebelum pelatihan dan sebelum evaluasi agar himpunan data yang digunakan dapat dipastikan sama.
 
@@ -82,7 +82,7 @@ Urutan pelatihan dan pemilihan model di server laboratorium disajikan pada Gamba
 
 #### 5.1.2.4 Perancangan Komunikasi ROS 2
 
-Komunikasi antarkomponen memakai *topic* ROS 2 seperti pada Gambar 5.11. *Node* kamera melakukan *publish* citra pada /thesis/image_raw, *node* deteksi melakukan *publish* hasil pada /vision/detections dan *preview* pada /vision/debug_image, sedangkan skrip pengujian kondisi berjalan mengirim perintah mulai dan berhenti ke /robotis/walking/command. *Node* deteksi melakukan *subscribe* citra dengan QoS *best-effort*, *keep-last* dengan *depth* 1, dan *callback* serial. Pengaturan ini sesuai untuk data sensor yang cepat digantikan data baru (Macenski, et al., 2022): bila inferensi tertinggal, *frame* lama dilewati alih-alih ditumpuk.
+Komunikasi antarkomponen menggunakan *topic* ROS 2 seperti pada Gambar 5.11. *Node* kamera melakukan *publish* citra pada /thesis/image_raw, *node* deteksi melakukan *publish* hasil pada /vision/detections dan *preview* pada /vision/debug_image, sedangkan skrip pengujian kondisi berjalan mengirim perintah mulai dan berhenti ke /robotis/walking/command. *Node* deteksi melakukan *subscribe* citra dengan QoS *best-effort*, *keep-last* dengan *depth* 1, dan *callback* serial. Pengaturan ini sesuai untuk data sensor yang cepat digantikan data baru (Macenski, et al., 2022): bila inferensi tertinggal, *frame* lama dilewati alih-alih ditumpuk.
 
 **Gambar 5.11** Komunikasi *topic* ROS 2 pada sistem
 
@@ -114,9 +114,11 @@ Tubuh robot dipakai dalam konfigurasi bawaan OP3 tanpa perubahan mekanik. Kamera
 
 **Gambar 5.12** Implementasi tubuh robot tampak depan dan samping
 
+Sumber: dokumentasi penulis
+
 #### 5.2.1.2 Implementasi Rangkaian Elektronika
 
-Rangkaian elektronika mengikuti susunan bawaan OP3, yaitu komputer *onboard*, U2D2, OpenCR, aktuator, dan kamera seperti pada Gambar 5.4 dan Gambar 5.6. Penelitian ini tidak menambah sensor atau papan elektronika baru. Susunan rangkaian elektronika OP3 dari sisi depan, belakang, dan atas disajikan pada Gambar 5.13 sampai Gambar 5.15 \[PERLU DICEK: kesamaan unit pada foto dengan unit OP3 yang digunakan, karena komputer *onboard* unit penelitian tercatat sebagai NUC12WSHi5\].
+Rangkaian elektronika mengikuti susunan bawaan OP3, yaitu komputer *onboard*, U2D2, OpenCR, aktuator, dan kamera seperti pada Gambar 5.4 dan Gambar 5.6. Penelitian ini tidak menambah sensor atau papan elektronika baru. Susunan rangkaian elektronika OP3 dari sisi depan, belakang, dan atas disajikan pada Gambar 5.13 sampai Gambar 5.15.
 
 Pada sisi depan, U2D2 terhubung ke komputer *onboard*, dan tampak tombol daya serta *port* USB komputer *onboard* (Gambar 5.13). Pada sisi belakang tampak sakelar OpenCR, *port* USB, Ethernet, HDMI, kipas, serta *power jack* OpenCR dan komputer *onboard* (Gambar 5.14). Kedua *power jack* inilah yang menerima adaptor 12 V dan 19 V selama pengujian. Pada sisi atas tampak OpenCR beserta *port* *servo*, sakelar, sambungan baterai, dan U2D2 yang terhubung melalui kabel RS-485 (Gambar 5.15) (Brilliant, 2024).
 
@@ -137,6 +139,8 @@ Sumber: Brilliant (2024)
 Selama pengujian kondisi berjalan, badan robot diletakkan pada tatakan dan objek uji ditempatkan statis di depan kamera. Komputer *onboard* diakses dari laptop melalui SSH, sedangkan server laboratorium diakses secara terpisah untuk pelatihan dan evaluasi *offline*. Tatakan dan area uji ditunjukkan pada Gambar 5.16.
 
 **Gambar 5.16** Implementasi tatakan dan area uji
+
+Sumber: dokumentasi penulis
 
 ### 5.2.2 Implementasi Perangkat Lunak
 
@@ -295,7 +299,7 @@ Selama pengujian kondisi berjalan, badan robot diletakkan pada tatakan dan objek
 
 Baris 1 menetapkan jumlah kelas, yaitu bola, gawang, dan robot.
 
-Baris 2 sampai 4 memilih skala t dengan faktor kedalaman 0,50, faktor lebar 0,125, dan batas kanal 1024. Skala nano yang dipakai *teacher* memiliki faktor kedalaman yang sama dan faktor lebar 0,25, sehingga lebar kanal *student* menjadi separuhnya.
+Baris 2 sampai 4 memilih skala t dengan faktor kedalaman 0,50, faktor lebar 0,125, dan batas kanal 1024. Skala nano yang digunakan *teacher* memiliki faktor kedalaman yang sama dan faktor lebar 0,25, sehingga lebar kanal *student* menjadi separuhnya.
 
 Baris 6 sampai 17 mendefinisikan *backbone*. Setiap baris berisi indeks masukan, jumlah pengulangan, jenis modul, dan argumen modul. Lapisan Conv dengan langkah 2 menurunkan resolusi, sedangkan SPPF dan C2PSA berada di ujung *backbone*.
 
@@ -426,7 +430,7 @@ Fungsi objektif KD diimplementasikan dalam skrip train_kd.py sebagai pengganti m
 
 Baris 1 sampai 7 memilih mode hybrid_full dan menetapkan bobot fitur, kotak, dan kelas sebesar 1,0 serta temperatur 2,0 sesuai Persamaan 2.8.
 
-Baris 9 sampai 24 berisi pengaturan pelatihan yang sama untuk semua varian *student*, yaitu 100 *epoch*, *batch* 16, ukuran masukan 640, *optimizer* AdamW, dan tanpa bobot *pretrained*. Pelatihan menggunakan FP32 karena AMP dimatikan. Berkas ini memuat *seed* 42; *run* dengan *seed* lain memakai pengaturan yang sama dengan nilai *seed* yang berbeda.
+Baris 9 sampai 24 berisi pengaturan pelatihan yang sama untuk semua varian *student*, yaitu 100 *epoch*, *batch* 16, ukuran masukan 640, *optimizer* AdamW, dan tanpa bobot *pretrained*. Pelatihan memakai FP32 karena AMP dimatikan. Berkas ini memuat *seed* 42; *run* dengan *seed* lain memakai pengaturan yang sama dengan nilai *seed* yang berbeda.
 
 **Kode Program 5.3** Fungsi *loss* KD hibrida penuh
 
@@ -693,7 +697,7 @@ Baris 9 sampai 24 berisi pengaturan pelatihan yang sama untuk semua varian *stud
 </tbody>
 </table>
 
-Baris 1 sampai 3 mendefinisikan fungsi *loss*. Saat model tidak dalam mode pelatihan, fungsi memakai *loss* bawaan agar perhitungan pada validasi tidak berubah.
+Baris 1 sampai 3 mendefinisikan fungsi *loss*. Saat model tidak dalam mode pelatihan, fungsi menggunakan *loss* bawaan agar perhitungan pada validasi tidak berubah.
 
 Baris 5 sampai 10 mengosongkan penyimpan fitur, menjalankan *teacher* tanpa perhitungan gradien, menjalankan *student*, lalu menghitung *loss* deteksi berlabel bawaan Ultralytics.
 
@@ -803,7 +807,7 @@ Pemuatan model saat *node* dimulai disajikan pada Kode Program 5.4. Bagian ini d
 
 Baris 1 sampai 4 menetapkan jumlah *thread* PyTorch dari parameter *node*, yaitu 4 *thread* operasi dan 2 *thread* antaroperasi pada pengujian. Nilai ini berlaku saat inisialisasi. *Replay* pada Subbab 6.5 menunjukkan bahwa inisialisasi *backend* CPU Ultralytics pada inferensi pertama dapat mengubah jumlah *thread* operasi.
 
-Baris 5 dan 6 memberi peringatan bila versi PyTorch di robot berbeda dari versi yang digunakan saat *checkpoint* disimpan.
+Baris 5 dan 6 memberi peringatan bila versi PyTorch di robot berbeda dari versi yang dipakai saat *checkpoint* disimpan.
 
 Baris 7 sampai 10 memuat *checkpoint* dan menghentikan *node* bila pemetaan kelas di dalamnya berbeda dari urutan bola, gawang, dan robot.
 
@@ -988,4 +992,4 @@ Setelah seluruh kotak diproses, pesan hasil di-*publish* pada /vision/detections
 
 Kondisi berjalan dibangkitkan oleh skrip pengujian yang dijalankan peneliti, dengan badan OP3 ditopang tatakan robot agar beban *servo* berkurang. Skrip mengirim perintah mulai ke /robotis/walking/command setelah *warm-up* 30 *frame*, menunggu tanda terima, lalu menghentikan *gait* setelah 63 detik atau lebih awal bila *servo* kepala bergeser lebih dari dua *count* atau aliran data status *servo* terputus. *Servo* kepala tidak menerima perintah posisi selama pengujian. Kondisi diam dan berjalan dicatat sebagai label operator, karena *node* deteksi tidak membaca data gerak robot.
 
-Label *frame* kamera OP3 ditinjau dengan op3_label_reviewer, yang menampilkan *frame* beserta kotak label awal lalu menyimpan label hasil tinjauan dan nama peninjau. Pelabelan buta pada sampel Set Kamera 2 menggunakan alat terpisah yang tidak menampilkan prediksi. Evaluasi akurasi kamera dijalankan secara *offline* oleh paket evaluasi tersendiri yang memverifikasi *hash* *checkpoint*, citra, dan label sebelum menghitung metrik.
+Label *frame* kamera OP3 ditinjau dengan op3_label_reviewer, yang menampilkan *frame* beserta kotak label awal lalu menyimpan label hasil tinjauan dan nama peninjau. Pelabelan buta pada sampel Set Kamera 2 memakai alat terpisah yang tidak menampilkan prediksi. Evaluasi akurasi kamera dijalankan secara *offline* oleh paket evaluasi tersendiri yang memverifikasi *hash* *checkpoint*, citra, dan label sebelum menghitung metrik.

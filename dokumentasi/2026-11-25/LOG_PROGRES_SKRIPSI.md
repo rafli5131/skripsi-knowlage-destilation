@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v35** (27 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v36** (27 November 2026, 117 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v35 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v35) |
+| Naskah DOCX dan PDF v1 sampai v36 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v36) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v35 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v35.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v35) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v36 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v36.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v36) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -43,8 +43,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v35** (27 November 2026, 116 halam
 | v33 | 27 Nov | Kata "penerbitan" di Subbab 6.4.3 yang luput dari penggantian v28 disamakan menjadi "melakukan *publish*". Naskah diperiksa ulang: tidak menyebut penggunaan AI maupun persetujuan pembimbing. |
 | v34 | 27 Nov | Kata janggal diganti: resep pelatihan menjadi pengaturan pelatihan, tarik-menarik menjadi *trade-off*, sidik jari menjadi *hash*, bobot titik menjadi bobot *anchor point*, objektif menjadi fungsi objektif, target/sinyal lunak menjadi *soft target*, medan pandang menjadi *field of view*, lewat menjadi melalui, dibanding menjadi dibandingkan dengan, dibawa ke OP3 menjadi digunakan pada OP3. Sekitar sepertiga "memakai"/"dipakai" menjadi "menggunakan"/"digunakan". Jumlah halaman tetap 116. |
 | v35 | 27 Nov | "Titik mengambang" diganti *floating point* di enam tempat (Bab 1, Bab 2, Lampiran E); "operasi titik mengambang (*floating point operations*, FLOPs)" diringkas menjadi "*floating point operations* (FLOPs)". Jumlah halaman tetap 116. |
+| v36 | 27 Nov | Daftar Istilah dan Singkatan dikembalikan ke halaman awal sesudah Daftar Lampiran (Panduan FILKOM Subbab 3.1 butir 1k), Lampiran E dihapus, dan lima istilah baru ditambahkan. Abstrak dirapikan (kalimat F1 diperbaiki, angka diringkas; Indonesia 280 kata, Inggris 298 kata). Penanda `[PERLU DICEK]` Subbab 5.2.1.2 dihapus. Gambar 2.1 diganti foto OP3 tampak depan; baris "Sumber: dokumentasi penulis" ditambahkan pada lima foto. Naskah 117 halaman. |
 
-## Isi pokok naskah v35
+## Isi pokok naskah v36
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
@@ -59,7 +60,7 @@ Naskah skripsi tujuh bab sudah sampai versi **v35** (27 November 2026, 116 halam
 
 1. Tanggal ujian dan dua tanggal tanda tangan.
 2. Tujuh isian `[DIISI PENULIS]` di prakata.
-3. `[PERLU DICEK]` di Subbab 5.2.1.2: kesamaan unit pada foto rangkaian elektronika (Brilliant, 2024) dengan unit penelitian.
+3. Selesai 27 November: penanda `[PERLU DICEK]` di Subbab 5.2.1.2 dihapus karena unit pada foto Brilliant (2024) sama dengan unit penelitian.
 4. Selesai 27 November: pembimbing menyetujui *predict path* sebagai jalur angka utama kamera OP3 (D28).
 
 Sudah selesai pada 25 November: persetujuan lisan pembimbing atas empat rumusan masalah dan KF-03, pemeriksaan `CEK_KBBI.md` (diperbarui dengan KBBI VI Daring), dan keseragaman nama ROBOTIIK. Folder `Paper\_to_delete\` dikosongkan sendiri oleh penulis; agen tidak menghapus berkas apa pun.

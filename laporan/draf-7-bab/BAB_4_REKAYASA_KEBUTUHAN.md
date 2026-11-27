@@ -1,6 +1,6 @@
 # BAB 4 REKAYASA KEBUTUHAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v35 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v36 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi acuan perancangan pada Bab 5 dan pengujian pada Bab 6. Kebutuhan disusun dari rumusan masalah, keterbatasan komputer *onboard* OP3, dan antarmuka ROS 2 yang dipakai robot.
 
@@ -8,7 +8,7 @@ Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi
 
 Robot humanoid sepak bola memerlukan informasi letak bola, gawang, dan robot lain dari kamera di tubuhnya sendiri (Fiedler, et al., 2019). Pada unit OP3 yang digunakan, seluruh pemrosesan citra dijalankan pada CPU Intel Core i5-1240P di komputer *onboard* yang juga menjalankan *gait* robot, tanpa GPU atau akselerator lain (Subbab 1.5). Lau dan Pottier (2026) hanya memperoleh 4 sampai 8 FPS untuk YOLOv9 pada OP3 bahkan setelah model dikonversi dan dikuantisasi, sehingga ukuran model menjadi batas utama bagi detektor berbasis jaringan saraf pada robot ini.
 
-Masalah yang dihadapi adalah memperoleh detektor kecil yang akurasinya tetap layak untuk tiga kelas dan dapat berjalan sebagai *node* ROS 2 pada CPU tersebut. Penelitian ini memakai *student* YOLO11 skala t dengan 810.649 parameter, yaitu sekitar 31% dari 2.590.425 parameter *teacher* YOLO11n, lalu melatihnya dengan KD. Karena arsitektur *student* sama untuk semua varian, biaya inferensinya tidak ditentukan oleh fungsi objektif pelatihan; yang diharapkan berubah melalui KD adalah mutu deteksinya.
+Masalah yang dihadapi adalah memperoleh detektor kecil yang akurasinya tetap layak untuk tiga kelas dan dapat berjalan sebagai *node* ROS 2 pada CPU tersebut. Penelitian ini menggunakan *student* YOLO11 skala t dengan 810.649 parameter, yaitu sekitar 31% dari 2.590.425 parameter *teacher* YOLO11n, lalu melatihnya dengan KD. Karena arsitektur *student* sama untuk semua varian, biaya inferensinya tidak ditentukan oleh fungsi objektif pelatihan; yang diharapkan berubah melalui KD adalah mutu deteksinya.
 
 Sistem juga harus dapat diukur. Rumusan masalah nomor 3 dan 4 menuntut data latensi, FPS, penggunaan CPU, dan RAM pada kondisi robot diam dan berjalan, sehingga *node* deteksi wajib mencatat waktu setiap tahap pemrosesan dan penggunaan sumber daya prosesnya pada setiap *frame*. *Node* deteksi tidak mengendalikan gerak robot; gerak diatur terpisah oleh op3_manager.
 
@@ -148,7 +148,7 @@ Sumber: ROBOTIS (n.d.c)
 
 #### 4.5.1.4 *Servo* DYNAMIXEL XM430-W350-R
 
-OP3 menggunakan 20 aktuator DYNAMIXEL XM430-W350-R dengan spesifikasi pada Tabel 4.8 (ROBOTIS, n.d.b). Akhiran R menunjukkan antarmuka RS-485. Aktuator kepala, yaitu ID 19 dan 20 pada Gambar 4.1, menentukan arah kamera, sehingga resolusi *encoder* juga menentukan kepekaan pemeriksaan posisi kepala pada pengujian kondisi berjalan: dengan 4.096 pulsa per putaran, batas pergeseran dua *count* setara dengan sekitar 0,18 derajat.
+OP3 memakai 20 aktuator DYNAMIXEL XM430-W350-R dengan spesifikasi pada Tabel 4.8 (ROBOTIS, n.d.b). Akhiran R menunjukkan antarmuka RS-485. Aktuator kepala, yaitu ID 19 dan 20 pada Gambar 4.1, menentukan arah kamera, sehingga resolusi *encoder* juga menentukan kepekaan pemeriksaan posisi kepala pada pengujian kondisi berjalan: dengan 4.096 pulsa per putaran, batas pergeseran dua *count* setara dengan sekitar 0,18 derajat.
 
 **Tabel 4.8** Spesifikasi DYNAMIXEL XM430-W350-R
 
@@ -180,13 +180,15 @@ Spesifikasi bawaan OP3 memakai baterai LiPo tiga sel 11,1 V 3.300 mAh (ROBOTIS, 
 
 **Gambar 4.3** Baterai LiPo dan adaptor catu daya
 
+Sumber: dokumentasi penulis
+
 #### 4.5.1.7 Tatakan Robot
 
 Tatakan robot menopang badan OP3 selama *gait* di tempat sehingga kaki tidak menanggung seluruh berat badan. Tatakan dipakai untuk mengurangi beban *servo* selama pengujian berulang dan menjaga posisi kamera terhadap objek uji tetap sama di antara *run*.
 
 #### 4.5.1.8 Server Laboratorium dan Laptop
 
-Server laboratorium dibutuhkan karena pelatihan model memerlukan GPU. Server berupa mesin virtual KVM labkc-l40-debian dengan Debian 12, AMD EPYC 7413 80 CPU virtual, RAM 283 GiB, dan tiga GPU NVIDIA L40 bermemori 46.068 MiB dengan *driver* NVIDIA 535.261.03 (Tabel 3.1). Spesifikasi ini dicatat pada 16 November 2026, sesudah seluruh pelatihan dan pengujian TEST selesai. Setiap *run* pelatihan memakai satu GPU, dan *manifest* setiap *run*, termasuk *run* ablasi ukuran *teacher* yang dijalankan dengan akun server yang berbeda, mencatat GPU NVIDIA L40, Python 3.11.2, PyTorch 2.4.1+cu121, dan Ultralytics 8.4.130. Pemeriksaan jalur evaluasi TEST dijalankan pada CPU server yang sama.
+Server laboratorium dibutuhkan karena pelatihan model memerlukan GPU. Server berupa mesin virtual KVM labkc-l40-debian dengan Debian 12, AMD EPYC 7413 80 CPU virtual, RAM 283 GiB, dan tiga GPU NVIDIA L40 bermemori 46.068 MiB dengan *driver* NVIDIA 535.261.03 (Tabel 3.1). Spesifikasi ini dicatat pada 16 November 2026, sesudah seluruh pelatihan dan pengujian TEST selesai. Setiap *run* pelatihan menggunakan satu GPU, dan *manifest* setiap *run*, termasuk *run* ablasi ukuran *teacher* yang dijalankan dengan akun server yang berbeda, mencatat GPU NVIDIA L40, Python 3.11.2, PyTorch 2.4.1+cu121, dan Ultralytics 8.4.130. Pemeriksaan jalur evaluasi TEST dijalankan pada CPU server yang sama.
 
 Laptop dibutuhkan sebagai terminal untuk mengakses robot dan server, menampilkan *preview*, dan menganalisis data.
 

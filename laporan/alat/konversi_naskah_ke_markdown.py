@@ -71,7 +71,7 @@ a, b = h1[7], h1[8]
 assert "DAFTAR REFERENSI" in L[a]
 (out / "DAFTAR_REFERENSI.md").write_text("# DAFTAR REFERENSI\n\n" + KEPALA.format(v=versi) + bersih(L[a + 1:b]), encoding="utf-8")
 
-# Lampiran A dan seterusnya (sejak naskah v29, Lampiran E berisi Daftar Istilah dan Singkatan)
+# Lampiran A dan seterusnya (pada v29 sampai v35, Lampiran E berisi Daftar Istilah dan Singkatan)
 bagian = []
 for k, i in enumerate(h1[8:]):
     j = h1[8 + k + 1] if 8 + k + 1 < len(h1) else len(L)
@@ -81,7 +81,7 @@ for k, i in enumerate(h1[8:]):
 (out / "LAMPIRAN.md").write_text("# LAMPIRAN\n\n" + KEPALA.format(v=versi) + "\n".join(b.replace("# LAMPIRAN", "## LAMPIRAN", 1).replace("\n## ", "\n### ").replace("\n### LAMPIRAN", "\n## LAMPIRAN") for b in bagian), encoding="utf-8")
 
 # Halaman awal: abstrak dan abstract utuh; pengesahan, pernyataan, dan prakata hanya diringkas.
-# Daftar istilah ada di halaman awal hanya pada naskah sebelum v29; sejak v29 daftar itu menjadi Lampiran E.
+# Daftar istilah ada di halaman awal kecuali pada naskah v29 sampai v35 (saat itu menjadi Lampiran E).
 # Data pribadi (nama, NIM, NIK, email, nama pihak di prakata) sengaja tidak disalin karena repositori ini publik.
 awal = L[: h1[0]]
 
