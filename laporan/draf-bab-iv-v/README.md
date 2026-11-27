@@ -1,6 +1,6 @@
 # Draf Bab IV–V dan arsip laporan
 
-> **Pembaruan 25 November:** naskah terbaru adalah Skripsi_KD_OP3_v33. Salinan Markdown-nya ada di [draf tujuh bab](../draf-7-bab/README.md). Folder ini dipertahankan sebagai bahan dan arsip.
+> **Pembaruan 25 November:** naskah terbaru adalah Skripsi_KD_OP3_v34. Salinan Markdown-nya ada di [draf tujuh bab](../draf-7-bab/README.md). Folder ini dipertahankan sebagai bahan dan arsip.
 >
 > **Pembaruan 12 November:** gunakan [draf tujuh bab](../draf-7-bab/README.md) untuk struktur terbaru; folder ini dipertahankan sebagai bahan dan arsip.
 

@@ -1,6 +1,6 @@
 # BAB 4 REKAYASA KEBUTUHAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v33 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v34 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi acuan perancangan pada Bab 5 dan pengujian pada Bab 6. Kebutuhan disusun dari rumusan masalah, keterbatasan komputer *onboard* OP3, dan antarmuka ROS 2 yang dipakai robot.
 
@@ -8,7 +8,7 @@ Bab ini menjabarkan kebutuhan sistem deteksi objek pada ROBOTIS OP3 yang menjadi
 
 Robot humanoid sepak bola memerlukan informasi letak bola, gawang, dan robot lain dari kamera di tubuhnya sendiri (Fiedler, et al., 2019). Pada unit OP3 yang digunakan, seluruh pemrosesan citra dijalankan pada CPU Intel Core i5-1240P di komputer *onboard* yang juga menjalankan *gait* robot, tanpa GPU atau akselerator lain (Subbab 1.5). Lau dan Pottier (2026) hanya memperoleh 4 sampai 8 FPS untuk YOLOv9 pada OP3 bahkan setelah model dikonversi dan dikuantisasi, sehingga ukuran model menjadi batas utama bagi detektor berbasis jaringan saraf pada robot ini.
 
-Masalah yang dihadapi adalah memperoleh detektor kecil yang akurasinya tetap layak untuk tiga kelas dan dapat berjalan sebagai *node* ROS 2 pada CPU tersebut. Penelitian ini memakai *student* YOLO11 skala t dengan 810.649 parameter, yaitu sekitar 31% dari 2.590.425 parameter *teacher* YOLO11n, lalu melatihnya dengan KD. Karena arsitektur *student* sama untuk semua varian, biaya inferensinya tidak ditentukan oleh objektif pelatihan; yang diharapkan berubah melalui KD adalah mutu deteksinya.
+Masalah yang dihadapi adalah memperoleh detektor kecil yang akurasinya tetap layak untuk tiga kelas dan dapat berjalan sebagai *node* ROS 2 pada CPU tersebut. Penelitian ini memakai *student* YOLO11 skala t dengan 810.649 parameter, yaitu sekitar 31% dari 2.590.425 parameter *teacher* YOLO11n, lalu melatihnya dengan KD. Karena arsitektur *student* sama untuk semua varian, biaya inferensinya tidak ditentukan oleh fungsi objektif pelatihan; yang diharapkan berubah melalui KD adalah mutu deteksinya.
 
 Sistem juga harus dapat diukur. Rumusan masalah nomor 3 dan 4 menuntut data latensi, FPS, penggunaan CPU, dan RAM pada kondisi robot diam dan berjalan, sehingga *node* deteksi wajib mencatat waktu setiap tahap pemrosesan dan penggunaan sumber daya prosesnya pada setiap *frame*. *Node* deteksi tidak mengendalikan gerak robot; gerak diatur terpisah oleh op3_manager.
 
@@ -73,19 +73,19 @@ Rangkuman kebutuhan perangkat keras disajikan pada Tabel 4.4. Setiap komponen ke
 
 **Tabel 4.4** Kebutuhan perangkat keras
 
-| **Perangkat**                                           | **Kebutuhan yang dipenuhi**                                                   |
-|---------------------------------------------------------|-------------------------------------------------------------------------------|
-| Robot ROBOTIS OP3                                       | Platform robot humanoid yang membawa kamera, komputer *onboard*, dan aktuator |
-| Komputer *onboard* Intel NUC dengan Intel Core i5-1240P | Menjalankan inferensi pada CPU sekaligus *gait* robot                         |
-| Antarmuka U2D2                                          | Menghubungkan komputer *onboard* dengan OpenCR pada bus DYNAMIXEL             |
-| *Sub-controller* OpenCR 1.0                             | Meneruskan perintah sendi ke aktuator                                         |
-| 20 aktuator DYNAMIXEL XM430-W350-R                      | Menggerakkan sendi robot pada kondisi berjalan                                |
-| Kamera Logitech C920                                    | Sumber citra berukuran 640 × 480 piksel bagi *node* deteksi                   |
-| Baterai LiPo empat sel 14,8 V                           | Sumber daya robot saat beroperasi tanpa kabel; tidak dipakai selama pengujian |
-| Adaptor 12 V dan adaptor 19 V                           | Catu daya OpenCR dan komputer *onboard* selama pengujian                      |
-| Tatakan robot                                           | Menopang badan OP3 selama *gait* di tempat untuk mengurangi beban *servo*     |
-| Server laboratorium dengan GPU NVIDIA L40               | Pelatihan dan evaluasi model pada VAL dan TEST                                |
-| Laptop                                                  | Akses SSH ke OP3, penampil *preview*, dan analisis data                       |
+| **Perangkat**                                           | **Kebutuhan yang dipenuhi**                                                     |
+|---------------------------------------------------------|---------------------------------------------------------------------------------|
+| Robot ROBOTIS OP3                                       | Platform robot humanoid yang membawa kamera, komputer *onboard*, dan aktuator   |
+| Komputer *onboard* Intel NUC dengan Intel Core i5-1240P | Menjalankan inferensi pada CPU sekaligus *gait* robot                           |
+| Antarmuka U2D2                                          | Menghubungkan komputer *onboard* dengan OpenCR pada bus DYNAMIXEL               |
+| *Sub-controller* OpenCR 1.0                             | Meneruskan perintah sendi ke aktuator                                           |
+| 20 aktuator DYNAMIXEL XM430-W350-R                      | Menggerakkan sendi robot pada kondisi berjalan                                  |
+| Kamera Logitech C920                                    | Sumber citra berukuran 640 × 480 piksel bagi *node* deteksi                     |
+| Baterai LiPo empat sel 14,8 V                           | Sumber daya robot saat beroperasi tanpa kabel; tidak digunakan selama pengujian |
+| Adaptor 12 V dan adaptor 19 V                           | Catu daya OpenCR dan komputer *onboard* selama pengujian                        |
+| Tatakan robot                                           | Menopang badan OP3 selama *gait* di tempat untuk mengurangi beban *servo*       |
+| Server laboratorium dengan GPU NVIDIA L40               | Pelatihan dan evaluasi model pada VAL dan TEST                                  |
+| Laptop                                                  | Akses SSH ke OP3, penampil *preview*, dan analisis data                         |
 
 #### 4.5.1.1 Robot ROBOTIS OP3
 
@@ -132,7 +132,7 @@ Sumber: Intel Corporation (n.d.)
 
 #### 4.5.1.3 OpenCR 1.0
 
-OpenCR 1.0 adalah *sub-controller* yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui *port* DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya dipakai op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui antarmuka TTL (*transistor-transistor logic*) atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
+OpenCR 1.0 adalah *sub-controller* yang meneruskan perintah sendi dari komputer *onboard* ke aktuator melalui *port* DYNAMIXEL (ROBOTIS, n.d.c). Spesifikasinya disajikan pada Tabel 4.7. Pada penelitian ini, OpenCR hanya digunakan op3_manager untuk menjalankan *gait*; *node* deteksi tidak berkomunikasi dengan OpenCR. Pada unit yang dipakai, komputer *onboard* berkomunikasi dengan OpenCR, yang memiliki ID 200 pada bus DYNAMIXEL, melalui U2D2. U2D2 adalah pengubah USB yang memungkinkan komputer berkomunikasi dengan perangkat DYNAMIXEL melalui antarmuka TTL (*transistor-transistor logic*) atau RS-485 (ROBOTIS, n.d.d). Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V. Daya bus aktuator diatur oleh register dynamixel_power pada OpenCR, sehingga aktuator baru merespons setelah daya bus diaktifkan.
 
 **Tabel 4.7** Spesifikasi OpenCR 1.0
 
@@ -148,7 +148,7 @@ Sumber: ROBOTIS (n.d.c)
 
 #### 4.5.1.4 *Servo* DYNAMIXEL XM430-W350-R
 
-OP3 memakai 20 aktuator DYNAMIXEL XM430-W350-R dengan spesifikasi pada Tabel 4.8 (ROBOTIS, n.d.b). Akhiran R menunjukkan antarmuka RS-485. Aktuator kepala, yaitu ID 19 dan 20 pada Gambar 4.1, menentukan arah kamera, sehingga resolusi *encoder* juga menentukan kepekaan pemeriksaan posisi kepala pada pengujian kondisi berjalan: dengan 4.096 pulsa per putaran, batas pergeseran dua *count* setara dengan sekitar 0,18 derajat.
+OP3 menggunakan 20 aktuator DYNAMIXEL XM430-W350-R dengan spesifikasi pada Tabel 4.8 (ROBOTIS, n.d.b). Akhiran R menunjukkan antarmuka RS-485. Aktuator kepala, yaitu ID 19 dan 20 pada Gambar 4.1, menentukan arah kamera, sehingga resolusi *encoder* juga menentukan kepekaan pemeriksaan posisi kepala pada pengujian kondisi berjalan: dengan 4.096 pulsa per putaran, batas pergeseran dua *count* setara dengan sekitar 0,18 derajat.
 
 **Tabel 4.8** Spesifikasi DYNAMIXEL XM430-W350-R
 
@@ -176,7 +176,7 @@ Sumber: Logitech (dikutip dalam Brilliant, 2024)
 
 #### 4.5.1.6 Catu Daya
 
-Spesifikasi bawaan OP3 memakai baterai LiPo tiga sel 11,1 V 3.300 mAh (ROBOTIS, n.d.a). Unit yang dipakai dalam penelitian ini terpasang baterai LiPo empat sel 14,8 V 2.200 mAh, sesuai label pada baterai (Gambar 4.3a). Selama pengujian pada robot, baterai tersebut tidak dipakai. OpenCR dicatu adaptor 12 V (Gambar 4.3b) dan komputer *onboard* dicatu adaptor 19 V (Gambar 4.3c), sehingga kedua bagian memiliki sumber daya terpisah. Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V.
+Spesifikasi bawaan OP3 memakai baterai LiPo tiga sel 11,1 V 3.300 mAh (ROBOTIS, n.d.a). Unit yang dipakai dalam penelitian ini terpasang baterai LiPo empat sel 14,8 V 2.200 mAh, sesuai label pada baterai (Gambar 4.3a). Selama pengujian pada robot, baterai tersebut tidak digunakan. OpenCR dicatu adaptor 12 V (Gambar 4.3b) dan komputer *onboard* dicatu adaptor 19 V (Gambar 4.3c), sehingga kedua bagian memiliki sumber daya terpisah. Pemeriksaan awal pada 19 Oktober 2026 membaca tegangan masuk OpenCR sebesar 12,7 V.
 
 **Gambar 4.3** Baterai LiPo dan adaptor catu daya
 

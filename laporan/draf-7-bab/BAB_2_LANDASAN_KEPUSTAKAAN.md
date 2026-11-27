@@ -1,6 +1,6 @@
 # BAB 2 LANDASAN KEPUSTAKAAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v33 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v34 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 2.1 Kajian Pustaka
 
@@ -10,7 +10,7 @@ Subbab ini merangkum penelitian terdahulu yang paling dekat dengan penelitian in
 
 Penelitian KD pada keluarga YOLO berbeda dalam pasangan *teacher* dan *student*, sinyal yang didistilasi, dan perangkat pengujian. Saltık, et al. (2025) mendistilasi YOLO11x ke YOLO11n untuk deteksi gulma dengan CWD dan *masked generative distillation* (MGD), lalu menguji *student* pada NVIDIA Jetson Orin Nano dan Raspberry Pi 5. Jung dan Nam (2025) memakai YOLOv11-M sebagai *teacher* serta YOLOv11-S dan YOLOv11-N sebagai *student*, dengan gabungan *mean squared error* (MSE) untuk keselarasan spasial dan divergensi Kullback-Leibler (KL) untuk distribusi per kanal pada peta fitur. Arik dan Ağgül (2026) membandingkan KD dengan *pseudo-labeling* untuk *student* YOLOv11-N dari *teacher* YOLOv11-L; hasil terbaiknya, mAP50 0,81 yang mendekati *teacher* (0,84), diperoleh dengan *pseudo-labeling*.
 
-Penelitian lain memadukan KD dengan teknik kompresi atau memakai *student* dari keluarga arsitektur yang berbeda. Sabaghian, Keyvanrad, dan Moghadami (2025) memangkas kanal YOLOv8m lalu memulihkan akurasinya dengan CWD dari model asal, sehingga parameter turun dari 25,85 juta menjadi 6,85 juta, *average precision* (AP) pada ambang IoU 0,50, atau AP50, berkurang 2,7%, dan laju naik dari 26 menjadi 45 FPS pada GPU NVIDIA GeForce GTX 1080. Sharma, et al. (2026) memakai *teacher* YOLOv8-L dan *student* berbasis MobileNetV3-Large dengan tiga sinyal distilasi, lalu menjalankannya pada NVIDIA Jetson Nano. *Student* tersebut mencapai mAP50‑95, yaitu rata-rata mAP pada ambang IoU 0,50 sampai 0,95, sebesar 38,6. Di Indonesia, Billy (2019) menaikkan mAP detektor YOLO dengan *feature extractor* MobileNet pada himpunan data PASCAL VOC dari 0,3850 menjadi 0,4215 melalui KD, serta memakai *batchnorm fusion* untuk menaikkan laju dari 8,3 menjadi 16,66 FPS pada laptop dengan CPU i7. Zaini (2024) menerapkan KD pada YOLOv5 untuk 25 kelas rambu lalu lintas dengan mAP50 sebesar 0,953.
+Penelitian lain memadukan KD dengan teknik kompresi atau memakai *student* dari keluarga arsitektur yang berbeda. Sabaghian, Keyvanrad, dan Moghadami (2025) memangkas kanal YOLOv8m lalu memulihkan akurasinya dengan CWD dari model asal, sehingga parameter turun dari 25,85 juta menjadi 6,85 juta, *average precision* (AP) pada ambang IoU 0,50, atau AP50, berkurang 2,7%, dan laju naik dari 26 menjadi 45 FPS pada GPU NVIDIA GeForce GTX 1080. Sharma, et al. (2026) menggunakan *teacher* YOLOv8-L dan *student* berbasis MobileNetV3-Large dengan tiga sinyal distilasi, lalu menjalankannya pada NVIDIA Jetson Nano. *Student* tersebut mencapai mAP50‑95, yaitu rata-rata mAP pada ambang IoU 0,50 sampai 0,95, sebesar 38,6. Di Indonesia, Billy (2019) menaikkan mAP detektor YOLO dengan *feature extractor* MobileNet pada himpunan data PASCAL VOC dari 0,3850 menjadi 0,4215 melalui KD, serta memakai *batchnorm fusion* untuk menaikkan laju dari 8,3 menjadi 16,66 FPS pada laptop dengan CPU i7. Zaini (2024) menerapkan KD pada YOLOv5 untuk 25 kelas rambu lalu lintas dengan mAP50 sebesar 0,953.
 
 Ringkasan ketujuh penelitian tersebut disajikan pada Tabel 2.1. Pengujian kecepatan dilakukan pada GPU, perangkat NVIDIA Jetson, Raspberry Pi, atau laptop, dan tidak satu pun dari ketujuh penelitian ini menguji model hasil KD pada robot humanoid sepak bola.
 
@@ -23,16 +23,16 @@ Ringkasan ketujuh penelitian tersebut disajikan pada Tabel 2.1. Pengujian kecepa
 | Sabaghian, Keyvanrad, dan Moghadami (2025) | Citra udara VisDrone; GPU GTX 1080                 | YOLOv8m asal ke YOLOv8m terpangkas                        | *Pruning* kanal dan CWD                                         | Parameter 25,85 juta menjadi 6,85 juta; AP50 berkurang 2,7%; 26 menjadi 45 FPS | KD sebagai pemulih *pruning*; GPU               |
 | Saltık, et al. (2025)                      | Gulma; Jetson Orin Nano dan Raspberry Pi 5         | YOLO11x ke YOLO11n                                        | CWD dan MGD                                                     | mAP50 0,838 menjadi 0,859                                                      | Domain pertanian; tanpa ROS 2                   |
 | Jung dan Nam (2025)                        | Deteksi jatuh pada CCTV                            | YOLOv11-M ke YOLOv11-S dan YOLOv11-N                      | Peta fitur dengan MSE dan KL per kanal                          | mAP naik; waktu proses turun 0,8 ms                                            | Domain pengawasan; bukan robot                  |
-| Arik dan Ağgül (2026)                      | Retakan struktur; Raspberry Pi 3B+ dan Jetson Nano | YOLOv11-L ke YOLOv11-N                                    | KD (label dan sinyal lunak *teacher*) dan *pseudo-labeling*     | Terbaik *pseudo-labeling*: mAP50 0,81 (*teacher* 0,84)                         | Uji *edge device* untuk model *pseudo-labeling* |
+| Arik dan Ağgül (2026)                      | Retakan struktur; Raspberry Pi 3B+ dan Jetson Nano | YOLOv11-L ke YOLOv11-N                                    | KD (label dan *soft target* *teacher*) dan *pseudo-labeling*    | Terbaik *pseudo-labeling*: mAP50 0,81 (*teacher* 0,84)                         | Uji *edge device* untuk model *pseudo-labeling* |
 | Sharma, et al. (2026)                      | MS-COCO dan VisDrone; Jetson Nano                  | YOLOv8-L ke MobileNetV3-Large                             | KL bertemperatur, afinitas kanal, dan *detection fidelity loss* | 38,6 mAP50‑95; 61 FPS (FP16)                                                   | *Student* beda keluarga; GPU                    |
 
 ### 2.1.2 Penelitian Deteksi Objek pada Robot Humanoid
 
-Penelitian deteksi objek pada robot humanoid berangkat dari keterbatasan perangkat. Barry, et al. (2019) mendapati Tiny-YOLO hanya mencapai 0,14 FPS pada Raspberry Pi 3 B, lalu merancang xYOLO yang mencapai 9,66 FPS pada perangkat yang sama dengan mengorbankan sebagian akurasi. Fiedler, et al. (2019) membangun *pipeline* visi ROS berbahasa Python yang memakai *fully convolutional neural network* (FCNN) untuk bola dan metode konvensional untuk robot serta tiang gawang, dan memproses 8,1 citra per detik pada NVIDIA Jetson TX2. Meneghetti, et al. (2021) membandingkan sejumlah arsitektur jaringan kecil untuk deteksi bola dan mendapati MobileNetV3 memberi keseimbangan yang baik antara mAP dan waktu inferensi pada perangkat terbatas, sedangkan implementasi resmi YOLO tidak cocok untuk CPU. Narayanaswami, et al. (2023) mengembangkan xYOLO dan SSD-MobileNet untuk robot NAO v6 yang memakai CPU Intel Atom E3845; salah satu varian xYOLO mencapai mAP50 95,6% dengan waktu jalan 7,7 ms pada CPU.
+Penelitian deteksi objek pada robot humanoid berangkat dari keterbatasan perangkat. Barry, et al. (2019) mendapati Tiny-YOLO hanya mencapai 0,14 FPS pada Raspberry Pi 3 B, lalu merancang xYOLO yang mencapai 9,66 FPS pada perangkat yang sama dengan mengorbankan sebagian akurasi. Fiedler, et al. (2019) membangun *pipeline* visi ROS berbahasa Python yang memakai *fully convolutional neural network* (FCNN) untuk bola dan metode konvensional untuk robot serta tiang gawang, dan memproses 8,1 citra per detik pada NVIDIA Jetson TX2. Meneghetti, et al. (2021) membandingkan sejumlah arsitektur jaringan kecil untuk deteksi bola dan mendapati MobileNetV3 memberi keseimbangan yang baik antara mAP dan waktu inferensi pada perangkat terbatas, sedangkan implementasi resmi YOLO tidak cocok untuk CPU. Narayanaswami, et al. (2023) mengembangkan xYOLO dan SSD-MobileNet untuk robot NAO v6 yang menggunakan CPU Intel Atom E3845; salah satu varian xYOLO mencapai mAP50 95,6% dengan waktu jalan 7,7 ms pada CPU.
 
 Penelitian yang lebih baru memakai YOLO generasi baru dan perangkat yang beragam. Bordado, Silveria, dan Laureano (2023) menjalankan YOLOv5 *nano* untuk deteksi dan pelacakan bola pada Intel NUC 11, NVIDIA Jetson Nano, dan Raspberry Pi 4 B; pada validasi, YOLOv5 *small* mencapai mAP50 kelas bola 0,988. Jati, Ilyasa, dan Dominic (2024) membandingkan YOLO-NAS dengan YOLOv8 dan YOLOv7 pada NVIDIA Jetson Nano; YOLOv7 memberi laju *pipeline* tertinggi, 28,9 FPS, sedangkan YOLO-NAS mencapai tingkat keberhasilan 53,3% pada tugas pelacakan bola. Addufairi dan Setyawan (2026) menerapkan YOLO11 dengan TensorRT pada robot BRONE yang memakai NVIDIA Jetson Orin Nano dan memperoleh mAP50 0,995 dengan laju 27,61 FPS. Setyawan, et al. (2026) mengembangkan *augmented Haar cascade classifier* pada Intel NUC tanpa GPU dengan ROS; metode ini mencapai akurasi 97% dengan 0,00849 s per *frame*, sedangkan YOLOv5 sebagai pembanding mencapai akurasi 99% tetapi memerlukan 0,0344 s per *frame* dan memori 22,3%.
 
-Dua penelitian memakai ROBOTIS OP3. Lau dan Pottier (2026) menjalankan YOLOv9 pada OP3 dengan prosesor Intel Core i3-6100U dan ROS Kinetic setelah model dikonversi ke ONNX dan OpenVINO serta dikuantisasi, dan memperoleh 4 sampai 8 FPS. Adipratama (2026) memakai YOLOv5 dan Convex Hull pada OP3 dengan Intel NUC7i3BNK dan ROS Noetic; sistemnya mencapai *precision* 0,985, *recall* 1,000, mAP50 0,995, dan mAP50‑95 0,961 dengan rata-rata 34,3 FPS, dan penggunaan CPU serta memorinya diukur saat robot diam dan berjalan. Ringkasan penelitian kelompok ini disajikan pada Tabel 2.2.
+Dua penelitian menggunakan ROBOTIS OP3. Lau dan Pottier (2026) menjalankan YOLOv9 pada OP3 dengan prosesor Intel Core i3-6100U dan ROS Kinetic setelah model dikonversi ke ONNX dan OpenVINO serta dikuantisasi, dan memperoleh 4 sampai 8 FPS. Adipratama (2026) memakai YOLOv5 dan Convex Hull pada OP3 dengan Intel NUC7i3BNK dan ROS Noetic; sistemnya mencapai *precision* 0,985, *recall* 1,000, mAP50 0,995, dan mAP50‑95 0,961 dengan rata-rata 34,3 FPS, dan penggunaan CPU serta memorinya diukur saat robot diam dan berjalan. Ringkasan penelitian kelompok ini disajikan pada Tabel 2.2.
 
 **Tabel 2.2** Penelitian terdahulu tentang deteksi objek pada robot humanoid
 
@@ -51,7 +51,7 @@ Dua penelitian memakai ROBOTIS OP3. Lau dan Pottier (2026) menjalankan YOLOv9 pa
 
 ### 2.1.3 Posisi Penelitian
 
-Kedua kelompok penelitian tersebut jarang bersinggungan. Penelitian KD pada keluarga YOLO dievaluasi pada domain di luar sepak bola robot dan umumnya diuji kecepatannya di luar robot, sedangkan penelitian deteksi objek pada robot humanoid belum memakai KD. Penelitian ini mengambil posisi di antara keduanya dengan tiga keunikan. Dari sisi data, model dilatih pada citra robot sepak bola dengan tiga kelas dan diperiksa pada citra dari kamera OP3. Dari sisi metode, *student* YOLO11 skala t dilatih dengan KD dari *teacher* YOLO11n memakai resep pelatihan yang sama dengan *student* yang dilatih secara *supervised*, masing-masing dengan tiga *seed* acak, sehingga pengaruh KD dapat dipisahkan dari pengaruh ukuran model dan variasi pelatihan. Dari sisi arsitektur sistem, model dijalankan sebagai *node* ROS 2 Jazzy pada CPU komputer *onboard* OP3 dan diuji saat robot diam dan berjalan. Keunikan ini dinyatakan dalam batas pustaka yang ditelusuri penulis.
+Kedua kelompok penelitian tersebut jarang bersinggungan. Penelitian KD pada keluarga YOLO dievaluasi pada domain di luar sepak bola robot dan umumnya diuji kecepatannya di luar robot, sedangkan penelitian deteksi objek pada robot humanoid belum memakai KD. Penelitian ini mengambil posisi di antara keduanya dengan tiga keunikan. Dari sisi data, model dilatih pada citra robot sepak bola dengan tiga kelas dan diperiksa pada citra dari kamera OP3. Dari sisi metode, *student* YOLO11 skala t dilatih dengan KD dari *teacher* YOLO11n menggunakan pengaturan pelatihan yang sama dengan *student* yang dilatih secara *supervised*, masing-masing dengan tiga *seed* acak, sehingga pengaruh KD dapat dipisahkan dari pengaruh ukuran model dan variasi pelatihan. Dari sisi arsitektur sistem, model dijalankan sebagai *node* ROS 2 Jazzy pada CPU komputer *onboard* OP3 dan diuji saat robot diam dan berjalan. Keunikan ini dinyatakan dalam batas pustaka yang ditelusuri penulis.
 
 ## 2.2 Dasar Teori
 
@@ -75,7 +75,7 @@ YOLO11 tersusun atas tiga komponen. *Backbone* mengubah citra menjadi peta fitur
 
 Sumber: Diadaptasi dari Khanam dan Hussain (2024)
 
-Sejumlah detektor satu tahap memodelkan letak tepi kotak sebagai distribusi umum alih-alih satu nilai tunggal melalui *distribution focal loss* (DFL) yang diperkenalkan dalam *generalized focal loss* (Li, et al., 2020). Pendahulu YOLO11, yaitu YOLOv8, memakai *binary cross-entropy* (BCE) untuk klasifikasi, *complete* IoU (CIoU) untuk regresi, dan DFL dalam *loss*-nya (Sabaghian, Keyvanrad, dan Moghadami, 2025). Prediksi yang bertumpang tindih kemudian disaring dengan *non-maximum suppression* (NMS): kotak diurutkan menurut skornya, kotak berskor tertinggi dipilih, lalu kotak lain yang tumpang tindihnya dengan kotak itu melebihi ambang dibuang (Bodla, et al., 2017).
+Sejumlah detektor satu tahap memodelkan letak tepi kotak sebagai distribusi umum alih-alih satu nilai tunggal melalui *distribution focal loss* (DFL) yang diperkenalkan dalam *generalized focal loss* (Li, et al., 2020). Pendahulu YOLO11, yaitu YOLOv8, menggunakan *binary cross-entropy* (BCE) untuk klasifikasi, *complete* IoU (CIoU) untuk regresi, dan DFL dalam *loss*-nya (Sabaghian, Keyvanrad, dan Moghadami, 2025). Prediksi yang bertumpang tindih kemudian disaring dengan *non-maximum suppression* (NMS): kotak diurutkan menurut skornya, kotak berskor tertinggi dipilih, lalu kotak lain yang tumpang tindihnya dengan kotak itu melebihi ambang dibuang (Bodla, et al., 2017).
 
 ### 2.2.3 *Knowledge Distillation*
 
@@ -97,7 +97,7 @@ Keterangan:
 
 Nilai $T = 1$ menghasilkan *softmax* biasa, sedangkan $T$ yang lebih besar menghasilkan distribusi yang lebih lunak (Hinton, Vinyals, dan Dean, 2015).
 
-*Loss* pelatihan *student* merupakan rata-rata berbobot dari dua *cross-entropy*, yaitu terhadap target lunak *teacher* pada temperatur yang sama dan terhadap label yang benar pada temperatur 1. Karena besar gradien dari target lunak berskala $\frac{1}{T^{2}}$, suku tersebut dikalikan $T^{2}$ (Hinton, Vinyals, dan Dean, 2015). Bentuk ini dituliskan sebagai Persamaan 2.2.
+*Loss* pelatihan *student* merupakan rata-rata berbobot dari dua *cross-entropy*, yaitu terhadap *soft target* *teacher* pada temperatur yang sama dan terhadap label yang benar pada temperatur 1. Karena besar gradien dari *soft target* berskala $\frac{1}{T^{2}}$, suku tersebut dikalikan $T^{2}$ (Hinton, Vinyals, dan Dean, 2015). Bentuk ini dituliskan sebagai Persamaan 2.2.
 
 > $L_{\text{KD}} = (1 - \alpha)H\left( y,q_{s}^{(1)} \right) + \alpha T^{2}H\left( q_{t}^{(T)},q_{s}^{(T)} \right)$ (2.2)
 
@@ -127,11 +127,11 @@ Keberhasilan KD juga tidak berarti *student* benar-benar meniru *teacher*. Stant
 
 Distilasi fitur memindahkan representasi lapisan tengah. FitNets memakai representasi tengah *teacher* sebagai *hint* dan menambahkan lapisan regresi pada lapisan *student* yang dipandu agar keluarannya sebanding dengan *hint* tersebut (Romero, et al., 2015). Chen, et al. (2017, p. 743) menerapkan gagasan ini pada detektor objek dengan *hint learning* dan lapisan adaptasi, serta *cross-entropy* berbobot untuk menangani ketidakseimbangan antara kelas latar dan objek. Wang, et al. (2019) membatasi imitasi fitur pada daerah di sekitar *anchor* objek melalui *imitation mask*, sedangkan Shu, et al. (2021) menormalkan peta aktivasi setiap kanal menjadi peta probabilitas lunak lalu meminimalkan divergensi KL antara *teacher* dan *student*.
 
-Distilasi respons pada detektor padat perlu memperhatikan cara klasifikasinya. Detektor padat memakai fungsi *sigmoid* untuk setiap kelas, sehingga distilasi berbasis *softmax* mengabaikan skor absolut setiap kelas; karena itu, Yang, et al. (2023) memakai BCE untuk mendistilasi setiap peta klasifikasi biner hasil *sigmoid*. Untuk lokalisasi, Zheng, et al. (2022) mengubah kotak pembatas menjadi distribusi probabilitas lalu mendistilasi distribusi tepi kotak dari *teacher* ke *student*.
+Distilasi respons pada detektor padat perlu memperhatikan cara klasifikasinya. Detektor padat menggunakan fungsi *sigmoid* untuk setiap kelas, sehingga distilasi berbasis *softmax* mengabaikan skor absolut setiap kelas; karena itu, Yang, et al. (2023) memakai BCE untuk mendistilasi setiap peta klasifikasi biner hasil *sigmoid*. Untuk lokalisasi, Zheng, et al. (2022) mengubah kotak pembatas menjadi distribusi probabilitas lalu mendistilasi distribusi tepi kotak dari *teacher* ke *student*.
 
 Ultralytics menyediakan KD bawaan melalui argumen distill_model untuk berkas *teacher* dan argumen dis untuk bobot *loss* distilasi dengan nilai bawaan 6,0. Fitur *student* diselaraskan ke jumlah kanal *teacher* oleh *projector* berupa dua konvolusi 1 × 1 dengan *rectified linear unit* (ReLU), lalu dibandingkan memakai *loss* L2 yang dibobot *confidence* kelas *teacher* (Ultralytics, n.d.a).
 
-Penelitian ini memakai tiga suku distilasi. Bobot setiap *anchor point* $i$ diambil dari *confidence* kelas tertinggi *teacher* (Persamaan 2.3).
+Penelitian ini menggunakan tiga suku distilasi. Bobot setiap *anchor point* $i$ diambil dari *confidence* kelas tertinggi *teacher* (Persamaan 2.3).
 
 > $w_{i} = \max_{c}{\sigma\left( z_{t,i,c} \right)}$ (2.3)
 
@@ -161,7 +161,7 @@ Keterangan:
 >
 > $F_{t,c,i}^{l}$ : fitur *teacher* pada kanal $c$ dan posisi $i$
 >
-> $w_{i}$ : bobot titik $i$ menurut Persamaan 2.3
+> $w_{i}$ :bobot *anchor point* $i$ menurut Persamaan 2.3
 >
 > $C_{l}$ : jumlah kanal fitur pada skala $l$
 >
@@ -187,7 +187,7 @@ Keterangan:
 >
 > $\mathcal{l}_{\text{SL1}}$ : fungsi Smooth L1 dengan ambang 1: selisih yang kurang dari 1 dihitung sebagai setengah kuadratnya, sedangkan selisih yang lebih besar dihitung sebagai nilai mutlaknya dikurangi 0,5, sehingga selisih yang sangat besar tidak mendominasi
 
-*Loss* kelas adalah BCE bertemperatur antara target lunak *teacher* dan *logit* *student*, lalu dikalikan $T^{2}$ seperti pada Persamaan 2.2 (Persamaan 2.6).
+*Loss* kelas adalah BCE bertemperatur antara *soft target* *teacher* dan *logit* *student*, lalu dikalikan $T^{2}$ seperti pada Persamaan 2.2 (Persamaan 2.6).
 
 > $L_{\text{kelas}} = - \frac{T^{2}}{M}\sum_{m = 1}^{M}\left\lbrack p_{m}\log{\sigma\left( \frac{z_{s,m}}{T} \right)} + \left( 1 - p_{m} \right)\log\left( 1 - \sigma\left( \frac{z_{s,m}}{T} \right) \right) \right\rbrack$ (2.6)
 
@@ -195,7 +195,7 @@ Keterangan:
 
 > $L_{\text{kelas}}$ : *loss* kelas
 >
-> $p_{m}$ : target lunak *teacher* untuk elemen skor ke-$m$, yaitu $\sigma\left( \frac{z_{t,m}}{T} \right)$
+> $p_{m}$ :*soft target* *teacher* untuk elemen skor ke-$m$, yaitu $\sigma\left( \frac{z_{t,m}}{T} \right)$
 >
 > $z_{t,m}$, $z_{s,m}$ : *logit* *teacher* dan *student* pada elemen skor ke-$m$
 >
@@ -299,7 +299,7 @@ Keterangan:
 
 Setiap suku penjumlahan adalah luas persegi panjang dengan lebar selisih dua nilai *recall* acuan yang berurutan dan tinggi *precision* terinterpolasi, sehingga jumlahnya mendekati luas daerah yang dibatasi kurva *precision* terhadap *recall*.
 
-Jumlah Riemann pada Persamaan 2.13 dapat dihitung dengan interpolasi $N$ titik atau interpolasi semua titik. Interpolasi $N$ titik memakai nilai *recall* acuan yang berjarak sama pada selang 0 sampai 1, misalnya 101 titik pada kompetisi COCO dan 11 titik yang semula dipakai PASCAL VOC. Interpolasi semua titik memakai setiap nilai *recall* yang dihasilkan oleh seluruh ambang *confidence*, dan metode ini kemudian dipakai PASCAL VOC. Apa pun metode interpolasinya, AP dihitung untuk setiap kelas secara terpisah (Padilla, et al., 2021).
+Jumlah Riemann pada Persamaan 2.13 dapat dihitung dengan interpolasi $N$ titik atau interpolasi semua titik. Interpolasi $N$ titik menggunakan nilai *recall* acuan yang berjarak sama pada selang 0 sampai 1, misalnya 101 titik pada kompetisi COCO dan 11 titik yang semula digunakan PASCAL VOC. Interpolasi semua titik memakai setiap nilai *recall* yang dihasilkan oleh seluruh ambang *confidence*, dan metode ini kemudian dipakai PASCAL VOC. Apa pun metode interpolasinya, AP dihitung untuk setiap kelas secara terpisah (Padilla, et al., 2021).
 
 Nilai mAP adalah rata-rata AP atas $C$ kelas, seperti pada Persamaan 2.14 (Padilla, et al., 2021). mAP50 memakai ambang IoU 0,50, sedangkan mAP50‑95 merata-ratakan mAP pada ambang IoU 0,50 sampai 0,95 dengan selang 0,05. AP pada rentang ambang tersebut merupakan metrik utama himpunan data COCO (Lin, et al., 2014; COCO, n.d.; Ultralytics, n.d.c).
 
@@ -315,7 +315,7 @@ Keterangan:
 
 ### 2.2.8 Metrik Kinerja *Runtime*
 
-Waktu eksekusi pada komputer bersifat nondeterministik. Hoefler dan Belli (2015, pp. 4-5) menganjurkan agar hasil nondeterministik dilaporkan beserta selang kepercayaannya, dan agar data tidak diasumsikan berdistribusi normal tanpa pemeriksaan diagnostik. Ukuran nonparametrik seperti median dan persentil lain tidak mengandaikan bentuk distribusi tertentu, dan persentil selain median diperlukan untuk persoalan seperti latensi terburuk (Hoefler dan Belli, 2015, pp. 5-6). MLPerf memakai latensi persentil ke-90 sebagai metrik skenario *single-stream* (Reddi, et al., 2020).
+Waktu eksekusi pada komputer bersifat nondeterministik. Hoefler dan Belli (2015, pp. 4-5) menganjurkan agar hasil nondeterministik dilaporkan beserta selang kepercayaannya, dan agar data tidak diasumsikan berdistribusi normal tanpa pemeriksaan diagnostik. Ukuran nonparametrik seperti median dan persentil lain tidak mengandaikan bentuk distribusi tertentu, dan persentil selain median diperlukan untuk persoalan seperti latensi terburuk (Hoefler dan Belli, 2015, pp. 5-6). MLPerf menggunakan latensi persentil ke-90 sebagai metrik skenario *single-stream* (Reddi, et al., 2020).
 
 Penelitian ini melaporkan rata-rata, median, dan persentil ke-95 latensi; alasan pemilihannya dijelaskan pada Subbab 3.2.5. Laju pemrosesan dinyatakan sebagai FPS efektif, yaitu jumlah selang antar-*frame* terproses dibagi rentang *timestamp* kamera dalam *measurement window* (Persamaan 2.15). Penggunaan sumber daya dinyatakan dari penggunaan CPU dan memori proses detektor, dengan definisi operasional pada Bab 3.
 

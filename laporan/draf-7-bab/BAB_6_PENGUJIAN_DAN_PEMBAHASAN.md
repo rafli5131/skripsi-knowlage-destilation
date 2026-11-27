@@ -1,6 +1,6 @@
 # BAB 6 PENGUJIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v33 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v34 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 Bab ini menyajikan pengujian dengan urutan mengikuti rumusan masalah. Subbab 6.1 memuat pengujian fungsional yang memastikan sistem berjalan sesuai kebutuhan sebelum hasil lainnya dianalisis. Subbab 6.2 sampai Subbab 6.5 menjawab rumusan masalah nomor 1 sampai 4 secara berurutan, yaitu akurasi berdasarkan mAP, *precision*, *recall*, dan *F1-score*, latensi dan FPS, serta penggunaan CPU dan RAM. Subbab 6.6 memuat pengujian tambahan, dan Subbab 6.7 mengevaluasi hasil terhadap setiap rumusan masalah. Setiap pengujian diuraikan dalam empat bagian, yaitu tujuan, prosedur, hasil, dan analisis hasil pengujian.
 
@@ -59,13 +59,13 @@ Langkah pengujian adalah sebagai berikut.
 
 1.  Menyaring varian KD pada VAL dengan *seed* 42, lalu mengulang varian terpilih dan pembandingnya dengan *seed* 1337 dan 2025.
 
-2.  Memilih *seed* KD hibrida dan KD murni yang dibawa ke OP3 berdasarkan mAP50-95 tertinggi pada VAL, sebelum TEST dievaluasi. *Supervised* memakai *seed* yang sama dengan KD hibrida agar keduanya berpasangan.
+2.  Memilih *seed* KD hibrida dan KD murni yang digunakan pada OP3 berdasarkan mAP50-95 tertinggi pada VAL, sebelum TEST dievaluasi. *Supervised* memakai *seed* yang sama dengan KD hibrida agar keduanya berpasangan.
 
-3.  Memverifikasi sidik jari SHA-256 592 citra dan label TEST, lalu mengevaluasi sembilan *checkpoint* *student* dan *teacher* dengan *confidence floor* 0,001 dan NMS IoU 0,7.
+3.  Memverifikasi *hash* SHA-256 592 citra dan label TEST, lalu mengevaluasi sembilan *checkpoint* *student* dan *teacher* dengan *confidence floor* 0,001 dan NMS IoU 0,7.
 
 4.  Menghitung mAP50 dan mAP50-95 setiap model serta selisih berpasangan KD hibrida penuh dikurangi *supervised* pada *seed* yang sama.
 
-5.  Mengevaluasi ulang seluruh *checkpoint* lewat *predict path* yang dipakai *node* di robot untuk memeriksa pengaruh jalur evaluasi.
+5.  Mengevaluasi ulang seluruh *checkpoint* melalui *predict path* yang dipakai *node* di robot untuk memeriksa pengaruh jalur evaluasi.
 
 6.  Menyiapkan Set Kamera 1 (260 *frame* retrospektif) dan Set Kamera 2 (260 *frame*, 130 untuk setiap kondisi) beserta label hasil tinjauan manual seperti dijelaskan pada Subbab 3.3.5, lalu memverifikasi *hash* *checkpoint*, citra, dan label.
 
@@ -77,7 +77,7 @@ Langkah pengujian adalah sebagai berikut.
 
 #### 6.2.3.1 Hasil Seleksi pada VAL
 
-Hasil penyaringan varian dengan *seed* 42 disajikan pada Tabel 6.2. KD hibrida penuh memberi mAP50-95 VAL tertinggi, sedangkan varian KD murni berbobot lokasi *teacher* menurunkan *precision* pada *confidence* 0,25 menjadi 0,0473 sehingga tidak diteruskan. Pada tiga *seed*, mAP50-95 VAL KD hibrida penuh lebih tinggi daripada *supervised* dengan rata-rata selisih +0,0297 ± 0,0047. *Seed* 1337 memberi mAP50-95 VAL tertinggi di antara ketiga *seed* KD hibrida penuh (0,7523), sehingga *checkpoint* ini dibawa ke OP3.
+Hasil penyaringan varian dengan *seed* 42 disajikan pada Tabel 6.2. KD hibrida penuh memberi mAP50-95 VAL tertinggi, sedangkan varian KD murni berbobot lokasi *teacher* menurunkan *precision* pada *confidence* 0,25 menjadi 0,0473 sehingga tidak diteruskan. Pada tiga *seed*, mAP50-95 VAL KD hibrida penuh lebih tinggi daripada *supervised* dengan rata-rata selisih +0,0297 ± 0,0047. *Seed* 1337 memberi mAP50-95 VAL tertinggi di antara ketiga *seed* KD hibrida penuh (0,7523), sehingga *checkpoint* ini digunakan pada OP3.
 
 **Tabel 6.2** Hasil penyaringan varian *student* pada VAL dengan *seed* 42
 
@@ -89,13 +89,13 @@ Hasil penyaringan varian dengan *seed* 42 disajikan pada Tabel 6.2. KD hibrida p
 | KD hibrida penuh                   | 0,9725    | 0,7488       | 0,8721          | 0,9780       | 0,9220 |
 | *Supervised*                       | 0,9733    | 0,7189       | 0,8829          | 0,9679       | 0,9235 |
 
-Perkembangan mAP50, mAP50-95, dan F1 pada VAL selama pelatihan ketiga metode *student* disajikan pada Gambar 6.3. Garis menunjukkan rata-rata tiga *seed*, sedangkan pita menunjukkan rentang nilai terendah sampai tertinggi. Pada mAP50 dan F1, KD hibrida penuh dan *supervised* hampir berimpit setelah sekitar *epoch* ke-40. Pada mAP50-95, KD hibrida penuh berada di atas *supervised* sepanjang pelatihan dan selisihnya bertahan sampai *epoch* ke-100. KD murni berada paling bawah pada ketiga metrik. Kurva ini dicatat validator pada akhir setiap *epoch*, sehingga nilai *epoch* terakhir dapat sedikit berbeda dari hasil evaluasi ulang *checkpoint* pada Tabel 6.2.
+Perkembangan mAP50, mAP50-95, dan F1 pada VAL selama pelatihan ketiga metode *student* disajikan pada Gambar 6.3. Garis menunjukkan rata-rata tiga *seed*, sedangkan pita menunjukkan rentang nilai terendah sampai tertinggi. Pada mAP50 dan F1, KD hibrida penuh dan *supervised* hampir berimpit setelah sekitar *epoch* ke-40. Pada mAP50-95, KD hibrida penuh berada di atas *supervised* sepanjang pelatihan dan selisihnya bertahan sampai *epoch* ke-100. KD murni berada paling bawah pada ketiga metrik. Kurva ini dicatat oleh *validator* Ultralytics pada akhir setiap *epoch*, sehingga nilai *epoch* terakhir dapat sedikit berbeda dari hasil evaluasi ulang *checkpoint* pada Tabel 6.2.
 
 **Gambar 6.3** mAP50, mAP50-95, dan F1 VAL per *epoch* tiga metode *student*
 
 #### 6.2.3.2 Hasil mAP pada TEST
 
-mAP pada 592 citra TEST disajikan pada Tabel 6.3 dan Gambar 6.4. Nilai *student* adalah rata-rata dan simpangan baku tiga *seed*, sedangkan *teacher* diwakili satu *checkpoint*. TEST pernah dipakai untuk mengevaluasi *teacher* dan KD murni sebelum KD hibrida dirancang, sehingga hasil ini tidak diklaim sebagai hasil pada data yang belum pernah dibuka. Nilai setiap *seed* disajikan pada Tabel D.1 di Lampiran D.
+mAP pada 592 citra TEST disajikan pada Tabel 6.3 dan Gambar 6.4. Nilai *student* adalah rata-rata dan simpangan baku tiga *seed*, sedangkan *teacher* diwakili satu *checkpoint*. TEST pernah digunakan untuk mengevaluasi *teacher* dan KD murni sebelum KD hibrida dirancang, sehingga hasil ini tidak diklaim sebagai hasil pada data yang belum pernah dibuka. Nilai setiap *seed* disajikan pada Tabel D.1 di Lampiran D.
 
 **Tabel 6.3** mAP50 dan mAP50-95 model pada TEST
 
@@ -133,7 +133,7 @@ mAP50-95 per kelas pada Tabel 6.5 dan Gambar 6.6 memperlihatkan asal keunggulan 
 
 **Gambar 6.6** mAP50-95 per kelas pada TEST
 
-Evaluator TEST menghitung mAP lewat *validator path* Ultralytics, yang memakai tensor 672 × 672 piksel akibat penyusunan *batch* persegi panjang dengan *padding* 0,5 dan NMS *multi-label*. *Node* di robot memakai *predict path* dengan tensor 640 × 640 piksel untuk citra TEST dan NMS tanpa *multi-label*. Untuk memastikan angka TEST tidak bergantung pada perbedaan tersebut, sepuluh *checkpoint* dievaluasi ulang lewat *predict path* pada CPU. Hasilnya disajikan pada Tabel 6.6. Selisih rata-rata kelompok paling besar 0,0035, dan urutan mAP50-95 keempat model tidak berubah.
+Evaluator TEST menghitung mAP melalui *validator path* Ultralytics, yang menggunakan tensor 672 × 672 piksel akibat penyusunan *batch* persegi panjang dengan *padding* 0,5 dan NMS *multi-label*. *Node* di robot memakai *predict path* dengan tensor 640 × 640 piksel untuk citra TEST dan NMS tanpa *multi-label*. Untuk memastikan angka TEST tidak bergantung pada perbedaan tersebut, sepuluh *checkpoint* dievaluasi ulang melalui *predict path* pada CPU. Hasilnya disajikan pada Tabel 6.6. Selisih rata-rata kelompok paling besar 0,0035, dan urutan mAP50-95 keempat model tidak berubah.
 
 **Tabel 6.6** mAP50-95 pada TEST menurut jalur evaluasi
 
@@ -172,7 +172,7 @@ Kepekaan mAP50-95 terhadap pelabelan pada 52 *frame* sampel Set Kamera 2 disajik
 
 **Gambar 6.8** mAP50-95 pada tiga set label Set Kamera 2
 
-mAP pada Tabel 6.7 dihitung lewat *validator path*. Untuk memperoleh angka dari jalur yang sama dengan robot, keempat model dievaluasi ulang secara *offline* pada komputer *onboard* lewat *predict path* dengan *frame* dan label yang sama. Uji identitas 48 pemeriksaan lulus, yaitu AP *validator path* dan hitungan per kelas *predict path* mereproduksi hasil sebelumnya. Hasilnya disajikan pada Tabel 6.9 dan Gambar 6.9.
+mAP pada Tabel 6.7 dihitung melalui *validator path*. Untuk memperoleh angka dari jalur yang sama dengan robot, keempat model dievaluasi ulang secara *offline* pada komputer *onboard* melalui *predict path* dengan *frame* dan label yang sama. Uji identitas 48 pemeriksaan lulus, yaitu AP *validator path* dan hitungan per kelas *predict path* mereproduksi hasil sebelumnya. Hasilnya disajikan pada Tabel 6.9 dan Gambar 6.9.
 
 **Tabel 6.9** mAP50-95 kamera OP3 menurut jalur evaluasi
 
@@ -185,11 +185,11 @@ mAP pada Tabel 6.7 dihitung lewat *validator path*. Untuk memperoleh angka dari 
 
 **Gambar 6.9** mAP50-95 keempat model pada kedua set kamera OP3 menurut jalur evaluasi
 
-Berbeda dengan TEST, urutan mAP50-95 pada kamera OP3 berubah antarjalur. Pada Set Kamera 1, *predict path* menempatkan *teacher* di urutan pertama, diikuti KD murni, KD hibrida, dan *supervised*, sedangkan *validator path* menempatkan KD hibrida di urutan kedua. Pada Set Kamera 2, *predict path* menempatkan KD hibrida di urutan pertama dan *teacher* di urutan terakhir. Pemisahan faktor pada *teacher* Set Kamera 2 menunjukkan bahwa bentuk *letterbox* jauh lebih berpengaruh daripada NMS *multi-label*. AP50 gawang *teacher* adalah 0,1112 pada bentuk 480 × 640 piksel dan 0,9946 pada bentuk 512 × 672 piksel, sedangkan NMS *multi-label* tidak mengubah angka tersebut. *Confidence sweep* pada *predict path* juga menunjukkan bahwa gawang yang dapat dicocokkan pada *confidence floor* 0,001 hanya 68 dari 200 untuk *teacher*, dibanding 200 untuk KD hibrida, 200 untuk *supervised*, dan 191 untuk KD murni. Pada sebagian besar gawang parsial, *teacher* sama sekali tidak menghasilkan kotak di *predict path*. Pada tiga *student* di Set Kamera 1, pemisahan faktor *validator path* tidak mereproduksi AP validator dalam batas toleransi, sehingga faktor pada bagian itu tidak ditafsirkan.
+Berbeda dengan TEST, urutan mAP50-95 pada kamera OP3 berubah antarjalur. Pada Set Kamera 1, *predict path* menempatkan *teacher* di urutan pertama, diikuti KD murni, KD hibrida, dan *supervised*, sedangkan *validator path* menempatkan KD hibrida di urutan kedua. Pada Set Kamera 2, *predict path* menempatkan KD hibrida di urutan pertama dan *teacher* di urutan terakhir. Pemisahan faktor pada *teacher* Set Kamera 2 menunjukkan bahwa bentuk *letterbox* jauh lebih berpengaruh daripada NMS *multi-label*. AP50 gawang *teacher* adalah 0,1112 pada bentuk 480 × 640 piksel dan 0,9946 pada bentuk 512 × 672 piksel, sedangkan NMS *multi-label* tidak mengubah angka tersebut. *Confidence sweep* pada *predict path* juga menunjukkan bahwa gawang yang dapat dicocokkan pada *confidence floor* 0,001 hanya 68 dari 200 untuk *teacher*, dibandingkan dengan 200 untuk KD hibrida, 200 untuk *supervised*, dan 191 untuk KD murni. Pada sebagian besar gawang parsial, *teacher* sama sekali tidak menghasilkan kotak di *predict path*. Pada tiga *student* di Set Kamera 1, pemisahan faktor *validator path* tidak mereproduksi AP *validator path* dalam batas toleransi, sehingga faktor pada bagian itu tidak ditafsirkan.
 
 ### 6.2.4 Analisis Hasil Pengujian
 
-Pada TEST, KD hibrida penuh mempertahankan 95,8% mAP50-95 *teacher* dengan jumlah parameter 31% dan GFLOPs 37% dari *teacher*, sedangkan *supervised* mempertahankan 92,6% dan KD murni 85,0%. Ketiga *student* berarsitektur identik, sehingga selisih di antara ketiganya berasal dari objektif pelatihan. Keunggulan KD hibrida terletak pada ketepatan letak kotak. Hal ini terlihat dari selisih mAP50-95 yang positif pada ketiga pasangan *seed*, sementara mAP50 hampir sama, dan dari kenaikan terbesar pada bola. KD murni, yang tidak memakai label, berada di bawah *supervised*. Hasil ini sejalan dengan temuan bahwa KD dapat memperbaiki generalisasi *student* tanpa membuat *student* benar-benar meniru *teacher* (Stanton, et al., 2021, p. 6906) dan bahwa kapasitas *student* yang jauh lebih kecil membatasi apa yang dapat dipelajarinya dari *teacher* (Cho dan Hariharan, 2019). Dengan tiga *seed*, hasil ini deskriptif; konsistensi tanda selisih pada ketiga pasangan menjadi dasar klaim, bukan uji signifikansi.
+Pada TEST, KD hibrida penuh mempertahankan 95,8% mAP50-95 *teacher* dengan jumlah parameter 31% dan GFLOPs 37% dari *teacher*, sedangkan *supervised* mempertahankan 92,6% dan KD murni 85,0%. Ketiga *student* berarsitektur identik, sehingga selisih di antara ketiganya berasal dari fungsi objektif pelatihan. Keunggulan KD hibrida terletak pada ketepatan letak kotak. Hal ini terlihat dari selisih mAP50-95 yang positif pada ketiga pasangan *seed*, sementara mAP50 hampir sama, dan dari kenaikan terbesar pada bola. KD murni, yang tidak memakai label, berada di bawah *supervised*. Hasil ini sejalan dengan temuan bahwa KD dapat memperbaiki generalisasi *student* tanpa membuat *student* benar-benar meniru *teacher* (Stanton, et al., 2021, p. 6906) dan bahwa kapasitas *student* yang jauh lebih kecil membatasi apa yang dapat dipelajarinya dari *teacher* (Cho dan Hariharan, 2019). Dengan tiga *seed*, hasil ini deskriptif; konsistensi tanda selisih pada ketiga pasangan menjadi dasar klaim, bukan uji signifikansi.
 
 Keunggulan mAP50-95 KD hibrida pada TEST tidak berulang secara konsisten pada citra kamera OP3. Peringkat model bergantung pada set *frame*, konvensi label, dan jalur evaluasi. Pada *predict path* yang dipakai robot, KD hibrida berada di urutan ketiga pada Set Kamera 1 dan pertama pada Set Kamera 2, sedangkan *teacher* berada di urutan pertama pada Set Kamera 1 dan terakhir pada Set Kamera 2. Kelemahan *teacher* pada gawang parsial di *predict path* berkaitan dengan bentuk *letterbox* 480 × 640 piksel, bukan dengan ambang *confidence*. Walaupun peringkat berubah antarjalur, arah dua perbandingan utama tetap sama: KD hibrida lebih tinggi daripada *supervised* pada kedua set, serta berada di bawah *teacher* pada Set Kamera 1 dan di atasnya pada Set Kamera 2. Angka *predict path* dipakai sebagai acuan utama karena paling mewakili kondisi *runtime* robot.
 
@@ -211,7 +211,7 @@ Langkah pengujian adalah sebagai berikut.
 
 3.  Menghitung selisih berpasangan KD hibrida penuh dikurangi *supervised* pada *seed* yang sama.
 
-4.  Menghitung ulang F1 lewat *predict path* pada ambang *runtime*, yaitu *confidence* 0,25 dan NMS IoU 0,45 seperti pada *node* di robot.
+4.  Menghitung ulang F1 melalui *predict path* pada ambang *runtime*, yaitu *confidence* 0,25 dan NMS IoU 0,45 seperti pada *node* di robot.
 
 5.  Menyapu ambang *confidence* dari 0,05 sampai 0,90 pada VAL untuk melihat perubahan *precision*, *recall*, dan F1 terhadap ambang.
 
@@ -281,13 +281,13 @@ F1 pada *validator path*, *predict path*, dan ambang *runtime* disajikan pada Ta
 
 Pada *teacher*, F1 *predict path* turun 0,0170 dari *validator path*. Penurunan ini paling besar di antara sepuluh *checkpoint* dan berasal dari *precision*, yang turun dari 0,8915 menjadi 0,8600, sedangkan *recall* tetap sekitar 0,97. Pada rata-rata kelompok, *teacher* tetap tertinggi pada ketiga jalur. Per *checkpoint*, F1 ambang *runtime* *supervised* dan KD hibrida *seed* 1337 (0,9373) sedikit melampaui *teacher* dengan selisih kurang dari 0,004.
 
-Kenaikan F1 pada ambang yang lebih tinggi sejalan dengan *confidence threshold sweep* pada VAL yang disajikan pada Gambar 6.12. Data *sweep* tersedia untuk KD hibrida penuh *seed* 42 dan *supervised* *seed* 1337, sehingga KD hibrida pada gambar ini bukan *checkpoint* yang dipakai di robot. Pada keempat model, *precision* naik dan *recall* turun seiring naiknya ambang, dan F1 mencapai puncak pada ambang 0,40 sampai 0,50, yaitu 0,9476 untuk *teacher*, 0,9392 untuk KD hibrida, 0,9262 untuk *supervised*, dan 0,8962 untuk KD murni. Pada ambang 0,25, F1 berada 0,008 sampai 0,029 di bawah puncak tersebut karena *precision* yang lebih rendah. Titik ambang 0,90 tidak ditampilkan karena pada ambang itu *precision* KD hibrida dan *supervised* turun ke sekitar 0,66, nilai yang sesuai dengan satu kelas tanpa prediksi dalam rata-rata kelas, bukan dengan bertambahnya prediksi yang salah.
+Kenaikan F1 pada ambang yang lebih tinggi sejalan dengan *confidence threshold sweep* pada VAL yang disajikan pada Gambar 6.12. Data *sweep* tersedia untuk KD hibrida penuh *seed* 42 dan *supervised* *seed* 1337, sehingga KD hibrida pada gambar ini bukan *checkpoint* yang digunakan di robot. Pada keempat model, *precision* naik dan *recall* turun seiring naiknya ambang, dan F1 mencapai puncak pada ambang 0,40 sampai 0,50, yaitu 0,9476 untuk *teacher*, 0,9392 untuk KD hibrida, 0,9262 untuk *supervised*, dan 0,8962 untuk KD murni. Pada ambang 0,25, F1 berada 0,008 sampai 0,029 di bawah puncak tersebut karena *precision* yang lebih rendah. Titik ambang 0,90 tidak ditampilkan karena pada ambang itu *precision* KD hibrida dan *supervised* turun ke sekitar 0,66, nilai yang sesuai dengan satu kelas tanpa prediksi dalam rata-rata kelas, bukan dengan bertambahnya prediksi yang salah.
 
 **Gambar 6.12** *Precision*, *recall*, dan F1 VAL terhadap ambang *confidence*; garis putus-putus menandai ambang 0,25
 
 #### 6.3.3.2 Hasil *Precision*, *Recall*, dan F1 pada Citra Kamera OP3
 
-Hasil pada Set Kamera 1 disajikan pada Tabel 6.14. *Teacher* memberi *precision*, *recall*, dan F1 tertinggi. KD hibrida memiliki *precision* terendah (0,6836) karena menghasilkan *false detection* pada 21 dari 60 *frame* tanpa objek, sehingga F1-nya (0,6146) berada di bawah *supervised* (0,6626). KD murni memiliki *recall* terendah (0,4729). Hasil Set Kamera 2 disajikan pada Tabel 6.15. Pada konvensi kotak bagian bawah gawang, KD hibrida memberi F1 0,9950 dan mendeteksi 196 dari 200 gawang parsial, sedangkan *teacher* dan KD murni tidak mendeteksi satu pun gawang di atas *confidence* 0,25. *Supervised* mendeteksi 99 dari 100 gawang pada kondisi berjalan, tetapi 0 dari 100 pada kondisi diam. Tidak ada model yang menghasilkan FP pada 60 *frame* tanpa objek Set Kamera 2. Kolom F1 ambang *runtime* pada kedua tabel dihitung lewat *predict path* dengan NMS IoU 0,45, dan urutan modelnya sama dengan kolom F1. Ringkasan kedua set disajikan pada Gambar 6.13.
+Hasil pada Set Kamera 1 disajikan pada Tabel 6.14. *Teacher* memberi *precision*, *recall*, dan F1 tertinggi. KD hibrida memiliki *precision* terendah (0,6836) karena menghasilkan *false detection* pada 21 dari 60 *frame* tanpa objek, sehingga F1-nya (0,6146) berada di bawah *supervised* (0,6626). KD murni memiliki *recall* terendah (0,4729). Hasil Set Kamera 2 disajikan pada Tabel 6.15. Pada konvensi kotak bagian bawah gawang, KD hibrida memberi F1 0,9950 dan mendeteksi 196 dari 200 gawang parsial, sedangkan *teacher* dan KD murni tidak mendeteksi satu pun gawang di atas *confidence* 0,25. *Supervised* mendeteksi 99 dari 100 gawang pada kondisi berjalan, tetapi 0 dari 100 pada kondisi diam. Tidak ada model yang menghasilkan FP pada 60 *frame* tanpa objek Set Kamera 2. Kolom F1 ambang *runtime* pada kedua tabel dihitung melalui *predict path* dengan NMS IoU 0,45, dan urutan modelnya sama dengan kolom F1. Ringkasan kedua set disajikan pada Gambar 6.13.
 
 **Tabel 6.14** *Precision*, *recall*, dan F1 pada Set Kamera 1
 
@@ -354,7 +354,7 @@ Langkah pengujian adalah sebagai berikut.
 
 4.  Merekam *log* per *frame* selama *measurement window* 60 detik setelah *warm-up*, tiga *repetition* untuk setiap model dan kondisi, sehingga diperoleh 24 *run* aktif.
 
-5.  Mengaudit setiap *run* terhadap *hash* *checkpoint*, parameter, jendela waktu, *error frame*, dan data status *servo*.
+5.  Mengaudit setiap *run* terhadap *hash* *checkpoint*, parameter, *measurement window*, *error frame*, dan data status *servo*.
 
 6.  Menghitung rata-rata, median, dan P95 latensi serta FPS efektif menurut Persamaan 2.15 untuk setiap *run*, lalu menghitung rata-rata dan simpangan baku antar-*repetition*.
 
@@ -379,7 +379,7 @@ Latensi dan FPS efektif disajikan pada Tabel 6.17 dan Gambar 6.17. Pada kedua ko
 
 **Gambar 6.17** Latensi dan FPS efektif per model dan kondisi dari tiga *repetition*
 
-Median dan P95 latensi disajikan pada Tabel 6.18, sedangkan nilai setiap *run* disajikan pada Tabel C.1 di Lampiran C. Median latensi semua model lebih rendah daripada rata-ratanya, dan P95 sekitar 2,3 sampai 3,2 kali median. Distribusi latensi karena itu menjulur ke kanan, yaitu sebagian kecil *frame* jauh lebih lambat daripada *frame* pada umumnya. Median KD hibrida 50,46 ms saat diam dan 59,18 ms saat berjalan, dibanding 77,76 dan 77,03 ms pada *teacher*. P95 ketiga *student* hampir sama, yaitu 160,48 sampai 163,91 ms, dan berada sekitar 17 sampai 21 ms di bawah P95 *teacher*. Penyebab *frame* yang lambat tidak diuraikan lebih lanjut pada penelitian ini.
+Median dan P95 latensi disajikan pada Tabel 6.18, sedangkan nilai setiap *run* disajikan pada Tabel C.1 di Lampiran C. Median latensi semua model lebih rendah daripada rata-ratanya, dan P95 sekitar 2,3 sampai 3,2 kali median. Distribusi latensi karena itu menjulur ke kanan, yaitu sebagian kecil *frame* jauh lebih lambat daripada *frame* pada umumnya. Median KD hibrida 50,46 ms saat diam dan 59,18 ms saat berjalan, dibandingkan dengan 77,76 dan 77,03 ms pada *teacher*. P95 ketiga *student* hampir sama, yaitu 160,48 sampai 163,91 ms, dan berada sekitar 17 sampai 21 ms di bawah P95 *teacher*. Penyebab *frame* yang lambat tidak diuraikan lebih lanjut pada penelitian ini.
 
 **Tabel 6.18** Median dan P95 latensi pada OP3 (ms)
 
@@ -417,7 +417,7 @@ Rincian latensi per tahap disajikan pada Tabel 6.19 dan Gambar 6.19, dihitung da
 
 ### 6.4.4 Analisis Hasil Pengujian
 
-Latensi KD hibrida lebih rendah daripada *teacher* pada kedua kondisi, yaitu 1,49 kali lebih cepat saat diam dan 1,34 kali saat berjalan, dengan FPS efektif 1,38 dan 1,27 kali *teacher*. Selisih ini terutama berasal dari tahap inferensi (45,28 berbanding 76,55 ms saat diam), sesuai dengan GFLOPs *student* yang 37% dari *teacher*, sedangkan tahap sisa hampir sama pada semua model. Latensi *teacher* praktis tidak berubah dari kondisi diam ke kondisi berjalan, sedangkan latensi KD hibrida naik 6,77 ms. Ketiga *student* berarsitektur identik, tetapi rata-rata waktu inferensinya berbeda sampai sekitar 8 ms dan urutannya berganti antarkondisi. Selisih antar-*student*, termasuk kenaikan KD hibrida saat berjalan, karena itu lebih mungkin berasal dari hari dan urutan pengukuran daripada dari objektif pelatihan, sehingga klaim kecepatan yang sah hanya *student* dibanding *teacher*.
+Latensi KD hibrida lebih rendah daripada *teacher* pada kedua kondisi, yaitu 1,49 kali lebih cepat saat diam dan 1,34 kali saat berjalan, dengan FPS efektif 1,38 dan 1,27 kali *teacher*. Selisih ini terutama berasal dari tahap inferensi (45,28 berbanding 76,55 ms saat diam), sesuai dengan GFLOPs *student* yang 37% dari *teacher*, sedangkan tahap sisa hampir sama pada semua model. Latensi *teacher* praktis tidak berubah dari kondisi diam ke kondisi berjalan, sedangkan latensi KD hibrida naik 6,77 ms. Ketiga *student* berarsitektur identik, tetapi rata-rata waktu inferensinya berbeda sampai sekitar 8 ms dan urutannya berganti antarkondisi. Selisih antar-*student*, termasuk kenaikan KD hibrida saat berjalan, karena itu lebih mungkin berasal dari hari dan urutan pengukuran daripada dari fungsi objektif pelatihan, sehingga klaim kecepatan yang sah hanya *student* dibandingkan dengan *teacher*.
 
 Hasil ini bersifat deskriptif. Urutan *run* berbentuk blok lintas hari, suhu dan pencahayaan tidak dikendalikan secara kuantitatif, dan beberapa bukti fisik seperti tangkapan *preview* tepat setelah *measurement window* tidak lengkap untuk semua *run*. Sesuai anjuran pelaporan kinerja yang nondeterministik (Hoefler dan Belli, 2015), hasil dilaporkan per *repetition* beserta sebarannya, bukan sebagai satu angka tunggal.
 
@@ -431,9 +431,9 @@ Pengujian ini menjawab rumusan masalah nomor 4, yaitu penggunaan CPU dan RAM ket
 
 Langkah pengujian adalah sebagai berikut.
 
-1.  Memakai 24 *run* aktif yang sama dengan pengujian pada Subbab 6.4.
+1.  Menggunakan 24 *run* aktif yang sama dengan pengujian pada Subbab 6.4.
 
-2.  Mencatat penggunaan CPU dan RSS proses *node* deteksi pada setiap *frame*. CPU dinyatakan sebagai persentase terhadap satu CPU logis, sehingga dapat melebihi 100% pada proses yang memakai banyak *thread*.
+2.  Mencatat penggunaan CPU dan RSS proses *node* deteksi pada setiap *frame*. CPU dinyatakan sebagai persentase terhadap satu CPU logis, sehingga dapat melebihi 100% pada proses yang menggunakan banyak *thread*.
 
 3.  Menghitung rata-rata setiap *run*, lalu rata-rata dan simpangan baku antar-*repetition*.
 
@@ -482,15 +482,15 @@ Pada pengukuran *live*, CPU dan RSS tidak membedakan efisiensi model secara jela
 
 ### 6.6.1 Tujuan Pengujian
 
-Pengujian tambahan bertujuan memeriksa dua hal yang dapat mengubah pilihan model KD, yaitu ukuran *teacher* dan bentuk objektif KD hibrida. Pengujian ini tidak mengganti model utama yang diuji pada robot.
+Pengujian tambahan bertujuan memeriksa dua hal yang dapat mengubah pilihan model KD, yaitu ukuran *teacher* dan bentuk fungsi objektif KD hibrida. Pengujian ini tidak mengganti model utama yang diuji pada robot.
 
 ### 6.6.2 Prosedur Pengujian
 
 Langkah pengujian adalah sebagai berikut.
 
-1.  Melatih ulang *teacher* YOLO11n dan YOLO11s dengan resep yang sama, lalu melatih *student* KD hibrida penuh dari masing-masing *teacher* dengan tiga *seed*.
+1.  Melatih ulang *teacher* YOLO11n dan YOLO11s dengan pengaturan yang sama, lalu melatih *student* KD hibrida penuh dari masing-masing *teacher* dengan tiga *seed*.
 
-2.  Menguji delapan konfigurasi perbaikan objektif KD hibrida dengan *seed* 42, lalu mengulang konfigurasi terbaik dengan tiga *seed*.
+2.  Menguji delapan konfigurasi perbaikan fungsi objektif KD hibrida dengan *seed* 42, lalu mengulang konfigurasi terbaik dengan tiga *seed*.
 
 3.  Membandingkan seluruh hasil pada VAL dengan aturan seleksi yang ditetapkan sebelum pelatihan.
 
@@ -507,11 +507,11 @@ Hasil ablasi ukuran *teacher* disajikan pada Tabel 6.22, dan nilai setiap *seed*
 
 **Gambar 6.22** mAP50-95 VAL *student* KD hibrida penuh per *seed* menurut ukuran *teacher*; garis titik-titik menunjukkan rata-rata
 
-Pada perbaikan objektif, konfigurasi terbaik adalah divergensi KL pada distribusi DFL tanpa pembobotan *anchor*. Dengan tiga *seed*, konfigurasi ini memberi mAP50-95 VAL 0,7475 ± 0,0013 dibanding 0,7505 ± 0,0018 pada KD hibrida penuh, dengan F1 0,9251 berbanding 0,9205.
+Pada perbaikan fungsi objektif, konfigurasi terbaik adalah divergensi KL pada distribusi DFL tanpa pembobotan *anchor*. Dengan tiga *seed*, konfigurasi ini memberi mAP50-95 VAL 0,7475 ± 0,0013 dibandingkan dengan 0,7505 ± 0,0018 pada KD hibrida penuh, dengan F1 0,9251 berbanding 0,9205.
 
 ### 6.6.4 Analisis Hasil Pengujian
 
-Selisih *student* dari kedua *teacher* jauh lebih kecil daripada selisih KD hibrida dan *supervised* pada VAL (0,0297), sehingga kedua *teacher* dapat dianggap memberi hasil yang setara. *Teacher* yang lebih akurat tidak otomatis menghasilkan *student* yang lebih akurat, sejalan dengan temuan bahwa *teacher* yang lebih besar tidak selalu menjadi *teacher* yang lebih baik (Cho dan Hariharan, 2019). Perbaikan objektif menaikkan F1 tetapi menurunkan mAP50-95, dan konfigurasi ini tidak memenuhi aturan seleksi yang ditetapkan sebelum pelatihan. Karena itu, KD hibrida penuh dengan *teacher* YOLO11n tetap menjadi model KD utama.
+Selisih *student* dari kedua *teacher* jauh lebih kecil daripada selisih KD hibrida dan *supervised* pada VAL (0,0297), sehingga kedua *teacher* dapat dianggap memberi hasil yang setara. *Teacher* yang lebih akurat tidak otomatis menghasilkan *student* yang lebih akurat, sejalan dengan temuan bahwa *teacher* yang lebih besar tidak selalu menjadi *teacher* yang lebih baik (Cho dan Hariharan, 2019). Perbaikan fungsi objektif menaikkan F1 tetapi menurunkan mAP50-95, dan konfigurasi ini tidak memenuhi aturan seleksi yang ditetapkan sebelum pelatihan. Karena itu, KD hibrida penuh dengan *teacher* YOLO11n tetap menjadi model KD utama.
 
 ## 6.7 Evaluasi Keseluruhan
 
@@ -519,6 +519,6 @@ Sistem deteksi berbasis ROS 2 berhasil berjalan pada komputer *onboard* OP3, dan
 
 Untuk rumusan masalah nomor 1, KD hibrida penuh lebih baik daripada *supervised* pada mAP50-95 TEST dan konsisten pada ketiga pasangan *seed*, tetapi keunggulan itu tidak berpindah begitu saja ke kamera OP3. Untuk rumusan masalah nomor 2, KD hibrida tidak unggul pada *precision*, *recall*, dan F1; pada ambang *runtime*, F1-nya setara dengan *supervised*. Model yang dipilih dari VAL dan TEST karena itu belum tentu menjadi model terbaik pada adegan robot, dan pemilihan model untuk pemakaian di robot memerlukan evaluasi pada citra kamera robot itu sendiri.
 
-Untuk rumusan masalah nomor 3, KD hibrida dan *supervised* lebih cepat daripada *teacher* pada kedua kondisi robot, latensi kedua *student* berdekatan dengan urutan yang berganti antarkondisi, dan seluruh model memenuhi KNF-01. Untuk rumusan masalah nomor 4, CPU dan RSS proses tidak membedakan model secara jelas, karena penggunaan CPU didominasi pelacakan dan OpenBLAS. Keuntungan *runtime* yang terukur berasal dari ukuran *student* dibanding *teacher*; KD menentukan mutu deteksi, bukan kecepatan.
+Untuk rumusan masalah nomor 3, KD hibrida dan *supervised* lebih cepat daripada *teacher* pada kedua kondisi robot, latensi kedua *student* berdekatan dengan urutan yang berganti antarkondisi, dan seluruh model memenuhi KNF-01. Untuk rumusan masalah nomor 4, CPU dan RSS proses tidak membedakan model secara jelas, karena penggunaan CPU didominasi pelacakan dan OpenBLAS. Keuntungan *runtime* yang terukur berasal dari ukuran *student* dibandingkan dengan *teacher*; KD menentukan mutu deteksi, bukan kecepatan.
 
 Beberapa ancaman terhadap validitas membatasi kesimpulan. TEST pernah dibuka sebelum KD hibrida dirancang, nama sumber yang sama ditemukan di lebih dari satu bagian himpunan data (Tabel B.2), dan asal-usul himpunan data pelatihan *teacher* utama tidak terdokumentasi lengkap. Set kamera OP3 berasal dari satu lingkungan dengan label yang dibantu prediksi model. Pengukuran *runtime* dilakukan dalam blok lintas hari. Jumlah *seed* dan *repetition* yang masing-masing tiga hanya mendukung analisis deskriptif (Bouthillier, et al., 2021).
