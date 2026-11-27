@@ -4,8 +4,8 @@ Dokumentasi terindeks untuk checkpoint `teacher_fp32`. SHA-256 checkpoint: `e05b
 
 ## Video dokumentasi 26 November 2026
 
-- [Teacher diam](../../2026-11-26/video-teacher-servo-nyala-diam-mVFgzU/README.md) — memuat overlay estimasi gawang yang diberi label dan bukan deteksi model.
-- [Teacher berjalan](../../2026-11-26/video-teacher-berjalan-rI3JhV/README.md) — deteksi asli tanpa overlay estimasi; cuplikan awal tidak menampilkan kotak gawang. Video, statistik, cuplikan, dan data guard tersedia pada halaman masing-masing. Ini bukan benchmark.
+- [Teacher diam](../../2026-11-26/video-teacher-servo-nyala-diam-mVFgzU/README.md): preview dapat menampilkan overlay estimasi gawang yang diberi label, tetapi pemeriksaan 100 frame menunjukkan overlay tersebut tidak muncul; semua kotak gawang pada video adalah deteksi model.
+- [Teacher berjalan](../../2026-11-26/video-teacher-berjalan-rI3JhV/README.md): deteksi asli tanpa overlay estimasi; cuplikan awal tidak menampilkan kotak gawang. Video, statistik, cuplikan, dan data guard tersedia pada halaman masing-masing. Ini bukan benchmark.
 
 ## Akurasi dataset TEST
 
@@ -19,8 +19,8 @@ TEST sudah pernah digunakan sebelumnya, dan hasilnya tidak sama dengan hasil kam
 
 ## Confusion matrix kamera OP3
 
-- [Jumlah kotak — Indonesia](confusion_matrix_teacher_yolo11n_jumlah_id.png) · [English](confusion_matrix_teacher_yolo11n_jumlah_en.png)
-- [Persen per kelas acuan — Indonesia](confusion_matrix_teacher_yolo11n_persen_id.png) · [English](confusion_matrix_teacher_yolo11n_persen_en.png)
+- [Jumlah kotak: Indonesia](confusion_matrix_teacher_yolo11n_jumlah_id.png) · [English](confusion_matrix_teacher_yolo11n_jumlah_en.png)
+- [Persen per kelas acuan: Indonesia](confusion_matrix_teacher_yolo11n_persen_id.png) · [English](confusion_matrix_teacher_yolo11n_persen_en.png)
 - [Data jumlah CSV](confusion_matrix_teacher_yolo11n.csv) · [Data persen CSV](confusion_matrix_teacher_yolo11n_persen.csv) · [Metadata JSON](confusion_matrix_teacher_yolo11n.json)
 
 Data T38: 260 frame (200 berobjek + 60 negatif), 400 kotak acuan, confidence >0,25, IoU ≥0,5. Baris adalah label acuan; kolom adalah prediksi. Baris latar menunjukkan prediksi tanpa pasangan, termasuk duplikasi atau kotak yang lokasinya tidak mencapai IoU 0,5; tidak berarti semuanya berasal dari frame kosong. Kolom terlewat menunjukkan label tanpa pasangan. Pasangan sekelas ditetapkan sesuai T38, lalu sisa prediksi dan label berbeda kelas dipasangkan berdasarkan IoU. **FP suatu kelas adalah isi kolom kelas selain diagonal; FN adalah isi baris kelas selain diagonal**, sehingga salah kelas turut dihitung sebagai FP dan FN. Persentase hanya dinormalisasi pada tiga baris label, bukan baris latar. Sel latar–latar kosong karena true negative tidak terdefinisi.
