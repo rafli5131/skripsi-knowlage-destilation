@@ -1,16 +1,16 @@
 # Log progres - 25 November 2026
 
-Naskah skripsi tujuh bab sudah sampai versi **v31** (27 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
+Naskah skripsi tujuh bab sudah sampai versi **v32** (27 November 2026, 116 halaman). Semua gambar sudah terisi. Yang tersisa adalah isian identitas dan tanggal dari penulis, satu penanda cek foto, dan persetujuan pembimbing. Pada 25 November, dokumentasi repositori disesuaikan dengan naskah tersebut: README, draf laporan, log, memory, dan catatan keputusan. Tidak ada eksperimen baru, dan tidak ada berkas yang dihapus.
 
 ## Lokasi naskah
 
 | Berkas | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v31 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v31) |
+| Naskah DOCX dan PDF v1 sampai v32 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan sunting setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` (v1 sampai v6, v9 sampai v16, v21 sampai v32) |
 | Pemeriksaan istilah KBBI | `E:\Kuliah\Thesis\Laporan\Skripsi\CEK_KBBI.md` |
-| Sumber pembangun naskah v31 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v31.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
-| Salinan Markdown naskah terbaru (v31) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
+| Sumber pembangun naskah v32 | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v32.zip` (skrip python-docx, proposal, templat, gambar, grafik) |
+| Salinan Markdown naskah terbaru (v32) | [`laporan/draf-7-bab/`](../../laporan/draf-7-bab/README.md) |
 
 ## Riwayat naskah 13 sampai 25 November
 
@@ -39,8 +39,9 @@ Naskah skripsi tujuh bab sudah sampai versi **v31** (27 November 2026, 116 halam
 | v29 | 25 Nov | Daftar Istilah dan Singkatan dipindah dari halaman awal ke Lampiran E (Tabel E.1, 71 entri), atas permintaan penulis. Halaman awal berkurang dua halaman; jumlah halaman PDF tetap 116. Skrip konversi Markdown disesuaikan agar mengenali Lampiran E. |
 | v30 | 25 Nov | Tabel C.1 (hasil *runtime* setiap *run*, Lampiran C, halaman 98): lebar kolom dan margin sel diatur ulang agar judul kolom *Repetition* tidak terpotong. Isi tabel tetap 24 baris (4 model x 2 kondisi x 3 *repetition*); jumlah halaman PDF tetap 116. |
 | v31 | 27 Nov | Hasil tinjauan menyeluruh: Saltık, et al. (2025) diganti ke versi terbit ICCV 2025 Workshops dan Sabaghian, et al. (2025) ke arXiv v3 (angka yang dikutip sudah dicocokkan); status KF-05 di Tabel 6.1 menjadi "Lulus dengan catatan"; Gambar 5.1, 5.6, 5.10, dan 5.11 diperjelas (istilah disamakan dengan teks, huruf diperbesar); Subbab 2.2.8 dan 3.2.5 menjelaskan alasan median, P95, dan tidak dilaporkannya selang kepercayaan; setiap butir kesimpulan dibuka dengan jawaban langsung. Jumlah halaman tetap 116. |
+| v32 | 27 Nov | Pembimbing menyetujui *predict path* sebagai jalur utama akurasi citra kamera OP3 (D28). Subbab 3.3.5 ditambah satu kalimat penegasan; Subbab 6.2.4 ditambah kalimat bahwa arah dua perbandingan utama sama pada kedua jalur. Jumlah halaman tetap 116. |
 
-## Isi pokok naskah v31
+## Isi pokok naskah v32
 
 - **Rumusan masalah:** (1) mAP *student* KD hibrida dibandingkan *supervised* dan *teacher*, (2) *precision*, *recall*, dan F1, (3) latensi dan FPS saat robot diam dan berjalan, (4) penggunaan CPU dan RAM. Rumusan 2 sampai 4 berlaku untuk ketiga model yang sama. Pemetaan ke Subbab 6.2 sampai 6.5 ada di [README draf](../../laporan/draf-7-bab/README.md#rumusan-masalah-dan-letak-jawabannya).
 - **Penamaan:** naskah menyebut T38 sebagai Set Kamera 1 dan T43 sebagai Set Kamera 2. Tabel padanan lengkap ada di [README draf](../../laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori).
@@ -56,7 +57,7 @@ Naskah skripsi tujuh bab sudah sampai versi **v31** (27 November 2026, 116 halam
 1. Tanggal ujian dan dua tanggal tanda tangan.
 2. Tujuh isian `[DIISI PENULIS]` di prakata.
 3. `[PERLU DICEK]` di Subbab 5.2.1.2: kesamaan unit pada foto rangkaian elektronika (Brilliant, 2024) dengan unit penelitian.
-4. Konfirmasi pembimbing atas jalur angka utama kamera OP3 (terbuka sejak 21 November).
+4. Selesai 27 November: pembimbing menyetujui *predict path* sebagai jalur angka utama kamera OP3 (D28).
 
 Sudah selesai pada 25 November: persetujuan lisan pembimbing atas empat rumusan masalah dan KF-03, pemeriksaan `CEK_KBBI.md` (diperbarui dengan KBBI VI Daring), dan keseragaman nama ROBOTIIK. Folder `Paper\_to_delete\` dikosongkan sendiri oleh penulis; agen tidak menghapus berkas apa pun.
 

@@ -8,7 +8,7 @@ Objek target pada lingkup skripsi ditempatkan statis; pengujian runtime dilakuka
 
 **Pembaruan dokumentasi 26 November 2026.** Video tambahan tersedia untuk KD Murni [diam](dokumentasi/2026-11-26/video-kd-murni-servo-nyala-diam-DEtVov/README.md) dan [berjalan](dokumentasi/2026-11-26/video-kd-murni-berjalan-ulang-UsAdhG/README.md), serta Teacher [diam](dokumentasi/2026-11-26/video-teacher-servo-nyala-diam-mVFgzU/README.md) dan [berjalan](dokumentasi/2026-11-26/video-teacher-berjalan-rI3JhV/README.md). Video Teacher berjalan memakai deteksi asli tanpa estimasi gawang; cuplikan awal tidak menampilkan kotak gawang. Rincian dan keterbatasan: [log 26 November](dokumentasi/2026-11-26/LOG_PROGRES_SKRIPSI.md). Ini dokumentasi tambahan, bukan benchmark.
 
-**Status 25 November 2026.** Eksperimen utama skripsi sudah selesai. Naskah skripsi tujuh bab sudah sampai versi **v31** (27 November 2026, 116 halaman) dengan empat rumusan masalah yang membandingkan KD hibrida, *supervised*, dan *teacher*, semua gambar terisi, dan Daftar Referensi berformat seragam Panduan Skripsi FILKOM v3.0. Pekerjaan naskah yang tersisa berupa isian penulis dan konfirmasi pembimbing; lihat tabel di bawah dan [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md). Video dokumentasi tambahan tersedia untuk KD Hybrid pada kondisi [diam](dokumentasi/2026-11-25/percobaan-rekam-langsung-hybrid-diam-7XI3a1/README.md) dan [gait](dokumentasi/2026-11-25/video-hybrid-berjalan-siap-CzQtsf/README.md), serta Supervised pada kondisi [diam](dokumentasi/2026-11-25/video-supervised-diam-5EaLDf/README.md) dan [gait](dokumentasi/2026-11-25/video-supervised-berjalan-J3VBar/README.md). Video-video ini bukan benchmark tambahan.
+**Status 25 November 2026.** Eksperimen utama skripsi sudah selesai. Naskah skripsi tujuh bab sudah sampai versi **v32** (27 November 2026, 116 halaman) dengan empat rumusan masalah yang membandingkan KD hibrida, *supervised*, dan *teacher*, semua gambar terisi, dan Daftar Referensi berformat seragam Panduan Skripsi FILKOM v3.0. Pekerjaan naskah yang tersisa berupa isian penulis dan konfirmasi pembimbing; lihat tabel di bawah dan [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md). Video dokumentasi tambahan tersedia untuk KD Hybrid pada kondisi [diam](dokumentasi/2026-11-25/percobaan-rekam-langsung-hybrid-diam-7XI3a1/README.md) dan [gait](dokumentasi/2026-11-25/video-hybrid-berjalan-siap-CzQtsf/README.md), serta Supervised pada kondisi [diam](dokumentasi/2026-11-25/video-supervised-diam-5EaLDf/README.md) dan [gait](dokumentasi/2026-11-25/video-supervised-berjalan-J3VBar/README.md). Video-video ini bukan benchmark tambahan.
 
 | No | Pelaku | Pekerjaan yang tersisa | Rujukan |
 |---|---|---|---|
@@ -26,11 +26,11 @@ Naskah berjudul **Implementasi *Knowledge Distillation* untuk Deteksi Objek pada
 
 | Yang dicari | Lokasi |
 |---|---|
-| Naskah DOCX dan PDF v1 sampai v31 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
-| Catatan perubahan setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` · [ringkasan v1 sampai v31](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md#riwayat-naskah-13-sampai-25-november) |
+| Naskah DOCX dan PDF v1 sampai v32 | `E:\Kuliah\Thesis\Laporan\Skripsi\Skripsi_KD_OP3_vNN.docx` dan `.pdf` |
+| Catatan perubahan setiap versi | `E:\Kuliah\Thesis\Laporan\Skripsi\CATATAN_SUNTING_vNN.md` · [ringkasan v1 sampai v32](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md#riwayat-naskah-13-sampai-25-november) |
 | Salinan Markdown Bab 1-7, halaman awal, daftar referensi, dan lampiran | [`laporan/draf-7-bab/`](laporan/draf-7-bab/README.md) |
 | Padanan istilah naskah dan kode repositori (Set Kamera 1 = T38, Set Kamera 2 = T43, dan seterusnya) | [README draf](laporan/draf-7-bab/README.md#padanan-istilah-naskah-dan-kode-repositori) |
-| Sumber pembangun naskah (skrip, gambar, grafik) | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v31.zip` |
+| Sumber pembangun naskah (skrip, gambar, grafik) | `E:\Kuliah\Thesis\Laporan\Skripsi\kerja\sumber_naskah_v32.zip` |
 
 | No | Rumusan masalah | Pengujian | Hasil singkat |
 |---|---|---|---|
@@ -42,7 +42,7 @@ Naskah berjudul **Implementasi *Knowledge Distillation* untuk Deteksi Objek pada
 <details>
 <summary>Riwayat progres 12 sampai 25 November 2026</summary>
 
-Per 24 sampai 27 November 2026, naskah disunting dari v9 sampai v31 (v21: rumusan masalah disempurnakan dan skala t didefinisikan sebagai skala khusus; v22: pemeriksaan menyeluruh format, struktur, dan kebahasaan; v23: pengertian dan perbedaan *seed*; v24: alasan *supervised* *seed* 1337; v25: cek KBBI VI Daring dan ROBOTIIK; v26 dan v27: Gambar 5.7 digambar ulang; v28: istilah Inggris miring menggantikan padanan yang janggal; v29: Daftar Istilah menjadi Lampiran E; v30: judul kolom Tabel C.1 dirapikan; v31: dua rujukan diperbarui ke versi terbit atau terbaru, Gambar 5.1, 5.6, 5.10, 5.11 diperjelas, alasan median, P95, dan tanpa selang kepercayaan ditambahkan, butir kesimpulan dibuka dengan jawaban langsung) dan dokumentasi repositori disesuaikan dengan naskah tersebut: [salinan Markdown naskah](laporan/draf-7-bab/README.md), [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md), [memory 25 November](memory/2026-11-25-naskah-skripsi-v20.md), serta D25 sampai D27 di [catatan keputusan](docs/DECISIONS.md). Draf ringkas tujuh bab sebelumnya disimpan di [`laporan/arsip/draf-7-bab-2026-11-23/`](laporan/arsip/draf-7-bab-2026-11-23/README.md).
+Per 24 sampai 27 November 2026, naskah disunting dari v9 sampai v32 (v21: rumusan masalah disempurnakan dan skala t didefinisikan sebagai skala khusus; v22: pemeriksaan menyeluruh format, struktur, dan kebahasaan; v23: pengertian dan perbedaan *seed*; v24: alasan *supervised* *seed* 1337; v25: cek KBBI VI Daring dan ROBOTIIK; v26 dan v27: Gambar 5.7 digambar ulang; v28: istilah Inggris miring menggantikan padanan yang janggal; v29: Daftar Istilah menjadi Lampiran E; v30: judul kolom Tabel C.1 dirapikan; v31: dua rujukan diperbarui ke versi terbit atau terbaru, Gambar 5.1, 5.6, 5.10, 5.11 diperjelas, alasan median, P95, dan tanpa selang kepercayaan ditambahkan, butir kesimpulan dibuka dengan jawaban langsung; v32: *predict path* ditetapkan sebagai jalur utama kamera OP3 (D28)) dan dokumentasi repositori disesuaikan dengan naskah tersebut: [salinan Markdown naskah](laporan/draf-7-bab/README.md), [log 25 November](dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md), [memory 25 November](memory/2026-11-25-naskah-skripsi-v20.md), serta D25 sampai D27 di [catatan keputusan](docs/DECISIONS.md). Draf ringkas tujuh bab sebelumnya disimpan di [`laporan/arsip/draf-7-bab-2026-11-23/`](laporan/arsip/draf-7-bab-2026-11-23/README.md).
 
 Per 23 November 2026 (status saat itu): Semua eksperimen untuk RM1 sampai RM5 sudah selesai, dan tidak ada pekerjaan yang tersisa di robot atau server. Bukti yang dipakai naskah terkumpul di tiga folder: [`bukti_kebutuhan/`](bukti_kebutuhan/README.md) untuk uji KF/KNF, [`jejak_waktu/`](jejak_waktu/README.md) untuk waktu training, evaluasi, dan run live, serta [`log_op3_pelengkap/`](log_op3_pelengkap/README.md) dan [`log_lab_server_pelengkap/`](log_lab_server_pelengkap/README.md) untuk log mentah pendukung. Sisa pekerjaan ada di laptop: keputusan jalur angka utama T38/T43 dan penyajian CPU (RM5) bersama pembimbing, konfirmasi status KF-03, dan penulisan naskah tujuh bab.
 
@@ -65,7 +65,7 @@ Tabel langkah berikutnya per 23 November 2026:
 |---|---|---|---|
 | 1 | Laptop dengan SSH ke OP3 | Prompt pelengkap log selesai 23 November: 15/15 log jendela run live, metadata capture T38/T43, dan catatan training teacher tersimpan di `log_op3_pelengkap/` (robot hanya dibaca). Tidak ada pekerjaan robot yang tersisa. | [Log pelengkap OP3](log_op3_pelengkap/README.md) · [Laporan sesi](log_op3_pelengkap/LAPORAN_SESI.md) · [Jejak waktu](jejak_waktu/README.md) |
 | 2 | Server lab | Baris teacher verifikasi jalur TEST selesai 16 November (D24). Spesifikasi perangkat server dicatat 16 November. Penyajian kolom jalur predict atau runtime di Bab 6 menunggu keputusan Bhre. | [Hasil teacher](analisis_performa/lab_server/verifikasi_jalur_test_20261116_teacher/RINGKASAN.md) · [Hasil student](analisis_performa/lab_server/verifikasi_jalur_test_20261113/RINGKASAN.md) · [D23–D24](docs/DECISIONS.md) · [Spesifikasi server](environment/README.md#server-hardware-observed-2026-11-16) |
-| 3 | Laptop | Mengembangkan naskah tujuh bab (D17) dari proposal Bab 1–3 dan pola skripsi FILKOM. Uji KF/KNF sudah terkumpul (21 November); pilihan jalur angka utama T38/T43 dan cara penyajian CPU (RM5) masih menunggu keputusan Bhre dan pembimbing. | [Draf tujuh bab](laporan/draf-7-bab/README.md) · [Bukti KF/KNF](bukti_kebutuhan/README.md) · [Log 21 November](dokumentasi/2026-11-21/LOG_PROGRES_SKRIPSI.md) |
+| 3 | Laptop | Mengembangkan naskah tujuh bab (D17) dari proposal Bab 1–3 dan pola skripsi FILKOM. Uji KF/KNF sudah terkumpul (21 November); pilihan jalur angka utama T38/T43 sudah disetujui pembimbing pada 27 November (D28: *predict path*); cara penyajian CPU (RM5) masih menunggu keputusan Bhre dan pembimbing. | [Draf tujuh bab](laporan/draf-7-bab/README.md) · [Bukti KF/KNF](bukti_kebutuhan/README.md) · [Log 21 November](dokumentasi/2026-11-21/LOG_PROGRES_SKRIPSI.md) |
 | 4 | Laptop | Cadangan bobot teacher utama dan enam bobot T42 tersimpan di laptop sejak 16 November dengan hash cocok; salinan kedua di drive pribadi masih disarankan. | [`model_registry.yaml`](configs/model_registry.yaml) · [T42](analisis_performa/tabel/T42_ablasi_teacher_yolo11s_val.md) |
 
 </details>
@@ -87,7 +87,7 @@ Tabel langkah berikutnya per 23 November 2026:
 | Jejak waktu training, evaluasi, dan run live | [Kronologi dan garis waktu](jejak_waktu/README.md) · [Skrip](scripts/build_jejak_waktu.py) |
 | Log pelengkap dari OP3: log jendela 15 run, metadata capture T38/T43, catatan training teacher | [Ringkasan dan tabel](log_op3_pelengkap/README.md) · [Laporan sesi](log_op3_pelengkap/LAPORAN_SESI.md) · [Package](ros2_packages/op3_log_pelengkap/README.md) |
 | Spesifikasi server lab dan environment | [Provenance environment dan perangkat](environment/README.md) · [Keluaran perintah 16 November](environment/spesifikasi_server_20261116.txt) |
-| Naskah skripsi v31 (salinan Markdown) | [Indeks Bab 1–7, halaman awal, referensi, dan lampiran](laporan/draf-7-bab/README.md) · [Draf ringkas 23 November (arsip)](laporan/arsip/draf-7-bab-2026-11-23/README.md) |
+| Naskah skripsi v32 (salinan Markdown) | [Indeks Bab 1–7, halaman awal, referensi, dan lampiran](laporan/draf-7-bab/README.md) · [Draf ringkas 23 November (arsip)](laporan/arsip/draf-7-bab-2026-11-23/README.md) |
 | Evaluasi tambahan kamera T43 | [Tabel dan batas interpretasi](analisis_performa/tabel/T43_akurasi_op3_empat_model_260.md) · [Grafik dan confusion matrix](dokumentasi/2026-11-12/percobaan-39-evaluasi-t43/README_ID.md) |
 | Grafik akurasi hasil reproduksi | [Grafik ID/EN dan manifest baru](dokumentasi/2026-11-12/grafik-akurasi-terverifikasi/README.md) · [Audit gambar historis](dokumentasi/2026-11-12/AUDIT_GRAFIK_AKURASI.md) |
 | Grafik runtime per waktu | [Per model dan gabungan](dokumentasi/model/README.md) |
@@ -195,7 +195,7 @@ Video tersebut sudah ditautkan dari [halaman model Supervised](dokumentasi/model
 skripsi-knowlage-destilation/
 ├── README.md, agent.md        Gambaran repositori dan aturan kerja
 ├── laporan/
-│   ├── draf-7-bab/            Salinan Markdown naskah terbaru (v31): Bab 1-7, halaman awal, referensi, lampiran
+│   ├── draf-7-bab/            Salinan Markdown naskah terbaru (v32): Bab 1-7, halaman awal, referensi, lampiran
 │   ├── alat/                  Skrip konversi naskah DOCX ke Markdown
 │   ├── DRAF_PROPOSAL_BAB_I-III.md  Draf proposal
 │   ├── draf-bab-iv-v/         Draf hasil terdahulu

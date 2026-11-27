@@ -1,6 +1,6 @@
 # Naskah skripsi tujuh bab
 
-Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v31** (27 November 2026, 116 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
+Folder ini berisi salinan Markdown naskah skripsi **Skripsi_KD_OP3_v32** (27 November 2026, 116 halaman). Berkas yang diserahkan tetap DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Salinan ini dipakai untuk membaca, mencari teks, dan mencocokkan isi naskah dengan bukti di repositori. Gambar tidak ikut disalin, tetapi setiap keterangan gambar tetap dicantumkan beserta nomornya.
 
 **Judul:** Implementasi *Knowledge Distillation* untuk Deteksi Objek pada Robot Humanoid ROBOTIS OP3
 **Struktur:** tujuh bab implementatif-pengembangan (D17), mengikuti Panduan Skripsi FILKOM v3.0.
@@ -74,4 +74,4 @@ Skrip menimpa berkas bab di folder ini. Salin dulu versi lama ke `laporan/arsip/
 
 - Draf ringkas 12 sampai 23 November: [`laporan/arsip/draf-7-bab-2026-11-23/`](../arsip/draf-7-bab-2026-11-23/README.md).
 - Draf Bab IV-V dan proposal Bab I-III: [`laporan/draf-bab-iv-v/`](../draf-bab-iv-v/README.md) dan [`laporan/DRAF_PROPOSAL_BAB_I-III.md`](../DRAF_PROPOSAL_BAB_I-III.md).
-- Riwayat suntingan naskah v1 sampai v31: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).
+- Riwayat suntingan naskah v1 sampai v32: [log 25 November](../../dokumentasi/2026-11-25/LOG_PROGRES_SKRIPSI.md).

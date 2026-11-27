@@ -1,6 +1,6 @@
 # BAB 3 METODOLOGI PENELITIAN
 
-> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v31 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
+> Isi berkas ini disalin dari naskah skripsi **Skripsi_KD_OP3_v32 (27 November 2026)**. Sumber kebenaran tetap berkas DOCX dan PDF di `E:\Kuliah\Thesis\Laporan\Skripsi\`. Gambar tidak disertakan; keterangan gambar tetap dicantumkan supaya nomor dan rujukannya dapat dicocokkan dengan PDF.
 
 ## 3.1 Tipe Penelitian
 
@@ -129,7 +129,7 @@ Seluruh *run* memakai pengaturan yang sama: inferensi FP32 pada CPU dengan masuk
 
 Metrik yang dihitung adalah rata-rata, median, dan P95 latensi untuk prapemrosesan, inferensi, pascapemrosesan, dan keseluruhan *callback*; FPS efektif menurut Persamaan 2.15 dari *timestamp* kamera; penggunaan CPU proses; dan RSS.
 
-Pengujian akurasi pada citra kamera OP3 mengukur kinerja model dengan kamera yang dipakai robot. Pengujian dilakukan secara *offline* pada komputer *onboard* terhadap dua set *frame* berlabel, dengan metrik dan ambang yang sama dengan pengujian pada TEST. Prediksi pada *frame* tanpa objek dihitung sebagai FP, dan hasil pengujian ini tidak dipakai untuk memilih ulang model maupun ambang.
+Pengujian akurasi pada citra kamera OP3 mengukur kinerja model dengan kamera yang dipakai robot. Pengujian dilakukan secara *offline* pada komputer *onboard* terhadap dua set *frame* berlabel, dengan metrik dan ambang yang sama dengan pengujian pada TEST. Prediksi pada *frame* tanpa objek dihitung sebagai FP, dan hasil pengujian ini tidak dipakai untuk memilih ulang model maupun ambang. Untuk citra kamera OP3, jalur evaluasi utama adalah *predict path*, yaitu jalur yang sama dengan *node* di robot (*letterbox* 640 dan NMS tanpa *multi-label*), sedangkan *validator path* bawaan Ultralytics disajikan sebagai pembanding.
 
 Set Kamera 1 terdiri atas 260 *frame* dari satu rangkaian pengambilan, yaitu 200 *frame* berobjek dan 60 *frame* tanpa objek, ditambah 50 *frame* gawang parsial yang dianalisis terpisah. *Frame* dipilih dari sesi yang telah direkam sebelumnya, termasuk sesi dengan objek bergerak, sehingga set ini bersifat retrospektif dan tidak dipisahkan menurut kondisi robot. Label awal dibuat dengan bantuan prediksi KD murni, lalu seluruh *frame* ditinjau dan diperbaiki manual.
 
